@@ -1,0 +1,40 @@
+# Ambientes virtuais, caches e ferramentas de desenvolvimento
+.codex/
+.kilo/
+.playwright-cli/
+.cache/
+*.tmp
+tmp/
+output/
+
+# Subpastas de testes e artefatos de runtime da aplicação local
+Sistema PROFOR 2026/PROFOR_2026/.playwright-cli/
+Sistema PROFOR 2026/PROFOR_2026/.cache/
+Sistema PROFOR 2026/PROFOR_2026/output/
+Sistema PROFOR 2026/PROFOR_2026/tests/fixtures/.cache/
+
+# Arquivos temporários do Microsoft Office / Sistema Operacional
+~$*.docx
+~$*.xlsx
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+
+# Materiais do processo e do workspace fora da aplicação
+AGENTS.md
+DIARIO_DE_BORDO*.md
+design-qa.md
+SEI_08016.010062_2026_18/
+TRANSFEREGOV/
+informacao_cumprimento_apontamentos_CONJUR_PROFOR_ONASP_2026.html
+minuta_*.html
+Sistema PROFOR 2026/*.md
+
+# Banco operacional preservado exclusivamente no workspace local/OneDrive
+Sistema PROFOR 2026/PROFOR_2026/dados/estado.json
+Sistema PROFOR 2026/PROFOR_2026/dados/registros/
+
+# Cópias de conflito de sincronização do OneDrive
+*MARCELO1*

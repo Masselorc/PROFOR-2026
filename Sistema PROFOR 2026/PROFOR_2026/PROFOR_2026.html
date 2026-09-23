@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'">
+  <meta name="color-scheme" content="light">
+  <title>PROFOR / ONASP 2026 — Gestão de propostas</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="styles.css?v=71b8161a">
+  <script src="domain.js?v=4eb39fbf" defer></script>
+  <script src="bandeiras-uf.js?v=37b93c13" defer></script>
+  <script src="storage.js?v=0d0d36a5" defer></script>
+  <script src="transferegov.js?v=a8ee17ad" defer></script>
+  <script src="report.js?v=044d40a9" defer></script>
+  <script src="app.js?v=a6df0274" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Ir ao conteúdo</a>
+  <header class="topbar"><a class="brand" href="#painel" aria-label="PROFOR, painel inicial"><span class="brand-mark">P</span><span>PROFOR <small>ONASP / 2026</small></span></a><span class="local-label">● Ambiente local</span></header>
+  <div class="shell">
+    <aside class="sidebar" aria-label="Navegação principal">
+      <div class="section-label">GESTÃO DE PROPOSTAS</div>
+      <a href="#painel" id="nav-panel" class="nav-link">▦ <span>Painel geral</span></a>
+      <button id="props-open" class="nav-link" aria-expanded="false" aria-controls="uf-props-nav">▤ <span>Propostas</span></button>
+      <nav id="uf-props-nav" class="side-nav" aria-label="Propostas por UF" hidden></nav>
+      <button id="server-open" class="nav-link">⏻ <span>Ligar servidor</span></button>
+      <button id="import-open" class="nav-link">↻ <span>Sincronizar Transferegov</span></button>
+      <button id="backup-open" class="nav-link">⇩ <span>Backup e exportação</span></button>
+      <a href="#apagadas" id="nav-deleted" class="nav-link">🗑 <span>Propostas apagadas <span id="del-count" class="nav-count"></span></span></a>
+      <div class="side-context"><span class="section-label">PROCESSO DE REFERÊNCIA</span><p>08016.010062/2026-18</p><p>Edital nº 37/2026<br>Programa 3000020260022</p><small>Instrumento auxiliar de gestão. Decisões e comprovações permanecem sob responsabilidade do analista.</small></div>
+      <small id="save-state">Abrindo banco local…</small>
+    </aside>
+    <main id="main" tabindex="-1"><div class="empty"><h1>Abrindo o PROFOR</h1><p>Carregando o banco salvo na pasta do sistema.</p></div></main>
+  </div>
+  <div id="notice" class="notice" role="status" aria-live="polite" hidden></div>
+  <dialog id="modal" aria-labelledby="modal-title"><div class="dialog-head"><h2 id="modal-title"></h2><button id="modal-close" class="quiet" aria-label="Fechar janela">✕</button></div><div id="modal-content"></div></dialog>
+  <noscript>Ative o JavaScript para usar o sistema.</noscript>
+</body>
+</html>

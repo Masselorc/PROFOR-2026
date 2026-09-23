@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' data:; object-src 'none'; base-uri 'none'">
+  <meta name="color-scheme" content="light">
+  <title>PROFOR / ONASP 2026 — Consulta Pública de Propostas</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="styles.css">
+  <script>window.PROFOR_READ_ONLY = true;</script>
+  <script src="domain.js" defer></script>
+  <script src="bandeiras-uf.js" defer></script>
+  <script src="dados_publicos.js" defer></script>
+  <script src="public-storage.js" defer></script>
+  <script src="report.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Ir ao conteúdo</a>
+  <header class="topbar">
+    <a class="brand" href="#painel" aria-label="PROFOR, painel inicial">
+      <span class="brand-mark">P</span>
+      <span>PROFOR <small>ONASP / 2026</small></span>
+    </a>
+    <span class="local-label public-label">● Consulta pública</span>
+  </header>
+  <div class="shell">
+    <aside class="sidebar" aria-label="Navegação principal">
+      <div class="section-label">CONSULTA DE PROPOSTAS</div>
+      <a href="#painel" id="nav-panel" class="nav-link">▦ <span>Painel geral</span></a>
+      <button id="props-open" class="nav-link" aria-expanded="false" aria-controls="uf-props-nav">▤ <span>Propostas</span></button>
+      <nav id="uf-props-nav" class="side-nav" aria-label="Propostas por UF" hidden></nav>
+      <button id="server-open" class="nav-link" hidden></button>
+      <button id="import-open" class="nav-link" hidden></button>
+      <button id="backup-open" class="nav-link" hidden></button>
+      <a href="#apagadas" id="nav-deleted" class="nav-link" hidden></a>
+      <div class="side-context">
+        <span class="section-label">PROCESSO DE REFERÊNCIA</span>
+        <p>08016.010062/2026-18</p>
+        <p>Edital nº 37/2026<br>Programa 3000020260022</p>
+        <small>Portal público de consulta e transparência ativa das propostas do PROFOR/ONASP 2026 (Recursos do FUNPEN).</small>
+      </div>
+      <small id="save-state">Carregando dados públicos…</small>
+    </aside>
+    <main id="main" tabindex="-1">
+      <div class="empty">
+        <h1>Carregando o PROFOR</h1>
+        <p>Carregando as propostas e análises técnicas públicas.</p>
+      </div>
+    </main>
+  </div>
+  <div id="notice" class="notice" role="status" aria-live="polite" hidden></div>
+  <dialog id="modal" aria-labelledby="modal-title">
+    <div class="dialog-head">
+      <h2 id="modal-title"></h2>
+      <button id="modal-close" class="quiet" aria-label="Fechar janela">✕</button>
+    </div>
+    <div id="modal-content"></div>
+  </dialog>
+  <noscript>Ative o JavaScript para visualizar as propostas do PROFOR 2026.</noscript>
+</body>
+</html>

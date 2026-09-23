@@ -1,0 +1,14 @@
+# Configuração padrão de fim de linha
+* text=auto eol=lf
+
+# Scripts do Windows exigem CRLF para execução pelo cmd.exe
+*.cmd text eol=crlf
+*.bat text eol=crlf
+*.vbs text eol=crlf
+
+# Binários e imagens
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
+*.pdf binary
