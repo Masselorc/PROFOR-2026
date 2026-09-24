@@ -110,7 +110,7 @@
       <div class="stats"><div class="stat"><strong>${apagadas.length}</strong><span>Proposta(s) apagada(s)</span></div><div class="stat"><strong>${ufsComApagadas}</strong><span>UF(s) com proposta apagada</span></div><div class="stat"><strong>${D.activeProposals(state).length}</strong><span>Proposta(s) ativas no painel</span></div></div>
       <section class="section"><div class="section-head"><h2>Apagadas por UF</h2><small>da mais recente para a mais antiga</small></div>
       <div class="filters"><label class="search">Buscar proposta ou proponente<input id="del-search" type="search" value="${e(filters.search)}" placeholder="Número, nome ou UF"></label><label>UF<select id="del-uf">${options({'':'Todas as UFs',...D.UFS},filters.uf)}</select></label></div>
-      <div class="table-wrap"><table class="table-fit del-table"><colgroup><col class="c-uf"><col class="c-proposta"><col class="c-valor"><col class="c-tempo"><col class="c-flag"><col class="c-status"></colgroup><thead><tr><th class="cell-center">Unidade Federativa</th><th class="cell-center">Proposta</th><th class="cell-center">Valor global</th><th class="cell-center">Apagada em</th><th class="cell-center">Outras</th><th class="cell-center">Status</th></tr></thead><tbody id="del-rows"></tbody></table></div></section>
+      <div class="table-wrap"><table class="table-fit del-table"><colgroup><col class="c-expand"><col class="c-uf"><col class="c-proposta"><col class="c-valor"><col class="c-tempo"><col class="c-flag"><col class="c-status"></colgroup><thead><tr><th class="cell-center c-expand-th" scope="col"><span class="sr-only">Expandir linha</span></th><th class="cell-center">Unidade Federativa</th><th class="cell-center">Proposta</th><th class="cell-center">Valor global</th><th class="cell-center">Apagada em</th><th class="cell-center">Outras</th><th class="cell-center">Status</th></tr></thead><tbody id="del-rows"></tbody></table></div></section>
       ${!apagadas.length?'<div class="info">Nenhuma proposta apagada. Ao usar “Apagar proposta” no painel, ela aparece aqui e pode ser restaurada a qualquer momento.</div>':''}
       <p class="source">Apagar não exclui o registro: ele permanece no banco local com o histórico, e você pode restaurá-lo. A origem (Transferegov) não é alterada.</p>`;
     $('#del-search').addEventListener('input',ev=>{filters.search=ev.target.value;renderRows('apagadas');});
@@ -175,7 +175,7 @@
       <div class="stats"><div class="stat"><strong>14</strong><span>UFs elegíveis</span></div><div class="stat"><strong>${received}<small> / 14</small></strong><span>UFs com proposta importada</span></div><div class="stat"><strong>${enviadas}</strong><span>UFs com envio para análise</span></div><div class="stat"><strong>${ps.length}</strong><span>Propostas ativas${apagadas.length?` · ${apagadas.length} apagada(s)`:''}</span></div><div class="stat"><strong>${apt}</strong><span>Aptas pelos controles locais</span></div></div>
       <section class="section"><div class="section-head"><h2>Acompanhamento por UF</h2><small>${ps.length} proposta(s) ativa(s)</small></div>
       <div class="filters"><label class="search">Buscar proposta ou proponente<input id="search" type="search" value="${e(filters.search)}" placeholder="Número, nome ou UF"></label><label>UF<select id="filter-uf">${options({'':'Todas as UFs',...D.UFS},filters.uf)}</select></label><label>Status no Transferegov<select id="filter-source">${options({'':'Todos os status',...Object.fromEntries(SOURCE_CHAVES.map(k=>[k,SOURCE_ROTULO[k]]))},filters.source)}</select></label><label>Status<select id="filter-status">${options(Object.fromEntries(['','Sem proposta importada',...STATUS_PROPOSTA].map(x=>[x,x || 'Todos os status'])),filters.status)}</select></label><label>Controle<select id="filter-control">${options({'':'Todos os controles',financial:'Inconsistência financeira',unlinked:'Diligência sem registro',ouvidoria:'Ouvidoria pendente',merito:'Mérito pendente',proposta:'Requisitos da Proposta pendentes',formalizacao:'Requisitos para Formalização pendentes'},filters.control)}</select></label></div>
-      <div class="table-wrap"><table class="table-fit"><colgroup><col class="c-uf"><col class="c-proposta"><col class="c-valor"><col class="c-ctrl"><col class="c-dilig"><col class="c-ctrl"><col class="c-status"></colgroup><thead><tr><th class="cell-center">Unidade Federativa</th><th class="cell-center">Proposta</th><th class="cell-center">Valor global</th><th class="cell-center">Mérito</th><th class="cell-center">Diligências</th><th class="cell-center" title="Requisitos da Proposta + Requisitos para Formalização">Celebração</th><th class="cell-center">Status</th></tr></thead><tbody id="uf-rows"></tbody></table></div></section>
+      <div class="table-wrap"><table class="table-fit"><colgroup><col class="c-expand"><col class="c-uf"><col class="c-proposta"><col class="c-valor"><col class="c-ctrl"><col class="c-dilig"><col class="c-ctrl"><col class="c-status"><col class="c-detalhar"></colgroup><thead><tr><th class="cell-center c-expand-th" scope="col"><span class="sr-only">Expandir linha</span></th><th class="cell-center">Unidade Federativa</th><th class="cell-center">Proposta</th><th class="cell-center">Valor global</th><th class="cell-center">Mérito</th><th class="cell-center">Diligências</th><th class="cell-center" title="Requisitos da Proposta + Requisitos para Formalização">Celebração</th><th class="cell-center">Status</th><th class="cell-center c-detalhar-th" scope="col"><span class="sr-only">Ações</span></th></tr></thead><tbody id="uf-rows"></tbody></table></div></section>
       ${!ps.length?'<div class="info"><strong>Seu painel está pronto para receber as propostas.</strong><br>Use “Sincronizar com o Transferegov” para baixar automaticamente as extrações oficiais; o modo offline de anexar arquivos CSV fica como contingência. Nenhuma proposta foi presumida ou criada neste banco.</div>':''}
       <section class="section"><div class="section-head"><h2>Controles de consistência</h2></div><div class="section-body consistency"><span>${badge(String(ps.filter(p=>D.finance(p).ok).length),'good')} Valores consistentes</span><span>${badge(String(ps.filter(p=>!D.finance(p).ok).length),'bad')} Dados financeiros ausentes ou divergentes</span><span>${badge(String(pendingCount),pendingCount?'bad':'')} Diligências sem registro</span><span>${badge(String(ps.filter(p=>p.ouvidoria.status==='pendente').length),'warn')} Ouvidorias pendentes</span>${apagadas.length?`<span>${badge(String(apagadas.length),'bad')} Propostas apagadas (fora do painel)</span>`:''}</div></section>
       <p class="source">${fontePainel}</p>`;
@@ -213,19 +213,14 @@
     if(['Apagada do painel'].includes(sit))return 'tom-no';
     return 'tom-neutro';
   }
-  /* Célula da UF: botão de expansão, bandeira, sigla e nome.
+  /* Célula da UF: bandeira, sigla e nome em disposição horizontal e centralizada.
      Com mais de uma proposta na UF, a contagem de propostas é indicada no badge.
-     Devolve apenas o CONTEÚDO da célula: o <td> é montado em um único lugar, no
-     molde da linha, para que a contagem de células seja sempre a do cabeçalho. */
-  function ufCell(uf,name,ps,modo='ativas',aberto=false,sit=''){
+     O botão de expansão (.row-expand) fica em coluna dedicada (coluna 0). */
+  function ufCell(uf,name,ps,modo='ativas'){
     texto(uf,'Célula da UF: código');texto(name,'Célula da UF: nome');texto(modo,'Célula da UF: modo');
     const flag=ufFlag(uf,name);
-    const multi=ps.length>1?`<span class="cell-sub uf-multi">${ps.length} ${modo==='apagadas'?'propostas apagadas':'propostas nesta UF'}</span>`:'';
-    const tom=ufTone(sit);
-    const chevronSvg=`<svg class="chevron-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>`;
-    const expandBtn=`<button type="button" class="row-expand ${tom}" data-action="toggle-uf-expand" data-uf="${textoHtml(uf,'UF')}" data-modo="${textoHtml(modo,'Modo')}" aria-expanded="${aberto?'true':'false'}" aria-controls="summary-${textoHtml(uf,'UF')}" aria-label="${aberto?'Recolher':'Expandir'} propostas de ${textoHtml(name,'UF')}" title="Clique para ${aberto?'recolher':'ver as propostas desta UF'}">${chevronSvg}</button>`;
-    const ufContent=`<span class="uf-cell">${flag}<span class="uf-code">${textoHtml(uf,'Célula da UF: código')}</span></span><span class="uf-name">${textoHtml(name,'Célula da UF: nome')}</span>`;
-    return `<div class="uf-col-wrapper">${expandBtn}<span class="uf">${ufContent}${multi}</span></div>`;
+    const multi=ps.length>1?`<span class="cell-sub uf-multi">(${ps.length})</span>`:'';
+    return `<div class="uf">${flag}<span class="uf-pill uf-code">${textoHtml(uf,'Célula da UF: código')}</span><span class="uf-nome uf-name">${textoHtml(name,'Célula da UF: nome')}</span>${multi}</div>`;
   }
   /* Resumo da linha expandida. Sem proposta, não inventa dado nenhum. */
   function rowSummary(uf,name,ps,modo='ativas',sit=''){
@@ -326,8 +321,8 @@
      de células do cabeçalho, inclusive na UF sem proposta (que antes somava uma
      célula à mão e criava uma coluna inexistente, torta e altíssima). */
   const COLUNAS={
-    ativas:['uf','proposta','valor','merito','diligencias','celebracao','situacao'],
-    apagadas:['uf','proposta','valor','apagada-em','outras','situacao']
+    ativas:['expand','uf','proposta','valor','merito','diligencias','celebracao','situacao','detalhar'],
+    apagadas:['expand','uf','proposta','valor','apagada-em','outras','situacao']
   };
   /* Células da linha de UF, uma por coluna declarada acima. Todas as colunas
      recebem `cell-center` (inclusive a primeira, Unidade Federativa, conforme
@@ -341,8 +336,12 @@
     const etapa=p?sourceBadge(p):vazio;
     const abertas=p?p.diligences.filter(d=>d.status!=='saneada').length:0;
     const semRegistro=p?D.pending(p).length:0;
+    const tom=ufTone(sit);
+    const chevronSvg=`<svg class="chevron-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>`;
+    const expandBtn=`<button type="button" class="row-expand ${tom}" data-action="toggle-uf-expand" data-uf="${textoHtml(uf,'UF')}" data-modo="${textoHtml(modo,'Modo')}" aria-expanded="${aberto?'true':'false'}" aria-controls="summary-${textoHtml(uf,'UF')}" aria-label="${aberto?'Recolher proposta de '+textoHtml(name,'UF'):'Expandir proposta de '+textoHtml(name,'UF')}" title="Clique para ${aberto?'recolher':'ver as propostas desta UF'}"><span class="chevron" aria-hidden="true">${chevronSvg}</span></button>`;
     const conteudo={
-      uf:`<td class="cell-center">${ufCell(uf,name,lista,modo,aberto,sit)}</td>`,
+      expand:`<td class="cell-center c-expand-td">${expandBtn}</td>`,
+      uf:`<td class="cell-center">${ufCell(uf,name,lista,modo)}</td>`,
       proposta:`<td class="cell-center">${proposta}</td>`,
       valor:`<td class="number">${valor}</td>`,
       etapa:`<td class="cell-center">${etapa}</td>`,
@@ -351,7 +350,8 @@
       diligencias:`<td class="cell-dilig cell-center">${p?`<span class="cell-count">${abertas} aberta(s)</span>${semRegistro?`<span class="cell-sub">${semRegistro} sem registro</span>`:''}`:vazio}</td>`,
       'apagada-em':`<td class="cell-center">${p?deletedWhen(p):vazio}</td>`,
       outras:`<td class="cell-center">${p&&lista.length>1?`e mais ${lista.length-1}`:vazio}</td>`,
-      situacao:`<td class="cell-center">${sitBadge(sit)}</td>`
+      situacao:`<td class="cell-center">${sitBadge(sit)}</td>`,
+      detalhar:`<td class="cell-center c-detalhar-td">${p?`<a class="btn-detail" href="#proposta/${textoHtml(p.id,'Linha: proposta')}/dados">detalhar</a>`:vazio}</td>`
     };
     const celulas=COLUNAS[modo].map(coluna=>conteudo[coluna]);
     D.assert(celulas.every(c=>c!==undefined),`Linha da UF ${uf}: coluna sem célula no modo ${modo}.`);
@@ -574,9 +574,6 @@
     const falaLabel=falaStatus==='aderido'?'Já aderido':falaStatus==='previsto'?'Previsto no Plano de Trabalho':falaStatus==='nao_previsto'?'Não previsto no Plano de Trabalho':'Não informada';
     const falaTone=falaStatus==='aderido'?'good':falaStatus==='previsto'?'info':falaStatus==='nao_previsto'?'warn':'';
 
-    const repassePct=(i.global>0 && i.repasse>=0)?((i.repasse/i.global)*100).toFixed(1).replace('.',','):null;
-    const contrapartidaPct=(i.global>0 && i.contrapartida>=0)?((i.contrapartida/i.global)*100).toFixed(1).replace('.',','):null;
-
     $('#tab-content').innerHTML=`<section class="section data-proposal-section">
       <div class="section-head">
         <div>
@@ -639,39 +636,7 @@
           </dl>
         </div>
 
-        <!-- Bloco 2: Equação Orçamentária e Financeira -->
-        <div class="data-group-block">
-          <div class="score-equation-wrapper data-finance-wrapper">
-            <div class="data-group-header">
-              <span class="card-eyebrow">Composição Orçamentária e Financeira</span>
-            </div>
-            <dl class="score-equation data-finance-equation">
-              <div class="score-kpi-card data-card-block">
-                <dt class="kpi-label">Repasse Federal (FUNPEN)</dt>
-                <dd class="kpi-value">${e(D.fmtMoney(i.repasse))}</dd>
-                <span class="kpi-sub">${repassePct?`${repassePct}% do valor global`:'Recurso concedente (União)'}</span>
-              </div>
-
-              <div class="score-operator" aria-hidden="true">+</div>
-
-              <div class="score-kpi-card data-card-block">
-                <dt class="kpi-label">Contrapartida Estadual</dt>
-                <dd class="kpi-value">${e(D.fmtMoney(i.contrapartida))}</dd>
-                <span class="kpi-sub">${contrapartidaPct?`${contrapartidaPct}% do valor global`:'Aporte do proponente'}</span>
-              </div>
-
-              <div class="score-operator" aria-hidden="true">=</div>
-
-              <div class="score-kpi-card score-kpi-final data-card-block">
-                <dt class="kpi-label">Valor Global da Proposta</dt>
-                <dd class="kpi-value final-val">${e(D.fmtMoney(i.global))}</dd>
-                <span class="kpi-sub">Total do Plano de Trabalho</span>
-              </div>
-            </dl>
-          </div>
-        </div>
-
-        <!-- Bloco 3: Situação Oficial e Condições Institucionais -->
+        <!-- Bloco 2: Situação Oficial e Condições Institucionais -->
         <div class="data-group-block">
           <div class="data-group-header">
             <span class="card-eyebrow">Situação Oficial e Condições Institucionais</span>
@@ -1013,13 +978,13 @@
   function acaoDeAnalise(p,g,id,r){
     const opcoes=opcoesDoItem(g,id),atual=opcaoAtual(g,id,r.status);
     const nome=D.rows(p,g).find(x=>x[0]===id)[1];
-    const menuId=statusMenuId(g,id),rotuloAtual=atual?.rotulo || (r.status==='na'?'Analisar…':D.STATUSES[r.status]);
+    const menuId=statusMenuId(g,id),rotuloAtual=atual?.rotulo || (r.status==='na'?'Analisar':D.STATUSES[r.status]);
     const visualAtual=statusVisual(r.status,atual?.tom || '');
     if(isReadOnly()){
       return `<span class="status-pill tom-${e(visualAtual.tom)}" style="cursor:default;user-select:none" title="${e(rotuloAtual)}">${statusIcon(visualAtual.icone)}<span class="status-pill-label">${e(rotuloAtual)}</span></span>`;
     }
     const reanalise=r.status==='reanalise'?`<button type="button" class="status-option tom-aviso" role="option" aria-selected="true" aria-disabled="true" disabled>${statusIcon(STATUS_VISUAL.reanalise.icone)}<span>${e(D.STATUSES.reanalise)}</span></button>`:'';
-    const opcoesHtml=[{valor:'na',rotulo:'Analisar…',tom:'neutro'},...opcoes].map(o=>{
+    const opcoesHtml=[{valor:'na',rotulo:'Analisar',tom:'neutro'},...opcoes].map(o=>{
       const visual=statusVisual(o.valor,o.tom);
       return `<button type="button" class="status-option tom-${e(visual.tom)}" role="option" aria-selected="${o.valor===r.status?'true':'false'}" data-status-value="${e(o.valor)}">${statusIcon(visual.icone)}<span>${e(o.rotulo)}</span>${o.valor===r.status?statusIcon('E73E','status-selected-check'):''}</button>`;
     }).join('');
@@ -1028,7 +993,7 @@
       <div class="status-popover" id="${e(menuId)}" data-status-popover hidden>
         <div class="status-options" role="listbox" aria-label="Status de ${e(nome)}">${reanalise}${opcoesHtml}</div>
         <div class="status-divider" role="separator"></div>
-        <button type="button" class="status-details" data-status-details>${statusIcon('E70F')}<span>Editar detalhes…</span></button>
+        <button type="button" class="status-details" data-status-details>${statusIcon('E70F')}<span>Editar detalhes</span></button>
       </div>
     </div>`;
   }
@@ -1037,6 +1002,15 @@
     if(valor==='detalhes'){editReview(grupo,item);return;}
     if(valor===antes)return;
     if(valor!=='na' && !opcoesDoItem(grupo,item).some(o=>o.valor===valor))return;
+    const direto = grupo === 'merito' && (item === 'ouvidoriaInstituida' || item === 'falaBRAdesao');
+    if(direto){
+      const nome=D.rows(current(),grupo).find(x=>x[0]===item)[1];
+      await change(p=>D.markReview(p,grupo,item,valor,actor()));
+      const agora=D.reviewOf(current(),grupo,item).status;
+      const rotulo=opcaoAtual(grupo,item,agora)?.rotulo || D.STATUSES[agora];
+      toast(`“${nome}”: ${rotulo}.`);
+      return;
+    }
     if(valor!=='ok'){editReview(grupo,item,valor);return;}
     const nome=D.rows(current(),grupo).find(x=>x[0]===item)[1];
     await change(p=>D.markReview(p,grupo,item,true,actor()));
@@ -1507,12 +1481,12 @@
   async function handleAction(target){const action=target.dataset.action;
     if(action==='close')closeModal();else if(action==='import')importDialog();else if(action==='sync')syncDialog();else if(action==='export')backupDialog();else if(action==='sync-cancel')cancelSync('user');else if(action==='sync-retry')syncRestart(1);else if(action==='sync-fast')syncRestart(0);else if(action==='textos'){await buscarTextos();}else if(action==='textos-cancel'){if(textosRun)textosRun.controller.abort();}else if(action==='review')editReview(target.dataset.group,target.dataset.id);else if(action==='sei')editSei();else if(action==='institution')editInstitution();else if(action==='diligence')editDiligence(target.dataset.id,target.dataset.ref);else if(action==='conclude')conclusion();else if(action==='report')report();else if(action==='copy-proposal'){await navigator.clipboard.writeText(target.dataset.number);toast(`Proposta ${target.dataset.number} copiada.`);}else if(action==='copy-cnpj'){await navigator.clipboard.writeText(target.dataset.cnpj);toast(`CNPJ ${target.dataset.cnpj} copiado.`);}
     else if(action==='resolve-ref'){const ref=target.dataset.ref,name=actor();const ds=current().diligences.filter(d=>d.ref===ref);D.assert(ds.length && ds.every(d=>d.status==='saneada'),'Ainda existe diligência não saneada.');const [g,id]=ref.split(':');await change(p=>D.setReview(p,g,id,{...D.reviewOf(p,g,id),status:'ok'},name));saved('Requisito atualizado com confirmação do analista.');}
-    else if(action==='toggle-uf-expand'){
+    else if(action==='toggle-uf-expand' || action==='toggle-uf'){
       const uf=target.dataset.uf,modo=target.dataset.modo==='apagadas'?'apagadas':'ativas';
       const conjunto=modo==='apagadas'?expandDel:expand;
       if(conjunto.has(uf))conjunto.delete(uf);else conjunto.add(uf);
       renderRows(modo);
-      const btn=document.querySelector(`button.row-expand[data-uf="${uf}"][data-modo="${modo}"]`);
+      const btn=document.querySelector(`button.row-expand[data-uf="${uf}"][data-modo="${modo}"]`) || document.querySelector(`button.row-expand[data-uf="${uf}"]`);
       if(btn)btn.focus();
     }
     else if(action==='delete-proposal'){await confirmDeleteProposal(target.dataset.id);}

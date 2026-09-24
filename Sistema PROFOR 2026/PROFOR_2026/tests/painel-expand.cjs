@@ -49,7 +49,7 @@ async function main() {
     // 1. Cada linha de UF possui um wrapper com o botão .row-expand
     const rowMG = page.locator('tr[data-uf="MG"]');
     await rowMG.waitFor();
-    const expandBtnMG = rowMG.locator('.uf-col-wrapper button.row-expand');
+    const expandBtnMG = rowMG.locator('button.row-expand');
     assert.equal(await expandBtnMG.count(), 1, 'Deve haver botão .row-expand para MG');
     assert.equal(await expandBtnMG.getAttribute('aria-expanded'), 'false', 'Inicialmente fechado');
 
@@ -110,7 +110,7 @@ async function main() {
 
     // 10. Expansão de UF sem proposta importada (ex: AP)
     const rowAP = page.locator('tr[data-uf="AP"]');
-    const expandBtnAP = rowAP.locator('.uf-col-wrapper button.row-expand');
+    const expandBtnAP = rowAP.locator('button.row-expand');
     await expandBtnAP.click();
     const summaryAP = page.locator('tr#summary-AP');
     await summaryAP.waitFor({ state: 'visible' });

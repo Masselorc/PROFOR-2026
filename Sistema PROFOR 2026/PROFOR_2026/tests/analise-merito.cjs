@@ -177,9 +177,9 @@ async function main() {
       assert.equal(await linha(item).locator('td').count(), 3, `“${item}”: três colunas por linha`);
       assert.equal(await acao.locator('[data-status-dropdown]').count(), 1, `“${item}”: um único controle na ação`);
       assert.equal(await acao.locator('select').count(), 0, `“${item}”: sem select HTML nativo`);
-      const esperado = /Instituição da Ouvidoria/.test(item) ? ['Analisar…', 'Conformidade', 'Ausente']
-        : /Fala\.BR/.test(item) ? ['Analisar…', 'Já aderiu', 'Previsto no Plano de Trabalho', 'Sem previsão']
-        : ['Analisar…', 'Atende', 'Atendido com observação', 'Em diligência', 'Não atende'];
+      const esperado = /Instituição da Ouvidoria/.test(item) ? ['Analisar', 'Conformidade', 'Ausente']
+        : /Fala\.BR/.test(item) ? ['Analisar', 'Já aderiu', 'Previsto no Plano de Trabalho', 'Sem previsão']
+        : ['Analisar', 'Atende', 'Atendido com observação', 'Em diligência', 'Não atende'];
       assert.deepEqual(await acao.locator('.status-option>span:nth-child(2)').allInnerTexts(), esperado, `“${item}”: opções da ação`);
       assert.equal(await acao.locator('.status-option .status-icon').count() >= esperado.length, true, `“${item}”: cada status tem ícone`);
       assert.equal(await acao.locator('.status-options [data-status-details]').count(), 0, 'Editar detalhes não é opção do listbox');
@@ -205,7 +205,7 @@ async function main() {
     await page.locator('#tab-content h2').click();
     assert.equal(await gatilho.getAttribute('aria-expanded'), 'false', 'Clique externo fecha o menu');
 
-    // 3b2. Adesão ao Fala.BR: aceite direto; as demais decisões abrem o formulário.
+    // 3b2. Adesão ao Fala.BR: análise direta simplificada (sem modal).
     const listaFalaBR = controle(FALA_BR);
     await escolher(listaFalaBR,'ok');
     await page.waitForTimeout(200);
@@ -213,32 +213,22 @@ async function main() {
     assert.equal(await linha(FALA_BR).locator('td').nth(1).innerText(), 'Já aderiu');
     assert.match(await listaFalaBR.locator('[data-status-toggle]').getAttribute('class'), /tom-ok/, '“Já aderiu” fica verde');
     await escolher(listaFalaBR,'obs');
-    await modal.waitFor();
-    assert.equal(await modal.locator('select[name="status"]').inputValue(), 'obs', 'A escolha abre o formulário já em Previsto');
-    assert.equal(memory.proposals[0].reviews.merito.falaBRAdesao.status, 'ok', 'Nada muda antes de salvar o formulário');
-    await modal.locator('textarea[name="note"]').fill('Previsão conferida no Plano de Trabalho.');
-    await modal.getByRole('button', { name: 'Salvar', exact: true }).click();
-    await modal.waitFor({ state: 'hidden' });
+    await page.waitForTimeout(200);
+    assert.equal(memory.proposals[0].reviews.merito.falaBRAdesao.status, 'obs', 'A escolha grava diretamente Previsto');
     assert.equal(await linha(FALA_BR).locator('td').nth(1).innerText(), 'Previsto no Plano de Trabalho');
     assert.match(await controle(FALA_BR).locator('[data-status-toggle]').getAttribute('class'), /tom-ok/, '“Previsto no Plano de Trabalho” também fica verde');
     await escolher(controle(FALA_BR),'no');
-    await modal.waitFor();
-    assert.equal(await modal.locator('select[name="status"]').inputValue(), 'no', 'Sem previsão também abre o formulário predefinido');
-    await modal.getByRole('button', { name: 'Salvar', exact: true }).click();
-    await modal.waitFor({ state: 'hidden' });
+    await page.waitForTimeout(200);
+    assert.equal(memory.proposals[0].reviews.merito.falaBRAdesao.status, 'no', 'Sem previsão grava diretamente');
     assert.equal(await linha(FALA_BR).locator('td').nth(1).innerText(), 'Sem previsão');
     assert.match(await controle(FALA_BR).locator('[data-status-toggle]').getAttribute('class'), /tom-aviso/, '“Sem previsão” fica em amarelo');
     assert.deepEqual(D.semJustificativa(memory.proposals[0]), [], 'Sem previsão não vira pendência de justificativa');
 
-    // 3b. Instituição da Ouvidoria: ausência é situação prevista, com cláusula suspensiva.
+    // 3b. Instituição da Ouvidoria: análise direta simplificada (sem modal), ausência é situação prevista, com cláusula suspensiva.
     const itemOuvidoria = OUVIDORIA;
     await escolher(controle(itemOuvidoria),'no');
-    await modal.waitFor();
-    assert.equal(await modal.locator('select[name="status"]').inputValue(), 'no', 'Ausente abre o formulário no resultado escolhido');
-    await modal.locator('textarea[name="note"]').fill('Situação institucional conferida.');
-    await modal.getByRole('button', { name: 'Salvar', exact: true }).click();
-    await modal.waitFor({ state: 'hidden' });
-    assert.equal(memory.proposals[0].reviews.merito.ouvidoriaInstituida.status, 'no');
+    await page.waitForTimeout(200);
+    assert.equal(memory.proposals[0].reviews.merito.ouvidoriaInstituida.status, 'no', 'Ausente grava diretamente no estado');
     const textoOuvidoria = await linha(itemOuvidoria).innerText();
     assert.match(textoOuvidoria, /cláusula suspensiva do Convênio/i, 'Ausente gera o alerta de cláusula suspensiva');
     assert.equal(await linha(itemOuvidoria).locator('td').nth(1).innerText(), 'Ausente', 'O resultado acompanha a palavra Ausente');
@@ -307,7 +297,7 @@ async function main() {
     await page.getByRole('link', { name: 'Plano de Aplicação Detalhado', exact: true }).click();
     const acaoPad = page.locator('tr[data-pad-item="11"] [data-status-dropdown]');
     await acaoPad.waitFor();
-    assert.deepEqual(await acaoPad.locator('.status-option>span:nth-child(2)').allInnerTexts(), ['Analisar…', 'Compatível', 'Compatível com observação', 'Em diligência', 'Não compatível']);
+    assert.deepEqual(await acaoPad.locator('.status-option>span:nth-child(2)').allInnerTexts(), ['Analisar', 'Compatível', 'Compatível com observação', 'Em diligência', 'Não compatível']);
     const postsAntesPad = posts.length;
     await escolher(acaoPad,'ok');
     await page.waitForTimeout(200);
@@ -326,7 +316,7 @@ async function main() {
       await page.getByRole('link', { name: aba, exact: true }).click();
       await page.locator('#tab-content h2').filter({ hasText: aba }).waitFor();
       const acao = page.locator('.req-table tbody tr').first().locator('[data-status-dropdown]');
-      assert.deepEqual((await acao.locator('.status-option>span:nth-child(2)').allInnerTexts()).slice(0, 5), ['Analisar…', 'Atende', 'Atendido com observação', 'Em diligência', 'Não atende'], `${aba}: opções corretas`);
+      assert.deepEqual((await acao.locator('.status-option>span:nth-child(2)').allInnerTexts()).slice(0, 5), ['Analisar', 'Atende', 'Atendido com observação', 'Em diligência', 'Não atende'], `${aba}: opções corretas`);
       const itemId = D.rows(memory.proposals[0], aba === 'Requisitos da Proposta' ? 'proposta' : 'formalizacao')[0][0];
       await escolher(acao,'ok');
       await page.waitForTimeout(200);

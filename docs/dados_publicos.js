@@ -1,12 +1,12 @@
 /**
  * Snapshot dos dados públicos do PROFOR/ONASP 2026 (Processo SEI 08016.010062/2026-18)
- * Gerado automaticamente em 2026-09-23T18:55:42.076Z.
+ * Gerado automaticamente em 2026-09-24T12:11:10.946Z.
  * Não editar manualmente. Use tools/build_public_docs.cjs para atualizar.
  */
-window.PROFOR_PUBLIC_UPDATED_AT = "2026-09-23T18:55:42.076Z";
+window.PROFOR_PUBLIC_UPDATED_AT = "2026-09-24T12:11:10.946Z";
 window.PROFOR_PUBLIC_DATA = {
   "schemaVersion": 1,
-  "revision": 92,
+  "revision": 98,
   "proposals": [
     {
       "id": "2243576",
@@ -3170,7 +3170,7 @@ window.PROFOR_PUBLIC_DATA = {
             "note": "dasad",
             "document": "",
             "url": "",
-            "at": "2026-09-23T16:43:35.215Z",
+            "at": "2026-09-23T19:01:59.132Z",
             "attachments": []
           },
           "3": {
@@ -4698,6 +4698,48 @@ window.PROFOR_PUBLIC_DATA = {
                 "total": 418400
               }
             ]
+          }
+        },
+        {
+          "at": "2026-09-23T19:01:51.001Z",
+          "event": "Avaliação: celebracao / 2",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "dasad",
+            "document": "",
+            "url": "",
+            "at": "2026-09-23T16:43:35.215Z",
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "dasad",
+            "document": "",
+            "url": "",
+            "at": "2026-09-23T19:01:51.001Z",
+            "attachments": []
+          }
+        },
+        {
+          "at": "2026-09-23T19:01:59.132Z",
+          "event": "Avaliação: celebracao / 2",
+          "actor": "Usuário local",
+          "before": {
+            "status": "ok",
+            "note": "dasad",
+            "document": "",
+            "url": "",
+            "at": "2026-09-23T19:01:51.001Z",
+            "attachments": []
+          },
+          "after": {
+            "status": "na",
+            "note": "dasad",
+            "document": "",
+            "url": "",
+            "at": "2026-09-23T19:01:59.132Z",
+            "attachments": []
           }
         }
       ],
@@ -8504,7 +8546,7 @@ window.PROFOR_PUBLIC_DATA = {
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
+            "at": "2026-09-24T11:16:24.679Z",
             "attachments": []
           },
           "ouvidoriaAto": {
@@ -11081,6 +11123,48 @@ window.PROFOR_PUBLIC_DATA = {
               }
             ]
           }
+        },
+        {
+          "at": "2026-09-24T11:16:21.022Z",
+          "event": "Avaliação: merito / ouvidoriaInstituida",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "no",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-24T11:16:21.022Z",
+            "attachments": []
+          }
+        },
+        {
+          "at": "2026-09-24T11:16:24.679Z",
+          "event": "Avaliação: merito / ouvidoriaInstituida",
+          "actor": "Usuário local",
+          "before": {
+            "status": "no",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-24T11:16:21.022Z",
+            "attachments": []
+          },
+          "after": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-24T11:16:24.679Z",
+            "attachments": []
+          }
         }
       ],
       "textos": {
@@ -11528,8 +11612,8 @@ window.PROFOR_PUBLIC_DATA = {
     }
   ],
   "sync": {
-    "at": "2026-09-23T17:02:18.448Z",
-    "source": "https://api-publica.transferegov.gestao.gov.br/downloads · sincronização completa (com PAD) · 4 arquivo(s)",
+    "at": "2026-09-23T19:02:39.407Z",
+    "source": "https://api-publica.transferegov.gestao.gov.br/downloads · sincronização completa (com PAD) · 4 arquivo(s) · extração reaproveitada pelo servidor",
     "count": 13
   }
 };
