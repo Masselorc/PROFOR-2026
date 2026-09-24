@@ -38,3 +38,9 @@ Sistema PROFOR 2026/PROFOR_2026/dados/registros/
 
 # Cópias de conflito de sincronização do OneDrive
 *MARCELO1*
+
+# Artefatos internos de agentes/orquestradores — não integram a aplicação
+.agents/
+ORIGINAL_REQUEST.md
+prompt_draft.md
+Sistema PROFOR 2026/PROFOR_2026/tests/parity-challenger.cjs
