@@ -19,6 +19,36 @@ const DOCS_DIR = path.join(ROOT_DIR, 'docs');
 const D = require(path.join(SYSTEM_DIR, 'domain.js'));
 const { createStore } = require(path.join(SYSTEM_DIR, 'workspace-store.cjs'));
 
+function publicHistory(entries) {
+  const publicValue = (field, value) => {
+    if (field === 'pad' && Array.isArray(value)) {
+      return value.map(item => ({
+        descricao: item.descricao,
+        quantidade: item.quantidade,
+        unitario: item.unitario,
+        total: item.total
+      }));
+    }
+    // A interface pública só apresenta um aviso genérico para objetos; não
+    // precisa copiar IDs nem estruturas internas para o snapshot.
+    return value && typeof value === 'object' ? { updated: true } : value;
+  };
+  return entries.map(entry => ({
+    at: entry.at,
+    date: entry.date,
+    source: entry.source,
+    reconstructed: entry.reconstructed,
+    activity: entry.activity.map(line => ({ at: line.at, message: line.message })),
+    changes: entry.changes.map(change => ({
+      numero: change.numero,
+      uf: change.uf,
+      field: change.field,
+      before: publicValue(change.field, change.before),
+      after: publicValue(change.field, change.after)
+    }))
+  }));
+}
+
 function build() {
   console.log('==> [1/3] Carregando banco do workspace...');
   const store = createStore(REGISTROS_DIR);
@@ -36,13 +66,15 @@ function build() {
 
   console.log('==> [2/3] Gerando docs/dados_publicos.js...');
   const updatedAt = new Date().toISOString();
-  // A lixeira e o histórico de revisões pertencem ao banco operacional local.
-  // A consulta pública recebe apenas as propostas ativas e os metadados usados na tela.
+  // A consulta pública recebe propostas ativas e um extrato do histórico de
+  // sincronizações. O extrato inclui propostas retiradas do painel, mas não
+  // inclui histórico de análise manual, IDs técnicos ou o banco operacional.
   const publicState = {
     schemaVersion: state.schemaVersion,
     revision: state.revision,
     proposals: active,
-    sync: state.sync
+    sync: state.sync,
+    syncHistory: publicHistory(store.history())
   };
   D.validateState(publicState);
   const publicDataJs = `/**

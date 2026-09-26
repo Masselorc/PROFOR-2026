@@ -26,5 +26,11 @@
     return null;
   }
 
-  root.ProforStore = { open, read, save, legacy };
+  async function history(){
+    const state=root.PROFOR_PUBLIC_DATA;
+    if(!state)throw new Error('Base de dados pública não localizada.');
+    return Array.isArray(state.syncHistory)?state.syncHistory:[];
+  }
+
+  root.ProforStore = { open, read, save, legacy, history };
 })(globalThis);

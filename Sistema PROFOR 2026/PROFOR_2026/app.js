@@ -86,7 +86,6 @@
     const menuDeleted=$('#nav-deleted');
     if(menuDeleted)menuDeleted.hidden=publico;
     const menuRecords=$('#nav-records');
-    if(menuRecords)menuRecords.hidden=publico;
     const rotuloLocal=document.querySelector('.local-label');
     if(rotuloLocal && publico){
       rotuloLocal.textContent='● Consulta pública';
