@@ -94,7 +94,7 @@
     }
     $('#nav-panel').classList.toggle('active',!selected && view==='painel');
     $('#nav-deleted').classList.toggle('active',!selected && view==='apagadas');
-    $('#nav-records').classList.toggle('active',!selected && view==='registros');
+    if(menuRecords)menuRecords.classList.toggle('active',!selected && view==='registros');
     if(selected){
       const p=state.proposals.find(x=>x.id===selected);
       if(!p){$('#main').innerHTML='<h1>Proposta não localizada</h1><a href="#painel">Voltar ao painel</a>';return;}
