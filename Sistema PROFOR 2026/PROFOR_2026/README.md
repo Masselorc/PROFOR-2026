@@ -2,13 +2,25 @@
 
 ## Abrir
 
-**Uso normal, um duplo clique: `INICIAR SISTEMA.cmd`** (nesta pasta), ou o **atalho `PROFOR 2026` da Área de Trabalho**, que aponta para ele. O arquivo liga o servidor local **sem janela nenhuma aparecer** e abre o navegador já no sistema, com os dados carregados. Se o servidor já estiver no ar, ele apenas abre a página — nunca cria uma segunda instância. A partir daí, o trabalho é no painel: **Sincronizar com o Transferegov** atualiza os dados.
+**Uso normal, um duplo clique: `INICIAR SISTEMA.cmd`** (nesta pasta), ou o **atalho `PROFOR 2026` da Área de Trabalho**, que aponta para ele. O arquivo liga o servidor local **sem janela nenhuma aparecer** e abre o navegador já no sistema, com os dados carregados. Se o servidor já estiver no ar, ele apenas abre a página — nunca cria uma segunda instância. No painel, abra **Sincronização** e clique em **Atualizar Dados**.
 
 Como instalar o atalho da Área de Trabalho (uma única vez): duplo clique em **`INSTALAR ATALHO.cmd`**. Ele cria o atalho `PROFOR 2026` com o ícone do sistema (`assets\profor.ico`), sem exigir administrador. Para remover, apague o atalho da Área de Trabalho — nada mais é alterado.
 
 Caminho manual equivalente, se algum dia for preciso: `node server.cjs` e abra **http://127.0.0.1:8766/PROFOR_2026.html**. Ctrl+C encerra o servidor. O servidor escuta somente em `127.0.0.1`, recusa `Host` desconhecido, recebe o estado do aplicativo em JSON e não acessa credenciais.
 
 **Se a tela aparecer com aparência antiga** (colunas desalinhadas, texto estranho no lugar de um dado), recarregue a página com **Ctrl+F5** uma vez. O HTML carrega os scripts com assinatura de versão (`?v=…`), gerada a cada alteração, justamente para impedir que o navegador use arquivo antigo; o Ctrl+F5 cobre o caso da página que já estava aberta antes da atualização.
+
+Durante a sincronização, a janela mostra uma barra única de **0 a 100%**, a etapa em curso e um registro cronológico em linhas, com aparência de terminal. O percentual é calculado por 14 operações: consulta das listas, downloads e leituras dos cinco ZIPs, validação e gravação local. Cada operação tem o mesmo peso; downloads e leituras avançam pelos bytes efetivamente processados. O percentual mede operações concluídas, **não estima o tempo restante**. Se a origem entregar um arquivo incompatível e o download recomeçar, o percentual pode recuar para refletir a nova tentativa. Só chega a 100% depois da gravação no banco local.
+
+Abaixo do registro da janela permanece o **Antes/Depois da última atualização que alterou campos**. Uma atualização concluída sem novidades aparece no histórico, mas não substitui essa comparação. Quando houver novos campos alterados, a comparação passa a mostrar a nova execução.
+
+### Registros de atualização
+
+O menu lateral **Registros de atualização** abre o histórico das execuções concluídas. A comparação do dia reúne cada transição de campo em cartões “Antes/Depois”, agrupados por horário; se um campo mudar duas vezes, os dois cartões permanecem. Valores ausentes ou vazios aparecem como **“Em branco”**. Textos longos e listas de itens do PAD podem ser expandidos. O PAD mostra descrição, quantidade e valores, sem IDs internos. Mudanças apenas nos IDs ou na ordem dos itens não entram na contagem visual de alterações. Os registros de atividade de cada execução ficam no bloco do respectivo horário. Dias com atualizações concluídas sem alteração de conteúdo mostram **“Sem dados novos no dia”**; dias sem execução ficam vazios.
+
+O calendário fica à direita no computador, começa no mês vigente e avança ou recua uma semana por clique nas setas ou pela rolagem sobre ele. Hoje recebe destaque. Uma bolinha laranja marca os dias com campos alterados; o texto ao passar o mouse informa a soma das alterações do dia. A data usada é a de Brasília (`America/Sao_Paulo`).
+
+Os registros novos são guardados junto das versões imutáveis do banco em `dados/registros/`, inclusive as linhas do log. O sistema reconstrói comparações antigas a partir das versões consecutivas já preservadas. Linhas de atividade anteriores a esta função não existiam no banco e são identificadas como indisponíveis. A primeira versão disponível é apenas a base de comparação: alterações anteriores a ela não podem ser reconstruídas. Nenhum registro antigo é regravado.
 
 ### Abrir o arquivo HTML direto (não recomendado)
 
@@ -26,9 +38,9 @@ O OneDrive sincroniza a pasta completa. Marque-a como **Sempre manter neste disp
 
 1. Abra `INICIAR SISTEMA.cmd` ou instale o atalho por `INSTALAR ATALHO.cmd`.
 2. Preencha seu nome no menu lateral, para identificar os registros manuais.
-3. Clique em **Sincronizar com o Transferegov**. Não há nada para anexar nem arquivo para escolher: o servidor local baixa, descompacta e cruza as quatro extrações oficiais e devolve as propostas do programa 3000020260022.
-4. Acompanhe a etapa corrente e o cronômetro. A operação pode ser cancelada; nada é gravado no banco antes do fim.
-5. Ao concluir, confira o resumo (propostas, alterações, UFs cobertas, itens de PAD e hora) e a tabela de alterações. Se a origem não tiver mudado, o sistema informa “Nenhuma alteração desde a última sincronização”.
+3. Clique em **Sincronização** e, na janela, em **Atualizar Dados**. Essa ação baixa, descompacta e cruza as extrações oficiais de propostas e PAD, consulta os textos oficiais das propostas encontradas e grava o conjunto no banco local. Não há nada para anexar nem arquivo para escolher.
+4. Acompanhe a barra, a etapa corrente e o registro de atividades. A operação pode ser cancelada; nada é gravado no banco antes do fim.
+5. Ao concluir, confira o resumo (propostas, textos atualizados, alterações, UFs cobertas, itens de PAD e hora) e a tabela de alterações. Se a extração de propostas não tiver mudado, o servidor pode reutilizar seu cache; os textos são conferidos na mesma execução.
 6. Abra uma proposta e analise cada aba. Use **Analisar**, preencha o resultado e salve. Observações são obrigatórias em estados críticos.
 7. Cadastre diligências a partir dos requisitos. Após saneamento, escolha se quer atualizar o requisito. Informe ciência e confira expediente para confirmar vencimento.
 8. Conclua a análise técnica quando os controles permitirem. Continue acompanhando o checklist de celebração.
@@ -44,7 +56,7 @@ O sistema já teve um protocolo `profor://` para ligar o servidor por um clique 
 
 ### Modo offline (contingência)
 
-O caminho antigo de anexar CSVs continua existindo como **contingência**, dentro do diálogo de sincronização, no botão “Modo offline: anexar arquivos CSV”. Ele é útil quando não há como executar o servidor local. Não é mais o caminho principal e nenhum fluxo obriga a anexar arquivo.
+O caminho antigo de anexar CSVs continua existindo como **contingência** no sistema e no resumo final da sincronização. Ele é útil quando não há como executar o servidor local. Não é mais o caminho principal e nenhum fluxo obriga a anexar arquivo.
 
 ## Sincronização automática — o que foi medido
 
@@ -103,20 +115,20 @@ Quando a proposta ainda não foi enviada, a análise aparece como "Em elaboraç�
 
 Na medição de 15/09/2026 (13:34): **11 propostas com "Em elaboração"** e **1 com "Enviada para análise"** (35405/2026, SEAP/PE — a única que chega ao concedente).
 
-O PAD é opcional: `?pad=1` (padrão) lê o arquivo de 290 MB; `?pad=0` — a opção “Sincronização rápida (sem PAD)” — não baixa esse arquivo e devolve `pad` nulo, preservando no banco o plano de aplicação já registrado.
+O botão da interface executa sempre a sincronização completa, com PAD e textos. A API mantém `?pad=0` apenas para compatibilidade com chamadas anteriores; esse caminho não aparece como opção na interface.
 
 ### Por que a aba "Plano de aplicação" pode aparecer vazia
 
 São **duas causas diferentes**, e a tela agora diz qual é qual (antes as duas mostravam o mesmo aviso):
 
 1. **"Sem itens publicados na origem"** — o arquivo oficial do PAD foi baixado e lido, e a proposta **realmente não tem nenhum item** nos dados abertos do Transferegov. Não há nada a corrigir no sistema; a conferência fica pendente na origem. A aba mostra a origem e a data da última sincronização.
-2. **"PAD não carregado"** — a última sincronização foi a **rápida (sem PAD)**, que não baixa esse arquivo. Basta sincronizar de novo pela modalidade completa.
+2. **"PAD não carregado"** — situação herdada de uma sincronização antiga sem PAD ou de importação incompleta. Use o botão único de sincronização para consultar o PAD.
 
 O cartão do resumo expandido também distingue os dois casos ("nenhum item publicado na extração oficial" × "PAD não carregado — sincronize sem a opção rápida").
 
 **Caso medido em 15/09/2026 nos dados oficiais:** das **12 propostas** do programa, **apenas a RS 35250/2026 tem itens publicados (14)**. **Nenhuma das 6 de Pernambuco** tem — nem a **35405/2026**, a única de PE já **enviada para análise** — e as outras cinco ainda estão "Cadastrados". Ou seja: o PAD não depende do envio da proposta; ele depende de o proponente ter preenchido o plano de aplicação detalhado na plataforma. O arquivo do PAD tem 4.886.962 linhas, e o cruzamento por `ID_PROPOSTA` foi conferido linha a linha (ver `../../tmp/requisitos/`).
 
-**Quanto tempo leva:** com os ZIPs já em cache local, **~26 s** para a sincronização completa (com PAD) e **~16 s** sem PAD; baixando de novo os 512 MB, **~45 s**. Se nada mudou na origem, a resposta é **imediata** (reaproveita a extração anterior). A variação vem da carga da máquina e da rede. A interface mostra o cronômetro e permite cancelar a qualquer momento; o limite de tempo do servidor é de 10 minutos.
+**Tempo de execução:** medições anteriores sem o arquivo de textos não representam mais a duração do botão único. O quinto ZIP é grande e precisa ser lido para conferir os textos. A duração depende da rede, da geração dos arquivos e da carga da máquina; a interface mostra o cronômetro e permite interromper a espera. O limite de espera do navegador é de 45 minutos; cada consulta à origem mantém seu próprio limite de inatividade.
 
 ### Apagar uma proposta
 
@@ -129,7 +141,7 @@ Quando a UF tem mais de uma proposta, o resumo mostra **primeiro as enviadas par
 ## O que está implementado
 
 - Sincronização automática pelo servidor local, com cache por assinatura de blob e validação de bytes/ETag contra a listagem da origem.
-- Painel das 14 UFs, propostas múltiplas, pesquisa e filtros. O cabeçalho da tela principal conta com os botões **“⇩ Exportação”** e **“↻ Sincronizar com o Transferegov”**. Cada linha traz a **bandeira oficial da UF** (Wikimedia Commons, arquivada em `assets/bandeiras/`), tem **bandeira/sigla/nome clicáveis** para abrir a proposta e **expande um resumo** da proposta ao clique ou por Enter/Espaço. As propostas da UF aparecem **por envio** (enviadas primeiro, da mais antiga para a mais nova). **Todas as colunas da tabela estão centralizadas** (inclusive Unidade Federativa, proposta, valores, controles e status). O menu lateral tem **“▤ Propostas”**, que lista as propostas no padrão `UF - NNNNN/AAAA` em ordem alfabética.
+- Painel das 14 UFs, propostas múltiplas, pesquisa e filtros. O cabeçalho da tela principal conta com os botões **“⇩ Exportação”** e **“↻ Sincronização”**. Cada linha traz a **bandeira oficial da UF** (Wikimedia Commons, arquivada em `assets/bandeiras/`), tem **bandeira/sigla/nome clicáveis** para abrir a proposta e **expande um resumo** da proposta ao clique ou por Enter/Espaço. As propostas da UF aparecem **por envio** (enviadas primeiro, da mais antiga para a mais nova). **Todas as colunas da tabela estão centralizadas** (inclusive Unidade Federativa, proposta, valores, controles e status). O menu lateral tem **“▤ Propostas”**, que lista as propostas no padrão `UF - NNNNN/AAAA` em ordem alfabética.
 - **Apagar e restaurar propostas:** apagar retira a proposta do painel, das telas de gestão e das sincronizações sem excluí-la do banco; a tela **🗑 Propostas apagadas** lista por UF, com expansão e restauração.
 - Importação CSV em blocos com validação e confirmação (modo offline de contingência), origem e comparação de alterações.
 - Habilitação, mérito, **20 requisitos de celebração em duas abas** (ver abaixo) e links de documentos.

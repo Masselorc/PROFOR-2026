@@ -38,9 +38,15 @@
     if(key==='current'){token=result.token;return result.state;}
     return result.recovery;
   }
-  async function save(state,expected,{restore=false}={}){
+  async function save(state,expected,{restore=false,syncRun}={}){
     Profor.validateState(state);
-    const result=await request('POST',{state,expected,token,restore});token=result.token;return result.state;
+    const result=await request('POST',{state,expected,token,restore,syncRun});token=result.token;return result.state;
   }
-  root.ProforStore={open,read,save,legacy};
+  async function history(){
+    const response=await fetch('/api/sync/history',{cache:'no-store'});
+    const result=await response.json();
+    if(!response.ok)throw new Error(result.error||'Não foi possível ler os registros de atualização.');
+    return result.entries;
+  }
+  root.ProforStore={open,read,save,history,legacy};
 })(globalThis);

@@ -54,11 +54,9 @@ const ZIP64_EXTRA_ID = 0x0001;
 const MAX_EOCD_SEARCH = 0xffff + 22;
 
 /* Blobs oficiais usados pelo pipeline, na ordem das quatro passadas.
-   `textos` fica FORA de BLOB_ORDER de propósito: os textos da proposta
-   (caracterização, público-alvo, problema, resultados, relação com objetivos e
-   capacidade técnica) só são buscados SOB DEMANDA, por proposta pedida — ver
-   fetchProposalTexts. Incluí-lo no pipeline faria toda sincronização baixar e
-   varrer mais ~750 MB sem que o payload de propostas use esses campos. */
+   `textos` fica FORA de BLOB_ORDER: runSync monta as propostas primeiro, para
+   que a sincronização completa consulte os textos somente dos IDs encontrados.
+   O endpoint legado de textos continua podendo consultá-los separadamente. */
 const BLOBS = {
   program: 'siconv_programa.zip',
   links: 'siconv_programa_proposta.zip',
@@ -586,6 +584,7 @@ async function scanZipCsv(zipPath, required, onRow, options = {}) {
 
     const decoder = new TextDecoder('utf-8');
     let map = null, headers = null, rows = 0, bytes = 0;
+    let reported = 0;
     /* Varredura em bloco: isola a linha e só então separa os campos. É o
        caminho medido para os arquivos reais (PAD de 1,2 GB) e foi conferido
        também no arquivo de textos (1.157.816 linhas, todas com 8 colunas,
@@ -601,9 +600,14 @@ async function scanZipCsv(zipPath, required, onRow, options = {}) {
       for await (const chunk of stream) {
         bytes += chunk.length;
         parser.feed(decoder.decode(chunk, { stream: true }));
+        if (typeof options.onBytes === 'function' && (bytes - reported >= Math.max(1, entry.uncompSize / 100) || bytes >= entry.uncompSize)) {
+          reported = bytes;
+          options.onBytes(bytes, entry.uncompSize);
+        }
       }
       parser.feed(decoder.decode());
       parser.finish();
+      if (typeof options.onBytes === 'function') options.onBytes(bytes, entry.uncompSize);
     } catch (err) {
       if (err instanceof SyncError) throw err;
       throw new SyncError(`Falha ao descompactar ${sourceName}: ${err.message}.`, 502);
@@ -729,7 +733,9 @@ async function downloadBlob(blob, options = {}) {
     if (!options.force && fs.existsSync(target)) {
       try {
         if (fs.readFileSync(stampFile, 'utf8') === stamp) {
-          return { path: target, bytes: fs.statSync(target).size, cached: true, lastModified: current.lastModified, etag: null, effectiveLastModified: null, expectedBytes: current.bytes };
+          const cachedBytes = fs.statSync(target).size;
+          if (typeof options.onBytes === 'function') options.onBytes(cachedBytes, current.bytes);
+          return { path: target, bytes: cachedBytes, cached: true, lastModified: current.lastModified, etag: null, effectiveLastModified: null, expectedBytes: current.bytes };
         }
       } catch { /* sem carimbo: baixa novamente */ }
     }
@@ -738,6 +744,7 @@ async function downloadBlob(blob, options = {}) {
     const partial = `${target}.parcial`;
     let written = 0;
     let progressAt = 0;
+    let bytesAt = 0;
     const fd = fs.openSync(partial, 'w');
     try {
       for await (const chunk of stream) {
@@ -749,6 +756,10 @@ async function downloadBlob(blob, options = {}) {
             progressAt = written;
             options.onProgress(`  ${current.name}: ${Math.round((written / current.bytes) * 100)}%`);
           }
+        }
+        if (typeof options.onBytes === 'function' && (written - bytesAt >= Math.max(1, (current.bytes || written) / 100) || written === current.bytes)) {
+          options.onBytes(written, current.bytes);
+          bytesAt = written;
         }
       }
     } catch (err) {
@@ -771,11 +782,13 @@ async function downloadBlob(blob, options = {}) {
       const fresh = (await listBlobs(options)).find(item => item.name === current.name);
       if (fresh) current = fresh;
       if (typeof options.onRetry === 'function') options.onRetry({ name: current.name, attempt, written, expected: current.bytes });
+      if (typeof options.onBytes === 'function') options.onBytes(0, current.bytes);
       continue;
     }
     fs.renameSync(partial, target);
     /* Carimbo guarda a identidade usada na comparação com a listagem seguinte. */
     try { fs.writeFileSync(stampFile, `${current.bytes}:${current.lastModified}`); } catch { /* carimbo é opcional */ }
+    if (typeof options.onBytes === 'function') options.onBytes(written, current.bytes);
     return {
       path: target,
       bytes: written,
@@ -801,6 +814,8 @@ async function runSync(options = {}) {
   const timeoutMs = options.timeoutMs ?? DEFAULT_TIMEOUT_MS;
   const dir = options.dir || defaultDownloadDir();
   const progress = typeof options.onProgress === 'function' ? options.onProgress : () => {};
+  const emit = typeof options.onEvent === 'function' ? options.onEvent : () => {};
+  emit({ kind: 'stage', message: 'Consultando a lista de arquivos oficiais…', step: 1, steps: options.totalSteps ?? (pad ? 10 : 8), loaded: null, total: null });
   /* Origem injetada (testes/diagnóstico) não usa o cache por padrão; `cache:true`
      permite exercitar o caminho de cache sem rede. */
   const isolated = !!(options.containerUrl || options.files) && options.cache !== true;
@@ -812,12 +827,15 @@ async function runSync(options = {}) {
   const byName = new Map(listed.map(blob => [blob.name, blob]));
   const wanted = pad ? BLOB_ORDER : BLOB_ORDER.filter(name => name !== BLOBS.pad);
   const available = wanted.map(name => byName.get(name) || { name, bytes: null, lastModified: null });
+  const lastDataStep = 2 * wanted.length + 2;
+  const steps = options.totalSteps ?? lastDataStep;
 
   /* Só usa o cache na operação normal do servidor. Execuções com origem
      injetada (testes e diagnóstico offline) sempre recalculam. */
   if (!force && !isolated) {
     const cached = readCache();
     if (cachedUsable(cached, signatureOf(listed, [BLOBS.program, BLOBS.proposal]), pad)) {
+      emit({ kind: 'stage', message: 'Extração recente encontrada no cache local; preparando os dados…', step: lastDataStep, steps, loaded: null, total: null });
       /* Devolve o payload COMPLETO com `unchanged` apenas como metadado: o cache
          é do servidor e não conhece o estado do navegador. Um cliente novo (ou
          IndexedDB limpo, ou outra origem) precisa receber as propostas mesmo
@@ -828,9 +846,13 @@ async function runSync(options = {}) {
 
   progress('Baixando extrações oficiais…');
   const files = {};
-  for (const blob of available) {
+  for (const [index, blob] of available.entries()) {
     progress(`Baixando ${blob.name}…`);
-    const result = await downloadBlob(blob, { ...runOptions, dir, timeoutMs, force });
+    emit({ kind: 'stage', message: `Baixando ${blob.name}…`, step: index + 2, steps, loaded: 0, total: blob.bytes });
+    const result = await downloadBlob(blob, { ...runOptions, dir, timeoutMs, force,
+      onBytes: (loaded, total) => emit({ kind: 'progress', loaded, total }),
+      onRetry: retry => emit({ kind: 'action', message: `Nova tentativa de baixar ${retry.name}: a origem entregou uma versão diferente da listagem.` }) });
+    emit({ kind: 'action', message: `${blob.name}: ${result.cached ? 'cópia local reutilizada' : 'download concluído'} (${result.bytes} bytes).` });
     files[blob.name] = {
       path: result.path,
       bytes: result.bytes,
@@ -858,24 +880,29 @@ async function runSync(options = {}) {
 
   /* Passada 1: ID_PROGRAMA de COD_PROGRAMA = 3000020260022. */
   progress('Lendo programas…');
+  emit({ kind: 'stage', message: `Lendo ${BLOBS.program} e localizando o programa…`, step: wanted.length + 2, steps, loaded: 0, total: null });
   const programIds = new Set();
   const programStats = await scanZipCsv(files[BLOBS.program].path, COLUMNS[BLOBS.program], row => {
     if (text(row.COD_PROGRAMA) === D.PROGRAM) programIds.add(text(row.ID_PROGRAMA));
-  }, { sourceName: BLOBS.program });
+  }, { sourceName: BLOBS.program, onBytes: (loaded, total) => emit({ kind: 'progress', loaded, total }) });
+  emit({ kind: 'action', message: `${BLOBS.program}: ${programStats.rows} linha(s) lida(s).` });
   if (!programIds.size) throw new SyncError(`Programa ${D.PROGRAM} não localizado no arquivo de programas.`, 502);
 
   /* Passada 2: ID_PROPOSTA vinculados aos programas encontrados. */
   progress('Cruzando programas e propostas…');
+  emit({ kind: 'stage', message: `Lendo ${BLOBS.links} e cruzando vínculos…`, step: wanted.length + 3, steps, loaded: 0, total: null });
   const proposalIds = new Set();
   const linksStats = await scanZipCsv(files[BLOBS.links].path, COLUMNS[BLOBS.links], row => {
     if (programIds.has(text(row.ID_PROGRAMA))) {
       const id = text(row.ID_PROPOSTA);
       if (id) proposalIds.add(id);
     }
-  }, { sourceName: BLOBS.links });
+  }, { sourceName: BLOBS.links, onBytes: (loaded, total) => emit({ kind: 'progress', loaded, total }) });
+  emit({ kind: 'action', message: `${BLOBS.links}: ${linksStats.rows} linha(s) lida(s).` });
 
   /* Passada 3: propostas do programa. */
   progress('Lendo propostas do programa…');
+  emit({ kind: 'stage', message: `Lendo ${BLOBS.proposal} e selecionando as propostas…`, step: wanted.length + 4, steps, loaded: 0, total: null });
   const proposals = new Map();
   const proposalStats = await scanZipCsv(files[BLOBS.proposal].path, COLUMNS[BLOBS.proposal], row => {
     const id = text(row.ID_PROPOSTA);
@@ -911,7 +938,8 @@ async function runSync(options = {}) {
       global: moneyBR(row.VL_GLOBAL_PROP),
       pad: pad ? [] : null
     });
-  }, { sourceName: BLOBS.proposal });
+  }, { sourceName: BLOBS.proposal, onBytes: (loaded, total) => emit({ kind: 'progress', loaded, total }) });
+  emit({ kind: 'action', message: `${BLOBS.proposal}: ${proposalStats.rows} linha(s) lida(s).` });
 
   const missing = [...proposalIds].filter(id => !proposals.has(id));
   if (missing.length) {
@@ -922,6 +950,7 @@ async function runSync(options = {}) {
   let padStats = null;
   if (pad) {
     progress('Lendo itens do plano de aplicação…');
+    emit({ kind: 'stage', message: `Lendo ${BLOBS.pad} e selecionando itens do PAD…`, step: wanted.length + 5, steps, loaded: 0, total: null });
     let padItems = 0;
     padStats = await scanZipCsv(files[BLOBS.pad].path, COLUMNS[BLOBS.pad], row => {
       const proposal = proposals.get(text(row.ID_PROPOSTA));
@@ -938,12 +967,14 @@ async function runSync(options = {}) {
       if (unitario === null || total === null) { warnings.push(`Item ${id} da proposta ${proposal.numero} ignorado: valor unitário ou total ausente.`); return; }
       proposal.pad.push({ id, descricao: text(row.DESCRICAO_ITEM), quantidade, unitario, total });
       padItems++;
-    }, { sourceName: BLOBS.pad });
+    }, { sourceName: BLOBS.pad, onBytes: (loaded, total) => emit({ kind: 'progress', loaded, total }) });
+    emit({ kind: 'action', message: `${BLOBS.pad}: ${padStats.rows} linha(s) lida(s).` });
   } else {
     warnings.push('PAD não solicitado (pad=0): o PAD anterior de cada proposta existente será preservado.');
   }
 
   const result = [...proposals.values()];
+  emit({ kind: 'stage', message: 'Validando as propostas e preparando a resposta…', step: lastDataStep, steps, loaded: null, total: null });
   if (!result.length) throw new SyncError('Nenhuma proposta do programa foi localizada nas extrações.', 502);
   for (const proposal of result) D.validateImported(proposal);
   for (const uf of Object.keys(D.UFS)) {
@@ -987,9 +1018,14 @@ async function runSync(options = {}) {
 function sync(options = {}) {
   const key = `sync:${options.pad === false ? 0 : 1}:${options.force === true ? 1 : 0}:${options.dir || ''}`;
   const running = inFlight.get(key);
-  if (running) return running;
-  const promise = runSync(options).finally(() => inFlight.delete(key));
-  inFlight.set(key, promise);
+  if (running) {
+    if (typeof options.onEvent === 'function') running.listeners.add(options.onEvent);
+    return running.promise;
+  }
+  const listeners = new Set();
+  if (typeof options.onEvent === 'function') listeners.add(options.onEvent);
+  const promise = runSync({ ...options, onEvent: event => { for (const listener of listeners) listener(event); } }).finally(() => inFlight.delete(key));
+  inFlight.set(key, { promise, listeners });
   return promise;
 }
 
@@ -1016,10 +1052,10 @@ async function syncList(options = {}) {
 
 /* Valida a lista pedida: strings de dígitos, de 1 a MAX_TEXT_IDS, sem
    repetição. Erro de entrada do cliente, por isso status 400. */
-function assertProposalIds(ids) {
+function assertProposalIds(ids, maxIds = MAX_TEXT_IDS) {
   if (!Array.isArray(ids)) throw new SyncError('Informe a lista de propostas (ids) a consultar.', 400, 'ids');
   if (!ids.length) throw new SyncError('Informe ao menos uma proposta para buscar os textos.', 400, 'ids');
-  if (ids.length > MAX_TEXT_IDS) throw new SyncError(`Máximo de ${MAX_TEXT_IDS} propostas por consulta; foram pedidas ${ids.length}.`, 400, 'ids');
+  if (ids.length > maxIds) throw new SyncError(`Máximo de ${maxIds} propostas por consulta; foram pedidas ${ids.length}.`, 400, 'ids');
   const seen = new Set();
   for (const value of ids) {
     if (typeof value !== 'string' || !/^\d+$/.test(value)) {
@@ -1046,28 +1082,37 @@ function assertProposalIds(ids) {
    containerUrl, cacheBuster, timeoutMs) — a interface pública é (ids, onProgress). */
 async function fetchProposalTexts(ids, onProgress = () => {}, options = {}) {
   const started = Date.now();
-  const wanted = assertProposalIds(ids);
+  const wanted = assertProposalIds(ids, options.maxIds ?? MAX_TEXT_IDS);
   const progress = typeof onProgress === 'function' ? onProgress : () => {};
+  const emit = typeof options.onEvent === 'function' ? options.onEvent : () => {};
+  const step = options.progressBase || 0;
+  const steps = options.totalSteps || step + 3;
   const dir = options.dir || defaultDownloadDir();
   const timeoutMs = options.timeoutMs ?? DEFAULT_TIMEOUT_MS;
   const cacheBuster = options.cacheBuster ?? Date.now();
   const runOptions = { ...options, cacheBuster };
 
   progress('Consultando a lista de arquivos da origem…');
+  emit({ kind: 'stage', message: 'Consultando a lista para os textos oficiais…', step: step + 1, steps, loaded: null, total: null });
   const listed = await listBlobs(runOptions);
   const blob = listed.find(item => item.name === BLOBS.textos);
   if (!blob) throw new SyncError(`A origem não anuncia ${BLOBS.textos} na listagem. Textos indisponíveis no momento.`, 502, 'missing');
 
   progress(`Baixando ${BLOBS.textos}…`);
+  emit({ kind: 'stage', message: `Baixando ${BLOBS.textos}…`, step: step + 2, steps, loaded: 0, total: blob.bytes });
   const file = await downloadBlob(blob, {
     ...runOptions,
     dir,
     timeoutMs,
-    onProgress: message => progress(String(message).trim())
+    onProgress: message => progress(String(message).trim()),
+    onBytes: (loaded, total) => emit({ kind: 'progress', loaded, total }),
+    onRetry: retry => emit({ kind: 'action', message: `Nova tentativa de baixar ${retry.name}: a origem entregou uma versão diferente da listagem.` })
   });
+  emit({ kind: 'action', message: `${BLOBS.textos}: ${file.cached ? 'cópia local reutilizada' : 'download concluído'} (${file.bytes} bytes).` });
   if (file.cached) progress(`Usando a cópia já baixada de ${BLOBS.textos} (mesma geração).`);
 
   progress('Lendo os textos das propostas…');
+  emit({ kind: 'stage', message: `Lendo ${BLOBS.textos} e selecionando textos das propostas…`, step: step + 3, steps, loaded: 0, total: null });
   const wantedSet = new Set(wanted);
   const textos = {};
   const collect = row => {
@@ -1077,7 +1122,9 @@ async function fetchProposalTexts(ids, onProgress = () => {}, options = {}) {
     for (const [key, column] of Object.entries(TEXT_FIELDS)) value[key] = text(row[column]);
     textos[id] = value;
   };
-  const stats = await scanZipCsv(file.path, COLUMNS[BLOBS.textos], collect, { sourceName: BLOBS.textos });
+  const stats = await scanZipCsv(file.path, COLUMNS[BLOBS.textos], collect, { sourceName: BLOBS.textos,
+    onBytes: (loaded, total) => emit({ kind: 'progress', loaded, total }) });
+  emit({ kind: 'action', message: `${BLOBS.textos}: ${stats.rows} linha(s) lida(s); ${Object.keys(textos).length} proposta(s) com textos.` });
 
   const faltando = wanted.filter(id => !Object.hasOwn(textos, id));
   return {

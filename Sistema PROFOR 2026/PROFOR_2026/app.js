@@ -3,7 +3,8 @@
   'use strict';
   const D=Profor,e=D.esc,$=s=>document.querySelector(s);
   const isReadOnly=()=>Boolean(window.PROFOR_READ_ONLY);
-  let state, selected=null, activeTab='dados',view='painel',busy=false,modalDirty=false,noticeTimer,focusReturn,syncRun=null,textosRun=null,statusDropdownOpen=null;
+  let state, selected=null, activeTab='dados',view='painel',busy=false,modalDirty=false,noticeTimer,focusReturn,syncRun=null,statusDropdownOpen=null;
+  let syncHistory=null,historyLoading=null,calendarStart=null,selectedHistoryDay=null,lastCalendarWheel=0;
   const filters={search:'',uf:'',source:'',status:'',control:''};
   /* Busca local da aba do PAD: só estado da interface, por proposta. */
   let padSearch='',padSearchOwner=null;
@@ -58,8 +59,9 @@
   function formEnd(label='Salvar'){return `<p id="form-error" class="error-message" role="alert" tabindex="-1"></p><div class="dialog-actions">${button('Cancelar','close')}<button class="primary" type="submit">${label}</button></div>`;}
   function bindForm(handler){const form=$('#modal-content form');form.addEventListener('input',()=>modalDirty=true);form.addEventListener('submit',async event=>{event.preventDefault();const submit=form.querySelector('[type=submit]');submit.disabled=true;try{await handler(new FormData(form));}catch(err){formError(err);}finally{submit.disabled=false;}});}
   function saved(message){modalDirty=false;$('#modal').close();toast(message);}
-  /* `view` é a tela sem proposta selecionada: 'painel' ou 'apagadas'. */
-  function route(){const from=document.activeElement?.getAttribute('href');const parts=location.hash.slice(1).split('/');const prevSelected=selected,prevTab=activeTab;selected=parts[0]==='proposta'?parts[1]:null;if(!selected)view=parts[0]==='apagadas'?'apagadas':'painel';
+  /* `view` é a tela sem proposta selecionada: painel, apagadas ou registros. */
+  function route(){const from=document.activeElement?.getAttribute('href');const parts=location.hash.slice(1).split('/');const prevSelected=selected,prevTab=activeTab,prevView=view;selected=parts[0]==='proposta'?parts[1]:null;if(!selected)view=parts[0]==='apagadas'?'apagadas':parts[0]==='registros'?'registros':'painel';
+    if(view==='registros' && prevView!=='registros'){selectedHistoryDay=null;calendarStart=null;}
     /* Roteamento: 'analise' é a aba de Mérito; a chave antiga 'merito' continua
        roteável para não quebrar favoritos. A extinta aba 'habilitacao' cai em
        'dados', porque não existe mais como seção. */
@@ -83,13 +85,16 @@
     if(menuBackup)menuBackup.hidden=publico;
     const menuDeleted=$('#nav-deleted');
     if(menuDeleted)menuDeleted.hidden=publico;
+    const menuRecords=$('#nav-records');
+    if(menuRecords)menuRecords.hidden=publico;
     const rotuloLocal=document.querySelector('.local-label');
     if(rotuloLocal && publico){
       rotuloLocal.textContent='● Consulta pública';
       rotuloLocal.classList.add('public-label');
     }
-    $('#nav-panel').classList.toggle('active',!selected && view!=='apagadas');
+    $('#nav-panel').classList.toggle('active',!selected && view==='painel');
     $('#nav-deleted').classList.toggle('active',!selected && view==='apagadas');
+    $('#nav-records').classList.toggle('active',!selected && view==='registros');
     if(selected){
       const p=state.proposals.find(x=>x.id===selected);
       if(!p){$('#main').innerHTML='<h1>Proposta não localizada</h1><a href="#painel">Voltar ao painel</a>';return;}
@@ -97,6 +102,7 @@
       renderProposal(p);
     }
     else if(view==='apagadas')renderDeleted();
+    else if(view==='registros')renderRecords();
     else renderPanel();
     /* O contador de apagadas no menu acompanha o estado atual. */
     renderSideNav();
@@ -117,6 +123,58 @@
     $('#del-uf').addEventListener('change',ev=>{filters.uf=ev.target.value;renderRows('apagadas');});
     renderRows('apagadas');
   }
+  async function refreshHistory(force=false){
+    if(historyLoading)await historyLoading;
+    if(syncHistory && !force)return syncHistory;
+    historyLoading=ProforStore.history().then(entries=>{
+      D.assert(Array.isArray(entries),'Lista de registros inválida.');
+      syncHistory=entries;
+      return entries;
+    });
+    try{return await historyLoading;}finally{historyLoading=null;}
+  }
+  function shiftCalendarDay(day,amount){const date=new Date(`${day}T12:00:00Z`);date.setUTCDate(date.getUTCDate()+amount);return date.toISOString().slice(0,10);}
+  function calendarWeek(day){return shiftCalendarDay(day,-new Date(`${day}T12:00:00Z`).getUTCDay());}
+  function dateLabel(day){return new Intl.DateTimeFormat('pt-BR',{dateStyle:'full',timeZone:'UTC'}).format(new Date(`${day}T12:00:00Z`));}
+  function historyTime(at){return new Date(at).toLocaleTimeString('pt-BR',{timeZone:'America/Sao_Paulo',hour:'2-digit',minute:'2-digit',second:'2-digit'});}
+  function historyCounts(){const counts=new Map();for(const entry of syncHistory||[])counts.set(entry.date,(counts.get(entry.date)||0)+visibleHistoryChanges(entry.changes).length);return counts;}
+  function calendarHtml(){
+    const today=D.localToday(),counts=historyCounts(),middle=shiftCalendarDay(calendarStart,21),month=middle.slice(0,7);
+    const title=new Intl.DateTimeFormat('pt-BR',{month:'long',year:'numeric',timeZone:'UTC'}).format(new Date(`${middle}T12:00:00Z`));
+    const weekdays=['D','S','T','Q','Q','S','S'].map((day,index)=>`<span aria-label="${['Domingo','Segunda-feira','Terça-feira','Quarta-feira','Quinta-feira','Sexta-feira','Sábado'][index]}">${day}</span>`).join('');
+    const days=Array.from({length:42},(_,index)=>{
+      const day=shiftCalendarDay(calendarStart,index),count=counts.get(day)||0;
+      const label=`${dateLabel(day)}${count?` · ${count} ${count===1?'dado novo':'dados novos'}`:''}`;
+      const classes=['calendar-day',day.slice(0,7)!==month?'outside':'',day===today?'today':'',day===selectedHistoryDay?'selected':''].filter(Boolean).join(' ');
+      return `<button type="button" class="${classes}" data-action="history-day" data-day="${day}" title="${e(label)}" aria-label="${e(label)}" ${day===selectedHistoryDay?'aria-current="date"':''}><span>${Number(day.slice(8))}</span>${count?'<i class="calendar-dot" aria-hidden="true"></i>':''}</button>`;
+    }).join('');
+    return `<section class="records-calendar section" aria-label="Calendário de atualizações"><div class="calendar-heading"><h2 aria-live="polite">${e(title)}</h2><div><button type="button" class="calendar-arrow" data-action="history-prev" aria-label="Voltar uma semana">‹</button><button type="button" class="calendar-arrow" data-action="history-next" aria-label="Avançar uma semana">›</button></div></div><div class="calendar-weekdays">${weekdays}</div><div class="calendar-grid">${days}</div><button type="button" class="calendar-today" data-action="history-today">Voltar para hoje</button></section>`;
+  }
+  function historyActivityHtml(entry){
+    if(entry.reconstructed)return '<p class="source">As versões antigas guardam o Antes/Depois, mas não as linhas de atividade da execução.</p>';
+    return `<ol class="history-log">${entry.activity.map(line=>`<li><time>${e(historyTime(line.at))}</time><span>${e(line.message)}</span></li>`).join('')}</ol>`;
+  }
+  function historyDayHtml(){
+    if(!selectedHistoryDay)return '';
+    const entries=(syncHistory||[]).filter(item=>item.date===selectedHistoryDay);
+    if(!entries.length)return '';
+    const groupsByRun=entries.map(entry=>({entry,changes:visibleHistoryChanges(entry.changes)}));
+    const changeCount=groupsByRun.reduce((total,run)=>total+run.changes.length,0);
+    const groups=groupsByRun.filter(run=>run.changes.length).map(({entry,changes})=>`<div class="history-change-group"><h3>Atualização às ${e(historyTime(entry.at))} <span>${changes.length} ${changes.length===1?'alteração':'alterações'}</span></h3>${syncChangesHtml(changes)}</div>`).join('');
+    const runs=groupsByRun.map(({entry,changes},index)=>`<details class="history-run" ${index===entries.length-1?'open':''}><summary><strong>${e(historyTime(entry.at))}</strong><span>${changes.length?`${changes.length} campo(s) alterado(s)`:'Sem dados novos'}</span>${entry.reconstructed?'<small>Reconstruído das versões do banco</small>':''}</summary>${entry.source?`<p class="source">Origem: ${e(entry.source)}</p>`:''}${historyActivityHtml(entry)}</details>`).join('');
+    return `<section class="section records-day"><div class="section-head"><div><h2>${e(dateLabel(selectedHistoryDay))}</h2><p class="source">${entries.length} atualização(ões) concluída(s) · ${changeCount} alteração(ões) de campo</p></div></div><div class="section-body">${changeCount?groups:'<p class="info">Sem dados novos no dia.</p>'}<h3>Execuções e registros de atividade</h3>${runs}</div></section>`;
+  }
+  function renderRecords(){
+    if(!syncHistory){
+      $('#main').innerHTML='<div class="page-head"><div><h1>Registros de atualização</h1><p class="muted">Carregando o histórico do banco local…</p></div></div>';
+      refreshHistory().then(()=>{if(view==='registros')renderRecords();}).catch(err=>{if(view==='registros')$('#main').innerHTML=`<h1>Registros de atualização</h1><div class="info error">${e(err.message)}</div>`;});
+      return;
+    }
+    if(!calendarStart)calendarStart=calendarWeek(D.localToday().slice(0,7)+'-01');
+    if(!selectedHistoryDay)selectedHistoryDay=syncHistory.slice().reverse().find(entry=>visibleHistoryChanges(entry.changes).length)?.date||syncHistory.at(-1)?.date||null;
+    $('#main').innerHTML=`<div class="page-head"><div><div class="eyebrow">PROFOR / ONASP 2026</div><h1>Registros de atualização</h1><p class="muted">Histórico das atualizações concluídas. Selecione uma data para consultar as mudanças e o registro de atividade.</p></div></div><div class="records-layout"><div id="records-detail">${historyDayHtml()}</div>${calendarHtml()}</div>`;
+  }
+  function moveCalendar(weeks){calendarStart=shiftCalendarDay(calendarStart,weeks*7);renderRecords();}
   /* Submenu do painel lateral: uma linha por proposta localizada, no padrão
      "UF - NNNNN/AAAA", em ordem alfabética de UF e de número. */
   function renderSideNav(){
@@ -143,7 +201,7 @@
       .sort((a,b)=>a.txt.localeCompare(b.txt,'pt-BR'));
     nav.innerHTML=itens.length
       ? itens.map(({p,numero,txt})=>`<span class="side-proposal"><a href="#proposta/${e(p.id)}/dados" title="${e(p.imported.proponente)} — ${e(txt)}">${ufFlag(p.imported.uf,D.UFS[p.imported.uf])} <span class="side-uf">${e(txt)}</span></a>${proposalCopyButton(numero)}</span>`).join('')
-      : '<p class="side-empty">Nenhuma proposta ativa no banco local. Use “Sincronizar com o Transferegov”, ou o atalho da Área de Trabalho para abrir o sistema com o servidor ligado.</p>';
+      : '<p class="side-empty">Nenhuma proposta ativa no banco local. Use “Sincronização”, ou o atalho da Área de Trabalho para abrir o sistema com o servidor ligado.</p>';
   }
   function toggleProposalNav(){
     const nav=$('#uf-props-nav'),btn=$('#props-open');
@@ -164,7 +222,7 @@
     const enviadas=new Set(ps.filter(p=>D.sourceState(p.imported).key==='enviada').map(p=>p.imported.uf)).size;
     const acoesPainel=isReadOnly()
       ? button('⇩ Exportação','export')
-      : `${button('⇩ Exportação','export')}${button('↻ Sincronizar com o Transferegov','sync','','primary')}`;
+      : `${button('⇩ Exportação','export')}${button('↻ Sincronização','sync','','primary')}`;
     const subPainel=isReadOnly()
       ? 'Consulta pública das propostas cadastradas e análises técnicas registradas.'
       : 'Acompanhe a análise, as diligências e a preparação para celebração.';
@@ -176,7 +234,7 @@
       <section class="section"><div class="section-head"><h2>Acompanhamento por UF</h2><small>${ps.length} proposta(s) ativa(s)</small></div>
       <div class="filters"><label class="search">Buscar proposta ou proponente<input id="search" type="search" value="${e(filters.search)}" placeholder="Número, nome ou UF"></label><label>UF<select id="filter-uf">${options({'':'Todas as UFs',...D.UFS},filters.uf)}</select></label><label>Status no Transferegov<select id="filter-source">${options({'':'Todos os status',...Object.fromEntries(SOURCE_CHAVES.map(k=>[k,SOURCE_ROTULO[k]]))},filters.source)}</select></label><label>Status<select id="filter-status">${options(Object.fromEntries(['','Sem proposta importada',...STATUS_PROPOSTA].map(x=>[x,x || 'Todos os status'])),filters.status)}</select></label><label>Controle<select id="filter-control">${options({'':'Todos os controles',financial:'Inconsistência financeira',unlinked:'Diligência sem registro',ouvidoria:'Ouvidoria pendente',merito:'Mérito pendente',proposta:'Requisitos da Proposta pendentes',formalizacao:'Requisitos para Formalização pendentes'},filters.control)}</select></label></div>
       <div class="table-wrap"><table class="table-fit"><colgroup><col class="c-expand"><col class="c-uf"><col class="c-proposta"><col class="c-valor"><col class="c-ctrl"><col class="c-dilig"><col class="c-ctrl"><col class="c-status"><col class="c-detalhar"></colgroup><thead><tr><th class="cell-center c-expand-th" scope="col"><span class="sr-only">Expandir linha</span></th><th class="cell-center">Unidade Federativa</th><th class="cell-center">Proposta</th><th class="cell-center">Valor global</th><th class="cell-center">Mérito</th><th class="cell-center">Diligências</th><th class="cell-center" title="Requisitos da Proposta + Requisitos para Formalização">Celebração</th><th class="cell-center">Status</th><th class="cell-center c-detalhar-th" scope="col"><span class="sr-only">Ações</span></th></tr></thead><tbody id="uf-rows"></tbody></table></div></section>
-      ${!ps.length?'<div class="info"><strong>Seu painel está pronto para receber as propostas.</strong><br>Use “Sincronizar com o Transferegov” para baixar automaticamente as extrações oficiais; o modo offline de anexar arquivos CSV fica como contingência. Nenhuma proposta foi presumida ou criada neste banco.</div>':''}
+      ${!ps.length?'<div class="info"><strong>Seu painel está pronto para receber as propostas.</strong><br>Use “Sincronização” para baixar automaticamente as extrações oficiais; o modo offline de anexar arquivos CSV fica como contingência. Nenhuma proposta foi presumida ou criada neste banco.</div>':''}
       <section class="section"><div class="section-head"><h2>Controles de consistência</h2></div><div class="section-body consistency"><span>${badge(String(ps.filter(p=>D.finance(p).ok).length),'good')} Valores consistentes</span><span>${badge(String(ps.filter(p=>!D.finance(p).ok).length),'bad')} Dados financeiros ausentes ou divergentes</span><span>${badge(String(pendingCount),pendingCount?'bad':'')} Diligências sem registro</span><span>${badge(String(ps.filter(p=>p.ouvidoria.status==='pendente').length),'warn')} Ouvidorias pendentes</span>${apagadas.length?`<span>${badge(String(apagadas.length),'bad')} Propostas apagadas (fora do painel)</span>`:''}</div></section>
       <p class="source">${fontePainel}</p>`;
     $('#search').addEventListener('input',ev=>{filters.search=ev.target.value;renderRows();});
@@ -226,7 +284,7 @@
   function rowSummary(uf,name,ps,modo='ativas',sit=''){
     texto(uf,'Resumo da UF: código');texto(name,'Resumo da UF: nome');texto(modo,'Resumo da UF: modo');
     const apagadas=modo==='apagadas';
-    if(!ps.length)return `<div class="expansion-wrap"><div class="expansion-header"><div class="expansion-header-info"><span class="expansion-eyebrow">Resumo Executivo da UF</span><h3 class="expansion-title"><span class="uf-cell">${ufFlag(uf,name)}<span class="uf-code">${textoHtml(uf,'UF')}</span></span> ${textoHtml(name,'Resumo da UF: nome')}</h3></div><div class="expansion-badges">${sitBadge(sit||'Sem proposta importada')}</div></div><div class="row-card"><p class="muted"><strong>${textoHtml(name,'Resumo da UF: nome')} (${textoHtml(uf,'Resumo da UF: código')})</strong> não tem proposta vinculada ao programa ${textoHtml(D.PROGRAM,'Resumo da UF: programa')} na última extração. A ausência na extração não exclui uma proposta local já cadastrada.</p><p class="source">Use “Sincronizar com o Transferegov” para atualizar. O banco desta origem é separado do banco do arquivo HTML.</p></div></div>`;
+    if(!ps.length)return `<div class="expansion-wrap"><div class="expansion-header"><div class="expansion-header-info"><span class="expansion-eyebrow">Resumo Executivo da UF</span><h3 class="expansion-title"><span class="uf-cell">${ufFlag(uf,name)}<span class="uf-code">${textoHtml(uf,'UF')}</span></span> ${textoHtml(name,'Resumo da UF: nome')}</h3></div><div class="expansion-badges">${sitBadge(sit||'Sem proposta importada')}</div></div><div class="row-card"><p class="muted"><strong>${textoHtml(name,'Resumo da UF: nome')} (${textoHtml(uf,'Resumo da UF: código')})</strong> não tem proposta vinculada ao programa ${textoHtml(D.PROGRAM,'Resumo da UF: programa')} na última extração. A ausência na extração não exclui uma proposta local já cadastrada.</p><p class="source">Use “Sincronização” para atualizar. O banco desta origem é separado do banco do arquivo HTML.</p></div></div>`;
     const cards=ps.map(p=>{
       const i=p.imported,f=D.finance(p),s=D.sourceState(i),pSit=D.situation(p);
       const faltam=['Repasse','Contrapartida','Valor global'].filter((_,n)=>[i.repasse,i.contrapartida,i.global][n]===null);
@@ -1230,28 +1288,40 @@
   function renderHistory(p){$('#tab-content').innerHTML=`<section class="section"><div class="section-head"><h2>Histórico de alterações</h2><small>${p.history.length} registro(s)</small></div><div class="section-body"><ol class="timeline">${p.history.slice().reverse().map(h=>`<li><small>${e(new Date(h.at).toLocaleString('pt-BR'))} · ${e(h.actor)}</small><strong>${e(h.event)}</strong><details><summary>Ver dados anteriores e posteriores</summary><pre>${e(JSON.stringify({antes:h.before,depois:h.after},null,2))}</pre></details></li>`).join('')}</ol></div></section>`;}
   function conclusion(){const p=current(),blocks=D.blockers(p);modal('Conclusão da análise técnica',`<p>A conclusão será registrada em nome do analista. Os requisitos de celebração continuam sendo acompanhados em sua própria aba.</p>${blocks.length?`<div class="info error"><strong>Há pendências para concluir:</strong><ul>${blocks.map(x=>`<li>${e(x)}</li>`).join('')}</ul></div><div class="dialog-actions">${button('Voltar à análise','close')}</div>`:`<div class="info">Mérito, PAD e diligências passaram pelos controles operacionais.</div><div class="dialog-actions">${button('Cancelar','close')}${button('Registrar conclusão técnica','confirm-conclusion','','primary')}</div>`}`);}
   /* Sincronização automática: a interface apenas chama o servidor local e grava o resultado no banco. */
-  const SYNC_PATH='/api/sync',SYNC_TIMEOUT_MS=12*60*1000;
+  const SYNC_PATH='/api/sync',SYNC_TIMEOUT_MS=45*60*1000;
   const SYNC_SERVER_HELP=location.protocol==='file:'
     ?'Esta página foi aberta diretamente do arquivo (file://), e nesse modo o navegador não pode baixar as extrações do Transferegov; nada foi gravado no banco local. Abra o sistema pelo atalho da Área de Trabalho ou pelo arquivo “INICIAR SISTEMA.cmd”, na pasta do sistema, para ligar o servidor e abrir a sincronização.'
     :'Não foi possível falar com o servidor local; nada foi gravado no banco local. Abra o sistema pelo atalho “PROFOR 2026” na Área de Trabalho ou pelo arquivo “INICIAR SISTEMA.cmd”, na pasta do sistema. Alternativa manual: execute “node server.cjs” na pasta do sistema e use http://127.0.0.1:8766/PROFOR_2026.html.';
   function syncClock(ms){const s=Math.max(0,Math.floor(ms/1000));return s<60?`${s} s`:`${Math.floor(s/60)} min ${String(s%60).padStart(2,'0')} s`;}
-  function syncBytes(n){return n<1024?`${n} B`:n<1048576?`${(n/1024).toFixed(1)} KB`:`${(n/1048576).toFixed(1)} MB`;}
+  function syncBytes(n){const fmt=value=>value.toLocaleString('pt-BR',{maximumFractionDigits:1});return n<1024?`${fmt(n)} B`:n<1048576?`${fmt(n/1024)} KB`:`${fmt(n/1048576)} MB`;}
   function syncFailure(kind,message){const err=new Error(message);err.syncKind=kind;return err;}
   function syncLabel(source,pad,note=''){
     const files=Array.isArray(source?.files)?source.files.length:Array.isArray(source?.blobs)?source.blobs.length:0;
     return `${source?.url || 'https://api-publica.transferegov.gestao.gov.br/downloads'} · ${pad?'sincronização completa (com PAD)':'sincronização rápida (sem PAD)'}${files?` · ${files} arquivo(s)`:''}${note?` · ${note}`:''}`;
   }
   function syncStep(text){const el=$('#sync-step');if(el)el.textContent=text;}
+  function syncLog(message,at=Date.now()){
+    const timestamp=new Date(at).toISOString();
+    if(syncRun)syncRun.activity.push({at:timestamp,message:String(message)});
+    const log=$('#sync-activity');if(!log)return;
+    const item=document.createElement('li');
+    const time=document.createElement('time');time.textContent=historyTime(timestamp);
+    const line=document.createElement('span');line.textContent=message;
+    item.append(time,line);log.append(item);
+    while(log.children.length>200)log.firstElementChild.remove();
+    log.scrollTop=log.scrollHeight;
+  }
   function syncActions(mode){
     const el=$('#sync-actions');if(!el)return;
-    if(mode==='running')el.innerHTML=button('Cancelar sincronização','sync-cancel','','danger');
-    else if(mode==='saving')el.innerHTML='<button type="button" class="danger" disabled>Gravando no banco local…</button>';
-    else el.innerHTML=`${button('Tentar novamente (completa)','sync-retry','','primary')}${button('Sincronização rápida (sem PAD)','sync-fast')}${button('Modo offline: anexar arquivos CSV','import')}${button('Fechar','close')}`;
+    if(mode==='running')el.innerHTML=button('Cancelar atualização','sync-cancel','','danger');
+    else if(mode==='saving')el.innerHTML='<button type="button" disabled>Gravando no banco local…</button>';
+    else el.innerHTML=button('Atualizar Dados','sync-start','','primary');
   }
   function syncFail(message,kind='error'){
     const el=$('#form-error');
     if(el){el.className=kind==='error'?'error-message':'source';el.textContent=message;el.focus();}
     syncStep(kind==='error'?'Não foi possível concluir a sincronização.':'Sincronização interrompida.');
+    syncLog(kind==='error'?`ERRO: ${message}`:message);
     syncActions('idle');if(kind==='error')toast(message,true);
   }
   function syncDataFail(detail){syncFail(`A resposta do servidor local não pôde ser usada: ${detail}. Nada foi gravado no banco local e as propostas já cadastradas foram preservadas.`);}
@@ -1271,7 +1341,7 @@
     run.timer=setInterval(()=>{const el=$('#sync-elapsed');if(el)el.textContent=syncClock(Date.now()-run.started);},1000);
     run.timeout=setTimeout(()=>{run.reason=run.reason || 'timeout';run.controller.abort();},SYNC_TIMEOUT_MS);
   }
-  function syncStopTimers(run){clearInterval(run.timer);clearTimeout(run.timeout);if(syncRun===run)syncRun=null;}
+  function syncStopTimers(run){clearInterval(run.timer);clearInterval(run.poll);clearTimeout(run.timeout);if(syncRun===run)syncRun=null;}
   function cancelSync(reason='user'){if(syncRun){syncRun.reason=syncRun.reason || reason;syncRun.controller.abort();}}
   function syncWarningsHtml(warnings){return warnings.length?warnings.map(w=>`<div class="info warning">${e(w)}</div>`).join(''):'';}
   function syncStatsHtml(stats){
@@ -1284,19 +1354,66 @@
   }
   function syncStatsBadge(stats){return stats && Number.isFinite(stats.durationMs)?`<span>${badge(`servidor: ${(stats.durationMs/1000).toFixed(1).replace('.',',')} s`)}</span>`:'';}
   function syncPadBadge(stats){return stats && Number.isFinite(stats.padItems)?`<span>${badge(`${stats.padItems} item(ns) de PAD recebidos`)}</span>`:'';}
-  function syncChangesHtml(changes){return `<div class="table-wrap"><table><thead><tr><th>Proposta</th><th>UF</th><th>Campo</th><th>Antes</th><th>Depois</th></tr></thead><tbody>${changes.map(c=>`<tr><td><span class="proposal-number">${e(proposalNumber(c.numero))}${proposalCopyButton(c.numero)}</span></td><td>${ufTag(c.uf) || '<span class="muted">—</span>'}</td><td>${e(c.field)}</td><td>${e(c.field==='pad'?`${c.before?.length || 0} itens`:JSON.stringify(c.before))}</td><td>${e(c.field==='pad'?`${c.after?.length || 0} itens`:JSON.stringify(c.after))}</td></tr>`).join('') || '<tr><td colspan="5" class="empty">Nenhuma alteração de campo.</td></tr>'}</tbody></table></div>`;}
-  function syncDialogHtml(){
-    return `<p>Programa <strong>${D.PROGRAM}</strong>. Esta janela dispara a sincronização automática: o servidor local baixa, descompacta e cruza as extrações oficiais do <a href="https://api-publica.transferegov.gestao.gov.br/downloads" target="_blank" rel="noopener noreferrer">portal de dados</a>. Nenhum arquivo precisa ser anexado.</p>
-      <div class="info"><p id="sync-step" role="status" aria-live="polite">Preparando a sincronização…</p><p class="source"><span id="sync-elapsed">0 s</span> · <span id="sync-received">aguardando o servidor concluir o download e o cruzamento</span></p></div>
-      <p class="source">A sincronização completa inclui o PAD (plano de aplicação detalhado) e pode levar de dezenas de segundos a alguns minutos. A sincronização rápida, sem o PAD, é mais leve e preserva o plano de aplicação já registrado.</p>
-      <p id="form-error" class="error-message" role="alert" tabindex="-1"></p>
-      <div class="dialog-actions" id="sync-actions"></div>
-      <hr>
-      <p class="source"><strong>Textos oficiais da proposta</strong> — justificativa, público-alvo, problema a resolver, resultados esperados, relação com os objetivos e capacidade técnica. Vêm do arquivo público <code>siconv_justificativas_proposta.zip</code> (716 MB) e não fazem parte da sincronização: a busca é feita uma vez e fica guardada no banco.</p>
-      <div class="dialog-actions">${button('Buscar textos das propostas','textos')}</div>`;
+  const SYNC_FIELD_LABELS={numero:'Número da proposta',uf:'UF',programa:'Programa',proponente:'Proponente',cnpj:'CNPJ',orgao:'Órgão',objeto:'Objeto',situacao:'Situação',data:'Data da proposta',vigenciaInicio:'Início da vigência',vigenciaFim:'Fim da vigência',repasse:'Valor de repasse',contrapartida:'Contrapartida',global:'Valor global',pad:'Plano de Aplicação Detalhado'};
+  function syncFieldLabel(field){return SYNC_FIELD_LABELS[field]||field;}
+  function padBusinessKey(item){return JSON.stringify([item.descricao,Number(item.quantidade),item.unitario,item.total]);}
+  function padChangedItems(value,other){
+    const remaining=new Map();
+    for(const item of Array.isArray(other)?other:[]){const key=padBusinessKey(item);remaining.set(key,(remaining.get(key)||0)+1);}
+    return value.filter(item=>{const key=padBusinessKey(item),count=remaining.get(key)||0;if(count){remaining.set(key,count-1);return false;}return true;});
   }
-  /* ---------- Textos oficiais da proposta (busca sob demanda) ---------- */
-  const TEXTOS_PATH='/api/sync/textos',TEXTOS_TIMEOUT_MS=40*60*1000;
+  function visibleHistoryChanges(changes){return changes.filter(change=>change.field!=='pad' || !Array.isArray(change.before) || !Array.isArray(change.after) || padChangedItems(change.before,change.after).length || padChangedItems(change.after,change.before).length);}
+  function syncPadItemHtml(item){
+    const quantity=Number(item.quantidade);
+    const formattedQuantity=Number.isFinite(quantity)?new Intl.NumberFormat('pt-BR',{maximumFractionDigits:6}).format(quantity):String(item.quantidade??'—');
+    const unit=Number.isSafeInteger(item.unitario)?D.fmtMoney(item.unitario):'—';
+    const total=Number.isSafeInteger(item.total)?D.fmtMoney(item.total):'—';
+    return `<li><strong>${e(item.descricao||'Item sem descrição')}</strong><span>Quantidade: ${e(formattedQuantity)} · Unitário: ${e(unit)} · Total: ${e(total)}</span></li>`;
+  }
+  function syncPadValueHtml(value,other){
+    if(value===null || value===undefined)return '<span class="muted">Em branco</span>';
+    if(!Array.isArray(value))return '<span class="muted">Formato do plano indisponível</span>';
+    const changed=padChangedItems(value,other);
+    const total=value.length,number=changed.length;
+    return `<div class="pad-change-count">${total} ${total===1?'item':'itens'} no plano</div>${number?`<details class="pad-change-details"><summary>Ver ${number} ${number===1?'item diferente':'itens diferentes'}</summary><ul>${changed.map(syncPadItemHtml).join('')}</ul></details>`:''}`;
+  }
+  function syncValueHtml(field,value,other){
+    if(field==='pad')return syncPadValueHtml(value,other);
+    if(value===null || value===undefined)return '<span class="muted">Em branco</span>';
+    if(['repasse','contrapartida','global'].includes(field) && Number.isSafeInteger(value))return e(D.fmtMoney(value));
+    if(['data','vigenciaInicio','vigenciaFim'].includes(field) && typeof value==='string' && /^\d{4}-\d{2}-\d{2}/.test(value))return e(D.fmtDate(value));
+    if(typeof value==='object')return '<span class="muted">Dados estruturados atualizados.</span>';
+    const raw=String(value);
+    if(!raw)return '<span class="muted">Em branco</span>';
+    if(raw.length<=240)return `<span class="change-value">${e(raw)}</span>`;
+    return `<div class="change-preview">${e(raw.slice(0,170))}…</div><details class="change-value change-long"><summary>Ver texto completo</summary><div>${e(raw)}</div></details>`;
+  }
+  function syncChangesHtml(changes){
+    const visible=visibleHistoryChanges(changes);
+    if(!visible.length)return '<p class="muted">Nenhuma alteração de campo.</p>';
+    return `<div class="change-list">${visible.map(c=>`<article class="change-card"><div class="change-card-head"><div><span class="change-field">${e(syncFieldLabel(c.field))}</span><span class="change-proposal">Proposta <span class="proposal-number">${e(proposalNumber(c.numero))}${proposalCopyButton(c.numero)}</span> ${ufTag(c.uf)}</span></div></div><div class="change-pair"><div class="change-side change-before"><div class="change-side-label">Antes</div><div class="change-side-content">${syncValueHtml(c.field,c.before,c.after)}</div></div><div class="change-side change-after"><div class="change-side-label">Depois</div><div class="change-side-content">${syncValueHtml(c.field,c.after,c.before)}</div></div></div></article>`).join('')}</div>`;
+  }
+  function lastChangeHtml(){
+    if(!syncHistory)return '<p class="source">Carregando a última alteração…</p>';
+    const entry=syncHistory.slice().reverse().find(item=>visibleHistoryChanges(item.changes).length);
+    if(!entry)return '<p class="source">Nenhuma alteração registrada nas versões disponíveis do banco.</p>';
+    return `<p class="source">${e(new Date(entry.at).toLocaleString('pt-BR',{timeZone:'America/Sao_Paulo'}))} · ${visibleHistoryChanges(entry.changes).length} campo(s) alterado(s)${entry.reconstructed?' · reconstruído das versões anteriores':''}</p>${syncChangesHtml(entry.changes)}`;
+  }
+  function renderLastChange(){const el=$('#last-sync-changes');if(el)el.innerHTML=lastChangeHtml();}
+  function loadLastChange(force=false){refreshHistory(force).then(()=>{
+    renderLastChange();
+    const result=$('#sync-current-result'),latest=syncHistory.at(-1);
+    if(result && latest){const count=visibleHistoryChanges(latest.changes).length;result.textContent=count?`${count} campo(s) alterado(s) nesta atualização.`:'Sem dados novos nesta atualização.';}
+    if(view==='registros')renderRecords();
+  }).catch(err=>{const el=$('#last-sync-changes');if(el)el.textContent=`Não foi possível ler o histórico: ${err.message}`;});}
+  function syncDialogHtml(){
+    return `<div class="sync-monitor"><div class="sync-progress-head"><span id="sync-step" role="status" aria-live="polite">Pronto para atualizar propostas, PAD e textos oficiais.</span><strong id="sync-percent">0%</strong></div><progress id="sync-progress" max="100" value="0" aria-label="Progresso da atualização">0%</progress><p class="source"><span id="sync-elapsed">0 s</span> · <span id="sync-stage">Aguardando início</span> · <span id="sync-received">0 de 14 operações</span></p></div>
+      <section class="sync-activity" aria-label="Registro da atualização"><h3>Registro da atualização</h3><ol id="sync-activity" role="log" aria-live="polite" aria-relevant="additions"></ol></section>
+      <div id="sync-summary" aria-live="polite"></div>
+      <section class="section sync-last"><div class="section-head"><h3>Última alteração registrada</h3></div><div class="section-body" id="last-sync-changes">${lastChangeHtml()}</div></section>
+      <p id="form-error" class="error-message" role="alert" tabindex="-1"></p>
+      <div class="dialog-actions" id="sync-actions">${button('Atualizar Dados','sync-start','','primary')}</div>`;
+  }
   /* Cada item de análise mostra o trecho que o ente federativo registrou na
      origem, transcrito sem edição. Item sem texto correspondente não inventa
      conteúdo: aponta a consulta pública. */
@@ -1307,82 +1424,27 @@
     if(!campos.length)return '';
     const link=`<a href="${e(consultaPublica(p.imported.id))}" target="_blank" rel="noopener noreferrer">abrir a consulta pública desta proposta no Transferegov</a>`;
     const t=p.textos;
-    if(!t)return `<p class="source">Os textos oficiais desta proposta ainda não foram buscados neste banco. Use <strong>Buscar textos das propostas</strong>, em Sincronizar: a busca é feita uma vez e fica guardada. Também é possível ${link}.</p>`;
+    if(!t)return `<p class="source">Os textos oficiais desta proposta ainda não estão neste banco. Use <strong>Sincronização → Atualizar Dados</strong> para atualizar propostas e textos juntos. Também é possível ${link}.</p>`;
     const partes=campos.filter(c=>String(t[c]||'').trim()).map(c=>`<div class="wide"><dt>${textoHtml(D.CAMPOS_TEXTOS[c],'Textos oficiais: rótulo')}</dt><dd><div class="texto-oficial">${textoHtml(t[c],'Textos oficiais: '+c)}</div></dd></div>`);
     if(!partes.length)return `<p class="source">A origem não traz texto para este item nesta proposta. Confira ${link}.</p>`;
     return `<dl class="data-grid">${partes.join('')}</dl><p class="source">Transcrição do arquivo público da origem, obtida em ${textoHtml(D.fmtDate(t.at),'Textos oficiais: data')} · ${link}.</p>`;
   }
-  function textosDialogHtml(){
-    return `<p>O servidor local vai baixar o arquivo público <code>siconv_justificativas_proposta.zip</code> e guardar no banco os textos das propostas já cadastradas. São 716 MB — a espera costuma ficar em torno de dez minutos — e a busca só precisa ser repetida se você quiser atualizar os textos.</p>
-      <div class="info"><p id="textos-step" role="status" aria-live="polite">Consultando o servidor local…</p><p class="source"><span id="textos-elapsed">0 s</span></p></div>
-      <p id="form-error" class="error-message" role="alert" tabindex="-1"></p>
-      <div class="dialog-actions">${button('Cancelar busca','textos-cancel','','danger')}</div>`;
-  }
-  async function buscarTextos(){
-    if(syncRun || textosRun){toast('Já existe uma operação em andamento. Aguarde ou cancele.',true);return;}
-    const alvos=state.proposals.map(p=>p.id);
-    D.assert(alvos.length,'Não há proposta no banco para buscar textos.');
-    const run={controller:new AbortController(),started:Date.now()};
-    textosRun=run;
-    const step=text=>{const el=$('#textos-step');if(el)el.textContent=text;};
-    modal('Buscar textos das propostas',textosDialogHtml());
-    const relogio=setInterval(()=>{const el=$('#textos-elapsed');if(el)el.textContent=`${Math.round((Date.now()-run.started)/1000)} s`;},1000);
-    const parar=()=>{clearInterval(relogio);textosRun=null;};
-    const timeout=setTimeout(()=>run.controller.abort(),TEXTOS_TIMEOUT_MS);
-    let payload;
-    try{
-      /* O servidor aceita até 200 identificadores por chamada; bancos maiores
-         são buscados em lotes, somando os textos e as ausências. */
-      const LOTE=200,textos={},faltando=[];let durationMs=0,rows=0,found=0,entry='';
-      for(let i=0;i<alvos.length;i+=LOTE){
-        const lote=alvos.slice(i,i+LOTE);
-        step(`Baixando e lendo o arquivo público — lote ${Math.floor(i/LOTE)+1} de ${Math.ceil(alvos.length/LOTE)} (${lote.length} proposta(s))…`);
-        const res=await fetch(`${TEXTOS_PATH}?ids=${encodeURIComponent(lote.join(','))}`,{signal:run.controller.signal,cache:'no-store',headers:{Accept:'application/json'}});
-        if(!res.ok){
-          let detalhe='';
-          try{detalhe=(await res.json()).error || '';}catch{detalhe='';}
-          throw new Error(`O servidor local respondeu HTTP ${res.status} e não concluiu a busca dos textos${detalhe?`: ${detalhe}`:'. Confirme que ele está ligado e atualizado.'}`);
-        }
-        const parte=await res.json();
-        D.assert(parte && typeof parte.textos==='object','A resposta não traz os textos das propostas.');
-        Object.assign(textos,parte.textos);
-        if(Array.isArray(parte.faltando))faltando.push(...parte.faltando);
-        durationMs+=Number.isFinite(parte.stats?.durationMs)?parte.stats.durationMs:0;
-        rows=parte.stats?.rows ?? rows;
-        found+=Number.isFinite(parte.stats?.found)?parte.stats.found:0;
-        entry=parte.stats?.entry || entry;
-      }
-      payload={textos,faltando,stats:{durationMs,rows,found,entry}};
-    }catch(err){
-      clearTimeout(timeout);parar();
-      if(err.name==='AbortError'){modal('Buscar textos das propostas',`<p>A busca foi interrompida. Nada foi gravado no banco local.</p><div class="dialog-actions">${button('Fechar','close')}</div>`);return;}
-      modal('Buscar textos das propostas',`<div class="info error">${e(err.message)}</div><div class="dialog-actions">${button('Tentar novamente','textos','','primary')}${button('Fechar','close')}</div>`);
-      return;
-    }
-    clearTimeout(timeout);parar();
-    D.assert(payload && typeof payload.textos==='object','A resposta não traz os textos das propostas.');
-    const next=D.clone(state);let aplicados=0;
-    for(const p of next.proposals) if(payload.textos[p.id]){D.setTextos(p,payload.textos[p.id],actor());aplicados++;}
-    if(!aplicados){modal('Buscar textos das propostas',`<div class="info warning">O arquivo público foi lido e não trouxe texto para nenhuma das ${alvos.length} proposta(s) deste banco. Nada foi alterado.</div><div class="dialog-actions">${button('Fechar','close')}</div>`);return;}
-    try{step('Gravando os textos no banco local…');await persist(next);}catch(err){modal('Buscar textos das propostas',`<div class="info error">${e(err.message)}</div><div class="dialog-actions">${button('Fechar','close')}</div>`);return;}
-    const faltando=Array.isArray(payload.faltando)?payload.faltando:[];
-    const duracao=Number.isFinite(payload.stats?.durationMs)?` em ${(payload.stats.durationMs/1000).toFixed(1).replace('.',',')} s no servidor`:'';
-    modal('Textos oficiais guardados',`<p><strong>${aplicados} proposta(s)</strong> receberam os textos oficiais${e(duracao)}. Eles aparecem nos itens de Mérito e ficam guardados no banco: a busca não precisa ser repetida.</p>${faltando.length?`<div class="info warning">Sem texto no arquivo público: ${e(faltando.length)} proposta(s).</div>`:''}<div class="dialog-actions">${button('Fechar','close')}</div>`);
-    toast(`Textos oficiais guardados para ${aplicados} proposta(s).`);
-  }
-  function syncRestart(pad){
+  function syncRestart(){
     if(syncRun){toast('Já existe uma sincronização em andamento. Aguarde ou cancele a operação.',true);return;}
-    modal('Sincronizar com o Transferegov',syncDialogHtml());
-    startSync(pad);
+    modal('Atualizar dados',syncDialogHtml());
+    loadLastChange();
+    startSync();
   }
   function syncDialog(){
     if(!state)return;
     if(syncRun){toast('Já existe uma sincronização em andamento. Aguarde ou cancele a operação.',true);return;}
     if(location.protocol==='file:'){
-      modal('Sincronizar com o Transferegov',`<p>Esta janela foi aberta pelo arquivo HTML (<strong>file://</strong>). Nesse modo o navegador não pode baixar as extrações do Transferegov — não é falha do botão: a API pública não autoriza o download direto pelo navegador, e esta página não consegue nem consultar o servidor local.</p><p><strong>Para sincronizar:</strong> feche esta janela e abra o sistema pelo atalho <strong>PROFOR 2026</strong> da Área de Trabalho (ou pelo arquivo <strong>INICIAR SISTEMA.cmd</strong>, na pasta do sistema). Ele liga o servidor local e abre o sistema no endereço certo; lá o botão Sincronizar funciona.</p><div class="info warning">Os dados locais ficam guardados por origem: o que já foi sincronizado pertence ao endereço do servidor, e não a esta janela aberta pelo arquivo HTML. Por isso o painel aparece vazio aqui.</div><div class="dialog-actions">${button('Modo offline: anexar arquivos CSV','import')}${button('Fechar','close')}</div>`);
+      modal('Atualizar dados',`<p>Esta janela foi aberta pelo arquivo HTML (<strong>file://</strong>). Nesse modo o navegador não pode baixar as extrações do Transferegov — não é falha do botão: a API pública não autoriza o download direto pelo navegador, e esta página não consegue nem consultar o servidor local.</p><p><strong>Para sincronizar:</strong> feche esta janela e abra o sistema pelo atalho <strong>PROFOR 2026</strong> da Área de Trabalho (ou pelo arquivo <strong>INICIAR SISTEMA.cmd</strong>, na pasta do sistema). Ele liga o servidor local e abre o sistema no endereço certo; lá o botão Atualizar Dados funciona.</p><div class="info warning">Os dados locais ficam guardados por origem: o que já foi sincronizado pertence ao endereço do servidor, e não a esta janela aberta pelo arquivo HTML. Por isso o painel aparece vazio aqui.</div><div class="dialog-actions">${button('Modo offline: anexar arquivos CSV','import')}${button('Fechar','close')}</div>`);
       return;
     }
-    syncRestart(1);
+    modal('Atualizar dados',syncDialogHtml());
+    syncLog('Pronto. Clique em Atualizar Dados para iniciar.');
+    loadLastChange();
   }
   /* Chegou pelo protocolo (?sync=1)? Então sincroniza sozinho, sem novo clique. */
   function runAutoSyncFromQuery(){
@@ -1390,23 +1452,67 @@
     try{auto=new URLSearchParams(location.search).get('sync')==='1';}catch{auto=false;}
     if(!auto)return;
     try{history.replaceState(null,'',location.pathname+location.hash);}catch{/* URL segue com ?sync=1 */}
-    syncRestart(1);
+    syncRestart();
   }
-  async function startSync(pad){
+  async function startSync(){
     if(syncRun){toast('Já existe uma sincronização em andamento. Aguarde ou cancele a operação.',true);return;}
-    const run={controller:new AbortController(),started:Date.now(),pad:!!pad,reason:''};
+    const run={controller:new AbortController(),started:Date.now(),pad:true,reason:'',id:crypto.randomUUID(),activity:[]};
     syncRun=run;syncStartTimers(run);
     const errorEl=$('#form-error');if(errorEl){errorEl.className='error-message';errorEl.textContent='';}
-    const received=$('#sync-received');if(received)received.textContent='aguardando o servidor concluir o download e o cruzamento';
-    syncStep(run.pad?'Servidor local acionado: baixando, descompactando e cruzando as extrações oficiais (com PAD). O cronômetro mede a espera — isso pode levar de dezenas de segundos a alguns minutos.':'Servidor local acionado: sincronização rápida (sem PAD). O cronômetro mede a espera.');
+    const log=$('#sync-activity');if(log)log.replaceChildren();
+    const bar=$('#sync-progress'),percent=$('#sync-percent');if(bar)bar.value=0;if(percent)percent.textContent='0%';
+    const stage=$('#sync-stage');if(stage)stage.textContent='iniciando';
+    const received=$('#sync-received');if(received)received.textContent='aguardando os dados da etapa';
+    const summary=$('#sync-summary');if(summary)summary.replaceChildren();
+    syncStep('Servidor local acionado: atualizando propostas, PAD e textos oficiais.');
+    syncLog('Iniciando atualização de propostas, PAD e textos oficiais.');
     syncActions('running');
     const force=!state.proposals.length;
+    const applyProgress=data=>{
+      if(syncRun!==run || !data || typeof data!=='object')return;
+      if(typeof data.message==='string')syncStep(data.message);
+      const stage=$('#sync-stage');if(stage)stage.textContent=data.step>0?`etapa ${data.step} de ${data.steps}`:'iniciando';
+      const bar=$('#sync-progress'),percent=$('#sync-percent'),detail=$('#sync-received');
+      const measurable=Number.isFinite(data.loaded) && Number.isFinite(data.total) && data.total>0;
+      const overall=Number.isFinite(data.percent)?Math.max(0,Math.min(99,data.percent)):0;
+      if(bar)bar.value=overall;
+      if(percent)percent.textContent=`${overall}%`;
+      if(detail)detail.textContent=measurable?`${syncBytes(data.loaded)} de ${syncBytes(data.total)} processados nesta operação`:'aguardando a conclusão desta operação';
+      if(Array.isArray(data.actions)){
+        for(const action of data.actions){
+          if(!Number.isInteger(action.seq) || action.seq<=(run.lastActionSeq||0))continue;
+          syncLog(action.message,action.at);
+          run.lastActionSeq=action.seq;
+        }
+      }
+      if(measurable && typeof data.message==='string'){
+        const progressStep=Number.isInteger(data.step)?data.step:0;
+        const decile=Math.min(10,Math.floor(10*data.loaded/data.total));
+        if(progressStep!==run.lastLoggedStep){run.lastLoggedStep=progressStep;run.lastLoggedDecile=-1;}
+        if(decile>run.lastLoggedDecile && data.loaded>0){
+          run.lastLoggedDecile=decile;
+          syncLog(`${data.message} ${syncBytes(data.loaded)} de ${syncBytes(data.total)} (${decile*10}%).`);
+        }
+      }
+    };
+    const pollProgress=async()=>{
+      if(run.controller.signal.aborted)return;
+      if(run.polling)return run.polling;
+      run.polling=(async()=>{
+        try{const response=await fetch(`/api/sync/progress?run=${encodeURIComponent(run.id)}`,{signal:run.controller.signal,cache:'no-store'});if(response.ok)applyProgress(await response.json());}catch{/* a resposta principal continua responsável por informar falhas */}
+      })();
+      try{await run.polling;}finally{run.polling=null;}
+    };
+    run.poll=setInterval(pollProgress,800);
     let text;
     try{
-      const res=await fetch(`${SYNC_PATH}?pad=${run.pad?'1':'0'}${force?'&force=1':''}`,{signal:run.controller.signal,cache:'no-store',headers:{Accept:'application/json'}});
-      if(!res.ok)throw syncFailure('origem',`O servidor local respondeu HTTP ${res.status}${res.statusText?` (${res.statusText})`:''} e não concluiu a sincronização. Confirme que ele expõe a rota ${SYNC_PATH}; se a versão do servidor for antiga, tente novamente após atualizá-lo.`);
-      syncStep('Servidor local conectado: baixando, descompactando e cruzando as extrações oficiais. Isso pode levar de dezenas de segundos a alguns minutos.');
-      text=await syncReadText(res,n=>{const el=$('#sync-received');if(el)el.textContent=`${syncBytes(n)} recebidos`;});
+      const res=await fetch(`${SYNC_PATH}?pad=1${force?'&force=1':''}&run=${encodeURIComponent(run.id)}`,{signal:run.controller.signal,cache:'no-store',headers:{Accept:'application/json'}});
+      if(!res.ok){
+        let detail='';try{detail=(await res.json()).error || '';}catch{/* servidor sem corpo JSON */}
+        throw syncFailure('origem',`O servidor local respondeu HTTP ${res.status} e não concluiu a sincronização${detail?`: ${detail}`:'. Confira a conexão e tente novamente.'}`);
+      }
+      await pollProgress();
+      text=await syncReadText(res,()=>{});
     }catch(err){
       syncStopTimers(run);
       if(err.name==='AbortError'){
@@ -1417,69 +1523,75 @@
       if(err.syncKind==='origem')syncFail(err.message);else syncFail(SYNC_SERVER_HELP);
       return;
     }
-    syncActions('saving');
+    syncActions('saving');syncLog('Download concluído. Validando e gravando os dados locais.');
     let payload;
     try{payload=JSON.parse(text);}catch{payload=null;}
     if(!payload || typeof payload!=='object' || Array.isArray(payload)){syncStopTimers(run);syncDataFail('o conteúdo recebido não é um objeto JSON');return;}
     const warnings=Array.isArray(payload.warnings)?payload.warnings.filter(w=>typeof w==='string'):[];
     const source=payload.source && typeof payload.source==='object'?payload.source:null;
     const cached=payload.unchanged===true;
-    const stored=cached && Array.isArray(payload.proposals) && payload.proposals.length>0;
-    if(cached && !stored){
-      const label=syncLabel(source,run.pad,force?'origem sem alterações desde a última execução do servidor':'origem sem alterações');
-      try{
-        syncStep('A origem não tem alterações. Registrando a conferência no banco local…');
-        const next=D.clone(state);next.sync={at:D.now(),source:label,count:Number.isSafeInteger(state.sync?.count)?state.sync.count:state.proposals.length};
-        await persist(next);render();
-      }catch(err){syncStopTimers(run);syncDataFail(err.message);return;}
-      syncStopTimers(run);modalDirty=false;
-      if(state.proposals.length){
-        modal('Nenhuma alteração desde a última sincronização',`<p>A origem foi consultada em ${e(new Date().toLocaleString('pt-BR'))} e não há alterações desde a última sincronização. A conferência foi registrada no banco local.</p><p class="source">Origem: ${e(label)}</p>${syncStatsHtml(payload.stats)}${syncWarningsHtml(warnings)}<div class="dialog-actions">${button('Sincronização rápida (sem PAD)','sync-fast')}${button('Buscar textos das propostas','textos')}${button('Fechar','close')}</div>`);
-        toast('Nenhuma alteração desde a última sincronização.');
-      }else{
-        modal('Servidor sem novidades e banco local vazio',`<div class="info warning"><strong>O servidor local respondeu que a origem não mudou desde a última execução dele, mas este navegador ainda não tem propostas gravadas.</strong><p>Nada foi removido do banco local. Se esta é a primeira sincronização neste navegador, use “Tentar novamente (completa)” para forçar o servidor a refazer a extração; se persistir, confira o servidor local e o modo offline.</p></div><p class="source">Origem: ${e(label)}</p>${syncStatsHtml(payload.stats)}${syncWarningsHtml(warnings)}<div class="dialog-actions">${button('Tentar novamente (completa)','sync-retry','','primary')}${button('Sincronização rápida (sem PAD)','sync-fast')}${button('Modo offline: anexar arquivos CSV','import')}${button('Fechar','close')}</div>`);
-        toast('O servidor informou "sem alterações", mas não há propostas gravadas neste navegador.',true);
-      }
-      return;
-    }
     if(!Array.isArray(payload.proposals)){syncStopTimers(run);syncDataFail('a resposta não traz a lista de propostas (campo “proposals”)');return;}
+    if(!payload.textos || typeof payload.textos!=='object' || Array.isArray(payload.textos) || !Array.isArray(payload.textosFaltando)){
+      syncStopTimers(run);syncDataFail('a resposta não traz os textos oficiais; reinicie o servidor local para carregar a versão atualizada');return;
+    }
     if(!payload.proposals.length){
       const label=syncLabel(source,run.pad,'extração sem propostas');
       try{
         syncStep('A extração não trouxe propostas. Preservando o banco local…');
+        syncLog('A extração oficial não trouxe propostas. Preservando o banco local.');
         const next=D.clone(state);next.sync={at:D.now(),source:label,count:0};
-        await persist(next);render();
+        await persist(next,{syncRun:{startedAt:new Date(run.started).toISOString(),activity:run.activity}});
+        syncLog('Gravação confirmada no banco local.');
       }catch(err){syncStopTimers(run);syncDataFail(err.message);return;}
-      syncStopTimers(run);modalDirty=false;
-      modal('Sincronização sem propostas',`<div class="info warning"><strong>A extração oficial não trouxe nenhuma proposta vinculada ao programa ${e(D.PROGRAM)}.</strong><p>Nada foi removido do banco local: as ${state.proposals.length} proposta(s) já cadastrada(s) foram preservadas. A ausência na extração não exclui uma proposta local — confira a origem antes de qualquer decisão. A base pública é atualizada ao longo do dia e pode não publicar o programa neste momento.</p></div><p class="source">Origem: ${e(label)}</p>${syncStatsHtml(payload.stats)}${syncWarningsHtml(warnings)}<div class="dialog-actions">${button('Tentar novamente (completa)','sync-retry','','primary')}${button('Modo offline: anexar arquivos CSV','import')}${button('Fechar','close')}</div>`);
+      syncStopTimers(run);syncHistory=null;render();modalDirty=false;
+      const bar=$('#sync-progress'),percent=$('#sync-percent');if(bar)bar.value=100;if(percent)percent.textContent='100%';
+      syncStep('Atualização concluída sem propostas na extração.');syncActions('idle');
+      const summary=$('#sync-summary');if(summary)summary.innerHTML=`<p id="sync-current-result">Sem dados novos nesta atualização.</p><div class="info warning">A extração oficial não trouxe propostas. Os dados locais foram preservados.</div>${syncStatsHtml(payload.stats)}${syncWarningsHtml(warnings)}`;
+      loadLastChange();
       toast('A extração não trouxe propostas do programa; nenhum dado local foi removido.');
       return;
     }
     syncStep(`Validando ${payload.proposals.length} proposta(s) recebida(s)…`);
+    syncLog(`Validando ${payload.proposals.length} proposta(s) recebida(s).`);
     const localWasEmpty=!state.proposals.length;
-    let preview;
-    try{preview=D.syncProposals(state,payload.proposals,syncLabel(source,run.pad,cached?'extração reaproveitada pelo servidor':''));}catch(err){syncStopTimers(run);syncDataFail(err.message);return;}
-    try{syncStep(`Gravando ${preview.changes.length} alteração(ões) no banco local…`);await persist(preview.state);}catch(err){syncStopTimers(run);syncDataFail(err.message);return;}
-    syncStopTimers(run);render();modalDirty=false;
+    let preview,textosConferidos=0,textosAlterados=0;
+    try{
+      preview=D.syncProposals(state,payload.proposals,syncLabel(source,run.pad,cached?'extração reaproveitada pelo servidor':''));
+      const ids=new Set(payload.proposals.map(p=>p.id));
+      const faltando=new Set(payload.textosFaltando);
+      D.assert(payload.textosFaltando.length===faltando.size && [...faltando].every(id=>ids.has(id)),'A lista de textos ausentes é inconsistente.');
+      for(const id of ids)D.assert(Object.hasOwn(payload.textos,id) || faltando.has(id),`A resposta não informou os textos da proposta ${id}.`);
+      for(const p of preview.state.proposals)if(ids.has(p.id) && Object.hasOwn(payload.textos,p.id)){
+        const novos=payload.textos[p.id];textosConferidos++;
+        const iguais=Object.keys(D.CAMPOS_TEXTOS).every(campo=>p.textos?.[campo]===String(novos?.[campo] ?? '').trim());
+        if(!iguais){D.setTextos(p,novos,actor());textosAlterados++;}
+        else{const antes=p.textos.at;p.textos.at=D.now();D.log(p,'Textos oficiais conferidos sem alteração',{at:antes},{at:p.textos.at},actor());}
+      }
+      if(faltando.size)warnings.push(`${faltando.size} proposta(s) sem texto na extração oficial; os textos locais anteriores foram preservados.`);
+    }catch(err){syncStopTimers(run);syncDataFail(err.message);return;}
+    try{
+      syncStep(`Gravando ${preview.changes.length} alteração(ões) de dados e ${textosAlterados} alteração(ões) de textos no banco local…`);
+      syncLog('Gravando propostas, PAD e textos no banco local.');
+      await persist(preview.state,{syncRun:{startedAt:new Date(run.started).toISOString(),activity:run.activity}});
+      syncLog('Gravação confirmada no banco local.');
+      const bar=$('#sync-progress'),percent=$('#sync-percent');if(bar)bar.value=100;if(percent)percent.textContent='100%';
+    }catch(err){syncStopTimers(run);syncDataFail(err.message);return;}
+    syncStopTimers(run);syncHistory=null;render();modalDirty=false;
     const ufs=[...new Set(preview.state.proposals.map(p=>p.imported.uf))].sort();
     const when=preview.state.sync.at;
-    const semAlteracoes=cached && !preview.changes.length;
-    const cachedNote=cached?`<div class="info">${localWasEmpty?'Dados obtidos na sincronização: o servidor reaproveitou a extração mais recente e informou que a origem não mudou desde a última execução dele.':'O servidor reaproveitou a extração mais recente e informou que a origem não mudou desde a última execução dele; os dados recebidos foram conferidos.'}</div>`:'';
-    modal(semAlteracoes?'Nenhuma alteração desde a última sincronização':'Sincronização concluída',`<p><strong>${payload.proposals.length} proposta(s)</strong> recebida(s) e <strong>${preview.changes.length} alteração(ões)</strong> registrada(s) no banco local.</p>
-      ${cachedNote}
-      <div class="consistency"><span>${badge(String(payload.proposals.length),'good')} proposta(s) nesta sincronização</span><span>${badge(String(preview.changes.length),preview.changes.length?'warn':'good')} alteração(ões)</span><span>${badge(`${ufs.length} de ${Object.keys(D.UFS).length} UFs cobertas`,'good')} ${e(ufs.join(', '))}</span>${syncPadBadge(payload.stats)}${syncStatsBadge(payload.stats)}</div>
-      <p class="source">Origem: ${e(syncLabel(source,run.pad))} · sincronizado em ${e(new Date(when).toLocaleString('pt-BR'))}. Esta é uma fotografia do momento da consulta: a base pública do Transferegov muda ao longo do dia.</p>
-      ${run.pad?'':'<div class="info warning">Sincronização rápida: o PAD (plano de aplicação detalhado) não foi baixado nem conferido nesta execução. O plano anterior foi preservado e continua aguardando conferência manual.</div>'}
-      ${syncWarningsHtml(warnings)}${syncChangesHtml(preview.changes)}
-      <div class="dialog-actions">${button('Buscar textos das propostas','textos')}${button('Modo offline: anexar arquivos CSV','import')}${button('Fechar','close')}</div>`);
-    toast(semAlteracoes?'Nenhuma alteração desde a última sincronização.':`Sincronização concluída: ${payload.proposals.length} proposta(s) e ${preview.changes.length} alteração(ões).`);
+    const cachedNote=cached?`<div class="info">${localWasEmpty?'O servidor reaproveitou a extração recente de propostas; os textos oficiais foram consultados nesta execução.':'A extração de propostas foi reaproveitada porque sua geração não mudou; os textos oficiais foram consultados nesta execução.'}</div>`:'';
+    syncStep('Atualização concluída e gravada no banco local.');
+    if(summary)summary.innerHTML=`<p id="sync-current-result">Conferindo alterações registradas…</p><p><strong>${payload.proposals.length} proposta(s)</strong> recebida(s) · ${textosConferidos} texto(s) conferido(s) · ${textosAlterados} texto(s) alterado(s).</p>${cachedNote}<div class="consistency"><span>${badge(`${ufs.length} de ${Object.keys(D.UFS).length} UFs cobertas`,'good')} ${e(ufs.join(', '))}</span>${syncPadBadge(payload.stats)}${syncStatsBadge(payload.stats)}</div><p class="source">Concluída em ${e(new Date(when).toLocaleString('pt-BR',{timeZone:'America/Sao_Paulo'}))}.</p>${syncWarningsHtml(warnings)}`;
+    syncActions('idle');
+    loadLastChange();
+    toast(`Sincronização concluída: ${payload.proposals.length} proposta(s) e ${textosConferidos} texto(s) conferido(s).`);
   }
-  function importDialog(){modal('Modo offline: anexar arquivos CSV do Transferegov',`<p>Programa <strong>${D.PROGRAM}</strong>. Modo offline de contingência: baixe e extraia os ZIPs no <a href="https://api-publica.transferegov.gestao.gov.br/downloads" target="_blank" rel="noopener noreferrer">portal oficial de dados</a> e selecione os CSVs abaixo. O caminho principal é <strong>Sincronizar com o Transferegov</strong>, que dispensa qualquer anexo.</p><form class="form-stack"><label>1. Programas — siconv_programa.csv<input name="program" type="file" accept=".csv" required></label><label>2. Programas / propostas — siconv_programa_proposta.csv<input name="links" type="file" accept=".csv" required></label><label>3. Propostas — siconv_proposta.csv<input name="proposal" type="file" accept=".csv" required></label><label>4. Plano de aplicação detalhado (opcional)<input name="pad" type="file" accept=".csv"></label><label>Codificação dos CSVs<select name="encoding"><option value="utf-8">UTF-8 (extração oficial atual)</option><option value="windows-1252">Windows-1252 (extrações antigas)</option></select></label><p id="import-progress" role="status"></p>${formEnd('Conferir importação')}</form>`);bindForm(async fd=>{const files=Object.fromEntries(['program','links','proposal','pad'].map(k=>[k,fd.get(k)?.size?fd.get(k):null]));const result=await Transferegov.importFiles(files,msg=>$('#import-progress').textContent=msg,fd.get('encoding'));const preview=D.syncProposals(state,result.proposals,result.source);modalDirty=false;modal('Conferir importação',`<p><strong>${result.proposals.length} proposta(s)</strong> vinculada(s) ao programa. ${preview.changes.length} alteração(ões) detectada(s).</p>${result.warnings.map(w=>`<div class="info warning">${e(w)}</div>`).join('')}${syncChangesHtml(preview.changes)}<p id="form-error" class="error-message" role="alert"></p><div class="dialog-actions">${button('Cancelar','close')}<button id="commit-import" class="primary">Confirmar importação</button></div>`);$('#commit-import').onclick=async()=>{const btn=$('#commit-import');btn.disabled=true;try{await persist(preview.state);render();saved('Importação concluída e salva no banco local.');}catch(err){formError(err);btn.disabled=false;}};});}
+  function importDialog(){modal('Modo offline: anexar arquivos CSV do Transferegov',`<p>Programa <strong>${D.PROGRAM}</strong>. Modo offline de contingência: baixe e extraia os ZIPs no <a href="https://api-publica.transferegov.gestao.gov.br/downloads" target="_blank" rel="noopener noreferrer">portal oficial de dados</a> e selecione os CSVs abaixo. O caminho principal é <strong>Sincronização → Atualizar Dados</strong>, que dispensa qualquer anexo.</p><form class="form-stack"><label>1. Programas — siconv_programa.csv<input name="program" type="file" accept=".csv" required></label><label>2. Programas / propostas — siconv_programa_proposta.csv<input name="links" type="file" accept=".csv" required></label><label>3. Propostas — siconv_proposta.csv<input name="proposal" type="file" accept=".csv" required></label><label>4. Plano de aplicação detalhado (opcional)<input name="pad" type="file" accept=".csv"></label><label>Codificação dos CSVs<select name="encoding"><option value="utf-8">UTF-8 (extração oficial atual)</option><option value="windows-1252">Windows-1252 (extrações antigas)</option></select></label><p id="import-progress" role="status"></p>${formEnd('Conferir importação')}</form>`);bindForm(async fd=>{const startedAt=D.now(),activity=[{at:startedAt,message:'Iniciando importação manual de arquivos CSV.'}];const files=Object.fromEntries(['program','links','proposal','pad'].map(k=>[k,fd.get(k)?.size?fd.get(k):null]));const result=await Transferegov.importFiles(files,msg=>{$('#import-progress').textContent=msg;activity.push({at:D.now(),message:msg});},fd.get('encoding'));const preview=D.syncProposals(state,result.proposals,result.source);modalDirty=false;modal('Conferir importação',`<p><strong>${result.proposals.length} proposta(s)</strong> vinculada(s) ao programa. ${preview.changes.length} alteração(ões) detectada(s).</p>${result.warnings.map(w=>`<div class="info warning">${e(w)}</div>`).join('')}${syncChangesHtml(preview.changes)}<p id="form-error" class="error-message" role="alert"></p><div class="dialog-actions">${button('Cancelar','close')}<button id="commit-import" class="primary">Confirmar importação</button></div>`);$('#commit-import').onclick=async()=>{const btn=$('#commit-import');btn.disabled=true;try{activity.push({at:D.now(),message:'Gravando importação manual no banco local.'});await persist(preview.state,{syncRun:{startedAt,activity}});syncHistory=null;render();saved('Importação concluída e salva no banco local.');}catch(err){formError(err);btn.disabled=false;}};});}
   function download(name,type,content){const url=URL.createObjectURL(new Blob([content],{type}));const a=document.createElement('a');a.href=url;a.download=name;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),30000);}
   function backupDialog(){modal('Backup e exportação',`<p>O banco fica na pasta dados/registros do sistema e acompanha o workspace pelo OneDrive. Antes de trocar de máquina, feche o sistema e aguarde a sincronização do OneDrive nas duas máquinas.</p><p>Última exportação solicitada: ${state.lastBackup?e(new Date(state.lastBackup).toLocaleString('pt-BR')):'nenhuma'}.</p><div class="actions">${button('Exportar backup JSON','backup','','primary')}${button('Exportar CSV','csv')}${button('Exportar cópia de recuperação','recovery')}${button('Resgatar banco antigo deste navegador','legacy')}</div><hr><form class="form-stack"><label>Restaurar backup JSON<input type="file" name="backup" accept=".json" required></label><p class="source">A restauração substitui o banco atual. A versão anterior ficará preservada como cópia de recuperação local.</p>${formEnd('Validar restauração')}</form>`);bindForm(async fd=>{const file=fd.get('backup');D.assert(file.size<50*1024*1024,'Backup acima do limite de 50 MB.');const imported=D.validateState(JSON.parse(await file.text()));modalDirty=false;modal('Confirmar restauração',`<p>Substituir ${state.proposals.length} proposta(s) local(is) pelas ${imported.proposals.length} proposta(s) deste backup?</p><p>A cópia do banco atual será preservada antes da substituição.</p><p id="form-error" class="error-message" role="alert"></p><div class="dialog-actions">${button('Cancelar','close')}<button id="restore-confirm" class="primary">Restaurar este backup</button></div>`);$('#restore-confirm').onclick=async()=>{const btn=$('#restore-confirm');btn.disabled=true;try{await persist(imported,{restore:true});selected=null;location.hash='painel';render();saved('Backup restaurado. A versão anterior foi preservada.');}catch(err){formError(err);btn.disabled=false;}};});}
   function report(){modal('Relatório de análise',`<div class="actions">${button('Copiar texto','copy-text')}${button('Copiar HTML para SEI','copy-html')}${button('Salvar HTML','save-report')}${button('Imprimir / salvar PDF','print')}</div><p class="source">Para PDF, selecione “Salvar como PDF” no diálogo de impressão.</p><div class="report" id="report-preview">${ProforReport.html(current())}</div>`);}
   async function handleAction(target){const action=target.dataset.action;
-    if(action==='close')closeModal();else if(action==='import')importDialog();else if(action==='sync')syncDialog();else if(action==='export')backupDialog();else if(action==='sync-cancel')cancelSync('user');else if(action==='sync-retry')syncRestart(1);else if(action==='sync-fast')syncRestart(0);else if(action==='textos'){await buscarTextos();}else if(action==='textos-cancel'){if(textosRun)textosRun.controller.abort();}else if(action==='review')editReview(target.dataset.group,target.dataset.id);else if(action==='sei')editSei();else if(action==='institution')editInstitution();else if(action==='diligence')editDiligence(target.dataset.id,target.dataset.ref);else if(action==='conclude')conclusion();else if(action==='report')report();else if(action==='copy-proposal'){await navigator.clipboard.writeText(target.dataset.number);toast(`Proposta ${target.dataset.number} copiada.`);}else if(action==='copy-cnpj'){await navigator.clipboard.writeText(target.dataset.cnpj);toast(`CNPJ ${target.dataset.cnpj} copiado.`);}
+    if(action==='close')closeModal();else if(action==='import')importDialog();else if(action==='sync')syncDialog();else if(action==='sync-start')startSync();else if(action==='history-day'){selectedHistoryDay=target.dataset.day;renderRecords();document.querySelector(`[data-action="history-day"][data-day="${selectedHistoryDay}"]`)?.focus();}else if(action==='history-prev' || action==='history-next'){moveCalendar(action==='history-prev'?-1:1);document.querySelector(`[data-action="${action}"]`)?.focus();}else if(action==='history-today'){selectedHistoryDay=D.localToday();calendarStart=calendarWeek(selectedHistoryDay.slice(0,7)+'-01');renderRecords();document.querySelector('[data-action="history-today"]')?.focus();}else if(action==='export')backupDialog();else if(action==='sync-cancel')cancelSync('user');else if(action==='sync-retry')syncRestart();else if(action==='review')editReview(target.dataset.group,target.dataset.id);else if(action==='sei')editSei();else if(action==='institution')editInstitution();else if(action==='diligence')editDiligence(target.dataset.id,target.dataset.ref);else if(action==='conclude')conclusion();else if(action==='report')report();else if(action==='copy-proposal'){await navigator.clipboard.writeText(target.dataset.number);toast(`Proposta ${target.dataset.number} copiada.`);}else if(action==='copy-cnpj'){await navigator.clipboard.writeText(target.dataset.cnpj);toast(`CNPJ ${target.dataset.cnpj} copiado.`);}
     else if(action==='resolve-ref'){const ref=target.dataset.ref,name=actor();const ds=current().diligences.filter(d=>d.ref===ref);D.assert(ds.length && ds.every(d=>d.status==='saneada'),'Ainda existe diligência não saneada.');const [g,id]=ref.split(':');await change(p=>D.setReview(p,g,id,{...D.reviewOf(p,g,id),status:'ok'},name));saved('Requisito atualizado com confirmação do analista.');}
     else if(action==='toggle-uf-expand' || action==='toggle-uf'){
       const uf=target.dataset.uf,modo=target.dataset.modo==='apagadas'?'apagadas':'ativas';
@@ -1564,6 +1676,12 @@
       if(novo)novo.focus();
     }
   });
+  document.addEventListener('wheel',ev=>{
+    if(view!=='registros' || !ev.target.closest?.('.records-calendar') || Math.abs(ev.deltaY)<6)return;
+    ev.preventDefault();
+    if(Date.now()-lastCalendarWheel<220)return;
+    lastCalendarWheel=Date.now();moveCalendar(ev.deltaY>0?1:-1);
+  },{passive:false});
   /* Teclado do status-pill: Enter/Espaço e setas abrem; setas/Home/End percorrem
      o menu; Escape fecha e devolve o foco; Tab fecha sem prender o usuário. */
   document.addEventListener('keydown',ev=>{
