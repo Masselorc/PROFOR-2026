@@ -1,5 +1,9 @@
 # PROFOR/ONASP 2026 — versão local
 
+## Sincronização automática
+
+`SINCRONIZAR_PROFOR.cmd` executa propostas, PAD e textos oficiais pelo Node.js, grava no banco local e termina sem navegador nem `server.cjs`. Sua trava padrão fica em `os.tmpdir()`, identificada pelo hostname; ela impede apenas duas execuções headless na mesma máquina. Entre computadores, a proteção da gravação permanece em `token`, `revision` e `expected` do `workspace-store.cjs`. O OneDrive não atua como lock distribuído.
+
 ## Abrir
 
 **Uso normal, um duplo clique: `INICIAR SISTEMA.cmd`** (nesta pasta), ou o **atalho `PROFOR 2026` da Área de Trabalho**, que aponta para ele. O arquivo liga o servidor local **sem janela nenhuma aparecer** e abre o navegador já no sistema, com os dados carregados. Se o servidor já estiver no ar, ele apenas abre a página — nunca cria uma segunda instância. No painel, abra **Sincronização** e clique em **Atualizar Dados**.

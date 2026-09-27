@@ -7,7 +7,7 @@ const path=require('node:path');
 const {spawnSync}=require('node:child_process');
 const D=require('../domain.js');
 const {createStore}=require('../workspace-store.cjs');
-const {runAndPersist}=require('../sync-service.cjs');
+const {runAndPersist,defaultLockPath}=require('../sync-service.cjs');
 
 function data(id='101',overrides={}){
   return {id,numero:`TESTE-${id}/2026`,uf:'AP',programa:D.PROGRAM,proponente:'DADOS FICTÍCIOS — TESTE',cnpj:'',orgao:'',objeto:'Teste automatizado',situacao:'Teste',data:'2026-09-15',repasse:10000,contrapartida:100,global:10100,pad:[{id:'11',descricao:'Item fictício',quantidade:'2',unitario:5050,total:10100}],...overrides};
@@ -91,8 +91,39 @@ test('trava impede duas execuções headless simultâneas',async t=>{
   const {store,lockPath}=setup(t);let release;
   const fake={sync:()=>new Promise(resolve=>{release=()=>resolve({proposals:[],source:{},warnings:[]});})};
   const first=runAndPersist({store,lockPath,source:fake});
+  const identity=JSON.parse(fs.readFileSync(lockPath,'utf8'));
+  assert.equal(identity.hostname,os.hostname());assert.equal(identity.pid,process.pid);assert.ok(identity.startedAt);
   await assert.rejects(runAndPersist({store,lockPath,source:fake}),/Já existe uma sincronização automática/);
   release();await first;assert.equal(fs.existsSync(lockPath),false);
+});
+
+test('trava padrão é local; trava abandonada é removida e adquirida uma vez',async t=>{
+  const {store,lockPath}=setup(t);
+  assert.ok(defaultLockPath().startsWith(os.tmpdir()));
+  assert.ok(defaultLockPath().includes(os.hostname().replace(/[^a-z0-9.-]/gi,'_')));
+  fs.writeFileSync(lockPath,JSON.stringify({hostname:os.hostname(),pid:2147483647,startedAt:'2020-01-01T00:00:00.000Z'}));
+  const result=await runAndPersist({store,lockPath,source:source([])});
+  assert.equal(result.proposals,0);assert.equal(fs.existsSync(lockPath),false);
+});
+
+test('falha ao remover trava não transforma gravação bem-sucedida em erro',async t=>{
+  const {store,lockPath}=setup(t),unlink=fs.unlinkSync;
+  saved(store,{...D.initialState(),proposals:[D.createProposal(data())]});
+  fs.unlinkSync=function(target){if(target===lockPath)throw new Error('falha simulada ao excluir');return unlink.apply(this,arguments);};
+  try{
+    const result=await runAndPersist({store,lockPath,source:source([])});
+    assert.equal(store.history().length,1);
+    assert.ok(result.warnings.some(w=>w.includes('falha simulada ao excluir')));
+  }finally{fs.unlinkSync=unlink;unlink(lockPath);}
+});
+
+test('falha ao remover trava não mascara erro de sincronização',async t=>{
+  const {store,lockPath}=setup(t),unlink=fs.unlinkSync;
+  fs.unlinkSync=function(target){if(target===lockPath)throw new Error('falha simulada ao excluir');return unlink.apply(this,arguments);};
+  try{
+    await assert.rejects(runAndPersist({store,lockPath,source:{sync:async()=>{throw new Error('falha original');}}}),/falha original/);
+    assert.equal(store.history().length,0);
+  }finally{fs.unlinkSync=unlink;unlink(lockPath);}
 });
 
 test('CLI retorna código zero em sucesso e não zero em erro',()=>{

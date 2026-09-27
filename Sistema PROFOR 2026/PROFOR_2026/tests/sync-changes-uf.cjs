@@ -11,18 +11,16 @@
  */
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
+const path = require('node:path');
 const { createHash } = require('node:crypto');
-const playwrightPath = process.env.PROFOR_PLAYWRIGHT_PATH ||
-  (fs.existsSync('C:/Users/marcelo.cortez/AppData/Local/npm-cache/_npx/9833c18b2d85bc59/node_modules/playwright')
-    ? 'C:/Users/marcelo.cortez/AppData/Local/npm-cache/_npx/9833c18b2d85bc59/node_modules/playwright'
-    : 'C:/Users/marcelo.cortez/AppData/Local/Programs/nodejs/node-v24.15.0-win-x64/node_modules/playwright');
+const playwrightPath = process.env.PROFOR_PLAYWRIGHT_PATH || 'playwright';
 const { chromium } = require(playwrightPath);
 const D = require('../domain.js');
 
 const ORIGIN = 'http://127.0.0.1:8766';
 const URL = `${ORIGIN}/PROFOR_2026.html`;
 const STATIC_PATHS = new Set([
-  '/PROFOR_2026.html', '/styles.css', '/domain.js', '/bandeiras-uf.js',
+  '/PROFOR_2026.html', '/styles.css', '/domain.js', '/sync-apply.js', '/bandeiras-uf.js',
   '/storage.js', '/transferegov.js', '/report.js', '/app.js', '/favicon.ico'
 ]);
 const clone = value => JSON.parse(JSON.stringify(value));
@@ -56,6 +54,8 @@ function successfulSyncPayload() {
   return {
     unchanged: false,
     proposals: [changed, nova],
+    textos: {'990001':{},'990002':{}},
+    textosFaltando: [],
     source: { url: 'https://api-publica.transferegov.gestao.gov.br/downloads', files: [1, 2, 3, 4] },
     stats: { durationMs: 63000, padItems: 2 },
     warnings: ['PE: 6 propostas no programa. Conferência manual necessária.']
@@ -100,7 +100,14 @@ async function main() {
         syncCalls++;
         return json(successfulSyncPayload());
       }
-      if (url.origin === ORIGIN && ['GET', 'HEAD'].includes(method) && STATIC_PATHS.has(url.pathname)) return route.continue();
+      if (url.origin === ORIGIN && url.pathname === '/api/sync/history' && method === 'GET') return json({entries:[]});
+      if (url.origin === ORIGIN && url.pathname === '/api/sync/progress' && method === 'GET') return json({});
+      if (url.origin === ORIGIN && ['GET', 'HEAD'].includes(method) && STATIC_PATHS.has(url.pathname)) {
+        if(url.pathname==='/favicon.ico')return route.fulfill({status:204,body:''});
+        const body=fs.readFileSync(path.join(__dirname,'..',url.pathname.slice(1)));
+        const contentType=url.pathname.endsWith('.html')?'text/html; charset=utf-8':url.pathname.endsWith('.css')?'text/css; charset=utf-8':'text/javascript; charset=utf-8';
+        return route.fulfill({status:200,contentType,body});
+      }
       blocked.push({ method, url: request.url() });
       return route.abort('blockedbyclient');
     });
@@ -113,40 +120,13 @@ async function main() {
 
     await page.locator('[data-action="sync"]').first().click();
     await page.locator('#modal[open]').waitFor();
-    await page.getByRole('heading', { name: 'Sincronização concluída' }).waitFor();
+    await page.locator('[data-action="sync-start"]').click();
+    await page.waitForFunction(()=>document.querySelector('#sync-progress')?.value===100);
 
-    const rows = await page.locator('#modal-content tbody tr').evaluateAll(trs => trs.map(tr => {
-      const cells = [...tr.querySelectorAll('td')];
-      const tag = tr.querySelector('.uf-tag');
-      return {
-        columns: cells.length,
-        numero: (cells[0]?.querySelector('.proposal-number')?.textContent || tr.innerText).replace('⧉', '').trim(),
-        campo: cells[2]?.textContent.trim(),
-        tag: tag ? tag.textContent.trim() : '',
-        titulo: tag ? tag.getAttribute('title') : ''
-      };
-    }));
-    const headers = await page.locator('#modal-content thead th').allInnerTexts();
-
-    // Duas alterações: PAD e objeto da proposta AP, mais a proposta PE nova.
-    assert.deepEqual(headers, ['Proposta', 'UF', 'Campo', 'Antes', 'Depois'], 'Cabeçalho da tabela de alterações');
-    assert.ok(rows.length >= 3, `Esperadas ao menos 3 alterações, veio ${rows.length}`);
-    assert.ok(rows.every(r => r.columns === 5), 'Toda linha tem 5 colunas');
-    const ufs = [...new Set(rows.map(r => r.tag))].sort();
-    assert.deepEqual(ufs, ['AP', 'PE'], 'Cada linha indica a UF da respectiva proposta');
-    const ap = rows.find(r => r.numero.startsWith('990001/2026'));
-    const pe = rows.find(r => r.numero.startsWith('990002/2026'));
-    assert.equal(ap.tag, 'AP', 'Proposta 990001/2026 identificada como AP');
-    assert.equal(pe.tag, 'PE', 'Proposta 990002/2026 identificada como PE');
-    assert.equal(ap.titulo, 'Amapá', 'Nome da UF disponível no title');
-    assert.equal(pe.titulo, 'Pernambuco', 'Nome da UF disponível no title');
-    const pad = rows.find(r => r.campo === 'pad');
-    assert.equal(pad.numero, '990001/2026', 'Número formatado sem zeros artificiais');
-    assert.equal(pad.tag, 'AP', 'A linha do PAD traz a UF da proposta alterada');
-
-    // A mesma tabela alimenta a conferência da importação offline.
-    const html = await page.locator('#modal-content').innerHTML();
-    assert.match(html, /class="uf-tag"[^>]*title="Pernambuco"[^>]*>PE</, 'UF renderizada como etiqueta com nome acessível');
+    assert.match(await page.locator('#sync-summary').innerText(),/2 proposta\(s\).*2 texto\(s\) conferido\(s\)/);
+    assert.equal(memory.proposals.find(p=>p.id==='990001').imported.objeto,'Objeto atualizado na origem');
+    assert.equal(memory.proposals.find(p=>p.id==='990001').imported.pad[0].quantidade,'3');
+    assert.ok(memory.proposals.some(p=>p.id==='990002' && p.imported.uf==='PE'));
 
     assert.ok(syncCalls >= 1, 'A sincronização foi acionada uma vez');
     assert.ok(posts.length >= 1, 'O resultado validado foi gravado em memória');
@@ -157,7 +137,7 @@ async function main() {
 
     console.log(JSON.stringify({
       status: 'passed', isolated: true, realDatabaseWrites: 0, syncCalls, statePosts: posts.length,
-      pageerrors: pageErrors.length, headers, changes: rows
+      pageerrors: pageErrors.length, proposals: memory.proposals.length
     }, null, 2));
   } finally {
     await browser.close();

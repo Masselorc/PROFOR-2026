@@ -9,7 +9,7 @@ const store = require('./workspace-store.cjs').createStore(path.join(__dirname,'
 
 const PORT = 8766;
 const HOSTS = new Set(['127.0.0.1:8766', 'localhost:8766', '[::1]:8766']);
-const allowed = new Set(['PROFOR_2026.html', 'styles.css', 'domain.js', 'bandeiras-uf.js', 'storage.js', 'transferegov.js', 'report.js', 'app.js']);
+const allowed = new Set(['PROFOR_2026.html', 'styles.css', 'domain.js', 'sync-apply.js', 'bandeiras-uf.js', 'storage.js', 'transferegov.js', 'report.js', 'app.js']);
 const programFiles = new Set([
   'programa/tutorial-concedente-analise.pdf', 'programa/edital-37-dou.pdf',
   'programa/portaria-327-2024.pdf', 'programa/decreto-11531-2023.pdf',

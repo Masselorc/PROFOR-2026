@@ -2,6 +2,7 @@
 (function(){
   'use strict';
   const D=Profor,e=D.esc,$=s=>document.querySelector(s);
+  const applySyncResult=ProforSyncApply.applySyncResult;
   const isReadOnly=()=>Boolean(window.PROFOR_READ_ONLY);
   /* Consulta editorial do programa no Acesso Livre em 26/09/2026.
      Arquivos são cópias de consulta já existentes no projeto, não downloads
@@ -162,6 +163,13 @@
     $('#nav-program')?.classList.toggle('active',!selected && view==='programa');
     $('#nav-deleted').classList.toggle('active',!selected && view==='apagadas');
     if(menuRecords)menuRecords.classList.toggle('active',!selected && view==='registros');
+    if(publico){
+      if(selected){const p=state.proposals.find(x=>x.id===selected);if(p)renderPublicProposal(p);else $('#main').innerHTML='<h1>Proposta não localizada</h1>';}
+      else if(view==='programa')renderProgram();
+      else if(view==='registros')renderPublicRecords();
+      else renderPublicPanel();
+      renderSideNav();return;
+    }
     if(selected){
       const p=state.proposals.find(x=>x.id===selected);
       if(!p){$('#main').innerHTML='<h1>Proposta não localizada</h1><a href="#painel">Voltar ao painel</a>';return;}
@@ -174,6 +182,45 @@
     else renderPanel();
     /* O contador de apagadas no menu acompanha o estado atual. */
     renderSideNav();
+  }
+  /* O snapshot público contém apenas campos oficiais; nenhuma análise local é
+     inferida ou reconstruída para a consulta pública. */
+  function renderPublicPanel(){
+    const proposals=D.activeProposals(state);
+    const received=new Set(proposals.map(p=>p.imported.uf)).size;
+    $('#main').innerHTML=`<div class="page-head"><div><div class="eyebrow">PROFOR / ONASP 2026</div><h1>Visão geral das propostas</h1><p class="muted">Consulta aos dados oficiais publicados no último snapshot.</p></div></div>
+      <div class="stats dashboard-stats" aria-label="Resumo das propostas"><div class="stat stat-eligible"><span class="stat-label">UFs elegíveis</span><strong class="stat-value">${Object.keys(D.UFS).length}</strong></div><div class="stat stat-received"><span class="stat-label">UFs com proposta importada</span><strong class="stat-value">${received}</strong></div><div class="stat stat-active"><span class="stat-label">Propostas ativas</span><strong class="stat-value">${proposals.length}</strong></div></div>
+      <section class="section" aria-label="Acompanhamento por UF"><div class="filters panel-filters"><label class="search">Buscar proposta ou proponente<input id="search" type="search" value="${e(filters.search)}" placeholder="Número, nome ou UF"></label><label>UF<select id="filter-uf">${options({'':'Todas as UFs',...D.UFS},filters.uf)}</select></label><label>Status no Transferegov<select id="filter-source">${options({'':'Todos os status',...Object.fromEntries(SOURCE_CHAVES.map(k=>[k,SOURCE_ROTULO[k]]))},filters.source)}</select></label></div>
+      <div class="table-wrap"><table class="table-fit"><thead><tr><th>UF</th><th>Proposta</th><th>Proponente</th><th>Valor global</th><th>Status no Transferegov</th><th>Ações</th></tr></thead><tbody id="uf-rows"></tbody></table></div></section><p class="source">Base pública · Processo SEI 08016.010062/2026-18 · Edital nº 37/2026</p>`;
+    const draw=()=>{
+      const rows=[];
+      for(const [uf,name] of Object.entries(D.UFS)){
+        const list=proposals.filter(p=>p.imported.uf===uf);
+        if(filters.uf && filters.uf!==uf)continue;
+        if(filters.source && !list.some(p=>D.sourceState(p.imported).key===filters.source))continue;
+        if(filters.search && !`${uf} ${name} ${list.map(p=>p.imported.numero+' '+p.imported.proponente).join(' ')}`.toLocaleLowerCase('pt-BR').includes(filters.search.toLocaleLowerCase('pt-BR')))continue;
+        const first=list[0],i=first?.imported,s=i?D.sourceState(i):null;
+        rows.push(`<tr class="uf-row" data-uf="${e(uf)}"><td>${ufFlag(uf,name)} ${e(name)}</td><td>${i?e(proposalNumber(i.numero)):'—'}</td><td>${i?e(i.proponente):'—'}</td><td>${i?e(D.fmtMoney(i.global)):'—'}</td><td>${s?badge(s.label,s.tone):'—'}</td><td>${first?`<a class="btn-detail" href="#proposta/${e(first.id)}/dados">Detalhar</a>`:'—'}</td></tr>`);
+        for(const p of list.slice(1))rows.push(`<tr class="uf-row" data-uf="${e(uf)}"><td>${e(uf)}</td><td>${e(proposalNumber(p.imported.numero))}</td><td>${e(p.imported.proponente)}</td><td>${e(D.fmtMoney(p.imported.global))}</td><td>${badge(D.sourceState(p.imported).label,D.sourceState(p.imported).tone)}</td><td><a class="btn-detail" href="#proposta/${e(p.id)}/dados">Detalhar</a></td></tr>`);
+      }
+      $('#uf-rows').innerHTML=rows.join('')||'<tr><td colspan="6" class="empty">Nenhuma proposta corresponde aos filtros.</td></tr>';
+    };
+    $('#search').oninput=ev=>{filters.search=ev.target.value;draw();};
+    $('#filter-uf').onchange=ev=>{filters.uf=ev.target.value;draw();};
+    $('#filter-source').onchange=ev=>{filters.source=ev.target.value;draw();};
+    draw();
+  }
+  function renderPublicProposal(p){
+    const i=p.imported,s=D.sourceState(i);
+    const fields=[['Programa',i.programa],['Número',proposalNumber(i.numero)],['UF',`${D.UFS[i.uf]} / ${i.uf}`],['Proponente',i.proponente],['CNPJ',D.fmtCnpj(i.cnpj)||'Não informado'],['Órgão',i.orgao||'Não informado'],['Situação no Transferegov',i.situacao||'Não informada'],['Cadastramento',D.fmtDate(i.data)],['Início da vigência',D.fmtDate(i.vigenciaInicio)],['Fim da vigência',D.fmtDate(i.vigenciaFim)],['Repasse',D.fmtMoney(i.repasse)],['Contrapartida',D.fmtMoney(i.contrapartida)],['Valor global',D.fmtMoney(i.global)]];
+    const texts=Object.entries(D.CAMPOS_TEXTOS).filter(([key])=>p.textos?.[key]).map(([key,label])=>`<div class="data-card-block"><dt>${e(label)}</dt><dd>${e(p.textos[key])}</dd></div>`).join('');
+    const pad=i.pad||[];
+    const content=activeTab==='pad'?`<section class="section"><div class="section-head"><h2>Plano de aplicação detalhado</h2></div><div class="table-wrap"><table><thead><tr><th>Descrição</th><th>Quantidade</th><th>Valor unitário</th><th>Total</th></tr></thead><tbody>${pad.map(item=>`<tr><td>${e(item.descricao)}</td><td>${e(item.quantidade)}</td><td>${e(D.fmtMoney(item.unitario))}</td><td>${e(D.fmtMoney(item.total))}</td></tr>`).join('')||'<tr><td colspan="4">Nenhum item publicado na extração.</td></tr>'}</tbody></table></div></section>`:`<section class="section"><div class="section-head"><h2>Dados da proposta</h2></div><div class="section-body"><dl class="program-facts">${fields.map(([label,value])=>`<div><dt>${e(label)}</dt><dd>${e(value)}</dd></div>`).join('')}</dl><h2>Objeto</h2><p>${e(extracted(i.objeto))}</p>${texts?`<h2>Projeto apresentado</h2><dl class="program-facts">${texts}</dl>`:''}</div></section>`;
+    $('#main').innerHTML=`<a class="back" href="#painel">← Voltar ao painel</a><div class="page-head"><div><div class="eyebrow">${ufFlag(i.uf,D.UFS[i.uf])} ${e(i.uf)} · PROPOSTA ${e(proposalNumber(i.numero))}</div><h1>${e(D.UFS[i.uf])}</h1><p class="muted">${e(i.proponente)}</p></div></div><nav class="tabs dim-tabs" aria-label="Seções da proposta"><a href="#proposta/${e(p.id)}/dados" class="${activeTab==='pad'?'':'active'}">Dados</a><a href="#proposta/${e(p.id)}/pad" class="${activeTab==='pad'?'active':''}">Plano de aplicação detalhado</a></nav>${transferegovBox(p)}${content}<p class="source">Consulta pública dos dados oficiais; avaliações internas não integram este snapshot.</p>`;
+  }
+  function renderPublicRecords(){
+    if(!syncHistory){$('#main').innerHTML='<h1>Registros de atualização</h1><p>Carregando registros públicos…</p>';refreshHistory().then(()=>{if(view==='registros')renderPublicRecords();}).catch(err=>{$('#main').innerHTML=`<h1>Registros de atualização</h1><div class="info error">${e(err.message)}</div>`;});return;}
+    $('#main').innerHTML=`<div class="page-head"><div><h1>Registros de atualização</h1><p class="muted">Alterações nos campos oficiais publicados.</p></div></div>${syncHistory.slice().reverse().map(entry=>`<section class="section"><div class="section-head"><h2>${e(D.fmtDate(entry.date))}</h2><small>${entry.changes.length} alteração(ões)</small></div><div class="section-body">${syncChangesHtml(entry.changes)}</div></section>`).join('')}`;
   }
   /* Tela de propostas apagadas: mesma linguagem do painel, por UF, com expansão
      e o botão de restaurar no lugar do botão de apagar. */
@@ -1627,8 +1674,8 @@
       try{
         syncStep('A extração não trouxe propostas. Preservando o banco local…');
         syncLog('A extração oficial não trouxe propostas. Preservando o banco local.');
-        const next=D.clone(state);next.sync={at:D.now(),source:label,count:0};
-        await persist(next,{syncRun:{startedAt:new Date(run.started).toISOString(),activity:run.activity}});
+        const applied=applySyncResult(state,payload,actor(),label);
+        await persist(applied.state,{syncRun:{startedAt:new Date(run.started).toISOString(),activity:run.activity}});
         syncLog('Gravação confirmada no banco local.');
       }catch(err){syncStopTimers(run);syncDataFail(err.message);return;}
       syncStopTimers(run);syncHistory=null;render();modalDirty=false;
@@ -1644,18 +1691,9 @@
     const localWasEmpty=!state.proposals.length;
     let preview,textosConferidos=0,textosAlterados=0;
     try{
-      preview=D.syncProposals(state,payload.proposals,syncLabel(source,run.pad,cached?'extração reaproveitada pelo servidor':''));
-      const ids=new Set(payload.proposals.map(p=>p.id));
-      const faltando=new Set(payload.textosFaltando);
-      D.assert(payload.textosFaltando.length===faltando.size && [...faltando].every(id=>ids.has(id)),'A lista de textos ausentes é inconsistente.');
-      for(const id of ids)D.assert(Object.hasOwn(payload.textos,id) || faltando.has(id),`A resposta não informou os textos da proposta ${id}.`);
-      for(const p of preview.state.proposals)if(ids.has(p.id) && Object.hasOwn(payload.textos,p.id)){
-        const novos=payload.textos[p.id];textosConferidos++;
-        const iguais=Object.keys(D.CAMPOS_TEXTOS).every(campo=>p.textos?.[campo]===String(novos?.[campo] ?? '').trim());
-        if(!iguais){D.setTextos(p,novos,actor());textosAlterados++;}
-        else{const antes=p.textos.at;p.textos.at=D.now();D.log(p,'Textos oficiais conferidos sem alteração',{at:antes},{at:p.textos.at},actor());}
-      }
-      if(faltando.size)warnings.push(`${faltando.size} proposta(s) sem texto na extração oficial; os textos locais anteriores foram preservados.`);
+      preview=applySyncResult(state,payload,actor(),syncLabel(source,run.pad,cached?'extração reaproveitada pelo servidor':''));
+      textosConferidos=preview.textsChecked;textosAlterados=preview.textsChanged;
+      warnings.push(...preview.warnings);
     }catch(err){syncStopTimers(run);syncDataFail(err.message);return;}
     try{
       syncStep(`Gravando ${preview.changes.length} alteração(ões) de dados e ${textosAlterados} alteração(ões) de textos no banco local…`);
@@ -1810,5 +1848,5 @@
   const modalCloseBtn=$('#modal-close');
   if(modalCloseBtn)modalCloseBtn.onclick=closeModal;
   window.addEventListener('hashchange',route);window.addEventListener('beforeunload',ev=>{if(modalDirty || busy || syncRun){ev.preventDefault();ev.returnValue='';}});
-  (async()=>{try{await ProforStore.open();state=D.validateState(await ProforStore.read());$('#save-state').textContent='Banco do workspace disponível';renderSideNav();route();runAutoSyncFromQuery();}catch(err){$('#save-state').textContent='Banco indisponível';$('#main').innerHTML=`<h1>Não foi possível abrir o banco local</h1><div class="info error">${e(err.message)}</div><p>Abra INICIAR SISTEMA.cmd na pasta do workspace. Aguarde o OneDrive concluir a sincronização antes de usar esta máquina.</p>`;}})();
+  (async()=>{try{await ProforStore.open();state=isReadOnly()?await ProforStore.read():D.validateState(await ProforStore.read());$('#save-state').textContent='Banco do workspace disponível';renderSideNav();route();runAutoSyncFromQuery();}catch(err){$('#save-state').textContent='Banco indisponível';$('#main').innerHTML=`<h1>Não foi possível abrir o banco local</h1><div class="info error">${e(err.message)}</div><p>Abra INICIAR SISTEMA.cmd na pasta do workspace. Aguarde o OneDrive concluir a sincronização antes de usar esta máquina.</p>`;}})();
 })();

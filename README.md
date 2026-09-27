@@ -6,13 +6,13 @@ Aplicação local de acompanhamento das propostas do PROFOR/ONASP 2026 e página
 
 **https://masselorc.github.io/PROFOR-2026/**
 
-A página em `docs/` é estática e somente para consulta. Ela exibe as propostas ativas do snapshot publicado, com filtros, detalhes e exportações de leitura. O menu **Registros de atualização** apresenta o calendário, os campos alterados com Antes/Depois e as linhas de atividade das sincronizações concluídas. O histórico também inclui mudanças de propostas que foram retiradas do painel. A consulta pública não permite editar, sincronizar ou excluir dados; o snapshot não se atualiza automaticamente a partir do Transferegov.
+A página em `docs/` é estática e somente para consulta. Ela exibe as propostas ativas do snapshot publicado, com filtros, dados oficiais, PAD e textos oficiais. O menu **Registros de atualização** apresenta somente mudanças de campos oficiais. A consulta pública não permite editar, sincronizar ou excluir dados; o snapshot não se atualiza automaticamente a partir do Transferegov.
 
 ## Aplicação local
 
 Abra `Sistema PROFOR 2026/PROFOR_2026/INICIAR SISTEMA.cmd` em um computador com Node.js. O servidor atende em `http://127.0.0.1:8766/PROFOR_2026.html`. A versão local contém os controles de edição e mantém o banco em `dados/registros/` no workspace sincronizado pelo OneDrive.
 
-O banco operacional completo e suas revisões permanecem no workspace local e estão excluídos do Git. O snapshot público contém as propostas ativas e um extrato dos registros de sincronização — inclusive mudanças históricas de propostas retiradas do painel. No extrato não são copiados o histórico de análise manual, IDs de revisão ou IDs internos dos itens do PAD; o banco completo e a lixeira como lista navegável continuam locais.
+O banco operacional completo e suas revisões permanecem no workspace local e estão excluídos do Git. O snapshot público contém apenas campos oficiais das propostas ativas e um extrato restrito das mudanças oficiais. Análises, diligências, observações internas, anexos, histórico manual, atividade operacional e IDs dos itens do PAD permanecem locais. Snapshots publicados anteriormente continuam no histórico do Git; eventual remoção histórica exige decisão separada.
 
 ## Atualizar a publicação
 

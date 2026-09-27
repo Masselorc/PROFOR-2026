@@ -2,12 +2,49 @@
 
 const fs=require('node:fs');
 const path=require('node:path');
+const os=require('node:os');
 const D=require('./domain.js');
+const {applySyncResult}=require('./sync-apply.js');
 const {createStore}=require('./workspace-store.cjs');
 const transferegov=require('./transferegov-sync.cjs');
 
 const ACTOR='Sincronização automática';
 const ROOT=__dirname;
+// Trava somente desta máquina. A concorrência entre computadores é validada
+// pelo token/revision/expected do workspace-store.cjs no momento da gravação.
+const defaultLockPath=()=>path.join(os.tmpdir(),`profor-2026-${os.hostname().replace(/[^a-z0-9.-]/gi,'_')}.lock`);
+
+function processAlive(pid){
+  if(!Number.isInteger(pid)||pid<=0)return false;
+  try{process.kill(pid,0);return true;}
+  catch(err){if(err.code==='ESRCH')return false;if(err.code==='EPERM')return true;throw err;}
+}
+function acquireLock(lockPath,startedAt){
+  fs.mkdirSync(path.dirname(lockPath),{recursive:true});
+  const identity={hostname:os.hostname(),pid:process.pid,startedAt};
+  let fd;
+  try{fd=fs.openSync(lockPath,'wx');}
+  catch(err){
+    if(err.code!=='EEXIST')throw err;
+    let existing;
+    try{existing=JSON.parse(fs.readFileSync(lockPath,'utf8'));}
+    catch{throw new Error(`Trava de sincronização ilegível em ${lockPath}; confira antes de removê-la.`);}
+    if(existing.hostname!==identity.hostname || processAlive(existing.pid))throw new Error(`Já existe uma sincronização automática em andamento nesta máquina (${lockPath}).`);
+    fs.unlinkSync(lockPath);
+    try{fd=fs.openSync(lockPath,'wx');}
+    catch(retryError){if(retryError.code==='EEXIST')throw new Error(`Outra sincronização adquiriu a trava local (${lockPath}).`);throw retryError;}
+  }
+  try{fs.writeSync(fd,JSON.stringify(identity)+'\n');}
+  catch(err){try{fs.closeSync(fd);}catch{}try{fs.unlinkSync(lockPath);}catch{}throw err;}
+  return {fd,identity};
+}
+function releaseLock(lockPath,lock,warnings){
+  try{fs.closeSync(lock.fd);}catch(err){warnings.push(`Não foi possível fechar a trava local: ${err.message}`);}
+  try{
+    const current=JSON.parse(fs.readFileSync(lockPath,'utf8'));
+    if(current.hostname===lock.identity.hostname && current.pid===lock.identity.pid && current.startedAt===lock.identity.startedAt)fs.unlinkSync(lockPath);
+  }catch(err){warnings.push(`Não foi possível remover a trava local: ${err.message}`);}
+}
 
 function syncLabel(source,note=''){
   const files=Array.isArray(source?.files)?source.files.length:Array.isArray(source?.blobs)?source.blobs.length:0;
@@ -23,9 +60,9 @@ async function runAndPersist(options={}){
   const started=Date.now(),startedAt=new Date(started).toISOString();
   const store=options.store || createStore(path.join(ROOT,'dados','registros'));
   const source=options.source || transferegov;
-  const lockPath=options.lockPath===undefined?path.join(ROOT,'logs','sincronizacao.lock'):options.lockPath;
+  const lockPath=options.lockPath===undefined?defaultLockPath():options.lockPath;
   const activity=[],warnings=[];
-  let lockFd;
+  let lock;
   const record=message=>{
     const line={at:new Date().toISOString(),message:String(message)};
     activity.push(line);
@@ -35,12 +72,7 @@ async function runAndPersist(options={}){
     if(data && (data.kind==='stage' || data.kind==='action') && typeof data.message==='string')record(data.message);
   };
   try{
-    if(lockPath){
-      fs.mkdirSync(path.dirname(lockPath),{recursive:true});
-      try{lockFd=fs.openSync(lockPath,'wx');}
-      catch(err){if(err.code==='EEXIST')throw new Error('Já existe uma sincronização automática em andamento (logs/sincronizacao.lock).');throw err;}
-      fs.writeSync(lockFd,`${process.pid} ${startedAt}\n`);
-    }
+    if(lockPath)lock=acquireLock(lockPath,startedAt);
     record('Iniciando sincronização automática de propostas, PAD e textos oficiais.');
     const initial=store.load();
     const force=!initial.state.proposals.length;
@@ -56,37 +88,11 @@ async function runAndPersist(options={}){
       texts=await source.fetchProposalTexts(ids,message=>record(message),{maxIds:ids.length,onEvent:event});
       D.assert(texts && texts.textos && typeof texts.textos==='object' && !Array.isArray(texts.textos) && Array.isArray(texts.faltando),'A origem não retornou os textos oficiais esperados.');
     }
-    const found=new Set(ids),missing=new Set(texts.faltando);
-    D.assert(missing.size===texts.faltando.length && [...missing].every(id=>found.has(id)),'A lista de textos ausentes é inconsistente.');
-    for(const id of found)D.assert(Object.hasOwn(texts.textos,id)||missing.has(id),`A origem não informou os textos da proposta ${id}.`);
-
-    let next,changes=[],textsChecked=0,textsChanged=0;
-    if(!incoming.length){
-      warnings.push('A extração oficial não trouxe propostas; os dados locais foram preservados.');
-      record('A origem não trouxe propostas. Preservando o banco local.');
-      next=D.clone(initial.state);
-      next.sync={at:newSyncAt(initial.state.sync?.at),source:syncLabel(result.source,'extração sem propostas'),count:0};
-    }else{
-      const preview=D.syncProposals(initial.state,incoming,syncLabel(result.source,result.unchanged===true?'extração reaproveitada pelo servidor':''),ACTOR);
-      next=preview.state;changes=preview.changes;
-      for(const proposal of next.proposals){
-        if(!found.has(proposal.id)||!Object.hasOwn(texts.textos,proposal.id))continue;
-        const current=texts.textos[proposal.id];
-        D.assert(current && typeof current==='object' && !Array.isArray(current),`Textos inválidos da proposta ${proposal.id}.`);
-        textsChecked++;
-        const equal=Object.keys(D.CAMPOS_TEXTOS).every(field=>proposal.textos?.[field]===String(current[field]??'').trim());
-        if(equal){
-          const before=proposal.textos.at;
-          proposal.textos.at=D.now();
-          D.log(proposal,'Textos oficiais conferidos sem alteração',{at:before},{at:proposal.textos.at},ACTOR);
-        }else{
-          D.setTextos(proposal,current,ACTOR);
-          textsChanged++;
-        }
-      }
-      next.sync.at=newSyncAt(initial.state.sync?.at);
-      if(missing.size)warnings.push(`${missing.size} proposta(s) sem texto na extração oficial; os textos locais anteriores foram preservados.`);
-    }
+    const applied=applySyncResult(initial.state,{proposals:incoming,textos:texts.textos,textosFaltando:texts.faltando},ACTOR,syncLabel(result.source,!incoming.length?'extração sem propostas':result.unchanged===true?'extração reaproveitada pelo servidor':''));
+    const {state:next,changes,textsChecked,textsChanged}=applied;
+    warnings.push(...applied.warnings);
+    if(applied.empty)record('A origem não trouxe propostas. Preservando o banco local.');
+    next.sync.at=newSyncAt(initial.state.sync?.at);
     D.validateState(next);
     record(`Gravando propostas, PAD e textos oficiais; ${changes.length} alteração(ões) de dados e ${textsChanged} alteração(ões) de textos.`);
     try{
@@ -99,8 +105,8 @@ async function runAndPersist(options={}){
     const finishedAt=new Date().toISOString();
     return {startedAt,finishedAt,durationMs:Date.now()-started,proposals:incoming.length,ufs:[...new Set(incoming.map(p=>p.uf))].sort(),padItems:incoming.reduce((sum,p)=>sum+(p.pad?.length||0),0),textsChecked,textsChanged,changesDetected:changes.length,warnings,cacheUsed:result.unchanged===true};
   }finally{
-    if(lockFd!==undefined){fs.closeSync(lockFd);fs.unlinkSync(lockPath);}
+    if(lock)releaseLock(lockPath,lock,warnings);
   }
 }
 
-module.exports={runAndPersist};
+module.exports={runAndPersist,defaultLockPath};

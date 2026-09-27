@@ -19,34 +19,31 @@ const DOCS_DIR = path.join(ROOT_DIR, 'docs');
 const D = require(path.join(SYSTEM_DIR, 'domain.js'));
 const { createStore } = require(path.join(SYSTEM_DIR, 'workspace-store.cjs'));
 
-function publicHistory(entries) {
-  const publicValue = (field, value) => {
-    if (field === 'pad' && Array.isArray(value)) {
-      return value.map(item => ({
-        descricao: item.descricao,
-        quantidade: item.quantidade,
-        unitario: item.unitario,
-        total: item.total
-      }));
-    }
-    // A interface pública só apresenta um aviso genérico para objetos; não
-    // precisa copiar IDs nem estruturas internas para o snapshot.
-    return value && typeof value === 'object' ? { updated: true } : value;
-  };
-  return entries.map(entry => ({
-    at: entry.at,
-    date: entry.date,
-    source: entry.source,
-    reconstructed: entry.reconstructed,
-    activity: entry.activity.map(line => ({ at: line.at, message: line.message })),
-    changes: entry.changes.map(change => ({
-      numero: change.numero,
-      uf: change.uf,
-      field: change.field,
-      before: publicValue(change.field, change.before),
-      after: publicValue(change.field, change.after)
+const OFFICIAL_FIELDS=new Set(['numero','uf','programa','cnpj','proponente','orgao','objeto','situacao','data','vigenciaInicio','vigenciaFim','repasse','contrapartida','global','pad','Proposta']);
+function publicPad(items){return items===null?null:Array.isArray(items)?items.map(item=>({descricao:item.descricao,quantidade:item.quantidade,unitario:item.unitario,total:item.total})):[];}
+function publicProposal(proposal){
+  const i=proposal.imported;
+  const imported={id:i.id,numero:i.numero,uf:i.uf,programa:i.programa,cnpj:i.cnpj,proponente:i.proponente,orgao:i.orgao,objeto:i.objeto,situacao:i.situacao,data:i.data,vigenciaInicio:i.vigenciaInicio,vigenciaFim:i.vigenciaFim,repasse:i.repasse,contrapartida:i.contrapartida,global:i.global,pad:publicPad(i.pad)};
+  const result={id:proposal.id,imported};
+  if(proposal.textos)result.textos=Object.fromEntries(Object.keys(D.CAMPOS_TEXTOS).map(field=>[field,proposal.textos[field]||'']));
+  return result;
+}
+function publicHistory(entries){
+  return entries.map(entry=>({
+    date:entry.date,
+    at:entry.at,
+    changes:(entry.changes||[]).filter(change=>OFFICIAL_FIELDS.has(change.field)).map(change=>({
+      numero:change.numero,uf:change.uf,field:change.field,
+      before:change.field==='pad'?publicPad(change.before):change.before,
+      after:change.field==='pad'?publicPad(change.after):change.after
     }))
   }));
+}
+function projectPublicState(state,history){
+  return {schemaVersion:state.schemaVersion,revision:state.revision,
+    proposals:D.activeProposals(state).map(publicProposal),
+    sync:state.sync?{at:state.sync.at}:null,
+    syncHistory:publicHistory(history)};
 }
 
 function build() {
@@ -69,14 +66,7 @@ function build() {
   // A consulta pública recebe propostas ativas e um extrato do histórico de
   // sincronizações. O extrato inclui propostas retiradas do painel, mas não
   // inclui histórico de análise manual, IDs técnicos ou o banco operacional.
-  const publicState = {
-    schemaVersion: state.schemaVersion,
-    revision: state.revision,
-    proposals: active,
-    sync: state.sync,
-    syncHistory: publicHistory(store.history())
-  };
-  D.validateState(publicState);
+  const publicState = projectPublicState(state,store.history());
   const publicDataJs = `/**
  * Snapshot dos dados públicos do PROFOR/ONASP 2026 (Processo SEI 08016.010062/2026-18)
  * Gerado automaticamente em ${updatedAt}.
@@ -88,7 +78,7 @@ window.PROFOR_PUBLIC_DATA = ${JSON.stringify(publicState, null, 2)};
   fs.writeFileSync(path.join(DOCS_DIR, 'dados_publicos.js'), publicDataJs, 'utf8');
 
   console.log('==> [3/3] Copiando arquivos essenciais para docs/...');
-  const filesToCopy = ['domain.js', 'bandeiras-uf.js', 'styles.css', 'report.js', 'app.js'];
+  const filesToCopy = ['domain.js', 'sync-apply.js', 'bandeiras-uf.js', 'styles.css', 'report.js', 'app.js'];
   for (const file of filesToCopy) {
     const src = path.join(SYSTEM_DIR, file);
     const dst = path.join(DOCS_DIR, file);
@@ -115,4 +105,5 @@ window.PROFOR_PUBLIC_DATA = ${JSON.stringify(publicState, null, 2)};
   console.log(`    Pronta para publicação no GitHub Pages (branch main, pasta /docs).`);
 }
 
-build();
+if(require.main===module)build();
+module.exports={projectPublicState,build};
