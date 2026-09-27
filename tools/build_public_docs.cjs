@@ -88,7 +88,7 @@ window.PROFOR_PUBLIC_DATA = ${JSON.stringify(publicState, null, 2)};
   fs.writeFileSync(path.join(DOCS_DIR, 'dados_publicos.js'), publicDataJs, 'utf8');
 
   console.log('==> [3/3] Copiando arquivos essenciais para docs/...');
-  const filesToCopy = ['domain.js', 'bandeiras-uf.js', 'styles.css', 'report.js', 'programa.js', 'app.js'];
+  const filesToCopy = ['domain.js', 'bandeiras-uf.js', 'styles.css', 'report.js', 'app.js'];
   for (const file of filesToCopy) {
     const src = path.join(SYSTEM_DIR, file);
     const dst = path.join(DOCS_DIR, file);
