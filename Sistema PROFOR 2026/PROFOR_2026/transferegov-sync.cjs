@@ -975,7 +975,7 @@ async function runSync(options = {}) {
 
   const result = [...proposals.values()];
   emit({ kind: 'stage', message: 'Validando as propostas e preparando a resposta…', step: lastDataStep, steps, loaded: null, total: null });
-  if (!result.length) throw new SyncError('Nenhuma proposta do programa foi localizada nas extrações.', 502);
+  if (!result.length && options.allowEmpty !== true) throw new SyncError('Nenhuma proposta do programa foi localizada nas extrações.', 502);
   for (const proposal of result) D.validateImported(proposal);
   for (const uf of Object.keys(D.UFS)) {
     const count = result.filter(proposal => proposal.uf === uf).length;
@@ -1007,7 +1007,7 @@ async function runSync(options = {}) {
     }
   };
 
-  if (!isolated) {
+  if (!isolated && result.length) {
     const warning = writeCache({ blobs: signature, pad, at: listedAt, response });
     if (warning) response.warnings.push(warning);
   }
@@ -1016,7 +1016,7 @@ async function runSync(options = {}) {
 
 /* Sincronização com deduplicação de chamadas simultâneas. */
 function sync(options = {}) {
-  const key = `sync:${options.pad === false ? 0 : 1}:${options.force === true ? 1 : 0}:${options.dir || ''}`;
+  const key = `sync:${options.pad === false ? 0 : 1}:${options.force === true ? 1 : 0}:${options.allowEmpty === true ? 1 : 0}:${options.dir || ''}`;
   const running = inFlight.get(key);
   if (running) {
     if (typeof options.onEvent === 'function') running.listeners.add(options.onEvent);

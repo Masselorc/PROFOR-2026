@@ -284,14 +284,14 @@
     }
     return i;
   }
-  function createProposal(imported) {
+  function createProposal(imported,actor='Sistema') {
     validateImported(imported);
     const p={id:imported.id,imported:clone(imported),reviews:{},diligences:[],ouvidoria:{status:'na',signature:'',url:'',note:'',clause:false},falaBR:'na',conclusion:null,history:[]};
     for(const [group,rows] of Object.entries(REQUIREMENTS)) p.reviews[group]=Object.fromEntries(rows.map(([id])=>[id,blankReview()]));
     p.reviews.pad=Object.fromEntries((imported.pad || []).map(x=>[x.id,blankReview()]));
-    log(p,'Proposta importada',null,imported); return p;
+    log(p,'Proposta importada',null,imported,actor); return p;
   }
-  function syncProposals(state,incoming,source) {
+  function syncProposals(state,incoming,source,actor='Sistema') {
     const next=clone(state); const changes=[]; const ids=new Set();
     for(const i of incoming) {
       validateImported(i); assert(!ids.has(i.id),'ID de proposta repetido na importação.'); ids.add(i.id);
@@ -301,7 +301,7 @@
          removido do banco — só o painel é que deixa de exibi-la. */
       /* `uf` acompanha cada alteração para a tela de sincronização identificar a
          proposta pelo estado, e não só pelo número. */
-      if(!p) { p=createProposal(i); next.proposals.push(p); changes.push({id:i.id,numero:i.numero,uf:i.uf,field:'Proposta',before:null,after:'Nova proposta'}); continue; }
+      if(!p) { p=createProposal(i,actor); next.proposals.push(p); changes.push({id:i.id,numero:i.numero,uf:i.uf,field:'Proposta',before:null,after:'Nova proposta'}); continue; }
       assert(i.uf===p.imported.uf,'UF de uma proposta existente foi alterada. Confira a origem antes de importar.');
       if(p.isDeleted){p.imported.pad=clone(i.pad===null?p.imported.pad:i.pad);continue;}
       const fresh=clone(i); if(fresh.pad===null) fresh.pad=clone(p.imported.pad);
@@ -312,11 +312,11 @@
       for(const item of fresh.pad || []) {
         const old=(p.imported.pad || []).find(x=>x.id===item.id);
         if(!p.reviews.pad[item.id]) p.reviews.pad[item.id]=blankReview();
-        else if(JSON.stringify(old)!==JSON.stringify(item) && p.reviews.pad[item.id].status!=='na') { p.reviews.pad[item.id].status='reanalise'; log(p,`Conferência do item ${item.id} invalidada`,old,item); }
+        else if(JSON.stringify(old)!==JSON.stringify(item) && p.reviews.pad[item.id].status!=='na') { p.reviews.pad[item.id].status='reanalise'; log(p,`Conferência do item ${item.id} invalidada`,old,item,actor); }
       }
-      log(p,'Dados da origem alterados; conferir análise',p.imported,fresh);
+      log(p,'Dados da origem alterados; conferir análise',p.imported,fresh,actor);
       p.imported=fresh;
-      if(p.conclusion) {log(p,'Conclusão requer nova confirmação após importação',p.conclusion,null);p.conclusion=null;}
+      if(p.conclusion) {log(p,'Conclusão requer nova confirmação após importação',p.conclusion,null,actor);p.conclusion=null;}
     }
     next.sync={at:now(),source,count:incoming.length};
     return {state:next,changes};

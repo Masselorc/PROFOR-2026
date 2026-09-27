@@ -1,12 +1,12 @@
 /**
  * Snapshot dos dados públicos do PROFOR/ONASP 2026 (Processo SEI 08016.010062/2026-18)
- * Gerado automaticamente em 2026-09-27T03:31:30.264Z.
+ * Gerado automaticamente em 2026-09-27T19:15:33.995Z.
  * Não editar manualmente. Use tools/build_public_docs.cjs para atualizar.
  */
-window.PROFOR_PUBLIC_UPDATED_AT = "2026-09-27T03:31:30.264Z";
+window.PROFOR_PUBLIC_UPDATED_AT = "2026-09-27T19:15:33.995Z";
 window.PROFOR_PUBLIC_DATA = {
   "schemaVersion": 1,
-  "revision": 105,
+  "revision": 107,
   "proposals": [
     {
       "id": "2243576",
@@ -28,25 +28,11 @@ window.PROFOR_PUBLIC_DATA = {
         "global": 20400952,
         "pad": [
           {
-            "id": "17408672",
-            "descricao": "REFRIGERADOR",
+            "id": "17408703",
+            "descricao": "MESA DE REUNIÃO",
             "quantidade": "1",
-            "unitario": 206900,
-            "total": 206900
-          },
-          {
-            "id": "17408676",
-            "descricao": "MESA DE TRABALHO",
-            "quantidade": "5",
-            "unitario": 86808,
-            "total": 434040
-          },
-          {
-            "id": "17408696",
-            "descricao": "SOFÁ",
-            "quantidade": "2",
-            "unitario": 184950,
-            "total": 369900
+            "unitario": 35967,
+            "total": 35967
           },
           {
             "id": "17408691",
@@ -56,18 +42,32 @@ window.PROFOR_PUBLIC_DATA = {
             "total": 12994444
           },
           {
-            "id": "17408694",
-            "descricao": "ARMÁRIO MULTIUSO",
-            "quantidade": "3",
-            "unitario": 22870,
-            "total": 68610
+            "id": "17408700",
+            "descricao": "CADEIRA GIRATÓRIA",
+            "quantidade": "5",
+            "unitario": 62664,
+            "total": 313320
           },
           {
-            "id": "17408680",
-            "descricao": "MONITOR",
-            "quantidade": "10",
-            "unitario": 107700,
-            "total": 1077000
+            "id": "17408676",
+            "descricao": "MESA DE TRABALHO",
+            "quantidade": "5",
+            "unitario": 86808,
+            "total": 434040
+          },
+          {
+            "id": "17408665",
+            "descricao": "AR-CONDICIONADO",
+            "quantidade": "2",
+            "unitario": 359890,
+            "total": 719780
+          },
+          {
+            "id": "17408681",
+            "descricao": "WEBCAM",
+            "quantidade": "5",
+            "unitario": 9323,
+            "total": 46615
           },
           {
             "id": "17408679",
@@ -84,6 +84,20 @@ window.PROFOR_PUBLIC_DATA = {
             "total": 277781
           },
           {
+            "id": "17408696",
+            "descricao": "SOFÁ",
+            "quantidade": "2",
+            "unitario": 184950,
+            "total": 369900
+          },
+          {
+            "id": "17408672",
+            "descricao": "REFRIGERADOR",
+            "quantidade": "1",
+            "unitario": 206900,
+            "total": 206900
+          },
+          {
             "id": "17408699",
             "descricao": "CADEIRA FIXA",
             "quantidade": "10",
@@ -91,39 +105,25 @@ window.PROFOR_PUBLIC_DATA = {
             "total": 164360
           },
           {
+            "id": "17408680",
+            "descricao": "MONITOR",
+            "quantidade": "10",
+            "unitario": 107700,
+            "total": 1077000
+          },
+          {
+            "id": "17408694",
+            "descricao": "ARMÁRIO MULTIUSO",
+            "quantidade": "3",
+            "unitario": 22870,
+            "total": 68610
+          },
+          {
             "id": "17408697",
             "descricao": "TABLET",
             "quantidade": "5",
             "unitario": 130150,
             "total": 650750
-          },
-          {
-            "id": "17408700",
-            "descricao": "CADEIRA GIRATÓRIA",
-            "quantidade": "5",
-            "unitario": 62664,
-            "total": 313320
-          },
-          {
-            "id": "17408703",
-            "descricao": "MESA DE REUNIÃO",
-            "quantidade": "1",
-            "unitario": 35967,
-            "total": 35967
-          },
-          {
-            "id": "17408681",
-            "descricao": "WEBCAM",
-            "quantidade": "5",
-            "unitario": 9323,
-            "total": 46615
-          },
-          {
-            "id": "17408665",
-            "descricao": "AR-CONDICIONADO",
-            "quantidade": "2",
-            "unitario": 359890,
-            "total": 719780
           }
         ]
       },
@@ -2954,10 +2954,271 @@ window.PROFOR_PUBLIC_DATA = {
           "after": {
             "at": "2026-09-26T20:41:13.241Z"
           }
+        },
+        {
+          "at": "2026-09-27T19:11:34.577Z",
+          "event": "Dados da origem alterados; conferir análise",
+          "actor": "Sincronização automática",
+          "before": {
+            "id": "2243576",
+            "numero": "35250/2026",
+            "uf": "RS",
+            "programa": "3000020260022",
+            "cnpj": "32613632000117",
+            "proponente": "SECRETARIA DE SISTEMAS PENAL E SOCIOEDUCATIVO",
+            "orgao": "",
+            "objeto": "Fortalecimento e Aparelhamento da Ouvidoria da Polícia Penal do Rio Grande do Sul.",
+            "situacao": "Proposta/Plano de Trabalho Complementado Enviado para Análise",
+            "data": "2026-09-11",
+            "vigenciaInicio": "2026-10-01",
+            "vigenciaFim": "2028-03-31",
+            "repasse": 20000000,
+            "contrapartida": 400952,
+            "global": 20400952,
+            "pad": [
+              {
+                "id": "17408672",
+                "descricao": "REFRIGERADOR",
+                "quantidade": "1",
+                "unitario": 206900,
+                "total": 206900
+              },
+              {
+                "id": "17408676",
+                "descricao": "MESA DE TRABALHO",
+                "quantidade": "5",
+                "unitario": 86808,
+                "total": 434040
+              },
+              {
+                "id": "17408696",
+                "descricao": "SOFÁ",
+                "quantidade": "2",
+                "unitario": 184950,
+                "total": 369900
+              },
+              {
+                "id": "17408691",
+                "descricao": "VIATURA ADMINISTRATIVA",
+                "quantidade": "1",
+                "unitario": 12994444,
+                "total": 12994444
+              },
+              {
+                "id": "17408694",
+                "descricao": "ARMÁRIO MULTIUSO",
+                "quantidade": "3",
+                "unitario": 22870,
+                "total": 68610
+              },
+              {
+                "id": "17408680",
+                "descricao": "MONITOR",
+                "quantidade": "10",
+                "unitario": 107700,
+                "total": 1077000
+              },
+              {
+                "id": "17408679",
+                "descricao": "COMPUTADOR",
+                "quantidade": "5",
+                "unitario": 608297,
+                "total": 3041485
+              },
+              {
+                "id": "17408692",
+                "descricao": "TV",
+                "quantidade": "1",
+                "unitario": 277781,
+                "total": 277781
+              },
+              {
+                "id": "17408699",
+                "descricao": "CADEIRA FIXA",
+                "quantidade": "10",
+                "unitario": 16436,
+                "total": 164360
+              },
+              {
+                "id": "17408697",
+                "descricao": "TABLET",
+                "quantidade": "5",
+                "unitario": 130150,
+                "total": 650750
+              },
+              {
+                "id": "17408700",
+                "descricao": "CADEIRA GIRATÓRIA",
+                "quantidade": "5",
+                "unitario": 62664,
+                "total": 313320
+              },
+              {
+                "id": "17408703",
+                "descricao": "MESA DE REUNIÃO",
+                "quantidade": "1",
+                "unitario": 35967,
+                "total": 35967
+              },
+              {
+                "id": "17408681",
+                "descricao": "WEBCAM",
+                "quantidade": "5",
+                "unitario": 9323,
+                "total": 46615
+              },
+              {
+                "id": "17408665",
+                "descricao": "AR-CONDICIONADO",
+                "quantidade": "2",
+                "unitario": 359890,
+                "total": 719780
+              }
+            ]
+          },
+          "after": {
+            "id": "2243576",
+            "numero": "35250/2026",
+            "uf": "RS",
+            "programa": "3000020260022",
+            "cnpj": "32613632000117",
+            "proponente": "SECRETARIA DE SISTEMAS PENAL E SOCIOEDUCATIVO",
+            "orgao": "",
+            "objeto": "Fortalecimento e Aparelhamento da Ouvidoria da Polícia Penal do Rio Grande do Sul.",
+            "situacao": "Proposta/Plano de Trabalho Complementado Enviado para Análise",
+            "data": "2026-09-11",
+            "vigenciaInicio": "2026-10-01",
+            "vigenciaFim": "2028-03-31",
+            "repasse": 20000000,
+            "contrapartida": 400952,
+            "global": 20400952,
+            "pad": [
+              {
+                "id": "17408703",
+                "descricao": "MESA DE REUNIÃO",
+                "quantidade": "1",
+                "unitario": 35967,
+                "total": 35967
+              },
+              {
+                "id": "17408691",
+                "descricao": "VIATURA ADMINISTRATIVA",
+                "quantidade": "1",
+                "unitario": 12994444,
+                "total": 12994444
+              },
+              {
+                "id": "17408700",
+                "descricao": "CADEIRA GIRATÓRIA",
+                "quantidade": "5",
+                "unitario": 62664,
+                "total": 313320
+              },
+              {
+                "id": "17408676",
+                "descricao": "MESA DE TRABALHO",
+                "quantidade": "5",
+                "unitario": 86808,
+                "total": 434040
+              },
+              {
+                "id": "17408665",
+                "descricao": "AR-CONDICIONADO",
+                "quantidade": "2",
+                "unitario": 359890,
+                "total": 719780
+              },
+              {
+                "id": "17408681",
+                "descricao": "WEBCAM",
+                "quantidade": "5",
+                "unitario": 9323,
+                "total": 46615
+              },
+              {
+                "id": "17408679",
+                "descricao": "COMPUTADOR",
+                "quantidade": "5",
+                "unitario": 608297,
+                "total": 3041485
+              },
+              {
+                "id": "17408692",
+                "descricao": "TV",
+                "quantidade": "1",
+                "unitario": 277781,
+                "total": 277781
+              },
+              {
+                "id": "17408696",
+                "descricao": "SOFÁ",
+                "quantidade": "2",
+                "unitario": 184950,
+                "total": 369900
+              },
+              {
+                "id": "17408672",
+                "descricao": "REFRIGERADOR",
+                "quantidade": "1",
+                "unitario": 206900,
+                "total": 206900
+              },
+              {
+                "id": "17408699",
+                "descricao": "CADEIRA FIXA",
+                "quantidade": "10",
+                "unitario": 16436,
+                "total": 164360
+              },
+              {
+                "id": "17408680",
+                "descricao": "MONITOR",
+                "quantidade": "10",
+                "unitario": 107700,
+                "total": 1077000
+              },
+              {
+                "id": "17408694",
+                "descricao": "ARMÁRIO MULTIUSO",
+                "quantidade": "3",
+                "unitario": 22870,
+                "total": 68610
+              },
+              {
+                "id": "17408697",
+                "descricao": "TABLET",
+                "quantidade": "5",
+                "unitario": 130150,
+                "total": 650750
+              }
+            ]
+          }
+        },
+        {
+          "at": "2026-09-27T19:11:34.579Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Sincronização automática",
+          "before": {
+            "at": "2026-09-26T20:41:13.241Z"
+          },
+          "after": {
+            "at": "2026-09-27T19:11:34.579Z"
+          }
+        },
+        {
+          "at": "2026-09-27T19:12:19.980Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Sincronização automática",
+          "before": {
+            "at": "2026-09-27T19:11:34.579Z"
+          },
+          "after": {
+            "at": "2026-09-27T19:12:19.980Z"
+          }
         }
       ],
       "textos": {
-        "at": "2026-09-26T20:41:13.241Z",
+        "at": "2026-09-27T19:12:19.980Z",
         "caracterizacao": "Aquisição de bens permanentes destinados ao aparelhamento e ao fortalecimento da Ouvidoria de Serviços Penais do Estado do Rio Grande do Sul, a ser formalmente instituída nos termos do Edital nº 37/2026, visando à qualificação de sua capacidade de atendimento, gestão de manifestações e atuação institucional.",
         "publicoAlvo": "Pessoas privadas de liberdade, familiares, servidores do sistema penal e demais cidadãos que utilizam os serviços da Ouvidoria de Serviços Penais.",
         "problema": "Ausência de estrutura material específica e adequada para o funcionamento da Ouvidoria de Serviços Penais do Estado do Rio Grande do Sul, cuja instituição formal será promovida nos termos do Edital nº 37/2026. A insuficiência de equipamentos, mobiliário, recursos tecnológicos e meios de deslocamento limita a implantação da unidade e a capacidade de atendimento, acompanhamento e tratamento das manifestações relacionadas aos serviços penais.",
@@ -2987,53 +3248,11 @@ window.PROFOR_PUBLIC_DATA = {
         "global": 20020021,
         "pad": [
           {
-            "id": "17435309",
-            "descricao": "Nobreaks",
-            "quantidade": "2",
-            "unitario": 110000,
-            "total": 220000
-          },
-          {
-            "id": "17435305",
-            "descricao": "Monitor para Computador",
-            "quantidade": "4",
-            "unitario": 52000,
-            "total": 208000
-          },
-          {
-            "id": "17435432",
-            "descricao": "Longarina 3 Lugares",
-            "quantidade": "1",
-            "unitario": 200000,
-            "total": 200000
-          },
-          {
-            "id": "17435433",
-            "descricao": "Armário Alto 2 Portas com Chave",
-            "quantidade": "1",
-            "unitario": 110000,
-            "total": 110000
-          },
-          {
-            "id": "17435303",
-            "descricao": "Notebook",
+            "id": "17435434",
+            "descricao": "Mesa de Escritório em L",
             "quantidade": "3",
-            "unitario": 678000,
-            "total": 2034000
-          },
-          {
-            "id": "17435371",
-            "descricao": "Telefone Celular",
-            "quantidade": "3",
-            "unitario": 575000,
-            "total": 1725000
-          },
-          {
-            "id": "17435376",
-            "descricao": "Cadeira de Escritório",
-            "quantidade": "3",
-            "unitario": 185000,
-            "total": 555000
+            "unitario": 300000,
+            "total": 900000
           },
           {
             "id": "17435291",
@@ -3050,27 +3269,6 @@ window.PROFOR_PUBLIC_DATA = {
             "total": 530000
           },
           {
-            "id": "17435375",
-            "descricao": "Purificador de Água",
-            "quantidade": "1",
-            "unitario": 130000,
-            "total": 130000
-          },
-          {
-            "id": "17439632",
-            "descricao": "Saldo Residual",
-            "quantidade": "1",
-            "unitario": 597021,
-            "total": 597021
-          },
-          {
-            "id": "17435270",
-            "descricao": "Totem de Autoatendimento",
-            "quantidade": "15",
-            "unitario": 524000,
-            "total": 7860000
-          },
-          {
             "id": "17435312",
             "descricao": "TV 50'",
             "quantidade": "1",
@@ -3078,11 +3276,11 @@ window.PROFOR_PUBLIC_DATA = {
             "total": 250000
           },
           {
-            "id": "17435434",
-            "descricao": "Mesa de Escritório em L",
-            "quantidade": "3",
-            "unitario": 300000,
-            "total": 900000
+            "id": "17435311",
+            "descricao": "Barra de video conferencia",
+            "quantidade": "1",
+            "unitario": 440000,
+            "total": 440000
           },
           {
             "id": "17435314",
@@ -3092,11 +3290,60 @@ window.PROFOR_PUBLIC_DATA = {
             "total": 144000
           },
           {
-            "id": "17435311",
-            "descricao": "Barra de video conferencia",
+            "id": "17435432",
+            "descricao": "Longarina 3 Lugares",
             "quantidade": "1",
-            "unitario": 440000,
-            "total": 440000
+            "unitario": 200000,
+            "total": 200000
+          },
+          {
+            "id": "17435433",
+            "descricao": "Armário Alto 2 Portas com Chave",
+            "quantidade": "1",
+            "unitario": 110000,
+            "total": 110000
+          },
+          {
+            "id": "17435371",
+            "descricao": "Telefone Celular",
+            "quantidade": "3",
+            "unitario": 575000,
+            "total": 1725000
+          },
+          {
+            "id": "17435438",
+            "descricao": "Ar Condicionado 12000 BTUs",
+            "quantidade": "1",
+            "unitario": 245000,
+            "total": 245000
+          },
+          {
+            "id": "17435375",
+            "descricao": "Purificador de Água",
+            "quantidade": "1",
+            "unitario": 130000,
+            "total": 130000
+          },
+          {
+            "id": "17435437",
+            "descricao": "Cadeira Fixa",
+            "quantidade": "4",
+            "unitario": 45000,
+            "total": 180000
+          },
+          {
+            "id": "17435372",
+            "descricao": "Frigobar 120L",
+            "quantidade": "1",
+            "unitario": 113000,
+            "total": 113000
+          },
+          {
+            "id": "17435305",
+            "descricao": "Monitor para Computador",
+            "quantidade": "4",
+            "unitario": 52000,
+            "total": 208000
           },
           {
             "id": "17435310",
@@ -3113,13 +3360,6 @@ window.PROFOR_PUBLIC_DATA = {
             "total": 1112000
           },
           {
-            "id": "17435437",
-            "descricao": "Cadeira Fixa",
-            "quantidade": "4",
-            "unitario": 45000,
-            "total": 180000
-          },
-          {
             "id": "17435308",
             "descricao": "Tablets",
             "quantidade": "3",
@@ -3127,18 +3367,39 @@ window.PROFOR_PUBLIC_DATA = {
             "total": 1740000
           },
           {
-            "id": "17435372",
-            "descricao": "Frigobar 120L",
+            "id": "17439632",
+            "descricao": "Saldo Residual",
             "quantidade": "1",
-            "unitario": 113000,
-            "total": 113000
+            "unitario": 597021,
+            "total": 597021
           },
           {
-            "id": "17435438",
-            "descricao": "Ar Condicionado 12000 BTUs",
-            "quantidade": "1",
-            "unitario": 245000,
-            "total": 245000
+            "id": "17435376",
+            "descricao": "Cadeira de Escritório",
+            "quantidade": "3",
+            "unitario": 185000,
+            "total": 555000
+          },
+          {
+            "id": "17435309",
+            "descricao": "Nobreaks",
+            "quantidade": "2",
+            "unitario": 110000,
+            "total": 220000
+          },
+          {
+            "id": "17435303",
+            "descricao": "Notebook",
+            "quantidade": "3",
+            "unitario": 678000,
+            "total": 2034000
+          },
+          {
+            "id": "17435270",
+            "descricao": "Totem de Autoatendimento",
+            "quantidade": "15",
+            "unitario": 524000,
+            "total": 7860000
           }
         ]
       },
@@ -4262,10 +4523,383 @@ window.PROFOR_PUBLIC_DATA = {
           "after": {
             "at": "2026-09-26T20:41:13.241Z"
           }
+        },
+        {
+          "at": "2026-09-27T19:11:34.576Z",
+          "event": "Dados da origem alterados; conferir análise",
+          "actor": "Sincronização automática",
+          "before": {
+            "id": "2242725",
+            "numero": "35053/2026",
+            "uf": "SE",
+            "programa": "3000020260022",
+            "cnpj": "34841226000137",
+            "proponente": "SECRETARIA DE ESTADO DA JUSTICA E DE DEFESA DO CONSUMIDOR - SEJUC",
+            "orgao": "",
+            "objeto": "Fortalecimento e aparelhamento da Ouvidoria de Serviços Penais do Estado de Sergipe, mediante a aquisição de mobiliários, equipamentos tecnológicos e outros bens permanentes de capital necessários à melhoria de sua estrutura física e operacional, com vistas ao aprimoramento da capacidade institucional de atendimento, dos canais de recebimento e tratamento de manifestações, da escuta qualificada, do acompanhamento e da rastreabilidade das demandas, bem como ao fortalecimento da participação social, transparência, controle institucional e proteção de direitos no âmbito dos serviços penais.A execução do objeto compreenderá a aquisição, recebimento, incorporação, disponibilização e utilização dos bens permanentes exclusivamente pela unidade de Ouvidoria de Serviços Penais indicada como beneficiária, observadas as especificações, quantidades, valores, cronograma e demais condições estabelecidas no Plano de Trabalho.Os bens adquiridos serão destinados ao suporte das atividades institucionais da Ouvidoria, contribuindo para a melhoria das condições de atendimento ao público, processamento e gerenciamento das manifestações, armazenamento e proteção das informações, bem como para o fortalecimento da capacidade operacional da unidade.O objeto também deverá contribuir para a consolidação de canais permanentes, acessíveis, seguros e efetivos de recebimento, tratamento e encaminhamento de manifestações, bem como para a adoção de soluções que favoreçam o registro, acompanhamento, rastreabilidade, sigilo e resposta às demandas recebidas.A aquisição dos bens observará integralmente as disposições do Edital, o padrão referencial de itens, a classificação como despesa de capital e a vinculação direta dos bens ao aparelhamento e funcionamento da Ouvidoria beneficiária. Os bens permanecerão vinculados à unidade durante e após a execução do convênio, com observância das regras de guarda, registro patrimonial, utilização e manutenção de sua destinação institucional.",
+            "situacao": "Proposta/Plano de Trabalho Cadastrados",
+            "data": "2026-09-08",
+            "vigenciaInicio": "2026-11-23",
+            "vigenciaFim": "2028-05-19",
+            "repasse": 20000000,
+            "contrapartida": 20021,
+            "global": 20020021,
+            "pad": [
+              {
+                "id": "17435309",
+                "descricao": "Nobreaks",
+                "quantidade": "2",
+                "unitario": 110000,
+                "total": 220000
+              },
+              {
+                "id": "17435305",
+                "descricao": "Monitor para Computador",
+                "quantidade": "4",
+                "unitario": 52000,
+                "total": 208000
+              },
+              {
+                "id": "17435432",
+                "descricao": "Longarina 3 Lugares",
+                "quantidade": "1",
+                "unitario": 200000,
+                "total": 200000
+              },
+              {
+                "id": "17435433",
+                "descricao": "Armário Alto 2 Portas com Chave",
+                "quantidade": "1",
+                "unitario": 110000,
+                "total": 110000
+              },
+              {
+                "id": "17435303",
+                "descricao": "Notebook",
+                "quantidade": "3",
+                "unitario": 678000,
+                "total": 2034000
+              },
+              {
+                "id": "17435371",
+                "descricao": "Telefone Celular",
+                "quantidade": "3",
+                "unitario": 575000,
+                "total": 1725000
+              },
+              {
+                "id": "17435376",
+                "descricao": "Cadeira de Escritório",
+                "quantidade": "3",
+                "unitario": 185000,
+                "total": 555000
+              },
+              {
+                "id": "17435291",
+                "descricao": "Impressora Multifuncional",
+                "quantidade": "1",
+                "unitario": 475000,
+                "total": 475000
+              },
+              {
+                "id": "17435374",
+                "descricao": "Cafeteira Expresso",
+                "quantidade": "1",
+                "unitario": 530000,
+                "total": 530000
+              },
+              {
+                "id": "17435375",
+                "descricao": "Purificador de Água",
+                "quantidade": "1",
+                "unitario": 130000,
+                "total": 130000
+              },
+              {
+                "id": "17439632",
+                "descricao": "Saldo Residual",
+                "quantidade": "1",
+                "unitario": 597021,
+                "total": 597021
+              },
+              {
+                "id": "17435270",
+                "descricao": "Totem de Autoatendimento",
+                "quantidade": "15",
+                "unitario": 524000,
+                "total": 7860000
+              },
+              {
+                "id": "17435312",
+                "descricao": "TV 50'",
+                "quantidade": "1",
+                "unitario": 250000,
+                "total": 250000
+              },
+              {
+                "id": "17435434",
+                "descricao": "Mesa de Escritório em L",
+                "quantidade": "3",
+                "unitario": 300000,
+                "total": 900000
+              },
+              {
+                "id": "17435314",
+                "descricao": "Telefone de Mesa",
+                "quantidade": "3",
+                "unitario": 48000,
+                "total": 144000
+              },
+              {
+                "id": "17435311",
+                "descricao": "Barra de video conferencia",
+                "quantidade": "1",
+                "unitario": 440000,
+                "total": 440000
+              },
+              {
+                "id": "17435310",
+                "descricao": "Fragmentadora de Papel",
+                "quantidade": "1",
+                "unitario": 252000,
+                "total": 252000
+              },
+              {
+                "id": "17435307",
+                "descricao": "Computador",
+                "quantidade": "2",
+                "unitario": 556000,
+                "total": 1112000
+              },
+              {
+                "id": "17435437",
+                "descricao": "Cadeira Fixa",
+                "quantidade": "4",
+                "unitario": 45000,
+                "total": 180000
+              },
+              {
+                "id": "17435308",
+                "descricao": "Tablets",
+                "quantidade": "3",
+                "unitario": 580000,
+                "total": 1740000
+              },
+              {
+                "id": "17435372",
+                "descricao": "Frigobar 120L",
+                "quantidade": "1",
+                "unitario": 113000,
+                "total": 113000
+              },
+              {
+                "id": "17435438",
+                "descricao": "Ar Condicionado 12000 BTUs",
+                "quantidade": "1",
+                "unitario": 245000,
+                "total": 245000
+              }
+            ]
+          },
+          "after": {
+            "id": "2242725",
+            "numero": "35053/2026",
+            "uf": "SE",
+            "programa": "3000020260022",
+            "cnpj": "34841226000137",
+            "proponente": "SECRETARIA DE ESTADO DA JUSTICA E DE DEFESA DO CONSUMIDOR - SEJUC",
+            "orgao": "",
+            "objeto": "Fortalecimento e aparelhamento da Ouvidoria de Serviços Penais do Estado de Sergipe, mediante a aquisição de mobiliários, equipamentos tecnológicos e outros bens permanentes de capital necessários à melhoria de sua estrutura física e operacional, com vistas ao aprimoramento da capacidade institucional de atendimento, dos canais de recebimento e tratamento de manifestações, da escuta qualificada, do acompanhamento e da rastreabilidade das demandas, bem como ao fortalecimento da participação social, transparência, controle institucional e proteção de direitos no âmbito dos serviços penais.A execução do objeto compreenderá a aquisição, recebimento, incorporação, disponibilização e utilização dos bens permanentes exclusivamente pela unidade de Ouvidoria de Serviços Penais indicada como beneficiária, observadas as especificações, quantidades, valores, cronograma e demais condições estabelecidas no Plano de Trabalho.Os bens adquiridos serão destinados ao suporte das atividades institucionais da Ouvidoria, contribuindo para a melhoria das condições de atendimento ao público, processamento e gerenciamento das manifestações, armazenamento e proteção das informações, bem como para o fortalecimento da capacidade operacional da unidade.O objeto também deverá contribuir para a consolidação de canais permanentes, acessíveis, seguros e efetivos de recebimento, tratamento e encaminhamento de manifestações, bem como para a adoção de soluções que favoreçam o registro, acompanhamento, rastreabilidade, sigilo e resposta às demandas recebidas.A aquisição dos bens observará integralmente as disposições do Edital, o padrão referencial de itens, a classificação como despesa de capital e a vinculação direta dos bens ao aparelhamento e funcionamento da Ouvidoria beneficiária. Os bens permanecerão vinculados à unidade durante e após a execução do convênio, com observância das regras de guarda, registro patrimonial, utilização e manutenção de sua destinação institucional.",
+            "situacao": "Proposta/Plano de Trabalho Cadastrados",
+            "data": "2026-09-08",
+            "vigenciaInicio": "2026-11-23",
+            "vigenciaFim": "2028-05-19",
+            "repasse": 20000000,
+            "contrapartida": 20021,
+            "global": 20020021,
+            "pad": [
+              {
+                "id": "17435434",
+                "descricao": "Mesa de Escritório em L",
+                "quantidade": "3",
+                "unitario": 300000,
+                "total": 900000
+              },
+              {
+                "id": "17435291",
+                "descricao": "Impressora Multifuncional",
+                "quantidade": "1",
+                "unitario": 475000,
+                "total": 475000
+              },
+              {
+                "id": "17435374",
+                "descricao": "Cafeteira Expresso",
+                "quantidade": "1",
+                "unitario": 530000,
+                "total": 530000
+              },
+              {
+                "id": "17435312",
+                "descricao": "TV 50'",
+                "quantidade": "1",
+                "unitario": 250000,
+                "total": 250000
+              },
+              {
+                "id": "17435311",
+                "descricao": "Barra de video conferencia",
+                "quantidade": "1",
+                "unitario": 440000,
+                "total": 440000
+              },
+              {
+                "id": "17435314",
+                "descricao": "Telefone de Mesa",
+                "quantidade": "3",
+                "unitario": 48000,
+                "total": 144000
+              },
+              {
+                "id": "17435432",
+                "descricao": "Longarina 3 Lugares",
+                "quantidade": "1",
+                "unitario": 200000,
+                "total": 200000
+              },
+              {
+                "id": "17435433",
+                "descricao": "Armário Alto 2 Portas com Chave",
+                "quantidade": "1",
+                "unitario": 110000,
+                "total": 110000
+              },
+              {
+                "id": "17435371",
+                "descricao": "Telefone Celular",
+                "quantidade": "3",
+                "unitario": 575000,
+                "total": 1725000
+              },
+              {
+                "id": "17435438",
+                "descricao": "Ar Condicionado 12000 BTUs",
+                "quantidade": "1",
+                "unitario": 245000,
+                "total": 245000
+              },
+              {
+                "id": "17435375",
+                "descricao": "Purificador de Água",
+                "quantidade": "1",
+                "unitario": 130000,
+                "total": 130000
+              },
+              {
+                "id": "17435437",
+                "descricao": "Cadeira Fixa",
+                "quantidade": "4",
+                "unitario": 45000,
+                "total": 180000
+              },
+              {
+                "id": "17435372",
+                "descricao": "Frigobar 120L",
+                "quantidade": "1",
+                "unitario": 113000,
+                "total": 113000
+              },
+              {
+                "id": "17435305",
+                "descricao": "Monitor para Computador",
+                "quantidade": "4",
+                "unitario": 52000,
+                "total": 208000
+              },
+              {
+                "id": "17435310",
+                "descricao": "Fragmentadora de Papel",
+                "quantidade": "1",
+                "unitario": 252000,
+                "total": 252000
+              },
+              {
+                "id": "17435307",
+                "descricao": "Computador",
+                "quantidade": "2",
+                "unitario": 556000,
+                "total": 1112000
+              },
+              {
+                "id": "17435308",
+                "descricao": "Tablets",
+                "quantidade": "3",
+                "unitario": 580000,
+                "total": 1740000
+              },
+              {
+                "id": "17439632",
+                "descricao": "Saldo Residual",
+                "quantidade": "1",
+                "unitario": 597021,
+                "total": 597021
+              },
+              {
+                "id": "17435376",
+                "descricao": "Cadeira de Escritório",
+                "quantidade": "3",
+                "unitario": 185000,
+                "total": 555000
+              },
+              {
+                "id": "17435309",
+                "descricao": "Nobreaks",
+                "quantidade": "2",
+                "unitario": 110000,
+                "total": 220000
+              },
+              {
+                "id": "17435303",
+                "descricao": "Notebook",
+                "quantidade": "3",
+                "unitario": 678000,
+                "total": 2034000
+              },
+              {
+                "id": "17435270",
+                "descricao": "Totem de Autoatendimento",
+                "quantidade": "15",
+                "unitario": 524000,
+                "total": 7860000
+              }
+            ]
+          }
+        },
+        {
+          "at": "2026-09-27T19:11:34.579Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Sincronização automática",
+          "before": {
+            "at": "2026-09-26T20:41:13.241Z"
+          },
+          "after": {
+            "at": "2026-09-27T19:11:34.579Z"
+          }
+        },
+        {
+          "at": "2026-09-27T19:12:19.980Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Sincronização automática",
+          "before": {
+            "at": "2026-09-27T19:11:34.579Z"
+          },
+          "after": {
+            "at": "2026-09-27T19:12:19.980Z"
+          }
         }
       ],
       "textos": {
-        "at": "2026-09-26T20:41:13.241Z",
+        "at": "2026-09-27T19:12:19.980Z",
         "caracterizacao": "A proposta atende ao interesse do Estado de Sergipe em fortalecer a estrutura e a capacidade de atuação da Ouvidoria de Serviços Penais, ampliando sua eficiência no recebimento, tratamento e encaminhamento de manifestações. Para a União, a iniciativa contribui para a implementação das diretrizes do PROFOR/ONASP, o fortalecimento da participação social, da transparência, do controle institucional e da proteção de direitos na política penal.",
         "publicoAlvo": "O público-alvo compreende, prioritariamente, as pessoas privadas de liberdade, egressos do sistema prisional, familiares e demais cidadãos que utilizam os canais da Ouvidoria para apresentar denúncias, reclamações, solicitações, sugestões, elogios e outras manifestações relacionadas aos serviços penais. Abrange também os agentes e servidores responsáveis pelo atendimento e tratamento dessas manifestações.",
         "problema": "A proposta busca enfrentar as limitações estruturais e tecnológicas que podem comprometer a capacidade institucional da Ouvidoria de Serviços Penais para receber, registrar, tratar, acompanhar e responder manifestações de forma eficiente, segura e rastreável. O fortalecimento do aparelhamento permitirá melhores condições para a escuta qualificada, proteção de informações sensíveis, participação social, transparência e controle dos serviços penais.",
@@ -4302,60 +4936,11 @@ window.PROFOR_PUBLIC_DATA = {
             "total": 4304755
           },
           {
-            "id": "17408693",
-            "descricao": "Tablet institucional destinado à escuta, pesquisa de satisfação, avaliação de serviços e coleta institucional de informações",
-            "quantidade": "35",
-            "unitario": 319967,
-            "total": 11198845
-          },
-          {
-            "id": "17408758",
-            "descricao": "Fragmentadora profissional de papel de alta capacidade",
+            "id": "17408710",
+            "descricao": "Notebook institucional para atividades externas e complementação da estação de trabalho da equipe",
             "quantidade": "1",
-            "unitario": 669167,
-            "total": 669167
-          },
-          {
-            "id": "17408701",
-            "descricao": "Câmera fotográfica digital profissional institucional",
-            "quantidade": "1",
-            "unitario": 418400,
-            "total": 418400
-          },
-          {
-            "id": "17408704",
-            "descricao": "Impressora multifuncional profissional colorida",
-            "quantidade": "1",
-            "unitario": 852367,
-            "total": 852367
-          },
-          {
-            "id": "17408698",
-            "descricao": "Scanner profissional de documentos",
-            "quantidade": "2",
-            "unitario": 286175,
-            "total": 572350
-          },
-          {
-            "id": "17408708",
-            "descricao": "Webcam institucional com microfone integrado",
-            "quantidade": "3",
-            "unitario": 152900,
-            "total": 458700
-          },
-          {
-            "id": "17408761",
-            "descricao": "Conjunto composto por projetor multimídia portátil, tela e suporte",
-            "quantidade": "1",
-            "unitario": 325628,
-            "total": 325628
-          },
-          {
-            "id": "17408779",
-            "descricao": "SALDO REMANESCENTE",
-            "quantidade": "1",
-            "unitario": 461976,
-            "total": 461976
+            "unitario": 667500,
+            "total": 667500
           },
           {
             "id": "17408711",
@@ -4365,11 +4950,60 @@ window.PROFOR_PUBLIC_DATA = {
             "total": 90333
           },
           {
-            "id": "17408710",
-            "descricao": "Notebook institucional para atividades externas e complementação da estação de trabalho da equipe",
+            "id": "17408708",
+            "descricao": "Webcam institucional com microfone integrado",
+            "quantidade": "3",
+            "unitario": 152900,
+            "total": 458700
+          },
+          {
+            "id": "17408693",
+            "descricao": "Tablet institucional destinado à escuta, pesquisa de satisfação, avaliação de serviços e coleta institucional de informações",
+            "quantidade": "35",
+            "unitario": 319967,
+            "total": 11198845
+          },
+          {
+            "id": "17408701",
+            "descricao": "Câmera fotográfica digital profissional institucional",
             "quantidade": "1",
-            "unitario": 667500,
-            "total": 667500
+            "unitario": 418400,
+            "total": 418400
+          },
+          {
+            "id": "17408758",
+            "descricao": "Fragmentadora profissional de papel de alta capacidade",
+            "quantidade": "1",
+            "unitario": 669167,
+            "total": 669167
+          },
+          {
+            "id": "17408698",
+            "descricao": "Scanner profissional de documentos",
+            "quantidade": "2",
+            "unitario": 286175,
+            "total": 572350
+          },
+          {
+            "id": "17408779",
+            "descricao": "SALDO REMANESCENTE",
+            "quantidade": "1",
+            "unitario": 461976,
+            "total": 461976
+          },
+          {
+            "id": "17408704",
+            "descricao": "Impressora multifuncional profissional colorida",
+            "quantidade": "1",
+            "unitario": 852367,
+            "total": 852367
+          },
+          {
+            "id": "17408761",
+            "descricao": "Conjunto composto por projetor multimídia portátil, tela e suporte",
+            "quantidade": "1",
+            "unitario": 325628,
+            "total": 325628
           }
         ]
       },
@@ -6511,10 +7145,229 @@ window.PROFOR_PUBLIC_DATA = {
           "after": {
             "at": "2026-09-26T20:41:13.241Z"
           }
+        },
+        {
+          "at": "2026-09-27T19:11:34.574Z",
+          "event": "Dados da origem alterados; conferir análise",
+          "actor": "Sincronização automática",
+          "before": {
+            "id": "2243920",
+            "numero": "35413/2026",
+            "uf": "CE",
+            "programa": "3000020260022",
+            "cnpj": "07954530000118",
+            "proponente": "SECRETARIA DA ADMINISTRACAO PENITENCIARIA",
+            "orgao": "",
+            "objeto": "Aparelhar e fortalecer a Ouvidoria de Serviços Penais da Secretaria da Administração Penitenciária e Ressocialização do Estado do Ceará – SAP/CE, mediante a implantação de rede descentralizada de escuta, avaliação e participação social e o fortalecimento da infraestrutura tecnológica destinada às atividades de atendimento, registro, tratamento e acompanhamento de manifestações, ouvidoria ativa, inspeções, visitas técnicas, comunicação institucional, gestão documental e proteção de informações.",
+            "situacao": "Proposta/Plano de Trabalho Cadastrados",
+            "data": "2026-09-14",
+            "vigenciaInicio": "2027-01-30",
+            "vigenciaFim": "2027-12-30",
+            "repasse": 20000000,
+            "contrapartida": 20021,
+            "global": 20020021,
+            "pad": [
+              {
+                "id": "17408695",
+                "descricao": "Totem/Suporte Institucional de segurança para trablet",
+                "quantidade": "35",
+                "unitario": 122993,
+                "total": 4304755
+              },
+              {
+                "id": "17408693",
+                "descricao": "Tablet institucional destinado à escuta, pesquisa de satisfação, avaliação de serviços e coleta institucional de informações",
+                "quantidade": "35",
+                "unitario": 319967,
+                "total": 11198845
+              },
+              {
+                "id": "17408758",
+                "descricao": "Fragmentadora profissional de papel de alta capacidade",
+                "quantidade": "1",
+                "unitario": 669167,
+                "total": 669167
+              },
+              {
+                "id": "17408701",
+                "descricao": "Câmera fotográfica digital profissional institucional",
+                "quantidade": "1",
+                "unitario": 418400,
+                "total": 418400
+              },
+              {
+                "id": "17408704",
+                "descricao": "Impressora multifuncional profissional colorida",
+                "quantidade": "1",
+                "unitario": 852367,
+                "total": 852367
+              },
+              {
+                "id": "17408698",
+                "descricao": "Scanner profissional de documentos",
+                "quantidade": "2",
+                "unitario": 286175,
+                "total": 572350
+              },
+              {
+                "id": "17408708",
+                "descricao": "Webcam institucional com microfone integrado",
+                "quantidade": "3",
+                "unitario": 152900,
+                "total": 458700
+              },
+              {
+                "id": "17408761",
+                "descricao": "Conjunto composto por projetor multimídia portátil, tela e suporte",
+                "quantidade": "1",
+                "unitario": 325628,
+                "total": 325628
+              },
+              {
+                "id": "17408779",
+                "descricao": "SALDO REMANESCENTE",
+                "quantidade": "1",
+                "unitario": 461976,
+                "total": 461976
+              },
+              {
+                "id": "17408711",
+                "descricao": "Gravador digital portátil profissional",
+                "quantidade": "1",
+                "unitario": 90333,
+                "total": 90333
+              },
+              {
+                "id": "17408710",
+                "descricao": "Notebook institucional para atividades externas e complementação da estação de trabalho da equipe",
+                "quantidade": "1",
+                "unitario": 667500,
+                "total": 667500
+              }
+            ]
+          },
+          "after": {
+            "id": "2243920",
+            "numero": "35413/2026",
+            "uf": "CE",
+            "programa": "3000020260022",
+            "cnpj": "07954530000118",
+            "proponente": "SECRETARIA DA ADMINISTRACAO PENITENCIARIA",
+            "orgao": "",
+            "objeto": "Aparelhar e fortalecer a Ouvidoria de Serviços Penais da Secretaria da Administração Penitenciária e Ressocialização do Estado do Ceará – SAP/CE, mediante a implantação de rede descentralizada de escuta, avaliação e participação social e o fortalecimento da infraestrutura tecnológica destinada às atividades de atendimento, registro, tratamento e acompanhamento de manifestações, ouvidoria ativa, inspeções, visitas técnicas, comunicação institucional, gestão documental e proteção de informações.",
+            "situacao": "Proposta/Plano de Trabalho Cadastrados",
+            "data": "2026-09-14",
+            "vigenciaInicio": "2027-01-30",
+            "vigenciaFim": "2027-12-30",
+            "repasse": 20000000,
+            "contrapartida": 20021,
+            "global": 20020021,
+            "pad": [
+              {
+                "id": "17408695",
+                "descricao": "Totem/Suporte Institucional de segurança para trablet",
+                "quantidade": "35",
+                "unitario": 122993,
+                "total": 4304755
+              },
+              {
+                "id": "17408710",
+                "descricao": "Notebook institucional para atividades externas e complementação da estação de trabalho da equipe",
+                "quantidade": "1",
+                "unitario": 667500,
+                "total": 667500
+              },
+              {
+                "id": "17408711",
+                "descricao": "Gravador digital portátil profissional",
+                "quantidade": "1",
+                "unitario": 90333,
+                "total": 90333
+              },
+              {
+                "id": "17408708",
+                "descricao": "Webcam institucional com microfone integrado",
+                "quantidade": "3",
+                "unitario": 152900,
+                "total": 458700
+              },
+              {
+                "id": "17408693",
+                "descricao": "Tablet institucional destinado à escuta, pesquisa de satisfação, avaliação de serviços e coleta institucional de informações",
+                "quantidade": "35",
+                "unitario": 319967,
+                "total": 11198845
+              },
+              {
+                "id": "17408701",
+                "descricao": "Câmera fotográfica digital profissional institucional",
+                "quantidade": "1",
+                "unitario": 418400,
+                "total": 418400
+              },
+              {
+                "id": "17408758",
+                "descricao": "Fragmentadora profissional de papel de alta capacidade",
+                "quantidade": "1",
+                "unitario": 669167,
+                "total": 669167
+              },
+              {
+                "id": "17408698",
+                "descricao": "Scanner profissional de documentos",
+                "quantidade": "2",
+                "unitario": 286175,
+                "total": 572350
+              },
+              {
+                "id": "17408779",
+                "descricao": "SALDO REMANESCENTE",
+                "quantidade": "1",
+                "unitario": 461976,
+                "total": 461976
+              },
+              {
+                "id": "17408704",
+                "descricao": "Impressora multifuncional profissional colorida",
+                "quantidade": "1",
+                "unitario": 852367,
+                "total": 852367
+              },
+              {
+                "id": "17408761",
+                "descricao": "Conjunto composto por projetor multimídia portátil, tela e suporte",
+                "quantidade": "1",
+                "unitario": 325628,
+                "total": 325628
+              }
+            ]
+          }
+        },
+        {
+          "at": "2026-09-27T19:11:34.579Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Sincronização automática",
+          "before": {
+            "at": "2026-09-26T20:41:13.241Z"
+          },
+          "after": {
+            "at": "2026-09-27T19:11:34.579Z"
+          }
+        },
+        {
+          "at": "2026-09-27T19:12:19.980Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Sincronização automática",
+          "before": {
+            "at": "2026-09-27T19:11:34.579Z"
+          },
+          "after": {
+            "at": "2026-09-27T19:12:19.980Z"
+          }
         }
       ],
       "textos": {
-        "at": "2026-09-26T20:41:13.241Z",
+        "at": "2026-09-27T19:12:19.980Z",
         "caracterizacao": "A Ouvidoria da SAP/CE constitui instrumento estratégico de participação social, controle institucional e proteção de direitos no âmbito da política penal do Estado do Ceará, atuando como canal de comunicação entre a Administração Penitenciária e pessoas privadas de liberdade, familiares, visitantes, servidores, colaboradores e demais usuários dos serviços públicos.",
         "publicoAlvo": "pessoas privadas de liberdade nas unidades prisionais do Estado do Ceará; familiares de pessoas privadas de liberdade; visitantes das unidades prisionais; servidores e policiais penais; colaboradores e prestadores de serviços vinculados à política penal; • egressos e demais usuários dos serviços penais;cidadãos que necessitem utilizar os canais da Ouvidoria; gestores da SAP/CE, de forma indireta, mediante acesso a informações gerenciais produzidas pela escuta institucional,egresso",
         "problema": "Embora a Ouvidoria da SAP/CE disponha atualmente de infraestrutura física e tecnológica adequada em sua sede, decorrente inclusive dos investimentos de modernização e reaparelhamento realizados anteriormente, permanece identificada insuficiência de infraestrutura tecnológica descentralizada para realização contínua, padronizada e territorialmente abrangente da escuta institucional diretamente nos estabelecimentos prisionais e demais pontos estratégicos da Administração Penitenciária.",
@@ -6544,32 +7397,39 @@ window.PROFOR_PUBLIC_DATA = {
         "global": 20020021,
         "pad": [
           {
-            "id": "17444126",
-            "descricao": "Computador tipo I, mini desktop, Processador Intel I5-13400 10 Núcleos, 16 Threads, 1.8GHZ / 4.6 GHZ, Smart Cache 20MB + 9.5 MB cache L2, TDP 65w. DDR 4 SDRAM 8 Gb, instalados em 1 pente (1x8gb), operação mínima efetiva a 3200MHz; mínimo 2 s slots expansíveis a 32 GB. Acompanha licença OEM do sistemaoperacional Microsoft® Windows 11 Professional de 64 bits, ou versão mais recente, no idioma Português Brasil, com chave de instalação (KEY) presente na BIOS do equipamento, com mídia de recuperação ou oferecer a opção de restauraçãoatravés de partição do SSD do equipamento ou em nuvem; licença perpétua do Microsoft Office 2021 Professional FPP, ou superior, na modalidade licenciamento por volume, pré-instalados.",
-            "quantidade": "6",
-            "unitario": 539540,
-            "total": 3237240
+            "id": "17444048",
+            "descricao": "Mesa reta em MDF, pés em aço inoxidável, medindo750x600x1400mm.",
+            "quantidade": "5",
+            "unitario": 39999,
+            "total": 199995
           },
           {
-            "id": "17444212",
-            "descricao": "Poltrona tipo decorativa, tecido em couro ou courino, cor preta, não reclinável e nem estampada, encosto, com formato levemente adaptado ao corpo permitindo proteção para a região lombar, estilo retrô ou moderno, capacidade de até 120kg. Dimensões aproximadas: 75 cm de altura × 57cm de largura × 75 cm de profundidade.",
-            "quantidade": "8",
-            "unitario": 49160,
-            "total": 393280
+            "id": "17444196",
+            "descricao": "Mesa dobrável, tipo maleta, retangular, dimensões mínimas aberto (C x L x A): 180 x 70 x 74 cm, estrutura leve e resistente, convertível em maleta com alça para transporte. Pés retráteis com sistema de travamento, adequada para uso em camping, eventos, áreas de lazer ou ambientes externos, fácil de montar, transportar e armazenar.",
+            "quantidade": "2",
+            "unitario": 43663,
+            "total": 87326
           },
           {
-            "id": "17444044",
-            "descricao": "Cadeira interlocutor",
+            "id": "17444193",
+            "descricao": "Cadeira dobrável em plástico rígido, capacidade para suportar até 110 kg, adequada para áreas de lazer e eventos.Estrutura e assento na cor preta, com design funcional, leve e resistente, de fácil transporte e armazenamento. Superfície lisa e de fácil higienização, garantindo durabilidade e segurança ao usuário.",
             "quantidade": "10",
-            "unitario": 75430,
-            "total": 754300
+            "unitario": 10999,
+            "total": 109990
           },
           {
-            "id": "17444204",
-            "descricao": "Televisor tamanho tela 85, 110/220 W, smart tv, 4 k, wifi, entradas hdmi/usb, conversor, tela led, controle remoto.",
-            "quantidade": "1",
-            "unitario": 735859,
-            "total": 735859
+            "id": "17444198",
+            "descricao": "Poltrona de auditório com prancheta individual escamoteável,pés de aço de apoiar (base móvel), pintura eletrostática, capacidade de até 120kg.",
+            "quantidade": "45",
+            "unitario": 133797,
+            "total": 6020865
+          },
+          {
+            "id": "17444189",
+            "descricao": "Divisórias para mesas, MDP, revestido em laminado melamínicotexturizado na cor MAPLE ou Similar, compatível com o mobiliário existente, nas duasfaces; x Acabamento RETO em PVC, de 3 mm, cor MAPLE ou Similar; dimensõesaproximadas: 0,80 m x 0,015 m x 0,60 m (largura x espessura x altura).",
+            "quantidade": "3",
+            "unitario": 17667,
+            "total": 53001
           },
           {
             "id": "17444149",
@@ -6579,25 +7439,39 @@ window.PROFOR_PUBLIC_DATA = {
             "total": 47000
           },
           {
-            "id": "17444048",
-            "descricao": "Mesa reta em MDF, pés em aço inoxidável, medindo750x600x1400mm.",
-            "quantidade": "5",
-            "unitario": 39999,
-            "total": 199995
-          },
-          {
-            "id": "17444145",
-            "descricao": "Porta de correr para divisória, em painel de fibra de madeira ou material de características técnicas equivalentes, em cor clara, compatível com os painéis da divisória e todos os itens necessários para a instalação.",
-            "quantidade": "1",
-            "unitario": 38433,
-            "total": 38433
-          },
-          {
-            "id": "17444131",
-            "descricao": "Notebook, processador AMD Ryzen 7-5825U, 8 Núcleos, 16 Threads, 2 GHz até 4.5 Ghz, cache L1 512KB, cache l2 4MB, cache L3 16 MB, TDP 15W, 7nn, 64 Bits, 8 núcleos e 12 threads; compatíveis com as tecnologias AVX e AVX2; memória RAM DDR 4 SDRAM de no mínimo (1x) 8 Gb com operação mínima efetiva a 3.200MHz; expansível a 32 GB; armazenamento interno contendo 1 unidade de estado sólido (SSD) comcapacidade de 500GB M.2 NVMe e taxa de leitura e gravação sequencial igual ou superior a 3000MB/s; SSD M.2 NVMe 512GB Gen3x4 Teamgroup",
+            "id": "17444201",
+            "descricao": "Ar condicionado para espaço de capacitação e sala multifuncional, 30.000 BTUs/h, gas ecológico R410A ou R32, tipo split hi-wall, 220V, tecnologia inverter, com fiação ematerial necessário para instalação.",
             "quantidade": "4",
-            "unitario": 588232,
-            "total": 2352928
+            "unitario": 667770,
+            "total": 2671080
+          },
+          {
+            "id": "17444044",
+            "descricao": "Cadeira interlocutor",
+            "quantidade": "10",
+            "unitario": 75430,
+            "total": 754300
+          },
+          {
+            "id": "17444159",
+            "descricao": "Aparador buffet, 2 a 4 portas, medidas aprox.75 cm (a) x 90 cm (l) x 33 cm (p); peso suportado de 20 kg, distribuídos; prateleira interna; dobradiças metálicas; produzido em mdp/mdf.",
+            "quantidade": "2",
+            "unitario": 42535,
+            "total": 85070
+          },
+          {
+            "id": "17444204",
+            "descricao": "Televisor tamanho tela 85, 110/220 W, smart tv, 4 k, wifi, entradas hdmi/usb, conversor, tela led, controle remoto.",
+            "quantidade": "1",
+            "unitario": 735859,
+            "total": 735859
+          },
+          {
+            "id": "17444295",
+            "descricao": "Kit com 2 caixas de som ativas, 2 pedestais/hastes, cabos, potência de 700 W RMS, alto-falante woofer, bluetooth, bivolt ou 220v, cabos de 10mts, suporte com 2 ângulos para haste em aço carbono na cor preta, altura regulável. Ambas as caixas devem ser acompanhadas pelas hastes.",
+            "quantidade": "1",
+            "unitario": 388376,
+            "total": 388376
           },
           {
             "id": "17444291",
@@ -6607,11 +7481,67 @@ window.PROFOR_PUBLIC_DATA = {
             "total": 160068
           },
           {
+            "id": "17444298",
+            "descricao": "Saldo de economicidade",
+            "quantidade": "1",
+            "unitario": 162688,
+            "total": 162688
+          },
+          {
+            "id": "17444215",
+            "descricao": "Mesa, som 8 canais profissional digital misturador, bivolt ou220v, bluetooth, equalizador, com entrada para microfone.",
+            "quantidade": "1",
+            "unitario": 250566,
+            "total": 250566
+          },
+          {
+            "id": "17444208",
+            "descricao": "Suporte de televisao em aço, tipo vesa fixo, para tv '85'.",
+            "quantidade": "1",
+            "unitario": 18684,
+            "total": 18684
+          },
+          {
+            "id": "17444145",
+            "descricao": "Porta de correr para divisória, em painel de fibra de madeira ou material de características técnicas equivalentes, em cor clara, compatível com os painéis da divisória e todos os itens necessários para a instalação.",
+            "quantidade": "1",
+            "unitario": 38433,
+            "total": 38433
+          },
+          {
+            "id": "17444210",
+            "descricao": "Mesa lateral de apoio, formato quadrado, dimensões aproximadas 60 cm de largura × 60 cm de profundidade × 65 cm de altura.",
+            "quantidade": "4",
+            "unitario": 59430,
+            "total": 237720
+          },
+          {
+            "id": "17444212",
+            "descricao": "Poltrona tipo decorativa, tecido em couro ou courino, cor preta, não reclinável e nem estampada, encosto, com formato levemente adaptado ao corpo permitindo proteção para a região lombar, estilo retrô ou moderno, capacidade de até 120kg. Dimensões aproximadas: 75 cm de altura × 57cm de largura × 75 cm de profundidade.",
+            "quantidade": "8",
+            "unitario": 49160,
+            "total": 393280
+          },
+          {
+            "id": "17444156",
+            "descricao": "webcam hd 720p, 30 fps, microfone integrado, resolução máxima de vídeo 1280px x 720px, tipo de resolução máxima de vídeo hd, imagem com resolução de 1 mpx, interface usb 2.0, funciona com windows, linux, macos, adequada para notebook, desktop pc, compatível com skype, zoom, webex, microsoft teams, google meet, hangouts, wechat inclui clipe, adequada para videoconferências",
+            "quantidade": "6",
+            "unitario": 4500,
+            "total": 27000
+          },
+          {
             "id": "17444102",
             "descricao": "Sofá de dois lugares revestido em courino, preferencialmente na cor marrom, dimensões aproximadas 150 cm de largura × 80 cm de profundidade × 81 cm de altura.",
             "quantidade": "1",
             "unitario": 118167,
             "total": 118167
+          },
+          {
+            "id": "17444101",
+            "descricao": "Armário escritório, com compartimentos para armazenamento e 2 portas, em MDP, MDF ou material de resistência e acabamento equivalentes, dimensões aproximadas: 0,80 m de largura × 0,50 m de profundidade × 1,60 m de altura.",
+            "quantidade": "3",
+            "unitario": 74167,
+            "total": 222501
           },
           {
             "id": "17444103",
@@ -6621,11 +7551,25 @@ window.PROFOR_PUBLIC_DATA = {
             "total": 496000
           },
           {
-            "id": "17444101",
-            "descricao": "Armário escritório, com compartimentos para armazenamento e 2 portas, em MDP, MDF ou material de resistência e acabamento equivalentes, dimensões aproximadas: 0,80 m de largura × 0,50 m de profundidade × 1,60 m de altura.",
-            "quantidade": "3",
-            "unitario": 74167,
-            "total": 222501
+            "id": "17444083",
+            "descricao": "Quadro branco, chapa de MDF, moldura em alumínio, com suportepara apagador, com kit para instalação na parede, medindo 120x90cm.",
+            "quantidade": "1",
+            "unitario": 7810,
+            "total": 7810
+          },
+          {
+            "id": "17444054",
+            "descricao": "Mesa, tipo diretor, formato em L, em MDF, pés quadrados vazados, armário pedestal lateral com 1 porta, 3 gavetas e 2 prateleiras, mesa medindo 750x1600x600mm, armário medindo 700x1600x600mm.",
+            "quantidade": "1",
+            "unitario": 185000,
+            "total": 185000
+          },
+          {
+            "id": "17444126",
+            "descricao": "Computador tipo I, mini desktop, Processador Intel I5-13400 10 Núcleos, 16 Threads, 1.8GHZ / 4.6 GHZ, Smart Cache 20MB + 9.5 MB cache L2, TDP 65w. DDR 4 SDRAM 8 Gb, instalados em 1 pente (1x8gb), operação mínima efetiva a 3200MHz; mínimo 2 s slots expansíveis a 32 GB. Acompanha licença OEM do sistemaoperacional Microsoft® Windows 11 Professional de 64 bits, ou versão mais recente, no idioma Português Brasil, com chave de instalação (KEY) presente na BIOS do equipamento, com mídia de recuperação ou oferecer a opção de restauraçãoatravés de partição do SSD do equipamento ou em nuvem; licença perpétua do Microsoft Office 2021 Professional FPP, ou superior, na modalidade licenciamento por volume, pré-instalados.",
+            "quantidade": "6",
+            "unitario": 539540,
+            "total": 3237240
           },
           {
             "id": "17444140",
@@ -6642,69 +7586,6 @@ window.PROFOR_PUBLIC_DATA = {
             "total": 160000
           },
           {
-            "id": "17444054",
-            "descricao": "Mesa, tipo diretor, formato em L, em MDF, pés quadrados vazados, armário pedestal lateral com 1 porta, 3 gavetas e 2 prateleiras, mesa medindo 750x1600x600mm, armário medindo 700x1600x600mm.",
-            "quantidade": "1",
-            "unitario": 185000,
-            "total": 185000
-          },
-          {
-            "id": "17444083",
-            "descricao": "Quadro branco, chapa de MDF, moldura em alumínio, com suportepara apagador, com kit para instalação na parede, medindo 120x90cm.",
-            "quantidade": "1",
-            "unitario": 7810,
-            "total": 7810
-          },
-          {
-            "id": "17444215",
-            "descricao": "Mesa, som 8 canais profissional digital misturador, bivolt ou220v, bluetooth, equalizador, com entrada para microfone.",
-            "quantidade": "1",
-            "unitario": 250566,
-            "total": 250566
-          },
-          {
-            "id": "17444210",
-            "descricao": "Mesa lateral de apoio, formato quadrado, dimensões aproximadas 60 cm de largura × 60 cm de profundidade × 65 cm de altura.",
-            "quantidade": "4",
-            "unitario": 59430,
-            "total": 237720
-          },
-          {
-            "id": "17444193",
-            "descricao": "Cadeira dobrável em plástico rígido, capacidade para suportar até 110 kg, adequada para áreas de lazer e eventos.Estrutura e assento na cor preta, com design funcional, leve e resistente, de fácil transporte e armazenamento. Superfície lisa e de fácil higienização, garantindo durabilidade e segurança ao usuário.",
-            "quantidade": "10",
-            "unitario": 10999,
-            "total": 109990
-          },
-          {
-            "id": "17444189",
-            "descricao": "Divisórias para mesas, MDP, revestido em laminado melamínicotexturizado na cor MAPLE ou Similar, compatível com o mobiliário existente, nas duasfaces; x Acabamento RETO em PVC, de 3 mm, cor MAPLE ou Similar; dimensõesaproximadas: 0,80 m x 0,015 m x 0,60 m (largura x espessura x altura).",
-            "quantidade": "3",
-            "unitario": 17667,
-            "total": 53001
-          },
-          {
-            "id": "17444159",
-            "descricao": "Aparador buffet, 2 a 4 portas, medidas aprox.75 cm (a) x 90 cm (l) x 33 cm (p); peso suportado de 20 kg, distribuídos; prateleira interna; dobradiças metálicas; produzido em mdp/mdf.",
-            "quantidade": "2",
-            "unitario": 42535,
-            "total": 85070
-          },
-          {
-            "id": "17444156",
-            "descricao": "webcam hd 720p, 30 fps, microfone integrado, resolução máxima de vídeo 1280px x 720px, tipo de resolução máxima de vídeo hd, imagem com resolução de 1 mpx, interface usb 2.0, funciona com windows, linux, macos, adequada para notebook, desktop pc, compatível com skype, zoom, webex, microsoft teams, google meet, hangouts, wechat inclui clipe, adequada para videoconferências",
-            "quantidade": "6",
-            "unitario": 4500,
-            "total": 27000
-          },
-          {
-            "id": "17444295",
-            "descricao": "Kit com 2 caixas de som ativas, 2 pedestais/hastes, cabos, potência de 700 W RMS, alto-falante woofer, bluetooth, bivolt ou 220v, cabos de 10mts, suporte com 2 ângulos para haste em aço carbono na cor preta, altura regulável. Ambas as caixas devem ser acompanhadas pelas hastes.",
-            "quantidade": "1",
-            "unitario": 388376,
-            "total": 388376
-          },
-          {
             "id": "17444133",
             "descricao": "Monitores LED de tamanho mínimo de 23.8 polegadas; Tela 100% plana de LED ou IPS; Resolução suportada no mínimo FULL HD 1920 x 1080; Taxa de atualização no mínimo 60Hz; Proporção 16:10 ou 16:9; Bivolt (110v/220v); Brilho mínimo de 250CD/M2; Suporte mínimo a 16,7 milhões de cores.",
             "quantidade": "6",
@@ -6712,39 +7593,11 @@ window.PROFOR_PUBLIC_DATA = {
             "total": 459006
           },
           {
-            "id": "17444298",
-            "descricao": "Saldo de economicidade",
-            "quantidade": "1",
-            "unitario": 162688,
-            "total": 162688
-          },
-          {
-            "id": "17444201",
-            "descricao": "Ar condicionado para espaço de capacitação e sala multifuncional, 30.000 BTUs/h, gas ecológico R410A ou R32, tipo split hi-wall, 220V, tecnologia inverter, com fiação ematerial necessário para instalação.",
+            "id": "17444131",
+            "descricao": "Notebook, processador AMD Ryzen 7-5825U, 8 Núcleos, 16 Threads, 2 GHz até 4.5 Ghz, cache L1 512KB, cache l2 4MB, cache L3 16 MB, TDP 15W, 7nn, 64 Bits, 8 núcleos e 12 threads; compatíveis com as tecnologias AVX e AVX2; memória RAM DDR 4 SDRAM de no mínimo (1x) 8 Gb com operação mínima efetiva a 3.200MHz; expansível a 32 GB; armazenamento interno contendo 1 unidade de estado sólido (SSD) comcapacidade de 500GB M.2 NVMe e taxa de leitura e gravação sequencial igual ou superior a 3000MB/s; SSD M.2 NVMe 512GB Gen3x4 Teamgroup",
             "quantidade": "4",
-            "unitario": 667770,
-            "total": 2671080
-          },
-          {
-            "id": "17444208",
-            "descricao": "Suporte de televisao em aço, tipo vesa fixo, para tv '85'.",
-            "quantidade": "1",
-            "unitario": 18684,
-            "total": 18684
-          },
-          {
-            "id": "17444198",
-            "descricao": "Poltrona de auditório com prancheta individual escamoteável,pés de aço de apoiar (base móvel), pintura eletrostática, capacidade de até 120kg.",
-            "quantidade": "45",
-            "unitario": 133797,
-            "total": 6020865
-          },
-          {
-            "id": "17444196",
-            "descricao": "Mesa dobrável, tipo maleta, retangular, dimensões mínimas aberto (C x L x A): 180 x 70 x 74 cm, estrutura leve e resistente, convertível em maleta com alça para transporte. Pés retráteis com sistema de travamento, adequada para uso em camping, eventos, áreas de lazer ou ambientes externos, fácil de montar, transportar e armazenar.",
-            "quantidade": "2",
-            "unitario": 43663,
-            "total": 87326
+            "unitario": 588232,
+            "total": 2352928
           }
         ]
       },
@@ -7636,10 +8489,481 @@ window.PROFOR_PUBLIC_DATA = {
           "after": {
             "at": "2026-09-26T20:41:13.241Z"
           }
+        },
+        {
+          "at": "2026-09-27T19:11:34.579Z",
+          "event": "Dados da origem alterados; conferir análise",
+          "actor": "Sincronização automática",
+          "before": {
+            "id": "2244186",
+            "numero": "35548/2026",
+            "uf": "DF",
+            "programa": "3000020260022",
+            "cnpj": "37309919000171",
+            "proponente": "SECRETARIA DE ESTADO DE ADMINISTRACAO PENITENCIARIA DO DISTRITO FEDERAL",
+            "orgao": "",
+            "objeto": "Aquisição de mobiliários, equipamentos tecnológicos e outros bens permanentes para o aparelhamento e fortalecimento da Ouvidoria da Secretaria de Estado de Administração Penitenciária do Distrito Federal.",
+            "situacao": "Proposta/Plano de Trabalho Enviado para Análise",
+            "data": "2026-09-15",
+            "vigenciaInicio": "2026-09-30",
+            "vigenciaFim": "2028-09-30",
+            "repasse": 20000000,
+            "contrapartida": 20021,
+            "global": 20020021,
+            "pad": [
+              {
+                "id": "17444126",
+                "descricao": "Computador tipo I, mini desktop, Processador Intel I5-13400 10 Núcleos, 16 Threads, 1.8GHZ / 4.6 GHZ, Smart Cache 20MB + 9.5 MB cache L2, TDP 65w. DDR 4 SDRAM 8 Gb, instalados em 1 pente (1x8gb), operação mínima efetiva a 3200MHz; mínimo 2 s slots expansíveis a 32 GB. Acompanha licença OEM do sistemaoperacional Microsoft® Windows 11 Professional de 64 bits, ou versão mais recente, no idioma Português Brasil, com chave de instalação (KEY) presente na BIOS do equipamento, com mídia de recuperação ou oferecer a opção de restauraçãoatravés de partição do SSD do equipamento ou em nuvem; licença perpétua do Microsoft Office 2021 Professional FPP, ou superior, na modalidade licenciamento por volume, pré-instalados.",
+                "quantidade": "6",
+                "unitario": 539540,
+                "total": 3237240
+              },
+              {
+                "id": "17444212",
+                "descricao": "Poltrona tipo decorativa, tecido em couro ou courino, cor preta, não reclinável e nem estampada, encosto, com formato levemente adaptado ao corpo permitindo proteção para a região lombar, estilo retrô ou moderno, capacidade de até 120kg. Dimensões aproximadas: 75 cm de altura × 57cm de largura × 75 cm de profundidade.",
+                "quantidade": "8",
+                "unitario": 49160,
+                "total": 393280
+              },
+              {
+                "id": "17444044",
+                "descricao": "Cadeira interlocutor",
+                "quantidade": "10",
+                "unitario": 75430,
+                "total": 754300
+              },
+              {
+                "id": "17444204",
+                "descricao": "Televisor tamanho tela 85, 110/220 W, smart tv, 4 k, wifi, entradas hdmi/usb, conversor, tela led, controle remoto.",
+                "quantidade": "1",
+                "unitario": 735859,
+                "total": 735859
+              },
+              {
+                "id": "17444149",
+                "descricao": "Fragmentadora de papel, capacidade de triturar até 10 folhas A4 por vez, para fragmentar também cartões, CDs e DVDs, depósito de resíduos integrado, nível de segurança de no mínimo P2, com proteção contra superaquecimento do motor, bivolt ou 220V.",
+                "quantidade": "1",
+                "unitario": 47000,
+                "total": 47000
+              },
+              {
+                "id": "17444048",
+                "descricao": "Mesa reta em MDF, pés em aço inoxidável, medindo750x600x1400mm.",
+                "quantidade": "5",
+                "unitario": 39999,
+                "total": 199995
+              },
+              {
+                "id": "17444145",
+                "descricao": "Porta de correr para divisória, em painel de fibra de madeira ou material de características técnicas equivalentes, em cor clara, compatível com os painéis da divisória e todos os itens necessários para a instalação.",
+                "quantidade": "1",
+                "unitario": 38433,
+                "total": 38433
+              },
+              {
+                "id": "17444131",
+                "descricao": "Notebook, processador AMD Ryzen 7-5825U, 8 Núcleos, 16 Threads, 2 GHz até 4.5 Ghz, cache L1 512KB, cache l2 4MB, cache L3 16 MB, TDP 15W, 7nn, 64 Bits, 8 núcleos e 12 threads; compatíveis com as tecnologias AVX e AVX2; memória RAM DDR 4 SDRAM de no mínimo (1x) 8 Gb com operação mínima efetiva a 3.200MHz; expansível a 32 GB; armazenamento interno contendo 1 unidade de estado sólido (SSD) comcapacidade de 500GB M.2 NVMe e taxa de leitura e gravação sequencial igual ou superior a 3000MB/s; SSD M.2 NVMe 512GB Gen3x4 Teamgroup",
+                "quantidade": "4",
+                "unitario": 588232,
+                "total": 2352928
+              },
+              {
+                "id": "17444291",
+                "descricao": "Kit com 02 microfones sem fio por microfone de mão com transmissor sem fio embutido, receptor sem fio, alcance de até 30m, compatível com caixas de som bluetooth, autonomia de pelo menos 12h.",
+                "quantidade": "2",
+                "unitario": 80034,
+                "total": 160068
+              },
+              {
+                "id": "17444102",
+                "descricao": "Sofá de dois lugares revestido em courino, preferencialmente na cor marrom, dimensões aproximadas 150 cm de largura × 80 cm de profundidade × 81 cm de altura.",
+                "quantidade": "1",
+                "unitario": 118167,
+                "total": 118167
+              },
+              {
+                "id": "17444103",
+                "descricao": "Ar condicionado, 12.000 BTUs/h, gas ecológico R410A ou R32, tipo split hi-wall, 220V, tecnologia inverter, com fiação e material necessário para instalação.",
+                "quantidade": "2",
+                "unitario": 248000,
+                "total": 496000
+              },
+              {
+                "id": "17444101",
+                "descricao": "Armário escritório, com compartimentos para armazenamento e 2 portas, em MDP, MDF ou material de resistência e acabamento equivalentes, dimensões aproximadas: 0,80 m de largura × 0,50 m de profundidade × 1,60 m de altura.",
+                "quantidade": "3",
+                "unitario": 74167,
+                "total": 222501
+              },
+              {
+                "id": "17444140",
+                "descricao": "Divisória com espaço para porta e isolamento acústico, em cor clara e todos os itens necessários para a instalação das divisória, bem como a manta para isolamento acústico, que será integrada às divisórias.",
+                "quantidade": "12",
+                "unitario": 28339,
+                "total": 340068
+              },
+              {
+                "id": "17444057",
+                "descricao": "Gaveteiro volante, com 3 gavetas, sendo 1 gavetão, sem puxador, com fechadura na primeira gaveta, em MDF, medindo 600x400x500mm.",
+                "quantidade": "5",
+                "unitario": 32000,
+                "total": 160000
+              },
+              {
+                "id": "17444054",
+                "descricao": "Mesa, tipo diretor, formato em L, em MDF, pés quadrados vazados, armário pedestal lateral com 1 porta, 3 gavetas e 2 prateleiras, mesa medindo 750x1600x600mm, armário medindo 700x1600x600mm.",
+                "quantidade": "1",
+                "unitario": 185000,
+                "total": 185000
+              },
+              {
+                "id": "17444083",
+                "descricao": "Quadro branco, chapa de MDF, moldura em alumínio, com suportepara apagador, com kit para instalação na parede, medindo 120x90cm.",
+                "quantidade": "1",
+                "unitario": 7810,
+                "total": 7810
+              },
+              {
+                "id": "17444215",
+                "descricao": "Mesa, som 8 canais profissional digital misturador, bivolt ou220v, bluetooth, equalizador, com entrada para microfone.",
+                "quantidade": "1",
+                "unitario": 250566,
+                "total": 250566
+              },
+              {
+                "id": "17444210",
+                "descricao": "Mesa lateral de apoio, formato quadrado, dimensões aproximadas 60 cm de largura × 60 cm de profundidade × 65 cm de altura.",
+                "quantidade": "4",
+                "unitario": 59430,
+                "total": 237720
+              },
+              {
+                "id": "17444193",
+                "descricao": "Cadeira dobrável em plástico rígido, capacidade para suportar até 110 kg, adequada para áreas de lazer e eventos.Estrutura e assento na cor preta, com design funcional, leve e resistente, de fácil transporte e armazenamento. Superfície lisa e de fácil higienização, garantindo durabilidade e segurança ao usuário.",
+                "quantidade": "10",
+                "unitario": 10999,
+                "total": 109990
+              },
+              {
+                "id": "17444189",
+                "descricao": "Divisórias para mesas, MDP, revestido em laminado melamínicotexturizado na cor MAPLE ou Similar, compatível com o mobiliário existente, nas duasfaces; x Acabamento RETO em PVC, de 3 mm, cor MAPLE ou Similar; dimensõesaproximadas: 0,80 m x 0,015 m x 0,60 m (largura x espessura x altura).",
+                "quantidade": "3",
+                "unitario": 17667,
+                "total": 53001
+              },
+              {
+                "id": "17444159",
+                "descricao": "Aparador buffet, 2 a 4 portas, medidas aprox.75 cm (a) x 90 cm (l) x 33 cm (p); peso suportado de 20 kg, distribuídos; prateleira interna; dobradiças metálicas; produzido em mdp/mdf.",
+                "quantidade": "2",
+                "unitario": 42535,
+                "total": 85070
+              },
+              {
+                "id": "17444156",
+                "descricao": "webcam hd 720p, 30 fps, microfone integrado, resolução máxima de vídeo 1280px x 720px, tipo de resolução máxima de vídeo hd, imagem com resolução de 1 mpx, interface usb 2.0, funciona com windows, linux, macos, adequada para notebook, desktop pc, compatível com skype, zoom, webex, microsoft teams, google meet, hangouts, wechat inclui clipe, adequada para videoconferências",
+                "quantidade": "6",
+                "unitario": 4500,
+                "total": 27000
+              },
+              {
+                "id": "17444295",
+                "descricao": "Kit com 2 caixas de som ativas, 2 pedestais/hastes, cabos, potência de 700 W RMS, alto-falante woofer, bluetooth, bivolt ou 220v, cabos de 10mts, suporte com 2 ângulos para haste em aço carbono na cor preta, altura regulável. Ambas as caixas devem ser acompanhadas pelas hastes.",
+                "quantidade": "1",
+                "unitario": 388376,
+                "total": 388376
+              },
+              {
+                "id": "17444133",
+                "descricao": "Monitores LED de tamanho mínimo de 23.8 polegadas; Tela 100% plana de LED ou IPS; Resolução suportada no mínimo FULL HD 1920 x 1080; Taxa de atualização no mínimo 60Hz; Proporção 16:10 ou 16:9; Bivolt (110v/220v); Brilho mínimo de 250CD/M2; Suporte mínimo a 16,7 milhões de cores.",
+                "quantidade": "6",
+                "unitario": 76501,
+                "total": 459006
+              },
+              {
+                "id": "17444298",
+                "descricao": "Saldo de economicidade",
+                "quantidade": "1",
+                "unitario": 162688,
+                "total": 162688
+              },
+              {
+                "id": "17444201",
+                "descricao": "Ar condicionado para espaço de capacitação e sala multifuncional, 30.000 BTUs/h, gas ecológico R410A ou R32, tipo split hi-wall, 220V, tecnologia inverter, com fiação ematerial necessário para instalação.",
+                "quantidade": "4",
+                "unitario": 667770,
+                "total": 2671080
+              },
+              {
+                "id": "17444208",
+                "descricao": "Suporte de televisao em aço, tipo vesa fixo, para tv '85'.",
+                "quantidade": "1",
+                "unitario": 18684,
+                "total": 18684
+              },
+              {
+                "id": "17444198",
+                "descricao": "Poltrona de auditório com prancheta individual escamoteável,pés de aço de apoiar (base móvel), pintura eletrostática, capacidade de até 120kg.",
+                "quantidade": "45",
+                "unitario": 133797,
+                "total": 6020865
+              },
+              {
+                "id": "17444196",
+                "descricao": "Mesa dobrável, tipo maleta, retangular, dimensões mínimas aberto (C x L x A): 180 x 70 x 74 cm, estrutura leve e resistente, convertível em maleta com alça para transporte. Pés retráteis com sistema de travamento, adequada para uso em camping, eventos, áreas de lazer ou ambientes externos, fácil de montar, transportar e armazenar.",
+                "quantidade": "2",
+                "unitario": 43663,
+                "total": 87326
+              }
+            ]
+          },
+          "after": {
+            "id": "2244186",
+            "numero": "35548/2026",
+            "uf": "DF",
+            "programa": "3000020260022",
+            "cnpj": "37309919000171",
+            "proponente": "SECRETARIA DE ESTADO DE ADMINISTRACAO PENITENCIARIA DO DISTRITO FEDERAL",
+            "orgao": "",
+            "objeto": "Aquisição de mobiliários, equipamentos tecnológicos e outros bens permanentes para o aparelhamento e fortalecimento da Ouvidoria da Secretaria de Estado de Administração Penitenciária do Distrito Federal.",
+            "situacao": "Proposta/Plano de Trabalho Enviado para Análise",
+            "data": "2026-09-15",
+            "vigenciaInicio": "2026-09-30",
+            "vigenciaFim": "2028-09-30",
+            "repasse": 20000000,
+            "contrapartida": 20021,
+            "global": 20020021,
+            "pad": [
+              {
+                "id": "17444048",
+                "descricao": "Mesa reta em MDF, pés em aço inoxidável, medindo750x600x1400mm.",
+                "quantidade": "5",
+                "unitario": 39999,
+                "total": 199995
+              },
+              {
+                "id": "17444196",
+                "descricao": "Mesa dobrável, tipo maleta, retangular, dimensões mínimas aberto (C x L x A): 180 x 70 x 74 cm, estrutura leve e resistente, convertível em maleta com alça para transporte. Pés retráteis com sistema de travamento, adequada para uso em camping, eventos, áreas de lazer ou ambientes externos, fácil de montar, transportar e armazenar.",
+                "quantidade": "2",
+                "unitario": 43663,
+                "total": 87326
+              },
+              {
+                "id": "17444193",
+                "descricao": "Cadeira dobrável em plástico rígido, capacidade para suportar até 110 kg, adequada para áreas de lazer e eventos.Estrutura e assento na cor preta, com design funcional, leve e resistente, de fácil transporte e armazenamento. Superfície lisa e de fácil higienização, garantindo durabilidade e segurança ao usuário.",
+                "quantidade": "10",
+                "unitario": 10999,
+                "total": 109990
+              },
+              {
+                "id": "17444198",
+                "descricao": "Poltrona de auditório com prancheta individual escamoteável,pés de aço de apoiar (base móvel), pintura eletrostática, capacidade de até 120kg.",
+                "quantidade": "45",
+                "unitario": 133797,
+                "total": 6020865
+              },
+              {
+                "id": "17444189",
+                "descricao": "Divisórias para mesas, MDP, revestido em laminado melamínicotexturizado na cor MAPLE ou Similar, compatível com o mobiliário existente, nas duasfaces; x Acabamento RETO em PVC, de 3 mm, cor MAPLE ou Similar; dimensõesaproximadas: 0,80 m x 0,015 m x 0,60 m (largura x espessura x altura).",
+                "quantidade": "3",
+                "unitario": 17667,
+                "total": 53001
+              },
+              {
+                "id": "17444149",
+                "descricao": "Fragmentadora de papel, capacidade de triturar até 10 folhas A4 por vez, para fragmentar também cartões, CDs e DVDs, depósito de resíduos integrado, nível de segurança de no mínimo P2, com proteção contra superaquecimento do motor, bivolt ou 220V.",
+                "quantidade": "1",
+                "unitario": 47000,
+                "total": 47000
+              },
+              {
+                "id": "17444201",
+                "descricao": "Ar condicionado para espaço de capacitação e sala multifuncional, 30.000 BTUs/h, gas ecológico R410A ou R32, tipo split hi-wall, 220V, tecnologia inverter, com fiação ematerial necessário para instalação.",
+                "quantidade": "4",
+                "unitario": 667770,
+                "total": 2671080
+              },
+              {
+                "id": "17444044",
+                "descricao": "Cadeira interlocutor",
+                "quantidade": "10",
+                "unitario": 75430,
+                "total": 754300
+              },
+              {
+                "id": "17444159",
+                "descricao": "Aparador buffet, 2 a 4 portas, medidas aprox.75 cm (a) x 90 cm (l) x 33 cm (p); peso suportado de 20 kg, distribuídos; prateleira interna; dobradiças metálicas; produzido em mdp/mdf.",
+                "quantidade": "2",
+                "unitario": 42535,
+                "total": 85070
+              },
+              {
+                "id": "17444204",
+                "descricao": "Televisor tamanho tela 85, 110/220 W, smart tv, 4 k, wifi, entradas hdmi/usb, conversor, tela led, controle remoto.",
+                "quantidade": "1",
+                "unitario": 735859,
+                "total": 735859
+              },
+              {
+                "id": "17444295",
+                "descricao": "Kit com 2 caixas de som ativas, 2 pedestais/hastes, cabos, potência de 700 W RMS, alto-falante woofer, bluetooth, bivolt ou 220v, cabos de 10mts, suporte com 2 ângulos para haste em aço carbono na cor preta, altura regulável. Ambas as caixas devem ser acompanhadas pelas hastes.",
+                "quantidade": "1",
+                "unitario": 388376,
+                "total": 388376
+              },
+              {
+                "id": "17444291",
+                "descricao": "Kit com 02 microfones sem fio por microfone de mão com transmissor sem fio embutido, receptor sem fio, alcance de até 30m, compatível com caixas de som bluetooth, autonomia de pelo menos 12h.",
+                "quantidade": "2",
+                "unitario": 80034,
+                "total": 160068
+              },
+              {
+                "id": "17444298",
+                "descricao": "Saldo de economicidade",
+                "quantidade": "1",
+                "unitario": 162688,
+                "total": 162688
+              },
+              {
+                "id": "17444215",
+                "descricao": "Mesa, som 8 canais profissional digital misturador, bivolt ou220v, bluetooth, equalizador, com entrada para microfone.",
+                "quantidade": "1",
+                "unitario": 250566,
+                "total": 250566
+              },
+              {
+                "id": "17444208",
+                "descricao": "Suporte de televisao em aço, tipo vesa fixo, para tv '85'.",
+                "quantidade": "1",
+                "unitario": 18684,
+                "total": 18684
+              },
+              {
+                "id": "17444145",
+                "descricao": "Porta de correr para divisória, em painel de fibra de madeira ou material de características técnicas equivalentes, em cor clara, compatível com os painéis da divisória e todos os itens necessários para a instalação.",
+                "quantidade": "1",
+                "unitario": 38433,
+                "total": 38433
+              },
+              {
+                "id": "17444210",
+                "descricao": "Mesa lateral de apoio, formato quadrado, dimensões aproximadas 60 cm de largura × 60 cm de profundidade × 65 cm de altura.",
+                "quantidade": "4",
+                "unitario": 59430,
+                "total": 237720
+              },
+              {
+                "id": "17444212",
+                "descricao": "Poltrona tipo decorativa, tecido em couro ou courino, cor preta, não reclinável e nem estampada, encosto, com formato levemente adaptado ao corpo permitindo proteção para a região lombar, estilo retrô ou moderno, capacidade de até 120kg. Dimensões aproximadas: 75 cm de altura × 57cm de largura × 75 cm de profundidade.",
+                "quantidade": "8",
+                "unitario": 49160,
+                "total": 393280
+              },
+              {
+                "id": "17444156",
+                "descricao": "webcam hd 720p, 30 fps, microfone integrado, resolução máxima de vídeo 1280px x 720px, tipo de resolução máxima de vídeo hd, imagem com resolução de 1 mpx, interface usb 2.0, funciona com windows, linux, macos, adequada para notebook, desktop pc, compatível com skype, zoom, webex, microsoft teams, google meet, hangouts, wechat inclui clipe, adequada para videoconferências",
+                "quantidade": "6",
+                "unitario": 4500,
+                "total": 27000
+              },
+              {
+                "id": "17444102",
+                "descricao": "Sofá de dois lugares revestido em courino, preferencialmente na cor marrom, dimensões aproximadas 150 cm de largura × 80 cm de profundidade × 81 cm de altura.",
+                "quantidade": "1",
+                "unitario": 118167,
+                "total": 118167
+              },
+              {
+                "id": "17444101",
+                "descricao": "Armário escritório, com compartimentos para armazenamento e 2 portas, em MDP, MDF ou material de resistência e acabamento equivalentes, dimensões aproximadas: 0,80 m de largura × 0,50 m de profundidade × 1,60 m de altura.",
+                "quantidade": "3",
+                "unitario": 74167,
+                "total": 222501
+              },
+              {
+                "id": "17444103",
+                "descricao": "Ar condicionado, 12.000 BTUs/h, gas ecológico R410A ou R32, tipo split hi-wall, 220V, tecnologia inverter, com fiação e material necessário para instalação.",
+                "quantidade": "2",
+                "unitario": 248000,
+                "total": 496000
+              },
+              {
+                "id": "17444083",
+                "descricao": "Quadro branco, chapa de MDF, moldura em alumínio, com suportepara apagador, com kit para instalação na parede, medindo 120x90cm.",
+                "quantidade": "1",
+                "unitario": 7810,
+                "total": 7810
+              },
+              {
+                "id": "17444054",
+                "descricao": "Mesa, tipo diretor, formato em L, em MDF, pés quadrados vazados, armário pedestal lateral com 1 porta, 3 gavetas e 2 prateleiras, mesa medindo 750x1600x600mm, armário medindo 700x1600x600mm.",
+                "quantidade": "1",
+                "unitario": 185000,
+                "total": 185000
+              },
+              {
+                "id": "17444126",
+                "descricao": "Computador tipo I, mini desktop, Processador Intel I5-13400 10 Núcleos, 16 Threads, 1.8GHZ / 4.6 GHZ, Smart Cache 20MB + 9.5 MB cache L2, TDP 65w. DDR 4 SDRAM 8 Gb, instalados em 1 pente (1x8gb), operação mínima efetiva a 3200MHz; mínimo 2 s slots expansíveis a 32 GB. Acompanha licença OEM do sistemaoperacional Microsoft® Windows 11 Professional de 64 bits, ou versão mais recente, no idioma Português Brasil, com chave de instalação (KEY) presente na BIOS do equipamento, com mídia de recuperação ou oferecer a opção de restauraçãoatravés de partição do SSD do equipamento ou em nuvem; licença perpétua do Microsoft Office 2021 Professional FPP, ou superior, na modalidade licenciamento por volume, pré-instalados.",
+                "quantidade": "6",
+                "unitario": 539540,
+                "total": 3237240
+              },
+              {
+                "id": "17444140",
+                "descricao": "Divisória com espaço para porta e isolamento acústico, em cor clara e todos os itens necessários para a instalação das divisória, bem como a manta para isolamento acústico, que será integrada às divisórias.",
+                "quantidade": "12",
+                "unitario": 28339,
+                "total": 340068
+              },
+              {
+                "id": "17444057",
+                "descricao": "Gaveteiro volante, com 3 gavetas, sendo 1 gavetão, sem puxador, com fechadura na primeira gaveta, em MDF, medindo 600x400x500mm.",
+                "quantidade": "5",
+                "unitario": 32000,
+                "total": 160000
+              },
+              {
+                "id": "17444133",
+                "descricao": "Monitores LED de tamanho mínimo de 23.8 polegadas; Tela 100% plana de LED ou IPS; Resolução suportada no mínimo FULL HD 1920 x 1080; Taxa de atualização no mínimo 60Hz; Proporção 16:10 ou 16:9; Bivolt (110v/220v); Brilho mínimo de 250CD/M2; Suporte mínimo a 16,7 milhões de cores.",
+                "quantidade": "6",
+                "unitario": 76501,
+                "total": 459006
+              },
+              {
+                "id": "17444131",
+                "descricao": "Notebook, processador AMD Ryzen 7-5825U, 8 Núcleos, 16 Threads, 2 GHz até 4.5 Ghz, cache L1 512KB, cache l2 4MB, cache L3 16 MB, TDP 15W, 7nn, 64 Bits, 8 núcleos e 12 threads; compatíveis com as tecnologias AVX e AVX2; memória RAM DDR 4 SDRAM de no mínimo (1x) 8 Gb com operação mínima efetiva a 3.200MHz; expansível a 32 GB; armazenamento interno contendo 1 unidade de estado sólido (SSD) comcapacidade de 500GB M.2 NVMe e taxa de leitura e gravação sequencial igual ou superior a 3000MB/s; SSD M.2 NVMe 512GB Gen3x4 Teamgroup",
+                "quantidade": "4",
+                "unitario": 588232,
+                "total": 2352928
+              }
+            ]
+          }
+        },
+        {
+          "at": "2026-09-27T19:11:34.580Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Sincronização automática",
+          "before": {
+            "at": "2026-09-26T20:41:13.241Z"
+          },
+          "after": {
+            "at": "2026-09-27T19:11:34.580Z"
+          }
+        },
+        {
+          "at": "2026-09-27T19:12:19.980Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Sincronização automática",
+          "before": {
+            "at": "2026-09-27T19:11:34.580Z"
+          },
+          "after": {
+            "at": "2026-09-27T19:12:19.980Z"
+          }
         }
       ],
       "textos": {
-        "at": "2026-09-26T20:41:13.241Z",
+        "at": "2026-09-27T19:12:19.980Z",
         "caracterizacao": "O interesse do Governo Federal consiste em fortalecer as ouvidorias de serviços penais e aprimorar a participação social, a transparência e a proteção de direitos. O interesse do Distrito Federal converge com essas diretrizes, mediante o aparelhamento da Ouvidoria da SEAPE/DF, ampliando sua capacidade de atendimento, tratamento de manifestações e prestação de serviços aos usuários.",
         "publicoAlvo": "Usuários dos serviços penais do Distrito Federal, incluindo pessoas privadas de liberdade, familiares, servidores e demais cidadãos que utilizem os canais da Ouvidoria da SEAPE/DF, bem como os servidores responsáveis pelo atendimento, registro, tratamento e encaminhamento das manifestações.",
         "problema": "A atual estrutura física, mobiliário e equipamentos tecnológicos limita a capacidade da Ouvidoria da SEAPE/DF de prestar atendimento qualificado, realizar atendimentos externos, tratar e analisar manifestações e assegurar privacidade em demandas sensíveis. A proposta busca superar essas limitações e proporcionar melhores condições para o funcionamento e fortalecimento da unidade.",
@@ -7669,32 +8993,11 @@ window.PROFOR_PUBLIC_DATA = {
         "global": 20020021,
         "pad": [
           {
-            "id": "17443412",
-            "descricao": "Desktop(Computadorde mesa comperiféricos)",
-            "quantidade": "8",
-            "unitario": 618000,
-            "total": 4944000
-          },
-          {
-            "id": "17443418",
-            "descricao": "Arcondicionado12.000 BTUsparaclimatizaçãodo ambientedeatendimento",
-            "quantidade": "2",
-            "unitario": 298000,
-            "total": 596000
-          },
-          {
-            "id": "17443415",
-            "descricao": "Impressora ouequipamentomultifuncionaldestinado àsatividades daouvidoria",
-            "quantidade": "2",
-            "unitario": 385000,
-            "total": 770000
-          },
-          {
-            "id": "17443435",
-            "descricao": "Câmerafotográficainstitucional ougravadordigitaldestinado aoregistrotécnico deinspeções evisitas",
-            "quantidade": "3",
-            "unitario": 518674,
-            "total": 1556021
+            "id": "17443406",
+            "descricao": "Notebook parausoinstitucional eatendimentotécnico",
+            "quantidade": "9",
+            "unitario": 625000,
+            "total": 5625000
           },
           {
             "id": "17443403",
@@ -7711,18 +9014,18 @@ window.PROFOR_PUBLIC_DATA = {
             "total": 750000
           },
           {
-            "id": "17443406",
-            "descricao": "Notebook parausoinstitucional eatendimentotécnico",
-            "quantidade": "9",
-            "unitario": 625000,
-            "total": 5625000
+            "id": "17443410",
+            "descricao": "Televisão (TV)paraapresentações,monitoramentoe capacitação",
+            "quantidade": "2",
+            "unitario": 325000,
+            "total": 650000
           },
           {
-            "id": "17443399",
-            "descricao": "Cadeira deescritóriodestinada àequipe ou aoatendimentodos usuários",
-            "quantidade": "14",
-            "unitario": 78000,
-            "total": 1092000
+            "id": "17443412",
+            "descricao": "Desktop(Computadorde mesa comperiféricos)",
+            "quantidade": "8",
+            "unitario": 618000,
+            "total": 4944000
           },
           {
             "id": "17443430",
@@ -7732,13 +9035,6 @@ window.PROFOR_PUBLIC_DATA = {
             "total": 336000
           },
           {
-            "id": "17443410",
-            "descricao": "Televisão (TV)paraapresentações,monitoramentoe capacitação",
-            "quantidade": "2",
-            "unitario": 325000,
-            "total": 650000
-          },
-          {
             "id": "17443433",
             "descricao": "Tabletdestinado aoatendimento,às inspeções,às visitastécnicas ou àcoletainstitucional deinformações",
             "quantidade": "8",
@@ -7746,11 +9042,39 @@ window.PROFOR_PUBLIC_DATA = {
             "total": 2496000
           },
           {
+            "id": "17443435",
+            "descricao": "Câmerafotográficainstitucional ougravadordigitaldestinado aoregistrotécnico deinspeções evisitas",
+            "quantidade": "3",
+            "unitario": 518674,
+            "total": 1556021
+          },
+          {
+            "id": "17443418",
+            "descricao": "Arcondicionado12.000 BTUsparaclimatizaçãodo ambientedeatendimento",
+            "quantidade": "2",
+            "unitario": 298000,
+            "total": 596000
+          },
+          {
+            "id": "17443399",
+            "descricao": "Cadeira deescritóriodestinada àequipe ou aoatendimentodos usuários",
+            "quantidade": "14",
+            "unitario": 78000,
+            "total": 1092000
+          },
+          {
             "id": "17443431",
             "descricao": "Cadeiralongarina pararecepção eacomodaçãodo público /usuários",
             "quantidade": "4",
             "unitario": 115000,
             "total": 460000
+          },
+          {
+            "id": "17443415",
+            "descricao": "Impressora ouequipamentomultifuncionaldestinado àsatividades daouvidoria",
+            "quantidade": "2",
+            "unitario": 385000,
+            "total": 770000
           }
         ]
       },
@@ -10644,10 +11968,243 @@ window.PROFOR_PUBLIC_DATA = {
           "after": {
             "at": "2026-09-26T20:41:13.241Z"
           }
+        },
+        {
+          "at": "2026-09-27T19:11:34.575Z",
+          "event": "Dados da origem alterados; conferir análise",
+          "actor": "Sincronização automática",
+          "before": {
+            "id": "2243912",
+            "numero": "35405/2026",
+            "uf": "PE",
+            "programa": "3000020260022",
+            "cnpj": "06290858000114",
+            "proponente": "SECRETARIA DE ADMINISTRACAO PENITENCIARIA E RESSOCIALIZACAO",
+            "orgao": "",
+            "objeto": "Aquisição de mobiliários, equipamentos tecnológicos e bens permanentes destinados ao aparelhamento, estruturação e fortalecimento institucional da Ouvidoria de Serviços Penais da Secretaria de Administração Penitenciária e Ressocialização do Estado de Pernambuco (SEAP/PE), no âmbito do Programa de Fortalecimento das Ouvidorias de Serviços Penais – PROFOR/ONASP. A contratação visa à superação dos déficits de infraestrutura identificados no diagnóstico institucional, assegurando a melhoria da capacidade operacional e física de atendimento aos usuários, o aprimoramento e a ampliação dos canais de manifestação, a qualificação da escuta institucional, o incremento da transparência pública, a garantia da rastreabilidade processual, a preservação do sigilo e a salvaguarda de dados sensíveis em conformidade com as normas de proteção de dados, além do suporte e fortalecimento das atividades de fiscalização técnica, vistorias e inspeções in loco nas unidades prisionais do Estado, em estrita observância aos parâmetros mínimos de funcionamento estabelecidos pela Ouvidoria Nacional dos Serviços Penais (ONASP/SENAPPEN) e às diretrizes estratégicas do Plano Pena Justa. O objeto classifica-se exclusivamente como despesa de capital e não se enquadra como bem de luxo, nos termos do art. 8º do Decreto Estadual nº 51.652/2021.",
+            "situacao": "Proposta/Plano de Trabalho em Complementação",
+            "data": "2026-09-14",
+            "vigenciaInicio": "2027-01-04",
+            "vigenciaFim": "2028-01-04",
+            "repasse": 20000000,
+            "contrapartida": 20021,
+            "global": 20020021,
+            "pad": [
+              {
+                "id": "17443412",
+                "descricao": "Desktop(Computadorde mesa comperiféricos)",
+                "quantidade": "8",
+                "unitario": 618000,
+                "total": 4944000
+              },
+              {
+                "id": "17443418",
+                "descricao": "Arcondicionado12.000 BTUsparaclimatizaçãodo ambientedeatendimento",
+                "quantidade": "2",
+                "unitario": 298000,
+                "total": 596000
+              },
+              {
+                "id": "17443415",
+                "descricao": "Impressora ouequipamentomultifuncionaldestinado àsatividades daouvidoria",
+                "quantidade": "2",
+                "unitario": 385000,
+                "total": 770000
+              },
+              {
+                "id": "17443435",
+                "descricao": "Câmerafotográficainstitucional ougravadordigitaldestinado aoregistrotécnico deinspeções evisitas",
+                "quantidade": "3",
+                "unitario": 518674,
+                "total": 1556021
+              },
+              {
+                "id": "17443403",
+                "descricao": "Armário ouarquivo comchave paraguarda dedocumentos einformaçõessensíveis",
+                "quantidade": "5",
+                "unitario": 155000,
+                "total": 775000
+              },
+              {
+                "id": "17443394",
+                "descricao": "Mesa ouestação detrabalhodestinada àequipe daOuvidoria deServiçosPenais.",
+                "quantidade": "6",
+                "unitario": 125000,
+                "total": 750000
+              },
+              {
+                "id": "17443406",
+                "descricao": "Notebook parausoinstitucional eatendimentotécnico",
+                "quantidade": "9",
+                "unitario": 625000,
+                "total": 5625000
+              },
+              {
+                "id": "17443399",
+                "descricao": "Cadeira deescritóriodestinada àequipe ou aoatendimentodos usuários",
+                "quantidade": "14",
+                "unitario": 78000,
+                "total": 1092000
+              },
+              {
+                "id": "17443430",
+                "descricao": "Fragmentadorade papeldestinada àeliminaçãosegura dedocumentos eà proteção deinformaçõessensíveis",
+                "quantidade": "2",
+                "unitario": 168000,
+                "total": 336000
+              },
+              {
+                "id": "17443410",
+                "descricao": "Televisão (TV)paraapresentações,monitoramentoe capacitação",
+                "quantidade": "2",
+                "unitario": 325000,
+                "total": 650000
+              },
+              {
+                "id": "17443433",
+                "descricao": "Tabletdestinado aoatendimento,às inspeções,às visitastécnicas ou àcoletainstitucional deinformações",
+                "quantidade": "8",
+                "unitario": 312000,
+                "total": 2496000
+              },
+              {
+                "id": "17443431",
+                "descricao": "Cadeiralongarina pararecepção eacomodaçãodo público /usuários",
+                "quantidade": "4",
+                "unitario": 115000,
+                "total": 460000
+              }
+            ]
+          },
+          "after": {
+            "id": "2243912",
+            "numero": "35405/2026",
+            "uf": "PE",
+            "programa": "3000020260022",
+            "cnpj": "06290858000114",
+            "proponente": "SECRETARIA DE ADMINISTRACAO PENITENCIARIA E RESSOCIALIZACAO",
+            "orgao": "",
+            "objeto": "Aquisição de mobiliários, equipamentos tecnológicos e bens permanentes destinados ao aparelhamento, estruturação e fortalecimento institucional da Ouvidoria de Serviços Penais da Secretaria de Administração Penitenciária e Ressocialização do Estado de Pernambuco (SEAP/PE), no âmbito do Programa de Fortalecimento das Ouvidorias de Serviços Penais – PROFOR/ONASP. A contratação visa à superação dos déficits de infraestrutura identificados no diagnóstico institucional, assegurando a melhoria da capacidade operacional e física de atendimento aos usuários, o aprimoramento e a ampliação dos canais de manifestação, a qualificação da escuta institucional, o incremento da transparência pública, a garantia da rastreabilidade processual, a preservação do sigilo e a salvaguarda de dados sensíveis em conformidade com as normas de proteção de dados, além do suporte e fortalecimento das atividades de fiscalização técnica, vistorias e inspeções in loco nas unidades prisionais do Estado, em estrita observância aos parâmetros mínimos de funcionamento estabelecidos pela Ouvidoria Nacional dos Serviços Penais (ONASP/SENAPPEN) e às diretrizes estratégicas do Plano Pena Justa. O objeto classifica-se exclusivamente como despesa de capital e não se enquadra como bem de luxo, nos termos do art. 8º do Decreto Estadual nº 51.652/2021.",
+            "situacao": "Proposta/Plano de Trabalho em Complementação",
+            "data": "2026-09-14",
+            "vigenciaInicio": "2027-01-04",
+            "vigenciaFim": "2028-01-04",
+            "repasse": 20000000,
+            "contrapartida": 20021,
+            "global": 20020021,
+            "pad": [
+              {
+                "id": "17443406",
+                "descricao": "Notebook parausoinstitucional eatendimentotécnico",
+                "quantidade": "9",
+                "unitario": 625000,
+                "total": 5625000
+              },
+              {
+                "id": "17443403",
+                "descricao": "Armário ouarquivo comchave paraguarda dedocumentos einformaçõessensíveis",
+                "quantidade": "5",
+                "unitario": 155000,
+                "total": 775000
+              },
+              {
+                "id": "17443394",
+                "descricao": "Mesa ouestação detrabalhodestinada àequipe daOuvidoria deServiçosPenais.",
+                "quantidade": "6",
+                "unitario": 125000,
+                "total": 750000
+              },
+              {
+                "id": "17443410",
+                "descricao": "Televisão (TV)paraapresentações,monitoramentoe capacitação",
+                "quantidade": "2",
+                "unitario": 325000,
+                "total": 650000
+              },
+              {
+                "id": "17443412",
+                "descricao": "Desktop(Computadorde mesa comperiféricos)",
+                "quantidade": "8",
+                "unitario": 618000,
+                "total": 4944000
+              },
+              {
+                "id": "17443430",
+                "descricao": "Fragmentadorade papeldestinada àeliminaçãosegura dedocumentos eà proteção deinformaçõessensíveis",
+                "quantidade": "2",
+                "unitario": 168000,
+                "total": 336000
+              },
+              {
+                "id": "17443433",
+                "descricao": "Tabletdestinado aoatendimento,às inspeções,às visitastécnicas ou àcoletainstitucional deinformações",
+                "quantidade": "8",
+                "unitario": 312000,
+                "total": 2496000
+              },
+              {
+                "id": "17443435",
+                "descricao": "Câmerafotográficainstitucional ougravadordigitaldestinado aoregistrotécnico deinspeções evisitas",
+                "quantidade": "3",
+                "unitario": 518674,
+                "total": 1556021
+              },
+              {
+                "id": "17443418",
+                "descricao": "Arcondicionado12.000 BTUsparaclimatizaçãodo ambientedeatendimento",
+                "quantidade": "2",
+                "unitario": 298000,
+                "total": 596000
+              },
+              {
+                "id": "17443399",
+                "descricao": "Cadeira deescritóriodestinada àequipe ou aoatendimentodos usuários",
+                "quantidade": "14",
+                "unitario": 78000,
+                "total": 1092000
+              },
+              {
+                "id": "17443431",
+                "descricao": "Cadeiralongarina pararecepção eacomodaçãodo público /usuários",
+                "quantidade": "4",
+                "unitario": 115000,
+                "total": 460000
+              },
+              {
+                "id": "17443415",
+                "descricao": "Impressora ouequipamentomultifuncionaldestinado àsatividades daouvidoria",
+                "quantidade": "2",
+                "unitario": 385000,
+                "total": 770000
+              }
+            ]
+          }
+        },
+        {
+          "at": "2026-09-27T19:11:34.580Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Sincronização automática",
+          "before": {
+            "at": "2026-09-26T20:41:13.241Z"
+          },
+          "after": {
+            "at": "2026-09-27T19:11:34.580Z"
+          }
+        },
+        {
+          "at": "2026-09-27T19:12:19.980Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Sincronização automática",
+          "before": {
+            "at": "2026-09-27T19:11:34.580Z"
+          },
+          "after": {
+            "at": "2026-09-27T19:12:19.980Z"
+          }
         }
       ],
       "textos": {
-        "at": "2026-09-26T20:41:13.241Z",
+        "at": "2026-09-27T19:12:19.980Z",
         "caracterizacao": "Integração de esforços entre o Ministério da Justiça/SENAPPEN e a SEAP/PE para estruturar a Ouvidoria de Serviços Penais. A cooperação atende às diretrizes do PROFOR/ONASP e do Plano Pena Justa, fortalecendo a governança penitenciária, a fiscalização institucional, a proteção dos direitos humanos e o acesso à justiça no âmbito da execução penal em Pernambuco.",
         "publicoAlvo": "Pessoas privadas de liberdade, seus familiares, operadores do direito, órgãos de controle, servidores do sistema penitenciário e a sociedade civil usuária dos serviços da Ouvidoria da SEAP/PE.",
         "problema": "Déficit de infraestrutura física, mobiliária e tecnológica na Ouvidoria da SEAP/PE, que limita o acolhimento presencial, compromete a celeridade e o sigilo no fluxo de manifestações e restringe a mobilidade técnica para a realização de inspeções nas unidades prisionais.",
@@ -10677,18 +12234,18 @@ window.PROFOR_PUBLIC_DATA = {
         "global": 20470000,
         "pad": [
           {
-            "id": "17425883",
-            "descricao": "COMPUTADOR - MODELO: AVANCADO; SISTEMA OPERACIONAL: WINDOWS 11 PROF. 64 BITS (PT-BR); MEMORIA: 64GB; PROCESSADOR: ARQUITETURA X86 CORPORATIVA; ARMAZENAMENTO: SSD 1TB; MONITOR: 27 POLEGADAS",
-            "quantidade": "10",
-            "unitario": 1700000,
-            "total": 17000000
-          },
-          {
             "id": "17425889",
             "descricao": "NOTEBOOK,NETBOOK E/OU ULTRAFINO - IDENTIFICACAO: PADRAO; SISTEMA OPERACIONAL: WINDOWS 11 PROF. 64 BITS (PT-BR); PROCESSADOR: ARQUITETURA X86 CORPORATIVA; ARMAZENAMENTO: SSD 1TB; MEMORIA: 16GB; TELA: 14 POLEGADAS; DISPOSITIVO: WEBCAM 1080P; ACESSORIOS: MOUSE OPTICO, MALETA, CABO COM TRAVA DE SEGURANCA",
             "quantidade": "5",
             "unitario": 600000,
             "total": 3000000
+          },
+          {
+            "id": "17425883",
+            "descricao": "COMPUTADOR - MODELO: AVANCADO; SISTEMA OPERACIONAL: WINDOWS 11 PROF. 64 BITS (PT-BR); MEMORIA: 64GB; PROCESSADOR: ARQUITETURA X86 CORPORATIVA; ARMAZENAMENTO: SSD 1TB; MONITOR: 27 POLEGADAS",
+            "quantidade": "10",
+            "unitario": 1700000,
+            "total": 17000000
           },
           {
             "id": "17425890",
@@ -11574,10 +13131,131 @@ window.PROFOR_PUBLIC_DATA = {
           "after": {
             "at": "2026-09-26T20:41:13.241Z"
           }
+        },
+        {
+          "at": "2026-09-27T19:11:34.574Z",
+          "event": "Dados da origem alterados; conferir análise",
+          "actor": "Sincronização automática",
+          "before": {
+            "id": "2243987",
+            "numero": "35450/2026",
+            "uf": "MG",
+            "programa": "3000020260022",
+            "cnpj": "07256298000144",
+            "proponente": "OUVIDORIA GERAL DO ESTADO DE MINAS GERAIS",
+            "orgao": "",
+            "objeto": "Aquisição de equipamentos de tecnologia da informação e comunicação — compreendendo desktops e notebooks corporativos — para a modernização e fortalecimento da infraestrutura tecnológica da Ouvidoria do Sistema Penitenciário e Socioeducativo da Ouvidoria-Geral do Estado de Minas Gerais (OGE-MG), visando à otimização do atendimento ao cidadão e à eficiência das atividades operacionais e de fiscalização.",
+            "situacao": "Proposta/Plano de Trabalho Cadastrados",
+            "data": "2026-09-14",
+            "vigenciaInicio": "2026-09-14",
+            "vigenciaFim": "2026-12-31",
+            "repasse": 20000000,
+            "contrapartida": 470000,
+            "global": 20470000,
+            "pad": [
+              {
+                "id": "17425883",
+                "descricao": "COMPUTADOR - MODELO: AVANCADO; SISTEMA OPERACIONAL: WINDOWS 11 PROF. 64 BITS (PT-BR); MEMORIA: 64GB; PROCESSADOR: ARQUITETURA X86 CORPORATIVA; ARMAZENAMENTO: SSD 1TB; MONITOR: 27 POLEGADAS",
+                "quantidade": "10",
+                "unitario": 1700000,
+                "total": 17000000
+              },
+              {
+                "id": "17425889",
+                "descricao": "NOTEBOOK,NETBOOK E/OU ULTRAFINO - IDENTIFICACAO: PADRAO; SISTEMA OPERACIONAL: WINDOWS 11 PROF. 64 BITS (PT-BR); PROCESSADOR: ARQUITETURA X86 CORPORATIVA; ARMAZENAMENTO: SSD 1TB; MEMORIA: 16GB; TELA: 14 POLEGADAS; DISPOSITIVO: WEBCAM 1080P; ACESSORIOS: MOUSE OPTICO, MALETA, CABO COM TRAVA DE SEGURANCA",
+                "quantidade": "5",
+                "unitario": 600000,
+                "total": 3000000
+              },
+              {
+                "id": "17425890",
+                "descricao": "SCANNER - TIPO: MESA; AREA DE DIGITALIZACAO: ATE 210X297MM (A4 TIPO I); RESOLUCAO: MINIMO 600 DPI / 48 BITS; INTERFACE: USB 3.0 COMPATIVEL COM 2.0; ACESSORIOS: SOFTWARE DE CAPTURA OCR PARA ODT OU DOC E PDF",
+                "quantidade": "1",
+                "unitario": 200000,
+                "total": 200000
+              },
+              {
+                "id": "17425892",
+                "descricao": "IMPRESSORA MULTIFUNCIONAL - SISTEMA DE IMPRESSAO: LASER OU LED MONOCROMATICA; RESOLUCAO IMPRESSAO: MINIMA 1200 X 600 DPI; VELOCIDADE IMPRESSAO: 30 PPM",
+                "quantidade": "1",
+                "unitario": 270000,
+                "total": 270000
+              }
+            ]
+          },
+          "after": {
+            "id": "2243987",
+            "numero": "35450/2026",
+            "uf": "MG",
+            "programa": "3000020260022",
+            "cnpj": "07256298000144",
+            "proponente": "OUVIDORIA GERAL DO ESTADO DE MINAS GERAIS",
+            "orgao": "",
+            "objeto": "Aquisição de equipamentos de tecnologia da informação e comunicação — compreendendo desktops e notebooks corporativos — para a modernização e fortalecimento da infraestrutura tecnológica da Ouvidoria do Sistema Penitenciário e Socioeducativo da Ouvidoria-Geral do Estado de Minas Gerais (OGE-MG), visando à otimização do atendimento ao cidadão e à eficiência das atividades operacionais e de fiscalização.",
+            "situacao": "Proposta/Plano de Trabalho Cadastrados",
+            "data": "2026-09-14",
+            "vigenciaInicio": "2026-09-14",
+            "vigenciaFim": "2026-12-31",
+            "repasse": 20000000,
+            "contrapartida": 470000,
+            "global": 20470000,
+            "pad": [
+              {
+                "id": "17425889",
+                "descricao": "NOTEBOOK,NETBOOK E/OU ULTRAFINO - IDENTIFICACAO: PADRAO; SISTEMA OPERACIONAL: WINDOWS 11 PROF. 64 BITS (PT-BR); PROCESSADOR: ARQUITETURA X86 CORPORATIVA; ARMAZENAMENTO: SSD 1TB; MEMORIA: 16GB; TELA: 14 POLEGADAS; DISPOSITIVO: WEBCAM 1080P; ACESSORIOS: MOUSE OPTICO, MALETA, CABO COM TRAVA DE SEGURANCA",
+                "quantidade": "5",
+                "unitario": 600000,
+                "total": 3000000
+              },
+              {
+                "id": "17425883",
+                "descricao": "COMPUTADOR - MODELO: AVANCADO; SISTEMA OPERACIONAL: WINDOWS 11 PROF. 64 BITS (PT-BR); MEMORIA: 64GB; PROCESSADOR: ARQUITETURA X86 CORPORATIVA; ARMAZENAMENTO: SSD 1TB; MONITOR: 27 POLEGADAS",
+                "quantidade": "10",
+                "unitario": 1700000,
+                "total": 17000000
+              },
+              {
+                "id": "17425890",
+                "descricao": "SCANNER - TIPO: MESA; AREA DE DIGITALIZACAO: ATE 210X297MM (A4 TIPO I); RESOLUCAO: MINIMO 600 DPI / 48 BITS; INTERFACE: USB 3.0 COMPATIVEL COM 2.0; ACESSORIOS: SOFTWARE DE CAPTURA OCR PARA ODT OU DOC E PDF",
+                "quantidade": "1",
+                "unitario": 200000,
+                "total": 200000
+              },
+              {
+                "id": "17425892",
+                "descricao": "IMPRESSORA MULTIFUNCIONAL - SISTEMA DE IMPRESSAO: LASER OU LED MONOCROMATICA; RESOLUCAO IMPRESSAO: MINIMA 1200 X 600 DPI; VELOCIDADE IMPRESSAO: 30 PPM",
+                "quantidade": "1",
+                "unitario": 270000,
+                "total": 270000
+              }
+            ]
+          }
+        },
+        {
+          "at": "2026-09-27T19:11:34.580Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Sincronização automática",
+          "before": {
+            "at": "2026-09-26T20:41:13.241Z"
+          },
+          "after": {
+            "at": "2026-09-27T19:11:34.580Z"
+          }
+        },
+        {
+          "at": "2026-09-27T19:12:19.980Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Sincronização automática",
+          "before": {
+            "at": "2026-09-27T19:11:34.580Z"
+          },
+          "after": {
+            "at": "2026-09-27T19:12:19.980Z"
+          }
         }
       ],
       "textos": {
-        "at": "2026-09-26T20:41:13.241Z",
+        "at": "2026-09-27T19:12:19.980Z",
         "caracterizacao": "Estimular a estruturação de ouvidorias de serviços penais, observados os parâmetros mínimos instituídos pela SENAPPEN e a autonomia administrativa dos Estados e do Distrito Federal",
         "publicoAlvo": "Público Final: Pessoas privadas de liberdade (PPL), jovens em cumprimento de medidas socioeducativas, seus familiares, servidores do sistema prisional e socioeducativo, advogados, defensores públicos e toda a sociedade civil de Minas Gerais que utiliza os canais da OGE-MG.Público Direto: Servidores e colaboradores da Ouvidoria do Sistema Penitenciário e Socioeducativo da OGE-MG, que operarão os equipamentos no processamento das demandas diárias.",
         "problema": "A obsolescência, escassez e limitação operacional dos equipamentos de TIC (desktops e notebooks) atualmente em uso na Ouvidoria do Sistema Penitenciário e Socioeducativo. O ecossistema de hardware defasado gera lentidão nos sistemas de atendimento, degradação na segurança da informação, incapacidade de realizar atendimentos ou inspeções externas com suporte computacional móvel (in loco em unidades prisionais e de internação) e consequente gargalo no tempo de resposta ao cidadão.",
@@ -11607,11 +13285,81 @@ window.PROFOR_PUBLIC_DATA = {
         "global": 20020021,
         "pad": [
           {
+            "id": "17412526",
+            "descricao": "Câmera fotográfica digital compacta",
+            "quantidade": "2",
+            "unitario": 143685,
+            "total": 287369
+          },
+          {
+            "id": "17412545",
+            "descricao": "Sofá de 2 lugares para sala de espera",
+            "quantidade": "1",
+            "unitario": 276950,
+            "total": 276950
+          },
+          {
+            "id": "17412525",
+            "descricao": "Scanner portátil",
+            "quantidade": "5",
+            "unitario": 127032,
+            "total": 635158
+          },
+          {
+            "id": "17412541",
+            "descricao": "Forno micro-ondas",
+            "quantidade": "1",
+            "unitario": 86166,
+            "total": 86166
+          },
+          {
+            "id": "17412548",
+            "descricao": "Gravador de voz digital portátil",
+            "quantidade": "5",
+            "unitario": 95269,
+            "total": 476345
+          },
+          {
+            "id": "17412527",
+            "descricao": "Monitor LED/LCD",
+            "quantidade": "5",
+            "unitario": 112076,
+            "total": 560382
+          },
+          {
+            "id": "17412542",
+            "descricao": "Cafeteira elétrica em cápsulas",
+            "quantidade": "2",
+            "unitario": 57132,
+            "total": 114263
+          },
+          {
+            "id": "17412543",
+            "descricao": "Armário baixo para escritório, 2 portas",
+            "quantidade": "4",
+            "unitario": 58400,
+            "total": 233601
+          },
+          {
+            "id": "17412544",
+            "descricao": "Mesa para estação de trabalho individual/telemarketing",
+            "quantidade": "1",
+            "unitario": 86429,
+            "total": 86429
+          },
+          {
             "id": "17412546",
             "descricao": "Webcam Full HD",
             "quantidade": "7",
             "unitario": 22882,
             "total": 160174
+          },
+          {
+            "id": "17412528",
+            "descricao": "Impressora laser monocromática",
+            "quantidade": "1",
+            "unitario": 347704,
+            "total": 347704
           },
           {
             "id": "17412547",
@@ -11628,13 +13376,6 @@ window.PROFOR_PUBLIC_DATA = {
             "total": 27985
           },
           {
-            "id": "17412545",
-            "descricao": "Sofá de 2 lugares para sala de espera",
-            "quantidade": "1",
-            "unitario": 276950,
-            "total": 276950
-          },
-          {
             "id": "17412521",
             "descricao": "Computador desktop completo",
             "quantidade": "5",
@@ -11642,39 +13383,11 @@ window.PROFOR_PUBLIC_DATA = {
             "total": 1233850
           },
           {
-            "id": "17412548",
-            "descricao": "Gravador de voz digital portátil",
+            "id": "17412536",
+            "descricao": "Mesa de escritório",
             "quantidade": "5",
-            "unitario": 95269,
-            "total": 476345
-          },
-          {
-            "id": "17412543",
-            "descricao": "Armário baixo para escritório, 2 portas",
-            "quantidade": "4",
-            "unitario": 58400,
-            "total": 233601
-          },
-          {
-            "id": "17412532",
-            "descricao": "Bebedouro elétrico de mesa (gelágua)",
-            "quantidade": "1",
-            "unitario": 62927,
-            "total": 62927
-          },
-          {
-            "id": "17412539",
-            "descricao": "Licença perpétua de suíte de produtividade",
-            "quantidade": "8",
-            "unitario": 126652,
-            "total": 1013213
-          },
-          {
-            "id": "17412525",
-            "descricao": "Scanner portátil",
-            "quantidade": "5",
-            "unitario": 127032,
-            "total": 635158
+            "unitario": 42587,
+            "total": 212937
           },
           {
             "id": "17412530",
@@ -11691,6 +13404,48 @@ window.PROFOR_PUBLIC_DATA = {
             "total": 439406
           },
           {
+            "id": "17412529",
+            "descricao": "Cadeira de escritório ergonômica",
+            "quantidade": "6",
+            "unitario": 103392,
+            "total": 620354
+          },
+          {
+            "id": "17412534",
+            "descricao": "Veículo hatch 0 km",
+            "quantidade": "1",
+            "unitario": 9887593,
+            "total": 9887593
+          },
+          {
+            "id": "17412533",
+            "descricao": "Frigobar compacto",
+            "quantidade": "1",
+            "unitario": 111402,
+            "total": 111402
+          },
+          {
+            "id": "17412539",
+            "descricao": "Licença perpétua de suíte de produtividade",
+            "quantidade": "8",
+            "unitario": 126652,
+            "total": 1013213
+          },
+          {
+            "id": "17412532",
+            "descricao": "Bebedouro elétrico de mesa (gelágua)",
+            "quantidade": "1",
+            "unitario": 62927,
+            "total": 62927
+          },
+          {
+            "id": "17412531",
+            "descricao": "Armário alto para escritório, 2 portas",
+            "quantidade": "3",
+            "unitario": 90675,
+            "total": 272025
+          },
+          {
             "id": "17412535",
             "descricao": "Ar-condicionado Split",
             "quantidade": "3",
@@ -11703,83 +13458,6 @@ window.PROFOR_PUBLIC_DATA = {
             "quantidade": "4",
             "unitario": 61016,
             "total": 244063
-          },
-          {
-            "id": "17412536",
-            "descricao": "Mesa de escritório",
-            "quantidade": "5",
-            "unitario": 42587,
-            "total": 212937
-          },
-          {
-            "id": "17412533",
-            "descricao": "Frigobar compacto",
-            "quantidade": "1",
-            "unitario": 111402,
-            "total": 111402
-          },
-          {
-            "id": "17412531",
-            "descricao": "Armário alto para escritório, 2 portas",
-            "quantidade": "3",
-            "unitario": 90675,
-            "total": 272025
-          },
-          {
-            "id": "17412527",
-            "descricao": "Monitor LED/LCD",
-            "quantidade": "5",
-            "unitario": 112076,
-            "total": 560382
-          },
-          {
-            "id": "17412526",
-            "descricao": "Câmera fotográfica digital compacta",
-            "quantidade": "2",
-            "unitario": 143685,
-            "total": 287369
-          },
-          {
-            "id": "17412541",
-            "descricao": "Forno micro-ondas",
-            "quantidade": "1",
-            "unitario": 86166,
-            "total": 86166
-          },
-          {
-            "id": "17412544",
-            "descricao": "Mesa para estação de trabalho individual/telemarketing",
-            "quantidade": "1",
-            "unitario": 86429,
-            "total": 86429
-          },
-          {
-            "id": "17412534",
-            "descricao": "Veículo hatch 0 km",
-            "quantidade": "1",
-            "unitario": 9887593,
-            "total": 9887593
-          },
-          {
-            "id": "17412542",
-            "descricao": "Cafeteira elétrica em cápsulas",
-            "quantidade": "2",
-            "unitario": 57132,
-            "total": 114263
-          },
-          {
-            "id": "17412529",
-            "descricao": "Cadeira de escritório ergonômica",
-            "quantidade": "6",
-            "unitario": 103392,
-            "total": 620354
-          },
-          {
-            "id": "17412528",
-            "descricao": "Impressora laser monocromática",
-            "quantidade": "1",
-            "unitario": 347704,
-            "total": 347704
           }
         ]
       },
@@ -15314,10 +16992,425 @@ window.PROFOR_PUBLIC_DATA = {
           "after": {
             "at": "2026-09-26T20:41:13.241Z"
           }
+        },
+        {
+          "at": "2026-09-27T19:11:34.578Z",
+          "event": "Dados da origem alterados; conferir análise",
+          "actor": "Sincronização automática",
+          "before": {
+            "id": "2243160",
+            "numero": "35151/2026",
+            "uf": "RN",
+            "programa": "3000020260022",
+            "cnpj": "33863335000192",
+            "proponente": "SECRETARIA DE ESTADO DA ADMINISTRACAO PENITENCIARIA - SEAP",
+            "orgao": "",
+            "objeto": "Aparelhamento e fortalecimento da Ouvidoria de Serviços Penais do Estado do Rio Grande do Norte.",
+            "situacao": "Proposta/Plano de Trabalho Cadastrados",
+            "data": "2026-09-09",
+            "vigenciaInicio": "2027-01-01",
+            "vigenciaFim": "2028-06-30",
+            "repasse": 20000000,
+            "contrapartida": 20021,
+            "global": 20020021,
+            "pad": [
+              {
+                "id": "17412546",
+                "descricao": "Webcam Full HD",
+                "quantidade": "7",
+                "unitario": 22882,
+                "total": 160174
+              },
+              {
+                "id": "17412547",
+                "descricao": "Notebook",
+                "quantidade": "3",
+                "unitario": 522933,
+                "total": 1568800
+              },
+              {
+                "id": "17412549",
+                "descricao": "Valor Residual",
+                "quantidade": "1",
+                "unitario": 27985,
+                "total": 27985
+              },
+              {
+                "id": "17412545",
+                "descricao": "Sofá de 2 lugares para sala de espera",
+                "quantidade": "1",
+                "unitario": 276950,
+                "total": 276950
+              },
+              {
+                "id": "17412521",
+                "descricao": "Computador desktop completo",
+                "quantidade": "5",
+                "unitario": 246770,
+                "total": 1233850
+              },
+              {
+                "id": "17412548",
+                "descricao": "Gravador de voz digital portátil",
+                "quantidade": "5",
+                "unitario": 95269,
+                "total": 476345
+              },
+              {
+                "id": "17412543",
+                "descricao": "Armário baixo para escritório, 2 portas",
+                "quantidade": "4",
+                "unitario": 58400,
+                "total": 233601
+              },
+              {
+                "id": "17412532",
+                "descricao": "Bebedouro elétrico de mesa (gelágua)",
+                "quantidade": "1",
+                "unitario": 62927,
+                "total": 62927
+              },
+              {
+                "id": "17412539",
+                "descricao": "Licença perpétua de suíte de produtividade",
+                "quantidade": "8",
+                "unitario": 126652,
+                "total": 1013213
+              },
+              {
+                "id": "17412525",
+                "descricao": "Scanner portátil",
+                "quantidade": "5",
+                "unitario": 127032,
+                "total": 635158
+              },
+              {
+                "id": "17412530",
+                "descricao": "Cadeira fixa para atendimento ao público",
+                "quantidade": "10",
+                "unitario": 24065,
+                "total": 240650
+              },
+              {
+                "id": "17412537",
+                "descricao": "Headset profissional binaural",
+                "quantidade": "6",
+                "unitario": 73234,
+                "total": 439406
+              },
+              {
+                "id": "17412535",
+                "descricao": "Ar-condicionado Split",
+                "quantidade": "3",
+                "unitario": 273425,
+                "total": 820275
+              },
+              {
+                "id": "17412540",
+                "descricao": "Gaveteiro de escritório",
+                "quantidade": "4",
+                "unitario": 61016,
+                "total": 244063
+              },
+              {
+                "id": "17412536",
+                "descricao": "Mesa de escritório",
+                "quantidade": "5",
+                "unitario": 42587,
+                "total": 212937
+              },
+              {
+                "id": "17412533",
+                "descricao": "Frigobar compacto",
+                "quantidade": "1",
+                "unitario": 111402,
+                "total": 111402
+              },
+              {
+                "id": "17412531",
+                "descricao": "Armário alto para escritório, 2 portas",
+                "quantidade": "3",
+                "unitario": 90675,
+                "total": 272025
+              },
+              {
+                "id": "17412527",
+                "descricao": "Monitor LED/LCD",
+                "quantidade": "5",
+                "unitario": 112076,
+                "total": 560382
+              },
+              {
+                "id": "17412526",
+                "descricao": "Câmera fotográfica digital compacta",
+                "quantidade": "2",
+                "unitario": 143685,
+                "total": 287369
+              },
+              {
+                "id": "17412541",
+                "descricao": "Forno micro-ondas",
+                "quantidade": "1",
+                "unitario": 86166,
+                "total": 86166
+              },
+              {
+                "id": "17412544",
+                "descricao": "Mesa para estação de trabalho individual/telemarketing",
+                "quantidade": "1",
+                "unitario": 86429,
+                "total": 86429
+              },
+              {
+                "id": "17412534",
+                "descricao": "Veículo hatch 0 km",
+                "quantidade": "1",
+                "unitario": 9887593,
+                "total": 9887593
+              },
+              {
+                "id": "17412542",
+                "descricao": "Cafeteira elétrica em cápsulas",
+                "quantidade": "2",
+                "unitario": 57132,
+                "total": 114263
+              },
+              {
+                "id": "17412529",
+                "descricao": "Cadeira de escritório ergonômica",
+                "quantidade": "6",
+                "unitario": 103392,
+                "total": 620354
+              },
+              {
+                "id": "17412528",
+                "descricao": "Impressora laser monocromática",
+                "quantidade": "1",
+                "unitario": 347704,
+                "total": 347704
+              }
+            ]
+          },
+          "after": {
+            "id": "2243160",
+            "numero": "35151/2026",
+            "uf": "RN",
+            "programa": "3000020260022",
+            "cnpj": "33863335000192",
+            "proponente": "SECRETARIA DE ESTADO DA ADMINISTRACAO PENITENCIARIA - SEAP",
+            "orgao": "",
+            "objeto": "Aparelhamento e fortalecimento da Ouvidoria de Serviços Penais do Estado do Rio Grande do Norte.",
+            "situacao": "Proposta/Plano de Trabalho Cadastrados",
+            "data": "2026-09-09",
+            "vigenciaInicio": "2027-01-01",
+            "vigenciaFim": "2028-06-30",
+            "repasse": 20000000,
+            "contrapartida": 20021,
+            "global": 20020021,
+            "pad": [
+              {
+                "id": "17412526",
+                "descricao": "Câmera fotográfica digital compacta",
+                "quantidade": "2",
+                "unitario": 143685,
+                "total": 287369
+              },
+              {
+                "id": "17412545",
+                "descricao": "Sofá de 2 lugares para sala de espera",
+                "quantidade": "1",
+                "unitario": 276950,
+                "total": 276950
+              },
+              {
+                "id": "17412525",
+                "descricao": "Scanner portátil",
+                "quantidade": "5",
+                "unitario": 127032,
+                "total": 635158
+              },
+              {
+                "id": "17412541",
+                "descricao": "Forno micro-ondas",
+                "quantidade": "1",
+                "unitario": 86166,
+                "total": 86166
+              },
+              {
+                "id": "17412548",
+                "descricao": "Gravador de voz digital portátil",
+                "quantidade": "5",
+                "unitario": 95269,
+                "total": 476345
+              },
+              {
+                "id": "17412527",
+                "descricao": "Monitor LED/LCD",
+                "quantidade": "5",
+                "unitario": 112076,
+                "total": 560382
+              },
+              {
+                "id": "17412542",
+                "descricao": "Cafeteira elétrica em cápsulas",
+                "quantidade": "2",
+                "unitario": 57132,
+                "total": 114263
+              },
+              {
+                "id": "17412543",
+                "descricao": "Armário baixo para escritório, 2 portas",
+                "quantidade": "4",
+                "unitario": 58400,
+                "total": 233601
+              },
+              {
+                "id": "17412544",
+                "descricao": "Mesa para estação de trabalho individual/telemarketing",
+                "quantidade": "1",
+                "unitario": 86429,
+                "total": 86429
+              },
+              {
+                "id": "17412546",
+                "descricao": "Webcam Full HD",
+                "quantidade": "7",
+                "unitario": 22882,
+                "total": 160174
+              },
+              {
+                "id": "17412528",
+                "descricao": "Impressora laser monocromática",
+                "quantidade": "1",
+                "unitario": 347704,
+                "total": 347704
+              },
+              {
+                "id": "17412547",
+                "descricao": "Notebook",
+                "quantidade": "3",
+                "unitario": 522933,
+                "total": 1568800
+              },
+              {
+                "id": "17412549",
+                "descricao": "Valor Residual",
+                "quantidade": "1",
+                "unitario": 27985,
+                "total": 27985
+              },
+              {
+                "id": "17412521",
+                "descricao": "Computador desktop completo",
+                "quantidade": "5",
+                "unitario": 246770,
+                "total": 1233850
+              },
+              {
+                "id": "17412536",
+                "descricao": "Mesa de escritório",
+                "quantidade": "5",
+                "unitario": 42587,
+                "total": 212937
+              },
+              {
+                "id": "17412530",
+                "descricao": "Cadeira fixa para atendimento ao público",
+                "quantidade": "10",
+                "unitario": 24065,
+                "total": 240650
+              },
+              {
+                "id": "17412537",
+                "descricao": "Headset profissional binaural",
+                "quantidade": "6",
+                "unitario": 73234,
+                "total": 439406
+              },
+              {
+                "id": "17412529",
+                "descricao": "Cadeira de escritório ergonômica",
+                "quantidade": "6",
+                "unitario": 103392,
+                "total": 620354
+              },
+              {
+                "id": "17412534",
+                "descricao": "Veículo hatch 0 km",
+                "quantidade": "1",
+                "unitario": 9887593,
+                "total": 9887593
+              },
+              {
+                "id": "17412533",
+                "descricao": "Frigobar compacto",
+                "quantidade": "1",
+                "unitario": 111402,
+                "total": 111402
+              },
+              {
+                "id": "17412539",
+                "descricao": "Licença perpétua de suíte de produtividade",
+                "quantidade": "8",
+                "unitario": 126652,
+                "total": 1013213
+              },
+              {
+                "id": "17412532",
+                "descricao": "Bebedouro elétrico de mesa (gelágua)",
+                "quantidade": "1",
+                "unitario": 62927,
+                "total": 62927
+              },
+              {
+                "id": "17412531",
+                "descricao": "Armário alto para escritório, 2 portas",
+                "quantidade": "3",
+                "unitario": 90675,
+                "total": 272025
+              },
+              {
+                "id": "17412535",
+                "descricao": "Ar-condicionado Split",
+                "quantidade": "3",
+                "unitario": 273425,
+                "total": 820275
+              },
+              {
+                "id": "17412540",
+                "descricao": "Gaveteiro de escritório",
+                "quantidade": "4",
+                "unitario": 61016,
+                "total": 244063
+              }
+            ]
+          }
+        },
+        {
+          "at": "2026-09-27T19:11:34.580Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Sincronização automática",
+          "before": {
+            "at": "2026-09-26T20:41:13.241Z"
+          },
+          "after": {
+            "at": "2026-09-27T19:11:34.580Z"
+          }
+        },
+        {
+          "at": "2026-09-27T19:12:19.980Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Sincronização automática",
+          "before": {
+            "at": "2026-09-27T19:11:34.580Z"
+          },
+          "after": {
+            "at": "2026-09-27T19:12:19.980Z"
+          }
         }
       ],
       "textos": {
-        "at": "2026-09-26T20:41:13.241Z",
+        "at": "2026-09-27T19:12:19.980Z",
         "caracterizacao": "A União, por meio da SENAPPEN, e o Estado do Rio Grande do Norte, por meio da SEAP/RN, compartilham o interesse de fortalecer a Ouvidoria de Serviços Penais. O repasse federal permitirá adquirir bens permanentes para ampliar sua capacidade operacional, enquanto o Estado aportará a contrapartida financeira e assegurará a execução, a guarda, a destinação e a utilização dos bens na finalidade pactuada.",
         "publicoAlvo": "A Ouvidoria de Serviços Penais vinculada à SEAP/RN é a beneficiária direta. O público-alvo compreende pessoas privadas de liberdade, seus familiares, egressos, servidores dos serviços penais e demais cidadãos que apresentem manifestações relacionadas à política penal do Rio Grande do Norte. Os bens também apoiarão a equipe responsável pelo recebimento, tratamento, encaminhamento e resposta às manifestações.",
         "problema": "A Ouvidoria de Serviços Penais do RN necessita ampliar sua capacidade material e tecnológica para atender às demandas institucionais e tratar manifestações com segurança, sigilo e rastreabilidade. O diagnóstico que fundamenta o PROFOR/ONASP identifica a necessidade de reforço das estruturas existentes, sem recursos disponíveis em convênios vigentes para essa finalidade. A proposta busca suprir as necessidades de aparelhamento identificadas pelo Estado.",
@@ -15757,10 +17850,32 @@ window.PROFOR_PUBLIC_DATA = {
           "after": {
             "at": "2026-09-26T20:41:13.241Z"
           }
+        },
+        {
+          "at": "2026-09-27T19:11:34.580Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Sincronização automática",
+          "before": {
+            "at": "2026-09-26T20:41:13.241Z"
+          },
+          "after": {
+            "at": "2026-09-27T19:11:34.580Z"
+          }
+        },
+        {
+          "at": "2026-09-27T19:12:19.980Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Sincronização automática",
+          "before": {
+            "at": "2026-09-27T19:11:34.580Z"
+          },
+          "after": {
+            "at": "2026-09-27T19:12:19.980Z"
+          }
         }
       ],
       "textos": {
-        "at": "2026-09-26T20:41:13.241Z",
+        "at": "2026-09-27T19:12:19.980Z",
         "caracterizacao": "Integração de esforços entre o Ministério da Justiça/SENAPPEN e a SEJUS/ES para estruturar as Ouvidorias de Serviços Penais. A cooperação atende às diretrizes do PROFOR/ONASP e do Plano Pena Justa, fortalecendo a governança penitenciária, a fiscalização institucional, a proteção dos direitos humanos e o acesso à justiça no âmbito da execução penal no Espírito Santo.",
         "publicoAlvo": "Pessoas privadas de liberdade, seus familiares, operadores do direito, pessoas egressas do sistema prisional, órgãos de controle, servidores do sistema penitenciário, a sociedade civil usuária dos serviços das Ouvidorias dos Serviços Penais SEJUS/ES e a própria Administração Pública estadual, mediante a utilização das informações produzidas pela Ouvidoria para identificação de problemas, monitoramento de demandas recorrentes e aperfeiçoamento das políticas públicas penitenciárias",
         "problema": "A insuficiência ou inadequação de equipamentos tecnológicos e mobiliários pode limitar a capacidade operacional da unidade, dificultar a realização de atendimentos, restringir a mobilidade para atividades técnicas externas e comprometer a eficiência, a rastreabilidade e a segurança no tratamento das informações. Nesse contexto, o aparelhamento da Ouvidoria constitui medida necessária para assegurar condições materiais compatíveis com suas atribuições institucionais.",
@@ -16087,10 +18202,32 @@ window.PROFOR_PUBLIC_DATA = {
             "capacidade": "xxxxxxxxxxxxxxxx",
             "justificativa": ""
           }
+        },
+        {
+          "at": "2026-09-27T19:11:34.580Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Sincronização automática",
+          "before": {
+            "at": "2026-09-26T20:41:13.241Z"
+          },
+          "after": {
+            "at": "2026-09-27T19:11:34.580Z"
+          }
+        },
+        {
+          "at": "2026-09-27T19:12:19.980Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Sincronização automática",
+          "before": {
+            "at": "2026-09-27T19:11:34.580Z"
+          },
+          "after": {
+            "at": "2026-09-27T19:12:19.980Z"
+          }
         }
       ],
       "textos": {
-        "at": "2026-09-26T20:41:13.241Z",
+        "at": "2026-09-27T19:12:19.980Z",
         "caracterizacao": "xxxxxxxxxxxx",
         "publicoAlvo": "xxxxxxxxxxxxx",
         "problema": "xxxxxxxxxxxxxx",
@@ -16102,7 +18239,7 @@ window.PROFOR_PUBLIC_DATA = {
     }
   ],
   "sync": {
-    "at": "2026-09-26T20:41:13.241Z",
+    "at": "2026-09-27T19:12:19.980Z",
     "source": "https://api-publica.transferegov.gestao.gov.br/downloads · sincronização completa (com PAD) · 4 arquivo(s) · extração reaproveitada pelo servidor",
     "count": 14
   },
@@ -25332,6 +27469,1837 @@ window.PROFOR_PUBLIC_DATA = {
           "after": ""
         }
       ]
+    },
+    {
+      "at": "2026-09-27T19:11:35.701Z",
+      "date": "2026-09-27",
+      "source": "https://api-publica.transferegov.gestao.gov.br/downloads · sincronização completa (com PAD) · 4 arquivo(s)",
+      "reconstructed": false,
+      "activity": [
+        {
+          "at": "2026-09-27T19:09:52.734Z",
+          "message": "Iniciando sincronização automática de propostas, PAD e textos oficiais."
+        },
+        {
+          "at": "2026-09-27T19:09:53.277Z",
+          "message": "Banco local carregado; consultando o Transferegov."
+        },
+        {
+          "at": "2026-09-27T19:09:53.277Z",
+          "message": "Consultando a lista de arquivos oficiais…"
+        },
+        {
+          "at": "2026-09-27T19:09:53.504Z",
+          "message": "Baixando siconv_programa.zip…"
+        },
+        {
+          "at": "2026-09-27T19:09:55.845Z",
+          "message": "siconv_programa.zip: download concluído (11129644 bytes)."
+        },
+        {
+          "at": "2026-09-27T19:09:55.845Z",
+          "message": "Baixando siconv_programa_proposta.zip…"
+        },
+        {
+          "at": "2026-09-27T19:09:57.585Z",
+          "message": "siconv_programa_proposta.zip: download concluído (6503808 bytes)."
+        },
+        {
+          "at": "2026-09-27T19:09:57.585Z",
+          "message": "Baixando siconv_proposta.zip…"
+        },
+        {
+          "at": "2026-09-27T19:10:04.248Z",
+          "message": "siconv_proposta.zip: download concluído (205833134 bytes)."
+        },
+        {
+          "at": "2026-09-27T19:10:04.249Z",
+          "message": "Baixando siconv_plano_aplicacao_detalhado.zip…"
+        },
+        {
+          "at": "2026-09-27T19:10:12.506Z",
+          "message": "siconv_plano_aplicacao_detalhado.zip: download concluído (291417390 bytes)."
+        },
+        {
+          "at": "2026-09-27T19:10:12.507Z",
+          "message": "Lendo siconv_programa.zip e localizando o programa…"
+        },
+        {
+          "at": "2026-09-27T19:10:16.205Z",
+          "message": "siconv_programa.zip: 1257497 linha(s) lida(s)."
+        },
+        {
+          "at": "2026-09-27T19:10:16.205Z",
+          "message": "Lendo siconv_programa_proposta.zip e cruzando vínculos…"
+        },
+        {
+          "at": "2026-09-27T19:10:16.808Z",
+          "message": "siconv_programa_proposta.zip: 1159584 linha(s) lida(s)."
+        },
+        {
+          "at": "2026-09-27T19:10:16.808Z",
+          "message": "Lendo siconv_proposta.zip e selecionando as propostas…"
+        },
+        {
+          "at": "2026-09-27T19:10:23.306Z",
+          "message": "siconv_proposta.zip: 1158228 linha(s) lida(s)."
+        },
+        {
+          "at": "2026-09-27T19:10:23.306Z",
+          "message": "Lendo siconv_plano_aplicacao_detalhado.zip e selecionando itens do PAD…"
+        },
+        {
+          "at": "2026-09-27T19:10:39.341Z",
+          "message": "siconv_plano_aplicacao_detalhado.zip: 4899515 linha(s) lida(s)."
+        },
+        {
+          "at": "2026-09-27T19:10:39.341Z",
+          "message": "Validando as propostas e preparando a resposta…"
+        },
+        {
+          "at": "2026-09-27T19:10:39.344Z",
+          "message": "Consultando textos oficiais de 14 proposta(s)."
+        },
+        {
+          "at": "2026-09-27T19:10:39.345Z",
+          "message": "Consultando a lista de arquivos da origem…"
+        },
+        {
+          "at": "2026-09-27T19:10:39.346Z",
+          "message": "Consultando a lista para os textos oficiais…"
+        },
+        {
+          "at": "2026-09-27T19:10:39.573Z",
+          "message": "Baixando siconv_justificativas_proposta.zip…"
+        },
+        {
+          "at": "2026-09-27T19:10:39.573Z",
+          "message": "Baixando siconv_justificativas_proposta.zip…"
+        },
+        {
+          "at": "2026-09-27T19:10:42.032Z",
+          "message": "siconv_justificativas_proposta.zip: 5%"
+        },
+        {
+          "at": "2026-09-27T19:10:42.867Z",
+          "message": "siconv_justificativas_proposta.zip: 10%"
+        },
+        {
+          "at": "2026-09-27T19:10:43.698Z",
+          "message": "siconv_justificativas_proposta.zip: 15%"
+        },
+        {
+          "at": "2026-09-27T19:10:44.542Z",
+          "message": "siconv_justificativas_proposta.zip: 20%"
+        },
+        {
+          "at": "2026-09-27T19:10:45.368Z",
+          "message": "siconv_justificativas_proposta.zip: 25%"
+        },
+        {
+          "at": "2026-09-27T19:10:46.195Z",
+          "message": "siconv_justificativas_proposta.zip: 30%"
+        },
+        {
+          "at": "2026-09-27T19:10:47.026Z",
+          "message": "siconv_justificativas_proposta.zip: 35%"
+        },
+        {
+          "at": "2026-09-27T19:10:47.853Z",
+          "message": "siconv_justificativas_proposta.zip: 40%"
+        },
+        {
+          "at": "2026-09-27T19:10:48.687Z",
+          "message": "siconv_justificativas_proposta.zip: 45%"
+        },
+        {
+          "at": "2026-09-27T19:10:49.537Z",
+          "message": "siconv_justificativas_proposta.zip: 50%"
+        },
+        {
+          "at": "2026-09-27T19:10:50.368Z",
+          "message": "siconv_justificativas_proposta.zip: 55%"
+        },
+        {
+          "at": "2026-09-27T19:10:51.434Z",
+          "message": "siconv_justificativas_proposta.zip: 60%"
+        },
+        {
+          "at": "2026-09-27T19:10:52.380Z",
+          "message": "siconv_justificativas_proposta.zip: 65%"
+        },
+        {
+          "at": "2026-09-27T19:10:53.228Z",
+          "message": "siconv_justificativas_proposta.zip: 70%"
+        },
+        {
+          "at": "2026-09-27T19:10:55.012Z",
+          "message": "siconv_justificativas_proposta.zip: 75%"
+        },
+        {
+          "at": "2026-09-27T19:10:57.105Z",
+          "message": "siconv_justificativas_proposta.zip: 80%"
+        },
+        {
+          "at": "2026-09-27T19:10:57.951Z",
+          "message": "siconv_justificativas_proposta.zip: 85%"
+        },
+        {
+          "at": "2026-09-27T19:10:58.751Z",
+          "message": "siconv_justificativas_proposta.zip: 90%"
+        },
+        {
+          "at": "2026-09-27T19:10:59.579Z",
+          "message": "siconv_justificativas_proposta.zip: 95%"
+        },
+        {
+          "at": "2026-09-27T19:11:00.451Z",
+          "message": "siconv_justificativas_proposta.zip: download concluído (750836088 bytes)."
+        },
+        {
+          "at": "2026-09-27T19:11:00.451Z",
+          "message": "Lendo os textos das propostas…"
+        },
+        {
+          "at": "2026-09-27T19:11:00.452Z",
+          "message": "Lendo siconv_justificativas_proposta.zip e selecionando textos das propostas…"
+        },
+        {
+          "at": "2026-09-27T19:11:34.564Z",
+          "message": "siconv_justificativas_proposta.zip: 1158228 linha(s) lida(s); 14 proposta(s) com textos."
+        },
+        {
+          "at": "2026-09-27T19:11:34.581Z",
+          "message": "Gravando propostas, PAD e textos oficiais; 7 alteração(ões) de dados e 0 alteração(ões) de textos."
+        },
+        {
+          "at": "2026-09-27T19:11:35.701Z",
+          "message": "Gravação confirmada no banco local."
+        }
+      ],
+      "changes": [
+        {
+          "numero": "35250/2026",
+          "uf": "RS",
+          "field": "pad",
+          "before": [
+            {
+              "descricao": "REFRIGERADOR",
+              "quantidade": "1",
+              "unitario": 206900,
+              "total": 206900
+            },
+            {
+              "descricao": "MESA DE TRABALHO",
+              "quantidade": "5",
+              "unitario": 86808,
+              "total": 434040
+            },
+            {
+              "descricao": "SOFÁ",
+              "quantidade": "2",
+              "unitario": 184950,
+              "total": 369900
+            },
+            {
+              "descricao": "VIATURA ADMINISTRATIVA",
+              "quantidade": "1",
+              "unitario": 12994444,
+              "total": 12994444
+            },
+            {
+              "descricao": "ARMÁRIO MULTIUSO",
+              "quantidade": "3",
+              "unitario": 22870,
+              "total": 68610
+            },
+            {
+              "descricao": "MONITOR",
+              "quantidade": "10",
+              "unitario": 107700,
+              "total": 1077000
+            },
+            {
+              "descricao": "COMPUTADOR",
+              "quantidade": "5",
+              "unitario": 608297,
+              "total": 3041485
+            },
+            {
+              "descricao": "TV",
+              "quantidade": "1",
+              "unitario": 277781,
+              "total": 277781
+            },
+            {
+              "descricao": "CADEIRA FIXA",
+              "quantidade": "10",
+              "unitario": 16436,
+              "total": 164360
+            },
+            {
+              "descricao": "TABLET",
+              "quantidade": "5",
+              "unitario": 130150,
+              "total": 650750
+            },
+            {
+              "descricao": "CADEIRA GIRATÓRIA",
+              "quantidade": "5",
+              "unitario": 62664,
+              "total": 313320
+            },
+            {
+              "descricao": "MESA DE REUNIÃO",
+              "quantidade": "1",
+              "unitario": 35967,
+              "total": 35967
+            },
+            {
+              "descricao": "WEBCAM",
+              "quantidade": "5",
+              "unitario": 9323,
+              "total": 46615
+            },
+            {
+              "descricao": "AR-CONDICIONADO",
+              "quantidade": "2",
+              "unitario": 359890,
+              "total": 719780
+            }
+          ],
+          "after": [
+            {
+              "descricao": "MESA DE REUNIÃO",
+              "quantidade": "1",
+              "unitario": 35967,
+              "total": 35967
+            },
+            {
+              "descricao": "VIATURA ADMINISTRATIVA",
+              "quantidade": "1",
+              "unitario": 12994444,
+              "total": 12994444
+            },
+            {
+              "descricao": "CADEIRA GIRATÓRIA",
+              "quantidade": "5",
+              "unitario": 62664,
+              "total": 313320
+            },
+            {
+              "descricao": "MESA DE TRABALHO",
+              "quantidade": "5",
+              "unitario": 86808,
+              "total": 434040
+            },
+            {
+              "descricao": "AR-CONDICIONADO",
+              "quantidade": "2",
+              "unitario": 359890,
+              "total": 719780
+            },
+            {
+              "descricao": "WEBCAM",
+              "quantidade": "5",
+              "unitario": 9323,
+              "total": 46615
+            },
+            {
+              "descricao": "COMPUTADOR",
+              "quantidade": "5",
+              "unitario": 608297,
+              "total": 3041485
+            },
+            {
+              "descricao": "TV",
+              "quantidade": "1",
+              "unitario": 277781,
+              "total": 277781
+            },
+            {
+              "descricao": "SOFÁ",
+              "quantidade": "2",
+              "unitario": 184950,
+              "total": 369900
+            },
+            {
+              "descricao": "REFRIGERADOR",
+              "quantidade": "1",
+              "unitario": 206900,
+              "total": 206900
+            },
+            {
+              "descricao": "CADEIRA FIXA",
+              "quantidade": "10",
+              "unitario": 16436,
+              "total": 164360
+            },
+            {
+              "descricao": "MONITOR",
+              "quantidade": "10",
+              "unitario": 107700,
+              "total": 1077000
+            },
+            {
+              "descricao": "ARMÁRIO MULTIUSO",
+              "quantidade": "3",
+              "unitario": 22870,
+              "total": 68610
+            },
+            {
+              "descricao": "TABLET",
+              "quantidade": "5",
+              "unitario": 130150,
+              "total": 650750
+            }
+          ]
+        },
+        {
+          "numero": "35053/2026",
+          "uf": "SE",
+          "field": "pad",
+          "before": [
+            {
+              "descricao": "Nobreaks",
+              "quantidade": "2",
+              "unitario": 110000,
+              "total": 220000
+            },
+            {
+              "descricao": "Monitor para Computador",
+              "quantidade": "4",
+              "unitario": 52000,
+              "total": 208000
+            },
+            {
+              "descricao": "Longarina 3 Lugares",
+              "quantidade": "1",
+              "unitario": 200000,
+              "total": 200000
+            },
+            {
+              "descricao": "Armário Alto 2 Portas com Chave",
+              "quantidade": "1",
+              "unitario": 110000,
+              "total": 110000
+            },
+            {
+              "descricao": "Notebook",
+              "quantidade": "3",
+              "unitario": 678000,
+              "total": 2034000
+            },
+            {
+              "descricao": "Telefone Celular",
+              "quantidade": "3",
+              "unitario": 575000,
+              "total": 1725000
+            },
+            {
+              "descricao": "Cadeira de Escritório",
+              "quantidade": "3",
+              "unitario": 185000,
+              "total": 555000
+            },
+            {
+              "descricao": "Impressora Multifuncional",
+              "quantidade": "1",
+              "unitario": 475000,
+              "total": 475000
+            },
+            {
+              "descricao": "Cafeteira Expresso",
+              "quantidade": "1",
+              "unitario": 530000,
+              "total": 530000
+            },
+            {
+              "descricao": "Purificador de Água",
+              "quantidade": "1",
+              "unitario": 130000,
+              "total": 130000
+            },
+            {
+              "descricao": "Saldo Residual",
+              "quantidade": "1",
+              "unitario": 597021,
+              "total": 597021
+            },
+            {
+              "descricao": "Totem de Autoatendimento",
+              "quantidade": "15",
+              "unitario": 524000,
+              "total": 7860000
+            },
+            {
+              "descricao": "TV 50'",
+              "quantidade": "1",
+              "unitario": 250000,
+              "total": 250000
+            },
+            {
+              "descricao": "Mesa de Escritório em L",
+              "quantidade": "3",
+              "unitario": 300000,
+              "total": 900000
+            },
+            {
+              "descricao": "Telefone de Mesa",
+              "quantidade": "3",
+              "unitario": 48000,
+              "total": 144000
+            },
+            {
+              "descricao": "Barra de video conferencia",
+              "quantidade": "1",
+              "unitario": 440000,
+              "total": 440000
+            },
+            {
+              "descricao": "Fragmentadora de Papel",
+              "quantidade": "1",
+              "unitario": 252000,
+              "total": 252000
+            },
+            {
+              "descricao": "Computador",
+              "quantidade": "2",
+              "unitario": 556000,
+              "total": 1112000
+            },
+            {
+              "descricao": "Cadeira Fixa",
+              "quantidade": "4",
+              "unitario": 45000,
+              "total": 180000
+            },
+            {
+              "descricao": "Tablets",
+              "quantidade": "3",
+              "unitario": 580000,
+              "total": 1740000
+            },
+            {
+              "descricao": "Frigobar 120L",
+              "quantidade": "1",
+              "unitario": 113000,
+              "total": 113000
+            },
+            {
+              "descricao": "Ar Condicionado 12000 BTUs",
+              "quantidade": "1",
+              "unitario": 245000,
+              "total": 245000
+            }
+          ],
+          "after": [
+            {
+              "descricao": "Mesa de Escritório em L",
+              "quantidade": "3",
+              "unitario": 300000,
+              "total": 900000
+            },
+            {
+              "descricao": "Impressora Multifuncional",
+              "quantidade": "1",
+              "unitario": 475000,
+              "total": 475000
+            },
+            {
+              "descricao": "Cafeteira Expresso",
+              "quantidade": "1",
+              "unitario": 530000,
+              "total": 530000
+            },
+            {
+              "descricao": "TV 50'",
+              "quantidade": "1",
+              "unitario": 250000,
+              "total": 250000
+            },
+            {
+              "descricao": "Barra de video conferencia",
+              "quantidade": "1",
+              "unitario": 440000,
+              "total": 440000
+            },
+            {
+              "descricao": "Telefone de Mesa",
+              "quantidade": "3",
+              "unitario": 48000,
+              "total": 144000
+            },
+            {
+              "descricao": "Longarina 3 Lugares",
+              "quantidade": "1",
+              "unitario": 200000,
+              "total": 200000
+            },
+            {
+              "descricao": "Armário Alto 2 Portas com Chave",
+              "quantidade": "1",
+              "unitario": 110000,
+              "total": 110000
+            },
+            {
+              "descricao": "Telefone Celular",
+              "quantidade": "3",
+              "unitario": 575000,
+              "total": 1725000
+            },
+            {
+              "descricao": "Ar Condicionado 12000 BTUs",
+              "quantidade": "1",
+              "unitario": 245000,
+              "total": 245000
+            },
+            {
+              "descricao": "Purificador de Água",
+              "quantidade": "1",
+              "unitario": 130000,
+              "total": 130000
+            },
+            {
+              "descricao": "Cadeira Fixa",
+              "quantidade": "4",
+              "unitario": 45000,
+              "total": 180000
+            },
+            {
+              "descricao": "Frigobar 120L",
+              "quantidade": "1",
+              "unitario": 113000,
+              "total": 113000
+            },
+            {
+              "descricao": "Monitor para Computador",
+              "quantidade": "4",
+              "unitario": 52000,
+              "total": 208000
+            },
+            {
+              "descricao": "Fragmentadora de Papel",
+              "quantidade": "1",
+              "unitario": 252000,
+              "total": 252000
+            },
+            {
+              "descricao": "Computador",
+              "quantidade": "2",
+              "unitario": 556000,
+              "total": 1112000
+            },
+            {
+              "descricao": "Tablets",
+              "quantidade": "3",
+              "unitario": 580000,
+              "total": 1740000
+            },
+            {
+              "descricao": "Saldo Residual",
+              "quantidade": "1",
+              "unitario": 597021,
+              "total": 597021
+            },
+            {
+              "descricao": "Cadeira de Escritório",
+              "quantidade": "3",
+              "unitario": 185000,
+              "total": 555000
+            },
+            {
+              "descricao": "Nobreaks",
+              "quantidade": "2",
+              "unitario": 110000,
+              "total": 220000
+            },
+            {
+              "descricao": "Notebook",
+              "quantidade": "3",
+              "unitario": 678000,
+              "total": 2034000
+            },
+            {
+              "descricao": "Totem de Autoatendimento",
+              "quantidade": "15",
+              "unitario": 524000,
+              "total": 7860000
+            }
+          ]
+        },
+        {
+          "numero": "35413/2026",
+          "uf": "CE",
+          "field": "pad",
+          "before": [
+            {
+              "descricao": "Totem/Suporte Institucional de segurança para trablet",
+              "quantidade": "35",
+              "unitario": 122993,
+              "total": 4304755
+            },
+            {
+              "descricao": "Tablet institucional destinado à escuta, pesquisa de satisfação, avaliação de serviços e coleta institucional de informações",
+              "quantidade": "35",
+              "unitario": 319967,
+              "total": 11198845
+            },
+            {
+              "descricao": "Fragmentadora profissional de papel de alta capacidade",
+              "quantidade": "1",
+              "unitario": 669167,
+              "total": 669167
+            },
+            {
+              "descricao": "Câmera fotográfica digital profissional institucional",
+              "quantidade": "1",
+              "unitario": 418400,
+              "total": 418400
+            },
+            {
+              "descricao": "Impressora multifuncional profissional colorida",
+              "quantidade": "1",
+              "unitario": 852367,
+              "total": 852367
+            },
+            {
+              "descricao": "Scanner profissional de documentos",
+              "quantidade": "2",
+              "unitario": 286175,
+              "total": 572350
+            },
+            {
+              "descricao": "Webcam institucional com microfone integrado",
+              "quantidade": "3",
+              "unitario": 152900,
+              "total": 458700
+            },
+            {
+              "descricao": "Conjunto composto por projetor multimídia portátil, tela e suporte",
+              "quantidade": "1",
+              "unitario": 325628,
+              "total": 325628
+            },
+            {
+              "descricao": "SALDO REMANESCENTE",
+              "quantidade": "1",
+              "unitario": 461976,
+              "total": 461976
+            },
+            {
+              "descricao": "Gravador digital portátil profissional",
+              "quantidade": "1",
+              "unitario": 90333,
+              "total": 90333
+            },
+            {
+              "descricao": "Notebook institucional para atividades externas e complementação da estação de trabalho da equipe",
+              "quantidade": "1",
+              "unitario": 667500,
+              "total": 667500
+            }
+          ],
+          "after": [
+            {
+              "descricao": "Totem/Suporte Institucional de segurança para trablet",
+              "quantidade": "35",
+              "unitario": 122993,
+              "total": 4304755
+            },
+            {
+              "descricao": "Notebook institucional para atividades externas e complementação da estação de trabalho da equipe",
+              "quantidade": "1",
+              "unitario": 667500,
+              "total": 667500
+            },
+            {
+              "descricao": "Gravador digital portátil profissional",
+              "quantidade": "1",
+              "unitario": 90333,
+              "total": 90333
+            },
+            {
+              "descricao": "Webcam institucional com microfone integrado",
+              "quantidade": "3",
+              "unitario": 152900,
+              "total": 458700
+            },
+            {
+              "descricao": "Tablet institucional destinado à escuta, pesquisa de satisfação, avaliação de serviços e coleta institucional de informações",
+              "quantidade": "35",
+              "unitario": 319967,
+              "total": 11198845
+            },
+            {
+              "descricao": "Câmera fotográfica digital profissional institucional",
+              "quantidade": "1",
+              "unitario": 418400,
+              "total": 418400
+            },
+            {
+              "descricao": "Fragmentadora profissional de papel de alta capacidade",
+              "quantidade": "1",
+              "unitario": 669167,
+              "total": 669167
+            },
+            {
+              "descricao": "Scanner profissional de documentos",
+              "quantidade": "2",
+              "unitario": 286175,
+              "total": 572350
+            },
+            {
+              "descricao": "SALDO REMANESCENTE",
+              "quantidade": "1",
+              "unitario": 461976,
+              "total": 461976
+            },
+            {
+              "descricao": "Impressora multifuncional profissional colorida",
+              "quantidade": "1",
+              "unitario": 852367,
+              "total": 852367
+            },
+            {
+              "descricao": "Conjunto composto por projetor multimídia portátil, tela e suporte",
+              "quantidade": "1",
+              "unitario": 325628,
+              "total": 325628
+            }
+          ]
+        },
+        {
+          "numero": "35361/2026",
+          "uf": "PE",
+          "field": "pad",
+          "before": [
+            {
+              "descricao": "Descrição: Armário ou arquivo com chave para guarda de documentos e informações sensíveis",
+              "quantidade": "5",
+              "unitario": 240000,
+              "total": 1200000
+            },
+            {
+              "descricao": "Televisão (TV) para apresentações, monitoramento e capacitação",
+              "quantidade": "3",
+              "unitario": 300000,
+              "total": 900000
+            },
+            {
+              "descricao": "Mesa ou estação de trabalho destinada à equipe da Ouvidoria de Serviços Penais.",
+              "quantidade": "6",
+              "unitario": 200000,
+              "total": 1200000
+            },
+            {
+              "descricao": "Cadeira de escritório destinada à equipe ou ao atendimento dos usuários",
+              "quantidade": "12",
+              "unitario": 200000,
+              "total": 2400000
+            },
+            {
+              "descricao": "Notebook para uso institucional e atendimento técnico",
+              "quantidade": "6",
+              "unitario": 700000,
+              "total": 4200000
+            },
+            {
+              "descricao": "Saldo remanescente para futura suplementação e aquisições complementares de capital (equipamentos e material permanente) para aparelhamento e modernização da Ouvidoria de Serviços Penais.",
+              "quantidade": "1",
+              "unitario": 10120021,
+              "total": 10120021
+            }
+          ],
+          "after": [
+            {
+              "descricao": "Cadeira de escritório destinada à equipe ou ao atendimento dos usuários",
+              "quantidade": "12",
+              "unitario": 200000,
+              "total": 2400000
+            },
+            {
+              "descricao": "Televisão (TV) para apresentações, monitoramento e capacitação",
+              "quantidade": "3",
+              "unitario": 300000,
+              "total": 900000
+            },
+            {
+              "descricao": "Notebook para uso institucional e atendimento técnico",
+              "quantidade": "6",
+              "unitario": 700000,
+              "total": 4200000
+            },
+            {
+              "descricao": "Saldo remanescente para futura suplementação e aquisições complementares de capital (equipamentos e material permanente) para aparelhamento e modernização da Ouvidoria de Serviços Penais.",
+              "quantidade": "1",
+              "unitario": 10120021,
+              "total": 10120021
+            },
+            {
+              "descricao": "Mesa ou estação de trabalho destinada à equipe da Ouvidoria de Serviços Penais.",
+              "quantidade": "6",
+              "unitario": 200000,
+              "total": 1200000
+            },
+            {
+              "descricao": "Descrição: Armário ou arquivo com chave para guarda de documentos e informações sensíveis",
+              "quantidade": "5",
+              "unitario": 240000,
+              "total": 1200000
+            }
+          ]
+        },
+        {
+          "numero": "35548/2026",
+          "uf": "DF",
+          "field": "pad",
+          "before": [
+            {
+              "descricao": "Computador tipo I, mini desktop, Processador Intel I5-13400 10 Núcleos, 16 Threads, 1.8GHZ / 4.6 GHZ, Smart Cache 20MB + 9.5 MB cache L2, TDP 65w. DDR 4 SDRAM 8 Gb, instalados em 1 pente (1x8gb), operação mínima efetiva a 3200MHz; mínimo 2 s slots expansíveis a 32 GB. Acompanha licença OEM do sistemaoperacional Microsoft® Windows 11 Professional de 64 bits, ou versão mais recente, no idioma Português Brasil, com chave de instalação (KEY) presente na BIOS do equipamento, com mídia de recuperação ou oferecer a opção de restauraçãoatravés de partição do SSD do equipamento ou em nuvem; licença perpétua do Microsoft Office 2021 Professional FPP, ou superior, na modalidade licenciamento por volume, pré-instalados.",
+              "quantidade": "6",
+              "unitario": 539540,
+              "total": 3237240
+            },
+            {
+              "descricao": "Poltrona tipo decorativa, tecido em couro ou courino, cor preta, não reclinável e nem estampada, encosto, com formato levemente adaptado ao corpo permitindo proteção para a região lombar, estilo retrô ou moderno, capacidade de até 120kg. Dimensões aproximadas: 75 cm de altura × 57cm de largura × 75 cm de profundidade.",
+              "quantidade": "8",
+              "unitario": 49160,
+              "total": 393280
+            },
+            {
+              "descricao": "Cadeira interlocutor",
+              "quantidade": "10",
+              "unitario": 75430,
+              "total": 754300
+            },
+            {
+              "descricao": "Televisor tamanho tela 85, 110/220 W, smart tv, 4 k, wifi, entradas hdmi/usb, conversor, tela led, controle remoto.",
+              "quantidade": "1",
+              "unitario": 735859,
+              "total": 735859
+            },
+            {
+              "descricao": "Fragmentadora de papel, capacidade de triturar até 10 folhas A4 por vez, para fragmentar também cartões, CDs e DVDs, depósito de resíduos integrado, nível de segurança de no mínimo P2, com proteção contra superaquecimento do motor, bivolt ou 220V.",
+              "quantidade": "1",
+              "unitario": 47000,
+              "total": 47000
+            },
+            {
+              "descricao": "Mesa reta em MDF, pés em aço inoxidável, medindo750x600x1400mm.",
+              "quantidade": "5",
+              "unitario": 39999,
+              "total": 199995
+            },
+            {
+              "descricao": "Porta de correr para divisória, em painel de fibra de madeira ou material de características técnicas equivalentes, em cor clara, compatível com os painéis da divisória e todos os itens necessários para a instalação.",
+              "quantidade": "1",
+              "unitario": 38433,
+              "total": 38433
+            },
+            {
+              "descricao": "Notebook, processador AMD Ryzen 7-5825U, 8 Núcleos, 16 Threads, 2 GHz até 4.5 Ghz, cache L1 512KB, cache l2 4MB, cache L3 16 MB, TDP 15W, 7nn, 64 Bits, 8 núcleos e 12 threads; compatíveis com as tecnologias AVX e AVX2; memória RAM DDR 4 SDRAM de no mínimo (1x) 8 Gb com operação mínima efetiva a 3.200MHz; expansível a 32 GB; armazenamento interno contendo 1 unidade de estado sólido (SSD) comcapacidade de 500GB M.2 NVMe e taxa de leitura e gravação sequencial igual ou superior a 3000MB/s; SSD M.2 NVMe 512GB Gen3x4 Teamgroup",
+              "quantidade": "4",
+              "unitario": 588232,
+              "total": 2352928
+            },
+            {
+              "descricao": "Kit com 02 microfones sem fio por microfone de mão com transmissor sem fio embutido, receptor sem fio, alcance de até 30m, compatível com caixas de som bluetooth, autonomia de pelo menos 12h.",
+              "quantidade": "2",
+              "unitario": 80034,
+              "total": 160068
+            },
+            {
+              "descricao": "Sofá de dois lugares revestido em courino, preferencialmente na cor marrom, dimensões aproximadas 150 cm de largura × 80 cm de profundidade × 81 cm de altura.",
+              "quantidade": "1",
+              "unitario": 118167,
+              "total": 118167
+            },
+            {
+              "descricao": "Ar condicionado, 12.000 BTUs/h, gas ecológico R410A ou R32, tipo split hi-wall, 220V, tecnologia inverter, com fiação e material necessário para instalação.",
+              "quantidade": "2",
+              "unitario": 248000,
+              "total": 496000
+            },
+            {
+              "descricao": "Armário escritório, com compartimentos para armazenamento e 2 portas, em MDP, MDF ou material de resistência e acabamento equivalentes, dimensões aproximadas: 0,80 m de largura × 0,50 m de profundidade × 1,60 m de altura.",
+              "quantidade": "3",
+              "unitario": 74167,
+              "total": 222501
+            },
+            {
+              "descricao": "Divisória com espaço para porta e isolamento acústico, em cor clara e todos os itens necessários para a instalação das divisória, bem como a manta para isolamento acústico, que será integrada às divisórias.",
+              "quantidade": "12",
+              "unitario": 28339,
+              "total": 340068
+            },
+            {
+              "descricao": "Gaveteiro volante, com 3 gavetas, sendo 1 gavetão, sem puxador, com fechadura na primeira gaveta, em MDF, medindo 600x400x500mm.",
+              "quantidade": "5",
+              "unitario": 32000,
+              "total": 160000
+            },
+            {
+              "descricao": "Mesa, tipo diretor, formato em L, em MDF, pés quadrados vazados, armário pedestal lateral com 1 porta, 3 gavetas e 2 prateleiras, mesa medindo 750x1600x600mm, armário medindo 700x1600x600mm.",
+              "quantidade": "1",
+              "unitario": 185000,
+              "total": 185000
+            },
+            {
+              "descricao": "Quadro branco, chapa de MDF, moldura em alumínio, com suportepara apagador, com kit para instalação na parede, medindo 120x90cm.",
+              "quantidade": "1",
+              "unitario": 7810,
+              "total": 7810
+            },
+            {
+              "descricao": "Mesa, som 8 canais profissional digital misturador, bivolt ou220v, bluetooth, equalizador, com entrada para microfone.",
+              "quantidade": "1",
+              "unitario": 250566,
+              "total": 250566
+            },
+            {
+              "descricao": "Mesa lateral de apoio, formato quadrado, dimensões aproximadas 60 cm de largura × 60 cm de profundidade × 65 cm de altura.",
+              "quantidade": "4",
+              "unitario": 59430,
+              "total": 237720
+            },
+            {
+              "descricao": "Cadeira dobrável em plástico rígido, capacidade para suportar até 110 kg, adequada para áreas de lazer e eventos.Estrutura e assento na cor preta, com design funcional, leve e resistente, de fácil transporte e armazenamento. Superfície lisa e de fácil higienização, garantindo durabilidade e segurança ao usuário.",
+              "quantidade": "10",
+              "unitario": 10999,
+              "total": 109990
+            },
+            {
+              "descricao": "Divisórias para mesas, MDP, revestido em laminado melamínicotexturizado na cor MAPLE ou Similar, compatível com o mobiliário existente, nas duasfaces; x Acabamento RETO em PVC, de 3 mm, cor MAPLE ou Similar; dimensõesaproximadas: 0,80 m x 0,015 m x 0,60 m (largura x espessura x altura).",
+              "quantidade": "3",
+              "unitario": 17667,
+              "total": 53001
+            },
+            {
+              "descricao": "Aparador buffet, 2 a 4 portas, medidas aprox.75 cm (a) x 90 cm (l) x 33 cm (p); peso suportado de 20 kg, distribuídos; prateleira interna; dobradiças metálicas; produzido em mdp/mdf.",
+              "quantidade": "2",
+              "unitario": 42535,
+              "total": 85070
+            },
+            {
+              "descricao": "webcam hd 720p, 30 fps, microfone integrado, resolução máxima de vídeo 1280px x 720px, tipo de resolução máxima de vídeo hd, imagem com resolução de 1 mpx, interface usb 2.0, funciona com windows, linux, macos, adequada para notebook, desktop pc, compatível com skype, zoom, webex, microsoft teams, google meet, hangouts, wechat inclui clipe, adequada para videoconferências",
+              "quantidade": "6",
+              "unitario": 4500,
+              "total": 27000
+            },
+            {
+              "descricao": "Kit com 2 caixas de som ativas, 2 pedestais/hastes, cabos, potência de 700 W RMS, alto-falante woofer, bluetooth, bivolt ou 220v, cabos de 10mts, suporte com 2 ângulos para haste em aço carbono na cor preta, altura regulável. Ambas as caixas devem ser acompanhadas pelas hastes.",
+              "quantidade": "1",
+              "unitario": 388376,
+              "total": 388376
+            },
+            {
+              "descricao": "Monitores LED de tamanho mínimo de 23.8 polegadas; Tela 100% plana de LED ou IPS; Resolução suportada no mínimo FULL HD 1920 x 1080; Taxa de atualização no mínimo 60Hz; Proporção 16:10 ou 16:9; Bivolt (110v/220v); Brilho mínimo de 250CD/M2; Suporte mínimo a 16,7 milhões de cores.",
+              "quantidade": "6",
+              "unitario": 76501,
+              "total": 459006
+            },
+            {
+              "descricao": "Saldo de economicidade",
+              "quantidade": "1",
+              "unitario": 162688,
+              "total": 162688
+            },
+            {
+              "descricao": "Ar condicionado para espaço de capacitação e sala multifuncional, 30.000 BTUs/h, gas ecológico R410A ou R32, tipo split hi-wall, 220V, tecnologia inverter, com fiação ematerial necessário para instalação.",
+              "quantidade": "4",
+              "unitario": 667770,
+              "total": 2671080
+            },
+            {
+              "descricao": "Suporte de televisao em aço, tipo vesa fixo, para tv '85'.",
+              "quantidade": "1",
+              "unitario": 18684,
+              "total": 18684
+            },
+            {
+              "descricao": "Poltrona de auditório com prancheta individual escamoteável,pés de aço de apoiar (base móvel), pintura eletrostática, capacidade de até 120kg.",
+              "quantidade": "45",
+              "unitario": 133797,
+              "total": 6020865
+            },
+            {
+              "descricao": "Mesa dobrável, tipo maleta, retangular, dimensões mínimas aberto (C x L x A): 180 x 70 x 74 cm, estrutura leve e resistente, convertível em maleta com alça para transporte. Pés retráteis com sistema de travamento, adequada para uso em camping, eventos, áreas de lazer ou ambientes externos, fácil de montar, transportar e armazenar.",
+              "quantidade": "2",
+              "unitario": 43663,
+              "total": 87326
+            }
+          ],
+          "after": [
+            {
+              "descricao": "Mesa reta em MDF, pés em aço inoxidável, medindo750x600x1400mm.",
+              "quantidade": "5",
+              "unitario": 39999,
+              "total": 199995
+            },
+            {
+              "descricao": "Mesa dobrável, tipo maleta, retangular, dimensões mínimas aberto (C x L x A): 180 x 70 x 74 cm, estrutura leve e resistente, convertível em maleta com alça para transporte. Pés retráteis com sistema de travamento, adequada para uso em camping, eventos, áreas de lazer ou ambientes externos, fácil de montar, transportar e armazenar.",
+              "quantidade": "2",
+              "unitario": 43663,
+              "total": 87326
+            },
+            {
+              "descricao": "Cadeira dobrável em plástico rígido, capacidade para suportar até 110 kg, adequada para áreas de lazer e eventos.Estrutura e assento na cor preta, com design funcional, leve e resistente, de fácil transporte e armazenamento. Superfície lisa e de fácil higienização, garantindo durabilidade e segurança ao usuário.",
+              "quantidade": "10",
+              "unitario": 10999,
+              "total": 109990
+            },
+            {
+              "descricao": "Poltrona de auditório com prancheta individual escamoteável,pés de aço de apoiar (base móvel), pintura eletrostática, capacidade de até 120kg.",
+              "quantidade": "45",
+              "unitario": 133797,
+              "total": 6020865
+            },
+            {
+              "descricao": "Divisórias para mesas, MDP, revestido em laminado melamínicotexturizado na cor MAPLE ou Similar, compatível com o mobiliário existente, nas duasfaces; x Acabamento RETO em PVC, de 3 mm, cor MAPLE ou Similar; dimensõesaproximadas: 0,80 m x 0,015 m x 0,60 m (largura x espessura x altura).",
+              "quantidade": "3",
+              "unitario": 17667,
+              "total": 53001
+            },
+            {
+              "descricao": "Fragmentadora de papel, capacidade de triturar até 10 folhas A4 por vez, para fragmentar também cartões, CDs e DVDs, depósito de resíduos integrado, nível de segurança de no mínimo P2, com proteção contra superaquecimento do motor, bivolt ou 220V.",
+              "quantidade": "1",
+              "unitario": 47000,
+              "total": 47000
+            },
+            {
+              "descricao": "Ar condicionado para espaço de capacitação e sala multifuncional, 30.000 BTUs/h, gas ecológico R410A ou R32, tipo split hi-wall, 220V, tecnologia inverter, com fiação ematerial necessário para instalação.",
+              "quantidade": "4",
+              "unitario": 667770,
+              "total": 2671080
+            },
+            {
+              "descricao": "Cadeira interlocutor",
+              "quantidade": "10",
+              "unitario": 75430,
+              "total": 754300
+            },
+            {
+              "descricao": "Aparador buffet, 2 a 4 portas, medidas aprox.75 cm (a) x 90 cm (l) x 33 cm (p); peso suportado de 20 kg, distribuídos; prateleira interna; dobradiças metálicas; produzido em mdp/mdf.",
+              "quantidade": "2",
+              "unitario": 42535,
+              "total": 85070
+            },
+            {
+              "descricao": "Televisor tamanho tela 85, 110/220 W, smart tv, 4 k, wifi, entradas hdmi/usb, conversor, tela led, controle remoto.",
+              "quantidade": "1",
+              "unitario": 735859,
+              "total": 735859
+            },
+            {
+              "descricao": "Kit com 2 caixas de som ativas, 2 pedestais/hastes, cabos, potência de 700 W RMS, alto-falante woofer, bluetooth, bivolt ou 220v, cabos de 10mts, suporte com 2 ângulos para haste em aço carbono na cor preta, altura regulável. Ambas as caixas devem ser acompanhadas pelas hastes.",
+              "quantidade": "1",
+              "unitario": 388376,
+              "total": 388376
+            },
+            {
+              "descricao": "Kit com 02 microfones sem fio por microfone de mão com transmissor sem fio embutido, receptor sem fio, alcance de até 30m, compatível com caixas de som bluetooth, autonomia de pelo menos 12h.",
+              "quantidade": "2",
+              "unitario": 80034,
+              "total": 160068
+            },
+            {
+              "descricao": "Saldo de economicidade",
+              "quantidade": "1",
+              "unitario": 162688,
+              "total": 162688
+            },
+            {
+              "descricao": "Mesa, som 8 canais profissional digital misturador, bivolt ou220v, bluetooth, equalizador, com entrada para microfone.",
+              "quantidade": "1",
+              "unitario": 250566,
+              "total": 250566
+            },
+            {
+              "descricao": "Suporte de televisao em aço, tipo vesa fixo, para tv '85'.",
+              "quantidade": "1",
+              "unitario": 18684,
+              "total": 18684
+            },
+            {
+              "descricao": "Porta de correr para divisória, em painel de fibra de madeira ou material de características técnicas equivalentes, em cor clara, compatível com os painéis da divisória e todos os itens necessários para a instalação.",
+              "quantidade": "1",
+              "unitario": 38433,
+              "total": 38433
+            },
+            {
+              "descricao": "Mesa lateral de apoio, formato quadrado, dimensões aproximadas 60 cm de largura × 60 cm de profundidade × 65 cm de altura.",
+              "quantidade": "4",
+              "unitario": 59430,
+              "total": 237720
+            },
+            {
+              "descricao": "Poltrona tipo decorativa, tecido em couro ou courino, cor preta, não reclinável e nem estampada, encosto, com formato levemente adaptado ao corpo permitindo proteção para a região lombar, estilo retrô ou moderno, capacidade de até 120kg. Dimensões aproximadas: 75 cm de altura × 57cm de largura × 75 cm de profundidade.",
+              "quantidade": "8",
+              "unitario": 49160,
+              "total": 393280
+            },
+            {
+              "descricao": "webcam hd 720p, 30 fps, microfone integrado, resolução máxima de vídeo 1280px x 720px, tipo de resolução máxima de vídeo hd, imagem com resolução de 1 mpx, interface usb 2.0, funciona com windows, linux, macos, adequada para notebook, desktop pc, compatível com skype, zoom, webex, microsoft teams, google meet, hangouts, wechat inclui clipe, adequada para videoconferências",
+              "quantidade": "6",
+              "unitario": 4500,
+              "total": 27000
+            },
+            {
+              "descricao": "Sofá de dois lugares revestido em courino, preferencialmente na cor marrom, dimensões aproximadas 150 cm de largura × 80 cm de profundidade × 81 cm de altura.",
+              "quantidade": "1",
+              "unitario": 118167,
+              "total": 118167
+            },
+            {
+              "descricao": "Armário escritório, com compartimentos para armazenamento e 2 portas, em MDP, MDF ou material de resistência e acabamento equivalentes, dimensões aproximadas: 0,80 m de largura × 0,50 m de profundidade × 1,60 m de altura.",
+              "quantidade": "3",
+              "unitario": 74167,
+              "total": 222501
+            },
+            {
+              "descricao": "Ar condicionado, 12.000 BTUs/h, gas ecológico R410A ou R32, tipo split hi-wall, 220V, tecnologia inverter, com fiação e material necessário para instalação.",
+              "quantidade": "2",
+              "unitario": 248000,
+              "total": 496000
+            },
+            {
+              "descricao": "Quadro branco, chapa de MDF, moldura em alumínio, com suportepara apagador, com kit para instalação na parede, medindo 120x90cm.",
+              "quantidade": "1",
+              "unitario": 7810,
+              "total": 7810
+            },
+            {
+              "descricao": "Mesa, tipo diretor, formato em L, em MDF, pés quadrados vazados, armário pedestal lateral com 1 porta, 3 gavetas e 2 prateleiras, mesa medindo 750x1600x600mm, armário medindo 700x1600x600mm.",
+              "quantidade": "1",
+              "unitario": 185000,
+              "total": 185000
+            },
+            {
+              "descricao": "Computador tipo I, mini desktop, Processador Intel I5-13400 10 Núcleos, 16 Threads, 1.8GHZ / 4.6 GHZ, Smart Cache 20MB + 9.5 MB cache L2, TDP 65w. DDR 4 SDRAM 8 Gb, instalados em 1 pente (1x8gb), operação mínima efetiva a 3200MHz; mínimo 2 s slots expansíveis a 32 GB. Acompanha licença OEM do sistemaoperacional Microsoft® Windows 11 Professional de 64 bits, ou versão mais recente, no idioma Português Brasil, com chave de instalação (KEY) presente na BIOS do equipamento, com mídia de recuperação ou oferecer a opção de restauraçãoatravés de partição do SSD do equipamento ou em nuvem; licença perpétua do Microsoft Office 2021 Professional FPP, ou superior, na modalidade licenciamento por volume, pré-instalados.",
+              "quantidade": "6",
+              "unitario": 539540,
+              "total": 3237240
+            },
+            {
+              "descricao": "Divisória com espaço para porta e isolamento acústico, em cor clara e todos os itens necessários para a instalação das divisória, bem como a manta para isolamento acústico, que será integrada às divisórias.",
+              "quantidade": "12",
+              "unitario": 28339,
+              "total": 340068
+            },
+            {
+              "descricao": "Gaveteiro volante, com 3 gavetas, sendo 1 gavetão, sem puxador, com fechadura na primeira gaveta, em MDF, medindo 600x400x500mm.",
+              "quantidade": "5",
+              "unitario": 32000,
+              "total": 160000
+            },
+            {
+              "descricao": "Monitores LED de tamanho mínimo de 23.8 polegadas; Tela 100% plana de LED ou IPS; Resolução suportada no mínimo FULL HD 1920 x 1080; Taxa de atualização no mínimo 60Hz; Proporção 16:10 ou 16:9; Bivolt (110v/220v); Brilho mínimo de 250CD/M2; Suporte mínimo a 16,7 milhões de cores.",
+              "quantidade": "6",
+              "unitario": 76501,
+              "total": 459006
+            },
+            {
+              "descricao": "Notebook, processador AMD Ryzen 7-5825U, 8 Núcleos, 16 Threads, 2 GHz até 4.5 Ghz, cache L1 512KB, cache l2 4MB, cache L3 16 MB, TDP 15W, 7nn, 64 Bits, 8 núcleos e 12 threads; compatíveis com as tecnologias AVX e AVX2; memória RAM DDR 4 SDRAM de no mínimo (1x) 8 Gb com operação mínima efetiva a 3.200MHz; expansível a 32 GB; armazenamento interno contendo 1 unidade de estado sólido (SSD) comcapacidade de 500GB M.2 NVMe e taxa de leitura e gravação sequencial igual ou superior a 3000MB/s; SSD M.2 NVMe 512GB Gen3x4 Teamgroup",
+              "quantidade": "4",
+              "unitario": 588232,
+              "total": 2352928
+            }
+          ]
+        },
+        {
+          "numero": "35405/2026",
+          "uf": "PE",
+          "field": "pad",
+          "before": [
+            {
+              "descricao": "Desktop(Computadorde mesa comperiféricos)",
+              "quantidade": "8",
+              "unitario": 618000,
+              "total": 4944000
+            },
+            {
+              "descricao": "Arcondicionado12.000 BTUsparaclimatizaçãodo ambientedeatendimento",
+              "quantidade": "2",
+              "unitario": 298000,
+              "total": 596000
+            },
+            {
+              "descricao": "Impressora ouequipamentomultifuncionaldestinado àsatividades daouvidoria",
+              "quantidade": "2",
+              "unitario": 385000,
+              "total": 770000
+            },
+            {
+              "descricao": "Câmerafotográficainstitucional ougravadordigitaldestinado aoregistrotécnico deinspeções evisitas",
+              "quantidade": "3",
+              "unitario": 518674,
+              "total": 1556021
+            },
+            {
+              "descricao": "Armário ouarquivo comchave paraguarda dedocumentos einformaçõessensíveis",
+              "quantidade": "5",
+              "unitario": 155000,
+              "total": 775000
+            },
+            {
+              "descricao": "Mesa ouestação detrabalhodestinada àequipe daOuvidoria deServiçosPenais.",
+              "quantidade": "6",
+              "unitario": 125000,
+              "total": 750000
+            },
+            {
+              "descricao": "Notebook parausoinstitucional eatendimentotécnico",
+              "quantidade": "9",
+              "unitario": 625000,
+              "total": 5625000
+            },
+            {
+              "descricao": "Cadeira deescritóriodestinada àequipe ou aoatendimentodos usuários",
+              "quantidade": "14",
+              "unitario": 78000,
+              "total": 1092000
+            },
+            {
+              "descricao": "Fragmentadorade papeldestinada àeliminaçãosegura dedocumentos eà proteção deinformaçõessensíveis",
+              "quantidade": "2",
+              "unitario": 168000,
+              "total": 336000
+            },
+            {
+              "descricao": "Televisão (TV)paraapresentações,monitoramentoe capacitação",
+              "quantidade": "2",
+              "unitario": 325000,
+              "total": 650000
+            },
+            {
+              "descricao": "Tabletdestinado aoatendimento,às inspeções,às visitastécnicas ou àcoletainstitucional deinformações",
+              "quantidade": "8",
+              "unitario": 312000,
+              "total": 2496000
+            },
+            {
+              "descricao": "Cadeiralongarina pararecepção eacomodaçãodo público /usuários",
+              "quantidade": "4",
+              "unitario": 115000,
+              "total": 460000
+            }
+          ],
+          "after": [
+            {
+              "descricao": "Notebook parausoinstitucional eatendimentotécnico",
+              "quantidade": "9",
+              "unitario": 625000,
+              "total": 5625000
+            },
+            {
+              "descricao": "Armário ouarquivo comchave paraguarda dedocumentos einformaçõessensíveis",
+              "quantidade": "5",
+              "unitario": 155000,
+              "total": 775000
+            },
+            {
+              "descricao": "Mesa ouestação detrabalhodestinada àequipe daOuvidoria deServiçosPenais.",
+              "quantidade": "6",
+              "unitario": 125000,
+              "total": 750000
+            },
+            {
+              "descricao": "Televisão (TV)paraapresentações,monitoramentoe capacitação",
+              "quantidade": "2",
+              "unitario": 325000,
+              "total": 650000
+            },
+            {
+              "descricao": "Desktop(Computadorde mesa comperiféricos)",
+              "quantidade": "8",
+              "unitario": 618000,
+              "total": 4944000
+            },
+            {
+              "descricao": "Fragmentadorade papeldestinada àeliminaçãosegura dedocumentos eà proteção deinformaçõessensíveis",
+              "quantidade": "2",
+              "unitario": 168000,
+              "total": 336000
+            },
+            {
+              "descricao": "Tabletdestinado aoatendimento,às inspeções,às visitastécnicas ou àcoletainstitucional deinformações",
+              "quantidade": "8",
+              "unitario": 312000,
+              "total": 2496000
+            },
+            {
+              "descricao": "Câmerafotográficainstitucional ougravadordigitaldestinado aoregistrotécnico deinspeções evisitas",
+              "quantidade": "3",
+              "unitario": 518674,
+              "total": 1556021
+            },
+            {
+              "descricao": "Arcondicionado12.000 BTUsparaclimatizaçãodo ambientedeatendimento",
+              "quantidade": "2",
+              "unitario": 298000,
+              "total": 596000
+            },
+            {
+              "descricao": "Cadeira deescritóriodestinada àequipe ou aoatendimentodos usuários",
+              "quantidade": "14",
+              "unitario": 78000,
+              "total": 1092000
+            },
+            {
+              "descricao": "Cadeiralongarina pararecepção eacomodaçãodo público /usuários",
+              "quantidade": "4",
+              "unitario": 115000,
+              "total": 460000
+            },
+            {
+              "descricao": "Impressora ouequipamentomultifuncionaldestinado àsatividades daouvidoria",
+              "quantidade": "2",
+              "unitario": 385000,
+              "total": 770000
+            }
+          ]
+        },
+        {
+          "numero": "35450/2026",
+          "uf": "MG",
+          "field": "pad",
+          "before": [
+            {
+              "descricao": "COMPUTADOR - MODELO: AVANCADO; SISTEMA OPERACIONAL: WINDOWS 11 PROF. 64 BITS (PT-BR); MEMORIA: 64GB; PROCESSADOR: ARQUITETURA X86 CORPORATIVA; ARMAZENAMENTO: SSD 1TB; MONITOR: 27 POLEGADAS",
+              "quantidade": "10",
+              "unitario": 1700000,
+              "total": 17000000
+            },
+            {
+              "descricao": "NOTEBOOK,NETBOOK E/OU ULTRAFINO - IDENTIFICACAO: PADRAO; SISTEMA OPERACIONAL: WINDOWS 11 PROF. 64 BITS (PT-BR); PROCESSADOR: ARQUITETURA X86 CORPORATIVA; ARMAZENAMENTO: SSD 1TB; MEMORIA: 16GB; TELA: 14 POLEGADAS; DISPOSITIVO: WEBCAM 1080P; ACESSORIOS: MOUSE OPTICO, MALETA, CABO COM TRAVA DE SEGURANCA",
+              "quantidade": "5",
+              "unitario": 600000,
+              "total": 3000000
+            },
+            {
+              "descricao": "SCANNER - TIPO: MESA; AREA DE DIGITALIZACAO: ATE 210X297MM (A4 TIPO I); RESOLUCAO: MINIMO 600 DPI / 48 BITS; INTERFACE: USB 3.0 COMPATIVEL COM 2.0; ACESSORIOS: SOFTWARE DE CAPTURA OCR PARA ODT OU DOC E PDF",
+              "quantidade": "1",
+              "unitario": 200000,
+              "total": 200000
+            },
+            {
+              "descricao": "IMPRESSORA MULTIFUNCIONAL - SISTEMA DE IMPRESSAO: LASER OU LED MONOCROMATICA; RESOLUCAO IMPRESSAO: MINIMA 1200 X 600 DPI; VELOCIDADE IMPRESSAO: 30 PPM",
+              "quantidade": "1",
+              "unitario": 270000,
+              "total": 270000
+            }
+          ],
+          "after": [
+            {
+              "descricao": "NOTEBOOK,NETBOOK E/OU ULTRAFINO - IDENTIFICACAO: PADRAO; SISTEMA OPERACIONAL: WINDOWS 11 PROF. 64 BITS (PT-BR); PROCESSADOR: ARQUITETURA X86 CORPORATIVA; ARMAZENAMENTO: SSD 1TB; MEMORIA: 16GB; TELA: 14 POLEGADAS; DISPOSITIVO: WEBCAM 1080P; ACESSORIOS: MOUSE OPTICO, MALETA, CABO COM TRAVA DE SEGURANCA",
+              "quantidade": "5",
+              "unitario": 600000,
+              "total": 3000000
+            },
+            {
+              "descricao": "COMPUTADOR - MODELO: AVANCADO; SISTEMA OPERACIONAL: WINDOWS 11 PROF. 64 BITS (PT-BR); MEMORIA: 64GB; PROCESSADOR: ARQUITETURA X86 CORPORATIVA; ARMAZENAMENTO: SSD 1TB; MONITOR: 27 POLEGADAS",
+              "quantidade": "10",
+              "unitario": 1700000,
+              "total": 17000000
+            },
+            {
+              "descricao": "SCANNER - TIPO: MESA; AREA DE DIGITALIZACAO: ATE 210X297MM (A4 TIPO I); RESOLUCAO: MINIMO 600 DPI / 48 BITS; INTERFACE: USB 3.0 COMPATIVEL COM 2.0; ACESSORIOS: SOFTWARE DE CAPTURA OCR PARA ODT OU DOC E PDF",
+              "quantidade": "1",
+              "unitario": 200000,
+              "total": 200000
+            },
+            {
+              "descricao": "IMPRESSORA MULTIFUNCIONAL - SISTEMA DE IMPRESSAO: LASER OU LED MONOCROMATICA; RESOLUCAO IMPRESSAO: MINIMA 1200 X 600 DPI; VELOCIDADE IMPRESSAO: 30 PPM",
+              "quantidade": "1",
+              "unitario": 270000,
+              "total": 270000
+            }
+          ]
+        },
+        {
+          "numero": "35151/2026",
+          "uf": "RN",
+          "field": "pad",
+          "before": [
+            {
+              "descricao": "Webcam Full HD",
+              "quantidade": "7",
+              "unitario": 22882,
+              "total": 160174
+            },
+            {
+              "descricao": "Notebook",
+              "quantidade": "3",
+              "unitario": 522933,
+              "total": 1568800
+            },
+            {
+              "descricao": "Valor Residual",
+              "quantidade": "1",
+              "unitario": 27985,
+              "total": 27985
+            },
+            {
+              "descricao": "Sofá de 2 lugares para sala de espera",
+              "quantidade": "1",
+              "unitario": 276950,
+              "total": 276950
+            },
+            {
+              "descricao": "Computador desktop completo",
+              "quantidade": "5",
+              "unitario": 246770,
+              "total": 1233850
+            },
+            {
+              "descricao": "Gravador de voz digital portátil",
+              "quantidade": "5",
+              "unitario": 95269,
+              "total": 476345
+            },
+            {
+              "descricao": "Armário baixo para escritório, 2 portas",
+              "quantidade": "4",
+              "unitario": 58400,
+              "total": 233601
+            },
+            {
+              "descricao": "Bebedouro elétrico de mesa (gelágua)",
+              "quantidade": "1",
+              "unitario": 62927,
+              "total": 62927
+            },
+            {
+              "descricao": "Licença perpétua de suíte de produtividade",
+              "quantidade": "8",
+              "unitario": 126652,
+              "total": 1013213
+            },
+            {
+              "descricao": "Scanner portátil",
+              "quantidade": "5",
+              "unitario": 127032,
+              "total": 635158
+            },
+            {
+              "descricao": "Cadeira fixa para atendimento ao público",
+              "quantidade": "10",
+              "unitario": 24065,
+              "total": 240650
+            },
+            {
+              "descricao": "Headset profissional binaural",
+              "quantidade": "6",
+              "unitario": 73234,
+              "total": 439406
+            },
+            {
+              "descricao": "Ar-condicionado Split",
+              "quantidade": "3",
+              "unitario": 273425,
+              "total": 820275
+            },
+            {
+              "descricao": "Gaveteiro de escritório",
+              "quantidade": "4",
+              "unitario": 61016,
+              "total": 244063
+            },
+            {
+              "descricao": "Mesa de escritório",
+              "quantidade": "5",
+              "unitario": 42587,
+              "total": 212937
+            },
+            {
+              "descricao": "Frigobar compacto",
+              "quantidade": "1",
+              "unitario": 111402,
+              "total": 111402
+            },
+            {
+              "descricao": "Armário alto para escritório, 2 portas",
+              "quantidade": "3",
+              "unitario": 90675,
+              "total": 272025
+            },
+            {
+              "descricao": "Monitor LED/LCD",
+              "quantidade": "5",
+              "unitario": 112076,
+              "total": 560382
+            },
+            {
+              "descricao": "Câmera fotográfica digital compacta",
+              "quantidade": "2",
+              "unitario": 143685,
+              "total": 287369
+            },
+            {
+              "descricao": "Forno micro-ondas",
+              "quantidade": "1",
+              "unitario": 86166,
+              "total": 86166
+            },
+            {
+              "descricao": "Mesa para estação de trabalho individual/telemarketing",
+              "quantidade": "1",
+              "unitario": 86429,
+              "total": 86429
+            },
+            {
+              "descricao": "Veículo hatch 0 km",
+              "quantidade": "1",
+              "unitario": 9887593,
+              "total": 9887593
+            },
+            {
+              "descricao": "Cafeteira elétrica em cápsulas",
+              "quantidade": "2",
+              "unitario": 57132,
+              "total": 114263
+            },
+            {
+              "descricao": "Cadeira de escritório ergonômica",
+              "quantidade": "6",
+              "unitario": 103392,
+              "total": 620354
+            },
+            {
+              "descricao": "Impressora laser monocromática",
+              "quantidade": "1",
+              "unitario": 347704,
+              "total": 347704
+            }
+          ],
+          "after": [
+            {
+              "descricao": "Câmera fotográfica digital compacta",
+              "quantidade": "2",
+              "unitario": 143685,
+              "total": 287369
+            },
+            {
+              "descricao": "Sofá de 2 lugares para sala de espera",
+              "quantidade": "1",
+              "unitario": 276950,
+              "total": 276950
+            },
+            {
+              "descricao": "Scanner portátil",
+              "quantidade": "5",
+              "unitario": 127032,
+              "total": 635158
+            },
+            {
+              "descricao": "Forno micro-ondas",
+              "quantidade": "1",
+              "unitario": 86166,
+              "total": 86166
+            },
+            {
+              "descricao": "Gravador de voz digital portátil",
+              "quantidade": "5",
+              "unitario": 95269,
+              "total": 476345
+            },
+            {
+              "descricao": "Monitor LED/LCD",
+              "quantidade": "5",
+              "unitario": 112076,
+              "total": 560382
+            },
+            {
+              "descricao": "Cafeteira elétrica em cápsulas",
+              "quantidade": "2",
+              "unitario": 57132,
+              "total": 114263
+            },
+            {
+              "descricao": "Armário baixo para escritório, 2 portas",
+              "quantidade": "4",
+              "unitario": 58400,
+              "total": 233601
+            },
+            {
+              "descricao": "Mesa para estação de trabalho individual/telemarketing",
+              "quantidade": "1",
+              "unitario": 86429,
+              "total": 86429
+            },
+            {
+              "descricao": "Webcam Full HD",
+              "quantidade": "7",
+              "unitario": 22882,
+              "total": 160174
+            },
+            {
+              "descricao": "Impressora laser monocromática",
+              "quantidade": "1",
+              "unitario": 347704,
+              "total": 347704
+            },
+            {
+              "descricao": "Notebook",
+              "quantidade": "3",
+              "unitario": 522933,
+              "total": 1568800
+            },
+            {
+              "descricao": "Valor Residual",
+              "quantidade": "1",
+              "unitario": 27985,
+              "total": 27985
+            },
+            {
+              "descricao": "Computador desktop completo",
+              "quantidade": "5",
+              "unitario": 246770,
+              "total": 1233850
+            },
+            {
+              "descricao": "Mesa de escritório",
+              "quantidade": "5",
+              "unitario": 42587,
+              "total": 212937
+            },
+            {
+              "descricao": "Cadeira fixa para atendimento ao público",
+              "quantidade": "10",
+              "unitario": 24065,
+              "total": 240650
+            },
+            {
+              "descricao": "Headset profissional binaural",
+              "quantidade": "6",
+              "unitario": 73234,
+              "total": 439406
+            },
+            {
+              "descricao": "Cadeira de escritório ergonômica",
+              "quantidade": "6",
+              "unitario": 103392,
+              "total": 620354
+            },
+            {
+              "descricao": "Veículo hatch 0 km",
+              "quantidade": "1",
+              "unitario": 9887593,
+              "total": 9887593
+            },
+            {
+              "descricao": "Frigobar compacto",
+              "quantidade": "1",
+              "unitario": 111402,
+              "total": 111402
+            },
+            {
+              "descricao": "Licença perpétua de suíte de produtividade",
+              "quantidade": "8",
+              "unitario": 126652,
+              "total": 1013213
+            },
+            {
+              "descricao": "Bebedouro elétrico de mesa (gelágua)",
+              "quantidade": "1",
+              "unitario": 62927,
+              "total": 62927
+            },
+            {
+              "descricao": "Armário alto para escritório, 2 portas",
+              "quantidade": "3",
+              "unitario": 90675,
+              "total": 272025
+            },
+            {
+              "descricao": "Ar-condicionado Split",
+              "quantidade": "3",
+              "unitario": 273425,
+              "total": 820275
+            },
+            {
+              "descricao": "Gaveteiro de escritório",
+              "quantidade": "4",
+              "unitario": 61016,
+              "total": 244063
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "at": "2026-09-27T19:12:20.929Z",
+      "date": "2026-09-27",
+      "source": "https://api-publica.transferegov.gestao.gov.br/downloads · sincronização completa (com PAD) · 4 arquivo(s) · extração reaproveitada pelo servidor",
+      "reconstructed": false,
+      "activity": [
+        {
+          "at": "2026-09-27T19:11:42.681Z",
+          "message": "Iniciando sincronização automática de propostas, PAD e textos oficiais."
+        },
+        {
+          "at": "2026-09-27T19:11:43.461Z",
+          "message": "Banco local carregado; consultando o Transferegov."
+        },
+        {
+          "at": "2026-09-27T19:11:43.461Z",
+          "message": "Consultando a lista de arquivos oficiais…"
+        },
+        {
+          "at": "2026-09-27T19:11:43.683Z",
+          "message": "Extração recente encontrada no cache local; preparando os dados…"
+        },
+        {
+          "at": "2026-09-27T19:11:43.683Z",
+          "message": "Consultando textos oficiais de 14 proposta(s)."
+        },
+        {
+          "at": "2026-09-27T19:11:43.684Z",
+          "message": "Consultando a lista de arquivos da origem…"
+        },
+        {
+          "at": "2026-09-27T19:11:43.684Z",
+          "message": "Consultando a lista para os textos oficiais…"
+        },
+        {
+          "at": "2026-09-27T19:11:43.732Z",
+          "message": "Baixando siconv_justificativas_proposta.zip…"
+        },
+        {
+          "at": "2026-09-27T19:11:43.732Z",
+          "message": "Baixando siconv_justificativas_proposta.zip…"
+        },
+        {
+          "at": "2026-09-27T19:11:43.734Z",
+          "message": "siconv_justificativas_proposta.zip: cópia local reutilizada (750836088 bytes)."
+        },
+        {
+          "at": "2026-09-27T19:11:43.734Z",
+          "message": "Usando a cópia já baixada de siconv_justificativas_proposta.zip (mesma geração)."
+        },
+        {
+          "at": "2026-09-27T19:11:43.734Z",
+          "message": "Lendo os textos das propostas…"
+        },
+        {
+          "at": "2026-09-27T19:11:43.734Z",
+          "message": "Lendo siconv_justificativas_proposta.zip e selecionando textos das propostas…"
+        },
+        {
+          "at": "2026-09-27T19:12:19.972Z",
+          "message": "siconv_justificativas_proposta.zip: 1158228 linha(s) lida(s); 14 proposta(s) com textos."
+        },
+        {
+          "at": "2026-09-27T19:12:19.982Z",
+          "message": "Gravando propostas, PAD e textos oficiais; 0 alteração(ões) de dados e 0 alteração(ões) de textos."
+        },
+        {
+          "at": "2026-09-27T19:12:20.929Z",
+          "message": "Gravação confirmada no banco local."
+        }
+      ],
+      "changes": []
     }
   ]
 };
