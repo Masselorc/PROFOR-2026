@@ -97,10 +97,6 @@
     const origemArquivo=location.protocol==='file:';
     const menuServidor=$('#server-open');
     if(menuServidor)menuServidor.hidden=!origemArquivo || publico;
-    const menuImport=$('#import-open');
-    if(menuImport)menuImport.hidden=publico;
-    const menuBackup=$('#backup-open');
-    if(menuBackup)menuBackup.hidden=publico;
     const menuDeleted=$('#nav-deleted');
     if(menuDeleted)menuDeleted.hidden=publico;
     const menuRecords=$('#nav-records');
@@ -1738,10 +1734,6 @@
   }
   const modalCloseBtn=$('#modal-close');
   if(modalCloseBtn)modalCloseBtn.onclick=closeModal;
-  const importOpenBtn=$('#import-open');
-  if(importOpenBtn)importOpenBtn.onclick=()=>{if(state)syncDialog();};
-  const backupOpenBtn=$('#backup-open');
-  if(backupOpenBtn)backupOpenBtn.onclick=()=>{if(state)backupDialog();};
   window.addEventListener('hashchange',route);window.addEventListener('beforeunload',ev=>{if(modalDirty || busy || syncRun){ev.preventDefault();ev.returnValue='';}});
   (async()=>{try{await ProforStore.open();state=D.validateState(await ProforStore.read());$('#save-state').textContent='Banco do workspace disponível';renderSideNav();route();runAutoSyncFromQuery();}catch(err){$('#save-state').textContent='Banco indisponível';$('#main').innerHTML=`<h1>Não foi possível abrir o banco local</h1><div class="info error">${e(err.message)}</div><p>Abra INICIAR SISTEMA.cmd na pasta do workspace. Aguarde o OneDrive concluir a sincronização antes de usar esta máquina.</p>`;}})();
 })();
