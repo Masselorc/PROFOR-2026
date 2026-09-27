@@ -304,9 +304,7 @@
     const pendingCount=ps.reduce((n,p)=>n+D.pending(p).length,0);
     const apt=ps.filter(p=>p.conclusion && !D.blockers(p,true).length).length;
     const enviadas=new Set(ps.filter(p=>D.sourceState(p.imported).key==='enviada').map(p=>p.imported.uf)).size;
-    const acoesPainel=isReadOnly()
-      ? button('⇩ Exportação','export')
-      : `${button('⇩ Exportação','export')}${button('↻ Sincronização','sync','','primary')}`;
+    const acoesPainel=isReadOnly()?'':button('↻ Sincronização','sync','','primary');
     const subPainel=isReadOnly()
       ? 'Consulta pública das propostas cadastradas e análises técnicas registradas.'
       : 'Acompanhe a análise, as diligências e a preparação para celebração.';
@@ -699,7 +697,7 @@
       </div>
       ${renderResultSection(p)}
       ${D.pending(p).length?`<div class="info error">${D.pending(p).length} pendência(s) marcada(s) como diligência sem registro ativo. ${isReadOnly()?'':'<a href="#proposta/'+e(p.id)+'/diligencias">Cadastrar diligência</a>'}</div>`:''}
-      <nav class="tabs dim-tabs" aria-label="Seções da proposta">${Object.entries(tabNames).filter(([id])=>id!=='merito').map(([id,name])=>`<a class="${id===activeTab?'active':''}" ${id===activeTab?'aria-current="page"':''} href="#proposta/${e(p.id)}/${id}">${name}</a>`).join('')}</nav>${transferegovBox(p)}<div id="tab-content"></div>`;
+      <nav class="tabs dim-tabs" aria-label="Seções da proposta">${Object.entries(tabNames).filter(([id])=>id!=='merito').map(([id,name])=>`<a data-tab="${id}" class="${id===activeTab?'active':''}" ${id===activeTab?'aria-current="page"':''} href="#proposta/${e(p.id)}/${id}">${name}</a>`).join('')}</nav>${transferegovBox(p)}<div id="tab-content"></div>`;
     if(activeTab==='dados')renderData(p);
     else if(activeTab==='diligencias')renderDiligences(p);
     else if(activeTab==='historico')renderHistory(p);

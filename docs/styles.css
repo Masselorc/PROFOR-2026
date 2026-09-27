@@ -219,6 +219,18 @@ button.pad-analyze{min-height:34px;padding:4px 10px;font-size:.8125rem}
 .tabs.dim-tabs a:hover{background:#f1f5f6;color:var(--ink)}
 .tabs.dim-tabs a.active{color:var(--brand);font-weight:700;border-bottom-color:var(--brand);background:#fff;box-shadow:0 -1px 2px rgba(16,62,73,0.03)}
 
+/* Abas das propostas: cor própria por finalidade, no mesmo tom suave da navegação. */
+.tabs.dim-tabs a[data-tab]{border:1px solid var(--tab-line);border-bottom:3px solid transparent;border-radius:7px;background:var(--tab-soft);color:var(--tab-ink)}
+.tabs.dim-tabs a[data-tab="dados"]{--tab-ink:#155b67;--tab-soft:#edf5f6;--tab-hover:#d9eaed;--tab-line:#c8dde1}
+.tabs.dim-tabs a[data-tab="analise"]{--tab-ink:#245f9e;--tab-soft:#eef4fb;--tab-hover:#dceafa;--tab-line:#cadced}
+.tabs.dim-tabs a[data-tab="pad"]{--tab-ink:#805117;--tab-soft:#fff8eb;--tab-hover:#fcebd0;--tab-line:#efdfc0}
+.tabs.dim-tabs a[data-tab="proposta"]{--tab-ink:#245f9e;--tab-soft:#eef4fb;--tab-hover:#dceafa;--tab-line:#cadced}
+.tabs.dim-tabs a[data-tab="formalizacao"]{--tab-ink:#176040;--tab-soft:#eef7f1;--tab-hover:#dcefe3;--tab-line:#cae4d3}
+.tabs.dim-tabs a[data-tab="diligencias"]{--tab-ink:#a42c37;--tab-soft:#fdf1f2;--tab-hover:#f9e1e4;--tab-line:#efcdd1}
+.tabs.dim-tabs a[data-tab="historico"]{--tab-ink:#5d5685;--tab-soft:#f4f2fa;--tab-hover:#e9e6f4;--tab-line:#dcd8ed}
+.tabs.dim-tabs a[data-tab]:hover{background:var(--tab-hover);color:var(--tab-ink);border-color:var(--tab-ink)}
+.tabs.dim-tabs a[data-tab].active{color:var(--tab-ink);background:var(--tab-hover);border-color:var(--tab-ink);border-bottom-color:var(--tab-ink);box-shadow:0 1px 3px rgba(16,62,73,.1)}
+
 /* Atalhos para o Transferegov (Acesso Livre), à esquerda abaixo das abas da proposta. */
 .tgov-box{margin:-8px 0 20px 0;display:flex;align-items:center;justify-content:flex-start;gap:12px;flex-wrap:wrap}
 .tgov-brand{font-size:.72rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);opacity:.75;display:inline-flex;align-items:baseline;gap:6px}
