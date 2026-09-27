@@ -9,8 +9,14 @@ const store = require('./workspace-store.cjs').createStore(path.join(__dirname,'
 
 const PORT = 8766;
 const HOSTS = new Set(['127.0.0.1:8766', 'localhost:8766', '[::1]:8766']);
-const allowed = new Set(['PROFOR_2026.html', 'styles.css', 'domain.js', 'bandeiras-uf.js', 'storage.js', 'transferegov.js', 'report.js', 'app.js']);
-const mime = { '.html': 'text/html; charset=utf-8', '.css': 'text/css; charset=utf-8', '.js': 'text/javascript; charset=utf-8' };
+const allowed = new Set(['PROFOR_2026.html', 'styles.css', 'domain.js', 'bandeiras-uf.js', 'storage.js', 'transferegov.js', 'report.js', 'programa.js', 'app.js']);
+const programFiles = new Set([
+  'programa/tutorial-concedente-analise.pdf', 'programa/edital-37-dou.pdf',
+  'programa/portaria-327-2024.pdf', 'programa/decreto-11531-2023.pdf',
+  'programa/in-65-2021.pdf', 'programa/tutorial-envio-proposta.pdf',
+  'programa/requisitos-celebracao-pc28.pdf', 'programa/edital-38-sei.html'
+]);
+const mime = { '.html': 'text/html; charset=utf-8', '.css': 'text/css; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.pdf': 'application/pdf' };
 const CSP = "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'";
 const progressRuns = new Map();
 function clearOldProgress() {
@@ -184,16 +190,17 @@ const server = http.createServer((req, res) => {
 
   let name;
   try { name = decodeURIComponent(url.pathname).slice(1) || 'PROFOR_2026.html'; } catch { res.writeHead(400); res.end(); return; }
-  if (!allowed.has(name)) { res.writeHead(404); res.end(); return; }
+  if (!allowed.has(name) && !programFiles.has(name)) { res.writeHead(404); res.end(); return; }
   res.writeHead(200, {
     'Content-Type': mime[path.extname(name)],
     'Cache-Control': 'no-store',
     'X-Content-Type-Options': 'nosniff',
     'Referrer-Policy': 'no-referrer',
-    'Content-Security-Policy': CSP
+    'Content-Security-Policy': CSP,
+    ...(path.extname(name) === '.pdf' ? { 'Content-Disposition': 'inline' } : {})
   });
   if (req.method === 'HEAD') { res.end(); return; }
-  fs.createReadStream(path.join(__dirname, name)).pipe(res);
+  fs.createReadStream(programFiles.has(name) ? path.join(__dirname, '..', '..', 'docs', name) : path.join(__dirname, name)).pipe(res);
 });
 
 server.on('error', err => { console.error('Não foi possível iniciar o servidor:', err.message); process.exitCode = 1; });
