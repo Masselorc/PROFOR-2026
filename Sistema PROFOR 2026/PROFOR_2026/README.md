@@ -146,6 +146,7 @@ Quando a UF tem mais de uma proposta, o resumo mostra **primeiro as enviadas par
 - Importação CSV em blocos com validação e confirmação (modo offline de contingência), origem e comparação de alterações.
 - Habilitação, mérito, **20 requisitos de celebração em duas abas** (ver abaixo) e links de documentos.
 - PAD com avaliação manual, três controles financeiros, valores em centavos.
+- Atalhos Transferegov (Acesso Livre) à esquerda abaixo das abas de cada proposta: **Dados** e **PAD** abrem a proposta correta em nova guia pelo endereço de detalhe com `idProposta`; **Requisitos** abre direto a tela de Requisitos para Celebração (`_proposta/Requisitos/listarRequisitosDocumentos.jsf`) e **Anexos** abre direto a listagem de anexos (`ListarAnexosGenericos/AnexosExibirAnexosProposta.do`). Essas duas últimas não carregam `idProposta` na URL e leem a proposta da sessão do Acesso Livre: se a sessão estiver com outra proposta, clique antes em **Dados** para fixar a proposta correta e em seguida use Requisitos/Anexos. Exigem sessão de Acesso Livre ativa no navegador.
 - Diligências vinculadas, pendências sem cadastro, prazos e saneamento confirmado.
 - Instituição da Ouvidoria, prazo de referência de nove meses e Fala.BR informativo.
 - Histórico, conclusão técnica com bloqueios, relatório HTML/texto e impressão/PDF.

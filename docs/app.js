@@ -43,7 +43,25 @@
   function cnpjCopyButton(value){const c=D.fmtCnpj(value);if(!c)return '';return `<button type="button" class="copy-cnpj" data-action="copy-cnpj" data-cnpj="${e(c)}" title="Copiar CNPJ" aria-label="Copiar CNPJ ${e(c)}">⧉</button>`;}
   /* UF ao lado do número da proposta: sigla visível e nome por extenso acessível. */
   function ufTag(uf){const sigla=String(uf ?? '').trim();if(!sigla)return '';return `<span class="uf-tag" title="${textoHtml(D.UFS[sigla] || sigla,'UF da proposta')}">${textoHtml(sigla,'UF da proposta')}</span>`;}
-  function proposalLink(id,value,context){const n=proposalNumber(value);return `<span class="proposal-number"><a href="#proposta/${textoHtml(id,context+': proposta')}/dados">${textoHtml(n,context+': número')}</a>${proposalCopyButton(n)}</span>`;}
+  function proposalLink(id,value,context){const n=proposalNumber(value);return `<span class="proposal-number"><a href="${e(consultaPublica(id))}" target="_blank" rel="noopener noreferrer" title="Abrir proposta no Transferegov (Acesso Livre)" aria-label="Abrir proposta ${e(n)} no Transferegov (Acesso Livre)">${textoHtml(n,context+': número')}</a>${proposalCopyButton(n)}</span>`;}
+  /* Atalhos para o Transferegov (Acesso Livre), à esquerda abaixo das abas da proposta.
+     Dados e PAD usam o endereço de detalhe com `idProposta`, que fixa a proposta
+     correta mesmo com outra proposta aberta na sessão (conferido no Acesso Livre).
+     Requisitos e Anexos usam os endereços diretos indicados pelo usuário, que não
+     carregam `idProposta` na URL e leem a proposta da sessão do Acesso Livre:
+     `_proposta/Requisitos/listarRequisitosDocumentos.jsf` (tela de Requisitos para
+     Celebração) e `ListarAnexosGenericos/AnexosExibirAnexosProposta.do` (listagem
+     de anexos). Se a sessão estiver com outra proposta, o Transferegov exibe essa
+     outra proposta: nesse caso, clicar primeiro em Dados fixa a sessão na proposta
+     correta e em seguida usar Requisitos/Anexos. */
+  function transferegovBox(p){
+    const numero=proposalNumber(p.imported.numero);
+    const alvo=' target="_blank" rel="noopener noreferrer"';
+    const item=(rotulo,href,titulo,aria)=>`<a class="tgov-btn" href="${e(href)}"${alvo} title="${e(titulo)}" aria-label="${e(aria)}">${e(rotulo)}</a>`;
+    const REQUISITOS_URL='https://discricionarias.transferegov.sistema.gov.br/voluntarias/_proposta/Requisitos/listarRequisitosDocumentos.jsf';
+    const ANEXOS_URL='https://discricionarias.transferegov.sistema.gov.br/voluntarias/ListarAnexosGenericos/AnexosExibirAnexosProposta.do';
+    return `<div class="tgov-box" aria-label="Atalhos para o Transferegov"><span class="tgov-brand">Transferegov <small>Acesso Livre</small></span><div class="tgov-actions">${item('Dados',consultaPublica(p.id,''),`Abrir os dados da proposta ${numero} no Transferegov (Acesso Livre)`,`Abrir dados da proposta ${numero} no Transferegov (Acesso Livre)`)}${item('PAD',consultaPublica(p.id,'DetalharBensProposta'),`Abrir o Plano de Aplicação Detalhado da proposta ${numero} no Transferegov (Acesso Livre)`,`Abrir Plano de Aplicação Detalhado da proposta ${numero} no Transferegov (Acesso Livre)`)}${item('Requisitos',REQUISITOS_URL,`Abrir os Requisitos para Celebração no Transferegov (Acesso Livre). Se exibir outra proposta, clique antes em Dados para fixar a proposta ${numero} na sessão`,`Abrir Requisitos para Celebração no Transferegov (Acesso Livre)`)}${item('Anexos',ANEXOS_URL,`Abrir a listagem de anexos no Transferegov (Acesso Livre). Se exibir outra proposta, clique antes em Dados para fixar a proposta ${numero} na sessão`,`Abrir listagem de anexos no Transferegov (Acesso Livre)`)}</div></div>`;
+  }
   function link(r){return r.url?`<a href="${e(D.safeLink(r.url))}" target="_blank" rel="noopener noreferrer">${e(r.document || 'Documento')}</a>`:e(r.document || '—');}
   async function persist(next,opts={}){
     if(isReadOnly())throw new Error('Ambiente de consulta pública (somente leitura).');
@@ -608,7 +626,7 @@
       </div>
       ${renderResultSection(p)}
       ${D.pending(p).length?`<div class="info error">${D.pending(p).length} pendência(s) marcada(s) como diligência sem registro ativo. ${isReadOnly()?'':'<a href="#proposta/'+e(p.id)+'/diligencias">Cadastrar diligência</a>'}</div>`:''}
-      <nav class="tabs dim-tabs" aria-label="Seções da proposta">${Object.entries(tabNames).filter(([id])=>id!=='merito').map(([id,name])=>`<a class="${id===activeTab?'active':''}" ${id===activeTab?'aria-current="page"':''} href="#proposta/${e(p.id)}/${id}">${name}</a>`).join('')}</nav><div id="tab-content"></div>`;
+      <nav class="tabs dim-tabs" aria-label="Seções da proposta">${Object.entries(tabNames).filter(([id])=>id!=='merito').map(([id,name])=>`<a class="${id===activeTab?'active':''}" ${id===activeTab?'aria-current="page"':''} href="#proposta/${e(p.id)}/${id}">${name}</a>`).join('')}</nav>${transferegovBox(p)}<div id="tab-content"></div>`;
     if(activeTab==='dados')renderData(p);
     else if(activeTab==='diligencias')renderDiligences(p);
     else if(activeTab==='historico')renderHistory(p);
@@ -649,8 +667,7 @@
             <div class="data-card-block">
               <dt>Número da proposta</dt>
               <dd>
-                <span class="proposal-number">${e(proposalNumber(i.numero))}</span>
-                ${proposalCopyButton(i.numero)}
+                ${proposalLink(p.id,i.numero,'Dados')}
               </dd>
               <span class="data-card-sub">Identificador oficial na plataforma</span>
             </div>
@@ -1189,7 +1206,8 @@
         ${padItems.length>1?`<div class="filters pad-filter"><label class="search">Buscar item do PAD<input id="pad-search" type="search" value="${e(padSearch)}" placeholder="Descrição do item" autocomplete="off"></label></div>`:''}
       </div>`:'';
     const rodapePad=pad&&padItems.length?`<tfoot><tr><td><strong>Total (${busca?`${linhasPad.length} de ${padItems.length} itens`:padItems.length===1?'1 item':`${padItems.length} itens`})</strong></td><td></td><td></td><td class="number cell-right"><strong>${D.fmtMoney(somaVisivel)}</strong></td><td></td><td></td></tr></tfoot>`:'';
-    const html=`<section class="section"><div class="section-head"><h2>${tabNames[g]}</h2>${(merito && !isReadOnly())?button('Editar informações','institution'):''}</div>
+    const titulo=pad?`<a href="${e(consultaPublica(p.id,'DetalharBensProposta'))}" target="_blank" rel="noopener noreferrer" title="Abrir o plano de aplicação detalhado no Transferegov (Acesso Livre)" aria-label="Abrir o plano de aplicação detalhado da proposta ${e(proposalNumber(p.imported.numero))} no Transferegov (Acesso Livre)">${e(tabNames[g])}</a>`:e(tabNames[g]);
+    const html=`<section class="section"><div class="section-head"><h2>${titulo}</h2>${(merito && !isReadOnly())?button('Editar informações','institution'):''}</div>
       ${merito&&avisoInstitucional(p)?`<div class="section-body">${avisoInstitucional(p)}</div>`:''}
       ${cartoesPad}
       <div class="table-wrap"><table class="${pad?'pad-table':'review-table'}"><colgroup>${pad?'<col class="c-pad-item"><col class="c-pad-qtd"><col class="c-pad-unit"><col class="c-pad-total"><col class="c-pad-conf"><col class="c-pad-acao">':''}</colgroup><thead><tr><th scope="col">${pad?'Item':'Requisito'}</th>${pad?'<th scope="col" class="cell-right pad-case">Qtd</th><th scope="col" class="cell-right pad-case">Valor unitário</th><th scope="col" class="cell-right pad-case">Valor total</th>':''}<th scope="col" class="${pad?'pad-th-conf':''}">${pad?'Conferência':'Resultado'}</th>${!pad&&!merito?'<th scope="col">Documento</th>':''}<th scope="col" class="cell-center pad-th-action">Ação</th></tr></thead><tbody>${pad
@@ -1417,7 +1435,7 @@
      origem, transcrito sem edição. Item sem texto correspondente não inventa
      conteúdo: aponta a consulta pública. */
   const TEXTOS_DO_ITEM={justificativa:['caracterizacao','justificativa'],publicoAlvo:['publicoAlvo'],problema:['problema'],resultados:['resultados'],objetivos:['relacao'],capacidade:['capacidade']};
-  const consultaPublica=id=>`https://discricionarias.transferegov.sistema.gov.br/voluntarias/ConsultarProposta/ResultadoDaConsultaDePropostaDetalharProposta.do?idProposta=${encodeURIComponent(id)}&destino=&idConvenio=`;
+  const consultaPublica=(id,destino='')=>`https://discricionarias.transferegov.sistema.gov.br/voluntarias/ConsultarProposta/ResultadoDaConsultaDePropostaDetalharProposta.do?idProposta=${encodeURIComponent(id)}&destino=${encodeURIComponent(destino)}&idConvenio=`;
   function textosOficiaisHtml(p,id){
     const campos=TEXTOS_DO_ITEM[id] || [];
     if(!campos.length)return '';
