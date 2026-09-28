@@ -24,7 +24,7 @@ const EDITED = { number: '08016.990011/2026-22', url: 'https://example.invalid/s
 const SECOND = { number: '08016.990012/2026-33', url: 'https://example.invalid/sei/processo-990012' };
 const EMPTY = { number: '', url: '' };
 const STATIC_PATHS = new Set([
-  '/PROFOR_2026.html', '/styles.css', '/domain.js', '/bandeiras-uf.js',
+  '/PROFOR_2026.html', '/styles.css', '/domain.js', '/sync-apply.js', '/bandeiras-uf.js',
   '/storage.js', '/transferegov.js', '/report.js', '/app.js', '/favicon.ico', '/assets/profor.ico',
   ...Object.keys(D.UFS).map(uf => `/assets/bandeiras/${uf.toLowerCase()}.svg`)
 ]);

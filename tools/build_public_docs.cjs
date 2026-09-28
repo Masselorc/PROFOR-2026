@@ -19,31 +19,14 @@ const DOCS_DIR = path.join(ROOT_DIR, 'docs');
 const D = require(path.join(SYSTEM_DIR, 'domain.js'));
 const { createStore } = require(path.join(SYSTEM_DIR, 'workspace-store.cjs'));
 
-const OFFICIAL_FIELDS=new Set(['numero','uf','programa','cnpj','proponente','orgao','objeto','situacao','data','vigenciaInicio','vigenciaFim','repasse','contrapartida','global','pad','Proposta']);
-function publicPad(items){return items===null?null:Array.isArray(items)?items.map(item=>({descricao:item.descricao,quantidade:item.quantidade,unitario:item.unitario,total:item.total})):[];}
-function publicProposal(proposal){
-  const i=proposal.imported;
-  const imported={id:i.id,numero:i.numero,uf:i.uf,programa:i.programa,cnpj:i.cnpj,proponente:i.proponente,orgao:i.orgao,objeto:i.objeto,situacao:i.situacao,data:i.data,vigenciaInicio:i.vigenciaInicio,vigenciaFim:i.vigenciaFim,repasse:i.repasse,contrapartida:i.contrapartida,global:i.global,pad:publicPad(i.pad)};
-  const result={id:proposal.id,imported};
-  if(proposal.textos)result.textos=Object.fromEntries(Object.keys(D.CAMPOS_TEXTOS).map(field=>[field,proposal.textos[field]||'']));
-  return result;
-}
-function publicHistory(entries){
-  return entries.map(entry=>({
-    date:entry.date,
-    at:entry.at,
-    changes:(entry.changes||[]).filter(change=>OFFICIAL_FIELDS.has(change.field)).map(change=>({
-      numero:change.numero,uf:change.uf,field:change.field,
-      before:change.field==='pad'?publicPad(change.before):change.before,
-      after:change.field==='pad'?publicPad(change.after):change.after
-    }))
-  }));
-}
-function projectPublicState(state,history){
-  return {schemaVersion:state.schemaVersion,revision:state.revision,
-    proposals:D.activeProposals(state).map(publicProposal),
-    sync:state.sync?{at:state.sync.at}:null,
-    syncHistory:publicHistory(history)};
+function projectPublicState(state, history) {
+  return {
+    schemaVersion: state.schemaVersion,
+    revision: state.revision,
+    proposals: state.proposals,
+    sync: state.sync,
+    syncHistory: Array.isArray(history) ? history : []
+  };
 }
 
 function build() {
@@ -66,7 +49,8 @@ function build() {
   // A consulta pública recebe propostas ativas e um extrato do histórico de
   // sincronizações. O extrato inclui propostas retiradas do painel, mas não
   // inclui histórico de análise manual, IDs técnicos ou o banco operacional.
-  const publicState = projectPublicState(state,store.history());
+  const publicState = projectPublicState(state, store.history());
+  D.validateState(publicState);
   const publicDataJs = `/**
  * Snapshot dos dados públicos do PROFOR/ONASP 2026 (Processo SEI 08016.010062/2026-18)
  * Gerado automaticamente em ${updatedAt}.

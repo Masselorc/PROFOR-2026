@@ -152,7 +152,7 @@
     const menuServidor=$('#server-open');
     if(menuServidor)menuServidor.hidden=!origemArquivo || publico;
     const menuDeleted=$('#nav-deleted');
-    if(menuDeleted)menuDeleted.hidden=publico;
+    if(menuDeleted)menuDeleted.hidden=false;
     const menuRecords=$('#nav-records');
     const rotuloLocal=document.querySelector('.local-label');
     if(rotuloLocal && publico){
@@ -163,17 +163,10 @@
     $('#nav-program')?.classList.toggle('active',!selected && view==='programa');
     $('#nav-deleted').classList.toggle('active',!selected && view==='apagadas');
     if(menuRecords)menuRecords.classList.toggle('active',!selected && view==='registros');
-    if(publico){
-      if(selected){const p=state.proposals.find(x=>x.id===selected);if(p)renderPublicProposal(p);else $('#main').innerHTML='<h1>Proposta não localizada</h1>';}
-      else if(view==='programa')renderProgram();
-      else if(view==='registros')renderPublicRecords();
-      else renderPublicPanel();
-      renderSideNav();return;
-    }
     if(selected){
       const p=state.proposals.find(x=>x.id===selected);
       if(!p){$('#main').innerHTML='<h1>Proposta não localizada</h1><a href="#painel">Voltar ao painel</a>';return;}
-      if(p.isDeleted){$('#main').innerHTML=`<a class="back" href="#apagadas">← Voltar às propostas apagadas</a><h1>Proposta apagada</h1><div class="info warning">A proposta <span class="proposal-number"><strong>${e(proposalNumber(p.imported.numero))}</strong>${proposalCopyButton(p.imported.numero)}</span> (${e(p.imported.uf)}) está apagada do painel e fora das telas de gestão. Restaure-a para voltar a analisar.</div><div class="actions">${button('↺ Restaurar proposta','restore-proposal',`data-id="${e(p.id)}"`,'primary')}${button('Ver apagadas','ver-apagadas')}</div>`;return;}
+      if(p.isDeleted){$('#main').innerHTML=`<a class="back" href="#apagadas">← Voltar às propostas apagadas</a><h1>Proposta apagada</h1><div class="info warning">A proposta <span class="proposal-number"><strong>${e(proposalNumber(p.imported.numero))}</strong>${proposalCopyButton(p.imported.numero)}</span> (${e(p.imported.uf)}) está apagada do painel e fora das telas de gestão. Restaure-a para voltar a analisar.</div><div class="actions">${isReadOnly()?'':button('↺ Restaurar proposta','restore-proposal',`data-id="${e(p.id)}"`,'primary')}${button('Ver apagadas','ver-apagadas')}</div>`;return;}
       renderProposal(p);
     }
     else if(view==='programa')renderProgram();
@@ -182,45 +175,6 @@
     else renderPanel();
     /* O contador de apagadas no menu acompanha o estado atual. */
     renderSideNav();
-  }
-  /* O snapshot público contém apenas campos oficiais; nenhuma análise local é
-     inferida ou reconstruída para a consulta pública. */
-  function renderPublicPanel(){
-    const proposals=D.activeProposals(state);
-    const received=new Set(proposals.map(p=>p.imported.uf)).size;
-    $('#main').innerHTML=`<div class="page-head"><div><div class="eyebrow">PROFOR / ONASP 2026</div><h1>Visão geral das propostas</h1><p class="muted">Consulta aos dados oficiais publicados no último snapshot.</p></div></div>
-      <div class="stats dashboard-stats" aria-label="Resumo das propostas"><div class="stat stat-eligible"><span class="stat-label">UFs elegíveis</span><strong class="stat-value">${Object.keys(D.UFS).length}</strong></div><div class="stat stat-received"><span class="stat-label">UFs com proposta importada</span><strong class="stat-value">${received}</strong></div><div class="stat stat-active"><span class="stat-label">Propostas ativas</span><strong class="stat-value">${proposals.length}</strong></div></div>
-      <section class="section" aria-label="Acompanhamento por UF"><div class="filters panel-filters"><label class="search">Buscar proposta ou proponente<input id="search" type="search" value="${e(filters.search)}" placeholder="Número, nome ou UF"></label><label>UF<select id="filter-uf">${options({'':'Todas as UFs',...D.UFS},filters.uf)}</select></label><label>Status no Transferegov<select id="filter-source">${options({'':'Todos os status',...Object.fromEntries(SOURCE_CHAVES.map(k=>[k,SOURCE_ROTULO[k]]))},filters.source)}</select></label></div>
-      <div class="table-wrap"><table class="table-fit"><thead><tr><th>UF</th><th>Proposta</th><th>Proponente</th><th>Valor global</th><th>Status no Transferegov</th><th>Ações</th></tr></thead><tbody id="uf-rows"></tbody></table></div></section><p class="source">Base pública · Processo SEI 08016.010062/2026-18 · Edital nº 37/2026</p>`;
-    const draw=()=>{
-      const rows=[];
-      for(const [uf,name] of Object.entries(D.UFS)){
-        const list=proposals.filter(p=>p.imported.uf===uf);
-        if(filters.uf && filters.uf!==uf)continue;
-        if(filters.source && !list.some(p=>D.sourceState(p.imported).key===filters.source))continue;
-        if(filters.search && !`${uf} ${name} ${list.map(p=>p.imported.numero+' '+p.imported.proponente).join(' ')}`.toLocaleLowerCase('pt-BR').includes(filters.search.toLocaleLowerCase('pt-BR')))continue;
-        const first=list[0],i=first?.imported,s=i?D.sourceState(i):null;
-        rows.push(`<tr class="uf-row" data-uf="${e(uf)}"><td>${ufFlag(uf,name)} ${e(name)}</td><td>${i?e(proposalNumber(i.numero)):'—'}</td><td>${i?e(i.proponente):'—'}</td><td>${i?e(D.fmtMoney(i.global)):'—'}</td><td>${s?badge(s.label,s.tone):'—'}</td><td>${first?`<a class="btn-detail" href="#proposta/${e(first.id)}/dados">Detalhar</a>`:'—'}</td></tr>`);
-        for(const p of list.slice(1))rows.push(`<tr class="uf-row" data-uf="${e(uf)}"><td>${e(uf)}</td><td>${e(proposalNumber(p.imported.numero))}</td><td>${e(p.imported.proponente)}</td><td>${e(D.fmtMoney(p.imported.global))}</td><td>${badge(D.sourceState(p.imported).label,D.sourceState(p.imported).tone)}</td><td><a class="btn-detail" href="#proposta/${e(p.id)}/dados">Detalhar</a></td></tr>`);
-      }
-      $('#uf-rows').innerHTML=rows.join('')||'<tr><td colspan="6" class="empty">Nenhuma proposta corresponde aos filtros.</td></tr>';
-    };
-    $('#search').oninput=ev=>{filters.search=ev.target.value;draw();};
-    $('#filter-uf').onchange=ev=>{filters.uf=ev.target.value;draw();};
-    $('#filter-source').onchange=ev=>{filters.source=ev.target.value;draw();};
-    draw();
-  }
-  function renderPublicProposal(p){
-    const i=p.imported,s=D.sourceState(i);
-    const fields=[['Programa',i.programa],['Número',proposalNumber(i.numero)],['UF',`${D.UFS[i.uf]} / ${i.uf}`],['Proponente',i.proponente],['CNPJ',D.fmtCnpj(i.cnpj)||'Não informado'],['Órgão',i.orgao||'Não informado'],['Situação no Transferegov',i.situacao||'Não informada'],['Cadastramento',D.fmtDate(i.data)],['Início da vigência',D.fmtDate(i.vigenciaInicio)],['Fim da vigência',D.fmtDate(i.vigenciaFim)],['Repasse',D.fmtMoney(i.repasse)],['Contrapartida',D.fmtMoney(i.contrapartida)],['Valor global',D.fmtMoney(i.global)]];
-    const texts=Object.entries(D.CAMPOS_TEXTOS).filter(([key])=>p.textos?.[key]).map(([key,label])=>`<div class="data-card-block"><dt>${e(label)}</dt><dd>${e(p.textos[key])}</dd></div>`).join('');
-    const pad=i.pad||[];
-    const content=activeTab==='pad'?`<section class="section"><div class="section-head"><h2>Plano de aplicação detalhado</h2></div><div class="table-wrap"><table><thead><tr><th>Descrição</th><th>Quantidade</th><th>Valor unitário</th><th>Total</th></tr></thead><tbody>${pad.map(item=>`<tr><td>${e(item.descricao)}</td><td>${e(item.quantidade)}</td><td>${e(D.fmtMoney(item.unitario))}</td><td>${e(D.fmtMoney(item.total))}</td></tr>`).join('')||'<tr><td colspan="4">Nenhum item publicado na extração.</td></tr>'}</tbody></table></div></section>`:`<section class="section"><div class="section-head"><h2>Dados da proposta</h2></div><div class="section-body"><dl class="program-facts">${fields.map(([label,value])=>`<div><dt>${e(label)}</dt><dd>${e(value)}</dd></div>`).join('')}</dl><h2>Objeto</h2><p>${e(extracted(i.objeto))}</p>${texts?`<h2>Projeto apresentado</h2><dl class="program-facts">${texts}</dl>`:''}</div></section>`;
-    $('#main').innerHTML=`<a class="back" href="#painel">← Voltar ao painel</a><div class="page-head"><div><div class="eyebrow">${ufFlag(i.uf,D.UFS[i.uf])} ${e(i.uf)} · PROPOSTA ${e(proposalNumber(i.numero))}</div><h1>${e(D.UFS[i.uf])}</h1><p class="muted">${e(i.proponente)}</p></div></div><nav class="tabs dim-tabs" aria-label="Seções da proposta"><a href="#proposta/${e(p.id)}/dados" class="${activeTab==='pad'?'':'active'}">Dados</a><a href="#proposta/${e(p.id)}/pad" class="${activeTab==='pad'?'active':''}">Plano de aplicação detalhado</a></nav>${transferegovBox(p)}${content}<p class="source">Consulta pública dos dados oficiais; avaliações internas não integram este snapshot.</p>`;
-  }
-  function renderPublicRecords(){
-    if(!syncHistory){$('#main').innerHTML='<h1>Registros de atualização</h1><p>Carregando registros públicos…</p>';refreshHistory().then(()=>{if(view==='registros')renderPublicRecords();}).catch(err=>{$('#main').innerHTML=`<h1>Registros de atualização</h1><div class="info error">${e(err.message)}</div>`;});return;}
-    $('#main').innerHTML=`<div class="page-head"><div><h1>Registros de atualização</h1><p class="muted">Alterações nos campos oficiais publicados.</p></div></div>${syncHistory.slice().reverse().map(entry=>`<section class="section"><div class="section-head"><h2>${e(D.fmtDate(entry.date))}</h2><small>${entry.changes.length} alteração(ões)</small></div><div class="section-body">${syncChangesHtml(entry.changes)}</div></section>`).join('')}`;
   }
   /* Tela de propostas apagadas: mesma linguagem do painel, por UF, com expansão
      e o botão de restaurar no lugar do botão de apagar. */
@@ -351,13 +305,9 @@
     const pendingCount=ps.reduce((n,p)=>n+D.pending(p).length,0);
     const apt=ps.filter(p=>p.conclusion && !D.blockers(p,true).length).length;
     const enviadas=new Set(ps.filter(p=>D.sourceState(p.imported).key==='enviada').map(p=>p.imported.uf)).size;
-    const acoesPainel=isReadOnly()?'':button('↻ Sincronização','sync','','primary');
-    const subPainel=isReadOnly()
-      ? 'Consulta pública das propostas cadastradas e análises técnicas registradas.'
-      : 'Acompanhe a análise, as diligências e a preparação para celebração.';
-    const fontePainel=isReadOnly()
-      ? 'Base de dados pública · Processo SEI 08016.010062/2026-18 · Edital nº 37/2026 · Recursos do FUNPEN'
-      : `Última sincronização: ${state.sync?e(new Date(state.sync.at).toLocaleString('pt-BR')):'ainda não realizada'}${state.sync?.source?` · origem: ${e(String(state.sync.source))}`:''}. Dados locais são uma fotografia da extração e não comprovam recebimento ou situação atual no Transferegov.`;
+    const acoesPainel=button('↻ Sincronização','sync','','primary');
+    const subPainel='Acompanhe a análise, as diligências e a preparação para celebração.';
+    const fontePainel=`Última sincronização: ${state.sync?e(new Date(state.sync.at).toLocaleString('pt-BR')):'ainda não realizada'}${state.sync?.source?` · origem: ${e(String(state.sync.source))}`:''}. Dados locais são uma fotografia da extração e não comprovam recebimento ou situação atual no Transferegov.`;
     $('#main').innerHTML=`<div class="page-head"><div><div class="eyebrow">PROFOR / ONASP 2026</div><h1>Visão geral das propostas</h1><p class="muted">${subPainel}</p></div><div class="page-actions">${acoesPainel}</div></div>
       <div class="stats dashboard-stats" aria-label="Resumo das propostas">
         <div class="stat stat-eligible"><div class="stat-header"><span class="stat-label">UFs elegíveis</span><span class="stat-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg></span></div><strong class="stat-value">14</strong><span class="stat-note">UFs do edital</span></div>
@@ -1573,6 +1523,10 @@
   function syncDialog(){
     if(!state)return;
     if(syncRun){toast('Já existe uma sincronização em andamento. Aguarde ou cancele a operação.',true);return;}
+    if(isReadOnly()){
+      modal('Sincronização',`<p>A sincronização com o Transferegov é executada no sistema local (ou pelo agendamento automático) e publicada no GitHub Pages via <strong>ATUALIZAR_GITHUB_PAGES.cmd</strong>.</p><p>Para atualizar os dados, execute a sincronização no seu computador e envie as alterações ao GitHub.</p><div class="dialog-actions">${button('Fechar','close')}</div>`);
+      return;
+    }
     if(location.protocol==='file:'){
       modal('Atualizar dados',`<p>Esta janela foi aberta pelo arquivo HTML (<strong>file://</strong>). Nesse modo o navegador não pode baixar as extrações do Transferegov — não é falha do botão: a API pública não autoriza o download direto pelo navegador, e esta página não consegue nem consultar o servidor local.</p><p><strong>Para sincronizar:</strong> feche esta janela e abra o sistema pelo atalho <strong>PROFOR 2026</strong> da Área de Trabalho (ou pelo arquivo <strong>INICIAR SISTEMA.cmd</strong>, na pasta do sistema). Ele liga o servidor local e abre o sistema no endereço certo; lá o botão Atualizar Dados funciona.</p><div class="info warning">Os dados locais ficam guardados por origem: o que já foi sincronizado pertence ao endereço do servidor, e não a esta janela aberta pelo arquivo HTML. Por isso o painel aparece vazio aqui.</div><div class="dialog-actions">${button('Modo offline: anexar arquivos CSV','import')}${button('Fechar','close')}</div>`);
       return;

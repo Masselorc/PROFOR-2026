@@ -22,7 +22,7 @@ const URL = `${ORIGIN}/PROFOR_2026.html`;
 const A = '990901';
 const B = '990902';
 const STATIC_PATHS = new Set([
-  '/PROFOR_2026.html', '/styles.css', '/domain.js', '/bandeiras-uf.js',
+  '/PROFOR_2026.html', '/styles.css', '/domain.js', '/sync-apply.js', '/bandeiras-uf.js',
   '/storage.js', '/transferegov.js', '/report.js', '/app.js', '/favicon.ico'
 ]);
 const TEXTOS_A = {

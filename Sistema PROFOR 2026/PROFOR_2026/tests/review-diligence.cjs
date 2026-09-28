@@ -31,7 +31,7 @@ const DOCUMENT_URL = 'https://example.invalid/documento-pad-11';
 const ORIGINAL_NOTE = 'Conferência anterior do PAD 11 — preservar o texto ao trocar Resultado.';
 const FIELD_NAMES = ['category', 'communication', 'response', 'status', 'note', 'due'];
 const STATIC_PATHS = new Set([
-  '/PROFOR_2026.html', '/styles.css', '/domain.js', '/bandeiras-uf.js',
+  '/PROFOR_2026.html', '/styles.css', '/domain.js', '/sync-apply.js', '/bandeiras-uf.js',
   '/storage.js', '/transferegov.js', '/report.js', '/app.js', '/favicon.ico'
 ]);
 const clone = value => JSON.parse(JSON.stringify(value));

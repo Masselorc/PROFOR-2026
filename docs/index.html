@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' data:; object-src 'none'; base-uri 'none'">
   <meta name="color-scheme" content="light">
-  <title>PROFOR / ONASP 2026 — Consulta Pública de Propostas</title>
+  <title>PROFOR / ONASP 2026 — Gestão de propostas</title>
   <link rel="icon" href="data:,">
   <link rel="stylesheet" href="styles.css?v=5db00e88">
   <script>window.PROFOR_READ_ONLY = true;</script>
@@ -28,16 +28,14 @@
   </header>
   <div class="shell">
     <aside class="sidebar" aria-label="Navegação principal">
-      <div class="section-label">CONSULTA DE PROPOSTAS</div>
+      <div class="section-label">GESTÃO DE PROPOSTAS</div>
       <a href="#painel" id="nav-panel" class="nav-link"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7"/><path d="M5 9.5V21h14V9.5"/><path d="M9 21v-7h6v7"/></svg><span>Início</span></a>
       <button id="props-open" class="nav-link" aria-expanded="false" aria-controls="uf-props-nav"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h8l4 4v14H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z"/><path d="M14 3v4h4M8 12h6M8 16h6"/></svg><span>Propostas</span></button>
       <nav id="uf-props-nav" class="side-nav" aria-label="Propostas por UF" hidden></nav>
       <a href="#programa/dados" id="nav-program" class="nav-link"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-8h6v8"/></svg><span>Programa</span></a>
+      <button id="server-open" class="nav-link" hidden>⏻ <span>Ligar servidor</span></button>
       <a href="#registros" id="nav-records" class="nav-link">▤ <span>Registros</span></a>
-      <button id="server-open" class="nav-link" hidden></button>
-      <button id="import-open" class="nav-link" hidden></button>
-      <button id="backup-open" class="nav-link" hidden></button>
-      <a href="#apagadas" id="nav-deleted" class="nav-link" hidden></a>
+      <a href="#apagadas" id="nav-deleted" class="nav-link">🗑 <span>Lixeira <span id="del-count" class="nav-count"></span></span></a>
       <div class="side-context">
         <span class="section-label">PROCESSO DE REFERÊNCIA</span>
         <p><a href="https://sei.mj.gov.br/sei/controlador.php?acao=procedimento_trabalhar&amp;id_procedimento=40199139" target="_blank" rel="noopener noreferrer" aria-label="Abrir processo SEI 08016.010062/2026-18">08016.010062/2026-18</a></p>
@@ -47,8 +45,8 @@
     </aside>
     <main id="main" tabindex="-1">
       <div class="empty">
-        <h1>Carregando o PROFOR</h1>
-        <p>Carregando as propostas e análises técnicas públicas.</p>
+        <h1>Abrindo o PROFOR</h1>
+        <p>Carregando o banco salvo na pasta do sistema.</p>
       </div>
     </main>
   </div>
@@ -60,6 +58,6 @@
     </div>
     <div id="modal-content"></div>
   </dialog>
-  <noscript>Ative o JavaScript para visualizar as propostas do PROFOR 2026.</noscript>
+  <noscript>Ative o JavaScript para usar o sistema.</noscript>
 </body>
 </html>
