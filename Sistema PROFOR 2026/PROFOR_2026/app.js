@@ -1669,9 +1669,96 @@
   function importDialog(){modal('Modo offline: anexar arquivos CSV do Transferegov',`<p>Programa <strong>${D.PROGRAM}</strong>. Modo offline de contingência: baixe e extraia os ZIPs no <a href="https://api-publica.transferegov.gestao.gov.br/downloads" target="_blank" rel="noopener noreferrer">portal oficial de dados</a> e selecione os CSVs abaixo. O caminho principal é <strong>Sincronização → Atualizar Dados</strong>, que dispensa qualquer anexo.</p><form class="form-stack"><label>1. Programas — siconv_programa.csv<input name="program" type="file" accept=".csv" required></label><label>2. Programas / propostas — siconv_programa_proposta.csv<input name="links" type="file" accept=".csv" required></label><label>3. Propostas — siconv_proposta.csv<input name="proposal" type="file" accept=".csv" required></label><label>4. Plano de aplicação detalhado (opcional)<input name="pad" type="file" accept=".csv"></label><label>Codificação dos CSVs<select name="encoding"><option value="utf-8">UTF-8 (extração oficial atual)</option><option value="windows-1252">Windows-1252 (extrações antigas)</option></select></label><p id="import-progress" role="status"></p>${formEnd('Conferir importação')}</form>`);bindForm(async fd=>{const startedAt=D.now(),activity=[{at:startedAt,message:'Iniciando importação manual de arquivos CSV.'}];const files=Object.fromEntries(['program','links','proposal','pad'].map(k=>[k,fd.get(k)?.size?fd.get(k):null]));const result=await Transferegov.importFiles(files,msg=>{$('#import-progress').textContent=msg;activity.push({at:D.now(),message:msg});},fd.get('encoding'));const preview=D.syncProposals(state,result.proposals,result.source);modalDirty=false;modal('Conferir importação',`<p><strong>${result.proposals.length} proposta(s)</strong> vinculada(s) ao programa. ${preview.changes.length} alteração(ões) detectada(s).</p>${result.warnings.map(w=>`<div class="info warning">${e(w)}</div>`).join('')}${syncChangesHtml(preview.changes)}<p id="form-error" class="error-message" role="alert"></p><div class="dialog-actions">${button('Cancelar','close')}<button id="commit-import" class="primary">Confirmar importação</button></div>`);$('#commit-import').onclick=async()=>{const btn=$('#commit-import');btn.disabled=true;try{activity.push({at:D.now(),message:'Gravando importação manual no banco local.'});await persist(preview.state,{syncRun:{startedAt,activity}});syncHistory=null;render();saved('Importação concluída e salva no banco local.');}catch(err){formError(err);btn.disabled=false;}};});}
   function download(name,type,content){const url=URL.createObjectURL(new Blob([content],{type}));const a=document.createElement('a');a.href=url;a.download=name;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),30000);}
   function backupDialog(){modal('Backup e exportação',`<p>O banco fica na pasta dados/registros do sistema e acompanha o workspace pelo OneDrive. Antes de trocar de máquina, feche o sistema e aguarde a sincronização do OneDrive nas duas máquinas.</p><p>Última exportação solicitada: ${state.lastBackup?e(new Date(state.lastBackup).toLocaleString('pt-BR')):'nenhuma'}.</p><div class="actions">${button('Exportar backup JSON','backup','','primary')}${button('Exportar CSV','csv')}${button('Exportar cópia de recuperação','recovery')}${button('Resgatar banco antigo deste navegador','legacy')}</div><hr><form class="form-stack"><label>Restaurar backup JSON<input type="file" name="backup" accept=".json" required></label><p class="source">A restauração substitui o banco atual. A versão anterior ficará preservada como cópia de recuperação local.</p>${formEnd('Validar restauração')}</form>`);bindForm(async fd=>{const file=fd.get('backup');D.assert(file.size<50*1024*1024,'Backup acima do limite de 50 MB.');const imported=D.validateState(JSON.parse(await file.text()));modalDirty=false;modal('Confirmar restauração',`<p>Substituir ${state.proposals.length} proposta(s) local(is) pelas ${imported.proposals.length} proposta(s) deste backup?</p><p>A cópia do banco atual será preservada antes da substituição.</p><p id="form-error" class="error-message" role="alert"></p><div class="dialog-actions">${button('Cancelar','close')}<button id="restore-confirm" class="primary">Restaurar este backup</button></div>`);$('#restore-confirm').onclick=async()=>{const btn=$('#restore-confirm');btn.disabled=true;try{await persist(imported,{restore:true});selected=null;location.hash='painel';render();saved('Backup restaurado. A versão anterior foi preservada.');}catch(err){formError(err);btn.disabled=false;}};});}
-  function report(){modal('Relatório de análise',`<div class="actions">${button('Copiar texto','copy-text')}${button('Copiar HTML para SEI','copy-html')}${button('Salvar HTML','save-report')}${button('Imprimir / salvar PDF','print')}</div><div class="report" id="report-preview">${ProforReport.html(current())}</div>`);}
+  let activeReportTopics=null;
+  function selectedReportTopics(){
+    if(!activeReportTopics){
+      const p=current();
+      activeReportTopics=new Set(ProforReport.availableTopics(p).map(t=>t.id));
+    }
+    return activeReportTopics;
+  }
+  function currentReportHtml(){
+    return ProforReport.html(current(),{topics:[...selectedReportTopics()]});
+  }
+  function updateReportPreview(){
+    const preview=$('#report-preview');
+    if(!preview)return;
+    const topics=[...selectedReportTopics()];
+    preview.innerHTML=ProforReport.html(current(),{topics});
+    const hasAny=topics.length>0;
+    const actions=document.querySelectorAll('.report-actions button');
+    actions.forEach(b=>{b.disabled=!hasAny;});
+  }
+  function report(){
+    const p=current();
+    const available=ProforReport.availableTopics(p);
+    activeReportTopics=new Set(available.map(t=>t.id));
+    const checkboxes=available.map(t=>`
+      <label class="report-topic-item">
+        <input type="checkbox" name="report_topic" value="${e(t.id)}" checked>
+        <span>${e(t.label)}</span>
+      </label>
+    `).join('');
+    modal('Relatório de análise',`
+      <div class="report-filter-bar">
+        <div class="report-filter-head">
+          <span class="report-filter-title">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+            Tópicos do relatório:
+          </span>
+          <div class="report-filter-shortcuts">
+            <button type="button" class="btn-filter-shortcut" data-action="report-select-all" title="Selecionar todos os tópicos">Todos</button>
+            <button type="button" class="btn-filter-shortcut" data-action="report-select-pad" title="Selecionar apenas o Plano de Aplicação Detalhado">Apenas PAD</button>
+            <button type="button" class="btn-filter-shortcut" data-action="report-select-none" title="Desmarcar todos">Nenhum</button>
+          </div>
+        </div>
+        <div class="report-topics-grid" id="report-topics-list">
+          ${checkboxes}
+        </div>
+      </div>
+      <div class="actions report-actions">
+        ${button('Copiar texto','copy-text')}
+        ${button('Copiar HTML para SEI','copy-html')}
+        ${button('Salvar HTML','save-report')}
+        ${button('Imprimir / salvar PDF','print','','primary')}
+      </div>
+      <div class="report" id="report-preview">${ProforReport.html(p,{topics:[...activeReportTopics]})}</div>
+    `);
+    const listEl=$('#report-topics-list');
+    if(listEl){
+      listEl.addEventListener('change',()=>{
+        const checked=[...listEl.querySelectorAll('input[type="checkbox"]:checked')].map(c=>c.value);
+        activeReportTopics=new Set(checked);
+        updateReportPreview();
+      });
+    }
+  }
   async function handleAction(target){const action=target.dataset.action;
     if(action==='close')closeModal();else if(action==='import')importDialog();else if(action==='sync')syncDialog();else if(action==='sync-start')startSync();else if(action==='history-day'){selectedHistoryDay=target.dataset.day;renderRecords();document.querySelector(`[data-action="history-day"][data-day="${selectedHistoryDay}"]`)?.focus();}else if(action==='history-prev' || action==='history-next'){moveCalendar(action==='history-prev'?-1:1);document.querySelector(`[data-action="${action}"]`)?.focus();}else if(action==='history-today'){selectedHistoryDay=D.localToday();calendarStart=calendarWeek(selectedHistoryDay.slice(0,7)+'-01');renderRecords();document.querySelector('[data-action="history-today"]')?.focus();}else if(action==='export')backupDialog();else if(action==='sync-cancel')cancelSync('user');else if(action==='sync-retry')syncRestart();else if(action==='review')editReview(target.dataset.group,target.dataset.id);else if(action==='sei')editSei();else if(action==='institution')editInstitution();else if(action==='diligence')editDiligence(target.dataset.id,target.dataset.ref);else if(action==='conclude')conclusion();else if(action==='report')report();else if(action==='copy-program-code'){await navigator.clipboard.writeText(target.dataset.code);toast(`Código ${target.dataset.code} copiado.`);}else if(action==='copy-proposal'){await navigator.clipboard.writeText(target.dataset.number);toast(`Proposta ${target.dataset.number} copiada.`);}else if(action==='copy-cnpj'){await navigator.clipboard.writeText(target.dataset.cnpj);toast(`CNPJ ${target.dataset.cnpj} copiado.`);}
+    else if(action==='report-select-all'){
+      const listEl=$('#report-topics-list');
+      if(listEl){
+        listEl.querySelectorAll('input[type="checkbox"]').forEach(c=>{c.checked=true;});
+        activeReportTopics=new Set([...listEl.querySelectorAll('input[type="checkbox"]')].map(c=>c.value));
+        updateReportPreview();
+      }
+    }
+    else if(action==='report-select-none'){
+      const listEl=$('#report-topics-list');
+      if(listEl){
+        listEl.querySelectorAll('input[type="checkbox"]').forEach(c=>{c.checked=false;});
+        activeReportTopics=new Set();
+        updateReportPreview();
+      }
+    }
+    else if(action==='report-select-pad'){
+      const listEl=$('#report-topics-list');
+      if(listEl){
+        listEl.querySelectorAll('input[type="checkbox"]').forEach(c=>{c.checked=(c.value==='pad');});
+        activeReportTopics=new Set(['pad']);
+        updateReportPreview();
+      }
+    }
     else if(action==='resolve-ref'){const ref=target.dataset.ref,name=actor();const ds=current().diligences.filter(d=>d.ref===ref);D.assert(ds.length && ds.every(d=>d.status==='saneada'),'Ainda existe diligência não saneada.');const [g,id]=ref.split(':');await change(p=>D.setReview(p,g,id,{...D.reviewOf(p,g,id),status:'ok'},name));saved('Requisito atualizado com confirmação do analista.');}
     else if(action==='toggle-uf-expand' || action==='toggle-uf'){
       const uf=target.dataset.uf,modo=target.dataset.modo==='apagadas'?'apagadas':'ativas';
@@ -1688,10 +1775,10 @@
     else if(action==='csv'){download(`PROFOR_2026_${D.localToday()}.csv`,'text/csv;charset=utf-8',D.exportCSV(state));toast('Exportação CSV solicitada.');}
     else if(action==='legacy'){const old=await ProforStore.legacy();D.assert(old?.state,'Nenhum banco antigo encontrado neste navegador e endereço.');download('PROFOR_BANCO_ANTIGO.json','application/json',JSON.stringify(old.state,null,2));toast('Backup antigo exportado. Use Restaurar backup JSON para importá-lo.');}
     else if(action==='recovery'){const recovery=await ProforStore.read('recovery');D.assert(recovery,'Ainda não existe cópia de recuperação de uma restauração.');download(`PROFOR_2026_RECUPERACAO_${D.localToday()}.json`,'application/json',JSON.stringify(recovery,null,2));toast('Download da cópia de recuperação solicitado.');}
-    else if(action==='save-report'){download(`PROFOR_RELATORIO_${current().id}.html`,'text/html;charset=utf-8','<!doctype html><html lang="pt-BR"><meta charset="utf-8"><title>Relatório PROFOR</title><body>'+ProforReport.html(current())+'</body></html>');}
+    else if(action==='save-report'){download(`PROFOR_RELATORIO_${current().id}.html`,'text/html;charset=utf-8','<!doctype html><html lang="pt-BR"><meta charset="utf-8"><title>Relatório PROFOR</title><body>'+currentReportHtml()+'</body></html>');}
     else if(action==='print')window.print();
     else if(action==='copy-text' || action==='copy-html'){
-      const html=ProforReport.html(current()),text=$('#report-preview').innerText;
+      const html=currentReportHtml(),text=$('#report-preview').innerText;
       try{if(action==='copy-html' && navigator.clipboard?.write && window.ClipboardItem)await navigator.clipboard.write([new ClipboardItem({'text/html':new Blob([html],{type:'text/html'}),'text/plain':new Blob([text],{type:'text/plain'})})]);else await navigator.clipboard.writeText(text);toast('Relatório copiado.');}
       catch{modal('Copiar relatório',`<p>O navegador não liberou a área de transferência. Selecione e copie o conteúdo abaixo; para preservar a formatação, use também “Salvar HTML”.</p><textarea id="copy-fallback" rows="16">${e(action==='copy-html'?html:text)}</textarea><div class="dialog-actions">${button('Fechar','close')}</div>`);$('#copy-fallback').select();}
     }

@@ -65,6 +65,7 @@
       html,body{margin:0!important;background:#fff!important}
       dialog:has(.profor-report){border:0!important;width:100%!important;max-width:none!important;max-height:none!important;margin:0!important;box-shadow:none!important}
       dialog:has(.profor-report) #modal-content{padding:0!important}
+      .report-filter-bar,.report-actions{display:none!important}
       .profor-report{max-width:none;padding:14mm 14mm 12mm;font-size:9pt;line-height:1.35;print-color-adjust:exact;-webkit-print-color-adjust:exact}
       .profor-report .pr-header{border-top:0;border-bottom:3px solid var(--pr-brand);border-radius:0;padding:0 0 10px;background:#fff;margin-bottom:14px}
       .profor-report h1{font-size:17pt;margin:5px 0 9px}
@@ -94,12 +95,31 @@
     return `<div class="pr-item${compact?' pr-item-compact':''}"><div class="pr-item-head"><h3>${e(title)}</h3>${statusBadge(review,label)}</div>${content}${documents(review,label)}</div>`;
   }
   function section(title,content){return `<section class="pr-section"><h2>${e(title)}</h2>${content}</section>`;}
-  function html(p){
+  const TOPICS=[
+    {id:'identificacao',label:'Identificação da proposta'},
+    {id:'valores',label:'Valores'},
+    {id:'projeto',label:'Projeto apresentado',requiresText:true},
+    {id:'merito',label:'Avaliação de mérito'},
+    {id:'pad',label:'Plano de aplicação detalhado (PAD)'},
+    {id:'ouvidoria',label:'Instituição da Ouvidoria'},
+    {id:'proposta',label:'Requisitos da Proposta'},
+    {id:'situacao',label:'Situação final da análise'}
+  ];
+  function availableTopics(p){
+    const hasText=Boolean(p.textos && Object.values(p.textos).some(t=>String(t||'').trim()));
+    return TOPICS.filter(t=>!t.requiresText || hasText);
+  }
+  function html(p,options={}){
     const i=p.imported,sections=[];
+    const selected=options.topics?new Set(options.topics):null;
     let n=1;
-    const numbered=(title,content)=>sections.push(section(`${n++}. ${title}`,content));
+    const isTopicIncluded=id=>!selected || selected.has(id);
+    const numbered=(id,title,content)=>{
+      if(!isTopicIncluded(id))return;
+      sections.push(section(`${n++}. ${title}`,content));
+    };
     const lastImport=p.history.filter(h=>h.event.includes('importada')||h.event.includes('origem')).at(-1)?.at;
-    numbered('Identificação da proposta',`<dl class="pr-facts">
+    numbered('identificacao','Identificação da proposta',`<dl class="pr-facts">
       ${fact('Processo SEI da proposta',p.sei?.number || 'Não cadastrado')}
       ${fact('Programa',D.PROGRAM)}
       ${fact('Proposta',D.fmtProposalNumber(i.numero))}
@@ -111,7 +131,7 @@
       ${fact('Última importação com alteração',D.fmtDate(lastImport),true)}
       ${fact('Objeto',i.objeto,true)}
     </dl>`);
-    numbered('Valores',`<div class="pr-values">
+    numbered('valores','Valores',`<div class="pr-values">
       <div class="pr-value"><span class="pr-label">Repasse</span><strong>${e(D.fmtMoney(i.repasse))}</strong></div>
       <div class="pr-value"><span class="pr-label">Contrapartida</span><strong>${e(D.fmtMoney(i.contrapartida))}</strong></div>
       <div class="pr-value"><span class="pr-label">Valor global</span><strong>${e(D.fmtMoney(i.global))}</strong></div>
@@ -119,13 +139,13 @@
     if(p.textos){
       const campos=Object.entries(D.CAMPOS_TEXTOS).filter(([key])=>String(p.textos[key]||'').trim());
       const content=campos.length?campos.map(([key,label])=>`<div class="pr-item"><h3>${e(label)}</h3><div class="pr-detail"><p>${e(p.textos[key])}</p></div></div>`).join(''):'<p>Não há texto da origem para esta proposta.</p>';
-      numbered('Projeto apresentado',content);
+      numbered('projeto','Projeto apresentado',content);
     }
     const merit=D.rows(p,'merito').map(([id,label])=>{
       const review=D.reviewOf(p,'merito',id);
       return card(label,review,detail('Observação',review?.note),D.rotuloDoResultado(id,statusKey(review)));
     }).join('');
-    numbered('Avaliação de mérito',merit);
+    numbered('merito','Avaliação de mérito',merit);
     const pad=(i.pad||[]).map(item=>{
       const review=p.reviews.pad?.[item.id];
       const values=`<div class="pr-item-meta">
@@ -135,8 +155,8 @@
       </div>`;
       return card(item.descricao,review,values+detail('Observação',review?.note),'',true);
     }).join('');
-    numbered('Plano de aplicação detalhado',pad || '<p>Nenhum item do PAD disponível nesta extração.</p>');
-    numbered('Instituição da Ouvidoria',table([
+    numbered('pad','Plano de aplicação detalhado',pad || '<p>Nenhum item do PAD disponível nesta extração.</p>');
+    numbered('ouvidoria','Instituição da Ouvidoria',table([
       ['Situação',p.ouvidoria.status==='instituida'?'Instituída':p.ouvidoria.status==='pendente'?'Pendente':'Não informada'],
       ['Cláusula suspensiva aplicável confirmada',p.ouvidoria.clause?'Sim':'Não'],
       ['Prazo de referência (nove meses)',p.ouvidoria.status==='instituida'?'Sim':'Não'],
@@ -150,9 +170,12 @@
         const details=detail('Fundamentação',item.fundamentacao)+detail('Observação',review?.note);
         return card(title,review,details);
       }).join('');
-      numbered(tab.titulo,requirements);
+      numbered('proposta',tab.titulo,requirements);
     }
-    numbered('Situação final da análise',`<div class="pr-final"><p><strong>${e(D.situation(p))}.</strong></p></div>`);
+    numbered('situacao','Situação final da análise',`<div class="pr-final"><p><strong>${e(D.situation(p))}.</strong></p></div>`);
+    const bodyContent=sections.length>0
+      ? sections.join('')
+      : '<div class="pr-final" style="text-align:center;padding:24px 16px;"><p><strong>Nenhum tópico selecionado para o relatório.</strong></p><p class="source" style="margin-top:4px;">Marque ao menos uma caixa de seleção acima para exibir o conteúdo.</p></div>';
     return STYLE+`<article class="profor-report" lang="pt-BR">
       <header class="pr-header">
         <div class="pr-kicker">PROFOR / ONASP 2026 · Relatório técnico</div>
@@ -164,8 +187,9 @@
         </div>
         <p class="pr-intro">Documento auxiliar gerado a partir dos dados importados do Transferegov e das análises registradas no sistema. Confira os autos antes de incorporá-lo ao SEI.</p>
       </header>
-      ${sections.join('')}
+      ${bodyContent}
     </article>`;
   }
-  root.ProforReport={html};
+  root.ProforReport={html,TOPICS,availableTopics};
+  if(typeof module!=='undefined')module.exports=root.ProforReport;
 })(globalThis);

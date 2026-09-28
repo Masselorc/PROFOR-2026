@@ -1,12 +1,12 @@
 /**
  * Snapshot dos dados públicos do PROFOR/ONASP 2026 (Processo SEI 08016.010062/2026-18)
- * Gerado automaticamente em 2026-09-28T13:45:00.234Z.
+ * Gerado automaticamente em 2026-09-28T14:35:35.898Z.
  * Não editar manualmente. Use tools/build_public_docs.cjs para atualizar.
  */
-window.PROFOR_PUBLIC_UPDATED_AT = "2026-09-28T13:45:00.234Z";
+window.PROFOR_PUBLIC_UPDATED_AT = "2026-09-28T14:35:35.898Z";
 window.PROFOR_PUBLIC_DATA = {
   "schemaVersion": 1,
-  "revision": 111,
+  "revision": 112,
   "proposals": [
     {
       "id": "2243618",
@@ -9197,11 +9197,11 @@ window.PROFOR_PUBLIC_DATA = {
             "at": null
           },
           "objeto": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
+            "at": "2026-09-28T14:26:16.377Z",
             "attachments": []
           },
           "justificativa": {
@@ -10484,6 +10484,27 @@ window.PROFOR_PUBLIC_DATA = {
           },
           "after": {
             "at": "2026-09-27T19:12:19.980Z"
+          }
+        },
+        {
+          "at": "2026-09-28T14:26:16.377Z",
+          "event": "Avaliação: merito / objeto",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-28T14:26:16.377Z",
+            "attachments": []
           }
         }
       ],
