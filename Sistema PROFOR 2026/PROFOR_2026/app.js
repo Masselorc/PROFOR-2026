@@ -1720,6 +1720,7 @@
         ${button('Copiar texto','copy-text')}
         ${button('Copiar HTML para SEI','copy-html')}
         ${button('Salvar HTML','save-report')}
+        ${button('Salvar XLSX','save-xlsx')}
         ${button('Imprimir / salvar PDF','print','','primary')}
       </div>
       <div class="report" id="report-preview">${ProforReport.html(p,{topics:[...activeReportTopics]})}</div>
@@ -1776,6 +1777,13 @@
     else if(action==='legacy'){const old=await ProforStore.legacy();D.assert(old?.state,'Nenhum banco antigo encontrado neste navegador e endereço.');download('PROFOR_BANCO_ANTIGO.json','application/json',JSON.stringify(old.state,null,2));toast('Backup antigo exportado. Use Restaurar backup JSON para importá-lo.');}
     else if(action==='recovery'){const recovery=await ProforStore.read('recovery');D.assert(recovery,'Ainda não existe cópia de recuperação de uma restauração.');download(`PROFOR_2026_RECUPERACAO_${D.localToday()}.json`,'application/json',JSON.stringify(recovery,null,2));toast('Download da cópia de recuperação solicitado.');}
     else if(action==='save-report'){download(`PROFOR_RELATORIO_${current().id}.html`,'text/html;charset=utf-8','<!doctype html><html lang="pt-BR"><meta charset="utf-8"><title>Relatório PROFOR</title><body>'+currentReportHtml()+'</body></html>');}
+    else if(action==='save-xlsx'){
+      const p=current();
+      const topics=[...selectedReportTopics()];
+      const xlsxBytes=ProforReport.xlsx(p,{topics});
+      download(`PROFOR_RELATORIO_${p.id}.xlsx`,'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',xlsxBytes);
+      toast('Planilha XLSX gerada para análise por IA.');
+    }
     else if(action==='print')window.print();
     else if(action==='copy-text' || action==='copy-html'){
       const html=currentReportHtml(),text=$('#report-preview').innerText;

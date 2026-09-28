@@ -190,6 +190,499 @@
       ${bodyContent}
     </article>`;
   }
-  root.ProforReport={html,TOPICS,availableTopics};
+
+  /* ---- Gerador de Planilha XLSX (formato banco de dados tabular para IAs) ---- */
+  const CRC_TABLE = (() => {
+    const table = new Uint32Array(256);
+    for (let n = 0; n < 256; n++) {
+      let c = n;
+      for (let k = 0; k < 8; k++) {
+        c = (c & 1) ? (0xEDB88320 ^ (c >>> 1)) : (c >>> 1);
+      }
+      table[n] = c >>> 0;
+    }
+    return table;
+  })();
+
+  function crc32(buf) {
+    let crc = 0 ^ (-1);
+    for (let i = 0; i < buf.length; i++) {
+      crc = (crc >>> 8) ^ CRC_TABLE[(crc ^ buf[i]) & 0xFF];
+    }
+    return (crc ^ (-1)) >>> 0;
+  }
+
+  function colLetter(col) {
+    let s = '';
+    col += 1;
+    while (col > 0) {
+      const m = (col - 1) % 26;
+      s = String.fromCharCode(65 + m) + s;
+      col = Math.floor((col - m) / 26);
+    }
+    return s;
+  }
+
+  function xmlEscape(val) {
+    return String(val ?? '')
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&apos;');
+  }
+
+  function buildSheetXml(sheet) {
+    let rowsXml = '';
+    let colsXml = '';
+    if (sheet.data.length > 0) {
+      const numCols = sheet.data[0].length;
+      colsXml = '<cols>';
+      for (let c = 0; c < numCols; c++) {
+        let maxLen = 10;
+        for (let r = 0; r < Math.min(sheet.data.length, 100); r++) {
+          const val = sheet.data[r][c];
+          if (val !== null && val !== undefined) {
+            maxLen = Math.max(maxLen, String(val).length);
+          }
+        }
+        const width = Math.min(Math.max(maxLen + 3, 12), 60);
+        colsXml += `<col min="${c + 1}" max="${c + 1}" width="${width}" customWidth="1"/>`;
+      }
+      colsXml += '</cols>';
+    }
+
+    sheet.data.forEach((row, rIdx) => {
+      const rowNum = rIdx + 1;
+      let cellsXml = '';
+      row.forEach((cell, cIdx) => {
+        const ref = `${colLetter(cIdx)}${rowNum}`;
+        if (cell === null || cell === undefined || cell === '') return;
+        const isHeader = rIdx === 0;
+        if (typeof cell === 'number' && !isHeader && Number.isFinite(cell)) {
+          const styleId = Number.isInteger(cell) ? 3 : 2;
+          cellsXml += `<c r="${ref}" s="${styleId}"><v>${cell}</v></c>`;
+        } else {
+          const styleId = isHeader ? 1 : 0;
+          cellsXml += `<c r="${ref}" t="inlineStr" s="${styleId}"><is><t xml:space="preserve">${xmlEscape(cell)}</t></is></c>`;
+        }
+      });
+      rowsXml += `<row r="${rowNum}">${cellsXml}</row>`;
+    });
+    return `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n<worksheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main">${colsXml}<sheetData>${rowsXml}</sheetData></worksheet>`;
+  }
+
+  function createZip(files) {
+    const enc = new TextEncoder();
+    const localHeaders = [];
+    const centralHeaders = [];
+    let offset = 0;
+    let totalLength = 0;
+
+    for (const f of files) {
+      const nameBytes = enc.encode(f.name);
+      const dataBytes = typeof f.data === 'string' ? enc.encode(f.data) : (f.data instanceof Uint8Array ? f.data : new Uint8Array(f.data));
+      const crc = crc32(dataBytes);
+      const size = dataBytes.length;
+
+      const lh = new Uint8Array(30 + nameBytes.length);
+      const lv = new DataView(lh.buffer, lh.byteOffset, lh.byteLength);
+      lv.setUint32(0, 0x04034b50, true);
+      lv.setUint16(4, 20, true);
+      lv.setUint16(6, 0x0800, true);
+      lv.setUint16(8, 0, true);
+      lv.setUint16(10, 0, true);
+      lv.setUint16(12, 0, true);
+      lv.setUint32(14, crc, true);
+      lv.setUint32(18, size, true);
+      lv.setUint32(22, size, true);
+      lv.setUint16(26, nameBytes.length, true);
+      lv.setUint16(28, 0, true);
+      lh.set(nameBytes, 30);
+
+      localHeaders.push(lh, dataBytes);
+      totalLength += lh.length + dataBytes.length;
+
+      const ch = new Uint8Array(46 + nameBytes.length);
+      const cv = new DataView(ch.buffer, ch.byteOffset, ch.byteLength);
+      cv.setUint32(0, 0x02014b50, true);
+      cv.setUint16(4, 20, true);
+      cv.setUint16(6, 20, true);
+      cv.setUint16(8, 0x0800, true);
+      cv.setUint16(10, 0, true);
+      cv.setUint16(12, 0, true);
+      cv.setUint16(14, 0, true);
+      cv.setUint32(16, crc, true);
+      cv.setUint32(20, size, true);
+      cv.setUint32(24, size, true);
+      cv.setUint16(28, nameBytes.length, true);
+      cv.setUint16(30, 0, true);
+      cv.setUint16(32, 0, true);
+      cv.setUint16(34, 0, true);
+      cv.setUint16(36, 0, true);
+      cv.setUint32(38, 0, true);
+      cv.setUint32(42, offset, true);
+      ch.set(nameBytes, 46);
+
+      centralHeaders.push(ch);
+      totalLength += ch.length;
+      offset += lh.length + dataBytes.length;
+    }
+
+    const cdOffset = offset;
+    let cdSize = 0;
+    for (const ch of centralHeaders) cdSize += ch.length;
+
+    const eocd = new Uint8Array(22);
+    const ev = new DataView(eocd.buffer, eocd.byteOffset, eocd.byteLength);
+    ev.setUint32(0, 0x06054b50, true);
+    ev.setUint16(4, 0, true);
+    ev.setUint16(6, 0, true);
+    ev.setUint16(8, files.length, true);
+    ev.setUint16(10, files.length, true);
+    ev.setUint32(12, cdSize, true);
+    ev.setUint32(16, cdOffset, true);
+    ev.setUint16(20, 0, true);
+    totalLength += 22;
+
+    const out = new Uint8Array(totalLength);
+    let pos = 0;
+    for (const h of localHeaders) {
+      out.set(h, pos);
+      pos += h.length;
+    }
+    for (const c of centralHeaders) {
+      out.set(c, pos);
+      pos += c.length;
+    }
+    out.set(eocd, pos);
+
+    return out;
+  }
+
+  function buildWorkbookZip(sheets) {
+    const files = [];
+
+    let sheetOverrides = '';
+    sheets.forEach((s, idx) => {
+      sheetOverrides += `<Override PartName="/xl/worksheets/sheet${idx + 1}.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml"/>`;
+    });
+    files.push({
+      name: '[Content_Types].xml',
+      data: `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n<Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types"><Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/><Default Extension="xml" ContentType="application/xml"/><Override PartName="/xl/workbook.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet.main+xml"/><Override PartName="/xl/styles.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.styles+xml"/>${sheetOverrides}</Types>`
+    });
+
+    files.push({
+      name: '_rels/.rels',
+      data: `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="xl/workbook.xml"/></Relationships>`
+    });
+
+    let wbRels = '';
+    sheets.forEach((s, idx) => {
+      wbRels += `<Relationship Id="rId${idx + 1}" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet" Target="worksheets/sheet${idx + 1}.xml"/>`;
+    });
+    wbRels += `<Relationship Id="rIdStyles" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles" Target="styles.xml"/>`;
+    files.push({
+      name: 'xl/_rels/workbook.xml.rels',
+      data: `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">${wbRels}</Relationships>`
+    });
+
+    let sheetsXml = '';
+    sheets.forEach((s, idx) => {
+      sheetsXml += `<sheet name="${xmlEscape(s.name.slice(0, 31))}" sheetId="${idx + 1}" r:id="rId${idx + 1}"/>`;
+    });
+    files.push({
+      name: 'xl/workbook.xml',
+      data: `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n<workbook xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"><sheets>${sheetsXml}</sheets></workbook>`
+    });
+
+    files.push({
+      name: 'xl/styles.xml',
+      data: `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<styleSheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main">
+  <numFmts count="2">
+    <numFmt numFmtId="164" formatCode="#,##0.00"/>
+    <numFmt numFmtId="165" formatCode="#,##0"/>
+  </numFmts>
+  <fonts count="2">
+    <font><name val="Calibri"/><sz val="11"/></font>
+    <font><b/><name val="Calibri"/><sz val="11"/></font>
+  </fonts>
+  <fills count="3">
+    <fill><patternFill patternType="none"/></fill>
+    <fill><patternFill patternType="gray125"/></fill>
+    <fill><patternFill patternType="solid"><fgColor rgb="FFE9EEF2"/></patternFill></fill>
+  </fills>
+  <borders count="1">
+    <border><left/><right/><top/><bottom/><diagonal/></border>
+  </borders>
+  <cellStyleXfs count="1">
+    <xf numFmtId="0" fontId="0" fillId="0" borderId="0"/>
+  </cellStyleXfs>
+  <cellXfs count="4">
+    <xf numFmtId="0" fontId="0" fillId="0" borderId="0" xfId="0"/>
+    <xf numFmtId="0" fontId="1" fillId="2" borderId="0" xfId="0" applyFont="1" applyFill="1"/>
+    <xf numFmtId="164" fontId="0" fillId="0" borderId="0" xfId="0" applyNumberFormat="1"/>
+    <xf numFmtId="165" fontId="0" fillId="0" borderId="0" xfId="0" applyNumberFormat="1"/>
+  </cellXfs>
+  <cellStyles count="1">
+    <cellStyle name="Normal" xfId="0" builtinId="0"/>
+  </cellStyles>
+</styleSheet>`
+    });
+
+    sheets.forEach((s, idx) => {
+      files.push({
+        name: `xl/worksheets/sheet${idx + 1}.xml`,
+        data: buildSheetXml(s)
+      });
+    });
+
+    return createZip(files);
+  }
+
+  function parseNum(raw) {
+    if (raw === null || raw === undefined || raw === '') return null;
+    if (typeof raw === 'number') return Number.isFinite(raw) ? raw : null;
+    const s = String(raw).trim().replace(/\./g, '').replace(',', '.');
+    const n = Number(s);
+    return Number.isFinite(n) ? n : null;
+  }
+
+  function xlsx(p, options = {}) {
+    const i = p.imported;
+    const selected = options.topics ? new Set(options.topics) : null;
+    const isTopicIncluded = id => !selected || selected.has(id);
+    const lastImport = p.history.filter(h => h.event.includes('importada') || h.event.includes('origem')).at(-1)?.at;
+    const propNum = D.fmtProposalNumber(i.numero);
+    const seiNum = p.sei?.number || 'Não cadastrado';
+    const sheets = [];
+
+    // Tabela Mestra: Base_Dados (formato relacional plano perfeitamente legível por IAs)
+    const baseRows = [
+      [
+        'proposta',
+        'uf',
+        'processo_sei',
+        'topico_id',
+        'topico_nome',
+        'item',
+        'descricao_conteudo',
+        'quantidade',
+        'valor_unitario',
+        'valor_total',
+        'status_analise',
+        'observacao_analista',
+        'fundamentacao',
+        'documentos_anexos'
+      ]
+    ];
+
+    function addBaseRow(topicId, topicName, item, desc = null, qtd = null, vUnit = null, vTot = null, status = null, note = null, fund = null, docs = null) {
+      baseRows.push([
+        propNum,
+        i.uf,
+        seiNum,
+        topicId,
+        topicName,
+        item,
+        desc,
+        qtd,
+        vUnit,
+        vTot,
+        status,
+        note,
+        fund,
+        docs
+      ]);
+    }
+
+    // 1. Identificação da proposta
+    if (isTopicIncluded('identificacao')) {
+      const topName = 'Identificação da proposta';
+      addBaseRow('identificacao', topName, 'Processo SEI', seiNum);
+      addBaseRow('identificacao', topName, 'Programa', D.PROGRAM);
+      addBaseRow('identificacao', topName, 'Proposta', propNum);
+      addBaseRow('identificacao', topName, 'Unidade Federativa', i.uf);
+      addBaseRow('identificacao', topName, 'Município', i.municipio);
+      addBaseRow('identificacao', topName, 'Proponente', i.proponente);
+      addBaseRow('identificacao', topName, 'CNPJ', D.fmtCnpj(i.cnpj));
+      addBaseRow('identificacao', topName, 'Situação no Transferegov', i.situacao);
+      addBaseRow('identificacao', topName, 'Etapa na origem', D.sourceState(p));
+      addBaseRow('identificacao', topName, 'Data de envio para análise', D.fmtDate(i.dataEnvio));
+      addBaseRow('identificacao', topName, 'Última alteração importada', D.fmtDate(lastImport));
+      addBaseRow('identificacao', topName, 'Objeto', i.objeto);
+    }
+
+    // 2. Valores
+    if (isTopicIncluded('valores')) {
+      const topName = 'Valores';
+      const rep = parseNum(i.repasse);
+      const ctp = parseNum(i.contrapartida);
+      const glb = parseNum(i.global);
+      addBaseRow('valores', topName, 'Repasse', null, null, null, rep, 'Informado');
+      addBaseRow('valores', topName, 'Contrapartida', null, null, null, ctp, 'Informado');
+      addBaseRow('valores', topName, 'Valor global', null, null, null, glb, 'Informado');
+    }
+
+    // 3. Projeto apresentado
+    if (isTopicIncluded('projeto') && p.textos) {
+      const topName = 'Projeto apresentado';
+      Object.entries(D.CAMPOS_TEXTOS).forEach(([key, label]) => {
+        const txt = String(p.textos[key] || '').trim();
+        if (txt) {
+          addBaseRow('projeto', topName, label, txt);
+        }
+      });
+    }
+
+    // 4. Avaliação de mérito
+    if (isTopicIncluded('merito')) {
+      const topName = 'Avaliação de mérito';
+      D.rows(p, 'merito').forEach(([id, label]) => {
+        const review = D.reviewOf(p, 'merito', id);
+        const docs = documentNames(review).join('; ');
+        const status = D.rotuloDoResultado(id, statusKey(review)) || D.STATUSES[statusKey(review)];
+        addBaseRow('merito', topName, label, null, null, null, null, status, review?.note || null, null, docs || null);
+      });
+    }
+
+    // 5. Plano de aplicação detalhado (PAD)
+    const padItems = i.pad || [];
+    if (isTopicIncluded('pad')) {
+      const topName = 'Plano de aplicação detalhado (PAD)';
+      if (padItems.length > 0) {
+        padItems.forEach(item => {
+          const review = p.reviews.pad?.[item.id];
+          const docs = documentNames(review).join('; ');
+          const status = D.STATUSES[statusKey(review)] || 'Não analisado';
+          const qtd = parseNum(item.quantidade);
+          const vUnit = parseNum(item.unitario);
+          const vTot = parseNum(item.total);
+          addBaseRow('pad', topName, item.descricao, null, qtd, vUnit, vTot, status, review?.note || null, null, docs || null);
+        });
+      } else {
+        addBaseRow('pad', topName, 'PAD', 'Nenhum item do PAD disponível nesta extração.');
+      }
+    }
+
+    // 6. Instituição da Ouvidoria
+    if (isTopicIncluded('ouvidoria')) {
+      const topName = 'Instituição da Ouvidoria';
+      const ouvStatus = p.ouvidoria.status === 'instituida' ? 'Instituída' : p.ouvidoria.status === 'pendente' ? 'Pendente' : 'Não informada';
+      addBaseRow('ouvidoria', topName, 'Situação', ouvStatus);
+      addBaseRow('ouvidoria', topName, 'Cláusula suspensiva aplicável confirmada', p.ouvidoria.clause ? 'Sim' : 'Não');
+      addBaseRow('ouvidoria', topName, 'Prazo de referência (nove meses)', p.ouvidoria.status === 'instituida' ? 'Sim' : 'Não');
+      addBaseRow('ouvidoria', topName, 'Ato normativo registrado', p.ouvidoria.url ? 'Sim' : 'Não');
+      if (p.ouvidoria.note) {
+        addBaseRow('ouvidoria', topName, 'Observação', p.ouvidoria.note);
+      }
+    }
+
+    // 7. Requisitos da Proposta
+    if (isTopicIncluded('proposta')) {
+      for (const tab of D.ABAS_CELEBRACAO) {
+        if (tab.id !== 'proposta') continue;
+        D.CELEBRACAO.filter(item => item.aba === tab.id).forEach(item => {
+          const review = p.reviews.celebracao[item.id];
+          const title = `${item.label}${item.sub ? ' — ' + item.sub : ''}`;
+          const docs = documentNames(review).join('; ');
+          const status = D.STATUSES[statusKey(review)] || 'Não analisado';
+          addBaseRow('proposta', tab.titulo, title, null, null, null, null, status, review?.note || null, item.fundamentacao || null, docs || null);
+        });
+      }
+    }
+
+    // 8. Situação final da análise
+    if (isTopicIncluded('situacao')) {
+      const topName = 'Situação final da análise';
+      addBaseRow('situacao', topName, 'Situação final', D.situation(p));
+      const blk = D.blockers(p);
+      if (blk.length) addBaseRow('situacao', topName, 'Bloqueios técnicos', blk.join('; '));
+      const pend = D.pending(p);
+      if (pend.length) addBaseRow('situacao', topName, 'Pendências', pend.join('; '));
+    }
+
+    // Se nenhum tópico foi selecionado, insere aviso
+    if (baseRows.length === 1) {
+      baseRows.push([propNum, i.uf, seiNum, 'nenhum', 'Nenhum tópico selecionado', 'Aviso', 'Marque ao menos um tópico para exportar os dados correspondentes.', null, null, null, null, null, null, null]);
+    }
+
+    sheets.push({ name: 'Base_Dados', data: baseRows });
+
+    // Abas adicionais especializadas conforme os tópicos selecionados:
+    // Aba PAD
+    if (isTopicIncluded('pad') && padItems.length > 0) {
+      const padRows = [
+        ['item_num', 'descricao', 'quantidade', 'valor_unitario', 'valor_total', 'status_analise', 'observacao', 'documentos']
+      ];
+      padItems.forEach((item, idx) => {
+        const review = p.reviews.pad?.[item.id];
+        const docs = documentNames(review).join('; ');
+        const status = D.STATUSES[statusKey(review)] || 'Não analisado';
+        const qtd = parseNum(item.quantidade);
+        const vUnit = parseNum(item.unitario);
+        const vTot = parseNum(item.total);
+        padRows.push([
+          idx + 1,
+          item.descricao,
+          qtd,
+          vUnit,
+          vTot,
+          status,
+          review?.note || null,
+          docs || null
+        ]);
+      });
+      sheets.push({ name: 'PAD', data: padRows });
+    }
+
+    // Aba Valores
+    if (isTopicIncluded('valores')) {
+      const valRows = [
+        ['tipo_valor', 'valor_reais', 'percentual_global']
+      ];
+      const rep = parseNum(i.repasse);
+      const ctp = parseNum(i.contrapartida);
+      const glb = parseNum(i.global);
+      valRows.push(['Repasse', rep, glb && rep !== null ? rep / glb : null]);
+      valRows.push(['Contrapartida', ctp, glb && ctp !== null ? ctp / glb : null]);
+      valRows.push(['Valor global', glb, glb ? 1.0 : null]);
+      sheets.push({ name: 'Valores', data: valRows });
+    }
+
+    // Aba Mérito
+    if (isTopicIncluded('merito')) {
+      const meritoRows = [
+        ['criterio_id', 'criterio', 'status_analise', 'observacao', 'documentos']
+      ];
+      D.rows(p, 'merito').forEach(([id, label]) => {
+        const review = D.reviewOf(p, 'merito', id);
+        const docs = documentNames(review).join('; ');
+        const status = D.rotuloDoResultado(id, statusKey(review)) || D.STATUSES[statusKey(review)];
+        meritoRows.push([id, label, status, review?.note || null, docs || null]);
+      });
+      sheets.push({ name: 'Merito', data: meritoRows });
+    }
+
+    // Aba Requisitos da Proposta
+    if (isTopicIncluded('proposta')) {
+      const reqRows = [
+        ['item_num', 'requisito', 'fundamentacao', 'status_analise', 'observacao', 'documentos']
+      ];
+      D.CELEBRACAO.filter(item => item.aba === 'proposta').forEach((item, idx) => {
+        const review = p.reviews.celebracao[item.id];
+        const title = `${item.label}${item.sub ? ' — ' + item.sub : ''}`;
+        const docs = documentNames(review).join('; ');
+        const status = D.STATUSES[statusKey(review)] || 'Não analisado';
+        reqRows.push([item.id || (idx + 1), title, item.fundamentacao || null, status, review?.note || null, docs || null]);
+      });
+      sheets.push({ name: 'Requisitos', data: reqRows });
+    }
+
+    return buildWorkbookZip(sheets);
+  }
+
+  root.ProforReport={html,xlsx,TOPICS,availableTopics};
   if(typeof module!=='undefined')module.exports=root.ProforReport;
 })(globalThis);
