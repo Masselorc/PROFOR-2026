@@ -1,12 +1,12 @@
 /**
  * Snapshot dos dados públicos do PROFOR/ONASP 2026 (Processo SEI 08016.010062/2026-18)
- * Gerado automaticamente em 2026-09-28T13:08:32.976Z.
+ * Gerado automaticamente em 2026-09-28T13:45:00.234Z.
  * Não editar manualmente. Use tools/build_public_docs.cjs para atualizar.
  */
-window.PROFOR_PUBLIC_UPDATED_AT = "2026-09-28T13:08:32.976Z";
+window.PROFOR_PUBLIC_UPDATED_AT = "2026-09-28T13:45:00.234Z";
 window.PROFOR_PUBLIC_DATA = {
   "schemaVersion": 1,
-  "revision": 107,
+  "revision": 111,
   "proposals": [
     {
       "id": "2243618",
@@ -14100,35 +14100,35 @@ window.PROFOR_PUBLIC_DATA = {
         },
         "pad": {
           "17425883": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
+            "at": "2026-09-28T13:29:05.983Z",
             "attachments": []
           },
           "17425889": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
+            "at": "2026-09-28T13:29:03.253Z",
             "attachments": []
           },
           "17425890": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
+            "at": "2026-09-28T13:29:08.704Z",
             "attachments": []
           },
           "17425892": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
+            "at": "2026-09-28T13:29:18.138Z",
             "attachments": []
           }
         }
@@ -14776,6 +14776,90 @@ window.PROFOR_PUBLIC_DATA = {
           },
           "after": {
             "at": "2026-09-27T19:12:19.980Z"
+          }
+        },
+        {
+          "at": "2026-09-28T13:29:03.253Z",
+          "event": "Avaliação: pad / 17425889",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-28T13:29:03.253Z",
+            "attachments": []
+          }
+        },
+        {
+          "at": "2026-09-28T13:29:05.983Z",
+          "event": "Avaliação: pad / 17425883",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-28T13:29:05.983Z",
+            "attachments": []
+          }
+        },
+        {
+          "at": "2026-09-28T13:29:08.704Z",
+          "event": "Avaliação: pad / 17425890",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-28T13:29:08.704Z",
+            "attachments": []
+          }
+        },
+        {
+          "at": "2026-09-28T13:29:18.138Z",
+          "event": "Avaliação: pad / 17425892",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-28T13:29:18.138Z",
+            "attachments": []
           }
         }
       ],

@@ -285,7 +285,7 @@
     const p=PROGRAM;
     const tabs=[['dados','Dados'],['investimento','Item de Investimento'],['contrapartida','Regras de Contrapartida'],['anexos','Anexos'],['despesas','Lista de Item - Tipo de Despesa']];
     const fields=items=>`<dl class="program-facts">${items.map(([label,value])=>`<div><dt>${e(label)}</dt><dd>${e(value)}</dd></div>`).join('')}</dl>`;
-    const localOrigin=['127.0.0.1','localhost'].includes(location.hostname) || location.protocol==='file:';
+    const localOrigin=['127.0.0.1','localhost'].includes(location.hostname) || location.protocol==='file:' || /^(10\.|192\.168\.|172\.(1[6-9]|2\d|3[01])\.)/.test(location.hostname) || location.hostname.toLowerCase().startsWith('mj-');
     const file=f=>`<li class="program-file"><strong>${e(f.title)}</strong><a class="program-open" href="${e(localOrigin?new URL(f.href,'https://masselorc.github.io/PROFOR-2026/').href:f.href)}" target="_blank" rel="noopener noreferrer" aria-label="Abrir ${e(f.title)} em nova guia">Abrir ↗</a></li>`;
     let content='';
     if(programTab==='dados')content=`<div class="program-panel">${fields([['Nome do programa',p.title],...p.facts])}<div class="program-text"><h2>Descrição</h2><p>${e(p.description)}</p><h2>Observação</h2><p>${e(p.observation)}</p><h2>Critérios de seleção</h2><p>${e(p.selection)}</p><p class="source">Os textos acima são sínteses. O teor integral consta no Transferegov e no edital.</p></div><h2>Arquivo exibido em Dados</h2><ul class="program-files">${file(p.dataFile)}</ul></div>`;

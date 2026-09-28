@@ -4,11 +4,52 @@
 const http = require('node:http');
 const fs = require('node:fs');
 const path = require('node:path');
+const os = require('node:os');
 const sync = require('./transferegov-sync.cjs');
 const store = require('./workspace-store.cjs').createStore(path.join(__dirname,'dados','registros'));
 
 const PORT = 8766;
-const HOSTS = new Set(['127.0.0.1:8766', 'localhost:8766', '[::1]:8766']);
+const HOST = process.env.PROFOR_HOST || '0.0.0.0';
+
+function getNetworkAddresses() {
+  const addrs = new Set(['127.0.0.1', 'localhost', '::1', '[::1]', os.hostname().toLowerCase()]);
+  const nets = os.networkInterfaces();
+  for (const name of Object.keys(nets)) {
+    for (const net of nets[name]) {
+      if (net.family === 'IPv4') addrs.add(net.address);
+    }
+  }
+  return addrs;
+}
+
+function isHostAllowed(hostHeader) {
+  if (!hostHeader) return false;
+  const host = hostHeader.toLowerCase().trim();
+  const colonIndex = host.lastIndexOf(':');
+  let hostname = host;
+  let port = '';
+  if (colonIndex > 0 && !host.endsWith(']')) {
+    hostname = host.slice(0, colonIndex);
+    port = host.slice(colonIndex + 1);
+    if (port && port !== String(PORT) && PORT !== 0) return false;
+  }
+  if (getNetworkAddresses().has(hostname)) return true;
+  if (hostname === os.hostname().toLowerCase() || hostname.startsWith(os.hostname().toLowerCase() + '.')) return true;
+  if (/^10\.\d{1,3}\.\d{1,3}\.\d{1,3}$/.test(hostname)) return true;
+  if (/^192\.168\.\d{1,3}\.\d{1,3}$/.test(hostname)) return true;
+  if (/^172\.(1[6-9]|2\d|3[0-1])\.\d{1,3}\.\d{1,3}$/.test(hostname)) return true;
+  if (process.env.PROFOR_ALLOWED_HOSTS) {
+    const list = process.env.PROFOR_ALLOWED_HOSTS.toLowerCase().split(',').map(s => s.trim());
+    if (list.includes(hostname) || list.includes(host)) return true;
+  }
+  return false;
+}
+
+const HOSTS = {
+  has(host) {
+    return isHostAllowed(host);
+  }
+};
 const allowed = new Set(['PROFOR_2026.html', 'styles.css', 'domain.js', 'sync-apply.js', 'bandeiras-uf.js', 'storage.js', 'transferegov.js', 'report.js', 'app.js']);
 const programFiles = new Set([
   'programa/tutorial-concedente-analise.pdf', 'programa/edital-37-dou.pdf',
@@ -65,7 +106,14 @@ function sendJSON(res, status, body) {
 function originAllowed(req) {
   const origin = req.headers.origin;
   if (origin === undefined) return true;
-  return ['http://127.0.0.1:8766', 'http://localhost:8766', 'http://[::1]:8766', 'null'].includes(origin);
+  if (origin === 'null') return true;
+  try {
+    const u = new URL(origin);
+    if (!['http:', 'https:'].includes(u.protocol)) return false;
+    return isHostAllowed(u.host);
+  } catch {
+    return false;
+  }
 }
 
 /* Falha sempre como {error} em português, sem stack. */
@@ -203,5 +251,18 @@ const server = http.createServer((req, res) => {
   fs.createReadStream(programFiles.has(name) ? path.join(__dirname, '..', '..', 'docs', name) : path.join(__dirname, name)).pipe(res);
 });
 
+function getPrimaryIPv4() {
+  const nets = os.networkInterfaces();
+  for (const name of Object.keys(nets)) {
+    for (const net of nets[name]) {
+      if (net.family === 'IPv4' && !net.internal) return net.address;
+    }
+  }
+  return '127.0.0.1';
+}
+
 server.on('error', err => { console.error('Não foi possível iniciar o servidor:', err.message); process.exitCode = 1; });
-server.listen(PORT, '127.0.0.1', () => console.log('PROFOR: http://127.0.0.1:8766/PROFOR_2026.html — Ctrl+C para encerrar.'));
+server.listen(PORT, HOST, () => {
+  const ipv4 = getPrimaryIPv4();
+  console.log(`PROFOR: http://127.0.0.1:${PORT}/PROFOR_2026.html — Intranet: http://${ipv4}:${PORT}/PROFOR_2026.html — Ctrl+C para encerrar.`);
+});

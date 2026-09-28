@@ -10,7 +10,7 @@
 
 Como instalar o atalho da Área de Trabalho (uma única vez): duplo clique em **`INSTALAR ATALHO.cmd`**. Ele cria o atalho `PROFOR 2026` com o ícone do sistema (`assets\profor.ico`), sem exigir administrador. Para remover, apague o atalho da Área de Trabalho — nada mais é alterado.
 
-Caminho manual equivalente, se algum dia for preciso: `node server.cjs` e abra **http://127.0.0.1:8766/PROFOR_2026.html**. Ctrl+C encerra o servidor. O servidor escuta somente em `127.0.0.1`, recusa `Host` desconhecido, recebe o estado do aplicativo em JSON e não acessa credenciais.
+Caminho manual equivalente, se algum dia for preciso: `node server.cjs` e abra **http://127.0.0.1:8766/PROFOR_2026.html** (acesso local) ou pelo endereço da intranet **http://<IP_DA_MAQUINA>:8766/PROFOR_2026.html** (ex.: `http://10.119.11.37:8766/` ou `http://MJ-0012666669:8766/` para outros usuários da rede). Ctrl+C encerra o servidor. O servidor aceita conexões locais e de rede interna autorizada, recusa `Host` externo/desconhecido, recebe o estado do aplicativo em JSON e não acessa credenciais.
 
 **Se a tela aparecer com aparência antiga** (colunas desalinhadas, texto estranho no lugar de um dado), recarregue a página com **Ctrl+F5** uma vez. O HTML carrega os scripts com assinatura de versão (`?v=…`), gerada a cada alteração, justamente para impedir que o navegador use arquivo antigo; o Ctrl+F5 cobre o caso da página que já estava aberta antes da atualização.
 
