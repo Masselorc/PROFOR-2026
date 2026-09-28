@@ -1,9 +1,9 @@
 /**
  * Snapshot dos dados públicos do PROFOR/ONASP 2026 (Processo SEI 08016.010062/2026-18)
- * Gerado automaticamente em 2026-09-28T14:48:24.531Z.
+ * Gerado automaticamente em 2026-09-28T14:52:38.385Z.
  * Não editar manualmente. Use tools/build_public_docs.cjs para atualizar.
  */
-window.PROFOR_PUBLIC_UPDATED_AT = "2026-09-28T14:48:24.531Z";
+window.PROFOR_PUBLIC_UPDATED_AT = "2026-09-28T14:52:38.385Z";
 window.PROFOR_PUBLIC_DATA = {
   "schemaVersion": 1,
   "revision": 112,

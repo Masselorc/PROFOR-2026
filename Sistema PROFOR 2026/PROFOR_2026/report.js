@@ -5,14 +5,12 @@
     .profor-report{--pr-ink:#17313d;--pr-muted:#526571;--pr-brand:#155b67;--pr-line:#d7e2e6;--pr-soft:#f2f7f8;font:10.5pt/1.45 Arial,sans-serif;color:var(--pr-ink);max-width:920px;margin:0 auto;overflow-wrap:anywhere}
     .profor-report *{box-sizing:border-box}
     .profor-report h1,.profor-report h2,.profor-report h3,.profor-report h4,.profor-report p,.profor-report dl,.profor-report ul{margin:0}
-    .profor-report .pr-header{border-top:5px solid var(--pr-brand);border-radius:8px;background:var(--pr-soft);padding:20px 22px;margin-bottom:20px}
-    .profor-report .pr-kicker{font-size:8pt;font-weight:700;letter-spacing:.13em;color:var(--pr-brand);text-transform:uppercase}
-    .profor-report h1{font-size:20pt;line-height:1.2;letter-spacing:-.02em;margin:8px 0 13px;color:var(--pr-ink)}
-    .profor-report .pr-head-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-bottom:13px}
+    .profor-report .pr-header{border-top:5px solid var(--pr-brand);border-radius:8px;background:var(--pr-soft);padding:16px 20px;margin-bottom:20px}
+    .profor-report .pr-kicker{font-size:8pt;font-weight:700;letter-spacing:.13em;color:var(--pr-brand);text-transform:uppercase;margin-bottom:10px}
+    .profor-report .pr-head-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
     .profor-report .pr-head-grid div{background:#fff;border:1px solid var(--pr-line);border-radius:6px;padding:7px 10px}
     .profor-report .pr-head-grid span{display:block;color:var(--pr-muted);font-size:8pt;text-transform:uppercase;letter-spacing:.04em}
     .profor-report .pr-head-grid strong{display:block;font-size:11pt;margin-top:2px}
-    .profor-report .pr-intro{font-size:9pt;color:var(--pr-muted)}
     .profor-report .pr-section{margin:0 0 20px}
     .profor-report h2{font-size:12pt;color:var(--pr-brand);border-bottom:2px solid var(--pr-line);padding-bottom:6px;margin:0 0 10px;break-after:avoid-page}
     .profor-report h3{font-size:10pt;line-height:1.35;color:var(--pr-ink)}
@@ -68,7 +66,6 @@
       .report-filter-bar,.report-actions{display:none!important}
       .profor-report{max-width:none;padding:14mm 14mm 12mm;font-size:9pt;line-height:1.35;print-color-adjust:exact;-webkit-print-color-adjust:exact}
       .profor-report .pr-header{border-top:0;border-bottom:3px solid var(--pr-brand);border-radius:0;padding:0 0 10px;background:#fff;margin-bottom:14px}
-      .profor-report h1{font-size:17pt;margin:5px 0 9px}
       .profor-report h2{font-size:11pt;margin-bottom:8px}
       .profor-report .pr-section{margin-bottom:14px}
       .profor-report .pr-item{padding:8px 10px;margin-bottom:6px}
@@ -179,13 +176,11 @@
     return STYLE+`<article class="profor-report" lang="pt-BR">
       <header class="pr-header">
         <div class="pr-kicker">PROFOR / ONASP 2026 · Relatório técnico</div>
-        <h1>Relatório de análise da proposta</h1>
         <div class="pr-head-grid">
           <div><span>Proposta</span><strong>${e(D.fmtProposalNumber(i.numero))}</strong></div>
           <div><span>Unidade federativa</span><strong>${e(i.uf)}</strong></div>
           <div><span>Emissão</span><strong>${e(D.fmtDate(D.localToday()))}</strong></div>
         </div>
-        <p class="pr-intro">Documento auxiliar gerado a partir dos dados importados do Transferegov e das análises registradas no sistema. Confira os autos antes de incorporá-lo ao SEI.</p>
       </header>
       ${bodyContent}
     </article>`;

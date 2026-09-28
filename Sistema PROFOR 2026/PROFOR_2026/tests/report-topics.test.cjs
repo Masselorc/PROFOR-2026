@@ -40,6 +40,8 @@ test('ProforReport: filtragem de tópicos e renumeração sequencial HTML', asyn
   assert.match(fullHtml, /1\.\s+Identificação da proposta/);
   assert.match(fullHtml, /2\.\s+Valores/);
   assert.match(fullHtml, /Plano de aplicação detalhado/);
+  assert.doesNotMatch(fullHtml, /Relatório de análise da proposta/);
+  assert.doesNotMatch(fullHtml, /Documento auxiliar gerado a partir dos dados/);
 
   // Caso 2: Apenas PAD
   const padOnlyHtml = ProforReport.html(p, { topics: ['pad'] });
