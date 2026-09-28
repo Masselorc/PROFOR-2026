@@ -33,6 +33,7 @@ function isHostAllowed(hostHeader) {
     port = host.slice(colonIndex + 1);
     if (port && port !== String(PORT) && PORT !== 0) return false;
   }
+  if (['profor', 'profor.local', 'profor.mj.gov.br'].includes(hostname)) return true;
   if (getNetworkAddresses().has(hostname)) return true;
   if (hostname === os.hostname().toLowerCase() || hostname.startsWith(os.hostname().toLowerCase() + '.')) return true;
   if (/^10\.\d{1,3}\.\d{1,3}\.\d{1,3}$/.test(hostname)) return true;
