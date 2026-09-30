@@ -1,12 +1,12 @@
 /**
  * Snapshot dos dados públicos do PROFOR/ONASP 2026 (Processo SEI 08016.010062/2026-18)
- * Gerado automaticamente em 2026-09-30T13:04:53.407Z.
+ * Gerado automaticamente em 2026-09-30T13:35:32.955Z.
  * Não editar manualmente. Use tools/build_public_docs.cjs para atualizar.
  */
-window.PROFOR_PUBLIC_UPDATED_AT = "2026-09-30T13:04:53.407Z";
+window.PROFOR_PUBLIC_UPDATED_AT = "2026-09-30T13:35:32.955Z";
 window.PROFOR_PUBLIC_DATA = {
   "schemaVersion": 1,
-  "revision": 163,
+  "revision": 178,
   "proposals": [
     {
       "id": "2243618",
@@ -11276,11 +11276,11 @@ window.PROFOR_PUBLIC_DATA = {
         },
         "pad": {
           "17444044": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
+            "at": "2026-09-30T13:32:42.359Z",
             "attachments": []
           },
           "17444048": {
@@ -11316,27 +11316,27 @@ window.PROFOR_PUBLIC_DATA = {
             "attachments": []
           },
           "17444101": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
+            "at": "2026-09-30T13:30:06.381Z",
             "attachments": []
           },
           "17444102": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
+            "at": "2026-09-30T13:29:31.397Z",
             "attachments": []
           },
           "17444103": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
+            "at": "2026-09-30T13:29:14.738Z",
             "attachments": []
           },
           "17444126": {
@@ -11396,11 +11396,11 @@ window.PROFOR_PUBLIC_DATA = {
             "attachments": []
           },
           "17444159": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
+            "at": "2026-09-30T13:33:00.962Z",
             "attachments": []
           },
           "17444189": {
@@ -11420,83 +11420,83 @@ window.PROFOR_PUBLIC_DATA = {
             "attachments": []
           },
           "17444196": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
+            "at": "2026-09-30T13:33:43.761Z",
             "attachments": []
           },
           "17444198": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
+            "at": "2026-09-30T13:33:20.615Z",
             "attachments": []
           },
           "17444201": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
+            "at": "2026-09-30T13:25:33.984Z",
             "attachments": []
           },
           "17444204": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
+            "at": "2026-09-30T13:26:13.868Z",
             "attachments": []
           },
           "17444208": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
+            "at": "2026-09-30T13:32:18.339Z",
             "attachments": []
           },
           "17444210": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
+            "at": "2026-09-30T13:26:36.469Z",
             "attachments": []
           },
           "17444212": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
+            "at": "2026-09-30T13:31:24.524Z",
             "attachments": []
           },
           "17444215": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
+            "at": "2026-09-30T13:30:55.034Z",
             "attachments": []
           },
           "17444291": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
+            "at": "2026-09-30T13:31:45.718Z",
             "attachments": []
           },
           "17444295": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
+            "at": "2026-09-30T13:28:19.505Z",
             "attachments": []
           },
           "17444298": {
@@ -14705,6 +14705,321 @@ window.PROFOR_PUBLIC_DATA = {
           },
           "after": {
             "at": "2026-09-30T13:03:54.129Z"
+          }
+        },
+        {
+          "at": "2026-09-30T13:25:33.984Z",
+          "event": "Avaliação: pad / 17444201",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-30T13:25:33.984Z",
+            "attachments": []
+          }
+        },
+        {
+          "at": "2026-09-30T13:26:13.868Z",
+          "event": "Avaliação: pad / 17444204",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-30T13:26:13.868Z",
+            "attachments": []
+          }
+        },
+        {
+          "at": "2026-09-30T13:26:36.469Z",
+          "event": "Avaliação: pad / 17444210",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-30T13:26:36.469Z",
+            "attachments": []
+          }
+        },
+        {
+          "at": "2026-09-30T13:28:19.505Z",
+          "event": "Avaliação: pad / 17444295",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-30T13:28:19.505Z",
+            "attachments": []
+          }
+        },
+        {
+          "at": "2026-09-30T13:29:14.738Z",
+          "event": "Avaliação: pad / 17444103",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-30T13:29:14.738Z",
+            "attachments": []
+          }
+        },
+        {
+          "at": "2026-09-30T13:29:31.397Z",
+          "event": "Avaliação: pad / 17444102",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-30T13:29:31.397Z",
+            "attachments": []
+          }
+        },
+        {
+          "at": "2026-09-30T13:30:06.381Z",
+          "event": "Avaliação: pad / 17444101",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-30T13:30:06.381Z",
+            "attachments": []
+          }
+        },
+        {
+          "at": "2026-09-30T13:30:55.034Z",
+          "event": "Avaliação: pad / 17444215",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-30T13:30:55.034Z",
+            "attachments": []
+          }
+        },
+        {
+          "at": "2026-09-30T13:31:24.524Z",
+          "event": "Avaliação: pad / 17444212",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-30T13:31:24.524Z",
+            "attachments": []
+          }
+        },
+        {
+          "at": "2026-09-30T13:31:45.718Z",
+          "event": "Avaliação: pad / 17444291",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-30T13:31:45.718Z",
+            "attachments": []
+          }
+        },
+        {
+          "at": "2026-09-30T13:32:18.339Z",
+          "event": "Avaliação: pad / 17444208",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-30T13:32:18.339Z",
+            "attachments": []
+          }
+        },
+        {
+          "at": "2026-09-30T13:32:42.359Z",
+          "event": "Avaliação: pad / 17444044",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-30T13:32:42.359Z",
+            "attachments": []
+          }
+        },
+        {
+          "at": "2026-09-30T13:33:00.962Z",
+          "event": "Avaliação: pad / 17444159",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-30T13:33:00.962Z",
+            "attachments": []
+          }
+        },
+        {
+          "at": "2026-09-30T13:33:20.615Z",
+          "event": "Avaliação: pad / 17444198",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-30T13:33:20.615Z",
+            "attachments": []
+          }
+        },
+        {
+          "at": "2026-09-30T13:33:43.761Z",
+          "event": "Avaliação: pad / 17444196",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-30T13:33:43.761Z",
+            "attachments": []
           }
         }
       ],
