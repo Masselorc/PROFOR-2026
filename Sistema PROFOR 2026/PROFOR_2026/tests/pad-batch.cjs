@@ -1,0 +1,109 @@
+'use strict';
+// Aprovação conjunta isolada: todos os GET/POST de /api/state ficam em memória.
+const assert=require('node:assert/strict');
+const fs=require('node:fs');
+const path=require('node:path');
+const {createHash}=require('node:crypto');
+const D=require('../domain.js');
+const {chromium}=require(process.env.PROFOR_PLAYWRIGHT_PATH || 'C:/Users/marcelo.cortez/AppData/Local/npm-cache/_npx/9833c18b2d85bc59/node_modules/playwright');
+const ORIGIN='http://127.0.0.1:8766';
+const STATIC=new Set(['/PROFOR_2026.html','/styles.css','/domain.js','/sync-apply.js','/bandeiras-uf.js','/storage.js','/transferegov.js','/report.js','/app.js']);
+const clone=value=>JSON.parse(JSON.stringify(value));
+const hash=value=>createHash('sha256').update(JSON.stringify(value)).digest('hex');
+const root=path.resolve(__dirname,'../../..');
+function fixture(){
+  const state=D.initialState();state.revision=7;
+  const pad=['Cadeira','Mesa','Armário','Monitor'].map((descricao,index)=>({id:String(index+1),descricao,quantidade:'1',unitario:10000,total:10000}));
+  const p=D.createProposal({id:'990777',numero:'990777/2026',uf:'RN',programa:D.PROGRAM,proponente:'Fixture isolada',cnpj:'',orgao:'',objeto:'Equipamentos',situacao:'Proposta/Plano de Trabalho Enviado para Análise',data:'2026-09-01',repasse:40000,contrapartida:0,global:40000,pad});
+  for(const item of pad)D.setReview(p,'pad',item.id,{status:item.id==='3'?'diligencia':'obs',note:'Justificativa preservada '+item.id,document:'Documento '+item.id,url:'https://example.invalid/'+item.id},'Fixture');
+  p.reviews.pad['1'].attachments=[{id:'fixture-att',name:'teste.txt',size:5,type:'text/plain',data:'data:text/plain;base64,dGVzdGU=',uploadedAt:D.now(),uploadedBy:'Fixture',note:''}];
+  D.saveDiligence(p,{id:'',ref:'pad:3',category:'PLANO DE APLICAÇÃO DETALHADO',request:'Solicitação preservada',communication:'2026-09-01',science:'',response:'',status:'aberta',note:'Observação preservada'},'Fixture');
+  state.proposals.push(p);return D.validateState(state);
+}
+async function main(){
+  const browser=await chromium.launch({channel:'chrome',headless:true});
+  const errors=[],blocked=[];let memory=fixture(),token=hash(memory),posts=0,failNext=false;
+  try{
+    const context=await browser.newContext({viewport:{width:1440,height:1000},serviceWorkers:'block'});
+    await context.route('**/*',async route=>{
+      const request=route.request(),url=new URL(request.url());
+      if(url.origin===ORIGIN && url.pathname==='/api/state'){
+        const json=body=>route.fulfill({status:200,contentType:'application/json',body:JSON.stringify(body)});
+        if(request.method()==='GET')return json({exists:true,state:memory,token,recovery:null});
+        if(request.method()==='POST'){
+          posts++;
+          if(failNext){failNext=false;return route.fulfill({status:409,contentType:'application/json',body:JSON.stringify({error:'Conflito de revisão simulado. Nenhuma alteração salva.'})});}
+          const body=request.postDataJSON();assert.equal(body.expected,memory.revision);assert.equal(body.token,token);D.validateState(body.state);
+          memory=clone(body.state);memory.revision++;token=hash(memory);
+          return json({exists:true,state:memory,token});
+        }
+      }
+      if(url.origin===ORIGIN && request.method()==='GET' && STATIC.has(url.pathname))return route.continue();
+      blocked.push(request.url());return route.abort();
+    });
+    const page=await context.newPage();page.setDefaultTimeout(10000);page.on('pageerror',e=>errors.push(e.message));
+    await page.goto(ORIGIN+'/PROFOR_2026.html#proposta/990777/pad');
+    await page.locator('#pad-batch-header').waitFor();
+    assert.equal(await page.locator('[data-pad-batch]').count(),4);
+    assert.equal(await page.locator('#pad-batch-approve').isDisabled(),true);
+    await page.locator('#pad-batch-1').check();await page.locator('#pad-batch-3').check();
+    assert.equal(await page.locator('#pad-batch-header').evaluate(el=>el.indeterminate),true);
+    await page.locator('#pad-search').fill('cadeira');
+    assert.match(await page.locator('#pad-batch-count').innerText(),/1 fora dos filtros/);
+    await page.locator('#pad-batch-header').uncheck();
+    assert.match(await page.locator('#pad-batch-count').innerText(),/1 item selecionado/);
+    await page.locator('#pad-search').fill('');
+    await page.locator('#pad-batch-1').check();
+    await page.locator('#pad-batch-approve').click();
+    assert.equal(await page.locator('.pad-batch-preview li').count(),2);
+    assert.match(await page.locator('#modal-content').innerText(),/permanecerão abertas/);
+    await page.getByRole('button',{name:'Cancelar',exact:true}).click();assert.equal(posts,0);
+    await page.locator('.tabs a[data-tab="dados"]').click();await page.locator('.data-sections-body').waitFor();
+    await page.locator('.tabs a[data-tab="pad"]').click();await page.locator('#pad-batch-header').waitFor();
+    assert.equal(await page.locator('[data-pad-batch]:checked').count(),0,'Reentrada limpa seleção de ação');
+    await page.locator('#pad-batch-1').check();await page.locator('#pad-batch-3').check();
+    const before=clone(memory.proposals[0]);
+    await page.locator('#pad-batch-approve').click();
+    await page.locator('#modal-content button[type="submit"]').click();
+    await page.waitForFunction(()=>!document.querySelector('#modal').open);
+    assert.equal(posts,1,'Lote inteiro em uma gravação');assert.equal(memory.revision,8);
+    const after=memory.proposals[0];
+    for(const id of ['1','3']){assert.equal(after.reviews.pad[id].status,'ok');for(const field of ['note','document','url','attachments'])assert.deepEqual(after.reviews.pad[id][field],before.reviews.pad[id][field]);}
+    for(const id of ['2','4'])assert.deepEqual(after.reviews.pad[id],before.reviews.pad[id]);
+    assert.deepEqual(after.diligences,before.diligences,'Não encerra diligências sem análise');
+    assert.equal(after.history.length,before.history.length+2,'Histórico individual preservado');
+    assert.equal(await page.locator('[data-pad-batch]:checked').count(),0);
+    await page.locator('#pad-search').fill('monitor');await page.locator('#pad-batch-all').click();
+    assert.equal(await page.locator('[data-pad-batch]:checked').count(),1,'Selecionar todos respeita o filtro');
+    await page.locator('#pad-batch-clear').click();await page.locator('#pad-search').fill('');
+    await page.locator('#pad-batch-header').check();
+    assert.equal(await page.locator('[data-pad-batch]:checked').count(),4);
+    const unchanged=clone(memory);failNext=true;
+    await page.locator('#pad-batch-approve').click();await page.locator('#modal-content button[type="submit"]').click();
+    await page.locator('#form-error').filter({hasText:'Conflito de revisão'}).waitFor();
+    assert.deepEqual(memory,unchanged,'Falha não salva parcialmente');
+    assert.equal(await page.locator('[data-pad-batch]:checked').count(),4,'Falha mantém seleção para repetir');
+    await page.locator('#modal-content button[type="submit"]').click();
+    await page.waitForFunction(()=>!document.querySelector('#modal').open);
+    assert.equal(memory.revision,9);assert.equal(posts,3,'Uma tentativa com falha e uma repetição');
+    assert.ok(Object.values(memory.proposals[0].reviews.pad).every(r=>r.status==='ok'));
+    assert.equal(memory.proposals[0].history.length,after.history.length+2,'Itens já compatíveis não são regravados');
+    assert.deepEqual(errors,[]);assert.deepEqual(blocked,[]);
+    // Conferência visual no RN real: apenas seleciona e abre prévia, bloqueando POST.
+    const visual=await browser.newPage({viewport:{width:1440,height:1000}});
+    await visual.route('**/api/state',route=>route.request().method()==='GET'?route.continue():route.abort());
+    await visual.goto(ORIGIN+'/PROFOR_2026.html#proposta/2243160/pad');
+    await visual.locator('#pad-batch-all').click();await visual.locator('.pad-batch-bar').scrollIntoViewIfNeeded();
+    const output=path.join(root,'output/pad-batch');fs.mkdirSync(output,{recursive:true});
+    await visual.screenshot({path:path.join(output,'rn-selecao.png')});
+    await visual.locator('#pad-batch-approve').click();await visual.screenshot({path:path.join(output,'rn-previa.png')});
+    await visual.getByRole('button',{name:'Cancelar',exact:true}).click();
+    // A publicação mantém a consulta dos detalhes e não oferece aprovação.
+    const publicPage=await browser.newPage();
+    await publicPage.goto('file:///'+path.join(root,'docs/index.html').replace(/\\/g,'/')+'#proposta/2243160/pad');
+    await publicPage.locator('.pad-table').waitFor();
+    assert.equal(await publicPage.locator('[data-pad-batch],#pad-batch-header,.pad-batch-bar').count(),0);
+    console.log(JSON.stringify({status:'passed',realDatabaseWrites:0,atomicSuccesses:2,simulatedConflict:1,pageErrors:errors.length,readonlyPublic:true}));
+  }finally{await browser.close();}
+}
+main().catch(e=>{console.error(e);process.exitCode=1;});

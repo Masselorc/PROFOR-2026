@@ -63,6 +63,7 @@
   let padSearch='',padItemSearch='',padSearchOwner=null,padSelectorOpen=false,padStatusOpen=false;
   const padSelectedItems=new Set();
   const padSelectedStatuses=new Set();
+  const padBatchItems=new Set();
   /* UFs com o resumo da proposta expandido no painel (estado só da interface). */
   const expand=new Set();
   /* O mesmo, para a tela de propostas apagadas. */
@@ -142,7 +143,7 @@
     const aba=parts[2];
     activeTab=Object.hasOwn(tabNames,aba)?aba:'dados';
     if(activeTab==='merito')activeTab='analise';
-    if(activeTab==='pad' && (prevSelected!==selected || prevTab!=='pad')){padSearch='';padItemSearch='';padSearchOwner=null;padSelectedItems.clear();padSelectedStatuses.clear();padSelectorOpen=false;padStatusOpen=false;}
+    if(activeTab==='pad' && (prevSelected!==selected || prevTab!=='pad')){padSearch='';padItemSearch='';padSearchOwner=null;padSelectedItems.clear();padSelectedStatuses.clear();padBatchItems.clear();padSelectorOpen=false;padStatusOpen=false;}
     if(prevSelected!==selected || prevTab!==activeTab)expandedReqs.clear();
     render();if(from===location.hash){const next=[...document.querySelectorAll('.tabs a')].find(a=>a.getAttribute('href')===from);(next || $('#main')).focus();}}
   function render(){
@@ -1257,15 +1258,20 @@
   function padItemKey(item,index){return item.id?`id:${item.id}`:`row:${index}`;}
   function renderReviews(p,g,opts={}){
     const pad=g==='pad',merito=g==='merito',f=D.finance(p),ps=pad?D.padSituacao(p,state.sync):null;
-    if(pad && padSearchOwner!==p.id){padSearch='';padItemSearch='';padSearchOwner=p.id;padSelectedItems.clear();padSelectedStatuses.clear();padSelectorOpen=false;padStatusOpen=false;}
+    if(pad && padSearchOwner!==p.id){padSearch='';padItemSearch='';padSearchOwner=p.id;padSelectedItems.clear();padSelectedStatuses.clear();padBatchItems.clear();padSelectorOpen=false;padStatusOpen=false;}
     const padItems=pad?(p.imported.pad || []):[];
     const padKeys=new Set(padItems.map(padItemKey));
     if(pad)for(const key of padSelectedItems)if(!padKeys.has(key))padSelectedItems.delete(key);
+    if(pad)for(const id of padBatchItems)if(!padItems.some(item=>item.id===id))padBatchItems.delete(id);
     const selectorScroll=pad?($('#pad-item-options')?.scrollTop || 0):0;
     const busca=padSearch.trim().toLocaleLowerCase('pt-BR');
     const filtroPadAtivo=Boolean(busca || padSelectedItems.size || padSelectedStatuses.size);
     const linhasPad=padItems.filter((item,index)=>(!padSelectedItems.size || padSelectedItems.has(padItemKey(item,index))) && (!busca || `${item.descricao}`.toLocaleLowerCase('pt-BR').includes(busca)) && (!padSelectedStatuses.size || padSelectedStatuses.has(D.reviewOf(p,'pad',item.id).status)));
     const padStatusOptions=[{valor:'na',rotulo:'Analisar'},...OPCOES_PAD,{valor:'reanalise',rotulo:D.STATUSES.reanalise}];
+    const batchVisible=linhasPad.filter(item=>padBatchItems.has(item.id)).length;
+    const batchHidden=padBatchItems.size-batchVisible;
+    const batchEnabled=pad && !isReadOnly() && padItems.length>0;
+    const batchBar=batchEnabled?`<div class="pad-batch-bar" aria-label="Ação conjunta no PAD"><p id="pad-batch-count" role="status" aria-live="polite">${padBatchItems.size} ${padBatchItems.size===1?'item selecionado':'itens selecionados'} para ação conjunta${batchHidden?` · ${batchHidden} fora dos filtros atuais`:''}.</p><div class="actions"><button id="pad-batch-all" type="button" class="quiet" ${linhasPad.length?'':'disabled'}>Selecionar todos os exibidos</button><button id="pad-batch-clear" type="button" class="quiet" ${padBatchItems.size?'':'disabled'}>Limpar seleção</button><button id="pad-batch-approve" type="button" class="primary" ${padBatchItems.size?'':'disabled'}>Marcar como compatíveis</button></div></div>`:'';
     const somaVisivel=linhasPad.reduce((a,x)=>a+x.total,0);
     const diffCents=Number.isSafeInteger(f.sum) && Number.isSafeInteger(p.imported.global)?f.sum-p.imported.global:null;
     const cobertura=(Number.isSafeInteger(f.sum) && Number.isSafeInteger(p.imported.global) && p.imported.global>0)?Math.min(1,f.sum/p.imported.global):null;
@@ -1309,12 +1315,25 @@
     const html=`<section class="section"><div class="section-head"><h2>${titulo}</h2>${(merito && !isReadOnly())?button('Editar informações','institution'):''}</div>
       ${merito&&avisoInstitucional(p)?`<div class="section-body">${avisoInstitucional(p)}</div>`:''}
       ${cartoesPad}
-      <div class="table-wrap"><table class="${pad?'pad-table':'review-table'}"><colgroup>${pad?'<col class="c-pad-item"><col class="c-pad-qtd"><col class="c-pad-unit"><col class="c-pad-total"><col class="c-pad-conf"><col class="c-pad-acao">':''}</colgroup><thead><tr><th scope="col">${pad?'Item':'Requisito'}</th>${pad?'<th scope="col" class="cell-right pad-case">Qtd</th><th scope="col" class="cell-right pad-case">Valor unitário</th><th scope="col" class="cell-right pad-case">Valor total</th>':''}<th scope="col" class="${pad?'pad-th-conf':''}">${pad?'Conferência':'Resultado'}</th>${!pad&&!merito?'<th scope="col">Documento</th>':''}<th scope="col" class="cell-center pad-th-action">Ação</th></tr></thead><tbody>${pad
-        ? linhasPad.map(item=>{const [id,label]=[item.id,item.descricao];const r=D.reviewOf(p,g,id);const divergente=!D.unitMatchesTotal(item);const parte=f.sum>0?item.total/f.sum:null;return `<tr data-pad-item="${e(id)}"><td class="pad-desc"><span class="pad-desc-text" title="${e(label)}">${e(label)}</span></td><td class="number cell-right">${e(fmtQty(item.quantidade))}</td><td class="number cell-right">${D.fmtMoney(item.unitario)}${divergente?badge('Divergente','bad'):''}</td><td class="number cell-right">${D.fmtMoney(item.total)}${parte===null?'':`<span class="cell-sub pad-share"><span class="pad-share-bar" style="--w:${(parte*100).toFixed(1)}%"></span>${e(pctBR(parte))}</span>`}</td><td class="pad-conf">${reviewBadge(r)}</td><td class="cell-center pad-actions"><div class="review-actions">${acaoDeAnalise(p,g,id,r)}${!isReadOnly() && D.pending(p).some(pending=>pending.ref===g+':'+id)?button('Criar diligência','diligence',`data-ref="${e(g+':'+id)}"`):''}</div></td></tr>`;}).join('') || semItens
+      ${batchBar}
+      <div class="table-wrap"><table class="${pad?'pad-table':'review-table'}"><colgroup>${pad?'<col class="c-pad-item"><col class="c-pad-qtd"><col class="c-pad-unit"><col class="c-pad-total"><col class="c-pad-conf"><col class="c-pad-acao">':''}</colgroup><thead><tr><th scope="col">${batchEnabled?'<label class="pad-batch-heading"><input id="pad-batch-header" type="checkbox" aria-label="Selecionar todos os itens exibidos">Item</label>':pad?'Item':'Requisito'}</th>${pad?'<th scope="col" class="cell-right pad-case">Qtd</th><th scope="col" class="cell-right pad-case">Valor unitário</th><th scope="col" class="cell-right pad-case">Valor total</th>':''}<th scope="col" class="${pad?'pad-th-conf':''}">${pad?'Conferência':'Resultado'}</th>${!pad&&!merito?'<th scope="col">Documento</th>':''}<th scope="col" class="cell-center pad-th-action">Ação</th></tr></thead><tbody>${pad
+        ? linhasPad.map(item=>{const [id,label]=[item.id,item.descricao];const r=D.reviewOf(p,g,id);const divergente=!D.unitMatchesTotal(item);const parte=f.sum>0?item.total/f.sum:null;return `<tr data-pad-item="${e(id)}" ${batchEnabled && padBatchItems.has(id)?'class="pad-batch-selected"':''}><td class="pad-desc">${batchEnabled?`<div class="pad-batch-row"><input id="pad-batch-${e(id)}" type="checkbox" data-pad-batch="${e(id)}" aria-label="Selecionar ${e(label)} para ação conjunta" ${padBatchItems.has(id)?'checked':''}><span class="pad-desc-text" title="${e(label)}">${e(label)}</span></div>`:`<span class="pad-desc-text" title="${e(label)}">${e(label)}</span>`}</td><td class="number cell-right">${e(fmtQty(item.quantidade))}</td><td class="number cell-right">${D.fmtMoney(item.unitario)}${divergente?badge('Divergente','bad'):''}</td><td class="number cell-right">${D.fmtMoney(item.total)}${parte===null?'':`<span class="cell-sub pad-share"><span class="pad-share-bar" style="--w:${(parte*100).toFixed(1)}%"></span>${e(pctBR(parte))}</span>`}</td><td class="pad-conf">${reviewBadge(r)}</td><td class="cell-center pad-actions"><div class="review-actions">${acaoDeAnalise(p,g,id,r)}${!isReadOnly() && D.pending(p).some(pending=>pending.ref===g+':'+id)?button('Criar diligência','diligence',`data-ref="${e(g+':'+id)}"`):''}</div></td></tr>`;}).join('') || semItens
         : D.rows(p,g).map(([id,label])=>{const r=D.reviewOf(p,g,id);const opcao=opcaoAtual(g,id,r.status),custom=merito&&!!OPCOES_DA_ACAO[id];const ausente=id==='ouvidoriaInstituida' && r.status==='no';const resultado=(custom && opcao)?badge(opcao.rotulo,tomDoResultado(opcao.tom)):reviewBadge(r);const titulo=(merito && !isReadOnly())?`<button type="button" class="review-open" data-action="review" data-group="${e(g)}" data-id="${e(id)}" title="Abrir o detalhe do item: observação, documento, diligência e histórico">${e(label)}</button>`:e(label);return `<tr><td class="review-title">${titulo}${textosInlineHtml(p,id)}${r.note?`<div class="review-note">${e(r.note)}</div>`:''}${ausente?`<div class="info warning review-alert">A instituição da Ouvidoria Específica de Serviços Penais será cláusula suspensiva do Convênio.</div>`:''}</td><td>${resultado}</td>${merito?'':`<td>${link(r)}</td>`}<td class="${merito?'cell-center':''}"><div class="review-actions">${acaoDeAnalise(p,g,id,r)}${!isReadOnly() && D.pending(p).some(pending=>pending.ref===g+':'+id)?button('Criar diligência','diligence',`data-ref="${e(g+':'+id)}"`):''}</div></td></tr>`;}).join('') || semItens}</tbody>${rodapePad}</table></div></section>`;
     if(opts.secao)return html;
     $('#tab-content').innerHTML=html;
     if(pad){
+      if(batchEnabled){
+        const refreshBatch=focusId=>{renderReviews(p,g);document.getElementById(focusId)?.focus({preventScroll:true});};
+        const header=$('#pad-batch-header');
+        header.checked=linhasPad.length>0 && batchVisible===linhasPad.length;
+        header.indeterminate=batchVisible>0 && batchVisible<linhasPad.length;
+        header.disabled=!linhasPad.length;
+        header.addEventListener('change',()=>{for(const item of linhasPad){if(header.checked)padBatchItems.add(item.id);else padBatchItems.delete(item.id);}refreshBatch(header.id);});
+        $('#pad-batch-all').addEventListener('click',()=>{for(const item of linhasPad)padBatchItems.add(item.id);refreshBatch('pad-batch-all');});
+        $('#pad-batch-clear').addEventListener('click',()=>{padBatchItems.clear();refreshBatch('pad-batch-all');});
+        $('#pad-batch-approve').addEventListener('click',approvePadBatch);
+        document.querySelectorAll('[data-pad-batch]').forEach(input=>input.addEventListener('change',()=>{if(input.checked)padBatchItems.add(input.dataset.padBatch);else padBatchItems.delete(input.dataset.padBatch);refreshBatch(input.id);}));
+      }
       const statusSelector=$('#pad-status-selector');
       if(statusSelector){
         statusSelector.addEventListener('toggle',()=>{padStatusOpen=statusSelector.open;});
@@ -1360,6 +1379,19 @@
         buscaEl.addEventListener('keydown',ev=>{if(ev.key==='Escape'&&ev.target.value){ev.preventDefault();padSearch='';renderReviews(p,g);const again=$('#pad-search');if(again)again.focus();}});
       }
     }
+  }
+  function approvePadBatch(){
+    if(isReadOnly() || busy || !padBatchItems.size)return;
+    const p=current(),proposalId=p.id,items=p.imported.pad.filter(item=>padBatchItems.has(item.id));
+    D.assert(items.length,'Selecione pelo menos um item do PAD.');
+    const ids=items.map(item=>item.id),pending=p.diligences.filter(d=>ids.includes(d.ref?.split(':')[1]) && d.ref.startsWith('pad:') && d.status!=='saneada').length;
+    modal('Ação conjunta no PAD',`<p>Marcar os <strong>${items.length} itens selecionados</strong> como <strong>Compatível</strong>.</p><ul class="pad-batch-preview">${items.map(item=>`<li>${e(item.descricao)}</li>`).join('')}</ul><p>Observações, justificativas e documentos já registrados serão preservados.</p>${pending?`<p class="info warning">${pending} diligência(s) vinculada(s) permanecerão abertas. A marcação de compatibilidade não encerra diligências.</p>`:''}<form>${formEnd('Marcar como compatíveis')}</form>`);
+    bindForm(async()=>{
+      D.assert(current()?.id===proposalId,'A proposta mudou. Abra novamente a ação conjunta.');
+      const next=D.clone(state),proposal=next.proposals.find(item=>item.id===proposalId),name=actor();
+      for(const id of ids){D.assert(proposal.imported.pad.some(item=>item.id===id),'Um item selecionado não consta mais do PAD.');if(D.reviewOf(proposal,'pad',id).status!=='ok')D.markReview(proposal,'pad',id,true,name);}
+      await persist(next);padBatchItems.clear();render();saved(`${items.length} itens marcados como compatíveis.`);
+    });
   }
   function viewReview(p,group,id,r,label){
     const field=(name,title,value,multiline=false)=>`<label>${e(title)}${multiline?`<textarea name="${e(name)}" rows="6" readonly>${e(value || '')}</textarea>`:`<input name="${e(name)}" value="${e(value || '')}" readonly>`}</label>`;

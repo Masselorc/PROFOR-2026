@@ -118,6 +118,16 @@ button.review-open:hover{background:transparent;text-decoration-color:var(--bran
 .pad-item-option small{display:block;margin-top:3px;color:var(--muted);font-variant-numeric:tabular-nums}
 .pad-status-panel .pad-item-option small{display:inline;margin:0 0 0 6px;white-space:nowrap}
 .pad-filter-count{grid-column:1/-1;margin:0;font-size:.8125rem;color:var(--muted)}
+.pad-batch-bar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;padding:14px 24px;border-top:1px solid var(--line);background:#f5fafb}
+.pad-batch-bar p{margin:0;font-size:.8125rem;color:var(--muted)}
+.pad-batch-bar .actions{flex-wrap:wrap}
+.pad-batch-heading,.pad-batch-row{display:flex;align-items:flex-start;gap:10px;margin:0}
+.pad-batch-heading{align-items:center;font-size:inherit}
+.pad-batch-row .pad-desc-text{min-width:0;flex:1}
+.pad-batch-heading input,.pad-batch-row input{flex:none;width:18px;height:18px;min-height:18px;margin:2px 0 0;accent-color:var(--brand);cursor:pointer}
+.pad-batch-preview{max-height:240px;overflow:auto;padding-left:24px;overflow-wrap:anywhere}
+.pad-batch-preview li+li{margin-top:8px}
+@media print{.pad-batch-bar,.pad-batch-heading input,.pad-batch-row input{display:none}}
 @media(max-width:1180px){.pad-filter{grid-template-columns:minmax(0,1fr) minmax(0,1fr) auto}.pad-filter .search{grid-column:1/-1}}
 @media(max-width:760px){.pad-filter{grid-template-columns:minmax(0,1fr) auto}.pad-filter .pad-select-control{grid-column:1/-1}.pad-selector-panel{left:0;right:auto;width:min(620px,calc(100vw - 64px))}.pad-status-panel{width:min(320px,calc(100vw - 64px))}}
 .pad-table{width:100%;min-width:1200px;border-collapse:collapse;font-size:.875rem}
@@ -127,6 +137,7 @@ button.review-open:hover{background:transparent;text-decoration-color:var(--bran
 .pad-table tbody tr{border-top:1px solid var(--line)}
 .pad-table tbody tr:nth-child(even){background:#fafcfc}
 .pad-table tbody tr:hover{background:#f4f8f9}
+.pad-table tbody tr.pad-batch-selected{background:#e8f3f3}
 .pad-table th,.pad-table td{padding:10px 12px;vertical-align:top;overflow-wrap:anywhere}
 .pad-table tbody td:not(.pad-desc){vertical-align:middle}
 /* td.number global é centralizado: no PAD, Qtd, Unitário e Valor total ficam à direita. */
