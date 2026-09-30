@@ -59,8 +59,9 @@
   let state, selected=null, activeTab='dados',programTab='dados',view='painel',busy=false,modalDirty=false,noticeTimer,focusReturn,syncRun=null,statusDropdownOpen=null;
   let syncHistory=null,historyLoading=null,calendarStart=null,selectedHistoryDay=null,lastCalendarWheel=0;
   const filters={search:'',uf:'',source:'',status:'',control:''};
-  /* Busca local da aba do PAD: só estado da interface, por proposta. */
-  let padSearch='',padSearchOwner=null;
+  /* Filtros do PAD são temporários: nenhum dado da análise é alterado. */
+  let padSearch='',padSearchOwner=null,padSelectorOpen=false;
+  const padSelectedItems=new Set();
   /* UFs com o resumo da proposta expandido no painel (estado só da interface). */
   const expand=new Set();
   /* O mesmo, para a tela de propostas apagadas. */
@@ -140,6 +141,7 @@
     const aba=parts[2];
     activeTab=Object.hasOwn(tabNames,aba)?aba:'dados';
     if(activeTab==='merito')activeTab='analise';
+    if(activeTab==='pad' && (prevSelected!==selected || prevTab!=='pad')){padSearch='';padSearchOwner=null;padSelectedItems.clear();padSelectorOpen=false;}
     if(prevSelected!==selected || prevTab!==activeTab)expandedReqs.clear();
     render();if(from===location.hash){const next=[...document.querySelectorAll('.tabs a')].find(a=>a.getAttribute('href')===from);(next || $('#main')).focus();}}
   function render(){
@@ -1251,17 +1253,22 @@
   function pctBR(value){
     return (value*100).toFixed(1).replace('.',',')+'%';
   }
+  function padItemKey(item,index){return item.id?`id:${item.id}`:`row:${index}`;}
   function renderReviews(p,g,opts={}){
     const pad=g==='pad',merito=g==='merito',f=D.finance(p),ps=pad?D.padSituacao(p,state.sync):null;
-    if(pad && padSearchOwner!==p.id){padSearch='';padSearchOwner=p.id;}
+    if(pad && padSearchOwner!==p.id){padSearch='';padSearchOwner=p.id;padSelectedItems.clear();padSelectorOpen=false;}
     const padItems=pad?(p.imported.pad || []):[];
+    const padKeys=new Set(padItems.map(padItemKey));
+    if(pad)for(const key of padSelectedItems)if(!padKeys.has(key))padSelectedItems.delete(key);
+    const selectorScroll=pad?($('#pad-item-options')?.scrollTop || 0):0;
     const busca=padSearch.trim().toLocaleLowerCase('pt-BR');
-    const linhasPad=padItems.filter(item=>!busca || `${item.descricao}`.toLocaleLowerCase('pt-BR').includes(busca));
+    const filtroPadAtivo=Boolean(busca || padSelectedItems.size);
+    const linhasPad=padItems.filter((item,index)=>(!padSelectedItems.size || padSelectedItems.has(padItemKey(item,index))) && (!busca || `${item.descricao}`.toLocaleLowerCase('pt-BR').includes(busca)));
     const somaVisivel=linhasPad.reduce((a,x)=>a+x.total,0);
     const diffCents=Number.isSafeInteger(f.sum) && Number.isSafeInteger(p.imported.global)?f.sum-p.imported.global:null;
     const cobertura=(Number.isSafeInteger(f.sum) && Number.isSafeInteger(p.imported.global) && p.imported.global>0)?Math.min(1,f.sum/p.imported.global):null;
     const semItens=pad
-      ? `<tr><td colspan="6" class="empty">${linhasPad.length?'':`Nenhum item do PAD para conferir nesta proposta${busca?' para esta busca':ps.key==='nao-carregado'?' — o arquivo não foi carregado nesta base.':' — o plano de aplicação detalhado ainda não consta dos dados abertos do Transferegov.'}`}</td></tr>`
+      ? `<tr><td colspan="6" class="empty">${filtroPadAtivo?'Nenhum item corresponde aos filtros. Limpe a busca ou use “Exibir todos”.':`Nenhum item do PAD para conferir nesta proposta${ps.key==='nao-carregado'?' — o arquivo não foi carregado nesta base.':' — o plano de aplicação detalhado ainda não consta dos dados abertos do Transferegov.'}`}</td></tr>`
       : `<tr><td colspan="${merito?3:4}" class="empty">Nenhum item nesta lista para esta proposta.</td></tr>`;
     const cartoesPad=pad?`<div class="section-body pad-cards">
         <div class="pad-totals">
@@ -1271,9 +1278,21 @@
         </div>
         ${cobertura===null||cobertura>=1?'':`<div class="pad-cover" role="img" aria-label="Cobertura do PAD sobre o valor global: ${pctBR(cobertura)}"><div class="pad-cover-bar" style="width:${(cobertura*100).toFixed(1)}%"></div></div>`}
         ${ps.key==='com-itens'?'':`<div class="info warning"><strong>${textoHtml(ps.titulo,'PAD: situação')}.</strong> ${textoHtml(ps.detalhe,'PAD: motivo')}</div>`}
-        ${padItems.length>1?`<div class="filters pad-filter"><label class="search">Buscar item do PAD<input id="pad-search" type="search" value="${e(padSearch)}" placeholder="Descrição do item" autocomplete="off"></label></div>`:''}
+        ${padItems.length>1?`<div class="filters pad-filter">
+          <label class="search">Buscar item do PAD<input id="pad-search" type="search" value="${e(padSearch)}" placeholder="Descrição do item" autocomplete="off"></label>
+          <div class="pad-select-control"><span id="pad-select-label" class="pad-filter-label">Selecionar itens do PAD</span>
+            <details id="pad-item-selector" class="pad-selector" ${padSelectorOpen?'open':''}>
+              <summary aria-labelledby="pad-select-label pad-selection-count"><span id="pad-selection-count">${padSelectedItems.size?`${padSelectedItems.size} ${padSelectedItems.size===1?'item selecionado':'itens selecionados'}`:'Todos os itens'}</span></summary>
+              <div class="pad-selector-panel"><p>Marque um ou mais itens para analisar o conjunto. Sem seleção, todos são exibidos. A busca textual também filtra a tabela.</p>
+                <fieldset id="pad-item-options" class="pad-item-options"><legend class="sr-only">Itens do plano de aplicação detalhado</legend>${padItems.map((item,index)=>`<label class="pad-item-option"><input id="pad-pick-${index}" type="checkbox" data-pad-select="${e(padItemKey(item,index))}" ${padSelectedItems.has(padItemKey(item,index))?'checked':''}><span><span class="pad-option-number">${index+1}.</span> ${e(item.descricao)}<small>${D.fmtMoney(item.total)}</small></span></label>`).join('')}</fieldset>
+              </div>
+            </details>
+          </div>
+          <button id="pad-show-all" type="button" class="quiet" ${filtroPadAtivo?'':'disabled'}>Exibir todos</button>
+          <p id="pad-filter-count" class="pad-filter-count" role="status" aria-live="polite">Exibindo ${linhasPad.length} de ${padItems.length} itens${padSelectedItems.size&&busca?' · seleção combinada com a busca':''}.</p>
+        </div>`:''}
       </div>`:'';
-    const rodapePad=pad&&padItems.length?`<tfoot><tr><td><strong>Total (${busca?`${linhasPad.length} de ${padItems.length} itens`:padItems.length===1?'1 item':`${padItems.length} itens`})</strong></td><td></td><td></td><td class="number cell-right"><strong>${D.fmtMoney(somaVisivel)}</strong></td><td></td><td></td></tr></tfoot>`:'';
+    const rodapePad=pad&&padItems.length?`<tfoot><tr><td><strong>Total (${filtroPadAtivo?`${linhasPad.length} de ${padItems.length} itens`:padItems.length===1?'1 item':`${padItems.length} itens`})</strong></td><td></td><td></td><td class="number cell-right"><strong>${D.fmtMoney(somaVisivel)}</strong></td><td></td><td></td></tr></tfoot>`:'';
     const titulo=pad?`<a href="${e(consultaPublica(p.id,'DetalharBensProposta'))}" target="_blank" rel="noopener noreferrer" title="Abrir o plano de aplicação detalhado no Transferegov (Acesso Livre)" aria-label="Abrir o plano de aplicação detalhado da proposta ${e(proposalNumber(p.imported.numero))} no Transferegov (Acesso Livre)">${e(tabNames[g])}</a>`:e(tabNames[g]);
     const html=`<section class="section"><div class="section-head"><h2>${titulo}</h2>${(merito && !isReadOnly())?button('Editar informações','institution'):''}</div>
       ${merito&&avisoInstitucional(p)?`<div class="section-body">${avisoInstitucional(p)}</div>`:''}
@@ -1284,6 +1303,22 @@
     if(opts.secao)return html;
     $('#tab-content').innerHTML=html;
     if(pad){
+      const selector=$('#pad-item-selector');
+      if(selector){
+        selector.addEventListener('toggle',()=>{padSelectorOpen=selector.open;});
+        selector.addEventListener('keydown',ev=>{if(ev.key==='Escape' && selector.open){ev.preventDefault();padSelectorOpen=false;selector.open=false;selector.querySelector('summary').focus();}});
+      }
+      const selectionList=$('#pad-item-options');
+      if(selectionList){
+        selectionList.scrollTop=selectorScroll;
+        selectionList.addEventListener('change',ev=>{
+          const input=ev.target.closest('[data-pad-select]');if(!input)return;
+          if(input.checked)padSelectedItems.add(input.dataset.padSelect);else padSelectedItems.delete(input.dataset.padSelect);
+          const focusId=input.id;padSelectorOpen=true;renderReviews(p,g);document.getElementById(focusId)?.focus({preventScroll:true});
+        });
+      }
+      const showAll=$('#pad-show-all');
+      if(showAll)showAll.addEventListener('click',()=>{padSearch='';padSelectedItems.clear();padSelectorOpen=false;renderReviews(p,g);$('#pad-search')?.focus();});
       const buscaEl=$('#pad-search');
       if(buscaEl){
         buscaEl.addEventListener('input',ev=>{padSearch=ev.target.value;renderReviews(p,g);const again=$('#pad-search');if(again){again.focus();again.setSelectionRange(again.value.length,again.value.length);}});
@@ -1827,6 +1862,8 @@
   /* Dropdown de status: botão/pill e popover próprio, sem depender do select
      nativo. A ação de detalhes fica fora do listbox e separada por divisor. */
   document.addEventListener('click',ev=>{
+    const padSelector=$('#pad-item-selector');
+    if(padSelector?.open && !ev.target.closest('#pad-item-selector')){padSelector.open=false;padSelectorOpen=false;}
     const toggle=ev.target.closest('[data-status-toggle]');
     if(toggle){ev.preventDefault();openStatusDropdown(toggle.closest('[data-status-dropdown]'));return;}
     const statusOption=ev.target.closest('[data-status-value]');
