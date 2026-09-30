@@ -35,7 +35,9 @@ async function run() {
   try {
     const page = await browser.newPage({ viewport: { width: 1366, height: 768 } });
     const errors = [];
+    const writes = [];
     page.on('pageerror', err => errors.push(err.message));
+    page.on('request', request => {if(!['GET','HEAD'].includes(request.method()))writes.push(request.url());});
 
     console.log('1. Carregando docs/index.html...');
     await page.goto('file:///' + path.join(DOCS, 'index.html').replace(/\\/g, '/'));
@@ -92,6 +94,50 @@ async function run() {
     console.log('4. Navegando para Mérito...');
     await page.getByRole('link', { name: 'Mérito', exact: true }).click();
     await page.waitForSelector('#tab-content table');
+
+    // Detalhes públicos devem reproduzir as análises gravadas sem oferecer edição.
+    console.log('4a. Conferindo detalhes de análise somente para leitura no PAD do DF...');
+    const df=data.proposals.find(p=>!p.isDeleted && p.imported.uf==='DF');
+    assert.ok(df);
+    await page.goto('file:///' + path.join(DOCS, 'index.html').replace(/\\/g, '/')+'#proposta/'+df.id+'/pad');
+    await page.locator('.pad-table tbody tr[data-pad-item]').first().waitFor();
+    const before=await page.evaluate(()=>JSON.stringify(window.PROFOR_PUBLIC_DATA));
+    await page.evaluate(()=>{window.publicSaveCalls=0;ProforStore.save=()=>{window.publicSaveCalls++;throw new Error('Consulta não deve salvar.');};});
+    assert.equal(await page.locator('.pad-table button[data-action="review"]').count(),df.imported.pad.length);
+    const statuses=new Set();
+    for(const item of df.imported.pad){
+      const review=D.reviewOf(df,'pad',item.id);
+      if(statuses.has(review.status))continue;
+      statuses.add(review.status);
+      const trigger=page.locator(`.pad-table button[data-action="review"][data-id="${item.id}"]`);
+      await trigger.click();
+      await page.locator('#modal[open]').waitFor();
+      assert.match(await page.locator('#modal-content').innerText(),new RegExp('Plano de Aplicação Detalhado'));
+      assert.equal(await page.locator('#modal-content textarea[name="note"]').inputValue(),review.note);
+      assert.equal(await page.locator('#modal-content input:not([readonly]),#modal-content textarea:not([readonly]),#modal-content select,#modal-content form,#modal-content button[type="submit"]').count(),0,'Sem campos editáveis ou envio');
+      const note=page.locator('#modal-content textarea[name="note"]');
+      await note.focus();await page.keyboard.press('Control+a');await page.keyboard.insertText('Tentativa de alteração');
+      assert.equal(await note.inputValue(),review.note,'Texto não pode ser alterado');
+      const linked=df.diligences.filter(d=>d.ref==='pad:'+item.id);
+      assert.deepEqual(await page.locator('#modal-content textarea[name="d_request"]').evaluateAll(els=>els.map(el=>el.value)),Array.from(linked,d=>d.request));
+      assert.deepEqual(await page.locator('#modal-content textarea[name="d_note"]').evaluateAll(els=>els.map(el=>el.value)),Array.from(linked,d=>d.note));
+      if(review.status==='obs'){
+        await note.evaluate(el=>{el.setSelectionRange(0,0);el.blur();});
+        const output=path.join(ROOT,'output/public-review');fs.mkdirSync(output,{recursive:true});
+        await page.screenshot({path:path.join(output,'df-observacao.png')});
+        await page.setViewportSize({width:390,height:844});
+        const box=await page.locator('#modal').boundingBox();
+        assert.ok(box.x>=0 && box.x+box.width<=390,'Pop-up cabe no celular');
+        await page.screenshot({path:path.join(output,'df-observacao-mobile.png')});
+        await page.setViewportSize({width:1366,height:768});
+      }
+      await page.getByRole('button',{name:'Fechar',exact:true}).click();
+      await page.waitForFunction(()=>!document.querySelector('#modal').open);
+      assert.equal(await trigger.evaluate(el=>el===document.activeElement),true,'Foco retorna ao botão');
+    }
+    assert.equal(await page.evaluate(()=>JSON.stringify(window.PROFOR_PUBLIC_DATA)),before,'Consulta preserva o snapshot');
+    assert.equal(await page.evaluate(()=>window.publicSaveCalls),0);
+    assert.deepEqual(writes,[],'Nenhuma requisição de gravação');
 
     // Navega para Lixeira
     console.log('5. Navegando para Lixeira...');

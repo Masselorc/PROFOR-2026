@@ -1125,7 +1125,7 @@
     const menuId=statusMenuId(g,id),rotuloAtual=atual?.rotulo || (r.status==='na'?'Analisar':D.STATUSES[r.status]);
     const visualAtual=statusVisual(r.status,atual?.tom || '');
     if(isReadOnly()){
-      return `<span class="status-pill tom-${e(visualAtual.tom)}" style="cursor:default;user-select:none" title="${e(rotuloAtual)}">${statusIcon(visualAtual.icone)}<span class="status-pill-label">${e(rotuloAtual)}</span></span>`;
+      return `<button type="button" class="status-pill tom-${e(visualAtual.tom)}" data-action="review" data-group="${e(g)}" data-id="${e(id)}" aria-haspopup="dialog" aria-label="Ver detalhes do item ${e(nome)}: ${e(rotuloAtual)}" title="Ver detalhes da análise">${statusIcon(visualAtual.icone)}<span class="status-pill-label">${e(rotuloAtual)}</span>${statusIcon('E890')}</button>`;
     }
     const reanalise=r.status==='reanalise'?`<button type="button" class="status-option tom-aviso" role="option" aria-selected="true" aria-disabled="true" disabled>${statusIcon(STATUS_VISUAL.reanalise.icone)}<span>${e(D.STATUSES.reanalise)}</span></button>`:'';
     const opcoesHtml=[{valor:'na',rotulo:'Analisar',tom:'neutro'},...opcoes].map(o=>{
@@ -1341,8 +1341,16 @@
       }
     }
   }
+  function viewReview(p,group,id,r,label){
+    const field=(name,title,value,multiline=false)=>`<label>${e(title)}${multiline?`<textarea name="${e(name)}" rows="6" readonly>${e(value || '')}</textarea>`:`<input name="${e(name)}" value="${e(value || '')}" readonly>`}</label>`;
+    const resultado=opcaoAtual(group,id,r.status)?.rotulo || D.STATUSES[r.status];
+    const diligences=p.diligences.filter(d=>d.ref===group+':'+id);
+    const details=diligences.map(d=>`<fieldset class="form-stack"><legend>Diligência vinculada ao item</legend>${field('d_request','Providência solicitada / justificativa',d.request,true)}${field('d_category','Categoria',d.category)}<div class="forms-grid">${field('d_communication','Data da comunicação',D.fmtDate(d.communication))}${field('d_science','Data da ciência',D.fmtDate(d.science))}${field('d_due','Vencimento registrado',D.fmtDate(d.due))}${field('d_response','Data da resposta',D.fmtDate(d.response))}</div>${field('d_status','Situação',D.DSTATUS[d.status])}${field('d_note','Observação / conclusão',d.note,true)}</fieldset>`).join('');
+    modal('Detalhes da análise',`<p><strong>${textoHtml(D.tabLabel(group,id),'Consulta: aba')}</strong></p><p>${textoHtml(label,'Consulta: item')}</p><div class="form-stack">${field('status','Resultado',resultado)}${field('note',r.status==='diligencia'?'Providência solicitada / justificativa':'Observação / justificativa',r.note,true)}${r.document?field('document','Nome do documento',r.document):''}${r.url?`<p>${link(r)}</p>`:''}${details}</div><div class="dialog-actions">${button('Fechar','close')}</div>`);
+  }
   function editReview(group,id,initialStatus=''){
     const p=current(),r=D.reviewOf(p,group,id),label=D.rows(p,group).find(x=>x[0]===id)[1];
+    if(isReadOnly()){viewReview(p,group,id,r,label);return;}
     const meta=D.metaRequisito(group,id);
     const states={...D.STATUSES};delete states.reanalise;
     for(const opcao of opcoesDoItem(group,id))states[opcao.valor]=opcao.rotulo;
