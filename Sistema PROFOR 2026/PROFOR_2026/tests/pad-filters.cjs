@@ -52,12 +52,29 @@ async function main(){
     assert.equal(await page.locator('[data-pad-select]:checked').count(),0);
     assert.equal(await page.locator('.pad-table tfoot .number').innerText(),D.fmtMoney(1054290));
     await page.locator('#pad-item-selector summary').click();
+    await page.locator('#pad-option-search').fill('CADEIRA interlocutor');
+    assert.equal(await page.locator('.pad-item-option:visible').count(),1);
+    assert.equal(await rows.count(),4,'Busca da lista não filtra a tabela');
     await page.locator('#pad-pick-0').check();
+    assert.equal(await page.locator('#pad-option-search').inputValue(),'CADEIRA interlocutor','Busca preservada ao marcar');
+    await page.locator('#pad-option-clear').click();
+    assert.equal(await page.locator('.pad-item-option:visible').count(),4);
+    assert.equal(await page.locator('[data-pad-select]:checked').count(),1,'Limpar busca mantém seleção');
+    await page.locator('#pad-option-search').fill('mesa');
     await page.locator('#pad-pick-2').check();
     assert.equal(await rows.count(),2,'União de dois itens selecionados');
     assert.equal(await page.locator('.pad-table tfoot .number').innerText(),D.fmtMoney(854300));
     assert.equal(await page.locator('#pad-item-selector').getAttribute('open'),'');
     assert.equal(await page.evaluate(()=>document.activeElement.id),'pad-pick-2','Foco preservado ao marcar');
+    await page.locator('#pad-option-search').fill('dobravel');
+    assert.equal(await page.locator('.pad-item-option:visible').count(),1,'Busca sem acento encontra descrição acentuada');
+    await page.locator('#pad-option-search').fill('inexistente');
+    assert.equal(await page.locator('.pad-item-option:visible').count(),0);
+    assert.match(await page.locator('#pad-option-count').innerText(),/Nenhum item encontrado/);
+    assert.equal(await rows.count(),2,'Busca sem resultados mantém conjunto selecionado');
+    await page.locator('#pad-option-search').press('Escape');
+    assert.equal(await page.locator('#pad-option-search').inputValue(),'');
+    assert.equal(await page.locator('#pad-item-selector').getAttribute('open'),'','Escape limpa busca antes de fechar');
     await page.locator('#pad-search').click();
     assert.equal(await page.locator('#pad-item-selector').getAttribute('open'),null,'Clique fora fecha o seletor');
     await page.locator('#pad-search').fill('cadeira');
@@ -112,8 +129,12 @@ async function main(){
     await publicRows.first().waitFor();
     assert.equal(await publicRows.count(),proposal.imported.pad.length);
     await publicPage.locator('#pad-item-selector summary').click();
+    await publicPage.locator('#pad-option-search').fill(proposal.imported.pad[0].descricao);
     await publicPage.locator('#pad-pick-0').check();
+    await publicPage.locator('#pad-option-clear').click();
+    await publicPage.locator('#pad-option-search').fill(proposal.imported.pad[1].descricao);
     await publicPage.locator('#pad-pick-1').check();
+    await publicPage.locator('#pad-option-clear').click();
     assert.equal(await publicRows.count(),2,'Seleção múltipla também na consulta pública');
     assert.equal(await publicPage.locator('button[data-status-toggle]').count(),0,'Consulta mantém modo somente leitura');
     const lastPick=publicPage.locator('#pad-pick-'+(proposal.imported.pad.length-1));
@@ -134,7 +155,7 @@ async function main(){
     await publicPage.locator('#pad-item-selector summary').scrollIntoViewIfNeeded();
     await publicPage.screenshot({path:path.join(output,'selecao-mobile.png')});
     assert.deepEqual(errors,[],'Sem erros de página');
-    console.log(JSON.stringify({status:'passed',realDatabaseWrites:writes,pageErrors:errors.length,localAndPublic:true,scenarios:['default','multiple','text intersection','empty','totals','clear','keyboard','tab reset','proposal reset','mobile']}));
+    console.log(JSON.stringify({status:'passed',realDatabaseWrites:writes,pageErrors:errors.length,localAndPublic:true,scenarios:['default','search and accumulate','accent insensitive','empty option search','multiple','text intersection','empty','totals','clear','keyboard','tab reset','proposal reset','mobile']}));
   }finally{await browser.close();}
 }
 main().catch(error=>{console.error(error);process.exitCode=1;});

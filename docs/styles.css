@@ -102,8 +102,13 @@ button.review-open:hover{background:transparent;text-decoration-color:var(--bran
 .pad-selector>summary:focus-visible{outline:3px solid var(--brand);outline-offset:2px}
 .pad-selector-panel{position:absolute;top:calc(100% + 6px);right:0;width:min(620px,calc(100vw - 80px));padding:14px;background:#fff;border:1px solid #bdcfd5;border-radius:8px;box-shadow:0 8px 24px #103e4926;z-index:10}
 .pad-selector-panel>p{margin:0 0 10px;font-size:.8125rem;line-height:1.5;color:var(--muted)}
+.pad-option-search{display:flex;align-items:end;gap:10px;margin-bottom:10px}
+.pad-option-search label{min-width:0;font-size:.8125rem}
+.pad-option-search input{margin-top:6px}
+.pad-option-search button{flex:none;min-height:44px}
 .pad-item-options{display:grid;grid-auto-rows:max-content;align-content:start;gap:4px;border:0;margin:0;padding:0;max-height:300px;overflow-y:auto;overscroll-behavior:contain}
 .pad-item-options .pad-item-option{display:flex;align-items:flex-start;gap:10px;min-width:0;min-height:44px;padding:10px;border-radius:5px;cursor:pointer;font-size:.8125rem;font-weight:400;line-height:1.5}
+.pad-item-options .pad-item-option[hidden]{display:none}
 .pad-item-option:hover,.pad-item-option:focus-within{background:#f0f6f7}
 .pad-item-option:has(input:checked){background:#e8f3f3}
 .pad-item-option input[type=checkbox]{flex:none;width:18px;height:18px;min-height:18px;margin:2px 0 0;accent-color:var(--brand)}

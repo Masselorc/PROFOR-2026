@@ -60,7 +60,7 @@
   let syncHistory=null,historyLoading=null,calendarStart=null,selectedHistoryDay=null,lastCalendarWheel=0;
   const filters={search:'',uf:'',source:'',status:'',control:''};
   /* Filtros do PAD são temporários: nenhum dado da análise é alterado. */
-  let padSearch='',padSearchOwner=null,padSelectorOpen=false;
+  let padSearch='',padItemSearch='',padSearchOwner=null,padSelectorOpen=false;
   const padSelectedItems=new Set();
   /* UFs com o resumo da proposta expandido no painel (estado só da interface). */
   const expand=new Set();
@@ -141,7 +141,7 @@
     const aba=parts[2];
     activeTab=Object.hasOwn(tabNames,aba)?aba:'dados';
     if(activeTab==='merito')activeTab='analise';
-    if(activeTab==='pad' && (prevSelected!==selected || prevTab!=='pad')){padSearch='';padSearchOwner=null;padSelectedItems.clear();padSelectorOpen=false;}
+    if(activeTab==='pad' && (prevSelected!==selected || prevTab!=='pad')){padSearch='';padItemSearch='';padSearchOwner=null;padSelectedItems.clear();padSelectorOpen=false;}
     if(prevSelected!==selected || prevTab!==activeTab)expandedReqs.clear();
     render();if(from===location.hash){const next=[...document.querySelectorAll('.tabs a')].find(a=>a.getAttribute('href')===from);(next || $('#main')).focus();}}
   function render(){
@@ -1256,7 +1256,7 @@
   function padItemKey(item,index){return item.id?`id:${item.id}`:`row:${index}`;}
   function renderReviews(p,g,opts={}){
     const pad=g==='pad',merito=g==='merito',f=D.finance(p),ps=pad?D.padSituacao(p,state.sync):null;
-    if(pad && padSearchOwner!==p.id){padSearch='';padSearchOwner=p.id;padSelectedItems.clear();padSelectorOpen=false;}
+    if(pad && padSearchOwner!==p.id){padSearch='';padItemSearch='';padSearchOwner=p.id;padSelectedItems.clear();padSelectorOpen=false;}
     const padItems=pad?(p.imported.pad || []):[];
     const padKeys=new Set(padItems.map(padItemKey));
     if(pad)for(const key of padSelectedItems)if(!padKeys.has(key))padSelectedItems.delete(key);
@@ -1283,7 +1283,9 @@
           <div class="pad-select-control"><span id="pad-select-label" class="pad-filter-label">Selecionar itens do PAD</span>
             <details id="pad-item-selector" class="pad-selector" ${padSelectorOpen?'open':''}>
               <summary aria-labelledby="pad-select-label pad-selection-count"><span id="pad-selection-count">${padSelectedItems.size?`${padSelectedItems.size} ${padSelectedItems.size===1?'item selecionado':'itens selecionados'}`:'Todos os itens'}</span></summary>
-              <div class="pad-selector-panel"><p>Marque um ou mais itens para analisar o conjunto. Sem seleção, todos são exibidos. A busca textual também filtra a tabela.</p>
+              <div class="pad-selector-panel"><p>Busque e marque um ou mais itens. Limpar esta busca mantém a seleção. Sem seleção, todos são exibidos.</p>
+                <div class="pad-option-search"><label for="pad-option-search">Buscar na lista de itens<input id="pad-option-search" type="search" value="${e(padItemSearch)}" placeholder="Digite para localizar um item" autocomplete="off" aria-controls="pad-item-options" aria-describedby="pad-option-count"></label><button id="pad-option-clear" type="button" class="quiet">Limpar busca</button></div>
+                <p id="pad-option-count" role="status" aria-live="polite"></p>
                 <fieldset id="pad-item-options" class="pad-item-options"><legend class="sr-only">Itens do plano de aplicação detalhado</legend>${padItems.map((item,index)=>`<label class="pad-item-option"><input id="pad-pick-${index}" type="checkbox" data-pad-select="${e(padItemKey(item,index))}" ${padSelectedItems.has(padItemKey(item,index))?'checked':''}><span><span class="pad-option-number">${index+1}.</span> ${e(item.descricao)}<small>${D.fmtMoney(item.total)}</small></span></label>`).join('')}</fieldset>
               </div>
             </details>
@@ -1305,11 +1307,24 @@
     if(pad){
       const selector=$('#pad-item-selector');
       if(selector){
-        selector.addEventListener('toggle',()=>{padSelectorOpen=selector.open;});
+        selector.addEventListener('toggle',()=>{padSelectorOpen=selector.open;if(selector.open && document.activeElement===selector.querySelector('summary'))$('#pad-option-search')?.focus();});
         selector.addEventListener('keydown',ev=>{if(ev.key==='Escape' && selector.open){ev.preventDefault();padSelectorOpen=false;selector.open=false;selector.querySelector('summary').focus();}});
       }
       const selectionList=$('#pad-item-options');
       if(selectionList){
+        const optionSearch=$('#pad-option-search'),clearSearch=$('#pad-option-clear');
+        const normalize=text=>String(text).normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLocaleLowerCase('pt-BR');
+        const filterOptions=()=>{
+          const query=normalize(padItemSearch.trim());let count=0;
+          selectionList.querySelectorAll('.pad-item-option').forEach((option,index)=>{option.hidden=!normalize(padItems[index].descricao).includes(query);if(!option.hidden)count++;});
+          $('#pad-option-count').textContent=count?`${count} ${count===1?'item encontrado':'itens encontrados'} de ${padItems.length}.`:'Nenhum item encontrado. Tente outro texto.';
+          clearSearch.disabled=!padItemSearch;
+        };
+        const clearOptions=()=>{padItemSearch='';optionSearch.value='';filterOptions();selectionList.scrollTop=0;optionSearch.focus();};
+        optionSearch.addEventListener('input',()=>{padItemSearch=optionSearch.value;filterOptions();selectionList.scrollTop=0;});
+        optionSearch.addEventListener('keydown',ev=>{if(ev.key==='Escape' && padItemSearch){ev.preventDefault();ev.stopPropagation();clearOptions();}});
+        clearSearch.addEventListener('click',clearOptions);
+        filterOptions();
         selectionList.scrollTop=selectorScroll;
         selectionList.addEventListener('change',ev=>{
           const input=ev.target.closest('[data-pad-select]');if(!input)return;
@@ -1318,7 +1333,7 @@
         });
       }
       const showAll=$('#pad-show-all');
-      if(showAll)showAll.addEventListener('click',()=>{padSearch='';padSelectedItems.clear();padSelectorOpen=false;renderReviews(p,g);$('#pad-search')?.focus();});
+      if(showAll)showAll.addEventListener('click',()=>{padSearch='';padItemSearch='';padSelectedItems.clear();padSelectorOpen=false;renderReviews(p,g);$('#pad-search')?.focus();});
       const buscaEl=$('#pad-search');
       if(buscaEl){
         buscaEl.addEventListener('input',ev=>{padSearch=ev.target.value;renderReviews(p,g);const again=$('#pad-search');if(again){again.focus();again.setSelectionRange(again.value.length,again.value.length);}});
