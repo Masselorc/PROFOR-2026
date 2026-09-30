@@ -60,8 +60,9 @@
   let syncHistory=null,historyLoading=null,calendarStart=null,selectedHistoryDay=null,lastCalendarWheel=0;
   const filters={search:'',uf:'',source:'',status:'',control:''};
   /* Filtros do PAD são temporários: nenhum dado da análise é alterado. */
-  let padSearch='',padItemSearch='',padSearchOwner=null,padSelectorOpen=false;
+  let padSearch='',padItemSearch='',padSearchOwner=null,padSelectorOpen=false,padStatusOpen=false;
   const padSelectedItems=new Set();
+  const padSelectedStatuses=new Set();
   /* UFs com o resumo da proposta expandido no painel (estado só da interface). */
   const expand=new Set();
   /* O mesmo, para a tela de propostas apagadas. */
@@ -141,7 +142,7 @@
     const aba=parts[2];
     activeTab=Object.hasOwn(tabNames,aba)?aba:'dados';
     if(activeTab==='merito')activeTab='analise';
-    if(activeTab==='pad' && (prevSelected!==selected || prevTab!=='pad')){padSearch='';padItemSearch='';padSearchOwner=null;padSelectedItems.clear();padSelectorOpen=false;}
+    if(activeTab==='pad' && (prevSelected!==selected || prevTab!=='pad')){padSearch='';padItemSearch='';padSearchOwner=null;padSelectedItems.clear();padSelectedStatuses.clear();padSelectorOpen=false;padStatusOpen=false;}
     if(prevSelected!==selected || prevTab!==activeTab)expandedReqs.clear();
     render();if(from===location.hash){const next=[...document.querySelectorAll('.tabs a')].find(a=>a.getAttribute('href')===from);(next || $('#main')).focus();}}
   function render(){
@@ -1256,14 +1257,15 @@
   function padItemKey(item,index){return item.id?`id:${item.id}`:`row:${index}`;}
   function renderReviews(p,g,opts={}){
     const pad=g==='pad',merito=g==='merito',f=D.finance(p),ps=pad?D.padSituacao(p,state.sync):null;
-    if(pad && padSearchOwner!==p.id){padSearch='';padItemSearch='';padSearchOwner=p.id;padSelectedItems.clear();padSelectorOpen=false;}
+    if(pad && padSearchOwner!==p.id){padSearch='';padItemSearch='';padSearchOwner=p.id;padSelectedItems.clear();padSelectedStatuses.clear();padSelectorOpen=false;padStatusOpen=false;}
     const padItems=pad?(p.imported.pad || []):[];
     const padKeys=new Set(padItems.map(padItemKey));
     if(pad)for(const key of padSelectedItems)if(!padKeys.has(key))padSelectedItems.delete(key);
     const selectorScroll=pad?($('#pad-item-options')?.scrollTop || 0):0;
     const busca=padSearch.trim().toLocaleLowerCase('pt-BR');
-    const filtroPadAtivo=Boolean(busca || padSelectedItems.size);
-    const linhasPad=padItems.filter((item,index)=>(!padSelectedItems.size || padSelectedItems.has(padItemKey(item,index))) && (!busca || `${item.descricao}`.toLocaleLowerCase('pt-BR').includes(busca)));
+    const filtroPadAtivo=Boolean(busca || padSelectedItems.size || padSelectedStatuses.size);
+    const linhasPad=padItems.filter((item,index)=>(!padSelectedItems.size || padSelectedItems.has(padItemKey(item,index))) && (!busca || `${item.descricao}`.toLocaleLowerCase('pt-BR').includes(busca)) && (!padSelectedStatuses.size || padSelectedStatuses.has(D.reviewOf(p,'pad',item.id).status)));
+    const padStatusOptions=[{valor:'na',rotulo:'Analisar'},...OPCOES_PAD,{valor:'reanalise',rotulo:D.STATUSES.reanalise}];
     const somaVisivel=linhasPad.reduce((a,x)=>a+x.total,0);
     const diffCents=Number.isSafeInteger(f.sum) && Number.isSafeInteger(p.imported.global)?f.sum-p.imported.global:null;
     const cobertura=(Number.isSafeInteger(f.sum) && Number.isSafeInteger(p.imported.global) && p.imported.global>0)?Math.min(1,f.sum/p.imported.global):null;
@@ -1278,7 +1280,7 @@
         </div>
         ${cobertura===null||cobertura>=1?'':`<div class="pad-cover" role="img" aria-label="Cobertura do PAD sobre o valor global: ${pctBR(cobertura)}"><div class="pad-cover-bar" style="width:${(cobertura*100).toFixed(1)}%"></div></div>`}
         ${ps.key==='com-itens'?'':`<div class="info warning"><strong>${textoHtml(ps.titulo,'PAD: situação')}.</strong> ${textoHtml(ps.detalhe,'PAD: motivo')}</div>`}
-        ${padItems.length>1?`<div class="filters pad-filter">
+        ${padItems.length?`<div class="filters pad-filter">
           <label class="search">Buscar item do PAD<input id="pad-search" type="search" value="${e(padSearch)}" placeholder="Descrição do item" autocomplete="off"></label>
           <div class="pad-select-control"><span id="pad-select-label" class="pad-filter-label">Selecionar itens do PAD</span>
             <details id="pad-item-selector" class="pad-selector" ${padSelectorOpen?'open':''}>
@@ -1287,6 +1289,14 @@
                 <div class="pad-option-search"><label for="pad-option-search">Buscar na lista de itens<input id="pad-option-search" type="search" value="${e(padItemSearch)}" placeholder="Digite para localizar um item" autocomplete="off" aria-controls="pad-item-options" aria-describedby="pad-option-count"></label><button id="pad-option-clear" type="button" class="quiet">Limpar busca</button></div>
                 <p id="pad-option-count" role="status" aria-live="polite"></p>
                 <fieldset id="pad-item-options" class="pad-item-options"><legend class="sr-only">Itens do plano de aplicação detalhado</legend>${padItems.map((item,index)=>`<label class="pad-item-option"><input id="pad-pick-${index}" type="checkbox" data-pad-select="${e(padItemKey(item,index))}" ${padSelectedItems.has(padItemKey(item,index))?'checked':''}><span><span class="pad-option-number">${index+1}.</span> ${e(item.descricao)}<small>${D.fmtMoney(item.total)}</small></span></label>`).join('')}</fieldset>
+              </div>
+            </details>
+          </div>
+          <div class="pad-select-control pad-status-control"><span id="pad-status-label" class="pad-filter-label">Filtrar por ação</span>
+            <details id="pad-status-selector" class="pad-selector" ${padStatusOpen?'open':''}>
+              <summary aria-labelledby="pad-status-label pad-status-count"><span id="pad-status-count">${padSelectedStatuses.size?`${padSelectedStatuses.size} ${padSelectedStatuses.size===1?'ação selecionada':'ações selecionadas'}`:'Todas as ações'}</span></summary>
+              <div class="pad-selector-panel pad-status-panel"><p>Marque uma ou mais ações. Sem seleção, todas são exibidas.</p>
+                <fieldset id="pad-status-options" class="pad-item-options"><legend class="sr-only">Resultados da coluna Ação</legend>${padStatusOptions.map(option=>{const count=padItems.filter(item=>D.reviewOf(p,'pad',item.id).status===option.valor).length;return `<label class="pad-item-option"><input id="pad-status-${e(option.valor)}" type="checkbox" data-pad-status="${e(option.valor)}" ${padSelectedStatuses.has(option.valor)?'checked':''}><span>${e(option.rotulo)}<small>${count} ${count===1?'item':'itens'}</small></span></label>`;}).join('')}</fieldset>
               </div>
             </details>
           </div>
@@ -1305,6 +1315,16 @@
     if(opts.secao)return html;
     $('#tab-content').innerHTML=html;
     if(pad){
+      const statusSelector=$('#pad-status-selector');
+      if(statusSelector){
+        statusSelector.addEventListener('toggle',()=>{padStatusOpen=statusSelector.open;});
+        statusSelector.addEventListener('keydown',ev=>{if(ev.key==='Escape' && statusSelector.open){ev.preventDefault();padStatusOpen=false;statusSelector.open=false;statusSelector.querySelector('summary').focus();}});
+        $('#pad-status-options').addEventListener('change',ev=>{
+          const input=ev.target.closest('[data-pad-status]');if(!input)return;
+          if(input.checked)padSelectedStatuses.add(input.dataset.padStatus);else padSelectedStatuses.delete(input.dataset.padStatus);
+          padStatusOpen=true;renderReviews(p,g);document.getElementById(input.id)?.focus({preventScroll:true});
+        });
+      }
       const selector=$('#pad-item-selector');
       if(selector){
         selector.addEventListener('toggle',()=>{padSelectorOpen=selector.open;if(selector.open && document.activeElement===selector.querySelector('summary'))$('#pad-option-search')?.focus();});
@@ -1333,7 +1353,7 @@
         });
       }
       const showAll=$('#pad-show-all');
-      if(showAll)showAll.addEventListener('click',()=>{padSearch='';padItemSearch='';padSelectedItems.clear();padSelectorOpen=false;renderReviews(p,g);$('#pad-search')?.focus();});
+      if(showAll)showAll.addEventListener('click',()=>{padSearch='';padItemSearch='';padSelectedItems.clear();padSelectedStatuses.clear();padSelectorOpen=false;padStatusOpen=false;renderReviews(p,g);$('#pad-search')?.focus();});
       const buscaEl=$('#pad-search');
       if(buscaEl){
         buscaEl.addEventListener('input',ev=>{padSearch=ev.target.value;renderReviews(p,g);const again=$('#pad-search');if(again){again.focus();again.setSelectionRange(again.value.length,again.value.length);}});
@@ -1887,6 +1907,8 @@
   document.addEventListener('click',ev=>{
     const padSelector=$('#pad-item-selector');
     if(padSelector?.open && !ev.target.closest('#pad-item-selector')){padSelector.open=false;padSelectorOpen=false;}
+    const padStatusSelector=$('#pad-status-selector');
+    if(padStatusSelector?.open && !ev.target.closest('#pad-status-selector')){padStatusSelector.open=false;padStatusOpen=false;}
     const toggle=ev.target.closest('[data-status-toggle]');
     if(toggle){ev.preventDefault();openStatusDropdown(toggle.closest('[data-status-dropdown]'));return;}
     const statusOption=ev.target.closest('[data-status-value]');

@@ -26,6 +26,7 @@ function fixture(){
     const global=items.reduce((sum,item)=>sum+item.total,0);
     state.proposals.push(D.createProposal({id,numero:id+'/2026',uf,programa:D.PROGRAM,proponente:'Fixture isolada',cnpj:'',orgao:'',objeto:'Equipamentos',situacao:'Proposta/Plano de Trabalho Enviado para Análise',data:'2026-09-01',repasse:global,contrapartida:0,global,pad:items}));
   }
+  for(const proposal of state.proposals)proposal.imported.pad.forEach((item,index)=>{proposal.reviews.pad[item.id].status=['ok','obs','diligencia','na'][index];proposal.reviews.pad[item.id].note='Justificativa da fixture isolada.';});
   return D.validateState(state);
 }
 
@@ -51,6 +52,29 @@ async function main(){
     assert.equal(await rows.count(),4,'Todos os itens ao abrir');
     assert.equal(await page.locator('[data-pad-select]:checked').count(),0);
     assert.equal(await page.locator('.pad-table tfoot .number').innerText(),D.fmtMoney(1054290));
+    await page.locator('#pad-status-selector summary').click();
+    assert.equal(await page.locator('[data-pad-status]').count(),6,'Todas as ações disponíveis');
+    await page.locator('#pad-status-ok').check();
+    await page.locator('#pad-status-obs').check();
+    assert.equal(await rows.count(),2,'Resultados selecionados são combinados por união');
+    assert.equal(await page.locator('.pad-table tfoot .number').innerText(),D.fmtMoney(864290));
+    await page.locator('#pad-status-obs').press('Escape');
+    assert.equal(await page.locator('#pad-status-selector').getAttribute('open'),null);
+    await page.locator('#pad-search').fill('interlocutor');
+    assert.equal(await rows.count(),1,'Ações cruzam com a busca');
+    await page.locator('#pad-search').fill('');
+    await page.locator('#pad-item-selector summary').click();
+    await page.locator('#pad-pick-2').check();
+    assert.equal(await rows.count(),0,'Ações cruzam com a seleção de itens');
+    await page.locator('#pad-show-all').click();
+    assert.equal(await rows.count(),4);
+    assert.equal(await page.locator('[data-pad-status]:checked').count(),0);
+    await page.locator('#pad-status-selector summary').click();
+    await page.locator('#pad-status-reanalise').check();
+    assert.equal(await rows.count(),0,'Resultado ausente exibe estado vazio');
+    await page.locator('#pad-status-reanalise').uncheck();
+    assert.equal(await rows.count(),4,'Sem ações marcadas, todos são exibidos');
+    await page.locator('#pad-status-selector summary').click();
     await page.locator('#pad-item-selector summary').click();
     await page.locator('#pad-option-search').fill('CADEIRA interlocutor');
     assert.equal(await page.locator('.pad-item-option:visible').count(),1);
@@ -105,16 +129,22 @@ async function main(){
     assert.equal(await rows.count(),4);
     await page.locator('#pad-item-selector summary').click();
     await page.locator('#pad-pick-3').check();
+    await page.locator('#pad-status-selector summary').click();
+    await page.locator('#pad-status-na').check();
     await page.locator('.tabs a[data-tab="dados"]').click();
     await page.locator('.data-sections-body').waitFor();
     await page.locator('.tabs a[data-tab="pad"]').click();
     await page.waitForFunction(()=>document.querySelectorAll('.pad-table tbody tr[data-pad-item]').length===4);
     assert.equal(await rows.count(),4,'Reentrada na aba exibe todos');
+    assert.equal(await page.locator('[data-pad-status]:checked').count(),0);
     await page.locator('#pad-item-selector summary').click();
     await page.locator('#pad-pick-3').check();
+    await page.locator('#pad-status-selector summary').click();
+    await page.locator('#pad-status-na').check();
     await page.goto(ORIGIN+'/PROFOR_2026.html#proposta/990889/pad');
     await page.waitForFunction(()=>document.querySelectorAll('.pad-table tbody tr[data-pad-item]').length===2);
     assert.equal(await page.locator('[data-pad-select]:checked').count(),0,'Seleção não vaza entre propostas');
+    assert.equal(await page.locator('[data-pad-status]:checked').count(),0,'Ações não vazam entre propostas');
     assert.equal(writes,0,'Filtros não gravam no banco');
 
     // Mesma interação na consulta pública estática, com a base já publicada.
@@ -150,10 +180,28 @@ async function main(){
     await publicPage.locator('#pad-item-selector summary').click();
     await publicPage.setViewportSize({width:390,height:844});
     await publicPage.locator('#pad-item-selector summary').click();
-    const box=await publicPage.locator('.pad-selector-panel').boundingBox();
+    const box=await publicPage.locator('#pad-item-selector .pad-selector-panel').boundingBox();
     assert.ok(box.x>=0 && box.x+box.width<=390,'Seletor cabe na tela de celular');
     await publicPage.locator('#pad-item-selector summary').scrollIntoViewIfNeeded();
     await publicPage.screenshot({path:path.join(output,'selecao-mobile.png')});
+    // Filtro de Ação também sobre o PAD real do DF na publicação estática.
+    const df=sandbox.window.PROFOR_PUBLIC_DATA.proposals.find(p=>!p.isDeleted && p.imported.uf==='DF');
+    await publicPage.goto('file:///'+path.join(root,'docs/index.html').replace(/\\/g,'/')+'#proposta/'+df.id+'/pad');
+    await publicPage.locator('#pad-status-selector summary').waitFor();
+    await publicPage.setViewportSize({width:1440,height:1000});
+    await publicPage.locator('#pad-status-selector summary').click();
+    await publicPage.locator('#pad-status-ok').check();
+    await publicPage.locator('#pad-status-obs').check();
+    const filtered=df.imported.pad.filter(item=>['ok','obs'].includes(df.reviews.pad[item.id].status));
+    assert.equal(await publicRows.count(),filtered.length);
+    assert.equal(await publicPage.locator('.pad-table tfoot .number').innerText(),D.fmtMoney(filtered.reduce((sum,item)=>sum+item.total,0)));
+    await publicPage.locator('#pad-status-selector .pad-selector-panel').scrollIntoViewIfNeeded();
+    await publicPage.screenshot({path:path.join(output,'df-acoes-desktop.png')});
+    await publicPage.setViewportSize({width:390,height:844});
+    await publicPage.locator('#pad-status-selector .pad-selector-panel').scrollIntoViewIfNeeded();
+    const statusBox=await publicPage.locator('#pad-status-selector .pad-selector-panel').boundingBox();
+    assert.ok(statusBox.x>=0 && statusBox.x+statusBox.width<=390,'Filtro de ação cabe no celular');
+    await publicPage.screenshot({path:path.join(output,'df-acoes-mobile.png')});
     assert.deepEqual(errors,[],'Sem erros de página');
     console.log(JSON.stringify({status:'passed',realDatabaseWrites:writes,pageErrors:errors.length,localAndPublic:true,scenarios:['default','search and accumulate','accent insensitive','empty option search','multiple','text intersection','empty','totals','clear','keyboard','tab reset','proposal reset','mobile']}));
   }finally{await browser.close();}
