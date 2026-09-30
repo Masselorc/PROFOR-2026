@@ -60,7 +60,7 @@
   let syncHistory=null,historyLoading=null,calendarStart=null,selectedHistoryDay=null,lastCalendarWheel=0;
   const filters={search:'',uf:'',source:'',status:'',control:''};
   /* Filtros do PAD são temporários: nenhum dado da análise é alterado. */
-  let padSearch='',padItemSearch='',padSearchOwner=null,padSelectorOpen=false,padStatusOpen=false;
+  let padSearch='',padItemSearch='',padSearchOwner=null,padSelectorOpen=false,padStatusOpen=false,padBatchAction='';
   const padSelectedItems=new Set();
   const padSelectedStatuses=new Set();
   const padBatchItems=new Set();
@@ -143,7 +143,7 @@
     const aba=parts[2];
     activeTab=Object.hasOwn(tabNames,aba)?aba:'dados';
     if(activeTab==='merito')activeTab='analise';
-    if(activeTab==='pad' && (prevSelected!==selected || prevTab!=='pad')){padSearch='';padItemSearch='';padSearchOwner=null;padSelectedItems.clear();padSelectedStatuses.clear();padBatchItems.clear();padSelectorOpen=false;padStatusOpen=false;}
+    if(activeTab==='pad' && (prevSelected!==selected || prevTab!=='pad')){padSearch='';padItemSearch='';padSearchOwner=null;padSelectedItems.clear();padSelectedStatuses.clear();padBatchItems.clear();padBatchAction='';padSelectorOpen=false;padStatusOpen=false;}
     if(prevSelected!==selected || prevTab!==activeTab)expandedReqs.clear();
     render();if(from===location.hash){const next=[...document.querySelectorAll('.tabs a')].find(a=>a.getAttribute('href')===from);(next || $('#main')).focus();}}
   function render(){
@@ -1258,7 +1258,7 @@
   function padItemKey(item,index){return item.id?`id:${item.id}`:`row:${index}`;}
   function renderReviews(p,g,opts={}){
     const pad=g==='pad',merito=g==='merito',f=D.finance(p),ps=pad?D.padSituacao(p,state.sync):null;
-    if(pad && padSearchOwner!==p.id){padSearch='';padItemSearch='';padSearchOwner=p.id;padSelectedItems.clear();padSelectedStatuses.clear();padBatchItems.clear();padSelectorOpen=false;padStatusOpen=false;}
+    if(pad && padSearchOwner!==p.id){padSearch='';padItemSearch='';padSearchOwner=p.id;padSelectedItems.clear();padSelectedStatuses.clear();padBatchItems.clear();padBatchAction='';padSelectorOpen=false;padStatusOpen=false;}
     const padItems=pad?(p.imported.pad || []):[];
     const padKeys=new Set(padItems.map(padItemKey));
     if(pad)for(const key of padSelectedItems)if(!padKeys.has(key))padSelectedItems.delete(key);
@@ -1271,7 +1271,7 @@
     const batchVisible=linhasPad.filter(item=>padBatchItems.has(item.id)).length;
     const batchHidden=padBatchItems.size-batchVisible;
     const batchEnabled=pad && !isReadOnly() && padItems.length>0;
-    const batchBar=batchEnabled?`<div class="pad-batch-bar" aria-label="Ação conjunta no PAD"><p id="pad-batch-count" role="status" aria-live="polite">${padBatchItems.size} ${padBatchItems.size===1?'item selecionado':'itens selecionados'} para ação conjunta${batchHidden?` · ${batchHidden} fora dos filtros atuais`:''}.</p><div class="actions"><button id="pad-batch-all" type="button" class="quiet" ${linhasPad.length?'':'disabled'}>Selecionar todos os exibidos</button><button id="pad-batch-clear" type="button" class="quiet" ${padBatchItems.size?'':'disabled'}>Limpar seleção</button><button id="pad-batch-approve" type="button" class="primary" ${padBatchItems.size?'':'disabled'}>Marcar como compatíveis</button></div></div>`:'';
+    const batchBar=batchEnabled?`<div class="pad-batch-bar" aria-label="Ação conjunta no PAD"><p id="pad-batch-count" role="status" aria-live="polite">${padBatchItems.size} ${padBatchItems.size===1?'item selecionado':'itens selecionados'}${batchHidden?` · ${batchHidden} fora dos filtros atuais`:''}.</p><div class="actions"><button id="pad-batch-clear" type="button" class="quiet" ${padBatchItems.size?'':'disabled'}>Limpar seleção</button><select id="pad-batch-action" aria-label="Ação para os itens selecionados">${options({'':'Escolha a ação',na:'Analisar',...Object.fromEntries(OPCOES_PAD.map(o=>[o.valor,o.rotulo]))},padBatchAction)}</select><button id="pad-batch-apply" type="button" class="primary" ${padBatchItems.size&&padBatchAction?'':'disabled'}>Aplicar</button></div></div>`:'';
     const somaVisivel=linhasPad.reduce((a,x)=>a+x.total,0);
     const diffCents=Number.isSafeInteger(f.sum) && Number.isSafeInteger(p.imported.global)?f.sum-p.imported.global:null;
     const cobertura=(Number.isSafeInteger(f.sum) && Number.isSafeInteger(p.imported.global) && p.imported.global>0)?Math.min(1,f.sum/p.imported.global):null;
@@ -1329,9 +1329,9 @@
         header.indeterminate=batchVisible>0 && batchVisible<linhasPad.length;
         header.disabled=!linhasPad.length;
         header.addEventListener('change',()=>{for(const item of linhasPad){if(header.checked)padBatchItems.add(item.id);else padBatchItems.delete(item.id);}refreshBatch(header.id);});
-        $('#pad-batch-all').addEventListener('click',()=>{for(const item of linhasPad)padBatchItems.add(item.id);refreshBatch('pad-batch-all');});
-        $('#pad-batch-clear').addEventListener('click',()=>{padBatchItems.clear();refreshBatch('pad-batch-all');});
-        $('#pad-batch-approve').addEventListener('click',approvePadBatch);
+        $('#pad-batch-clear').addEventListener('click',()=>{padBatchItems.clear();refreshBatch('pad-batch-header');});
+        $('#pad-batch-action').addEventListener('change',ev=>{padBatchAction=ev.target.value;$('#pad-batch-apply').disabled=!padBatchItems.size || !padBatchAction;});
+        $('#pad-batch-apply').addEventListener('click',applyPadBatch);
         document.querySelectorAll('[data-pad-batch]').forEach(input=>input.addEventListener('change',()=>{if(input.checked)padBatchItems.add(input.dataset.padBatch);else padBatchItems.delete(input.dataset.padBatch);refreshBatch(input.id);}));
       }
       const statusSelector=$('#pad-status-selector');
@@ -1380,17 +1380,32 @@
       }
     }
   }
-  function approvePadBatch(){
-    if(isReadOnly() || busy || !padBatchItems.size)return;
+  function applyPadBatch(){
+    if(isReadOnly() || busy || !padBatchItems.size || !padBatchAction)return;
     const p=current(),proposalId=p.id,items=p.imported.pad.filter(item=>padBatchItems.has(item.id));
     D.assert(items.length,'Selecione pelo menos um item do PAD.');
-    const ids=items.map(item=>item.id),pending=p.diligences.filter(d=>ids.includes(d.ref?.split(':')[1]) && d.ref.startsWith('pad:') && d.status!=='saneada').length;
-    modal('Ação conjunta no PAD',`<p>Marcar os <strong>${items.length} itens selecionados</strong> como <strong>Compatível</strong>.</p><ul class="pad-batch-preview">${items.map(item=>`<li>${e(item.descricao)}</li>`).join('')}</ul><p>Observações, justificativas e documentos já registrados serão preservados.</p>${pending?`<p class="info warning">${pending} diligência(s) vinculada(s) permanecerão abertas. A marcação de compatibilidade não encerra diligências.</p>`:''}<form>${formEnd('Marcar como compatíveis')}</form>`);
-    bindForm(async()=>{
+    const ids=items.map(item=>item.id),status=padBatchAction,action=status==='na'?'Analisar':OPCOES_PAD.find(o=>o.valor===status)?.rotulo;
+    D.assert(action,'Escolha uma ação válida.');
+    const noteNeeded=['obs','no','diligencia'].includes(status),integrated=status==='diligencia';
+    const active=id=>p.diligences.filter(d=>d.ref==='pad:'+id && d.status!=='saneada');
+    const multiple=integrated?items.filter(item=>active(item.id).length>1):[];
+    modal('Aplicar ação aos itens',`<p><strong>${e(action)}</strong> para <strong>${items.length} ${items.length===1?'item selecionado':'itens selecionados'}</strong>.</p><details><summary>Ver itens selecionados</summary><ul class="pad-batch-preview">${items.map(item=>`<li>${e(item.descricao)}</li>`).join('')}</ul></details><form class="form-stack">${noteNeeded?`<label>${integrated?'Providência solicitada / justificativa':'Observação / justificativa'}<textarea name="note" maxlength="10000" ${integrated || items.some(item=>!D.reviewOf(p,'pad',item.id).note.trim())?'required':''}></textarea></label><p class="source">O texto preenchido será aplicado a todos os itens selecionados.${integrated?'':' Deixe vazio para manter as observações existentes.'}</p>`:''}${integrated?`<fieldset class="form-stack"><legend>Diligência</legend><label>Data da comunicação (opcional)<input name="communication" type="date"></label><label>Observação da diligência (opcional)<textarea name="d_note" maxlength="10000"></textarea></label>${multiple.map(item=>`<label>Diligência a atualizar: ${e(item.descricao)}<select name="d_${e(item.id)}" required>${options({'':'Selecione',...Object.fromEntries(active(item.id).map(d=>[d.id,d.request]))},'')}</select></label>`).join('')}<p class="source">Cada item terá sua própria diligência. Se já existir uma aberta, ela será atualizada.</p></fieldset>`:''}${formEnd('Aplicar')}</form>`);
+    bindForm(async fd=>{
       D.assert(current()?.id===proposalId,'A proposta mudou. Abra novamente a ação conjunta.');
       const next=D.clone(state),proposal=next.proposals.find(item=>item.id===proposalId),name=actor();
-      for(const id of ids){D.assert(proposal.imported.pad.some(item=>item.id===id),'Um item selecionado não consta mais do PAD.');if(D.reviewOf(proposal,'pad',id).status!=='ok')D.markReview(proposal,'pad',id,true,name);}
-      await persist(next);padBatchItems.clear();render();saved(`${items.length} itens marcados como compatíveis.`);
+      const commonNote=String(fd.get('note') || '').trim();
+      for(const id of ids){
+        D.assert(proposal.imported.pad.some(item=>item.id===id),'Um item selecionado não consta mais do PAD.');
+        const review=D.reviewOf(proposal,'pad',id),note=commonNote || review.note;
+        if(review.status!==status || review.note!==note)D.setReview(proposal,'pad',id,{...review,status,note},name);
+        if(integrated){
+          const linked=proposal.diligences.filter(d=>d.ref==='pad:'+id && d.status!=='saneada');
+          const old=linked.length===1?linked[0]:linked.find(d=>d.id===fd.get('d_'+id));
+          D.assert(linked.length<=1 || old,'Selecione a diligência de cada item com mais de uma aberta.');
+          D.saveDiligence(proposal,{...old,id:old?.id || '',ref:'pad:'+id,category:'PLANO DE APLICAÇÃO DETALHADO',request:note,communication:fd.get('communication') || old?.communication || '',science:old?.science || '',response:old?.response || '',status:old?.status || 'aberta',note:String(fd.get('d_note') || '').trim() || old?.note || ''},name);
+        }
+      }
+      await persist(next);padBatchItems.clear();padBatchAction='';render();saved(`${action} aplicado a ${items.length} ${items.length===1?'item':'itens'}.`);
     });
   }
   function viewReview(p,group,id,r,label){

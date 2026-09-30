@@ -121,6 +121,7 @@ button.review-open:hover{background:transparent;text-decoration-color:var(--bran
 .pad-batch-bar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;padding:14px 24px;border-top:1px solid var(--line);background:#f5fafb}
 .pad-batch-bar p{margin:0;font-size:.8125rem;color:var(--muted)}
 .pad-batch-bar .actions{flex-wrap:wrap}
+.pad-batch-bar select{width:auto;min-width:220px;max-width:100%;margin:0}
 .pad-batch-heading,.pad-batch-row{display:flex;align-items:flex-start;gap:10px;margin:0}
 .pad-batch-heading{align-items:center;font-size:inherit}
 .pad-batch-row .pad-desc-text{min-width:0;flex:1}
