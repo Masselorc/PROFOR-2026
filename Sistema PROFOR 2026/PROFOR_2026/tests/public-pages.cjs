@@ -5,6 +5,7 @@ const fs = require('node:fs');
 const vm = require('node:vm');
 const assert = require('node:assert/strict');
 const D = require('../domain.js');
+const { createStore } = require('../workspace-store.cjs');
 const playwrightPath = process.env.PROFOR_PLAYWRIGHT_PATH ||
   (fs.existsSync('C:/Users/marcelo.cortez/AppData/Local/npm-cache/_npx/9833c18b2d85bc59/node_modules/playwright')
     ? 'C:/Users/marcelo.cortez/AppData/Local/npm-cache/_npx/9833c18b2d85bc59/node_modules/playwright'
@@ -22,10 +23,13 @@ function snapshot() {
 
 async function run() {
   const data = snapshot();
+  const local = createStore(path.resolve(__dirname, '../dados/registros')).load().state;
+  const deletedCount = D.deletedProposals(data).length;
   D.validateState(data);
-  assert.equal(data.proposals.length, 14, 'Snapshot deve conter 14 propostas (9 ativas + 5 apagadas).');
-  assert.equal(D.activeProposals(data).length, 9, '9 propostas ativas.');
-  assert.equal(D.deletedProposals(data).length, 5, '5 propostas apagadas.');
+  assert.equal(data.revision, local.revision, 'Snapshot deve refletir a revisão local atual.');
+  assert.equal(data.proposals.length, local.proposals.length);
+  assert.equal(D.activeProposals(data).length, D.activeProposals(local).length);
+  assert.equal(deletedCount, D.deletedProposals(local).length);
 
   const browser = await chromium.launch({ channel: 'chrome', headless: true });
   try {
@@ -41,7 +45,7 @@ async function run() {
     assert.match(await page.textContent('.local-label'), /Consulta pública/);
     assert.equal(await page.$eval('#server-open', el => el.hidden), true, 'Ligar servidor deve estar oculto no ambiente estático');
     assert.equal(await page.$eval('#nav-deleted', el => el.hidden), false, 'Lixeira deve estar visível');
-    assert.equal(await page.textContent('#del-count'), '5', 'Contador da lixeira deve exibir 5');
+    assert.equal(await page.textContent('#del-count'), deletedCount?String(deletedCount):'', 'Contador da lixeira deve acompanhar o snapshot');
 
     // 5 Cards de estatísticas
     const statCards = await page.locator('.dashboard-stats .stat').count();
