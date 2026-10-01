@@ -1,12 +1,12 @@
 /**
  * Snapshot dos dados públicos do PROFOR/ONASP 2026 (Processo SEI 08016.010062/2026-18)
- * Gerado automaticamente em 2026-10-01T13:56:10.164Z.
+ * Gerado automaticamente em 2026-10-01T19:42:21.978Z.
  * Não editar manualmente. Use tools/build_public_docs.cjs para atualizar.
  */
-window.PROFOR_PUBLIC_UPDATED_AT = "2026-10-01T13:56:10.164Z";
+window.PROFOR_PUBLIC_UPDATED_AT = "2026-10-01T19:42:21.978Z";
 window.PROFOR_PUBLIC_DATA = {
   "schemaVersion": 1,
-  "revision": 181,
+  "revision": 210,
   "proposals": [
     {
       "id": "2243618",
@@ -16485,11 +16485,11 @@ window.PROFOR_PUBLIC_DATA = {
         },
         "merito": {
           "destinacao": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
+            "at": "2026-10-01T19:32:06.355Z",
             "attachments": []
           },
           "capital": {
@@ -16500,11 +16500,11 @@ window.PROFOR_PUBLIC_DATA = {
             "at": null
           },
           "objetivos": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
+            "at": "2026-10-01T19:32:12.621Z",
             "attachments": []
           },
           "metas": {
@@ -16515,11 +16515,11 @@ window.PROFOR_PUBLIC_DATA = {
             "at": null
           },
           "capacidade": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
+            "at": "2026-10-01T19:32:15.858Z",
             "attachments": []
           },
           "conteudo": {
@@ -16530,51 +16530,51 @@ window.PROFOR_PUBLIC_DATA = {
             "at": "2026-09-18T17:59:15.254Z"
           },
           "objeto": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": "2026-09-18T18:32:50.580Z",
+            "at": "2026-10-01T19:31:50.968Z",
             "attachments": []
           },
           "justificativa": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
+            "at": "2026-10-01T19:31:54.517Z",
             "attachments": []
           },
           "publicoAlvo": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
+            "at": "2026-10-01T19:31:57.459Z",
             "attachments": []
           },
           "problema": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
+            "at": "2026-10-01T19:32:00.284Z",
             "attachments": []
           },
           "resultados": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
+            "at": "2026-10-01T19:32:03.259Z",
             "attachments": []
           },
           "ouvidoriaInstituida": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": "2026-09-18T18:54:14.042Z",
+            "at": "2026-10-01T19:32:23.883Z",
             "attachments": []
           },
           "ouvidoriaAto": {
@@ -16599,21 +16599,21 @@ window.PROFOR_PUBLIC_DATA = {
             "at": null
           },
           "falaBRAdesao": {
-            "status": "na",
+            "status": "obs",
             "note": "",
             "document": "",
             "url": "",
-            "at": "2026-09-18T18:32:01.648Z",
+            "at": "2026-10-01T19:32:36.755Z",
             "attachments": []
           }
         },
         "celebracao": {
           "1": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": "2026-09-23T15:55:53.731Z",
+            "at": "2026-10-01T19:35:54.667Z",
             "attachments": []
           },
           "2": {
@@ -16625,147 +16625,147 @@ window.PROFOR_PUBLIC_DATA = {
             "attachments": []
           },
           "3": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
+            "at": "2026-10-01T19:33:09.034Z",
             "attachments": []
           },
           "4": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "Ausente Termo de Referência",
             "document": "",
             "url": "",
-            "at": null,
+            "at": "2026-10-01T19:33:48.388Z",
             "attachments": []
           },
           "5": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "Anexar Plano de Sustentabilidade",
             "document": "",
             "url": "",
-            "at": null,
+            "at": "2026-10-01T19:34:29.267Z",
             "attachments": []
           },
           "6": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "Anexar Declaração de Compatibilidade de Preços",
             "document": "",
             "url": "",
-            "at": null,
+            "at": "2026-10-01T19:35:13.280Z",
             "attachments": []
           },
           "7": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "Anexar QDD",
             "document": "",
             "url": "",
-            "at": null,
+            "at": "2026-10-01T19:35:35.080Z",
             "attachments": []
           },
           "8": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "anexar documento",
             "document": "",
             "url": "",
-            "at": null,
+            "at": "2026-10-01T19:37:56.472Z",
             "attachments": []
           },
           "9": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "anexar documento",
             "document": "",
             "url": "",
-            "at": null,
+            "at": "2026-10-01T19:38:39.406Z",
             "attachments": []
           },
           "10": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "anexar documento",
             "document": "",
             "url": "",
-            "at": null,
+            "at": "2026-10-01T19:39:00.105Z",
             "attachments": []
           },
           "11": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
+            "at": "2026-10-01T19:35:43.493Z",
             "attachments": []
           },
           "12": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "anexar documento",
             "document": "",
             "url": "",
-            "at": null,
+            "at": "2026-10-01T19:39:13.338Z",
             "attachments": []
           },
           "13": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "anexar documento",
             "document": "",
             "url": "",
-            "at": null,
+            "at": "2026-10-01T19:39:29.550Z",
             "attachments": []
           },
           "14": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "anexar documento",
             "document": "",
             "url": "",
-            "at": null,
+            "at": "2026-10-01T19:39:53.709Z",
             "attachments": []
           },
           "15": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "anexar documento",
             "document": "",
             "url": "",
-            "at": null,
+            "at": "2026-10-01T19:40:40.990Z",
             "attachments": []
           },
           "16": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "anexar documento",
             "document": "",
             "url": "",
-            "at": null,
+            "at": "2026-10-01T19:40:56.441Z",
             "attachments": []
           },
           "17": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "anexar documento",
             "document": "",
             "url": "",
-            "at": null,
+            "at": "2026-10-01T19:41:14.984Z",
             "attachments": []
           },
           "18": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "anexar documento",
             "document": "",
             "url": "",
-            "at": null,
+            "at": "2026-10-01T19:41:34.102Z",
             "attachments": []
           },
           "19": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
+            "at": "2026-10-01T19:41:38.763Z",
             "attachments": []
           },
           "1.1": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "Anexar Delegação de Competência",
             "document": "",
             "url": "",
-            "at": null,
+            "at": "2026-10-01T19:37:11.227Z",
             "attachments": []
           }
         },
@@ -17192,6 +17192,261 @@ window.PROFOR_PUBLIC_DATA = {
           "at": "2026-09-23T15:50:31.228Z",
           "base": "2026-10-03",
           "due": "2026-10-05",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "76fc5bc8-33a6-47d3-a88e-947e27d1342b",
+          "ref": "celebracao:4",
+          "request": "Ausente Termo de Referência",
+          "science": "",
+          "category": "ANEXO / DOCUMENTO",
+          "communication": "2026-10-01",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-01T19:33:48.388Z",
+          "base": "2026-10-11",
+          "due": "2026-10-12",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "867ea35a-b0ff-4a97-8eb3-eae7e272f332",
+          "ref": "celebracao:5",
+          "request": "Anexar Plano de Sustentabilidade",
+          "science": "",
+          "category": "ANEXO / DOCUMENTO",
+          "communication": "2026-10-01",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-01T19:34:29.267Z",
+          "base": "2026-10-11",
+          "due": "2026-10-12",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "f6ddadac-b3dd-4464-88e7-348c96899ae5",
+          "ref": "celebracao:6",
+          "request": "Anexar Declaração de Compatibilidade de Preços",
+          "science": "",
+          "category": "ANEXO / DOCUMENTO",
+          "communication": "2026-10-01",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-01T19:35:13.280Z",
+          "base": "2026-10-11",
+          "due": "2026-10-12",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "0a732336-1b3f-4ad9-9853-944936e0c9ce",
+          "ref": "celebracao:7",
+          "request": "Anexar QDD",
+          "science": "",
+          "category": "ANEXO / DOCUMENTO",
+          "communication": "2026-10-01",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-01T19:35:35.080Z",
+          "base": "2026-10-11",
+          "due": "2026-10-12",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "e372d697-d238-496f-aed0-593c660a58e5",
+          "ref": "celebracao:1.1",
+          "request": "Anexar Delegação de Competência",
+          "science": "",
+          "category": "ANEXO / DOCUMENTO",
+          "communication": "2026-10-01",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-01T19:37:11.227Z",
+          "base": "2026-10-11",
+          "due": "2026-10-12",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "1936d362-ea74-419d-908c-3911b7517d29",
+          "ref": "celebracao:8",
+          "request": "anexar documento",
+          "science": "",
+          "category": "ANEXO / DOCUMENTO",
+          "communication": "2026-10-01",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-01T19:37:56.472Z",
+          "base": "2026-10-11",
+          "due": "2026-10-12",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "26a73c7f-5db7-419b-9aa9-400c397c18d9",
+          "ref": "celebracao:9",
+          "request": "anexar documento",
+          "science": "",
+          "category": "ANEXO / DOCUMENTO",
+          "communication": "2026-10-01",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-01T19:38:39.407Z",
+          "base": "2026-10-11",
+          "due": "2026-10-12",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "f8883c1c-7d41-4cd8-a6cb-016cf6612a27",
+          "ref": "celebracao:10",
+          "request": "anexar documento",
+          "science": "",
+          "category": "ANEXO / DOCUMENTO",
+          "communication": "2026-10-01",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-01T19:39:00.105Z",
+          "base": "2026-10-11",
+          "due": "2026-10-12",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "0c014fda-0bad-4fa1-be34-dbbe8d9b6a17",
+          "ref": "celebracao:12",
+          "request": "anexar documento",
+          "science": "",
+          "category": "ANEXO / DOCUMENTO",
+          "communication": "2026-10-01",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-01T19:39:13.338Z",
+          "base": "2026-10-11",
+          "due": "2026-10-12",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "47bbe8bb-c307-4457-b087-f103766ba318",
+          "ref": "celebracao:13",
+          "request": "anexar documento",
+          "science": "",
+          "category": "ANEXO / DOCUMENTO",
+          "communication": "2026-10-01",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-01T19:39:29.551Z",
+          "base": "2026-10-11",
+          "due": "2026-10-12",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "1555d4a7-5d1a-41a2-a42f-36a612170fbf",
+          "ref": "celebracao:14",
+          "request": "anexar documento",
+          "science": "",
+          "category": "ANEXO / DOCUMENTO",
+          "communication": "2026-10-01",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-01T19:39:53.710Z",
+          "base": "2026-10-11",
+          "due": "2026-10-12",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "15491794-0e07-4645-b183-4e317e745fee",
+          "ref": "celebracao:15",
+          "request": "anexar documento",
+          "science": "",
+          "category": "ANEXO / DOCUMENTO",
+          "communication": "2026-10-01",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-01T19:40:40.991Z",
+          "base": "2026-10-11",
+          "due": "2026-10-12",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "747bc331-5615-4683-8d71-8e8c082dfc23",
+          "ref": "celebracao:16",
+          "request": "anexar documento",
+          "science": "",
+          "category": "ANEXO / DOCUMENTO",
+          "communication": "2026-10-01",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-01T19:40:56.441Z",
+          "base": "2026-10-11",
+          "due": "2026-10-12",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "5e6c8d3a-adce-433c-b5b2-d24b26e0d4f4",
+          "ref": "celebracao:17",
+          "request": "anexar documento",
+          "science": "",
+          "category": "ANEXO / DOCUMENTO",
+          "communication": "2026-10-01",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-01T19:41:14.984Z",
+          "base": "2026-10-11",
+          "due": "2026-10-12",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "0d25ad46-0483-4fc7-8a03-b83e034c8301",
+          "ref": "celebracao:18",
+          "request": "anexar documento",
+          "science": "",
+          "category": "ANEXO / DOCUMENTO",
+          "communication": "2026-10-01",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-01T19:41:34.102Z",
+          "base": "2026-10-11",
+          "due": "2026-10-12",
           "automaticDeadline": true,
           "confirmed": false,
           "calendarNote": ""
@@ -20408,6 +20663,960 @@ window.PROFOR_PUBLIC_DATA = {
           },
           "after": {
             "at": "2026-10-01T13:55:12.638Z"
+          }
+        },
+        {
+          "at": "2026-10-01T19:31:50.968Z",
+          "event": "Avaliação: merito / objeto",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-18T18:32:50.580Z",
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-01T19:31:50.968Z",
+            "attachments": []
+          }
+        },
+        {
+          "at": "2026-10-01T19:31:54.517Z",
+          "event": "Avaliação: merito / justificativa",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-01T19:31:54.517Z",
+            "attachments": []
+          }
+        },
+        {
+          "at": "2026-10-01T19:31:57.459Z",
+          "event": "Avaliação: merito / publicoAlvo",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-01T19:31:57.459Z",
+            "attachments": []
+          }
+        },
+        {
+          "at": "2026-10-01T19:32:00.284Z",
+          "event": "Avaliação: merito / problema",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-01T19:32:00.284Z",
+            "attachments": []
+          }
+        },
+        {
+          "at": "2026-10-01T19:32:03.259Z",
+          "event": "Avaliação: merito / resultados",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-01T19:32:03.259Z",
+            "attachments": []
+          }
+        },
+        {
+          "at": "2026-10-01T19:32:06.355Z",
+          "event": "Avaliação: merito / destinacao",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-01T19:32:06.355Z",
+            "attachments": []
+          }
+        },
+        {
+          "at": "2026-10-01T19:32:12.621Z",
+          "event": "Avaliação: merito / objetivos",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-01T19:32:12.621Z",
+            "attachments": []
+          }
+        },
+        {
+          "at": "2026-10-01T19:32:15.858Z",
+          "event": "Avaliação: merito / capacidade",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-01T19:32:15.858Z",
+            "attachments": []
+          }
+        },
+        {
+          "at": "2026-10-01T19:32:23.883Z",
+          "event": "Avaliação: merito / ouvidoriaInstituida",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-18T18:54:14.042Z",
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-01T19:32:23.883Z",
+            "attachments": []
+          }
+        },
+        {
+          "at": "2026-10-01T19:32:36.755Z",
+          "event": "Avaliação: merito / falaBRAdesao",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-18T18:32:01.648Z",
+            "attachments": []
+          },
+          "after": {
+            "status": "obs",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-01T19:32:36.755Z",
+            "attachments": []
+          }
+        },
+        {
+          "at": "2026-10-01T19:33:09.034Z",
+          "event": "Avaliação: celebracao / 3",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-01T19:33:09.034Z",
+            "attachments": []
+          }
+        },
+        {
+          "at": "2026-10-01T19:33:48.388Z",
+          "event": "Avaliação: celebracao / 4",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Ausente Termo de Referência",
+            "document": "",
+            "url": "",
+            "at": "2026-10-01T19:33:48.388Z",
+            "attachments": []
+          }
+        },
+        {
+          "at": "2026-10-01T19:33:48.388Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "76fc5bc8-33a6-47d3-a88e-947e27d1342b",
+            "ref": "celebracao:4",
+            "request": "Ausente Termo de Referência",
+            "science": "",
+            "category": "ANEXO / DOCUMENTO",
+            "communication": "2026-10-01",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-01T19:33:48.388Z",
+            "base": "2026-10-11",
+            "due": "2026-10-12",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-01T19:34:29.267Z",
+          "event": "Avaliação: celebracao / 5",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Anexar Plano de Sustentabilidade",
+            "document": "",
+            "url": "",
+            "at": "2026-10-01T19:34:29.267Z",
+            "attachments": []
+          }
+        },
+        {
+          "at": "2026-10-01T19:34:29.267Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "867ea35a-b0ff-4a97-8eb3-eae7e272f332",
+            "ref": "celebracao:5",
+            "request": "Anexar Plano de Sustentabilidade",
+            "science": "",
+            "category": "ANEXO / DOCUMENTO",
+            "communication": "2026-10-01",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-01T19:34:29.267Z",
+            "base": "2026-10-11",
+            "due": "2026-10-12",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-01T19:35:13.280Z",
+          "event": "Avaliação: celebracao / 6",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Anexar Declaração de Compatibilidade de Preços",
+            "document": "",
+            "url": "",
+            "at": "2026-10-01T19:35:13.280Z",
+            "attachments": []
+          }
+        },
+        {
+          "at": "2026-10-01T19:35:13.280Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "f6ddadac-b3dd-4464-88e7-348c96899ae5",
+            "ref": "celebracao:6",
+            "request": "Anexar Declaração de Compatibilidade de Preços",
+            "science": "",
+            "category": "ANEXO / DOCUMENTO",
+            "communication": "2026-10-01",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-01T19:35:13.280Z",
+            "base": "2026-10-11",
+            "due": "2026-10-12",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-01T19:35:35.080Z",
+          "event": "Avaliação: celebracao / 7",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Anexar QDD",
+            "document": "",
+            "url": "",
+            "at": "2026-10-01T19:35:35.080Z",
+            "attachments": []
+          }
+        },
+        {
+          "at": "2026-10-01T19:35:35.080Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "0a732336-1b3f-4ad9-9853-944936e0c9ce",
+            "ref": "celebracao:7",
+            "request": "Anexar QDD",
+            "science": "",
+            "category": "ANEXO / DOCUMENTO",
+            "communication": "2026-10-01",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-01T19:35:35.080Z",
+            "base": "2026-10-11",
+            "due": "2026-10-12",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-01T19:35:43.493Z",
+          "event": "Avaliação: celebracao / 11",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-01T19:35:43.493Z",
+            "attachments": []
+          }
+        },
+        {
+          "at": "2026-10-01T19:35:54.667Z",
+          "event": "Avaliação: celebracao / 1",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-23T15:55:53.731Z",
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-01T19:35:54.667Z",
+            "attachments": []
+          }
+        },
+        {
+          "at": "2026-10-01T19:37:11.227Z",
+          "event": "Avaliação: celebracao / 1.1",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Anexar Delegação de Competência",
+            "document": "",
+            "url": "",
+            "at": "2026-10-01T19:37:11.227Z",
+            "attachments": []
+          }
+        },
+        {
+          "at": "2026-10-01T19:37:11.227Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "e372d697-d238-496f-aed0-593c660a58e5",
+            "ref": "celebracao:1.1",
+            "request": "Anexar Delegação de Competência",
+            "science": "",
+            "category": "ANEXO / DOCUMENTO",
+            "communication": "2026-10-01",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-01T19:37:11.227Z",
+            "base": "2026-10-11",
+            "due": "2026-10-12",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-01T19:37:56.472Z",
+          "event": "Avaliação: celebracao / 8",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "anexar documento",
+            "document": "",
+            "url": "",
+            "at": "2026-10-01T19:37:56.472Z",
+            "attachments": []
+          }
+        },
+        {
+          "at": "2026-10-01T19:37:56.472Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "1936d362-ea74-419d-908c-3911b7517d29",
+            "ref": "celebracao:8",
+            "request": "anexar documento",
+            "science": "",
+            "category": "ANEXO / DOCUMENTO",
+            "communication": "2026-10-01",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-01T19:37:56.472Z",
+            "base": "2026-10-11",
+            "due": "2026-10-12",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-01T19:38:39.406Z",
+          "event": "Avaliação: celebracao / 9",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "anexar documento",
+            "document": "",
+            "url": "",
+            "at": "2026-10-01T19:38:39.406Z",
+            "attachments": []
+          }
+        },
+        {
+          "at": "2026-10-01T19:38:39.407Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "26a73c7f-5db7-419b-9aa9-400c397c18d9",
+            "ref": "celebracao:9",
+            "request": "anexar documento",
+            "science": "",
+            "category": "ANEXO / DOCUMENTO",
+            "communication": "2026-10-01",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-01T19:38:39.407Z",
+            "base": "2026-10-11",
+            "due": "2026-10-12",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-01T19:39:00.105Z",
+          "event": "Avaliação: celebracao / 10",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "anexar documento",
+            "document": "",
+            "url": "",
+            "at": "2026-10-01T19:39:00.105Z",
+            "attachments": []
+          }
+        },
+        {
+          "at": "2026-10-01T19:39:00.105Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "f8883c1c-7d41-4cd8-a6cb-016cf6612a27",
+            "ref": "celebracao:10",
+            "request": "anexar documento",
+            "science": "",
+            "category": "ANEXO / DOCUMENTO",
+            "communication": "2026-10-01",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-01T19:39:00.105Z",
+            "base": "2026-10-11",
+            "due": "2026-10-12",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-01T19:39:13.338Z",
+          "event": "Avaliação: celebracao / 12",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "anexar documento",
+            "document": "",
+            "url": "",
+            "at": "2026-10-01T19:39:13.338Z",
+            "attachments": []
+          }
+        },
+        {
+          "at": "2026-10-01T19:39:13.338Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "0c014fda-0bad-4fa1-be34-dbbe8d9b6a17",
+            "ref": "celebracao:12",
+            "request": "anexar documento",
+            "science": "",
+            "category": "ANEXO / DOCUMENTO",
+            "communication": "2026-10-01",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-01T19:39:13.338Z",
+            "base": "2026-10-11",
+            "due": "2026-10-12",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-01T19:39:29.550Z",
+          "event": "Avaliação: celebracao / 13",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "anexar documento",
+            "document": "",
+            "url": "",
+            "at": "2026-10-01T19:39:29.550Z",
+            "attachments": []
+          }
+        },
+        {
+          "at": "2026-10-01T19:39:29.551Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "47bbe8bb-c307-4457-b087-f103766ba318",
+            "ref": "celebracao:13",
+            "request": "anexar documento",
+            "science": "",
+            "category": "ANEXO / DOCUMENTO",
+            "communication": "2026-10-01",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-01T19:39:29.551Z",
+            "base": "2026-10-11",
+            "due": "2026-10-12",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-01T19:39:53.709Z",
+          "event": "Avaliação: celebracao / 14",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "anexar documento",
+            "document": "",
+            "url": "",
+            "at": "2026-10-01T19:39:53.709Z",
+            "attachments": []
+          }
+        },
+        {
+          "at": "2026-10-01T19:39:53.710Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "1555d4a7-5d1a-41a2-a42f-36a612170fbf",
+            "ref": "celebracao:14",
+            "request": "anexar documento",
+            "science": "",
+            "category": "ANEXO / DOCUMENTO",
+            "communication": "2026-10-01",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-01T19:39:53.710Z",
+            "base": "2026-10-11",
+            "due": "2026-10-12",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-01T19:40:40.990Z",
+          "event": "Avaliação: celebracao / 15",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "anexar documento",
+            "document": "",
+            "url": "",
+            "at": "2026-10-01T19:40:40.990Z",
+            "attachments": []
+          }
+        },
+        {
+          "at": "2026-10-01T19:40:40.991Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "15491794-0e07-4645-b183-4e317e745fee",
+            "ref": "celebracao:15",
+            "request": "anexar documento",
+            "science": "",
+            "category": "ANEXO / DOCUMENTO",
+            "communication": "2026-10-01",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-01T19:40:40.991Z",
+            "base": "2026-10-11",
+            "due": "2026-10-12",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-01T19:40:56.441Z",
+          "event": "Avaliação: celebracao / 16",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "anexar documento",
+            "document": "",
+            "url": "",
+            "at": "2026-10-01T19:40:56.441Z",
+            "attachments": []
+          }
+        },
+        {
+          "at": "2026-10-01T19:40:56.441Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "747bc331-5615-4683-8d71-8e8c082dfc23",
+            "ref": "celebracao:16",
+            "request": "anexar documento",
+            "science": "",
+            "category": "ANEXO / DOCUMENTO",
+            "communication": "2026-10-01",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-01T19:40:56.441Z",
+            "base": "2026-10-11",
+            "due": "2026-10-12",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-01T19:41:14.984Z",
+          "event": "Avaliação: celebracao / 17",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "anexar documento",
+            "document": "",
+            "url": "",
+            "at": "2026-10-01T19:41:14.984Z",
+            "attachments": []
+          }
+        },
+        {
+          "at": "2026-10-01T19:41:14.984Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "5e6c8d3a-adce-433c-b5b2-d24b26e0d4f4",
+            "ref": "celebracao:17",
+            "request": "anexar documento",
+            "science": "",
+            "category": "ANEXO / DOCUMENTO",
+            "communication": "2026-10-01",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-01T19:41:14.984Z",
+            "base": "2026-10-11",
+            "due": "2026-10-12",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-01T19:41:34.102Z",
+          "event": "Avaliação: celebracao / 18",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "anexar documento",
+            "document": "",
+            "url": "",
+            "at": "2026-10-01T19:41:34.102Z",
+            "attachments": []
+          }
+        },
+        {
+          "at": "2026-10-01T19:41:34.102Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "0d25ad46-0483-4fc7-8a03-b83e034c8301",
+            "ref": "celebracao:18",
+            "request": "anexar documento",
+            "science": "",
+            "category": "ANEXO / DOCUMENTO",
+            "communication": "2026-10-01",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-01T19:41:34.102Z",
+            "base": "2026-10-11",
+            "due": "2026-10-12",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-01T19:41:38.763Z",
+          "event": "Avaliação: celebracao / 19",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-01T19:41:38.763Z",
+            "attachments": []
           }
         }
       ],
