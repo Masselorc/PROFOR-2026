@@ -39,7 +39,7 @@ async function environment(browser,state,publicMode=false,viewport={width:1366,h
 async function openConclusion(t){await t.page.locator('[data-action="conclude"]').click();await t.page.locator('[name="reference"]').fill('Evidências da fixture conferidas');}
 async function confirm(t){await t.page.locator('[data-action="confirm-conclusion"]').click();}
 async function run(){
- fs.mkdirSync(OUTPUT,{recursive:true});const browser=await chromium.launch({headless:true});const passed=[];
+ fs.mkdirSync(OUTPUT,{recursive:true});const browser=await chromium.launch({channel:'chrome',headless:true});const passed=[];
  try{
   // 1: evento real, clique duplo, persistência imutável, recarga e relatório.
   let t=await environment(browser,fixture());await t.goto('dados');await openConclusion(t);
@@ -89,7 +89,7 @@ async function run(){
   assert.equal(await t.page.locator('[data-pad-item="11"] .item-description').getAttribute('open'),'');
   t.fail=500;const last=t.page.locator('[data-status-dropdown][data-group="pad"][data-id="15"] [data-status-toggle]');await last.focus();await t.page.keyboard.press('Enter');await t.page.keyboard.press('Home');await t.page.keyboard.press('ArrowDown');await t.page.keyboard.press('Enter');await t.page.waitForFunction(()=>document.querySelector('#save-state').dataset.state==='error');assert.equal(await last.evaluate(el=>document.activeElement===el),true);assert.equal(t.store.load().state.proposals[0].reviews.pad['15'].status,'na');await choose('pad','15');
   await t.page.locator('#notice').evaluate(el=>el.hidden=true);assert.equal(await t.page.locator('.pad-table').evaluate(el=>el.getBoundingClientRect().right<=innerWidth && el.parentElement.scrollWidth<=el.parentElement.clientWidth+1),true);await t.page.screenshot({path:path.join(OUTPUT,'desktop-pad.png')});await t.page.setViewportSize({width:390,height:844});await desc.scrollIntoViewIfNeeded();await t.page.screenshot({path:path.join(OUTPUT,'mobile-pad.png')});assert.equal(await t.page.locator('.pad-table').evaluate(el=>el.getBoundingClientRect().width<400),true);await t.page.locator('[data-pad-item="15"]').scrollIntoViewIfNeeded();await t.page.screenshot({path:path.join(OUTPUT,'mobile-acao.png')});
-  await t.page.setViewportSize({width:683,height:384});const zoomSession=await t.context.newCDPSession(t.page);await zoomSession.send('Emulation.setDeviceMetricsOverride',{width:683,height:384,deviceScaleFactor:2,mobile:false});await desc.scrollIntoViewIfNeeded();await t.page.screenshot({path:path.join(OUTPUT,'zoom200-pad.png')});assert.ok(await desc.isVisible());await t.page.locator('[data-pad-item="15"]').scrollIntoViewIfNeeded();await t.page.screenshot({path:path.join(OUTPUT,'zoom200-acao.png')});await t.close();passed.push('10: 5 mérito + 5 PAD, foco, falha, expansão, desktop/mobile/200%');
+  await t.page.setViewportSize({width:683,height:384});const zoomSession=await t.context.newCDPSession(t.page);await zoomSession.send('Emulation.setDeviceMetricsOverride',{width:683,height:384,deviceScaleFactor:2,mobile:false});await desc.scrollIntoViewIfNeeded();await t.page.screenshot({path:path.join(OUTPUT,'reflow-dpr2-pad.png')});assert.ok(await desc.isVisible());await t.page.locator('[data-pad-item="15"]').scrollIntoViewIfNeeded();await t.page.screenshot({path:path.join(OUTPUT,'reflow-dpr2-acao.png')});await t.close();passed.push('10: 5 mérito + 5 PAD, foco, falha, expansão, desktop/mobile/reflow DPR2 (não é zoom do navegador)');
   // 6: diligências das duas abas, PAD com mesmo ID e mérito; mesma apresentação.
   const p=proposal();for(const ref of ['celebracao:6','celebracao:11','celebracao:9','merito:objeto','pad:11'])D.saveDiligence(p,{ref,category:'OUTRO',request:`Providência ${ref}`,communication:'2026-09-15',science:'2026-09-16',response:'2026-09-17',status:'saneada',note:`Conclusão ${ref}`},'Fixture');
   D.addAttachment(p,'proposta','6',{name:'fixture.txt',data:'data:text/plain;base64,Rml4dHVyZQ==',size:7,type:'text/plain',note:'Nota do anexo'},'Fixture');
@@ -107,7 +107,7 @@ async function run(){
    }await t.close();
   }passed.push('6: detalhe integral idêntico, refs canônicas, anexos, handlers/adaptador sem mutação');
   t=await environment(browser,fixture(),false,{width:390,height:844},true);await t.goto('pad');await t.page.locator('.item-description summary').first().tap();assert.equal(await t.page.locator('.item-description').first().getAttribute('open'),'');await t.page.locator('[data-status-toggle]').first().tap();assert.equal(await t.page.locator('[data-status-popover]:visible').count(),1);await t.close();passed.push('10: toque simulado');
-  fs.writeFileSync(path.join(OUTPUT,'resultado.json'),JSON.stringify({status:'PASS',passed,realDatabaseWrites:0,screenshots:['desktop-pad.png','mobile-pad.png','zoom200-pad.png','mobile-acao.png','zoom200-acao.png']},null,2));console.log(JSON.stringify({status:'PASS',passed,realDatabaseWrites:0}));
+  fs.writeFileSync(path.join(OUTPUT,'resultado.json'),JSON.stringify({status:'PASS',passed,realDatabaseWrites:0,screenshots:['desktop-pad.png','mobile-pad.png','reflow-dpr2-pad.png','mobile-acao.png','reflow-dpr2-acao.png']},null,2));console.log(JSON.stringify({status:'PASS',passed,realDatabaseWrites:0}));
  }finally{await browser.close();}
 }
 run().catch(e=>{console.error(e);process.exitCode=1;});

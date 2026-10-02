@@ -135,7 +135,7 @@
   function modal(title,html){if(!$('#modal').open){const el=document.activeElement;focusReturn={id:el?.id,dataset:{...el?.dataset}};}$('#modal-title').textContent=title;$('#modal-content').innerHTML=html;modalDirty=false;if(!$('#modal').open)$('#modal').showModal();}
   function formError(err){const el=$('#form-error');if(el){el.textContent=err.message;el.focus();}else toast(err.message,true);}
   function formEnd(label='Salvar'){return `<p id="form-error" class="error-message" role="alert" tabindex="-1"></p><div class="dialog-actions">${button('Cancelar','close')}<button class="primary" type="submit">${label}</button></div>`;}
-  function bindForm(handler){const form=$('#modal-content form');form.addEventListener('input',()=>modalDirty=true);form.addEventListener('submit',async event=>{event.preventDefault();const submit=form.querySelector('[type=submit]');submit.disabled=true;try{await handler(new FormData(form));}catch(err){formError(err);}finally{submit.disabled=false;}});}
+  function bindForm(handler){const form=$('#modal-content form');let submitting=false,submitted=false;form.addEventListener('input',()=>modalDirty=true);form.addEventListener('submit',async event=>{event.preventDefault();if(submitting || submitted)return;submitting=true;const submit=form.querySelector('[type=submit]');submit.disabled=true;try{await handler(new FormData(form));submitted=true;}catch(err){formError(err);}finally{submitting=false;if(submit.isConnected)submit.disabled=submitted;}});}
   function saved(message){modalDirty=false;$('#modal').close();toast(message);}
   /* `view` é a tela sem proposta selecionada: painel, programa, apagadas ou registros. */
   function route(){const from=document.activeElement?.getAttribute('href');const parts=location.hash.slice(1).split('/');const prevSelected=selected,prevTab=activeTab,prevView=view;selected=parts[0]==='proposta'?parts[1]:null;if(!selected)view=['apagadas','registros','programa'].includes(parts[0])?parts[0]:'painel';
@@ -685,7 +685,7 @@
     </section>`;
   }
   function renderProposal(p){
-    const i=p.imported;
+    const i=p.imported,conclusionValidity=D.conclusionValidity(p);
     $('#main').innerHTML=`<a class="back" href="#painel">← Voltar ao painel</a>
       <div class="page-head">
         <div>
@@ -696,11 +696,11 @@
             <span class="head-badge"><span class="head-badge-lbl">Processo SEI:</span> ${p.sei?.number?`<span class="sei-process"><a href="${e(D.safeLink(p.sei.url))}" target="_blank" rel="noopener noreferrer">${e(p.sei.number)}</a></span>`: '<span class="muted">Não cadastrado</span>'}${p.sei?.number?proposalCopyButton(p.sei.number):''} ${isReadOnly()?'':button(p.sei?.number?'Editar processo':'Cadastrar processo','sei','','sei-edit')}</span>
           </div>
         </div>
-        <div class="actions">${button('Gerar relatório','report')}${isReadOnly()?'':button(p.conclusion?'Rever conclusão':'Concluir análise técnica','conclude','','primary')}</div>
+        <div class="actions">${button('Ver informações institucionais','view-institution')}${button('Gerar relatório','report')}${isReadOnly()?'':button(p.conclusion?'Rever conclusão':'Concluir análise técnica','conclude','','primary')}</div>
       </div>
       <details class="review-summary" data-proposal-summary="${e(p.id)}" ${summaryClosed.has(p.id)?'':'open'}><summary>Resumo da revisão · ${D.reviewProgress(p).done}/${D.reviewProgress(p).total} revisados · PAD ${D.groupProgress(p,'pad').done}/${D.groupProgress(p,'pad').total} · ${D.finance(p).errors.length} divergência(s) unitária(s) · ${D.blockers(p,true).length} pendência(s) de aptidão</summary>${renderResultSection(p)}</details>
       ${D.institutionalConflicts(p).length?'<div class="info warning">Conflito legado entre fato institucional e parecer. Os dois registros foram preservados; confira em Mérito → Editar informações.</div>':''}
-      ${p.conclusion?`<p class="info">Conclusão técnica: ${e(({favoravel:'Favorável',desfavoravel:'Desfavorável'})[p.conclusion.result]||'Legada, sem referência verificável')} · ${e(p.conclusion.actor)} · ${e(D.fmtDate(p.conclusion.at))}${p.conclusion.reference?` · Evidências: ${e(p.conclusion.reference)}`:''}${p.conclusion.note?` · Justificativa: ${e(p.conclusion.note)}`:''}</p>`:''}
+      ${p.conclusion?`<p class="info ${conclusionValidity.current?'':'warning'}">${conclusionValidity.current?'Conclusão técnica atual':'Conclusão técnica anterior'}: ${e(({favoravel:'Favorável',desfavoravel:'Desfavorável'})[p.conclusion.result]||'Legada, sem referência verificável')} · ${e(p.conclusion.actor)} · ${e(D.fmtDate(p.conclusion.at))} · ${e(conclusionValidity.label)}${conclusionValidity.reason?` · ${e(conclusionValidity.reason)}`:''}${p.conclusion.reference?` · Evidências: ${e(p.conclusion.reference)}`:''}${p.conclusion.note?` · Justificativa: ${e(p.conclusion.note)}`:''}</p>`:''}
       ${D.pending(p).length?`<div class="info error">${D.pending(p).length} pendência(s) marcada(s) como diligência sem registro ativo. ${isReadOnly()?'':'<a href="#proposta/'+e(p.id)+'/diligencias">Cadastrar diligência</a>'}</div>`:''}
       <nav class="tabs dim-tabs" aria-label="Seções da proposta">${Object.entries(tabNames).filter(([id])=>id!=='merito').map(([id,name])=>`<a data-tab="${id}" class="${id===activeTab?'active':''}" ${id===activeTab?'aria-current="page"':''} href="#proposta/${e(p.id)}/${id}">${name}</a>`).join('')}</nav>${transferegovBox(p)}<div id="tab-content"></div>`;
     document.querySelector('[data-proposal-summary]')?.addEventListener('toggle',ev=>{const el=ev.currentTarget;if(el.open)summaryClosed.delete(el.dataset.proposalSummary);else summaryClosed.add(el.dataset.proposalSummary);});
@@ -1019,7 +1019,7 @@
   }
   function initRequisitosExpansion(table,p,g,itens){
     if(!table)return;
-    function toggleRow(id){
+    function toggleRow(id,fromButton){
       const key=`${g}:${id}`;
       if(expandedReqs.has(key))expandedReqs.delete(key);
       else {
@@ -1027,21 +1027,23 @@
         expandedReqs.add(key);
       }
       render();
+      const row=[...document.querySelectorAll('tr[data-req-row]')].find(el=>el.dataset.group===g && el.dataset.id===id);
+      (fromButton?row?.querySelector('.row-expand'):row)?.focus({preventScroll:true});
     }
     table.addEventListener('click',event=>{
       if(event.target.closest('tr.row-summary-detail'))return;
-      const interactive=event.target.closest('a, button, input, select, textarea, [data-status-dropdown], .status-option');
+      const interactive=event.target.closest('a, button, input, select, textarea, summary, details, [data-status-dropdown], .status-option');
       if(interactive && !interactive.classList.contains('row-expand') && !interactive.closest('.row-expand'))return;
       const row=event.target.closest('tr[data-req-row]');
-      if(row)toggleRow(row.getAttribute('data-id'));
+      if(row)toggleRow(row.getAttribute('data-id'),!!event.target.closest('.row-expand'));
     });
     table.addEventListener('keydown',event=>{
       if(event.key!=='Enter' && event.key!==' ')return;
       if(event.target.closest('tr.row-summary-detail'))return;
-      const interactive=event.target.closest('a, button, input, select, textarea, [data-status-dropdown]');
+      const interactive=event.target.closest('a, button, input, select, textarea, summary, details, [data-status-dropdown], .status-option');
       if(interactive && !interactive.classList.contains('row-expand') && !interactive.closest('.row-expand'))return;
       const row=event.target.closest('tr[data-req-row]');
-      if(row){event.preventDefault();toggleRow(row.getAttribute('data-id'));}
+      if(row){event.preventDefault();toggleRow(row.getAttribute('data-id'),!!event.target.closest('.row-expand'));}
     });
     table.querySelectorAll('tr.row-summary-detail').forEach(detailTr=>{
       const idMatch=detailTr.id.match(/^detail-[^-]+-(.+)$/);
@@ -1395,7 +1397,7 @@
     const ids=items.map(item=>item.id),status=padBatchAction,action=status==='na'?'Analisar':OPCOES_PAD.find(o=>o.valor===status)?.rotulo;
     D.assert(action,'Escolha uma ação válida.');
     const noteNeeded=['obs','no','diligencia'].includes(status),integrated=status==='diligencia';
-    const active=id=>p.diligences.filter(d=>d.ref==='pad:'+id && d.status!=='saneada');
+    const active=id=>p.diligences.filter(d=>d.ref==='pad:'+id && !D.diligenceTerminal(d));
     const multiple=integrated?items.filter(item=>active(item.id).length>1):[];
     modal('Aplicar ação aos itens',`<p><strong>${e(action)}</strong> para <strong>${items.length} ${items.length===1?'item selecionado':'itens selecionados'}</strong>.</p><details><summary>Ver itens selecionados</summary><ul class="pad-batch-preview">${items.map(item=>`<li>${e(item.descricao)}</li>`).join('')}</ul></details><form class="form-stack">${noteNeeded?`<label>${integrated?'Providência solicitada / justificativa':'Observação / justificativa'}<textarea name="note" maxlength="10000" ${integrated || items.some(item=>!D.reviewOf(p,'pad',item.id).note.trim())?'required':''}></textarea></label><p class="source">O texto preenchido será aplicado a todos os itens selecionados.${integrated?'':' Deixe vazio para manter as observações existentes.'}</p>`:''}${integrated?`<fieldset class="form-stack"><legend>Diligência</legend><label>Data da comunicação (opcional)<input name="communication" type="date"></label><label>Observação da diligência (opcional)<textarea name="d_note" maxlength="10000"></textarea></label>${multiple.map(item=>`<label>Diligência a atualizar: ${e(item.descricao)}<select name="d_${e(item.id)}" required>${options({'':'Selecione',...Object.fromEntries(active(item.id).map(d=>[d.id,d.request]))},'')}</select></label>`).join('')}<p class="source">Cada item terá sua própria diligência. Se já existir uma aberta, ela será atualizada.</p></fieldset>`:''}${formEnd('Aplicar')}</form>`);
     bindForm(async fd=>{
@@ -1407,7 +1409,7 @@
         const review=D.reviewOf(proposal,'pad',id),note=commonNote || review.note;
         if(review.status!==status || review.note!==note || !D.reviewCurrent(proposal,'pad',id))D.setReview(proposal,'pad',id,{...review,status,note},name);
         if(integrated){
-          const linked=proposal.diligences.filter(d=>d.ref==='pad:'+id && d.status!=='saneada');
+          const linked=proposal.diligences.filter(d=>d.ref==='pad:'+id && !D.diligenceTerminal(d));
           const old=linked.length===1?linked[0]:linked.find(d=>d.id===fd.get('d_'+id));
           D.assert(linked.length<=1 || old,'Selecione a diligência de cada item com mais de uma aberta.');
           D.saveDiligence(proposal,{...old,id:old?.id || '',ref:'pad:'+id,category:'PLANO DE APLICAÇÃO DETALHADO',request:note,communication:fd.get('communication') || old?.communication || '',science:old?.science || '',response:old?.response || '',status:old?.status || 'aberta',note:String(fd.get('d_note') || '').trim() || old?.note || ''},name);
@@ -1443,12 +1445,21 @@
     const lista=(meta?`<dl class="data-grid"><div><dt>Fundamentação</dt><dd>${textoHtml(meta.fundamentacao,'Analisar: fundamentação')}</dd></div><div><dt>Comprovação</dt><dd>${textoHtml(meta.comprovacao,'Analisar: comprovação')}</dd></div></dl>`:'')+origem;
     const ref=D.referenceRows(p).find(x=>x.id===id && x.review===r)?.ref;
     D.assert(ref,'Vínculo do requisito não encontrado.');
-    const active=p.diligences.filter(d=>d.ref===ref && d.status!=='saneada');
+    const active=p.diligences.filter(d=>d.ref===ref && !D.diligenceTerminal(d));
     let old=active.length===1?active[0]:null;
     const initial=old || {category:group==='pad'?'PLANO DE APLICAÇÃO DETALHADO':group==='habilitacao'?'HABILITAÇÃO':'OUTRO',communication:'',science:'',response:'',status:'aberta',note:'',due:'',confirmed:false,calendarNote:''};
     const statusInicial=initialStatus || (r.status==='reanalise'?'na':r.status);
     modal('Analisar requisito',`<p><strong>${contexto}</strong></p><p>${textoHtml(label,'Analisar: requisito')}</p>${meta&&meta.sub?`<p class="source">${textoHtml(meta.sub,'Analisar: subtexto da Lista de Conferência')}</p>`:''}${lista}<form class="form-stack"><label>Resultado<select name="status">${options(states,statusInicial)}</select></label><label><span id="review-note-label">Observação / justificativa</span><textarea name="note" maxlength="10000">${e(r.note)}</textarea></label>${docFields}<fieldset id="review-diligence" class="form-stack" hidden disabled><legend>Diligência vinculada ao item</legend>${active.length>1?`<label>Diligência a atualizar<select name="d_id" required>${options({'':'Selecione uma diligência',...Object.fromEntries(active.map(d=>[d.id,d.request]))},'')}</select></label>`:''}<p id="review-diligence-info" class="source"></p>${reviewDiligenceFields(initial)}</fieldset>${formEnd()}</form>`);
     const form=$('#modal-content form'),fields=$('#review-diligence'),note=form.elements.note;
+    if(group==='merito' && id==='ouvidoriaInstituida'){
+      const notice=document.createElement('p');notice.id='review-institution-info';notice.className='info';notice.setAttribute('role','status');form.prepend(notice);
+      const updateInstitutionNotice=()=>{
+        const assessment=D.institutionalAssessment(p,id,form.elements.status.value);
+        notice.textContent=form.elements.status.value==='obs'?assessment.reason || 'Observação complementa o fato institucional registrado; não o altera.':'O fato institucional e a cláusula são consultáveis em Ver informações institucionais. Observações não comprovam instituição.';
+        notice.classList.toggle('warning',form.elements.status.value==='obs' && !assessment.compatible);
+      };
+      form.elements.status.addEventListener('change',updateInstitutionNotice);updateInstitutionNotice();
+    }
     let analysisNote=r.note,request=old?.request || r.note;
     const preview=()=>{form.elements.d_due.value=D.deadline(form.elements.d_communication.value).adjusted;};
     const toggle=()=>{
@@ -1484,7 +1495,19 @@
   function reviewDiligenceFields(d){
     return `<label>Categoria<select name="d_category">${options(Object.fromEntries(D.CATEGORIES.map(x=>[x,x])),d.category)}</select></label><label>Data da comunicação<input type="date" name="d_communication" value="${e(d.communication)}"></label><label>Vencimento<input type="date" name="d_due" readonly value="${e(D.deadline(d.communication).adjusted)}"></label><div class="forms-grid"><label>Data da resposta<input type="date" name="d_response" value="${e(d.response)}"></label><label>Situação<select name="d_status">${options(D.DSTATUS,d.status)}</select></label></div><label>Observação / conclusão<textarea name="d_note">${e(d.note)}</textarea></label>`;
   }
-  function editInstitution(){const p=current(),o=p.ouvidoria;modal('Ouvidoria e Fala.BR',`<form class="form-stack"><label>Instituição da Ouvidoria<select name="status">${options({na:'Não informada',instituida:'Instituída',pendente:'Pendente de instituição'},o.status)}</select></label><label class="checkline"><input name="clause" type="checkbox" ${o.clause?'checked':''}>Confirmei a aplicabilidade da cláusula suspensiva no instrumento.</label><label>Data da assinatura<input name="signature" type="date" value="${e(o.signature)}"></label><label>Link do ato normativo (opcional)<input name="url" type="url" value="${e(o.url)}"></label><label>Adesão ao Fala.BR<select name="falaBR">${options({na:'Não informada',aderido:'Já aderido',previsto:'Prevista no Plano de Trabalho',nao_previsto:'Não prevista no Plano de Trabalho'},p.falaBR)}</select></label><label>Observação<textarea name="note">${e(o.note)}</textarea></label>${formEnd()}</form>`);bindForm(async fd=>{const name=actor(),data=Object.fromEntries(fd);D.dateISO(data.signature);D.safeLink(data.url);await change(p=>{D.setInstitution(p,{ouvidoria:{status:data.status,signature:data.signature,url:data.url,note:data.note,clause:fd.has('clause') && data.status==='pendente'},falaBR:data.falaBR},name);});saved('Informações institucionais salvas.');});}
+  function viewInstitution(){
+    const p=current();
+    const valueHtml=field=>{
+      const value=field.value===null || field.value===undefined || field.value===''?'Não informado':typeof field.value==='object'?JSON.stringify(field.value,null,2):String(field.value);
+      if(['url','link'].includes(field.type) && field.raw){
+        if(field.safeUrl)return `<a href="${e(field.safeUrl)}" target="_blank" rel="noopener noreferrer">${e(value)}</a>`;
+        return `${e(value)} <span class="source warn-text">Referência inválida ou protocolo não permitido; exibida como texto.</span>`;
+      }
+      return e(value);
+    };
+    modal('Informações institucionais',`<dl class="data-grid institution-info">${D.institutionalFields(p).map(field=>`<div class="wide" data-institution-field="${e(field.key)}"><dt>${e(field.label)}</dt><dd class="business-text">${valueHtml(field)}</dd></div>`).join('')}</dl>${D.institutionalConflicts(p).length?'<p class="info warning">O fato institucional e a avaliação possuem conflito ou informação pendente. Consulte a avaliação em Mérito.</p>':''}<div class="dialog-actions">${button('Fechar','close')}</div>`);
+  }
+  function editInstitution(){D.assert(!isReadOnly(),'Consulta pública: alteração indisponível.');const p=current(),o=p.ouvidoria;modal('Ouvidoria e Fala.BR',`<form class="form-stack"><label>Instituição da Ouvidoria<select name="status">${options({na:'Não informada',instituida:'Instituída',pendente:'Pendente de instituição'},o.status)}</select></label><label class="checkline"><input name="clause" type="checkbox" ${o.clause?'checked':''}>Confirmei a aplicabilidade da cláusula suspensiva no instrumento.</label><label>Data da assinatura<input name="signature" type="date" value="${e(o.signature)}"></label><label>Link do ato normativo (opcional)<input name="url" type="url" value="${e(o.url)}"></label><label>Adesão ao Fala.BR<select name="falaBR">${options({na:'Não informada',aderido:'Já aderido',previsto:'Prevista no Plano de Trabalho',nao_previsto:'Não prevista no Plano de Trabalho'},p.falaBR)}</select></label><label>Observação<textarea name="note">${e(o.note)}</textarea></label>${formEnd()}</form>`);bindForm(async fd=>{const name=actor(),data=Object.fromEntries(fd);D.dateISO(data.signature);D.safeLink(data.url);await change(p=>{D.setInstitution(p,{ouvidoria:{status:data.status,signature:data.signature,url:data.url,note:data.note,clause:fd.has('clause') && data.status==='pendente'},falaBR:data.falaBR},name);});saved('Informações institucionais salvas.');});}
   function businessDiligenceHtml(p,d){
     const ref=D.referenceRows(p).find(r=>r.ref===d.ref);
     const fields=[['Categoria',d.category],['Requisito vinculado',ref?ref.tab+' · '+ref.label:d.ref||'Sem vínculo'],['Providência solicitada',d.request],['Comunicação',D.fmtDate(d.communication)],['Ciência histórica',D.fmtDate(d.science)],['Vencimento',D.fmtDate(d.due)],['Resposta',D.fmtDate(d.response)],['Situação',D.diligenceLabel(d)],['Observação / conclusão',d.note],['Conferência histórica de expediente',d.calendarNote],['Prazo automático',d.automaticDeadline?'Sim':'Não'],['Conferência histórica registrada',d.confirmed?'Sim':'Não']];
@@ -1492,7 +1515,7 @@
   }
   function viewDiligence(id){const p=current(),d=p.diligences.find(d=>d.id===id);D.assert(d,'Diligência não encontrada.');modal('Detalhes da diligência',businessDiligenceHtml(p,d)+`<div class="dialog-actions">${button('Fechar','close')}</div>`);}
   function attachmentsHtml(r){return (r.attachments||[]).length?'<ul>'+r.attachments.map(a=>`<li><a href="${e(a.data)}" download="${e(a.name)}">${e(a.name)}</a> · ${e(a.note||'')}</li>`).join('')+'</ul>':'';}
-  function evidenceNotice(p,g,id){const r=D.reviewOf(p,g,id);if(r.status==='na' || D.reviewCurrent(p,g,id))return '';return `<p class="source warn-text">${e(r.reanalysis?.reason||'Avaliação sem referência atual verificável; requer confirmação humana.')}${r.reanalysis?.fields?' Campos: '+e(r.reanalysis.fields.join(', ')):''}</p>`;}
+  function evidenceNotice(p,g,id){const r=D.reviewOf(p,g,id),validity=D.reviewValidity(p,g,id);if(r.status==='na' || validity.current || validity.key==='legacy')return '';return `<p class="source warn-text">${e(validity.label)} · ${e(validity.reason)}${r.reanalysis?.fields?' Campos: '+e(r.reanalysis.fields.join(', ')):''}</p>`;}
   function descriptionHtml(p,g,id,label){const key=p.id+':'+D.canonicalRef(g,id),preview=label.length>180?label.slice(0,180)+'…':label;return `<details class="item-description" data-description="${e(key)}" ${expandedDescriptions.has(key)?'open':''}><summary><span class="pad-desc-text">${e(preview)}</span><span class="description-action">Ver conteúdo completo / recolher</span></summary><div class="business-text">${e(label)}</div></details>`;}
   function renderDiligences(p){
     const unlinked=D.pending(p);
@@ -1897,10 +1920,10 @@
       });
     }
   }
-  const PUBLIC_ACTIONS=new Set(['close','review','view-diligence','sync','export','csv','report','report-select-all','report-select-none','report-select-pad','save-report','save-xlsx','print','copy-text','copy-html','copy-program-code','copy-proposal','copy-cnpj','history-day','history-prev','history-next','history-today','toggle-uf-expand','toggle-uf','ver-apagadas']);
+  const PUBLIC_ACTIONS=new Set(['close','review','view-diligence','view-institution','sync','export','csv','report','report-select-all','report-select-none','report-select-pad','save-report','save-xlsx','print','copy-text','copy-html','copy-program-code','copy-proposal','copy-cnpj','history-day','history-prev','history-next','history-today','toggle-uf-expand','toggle-uf','ver-apagadas']);
   async function handleAction(target){const action=target.dataset.action;
     if(isReadOnly() && !PUBLIC_ACTIONS.has(action))throw new Error('Consulta pública: ação de alteração indisponível.');
-    if(action==='close')closeModal();else if(action==='import')importDialog();else if(action==='sync')syncDialog();else if(action==='sync-start')startSync();else if(action==='history-day'){selectedHistoryDay=target.dataset.day;renderRecords();document.querySelector(`[data-action="history-day"][data-day="${selectedHistoryDay}"]`)?.focus();}else if(action==='history-prev' || action==='history-next'){moveCalendar(action==='history-prev'?-1:1);document.querySelector(`[data-action="${action}"]`)?.focus();}else if(action==='history-today'){selectedHistoryDay=D.localToday();calendarStart=calendarWeek(selectedHistoryDay.slice(0,7)+'-01');renderRecords();document.querySelector('[data-action="history-today"]')?.focus();}else if(action==='export')backupDialog();else if(action==='sync-cancel')cancelSync('user');else if(action==='sync-retry')syncRestart();else if(action==='review')editReview(target.dataset.group,target.dataset.id);else if(action==='sei')editSei();else if(action==='institution')editInstitution();else if(action==='view-diligence')viewDiligence(target.dataset.id);else if(action==='diligence')editDiligence(target.dataset.id,target.dataset.ref);else if(action==='conclude')conclusion();else if(action==='confirm-conclusion')await confirmConclusionNow();else if(action==='report')report();else if(action==='copy-program-code'){await navigator.clipboard.writeText(target.dataset.code);toast(`Código ${target.dataset.code} copiado.`);}else if(action==='copy-proposal'){await navigator.clipboard.writeText(target.dataset.number);toast(`Proposta ${target.dataset.number} copiada.`);}else if(action==='copy-cnpj'){await navigator.clipboard.writeText(target.dataset.cnpj);toast(`CNPJ ${target.dataset.cnpj} copiado.`);}
+    if(action==='close')closeModal();else if(action==='import')importDialog();else if(action==='sync')syncDialog();else if(action==='sync-start')startSync();else if(action==='history-day'){selectedHistoryDay=target.dataset.day;renderRecords();document.querySelector(`[data-action="history-day"][data-day="${selectedHistoryDay}"]`)?.focus();}else if(action==='history-prev' || action==='history-next'){moveCalendar(action==='history-prev'?-1:1);document.querySelector(`[data-action="${action}"]`)?.focus();}else if(action==='history-today'){selectedHistoryDay=D.localToday();calendarStart=calendarWeek(selectedHistoryDay.slice(0,7)+'-01');renderRecords();document.querySelector('[data-action="history-today"]')?.focus();}else if(action==='export')backupDialog();else if(action==='sync-cancel')cancelSync('user');else if(action==='sync-retry')syncRestart();else if(action==='review')editReview(target.dataset.group,target.dataset.id);else if(action==='sei')editSei();else if(action==='institution')editInstitution();else if(action==='view-institution')viewInstitution();else if(action==='view-diligence')viewDiligence(target.dataset.id);else if(action==='diligence')editDiligence(target.dataset.id,target.dataset.ref);else if(action==='conclude')conclusion();else if(action==='confirm-conclusion')await confirmConclusionNow();else if(action==='report')report();else if(action==='copy-program-code'){await navigator.clipboard.writeText(target.dataset.code);toast(`Código ${target.dataset.code} copiado.`);}else if(action==='copy-proposal'){await navigator.clipboard.writeText(target.dataset.number);toast(`Proposta ${target.dataset.number} copiada.`);}else if(action==='copy-cnpj'){await navigator.clipboard.writeText(target.dataset.cnpj);toast(`CNPJ ${target.dataset.cnpj} copiado.`);}
     else if(action==='report-select-all'){
       const listEl=$('#report-topics-list');
       if(listEl){

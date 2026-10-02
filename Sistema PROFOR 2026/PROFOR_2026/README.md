@@ -183,6 +183,8 @@ No painel, a coluna **Celebração** mostra o progresso dos 19 itens juntos; o f
 
 ## Manutenção 02/10/2026 — prioridades selecionadas
 
+Fase histórica concluída no commit `fa05e8ab3bd1d220c28bb657dc0fea8e12bec773`, com deploy bem-sucedido na [execução 37009480252](https://github.com/Masselorc/PROFOR-2026/actions/runs/37009480252). As contagens e capturas desta seção pertencem àquela fase. A revisão posterior abaixo é um diff local separado, sem publicação.
+
 A referência da auditoria era `d510580d6499f8c21d7149d6b24c4e98d88137f3`; esta execução partiu de `main`, SHA `2894efb3028c623009fea090b7780de7c0edac3c`. Foram confirmados no HEAD o banco imutável, a paridade integral da projeção pública, a coleção compartilhada de celebração, o cálculo monetário e as travas existentes. Não se recriaram esses mecanismos.
 
 | Prioridade | Implementação e arquivos canônicos | Cobertura principal |
@@ -295,3 +297,112 @@ Lista exata de 38 arquivos versionados; o diário e as evidências de execução
 - `docs/styles.css`
 - `docs/sync-apply.js`
 - `tools/build_public_docs.cjs`
+
+## Revisão posterior — seis correções de 02/10/2026
+
+Esta seção documenta a entrega e validação locais iniciais, anteriores à autorização posterior de publicação. A etapa seguinte consta no fim deste arquivo.
+
+Esta fase parte de `main`, SHA `fa05e8ab3bd1d220c28bb657dc0fea8e12bec773`, exatamente a referência auditada, com árvore versionada limpa. Entrega como diff, sem commit novo. Nenhum trabalho local preexistente foi descartado. O deploy anterior da execução 37009480252 está concluído; este diff não foi publicado.
+
+| Correção | Resultado e funções | Evidência principal |
+|---|---|---|
+| 1 | `saveDiligence` compara a evidência técnica anterior/posterior; `conclusionValidity`/`conclusionCurrent` conferem ambos os resultados e legado. Conclusão anterior permanece com autoria, data, justificativa e evidência; `reanalysis` exige nova decisão. No-op, inclusive legado com prazo manual, e edição só de celebração preservam a conclusão. Modal revalida evidência, revisão/token e operationId antes de salvar. | `seis-correcoes.test.cjs`: movimentos nos dois sentidos, edição material, no-op, legado, histórico, save/reload, falha/conflito. `seis-correcoes-ui.cjs`: quatro casos pelo botão real de conclusão e formulário de diligência, erro/409, retry, recarga, tela e relatório. |
+| 2 | Seletores individual/em lote usam `!D.diligenceTerminal(d)`. Sem ativa, a nova providência tem novo ID e estado inicial aberto, sem resposta/conclusão/comunicação herdadas. Ativa continua atualização explícita; várias ativas exigem escolha. `bindForm` bloqueia dupla submissão enquanto grava e após sucesso, permitindo retry após falha. Edição de encerrada escolhida por ID continua separada. | `pad-batch.cjs`, `review-diligence.cjs`, `seis-correcoes-ui.cjs`: ambas terminais, ativa com encerradas, várias ativas, IDs/campos/histórico/contadores, erro/conflito e duplicação. O caso somente `saneada` já funcionava no HEAD; recebeu cobertura ampliada. |
+| 3 | `institutionalAssessment` e `reviewValidity` distinguem fato, decisão registrada e validade atual. `obs` não institui Ouvidoria; informação ausente ou pendência sem cláusula fica em conflito explícito. A nota pode ser salva e permanece preservada, sem contar como conformidade atual. Formulário mostra a condição; domínio, progresso, aptidão, público e relatório consomem a mesma regra. | Matriz de todos os estados existentes em `seis-correcoes.test.cjs`; formulários reais para fatos incompatíveis/compatíveis, cláusula e Fala.BR em `seis-correcoes-ui.cjs`; parser XLSX e HTML em `report-topics.test.cjs`. |
+| 4 | Click/keydown da linha ignoram `summary`, seus descendentes e o conteúdo de `details`. Clique/Enter/Espaço seguem a operação nativa sem render da linha; anexos continuam acessíveis por botão/linha/teclado, com foco equivalente após render. | `anexos-requisitos.cjs` (CAUC/19), `seis-correcoes-ui.cjs` (fixture longa e CAUC, duas abas, administrativo/público, 1366×768/390×844, teclado/toque e zoom real). `analise-merito.cjs`/`prioridades-ui.cjs` preservam o restante da interação. |
+| 5 | XLSX separa decisão registrada de validade, motivo, referência, autoria/data e fingerprint. `padReferenceContext` distingue itens vigentes preservados, tentativa incompleta, candidatos e rejeições; origem/data ausentes são explícitas. Contexto acompanha cada linha de `Base_Dados` e as abas pertinentes, inclusive tópico único e PAD sem referência anterior. | `report-topics.test.cjs`: arquivos XLSX reais lidos por openpyxl, exportação integral e oito tópicos isolados, atual/legado/desatualizado, parcial com/sem referência e recuperação. Tipos e quantidade fracionária permanecem conferidos. |
+| 6 | `institutionalFields` oferece a mesma ficha de consulta aos dois modos, incluindo campos institucionais conhecidos e extensões legadas desconhecidas. A ação `view-institution` é de consulta; `institution` continua edição administrativa. HTML/XLSX usam o mesmo modelo. Valores longos são completos e escapados; URL perigosa/ inválida permanece texto com aviso. | Comparação campo a campo administrativo/público, assinatura/ato/URL/nota/cláusula/Fala.BR/ausentes/legado, foco/teclado, scripts inertes e tentativas de alteração sem POST/save. Parser XLSX confirma os mesmos valores. |
+
+A matriz da Ouvidoria aplica-se a **estados já armazenados**, sem normalizar registros a um fato mais favorável: `ok` exige fato instituído; `no` corresponde ao fato pendente segundo a regra anterior; `obs` aceita fato instituído ou pendente com cláusula expressa. `na`, `diligencia` e `reanalise` mantêm suas regras de pendência/revisão. Fala.BR mantém o mapeamento e os resultados não bloqueantes anteriores. Não há nova obrigação administrativa nem cálculo de prazo de cláusula.
+
+### Metadados e compatibilidade desta fase
+
+- `conclusion.reanalysis = {at, reason, actor}` é opcional. Ausência da marca não prova validade: a leitura compara a evidência sem gravar, e legado sem referência verificável requer reanálise. A nova confirmação humana substitui a conclusão atual e conserva a anterior no histórico. O algoritmo `technicalEvidence`/fingerprint v1 auditado permanece exatamente igual.
+- `padImport.lastComplete` é opcional/null: cópia do metadado `complete` anterior, com `version/status/source/at/received/accepted/rejected/reasons`, criada quando uma tentativa parcial encontra referência comprovada. Repetir uma tentativa parcial conserva essa referência; extração íntegra posterior substitui o metadado. Não se associam origem/data retroativamente a um PAD legado.
+- `reviewValidity` produz rótulos de não analisada, atual verificável, legada sem referência, desatualizada/reanálise ou conflito institucional. A decisão histórica não é convertida para “Não” nem apagada.
+- URL institucional legada insegura pode ser lida/persistida como referência textual. `setInstitution` continua recusando novos valores fora de HTTP(S) ou com credenciais; UI/HTML só criam links pelo `safeUrl` validado do modelo. Nenhuma outra validação de URL foi relaxada.
+
+Colunas XLSX acrescentadas ao final das anteriores: `validade_avaliacao`, `motivo_validade`, `referencia_avaliacao`, `autor_avaliacao`, `data_avaliacao`, `evidencia_fingerprint`; `pad_estado_extracao`, `pad_referencia_itens`, `pad_origem_referencia`, `pad_data_referencia`, `pad_origem_tentativa`, `pad_data_tentativa`, `pad_linhas_recebidas`, `pad_itens_aceitos`, `pad_itens_rejeitados`, `pad_candidatos_nao_vigentes`, `pad_motivos_rejeicao`. `Valores` recebe o contexto PAD; a aba `PAD` também existe sem itens, com linha explicativa. `status_analise` e as demais colunas anteriores permanecem; quantidade/valores seguem numéricos, em reais. Referência de extração, última tentativa e emissão do relatório são datas distintas.
+
+O CSV existente é um resumo de propostas, não uma ficha institucional. Suas 15 colunas anteriores foram preservadas; recebeu somente a coluna final **Validade da conclusão técnica**, necessária à correção 1. Escapes de CSV e proteção contra fórmulas permanecem; importadores não foram alterados.
+
+### Isolamento, proteção e espelhos
+
+Antes de qualquer execução capaz de ler a base, preservaram-se os 211 arquivos operacionais (163.477.693 bytes), incluindo as revisões imutáveis e metadados existentes, mais o snapshot anterior, com manifesto SHA-256 e conferência da cópia. Backup e evidências ficam em `output/seis-correcoes-2026-10-02/`, na raiz Git, excluídos do versionamento. Não foi restaurado, substituído ou migrado nenhum dado operacional para testar.
+
+Escritas de teste usam stores em diretórios temporários ou estado em memória; HTTP de UI é interceptado, chamadas externas bloqueadas. A API real de persistência é exercitada somente numa cópia descartável em porta efêmera. O teste existente de paridade pode ler o snapshot e o banco operacional, sem gravar; os hashes são comparados antes/depois.
+
+O comando `node tools/build_public_docs.cjs --mirror-only`, executado na raiz Git, atualiza os seis espelhos (`domain.js`, `sync-apply.js`, `bandeiras-uf.js`, `styles.css`, `report.js`, `app.js`). A lista do gerador permanece igual. Só três desses módulos tiveram mudança de conteúdo. `PROFOR_2026.html` e o complemento próprio `docs/index.html` atualizam apenas as assinaturas de cache dos três scripts alterados. `docs/public-storage.js` continua rejeitando save. Não houve regeneração operacional de `docs/dados_publicos.js` nesta fase; projeção/build com fixtures foram testados em saídas temporárias. Build local não significa publicação.
+
+### Comandos e runner antigo
+
+Na raiz da aplicação, com `PROFOR_PLAYWRIGHT_PATH` apontando ao Playwright disponível e `PROFOR_PYTHON` ao Python existente com openpyxl:
+
+```powershell
+node tests/run-seis-correcoes.cjs
+```
+
+O coordenador executa `node --test --test-reporter=tap` para todos os dez arquivos `tests/*.test.cjs`; depois executa separadamente `prioridades-ui`, `seis-correcoes-ui`, `analise-merito`, `anexos-requisitos`, `review-diligence`, `textos-oficiais`, `pad-batch`, `pad-filters`, `painel-expand`, `public-pages`, `sync-changes-uf`, `cnpj-format` e `proposal-sei`. Não conta `ui-static.cjs` como caso funcional. Guarda comandos, horários UTC, ambiente, SHA/branch, hashes do código testado, saídas e comparação da base/backup/espelhos em `output/seis-correcoes-2026-10-02/final/`. Os harnesses novos e de relatório usam Chrome já instalado; nenhuma dependência foi instalada.
+
+`tests/ui-flow.js` foi diagnosticado com HTTP/armazenamento isolados, tanto no SHA auditado como no diff: **FAIL preexistente**, “Botão principal de sincronização ausente”, na etapa de sincronização inicial, com zero gravações em ambas as execuções. Não é contado como fluxo aprovado. As etapas seguintes do runner antigo não foram executadas nele; a cobertura equivalente atual é:
+
+| Caso antigo | Cobertura executada atual |
+|---|---|
+| Sincronização inicial, cache quente/payload, UFs e histórico Antes/Depois | `sync-changes-uf.cjs`, `textos-oficiais.cjs`, `sync.test.cjs`, `headless-sync.test.cjs` e `public-pages.cjs`. |
+| Análise PAD, diligência/vencimento, saneamento com confirmação e Tab | `review-diligence.cjs`, `pad-batch.cjs`, `pad-filters.cjs`, `prioridades-ui.cjs`. |
+| Avaliações de mérito e celebração, contagens e conclusão separada, cláusula/Fala.BR | `analise-merito.cjs`, `anexos-requisitos.cjs`, `prioridades-ui.cjs`, `seis-correcoes-ui.cjs` e testes centrais. As listas reais são 10 mérito + 19 celebração; o antigo requisito de 20 itens não foi restaurado. |
+| Relatório HTML/seleção/XLSX/download, backup/restauração/recuperação | `report-topics.test.cjs` e `prioridades-ui.cjs`. |
+| Busca/estado vazio/390px | `pad-filters.cjs`, `painel-expand.cjs`, `prioridades-ui.cjs`, `seis-correcoes-ui.cjs`. |
+| Contingência de CSV, prévia, confirmação e recarga | `seis-correcoes-ui.cjs` dispara o comando existente por acionador sintético, então usa formulário, arquivos, parser, prévia e confirmação reais. A entrada de contingência em HTTP não existe no HEAD e não foi criada; sua entrada `file://` não foi certificada. Parsers continuam com fixtures isoladas em `sync.test.cjs`. |
+
+O relatório final de validação abaixo é próprio desta fase e não reutiliza os totais históricos de 145 testes/13 cenários/nove harnesses.
+
+### Arquivos deste diff
+
+`APP/` significa `Sistema PROFOR 2026/PROFOR_2026/`. Lista exata de 21 arquivos versionáveis alterados/adicionados nesta fase:
+
+- `README.md` (raiz).
+- `APP/README.md`, `APP/PROFOR_2026.html`, `APP/domain.js`, `APP/app.js`, `APP/report.js`.
+- `APP/tests/domain.test.cjs`, `APP/tests/prioridades.test.cjs`, `APP/tests/report-topics.test.cjs`.
+- `APP/tests/anexos-requisitos.cjs`, `APP/tests/pad-batch.cjs`, `APP/tests/review-diligence.cjs`, `APP/tests/prioridades-ui.cjs`, `APP/tests/textos-oficiais.cjs`.
+- Novos `APP/tests/seis-correcoes.test.cjs`, `APP/tests/seis-correcoes-ui.cjs`, `APP/tests/run-seis-correcoes.cjs`.
+- `docs/domain.js`, `docs/app.js`, `docs/report.js`, `docs/index.html`.
+
+`DIARIO_DE_BORDO.md` também registra esta execução, permanecendo local pela regra existente do Git. Núcleo do store, servidor, locks/sincronizadores, IndexedDB de migração e regras monetárias não foram modificados. Não há novas conferências da prioridade 9; o requisito de ID 9 continua na lista.
+
+Backlog preexistente separado: diferenças entre gerações de importação, validação CRC e caminhos CSV/ZIP; filtros da Lixeira e outras melhorias herdadas. Não foram implementados. Reconciliação automática OneDrive, novos campos/requisitos e novo prazo de cláusula continuam fora do escopo. Nenhuma chamada Transferegov real, navegação SEI autenticada, download de processo, importação operacional, push, merge ou deploy foi executada.
+
+### Resultado final observado — 02/10/2026
+
+Rodada final em **02/10/2026, 11:23:49–11:26:28 (Brasília)**, depois da última alteração de código, teste e configuração pertinente. Ambiente Windows x64, Node `v24.19.0`, Chrome `154.0.8037.93`, Playwright `1.62.1`, Python `3.12.14` e openpyxl `3.1.5` já disponíveis. SHA inicial/final do Git permanece `fa05e8ab3bd1d220c28bb657dc0fea8e12bec773` / branch `main`, com diff local de 21 arquivos e **sem commit**. O coordenador confirmou que todos os hashes do código testado permaneceram iguais durante a rodada (`codeUnchanged: true`).
+
+| Resultado | Execução/evidência |
+|---|---|
+| **PASS 165/165; FAIL 0; SKIP 0; cancelados 0** | Dez suítes Node: domínio, novos 16 testes centrais, prioridades, sync/cache/extração, headless simulado, store, API isolada, snapshot, HTML/XLSX e processo SEI. `final/node-tests.log` e `final/resultado.json`. |
+| **PASS 13/13 harnesses** | Todos os comandos listados no coordenador acima, exit 0, logs separados em `final/`. Estes são arquivos executados, não uma soma artificial dos seus grupos internos. |
+| **PASS 23 cenários novos de UI** | Subconjunto dos 13 harnesses: `seis-correcoes-ui.cjs`, incluindo matriz conclusão/diligência, campos institucionais, leitura pública sem escrita, observação/cláusula/Fala.BR, CSV isolado e zoom. `resultado-ui.json`; não se somam de novo à contagem de harnesses. |
+| **PASS zoom real 200%** | Chrome com perfil temporário, `chrome://settings/appearance` → zoom `2`, por controle real; `Page.getLayoutMetrics.cssVisualViewport.zoom = 2`, `scale = 1`, sem emulação. Quatro combinações de aba/mode: proposta/formalização × administrativo/público. Viewport solicitada 1366×768, interior CSS 683×384, DPR medido 2.00000003. `zoom-real-ui.json`, configuração e capturas `zoom-real-*.png`, verificadas visualmente. |
+| **PASS desktop, estreita, teclado/toque** | Viewports 1366×768 e 390×844, CAUC/19 e fixture longa, clique/Enter/Espaço/Tab, expansão de anexos e foco. Capturas `fundamento-*.png`, `institucional-*.png` com ficha aberta. Reflow com DPR2 do harness anterior é rotulado separadamente; não comprova zoom. |
+| **PASS HTML e XLSX reais** | Oito testes de relatório, incluídos nos 165, com parser openpyxl, tipos numéricos e valores das células, tópicos isolados, limitações e dados institucionais. 23 XLSX sintéticos persistidos em `reports/patched/`, além de arquivos temporários/downloads do harness. |
+| **PASS preservação** | 211 arquivos/163.477.693 bytes operacionais e backup com SHA-256 iguais à linha de base; snapshot inalterado. Leitura da cadeia de backup confirmou revisão 211, 20 propostas/15 ativas e 28 registros de atualização, sem gravar. Seis espelhos iguais; constantes de requisitos/categorias/textos, cinco funções monetárias, fingerprint técnico v1 e oito arquivos do núcleo idênticos ao SHA inicial. |
+| **PASS sintaxe/diff** | `node --check` em 48 JS/CJS versionáveis, inclusive novos; `git diff --check` sem erros, depois da rodada. |
+| **FAIL preexistente, fora dos totais aprovados** | `ui-flow.js` diagnosticado nas duas árvores; mesma falha de botão ausente antes de qualquer POST. `ui-flow-diagnostico.json`. Mapeamento de cobertura acima; nenhuma mudança de produto para ressuscitar controles antigos. |
+| **NÃO EXECUTADO** | Transferegov/SEI reais, download de processos, importação operacional, sincronização OneDrive, regeneração operacional de snapshot e publicação desta fase. Entrada CSV `file://` e harnesses antigos `gauge-marker`/`parity-challenger` não integram a rodada: este último aponta ao servidor habitual sem isolamento; comportamentos atuais de painel/progresso/paridade têm cobertura nos harnesses isolados. |
+
+Caracterizações anteriores ao patch estão em `domain-before.log` (13 casos novos: 2 PASS/11 FAIL), `reports-characterization.txt` (quatro novos FAIL) e `caracterizacao-ui.json`. A falha inicial de `saneada` na caracterização era uma asserção do harness que consultava o histórico de sincronização, não o histórico da proposta; o fluxo do produto já estava correto. As quatro expectativas antigas de apagar conclusão foram substituídas por verificações mais fortes: cada campo anterior preservado, validade falsa e marca explícita de reanálise. Nenhum teste foi reduzido para tolerar o defeito.
+
+Duas rodadas interrompidas para corrigir **capturas** foram preservadas separadamente e não foram contadas como aprovação final. `entrega.json`, `backup-integridade.json`, manifesto e logs ficam no mesmo diretório de evidências fora do Git. Normalização legada é idempotente/não destrutiva; não se certificou conclusão retroativamente nem se regravou revisão histórica. Não há regressão nova conhecida nem critérios dos seis escopos pendentes. A operação real e a publicação continuam operações posteriores, mediante autorização específica.
+
+## Etapa posterior — avisos removidos e publicação autorizada, 02/10/2026
+
+O usuário pediu a remoção das mensagens de falta de referência e depois autorizou commit, push e publicação da página estática. `app.js/evidenceNotice` omite somente avisos com validade `legacy`, nas tabelas e no detalhe. A avaliação registrada, notas, autoria, histórico, cálculos de validade e contexto nos relatórios permanecem intactos. Alteração comprovada de evidência e conflito institucional continuam mostrando o motivo próprio. `docs/app.js` foi espelhado pelo gerador, com assinatura de cache atualizada nos dois HTMLs.
+
+Entre as etapas, a base passou de 211 para 235 revisões: os 211 arquivos anteriores permaneciam com os mesmos hashes, com 24 arquivos novos. A cadeia foi lida/validada sem gravação e outro backup completo foi preservado em `output/remocao-avisos-2026-10-02/backup/`. Os testes continuam usando stores temporários/HTTP simulado; a remoção visual não altera a base.
+
+Após a autorização de publicação, `node tools/build_public_docs.cjs` regenerou `docs/dados_publicos.js` da revisão 235, incluindo todos os dados de negócio e exclusões, em modo de consulta. O arquivo anterior permanece no backup. `docs/index.html` usa a assinatura `fcf6dd17` para o snapshot e `9e0b707b` para o app, evitando referência de cache antiga. Nenhum parser, CRC, store, sincronizador ou requisito da prioridade 9 foi alterado nesta etapa.
+
+Validação específica: dez verificações de UI aprovadas, quatro abas × administrativo/público, ausência dos avisos legados e preservação do aviso por mudança real; nenhuma gravação operacional. A rodada que ainda usava snapshot 211 falhou honestamente em `public-snapshot`/`public-pages` por diferença de revisão, e foi preservada em `rodada-snapshot211/`. Outra rodada foi interrompida para atualizar a assinatura do snapshot e não é contada como aprovação final.
+
+**Rodada final após a última alteração de código/build:** 02/10/2026, 13:03:26–13:06:02 (Brasília), mesmo ambiente de runtimes descrito acima. `node output/remocao-avisos-2026-10-02/rodada-final.cjs` reutiliza integralmente o coordenador existente, mudando apenas o destino dos logs e a linha de base desta etapa. PASS 165/165 Node, FAIL 0/SKIP 0/cancelados 0; PASS 13/13 harnesses, incluindo os 23 cenários de UI e zoom real 200%. Seis espelhos iguais e código inalterado durante a rodada. Os 235 arquivos/198.945.687 bytes operacionais e sua cópia mantiveram os hashes; o snapshot regenerado permaneceu estável durante os testes. Logs em `output/remocao-avisos-2026-10-02/final/resultado.json`; o resultado inicial das seis correções foi preservado separadamente.
+
+O commit inclui o diff validado das seis correções, a remoção visual e o snapshot atualizado. A sincronização autorizada nesta etapa é a do repositório Git. Transferegov/SEI reais e sincronização distribuída OneDrive continuam não executados. Verificação do site e da execução Pages é registrada no diretório de evidências desta etapa e no diário local.

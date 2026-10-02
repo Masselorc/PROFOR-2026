@@ -190,6 +190,18 @@ async function main() {
     await updatedExpand11.waitFor({ state: 'visible' });
     assert.ok((await updatedExpand11.getAttribute('class')).includes('tom-ok'), 'Setinha deve mudar para tom-ok ao selecionar Atende');
 
+    // Fundamentação longa do CAUC: o evento nativo não pertence à expansão de anexos.
+    const cauc=page.locator('tr[data-req-row][data-id="19"]'),foundation=cauc.locator('.req-fund details'),summary=foundation.locator('summary');
+    for(const key of ['click','Enter','Space']){
+      await summary.focus();if(key==='click')await summary.locator('span').first().click();else await page.keyboard.press(key);
+      assert.equal(await foundation.evaluate(el=>el.open),true,`CAUC abre por ${key}`);assert.equal(await cauc.getAttribute('aria-expanded'),'false');
+      assert.equal(await summary.evaluate(el=>document.activeElement===el),true);assert.equal(await foundation.locator('.business-text').innerText(),D.celebracaoItem('19').fundamentacao);
+      if(key==='click')await summary.click();else await page.keyboard.press(key);
+      assert.equal(await foundation.evaluate(el=>el.open),false);assert.equal(await cauc.getAttribute('aria-expanded'),'false');
+    }
+    await cauc.focus();await page.keyboard.press('Enter');assert.equal(await cauc.getAttribute('aria-expanded'),'true');assert.equal(await cauc.evaluate(el=>document.activeElement===el),true);
+    await page.keyboard.press('Space');assert.equal(await cauc.getAttribute('aria-expanded'),'false');
+
     // 18. Não deve haver erros no console da página
     assert.equal(pageErrors.length, 0, `Erros na página detectados: ${pageErrors.join(' | ')}`);
 
@@ -204,6 +216,7 @@ async function main() {
         'Upload de arquivo, geração de base64, gravação de metadados e pill de anexo',
         'Download nativo via data:URI com nome original',
         'Exclusão de anexo e atualização reativa de contadores',
+        'CAUC19: fundamentação por clique/Enter/Espaço sem acionar anexos; foco e expansão da linha preservados',
         'Zero pageerrors'
       ]
     }, null, 2));

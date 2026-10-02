@@ -84,7 +84,7 @@ async function scenario(browser,name,payload,run,prepare=()=>{}) {
  const complete=async()=>{await page.waitForFunction(()=>document.querySelector('#sync-percent')?.textContent==='100%');return page.locator('#sync-summary').innerText();};
  try{await run({page,start,complete,posts,memory:()=>memory,control});assert.deepEqual(blocked,[]);results.push({scenario:name,status:'passed',statePosts:posts.length});}finally{await context.close();}
 }
-async function main(){const browser=await chromium.launch({headless:true});try{
+async function main(){const browser=await chromium.launch({channel:'chrome',headless:true});try{
  await scenario(browser,'Textos oficiais íntegros, revisão seletiva e gravação única',{textos:{[A]:TEXTOS_A},faltando:[B]},async t=>{
   await t.start();const summary=await t.complete();assert.match(summary,/1 texto\(s\) conferido\(s\)/);assert.match(summary,/sem texto.*preservados/i);assert.equal(t.posts.length,1);
   const p=t.memory().proposals[0];assert.equal(p.textos.publicoAlvo,TEXTOS_A.publicoAlvo);assert.equal(p.reviews.merito.capacidade.status,'reanalise');assert.equal(p.reviews.celebracao['11'].status,'reanalise');assert.equal(p.reviews.merito.objeto.status,'ok');

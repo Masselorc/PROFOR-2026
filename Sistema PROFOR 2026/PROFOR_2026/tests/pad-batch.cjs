@@ -4,6 +4,8 @@ const {fulfillStatic}=require('./ui-static.cjs');
 const assert=require('node:assert/strict');
 const fs=require('node:fs');
 const path=require('node:path');
+const os=require('node:os');
+const {build}=require('../../../tools/build_public_docs.cjs');
 const {createHash}=require('node:crypto');
 const D=require('../domain.js');
 const {chromium}=require(process.env.PROFOR_PLAYWRIGHT_PATH || 'C:/Users/marcelo.cortez/AppData/Local/npm-cache/_npx/9833c18b2d85bc59/node_modules/playwright');
@@ -127,6 +129,24 @@ async function main(){
     await submit();
     assert.equal(posts,9);assert.equal(memory.proposals[0].diligences.length,5);
     assert.deepEqual(memory.proposals[0].diligences.find(d=>d.id===extra.id),extraBefore,'Não modifica a diligência que não foi escolhida');
+    const terminalCases=[];
+    for(const terminal of ['nao_saneada','saneada']){
+      memory=fixture();const p=memory.proposals[0];
+      const closed=clone(D.saveDiligence(p,{...p.diligences[0],status:terminal,response:'2026-09-03',note:'Conclusão encerrada',request:'Providência encerrada'},'Fixture'));
+      memory.revision++;token=hash(memory);await page.reload();await page.locator('#pad-batch-header').waitFor();
+      await page.locator('#pad-batch-3').check();await page.locator('#pad-batch-action').selectOption('diligencia');await page.locator('#pad-batch-apply').click();
+      await page.locator('#modal-content textarea[name="note"]').fill('Nova providência do lote');
+      const before=clone(memory),count=posts;failNext=true;await page.locator('#modal-content button[type="submit"]').click();await page.locator('#form-error').filter({hasText:'Conflito de revisão'}).waitFor();assert.deepEqual(memory,before);
+      await page.locator('#modal-content form').evaluate(form=>{form.requestSubmit();form.requestSubmit();});await page.waitForFunction(()=>!document.querySelector('#modal').open);
+      assert.equal(posts,count+2,'Conflito e repetição duplicada contam uma tentativa cada');assert.equal(memory.proposals[0].diligences.length,2);
+      assert.deepEqual(memory.proposals[0].diligences.find(d=>d.id===closed.id),closed,'Terminal permanece integralmente intacta');
+      const fresh=clone(memory.proposals[0].diligences.find(d=>d.id!==closed.id));assert.equal(fresh.status,'aberta');assert.equal(fresh.request,'Nova providência do lote');
+      for(const field of ['response','science','note','communication'])assert.equal(fresh[field],'');
+      const persisted=clone(memory);await page.reload();await page.locator('#pad-batch-header').waitFor();assert.deepEqual(memory,persisted);
+      assert.equal(memory.proposals[0].history.filter(h=>h.event==='Diligência cadastrada').length,2);
+      await page.locator('#pad-batch-3').check();await page.locator('#pad-batch-action').selectOption('diligencia');await page.locator('#pad-batch-apply').click();await page.locator('#modal-content textarea[name="note"]').fill('Atualizar somente ativa');await submit();
+      assert.equal(memory.proposals[0].diligences.length,2);assert.equal(memory.proposals[0].diligences.find(d=>d.id!==closed.id).id,fresh.id);assert.deepEqual(memory.proposals[0].diligences.find(d=>d.id===closed.id),closed);terminalCases.push(terminal);
+    }
     assert.deepEqual(errors,[]);assert.deepEqual(blocked,[]);
     // Conferência visual reutiliza a mesma fixture isolada, sem servidor real.
     const visual=page;
@@ -136,11 +156,15 @@ async function main(){
     await visual.setViewportSize({width:390,height:844});await visual.locator('.pad-batch-bar').scrollIntoViewIfNeeded();
     await visual.screenshot({path:path.join(output,'fixture-selecao-mobile.png')});
     // A publicação mantém a consulta dos detalhes e não oferece aprovação.
-    const publicPage=await browser.newPage();
-    await publicPage.goto('file:///'+path.join(root,'docs/index.html').replace(/\\/g,'/')+'#proposta/2243160/pad');
+    const publicDir=fs.mkdtempSync(path.join(os.tmpdir(),'profor-batch-public-'));
+    build({state:clone(memory),history:[],outputDir:publicDir,quiet:true});for(const name of ['index.html','public-storage.js'])fs.copyFileSync(path.join(root,'docs',name),path.join(publicDir,name));
+    const publicContext=await browser.newContext({serviceWorkers:'block'});await publicContext.route('**/*',route=>{const req=route.request(),url=new URL(req.url());if(url.origin!==ORIGIN || req.method()!=='GET' || url.pathname.startsWith('/api/'))return route.abort('blockedbyclient');return fulfillStatic(route,publicDir);});
+    const publicPage=await publicContext.newPage();
+    await publicPage.goto(ORIGIN+'/index.html#proposta/990777/pad');
     await publicPage.locator('.pad-table').waitFor();
     assert.equal(await publicPage.locator('[data-pad-batch],#pad-batch-header,.pad-batch-bar').count(),0);
-    console.log(JSON.stringify({status:'passed',realDatabaseWrites:0,atomicSuccesses:8,actions:['ok','obs','no','na','diligencia'],simulatedConflict:1,pageErrors:errors.length,readonlyPublic:true}));
+    await publicContext.close();fs.rmSync(publicDir,{recursive:true,force:true});
+    console.log(JSON.stringify({status:'passed',realDatabaseWrites:0,actions:['ok','obs','no','na','diligencia'],terminalCases,simulatedConflicts:3,pageErrors:errors.length,readonlyPublic:true}));
   }finally{await browser.close();}
 }
 main().catch(e=>{console.error(e);process.exitCode=1;});

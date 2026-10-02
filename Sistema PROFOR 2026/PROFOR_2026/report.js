@@ -76,7 +76,24 @@
   function fact(label,raw,wide=false){return `<div class="pr-fact${wide?' pr-wide':''}"><dt>${e(label)}</dt><dd>${e(value(raw))}</dd></div>`;}
   function row(label,raw){return `<tr><th scope="row">${e(label)}</th><td>${e(value(raw))}</td></tr>`;}
   function table(rows){return `<table class="pr-table"><tbody>${rows.map(([label,raw])=>row(label,raw)).join('')}</tbody></table>`;}
+  function institutionalTable(p){return `<table class="pr-table"><tbody>${[
+    ['Situação',p.ouvidoria.status==='instituida'?'Instituída':p.ouvidoria.status==='pendente'?'Pendente':'Não informada'],
+    ['Cláusula suspensiva aplicável confirmada',p.ouvidoria.clause?'Sim':'Não'],
+    ['Prazo de referência (nove meses)',p.ouvidoria.status==='instituida'?'Sim':'Não'],
+    ['Ato normativo registrado',p.ouvidoria.url?'Sim':'Não informado']
+  ].map(([label,raw])=>row(label,raw)).join('')}${D.institutionalFields(p).map(field=>{
+    let text=value(field.value),content=e(text);
+    if(field.type==='date' && field.raw)content=e(D.fmtDate(field.raw));
+    if(field.type==='url' && field.raw)content=field.safeUrl?`<a href="${e(field.safeUrl)}" target="_blank" rel="noopener noreferrer">${e(text)}</a>`:`${e(text)} <span class="pr-note">(URL inválida ou protocolo não permitido)</span>`;
+    return `<tr><th scope="row">${e(field.label)}</th><td>${content}</td></tr>`;
+  }).join('')}</tbody></table>`;}
   function detail(label,raw){const text=String(raw??'').trim();return text?`<div class="pr-detail"><span class="pr-label">${e(label)}</span><p>${e(text)}</p></div>`:'';}
+  function reviewReference(p,group,id){const validity=D.reviewValidity(p,group,id);return detail('Validade da avaliação',validity.label)+detail('Limitação da avaliação',validity.reason);}
+  const REVIEW_COLUMNS=['validade_avaliacao','motivo_validade','referencia_avaliacao','autor_avaliacao','data_avaliacao','evidencia_fingerprint'];
+  const PAD_COLUMNS=['pad_estado_extracao','pad_referencia_itens','pad_origem_referencia','pad_data_referencia','pad_origem_tentativa','pad_data_tentativa','pad_linhas_recebidas','pad_itens_aceitos','pad_itens_rejeitados','pad_candidatos_nao_vigentes','pad_motivos_rejeicao'];
+  function reviewColumns(p,group,id){const review=D.reviewOf(p,group,id),v=D.reviewValidity(p,group,id);return [v.label,v.reason||null,typeof v.reference==='string'?v.reference:review?.evidence?.ref||'Não verificável',review?.actor||'Não informado',review?.at||'Não informado',review?.evidence?.fingerprint||'Não verificável'];}
+  function conclusionColumns(p){const v=D.conclusionValidity(p),c=p.conclusion;return [v.label,v.reason||null,c?.reference||'Não informado',c?.actor||'Não informado',c?.at||'Não informado',c?.evidence?.fingerprint||'Não verificável'];}
+  function padColumns(p){const c=D.padReferenceContext(p),a=c.attempt||{},r=c.reference||{};return [c.label,c.reason||'Referência do PAD vigente',r.source||'Não informado',r.at||'Não verificável',a.source||'Não informado',a.at||'Não informado',a.received??null,a.accepted??null,a.rejected??null,c.candidateCount??0,(a.reasons||[]).map(x=>typeof x==='string'?x:`${x.line!==undefined?'Linha '+x.line+' · ':''}${x.itemId?'item '+x.itemId+': ':''}${x.reason||'Motivo não informado'}`).join('; ')||'Nenhum motivo registrado'];}
   function statusKey(review){return Object.hasOwn(D.STATUSES,review?.status)?review.status:'na';}
   function statusBadge(review,label){const key=statusKey(review);return `<span class="pr-status" data-status="${e(key)}">${e(label || D.STATUSES[key])}</span>`;}
   function documentNames(review){
@@ -141,7 +158,7 @@
     }
     const merit=D.rows(p,'merito').map(([id,label])=>{
       const review=D.reviewOf(p,'merito',id);
-      return card(label,review,detail('Observação',review?.note)+detail('Referência da revisão',D.reviewCurrent(p,'merito',id)?'Atual':'Sem referência atual verificável; decisão histórica preservada'),D.rotuloDoResultado(id,statusKey(review)));
+      return card(label,review,detail('Observação',review?.note)+reviewReference(p,'merito',id),D.rotuloDoResultado(id,statusKey(review)));
     }).join('');
     numbered('merito','Avaliação de mérito',merit);
     const pad=(i.pad||[]).map(item=>{
@@ -151,21 +168,16 @@
         <div><span class="pr-label">Unitário</span><strong>${e(D.fmtMoney(item.unitario))}</strong></div>
         <div><span class="pr-label">Total</span><strong>${e(D.fmtMoney(item.total))}</strong></div>
       </div>`;
-      return card(item.descricao,review,values+detail('Observação',review?.note)+detail('Referência da revisão',D.reviewCurrent(p,'pad',item.id)?'Atual':'Sem referência atual verificável; decisão histórica preservada'),'',true);
+      return card(item.descricao,review,values+detail('Observação',review?.note)+reviewReference(p,'pad',item.id),'',true);
     }).join('');
     numbered('pad','Plano de aplicação detalhado',detail('Estado da extração',D.padSituacao(p).titulo)+detail('Limitação da referência',D.padSituacao(p).detalhe)+(pad || '<p>Nenhum item do PAD disponível nesta extração.</p>'));
-    numbered('ouvidoria','Instituição da Ouvidoria',table([
-      ['Situação',p.ouvidoria.status==='instituida'?'Instituída':p.ouvidoria.status==='pendente'?'Pendente':'Não informada'],
-      ['Cláusula suspensiva aplicável confirmada',p.ouvidoria.clause?'Sim':'Não'],
-      ['Prazo de referência (nove meses)',p.ouvidoria.status==='instituida'?'Sim':'Não'],
-      ['Ato normativo registrado',p.ouvidoria.url?'Sim':'Não']
-    ]));
+    numbered('ouvidoria','Instituição da Ouvidoria',institutionalTable(p)+detail('Nota da avaliação da Ouvidoria',p.reviews.merito.ouvidoriaInstituida?.note)+reviewReference(p,'merito','ouvidoriaInstituida')+detail('Nota da avaliação do Fala.BR',p.reviews.merito.falaBRAdesao?.note)+reviewReference(p,'merito','falaBRAdesao'));
     for(const tab of D.ABAS_CELEBRACAO){
       if(tab.id!=='proposta')continue;
       const requirements=D.CELEBRACAO.filter(item=>item.aba===tab.id).map(item=>{
         const review=p.reviews.celebracao[item.id];
         const title=`${item.label}${item.sub?' — '+item.sub:''}`;
-        const details=detail('Fundamentação',item.fundamentacao)+detail('Observação',review?.note)+detail('Referência da revisão',D.reviewCurrent(p,'celebracao',item.id)?'Atual':'Sem referência atual verificável; decisão histórica preservada');
+        const details=detail('Fundamentação',item.fundamentacao)+detail('Observação',review?.note)+reviewReference(p,'celebracao',item.id);
         return card(title,review,details);
       }).join('');
       numbered('proposta',tab.titulo,requirements);
@@ -176,6 +188,7 @@
       ['PAD',`${progress.pad.done}/${progress.pad.total} revisados; ${progress.pad.total-progress.pad.done} pendentes; ${finance.errors.length} divergência(s) unitária(s)`],
       ['Integridade do PAD',D.padSituacao(p).titulo],
       ['Conclusão técnica',p.conclusion?.result||'Não registrada ou legada sem referência verificável'],
+      ['Validade da conclusão',D.conclusionValidity(p).label],['Limitação da conclusão',D.conclusionValidity(p).reason],
       ['Autor/data da conclusão',p.conclusion?`${p.conclusion.actor} · ${D.fmtDate(p.conclusion.at)}`:''],
       ['Evidências da conclusão',p.conclusion?.reference],['Justificativa da conclusão',p.conclusion?.note],
       ['Aptidão para celebração',D.aptForCelebration(p)?(p.ouvidoria.clause?'Com cláusula suspensiva expressa':'Apta pelos controles atuais'):'Não apta pelos controles atuais'],
@@ -481,11 +494,13 @@
         'status_analise',
         'observacao_analista',
         'fundamentacao',
-        'documentos_anexos'
+        'documentos_anexos',
+        ...REVIEW_COLUMNS,...PAD_COLUMNS
       ]
     ];
 
-    function addBaseRow(topicId, topicName, item, desc = null, qtd = null, vUnit = null, vTot = null, status = null, note = null, fund = null, docs = null) {
+    const padContext=padColumns(p);
+    function addBaseRow(topicId, topicName, item, desc = null, qtd = null, vUnit = null, vTot = null, status = null, note = null, fund = null, docs = null, validity = null) {
       baseRows.push([
         propNum,
         i.uf,
@@ -500,7 +515,8 @@
         status,
         note,
         fund,
-        docs
+        docs,
+        ...(validity||REVIEW_COLUMNS.map(()=>null)),...padContext
       ]);
     }
 
@@ -550,7 +566,7 @@
         const review = D.reviewOf(p, 'merito', id);
         const docs = documentNames(review).join('; ');
         const status = D.rotuloDoResultado(id, statusKey(review)) || D.STATUSES[statusKey(review)];
-        addBaseRow('merito', topName, label, null, null, null, null, status, review?.note || null, null, docs || null);
+        addBaseRow('merito', topName, label, null, null, null, null, status, review?.note || null, null, docs || null,reviewColumns(p,'merito',id));
       });
     }
 
@@ -566,7 +582,7 @@
           const qtd = parseNum(item.quantidade);
           const vUnit = (item.unitario === null ? null : item.unitario / 100);
           const vTot = (item.total === null ? null : item.total / 100);
-          addBaseRow('pad', topName, item.descricao, null, qtd, vUnit, vTot, status, review?.note || null, null, docs || null);
+          addBaseRow('pad', topName, item.descricao, null, qtd, vUnit, vTot, status, review?.note || null, null, docs || null,reviewColumns(p,'pad',item.id));
         });
       } else {
         addBaseRow('pad', topName, 'PAD', 'Nenhum item do PAD disponível nesta extração.');
@@ -576,13 +592,17 @@
     // 6. Instituição da Ouvidoria
     if (isTopicIncluded('ouvidoria')) {
       const topName = 'Instituição da Ouvidoria';
-      const ouvStatus = p.ouvidoria.status === 'instituida' ? 'Instituída' : p.ouvidoria.status === 'pendente' ? 'Pendente' : 'Não informada';
-      addBaseRow('ouvidoria', topName, 'Situação', ouvStatus);
-      addBaseRow('ouvidoria', topName, 'Cláusula suspensiva aplicável confirmada', p.ouvidoria.clause ? 'Sim' : 'Não');
-      addBaseRow('ouvidoria', topName, 'Prazo de referência (nove meses)', p.ouvidoria.status === 'instituida' ? 'Sim' : 'Não');
-      addBaseRow('ouvidoria', topName, 'Ato normativo registrado', p.ouvidoria.url ? 'Sim' : 'Não');
-      if (p.ouvidoria.note) {
-        addBaseRow('ouvidoria', topName, 'Observação', p.ouvidoria.note);
+      // Linhas antigas permanecem; a ficha compartilhada acrescenta os demais
+      // campos, inclusive extensões legadas desconhecidas, sem whitelist.
+      const original=[['Situação',p.ouvidoria.status==='instituida'?'Instituída':p.ouvidoria.status==='pendente'?'Pendente':'Não informada'],['Cláusula suspensiva aplicável confirmada',p.ouvidoria.clause?'Sim':'Não'],['Prazo de referência (nove meses)',p.ouvidoria.status==='instituida'?'Sim':'Não'],['Ato normativo registrado',p.ouvidoria.url?'Sim':'Não informado']];
+      if(p.ouvidoria.note)original.push(['Observação',p.ouvidoria.note]);
+      for(const [label,raw] of original)addBaseRow('ouvidoria',topName,label,raw);
+      const fields=D.institutionalFields(p);
+      for(const field of fields)if(!original.some(([label])=>label===field.label))addBaseRow('ouvidoria',topName,field.label,field.value);
+      for(const field of fields.filter(f=>f.type==='url'&&f.raw&&!f.safeUrl))addBaseRow('ouvidoria',topName,'Validade — '+field.label,'URL inválida ou protocolo não permitido; referência registrada preservada como texto.');
+      for(const [id,label] of [['ouvidoriaInstituida','Avaliação da Ouvidoria'],['falaBRAdesao','Avaliação do Fala.BR']]) {
+        const review=D.reviewOf(p,'merito',id);
+        addBaseRow('ouvidoria',topName,label,null,null,null,null,D.rotuloDoResultado(id,statusKey(review))||D.STATUSES[statusKey(review)],review?.note||null,null,documentNames(review).join('; ')||null,reviewColumns(p,'merito',id));
       }
     }
 
@@ -595,7 +615,7 @@
           const title = `${item.label}${item.sub ? ' — ' + item.sub : ''}`;
           const docs = documentNames(review).join('; ');
           const status = D.STATUSES[statusKey(review)] || 'Não analisado';
-          addBaseRow('proposta', tab.titulo, title, null, null, null, null, status, review?.note || null, item.fundamentacao || null, docs || null);
+          addBaseRow('proposta', tab.titulo, title, null, null, null, null, status, review?.note || null, item.fundamentacao || null, docs || null,reviewColumns(p,'celebracao',item.id));
         });
       }
     }
@@ -607,7 +627,7 @@
       const v=D.reviewProgress(p);
       addBaseRow('situacao',topName,'Revisão humana',`${v.done}/${v.total} revisados (${v.percent}%)`);
       addBaseRow('situacao',topName,'PAD revisado',`${v.pad.done}/${v.pad.total} · ${D.finance(p).errors.length} divergência(s) unitária(s)`);
-      addBaseRow('situacao',topName,'Conclusão técnica',p.conclusion?.result||'Não registrada ou legada');
+      addBaseRow('situacao',topName,'Conclusão técnica',p.conclusion?.result||'Não registrada ou legada',null,null,null,null,null,null,null,conclusionColumns(p));
       addBaseRow('situacao',topName,'Evidências da conclusão',p.conclusion?.reference);
       addBaseRow('situacao',topName,'Justificativa da conclusão',p.conclusion?.note);
       addBaseRow('situacao',topName,'Aptidão para celebração',D.aptForCelebration(p)?'Apta pelos controles atuais':'Não apta');
@@ -619,16 +639,16 @@
 
     // Se nenhum tópico foi selecionado, insere aviso
     if (baseRows.length === 1) {
-      baseRows.push([propNum, i.uf, seiNum, 'nenhum', 'Nenhum tópico selecionado', 'Aviso', 'Marque ao menos um tópico para exportar os dados correspondentes.', null, null, null, null, null, null, null]);
+      addBaseRow('nenhum','Nenhum tópico selecionado','Aviso','Marque ao menos um tópico para exportar os dados correspondentes.');
     }
 
     sheets.push({ name: 'Base_Dados', data: baseRows });
 
     // Abas adicionais especializadas conforme os tópicos selecionados:
     // Aba PAD
-    if (isTopicIncluded('pad') && padItems.length > 0) {
+    if (isTopicIncluded('pad')) {
       const padRows = [
-        ['item_num', 'descricao', 'quantidade', 'valor_unitario', 'valor_total', 'status_analise', 'observacao', 'documentos']
+        ['item_num', 'descricao', 'quantidade', 'valor_unitario', 'valor_total', 'status_analise', 'observacao', 'documentos',...REVIEW_COLUMNS,...PAD_COLUMNS]
       ];
       padItems.forEach((item, idx) => {
         const review = p.reviews.pad?.[item.id];
@@ -645,36 +665,38 @@
           vTot,
           status,
           review?.note || null,
-          docs || null
+          docs || null,
+          ...reviewColumns(p,'pad',item.id),...padContext
         ]);
       });
+      if(!padItems.length)padRows.push([null,'Nenhum item do PAD disponível nesta extração.',null,null,null,null,null,null,...REVIEW_COLUMNS.map(()=>null),...padContext]);
       sheets.push({ name: 'PAD', data: padRows });
     }
 
     // Aba Valores
     if (isTopicIncluded('valores')) {
       const valRows = [
-        ['tipo_valor', 'valor_reais', 'percentual_global']
+        ['tipo_valor', 'valor_reais', 'percentual_global',...PAD_COLUMNS]
       ];
       const rep = (i.repasse === null ? null : i.repasse / 100);
       const ctp = (i.contrapartida === null ? null : i.contrapartida / 100);
       const glb = (i.global === null ? null : i.global / 100);
-      valRows.push(['Repasse', rep, glb && rep !== null ? rep / glb : null]);
-      valRows.push(['Contrapartida', ctp, glb && ctp !== null ? ctp / glb : null]);
-      valRows.push(['Valor global', glb, glb ? 1.0 : null]);
+      valRows.push(['Repasse', rep, glb && rep !== null ? rep / glb : null,...padContext]);
+      valRows.push(['Contrapartida', ctp, glb && ctp !== null ? ctp / glb : null,...padContext]);
+      valRows.push(['Valor global', glb, glb ? 1.0 : null,...padContext]);
       sheets.push({ name: 'Valores', data: valRows });
     }
 
     // Aba Mérito
     if (isTopicIncluded('merito')) {
       const meritoRows = [
-        ['criterio_id', 'criterio', 'status_analise', 'observacao', 'documentos']
+        ['criterio_id', 'criterio', 'status_analise', 'observacao', 'documentos',...REVIEW_COLUMNS,...PAD_COLUMNS]
       ];
       D.rows(p, 'merito').forEach(([id, label]) => {
         const review = D.reviewOf(p, 'merito', id);
         const docs = documentNames(review).join('; ');
         const status = D.rotuloDoResultado(id, statusKey(review)) || D.STATUSES[statusKey(review)];
-        meritoRows.push([id, label, status, review?.note || null, docs || null]);
+        meritoRows.push([id, label, status, review?.note || null, docs || null,...reviewColumns(p,'merito',id),...padContext]);
       });
       sheets.push({ name: 'Merito', data: meritoRows });
     }
@@ -682,14 +704,14 @@
     // Aba Requisitos da Proposta
     if (isTopicIncluded('proposta')) {
       const reqRows = [
-        ['item_num', 'requisito', 'fundamentacao', 'status_analise', 'observacao', 'documentos']
+        ['item_num', 'requisito', 'fundamentacao', 'status_analise', 'observacao', 'documentos',...REVIEW_COLUMNS,...PAD_COLUMNS]
       ];
       D.CELEBRACAO.filter(item => item.aba === 'proposta').forEach((item, idx) => {
         const review = p.reviews.celebracao[item.id];
         const title = `${item.label}${item.sub ? ' — ' + item.sub : ''}`;
         const docs = documentNames(review).join('; ');
         const status = D.STATUSES[statusKey(review)] || 'Não analisado';
-        reqRows.push([item.id || (idx + 1), title, item.fundamentacao || null, status, review?.note || null, docs || null]);
+        reqRows.push([item.id || (idx + 1), title, item.fundamentacao || null, status, review?.note || null, docs || null,...reviewColumns(p,'celebracao',item.id),...padContext]);
       });
       sheets.push({ name: 'Requisitos', data: reqRows });
     }

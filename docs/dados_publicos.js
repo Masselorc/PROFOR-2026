@@ -1,9 +1,9 @@
-/** Snapshot integral de consulta PROFOR/ONASP 2026. Gerado em 2026-10-02T11:58:09.191Z.
+/** Snapshot integral de consulta PROFOR/ONASP 2026. Gerado em 2026-10-02T16:01:30.927Z.
  * Não editar manualmente. Use tools/build_public_docs.cjs. */
-window.PROFOR_PUBLIC_UPDATED_AT = "2026-10-02T11:58:09.191Z";
+window.PROFOR_PUBLIC_UPDATED_AT = "2026-10-02T16:01:30.927Z";
 window.PROFOR_PUBLIC_DATA = {
   "schemaVersion": 1,
-  "revision": 211,
+  "revision": 235,
   "proposals": [
     {
       "id": "2243618",
@@ -12020,18 +12020,18 @@ window.PROFOR_PUBLIC_DATA = {
         },
         "merito": {
           "destinacao": {
-            "status": "reanalise",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": "2026-09-28T15:18:59.575Z",
+            "at": "2026-10-02T15:50:53.031Z",
             "attachments": [],
             "evidence": {
               "version": 1,
               "ref": "merito:destinacao",
-              "fingerprint": null,
-              "legacy": true
-            }
+              "fingerprint": "fnv64-v1:fc11a9b639ef672c"
+            },
+            "actor": "Usuário local"
           },
           "capital": {
             "status": "na",
@@ -12041,18 +12041,18 @@ window.PROFOR_PUBLIC_DATA = {
             "at": null
           },
           "objetivos": {
-            "status": "reanalise",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": "2026-09-28T15:19:01.279Z",
+            "at": "2026-10-02T15:50:59.648Z",
             "attachments": [],
             "evidence": {
               "version": 1,
               "ref": "merito:objetivos",
-              "fingerprint": null,
-              "legacy": true
-            }
+              "fingerprint": "fnv64-v1:ba132da014ac7650"
+            },
+            "actor": "Usuário local"
           },
           "metas": {
             "status": "na",
@@ -12062,18 +12062,18 @@ window.PROFOR_PUBLIC_DATA = {
             "at": null
           },
           "capacidade": {
-            "status": "reanalise",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": "2026-09-28T15:19:05.135Z",
+            "at": "2026-10-02T15:52:05.657Z",
             "attachments": [],
             "evidence": {
               "version": 1,
               "ref": "merito:capacidade",
-              "fingerprint": null,
-              "legacy": true
-            }
+              "fingerprint": "fnv64-v1:e948683787eebb55"
+            },
+            "actor": "Usuário local"
           },
           "conteudo": {
             "status": "na",
@@ -12083,88 +12083,88 @@ window.PROFOR_PUBLIC_DATA = {
             "at": null
           },
           "objeto": {
-            "status": "reanalise",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": "2026-09-28T14:26:16.377Z",
+            "at": "2026-10-02T15:50:10.988Z",
             "attachments": [],
             "evidence": {
               "version": 1,
               "ref": "merito:objeto",
-              "fingerprint": null,
-              "legacy": true
-            }
+              "fingerprint": "fnv64-v1:63d43555f1160015"
+            },
+            "actor": "Usuário local"
           },
           "justificativa": {
-            "status": "reanalise",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": "2026-09-28T15:18:51.351Z",
+            "at": "2026-10-02T15:50:17.663Z",
             "attachments": [],
             "evidence": {
               "version": 1,
               "ref": "merito:justificativa",
-              "fingerprint": null,
-              "legacy": true
-            }
+              "fingerprint": "fnv64-v1:172bd931056da2e0"
+            },
+            "actor": "Usuário local"
           },
           "publicoAlvo": {
-            "status": "reanalise",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": "2026-09-28T15:18:53.415Z",
+            "at": "2026-10-02T15:50:23.676Z",
             "attachments": [],
             "evidence": {
               "version": 1,
               "ref": "merito:publicoAlvo",
-              "fingerprint": null,
-              "legacy": true
-            }
+              "fingerprint": "fnv64-v1:b23f1bb3a12db13e"
+            },
+            "actor": "Usuário local"
           },
           "problema": {
-            "status": "reanalise",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": "2026-09-28T15:18:55.135Z",
+            "at": "2026-10-02T15:50:34.211Z",
             "attachments": [],
             "evidence": {
               "version": 1,
               "ref": "merito:problema",
-              "fingerprint": null,
-              "legacy": true
-            }
+              "fingerprint": "fnv64-v1:c53f46599b393ee6"
+            },
+            "actor": "Usuário local"
           },
           "resultados": {
-            "status": "reanalise",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": "2026-09-28T15:18:57.527Z",
+            "at": "2026-10-02T15:50:39.663Z",
             "attachments": [],
             "evidence": {
               "version": 1,
               "ref": "merito:resultados",
-              "fingerprint": null,
-              "legacy": true
-            }
+              "fingerprint": "fnv64-v1:b19c7750c4cb59f7"
+            },
+            "actor": "Usuário local"
           },
           "ouvidoriaInstituida": {
-            "status": "reanalise",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": "2026-09-28T17:32:30.105Z",
+            "at": "2026-10-02T15:52:12.537Z",
             "attachments": [],
             "evidence": {
               "version": 1,
               "ref": "merito:ouvidoriaInstituida",
-              "fingerprint": null,
-              "legacy": true
-            }
+              "fingerprint": "fnv64-v1:1335379bb2cd68e8"
+            },
+            "actor": "Usuário local"
           },
           "ouvidoriaAto": {
             "status": "na",
@@ -12188,18 +12188,18 @@ window.PROFOR_PUBLIC_DATA = {
             "at": null
           },
           "falaBRAdesao": {
-            "status": "reanalise",
+            "status": "no",
             "note": "",
             "document": "",
             "url": "",
-            "at": "2026-09-28T17:34:27.895Z",
+            "at": "2026-10-02T15:52:24.366Z",
             "attachments": [],
             "evidence": {
               "version": 1,
               "ref": "merito:falaBRAdesao",
-              "fingerprint": null,
-              "legacy": true
-            }
+              "fingerprint": "fnv64-v1:20325664b9ae9846"
+            },
+            "actor": "Usuário local"
           }
         },
         "celebracao": {
@@ -12208,14 +12208,14 @@ window.PROFOR_PUBLIC_DATA = {
             "note": "",
             "document": "",
             "url": "",
-            "at": "2026-09-28T17:07:38.552Z",
+            "at": "2026-10-02T15:46:30.125Z",
             "attachments": [],
             "evidence": {
               "version": 1,
               "ref": "celebracao:1",
-              "fingerprint": null,
-              "legacy": true
-            }
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            },
+            "actor": "Usuário local"
           },
           "2": {
             "status": "na",
@@ -12300,42 +12300,42 @@ window.PROFOR_PUBLIC_DATA = {
             "note": "",
             "document": "",
             "url": "",
-            "at": "2026-09-28T17:14:27.160Z",
+            "at": "2026-10-02T15:46:41.387Z",
             "attachments": [],
             "evidence": {
               "version": 1,
               "ref": "celebracao:8",
-              "fingerprint": null,
-              "legacy": true
-            }
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            },
+            "actor": "Usuário local"
           },
           "9": {
             "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": "2026-09-28T17:15:39.336Z",
+            "at": "2026-10-02T15:46:09.537Z",
             "attachments": [],
             "evidence": {
               "version": 1,
               "ref": "celebracao:9",
-              "fingerprint": null,
-              "legacy": true
-            }
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            },
+            "actor": "Usuário local"
           },
           "10": {
             "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": "2026-09-28T17:16:05.278Z",
+            "at": "2026-10-02T15:46:46.322Z",
             "attachments": [],
             "evidence": {
               "version": 1,
               "ref": "celebracao:10",
-              "fingerprint": null,
-              "legacy": true
-            }
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            },
+            "actor": "Usuário local"
           },
           "11": {
             "status": "ok",
@@ -12356,126 +12356,126 @@ window.PROFOR_PUBLIC_DATA = {
             "note": "",
             "document": "",
             "url": "",
-            "at": "2026-09-28T17:17:35.937Z",
+            "at": "2026-10-02T15:46:51.869Z",
             "attachments": [],
             "evidence": {
               "version": 1,
               "ref": "celebracao:12",
-              "fingerprint": null,
-              "legacy": true
-            }
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            },
+            "actor": "Usuário local"
           },
           "13": {
             "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": "2026-09-28T17:18:43.519Z",
+            "at": "2026-10-02T15:46:57.768Z",
             "attachments": [],
             "evidence": {
               "version": 1,
               "ref": "celebracao:13",
-              "fingerprint": null,
-              "legacy": true
-            }
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            },
+            "actor": "Usuário local"
           },
           "14": {
             "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": "2026-09-28T17:18:45.023Z",
+            "at": "2026-10-02T15:47:09.782Z",
             "attachments": [],
             "evidence": {
               "version": 1,
               "ref": "celebracao:14",
-              "fingerprint": null,
-              "legacy": true
-            }
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            },
+            "actor": "Usuário local"
           },
           "15": {
             "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": "2026-09-28T17:26:46.576Z",
+            "at": "2026-10-02T15:47:14.637Z",
             "attachments": [],
             "evidence": {
               "version": 1,
               "ref": "celebracao:15",
-              "fingerprint": null,
-              "legacy": true
-            }
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            },
+            "actor": "Usuário local"
           },
           "16": {
             "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": "2026-09-28T17:27:21.680Z",
+            "at": "2026-10-02T15:47:21.978Z",
             "attachments": [],
             "evidence": {
               "version": 1,
               "ref": "celebracao:16",
-              "fingerprint": null,
-              "legacy": true
-            }
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            },
+            "actor": "Usuário local"
           },
           "17": {
             "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": "2026-09-28T17:27:23.550Z",
+            "at": "2026-10-02T15:47:26.968Z",
             "attachments": [],
             "evidence": {
               "version": 1,
               "ref": "celebracao:17",
-              "fingerprint": null,
-              "legacy": true
-            }
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            },
+            "actor": "Usuário local"
           },
           "18": {
             "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": "2026-09-28T17:29:26.576Z",
+            "at": "2026-10-02T15:47:33.961Z",
             "attachments": [],
             "evidence": {
               "version": 1,
               "ref": "celebracao:18",
-              "fingerprint": null,
-              "legacy": true
-            }
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            },
+            "actor": "Usuário local"
           },
           "19": {
             "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": "2026-09-28T17:30:25.641Z",
+            "at": "2026-10-02T15:47:39.499Z",
             "attachments": [],
             "evidence": {
               "version": 1,
               "ref": "celebracao:19",
-              "fingerprint": null,
-              "legacy": true
-            }
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            },
+            "actor": "Usuário local"
           },
           "1.1": {
             "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": "2026-09-28T17:13:19.727Z",
+            "at": "2026-10-02T15:46:35.288Z",
             "attachments": [],
             "evidence": {
               "version": 1,
               "ref": "celebracao:1.1",
-              "fingerprint": null,
-              "legacy": true
-            }
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            },
+            "actor": "Usuário local"
           }
         },
         "pad": {
@@ -13037,13 +13037,13 @@ window.PROFOR_PUBLIC_DATA = {
         }
       ],
       "ouvidoria": {
-        "status": "na",
+        "status": "instituida",
         "signature": "",
         "url": "",
         "note": "",
         "clause": false
       },
-      "falaBR": "na",
+      "falaBR": "nao_previsto",
       "conclusion": null,
       "history": [
         {
@@ -16863,6 +16863,895 @@ window.PROFOR_PUBLIC_DATA = {
           },
           "after": {
             "at": "2026-10-02T10:27:01.365Z"
+          }
+        },
+        {
+          "at": "2026-10-02T15:46:09.538Z",
+          "event": "Avaliação: celebracao / 9",
+          "actor": "Usuário local",
+          "before": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-28T17:15:39.336Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:9",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-02T15:46:09.537Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:9",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            },
+            "actor": "Usuário local"
+          }
+        },
+        {
+          "at": "2026-10-02T15:46:30.125Z",
+          "event": "Avaliação: celebracao / 1",
+          "actor": "Usuário local",
+          "before": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-28T17:07:38.552Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:1",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-02T15:46:30.125Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:1",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            },
+            "actor": "Usuário local"
+          }
+        },
+        {
+          "at": "2026-10-02T15:46:35.288Z",
+          "event": "Avaliação: celebracao / 1.1",
+          "actor": "Usuário local",
+          "before": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-28T17:13:19.727Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:1.1",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-02T15:46:35.288Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:1.1",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            },
+            "actor": "Usuário local"
+          }
+        },
+        {
+          "at": "2026-10-02T15:46:41.387Z",
+          "event": "Avaliação: celebracao / 8",
+          "actor": "Usuário local",
+          "before": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-28T17:14:27.160Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:8",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-02T15:46:41.387Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:8",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            },
+            "actor": "Usuário local"
+          }
+        },
+        {
+          "at": "2026-10-02T15:46:46.322Z",
+          "event": "Avaliação: celebracao / 10",
+          "actor": "Usuário local",
+          "before": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-28T17:16:05.278Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:10",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-02T15:46:46.322Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:10",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            },
+            "actor": "Usuário local"
+          }
+        },
+        {
+          "at": "2026-10-02T15:46:51.869Z",
+          "event": "Avaliação: celebracao / 12",
+          "actor": "Usuário local",
+          "before": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-28T17:17:35.937Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:12",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-02T15:46:51.869Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:12",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            },
+            "actor": "Usuário local"
+          }
+        },
+        {
+          "at": "2026-10-02T15:46:57.768Z",
+          "event": "Avaliação: celebracao / 13",
+          "actor": "Usuário local",
+          "before": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-28T17:18:43.519Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:13",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-02T15:46:57.768Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:13",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            },
+            "actor": "Usuário local"
+          }
+        },
+        {
+          "at": "2026-10-02T15:47:09.782Z",
+          "event": "Avaliação: celebracao / 14",
+          "actor": "Usuário local",
+          "before": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-28T17:18:45.023Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:14",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-02T15:47:09.782Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:14",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            },
+            "actor": "Usuário local"
+          }
+        },
+        {
+          "at": "2026-10-02T15:47:14.637Z",
+          "event": "Avaliação: celebracao / 15",
+          "actor": "Usuário local",
+          "before": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-28T17:26:46.576Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:15",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-02T15:47:14.637Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:15",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            },
+            "actor": "Usuário local"
+          }
+        },
+        {
+          "at": "2026-10-02T15:47:21.978Z",
+          "event": "Avaliação: celebracao / 16",
+          "actor": "Usuário local",
+          "before": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-28T17:27:21.680Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:16",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-02T15:47:21.978Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:16",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            },
+            "actor": "Usuário local"
+          }
+        },
+        {
+          "at": "2026-10-02T15:47:26.968Z",
+          "event": "Avaliação: celebracao / 17",
+          "actor": "Usuário local",
+          "before": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-28T17:27:23.550Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:17",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-02T15:47:26.968Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:17",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            },
+            "actor": "Usuário local"
+          }
+        },
+        {
+          "at": "2026-10-02T15:47:33.961Z",
+          "event": "Avaliação: celebracao / 18",
+          "actor": "Usuário local",
+          "before": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-28T17:29:26.576Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:18",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-02T15:47:33.961Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:18",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            },
+            "actor": "Usuário local"
+          }
+        },
+        {
+          "at": "2026-10-02T15:47:39.499Z",
+          "event": "Avaliação: celebracao / 19",
+          "actor": "Usuário local",
+          "before": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-28T17:30:25.641Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:19",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-02T15:47:39.499Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:19",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            },
+            "actor": "Usuário local"
+          }
+        },
+        {
+          "at": "2026-10-02T15:50:10.988Z",
+          "event": "Avaliação: merito / objeto",
+          "actor": "Usuário local",
+          "before": {
+            "status": "reanalise",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-28T14:26:16.377Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "merito:objeto",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-02T15:50:10.988Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "merito:objeto",
+              "fingerprint": "fnv64-v1:63d43555f1160015"
+            },
+            "actor": "Usuário local"
+          }
+        },
+        {
+          "at": "2026-10-02T15:50:17.663Z",
+          "event": "Avaliação: merito / justificativa",
+          "actor": "Usuário local",
+          "before": {
+            "status": "reanalise",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-28T15:18:51.351Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "merito:justificativa",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-02T15:50:17.663Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "merito:justificativa",
+              "fingerprint": "fnv64-v1:172bd931056da2e0"
+            },
+            "actor": "Usuário local"
+          }
+        },
+        {
+          "at": "2026-10-02T15:50:23.676Z",
+          "event": "Avaliação: merito / publicoAlvo",
+          "actor": "Usuário local",
+          "before": {
+            "status": "reanalise",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-28T15:18:53.415Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "merito:publicoAlvo",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-02T15:50:23.676Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "merito:publicoAlvo",
+              "fingerprint": "fnv64-v1:b23f1bb3a12db13e"
+            },
+            "actor": "Usuário local"
+          }
+        },
+        {
+          "at": "2026-10-02T15:50:34.211Z",
+          "event": "Avaliação: merito / problema",
+          "actor": "Usuário local",
+          "before": {
+            "status": "reanalise",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-28T15:18:55.135Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "merito:problema",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-02T15:50:34.211Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "merito:problema",
+              "fingerprint": "fnv64-v1:c53f46599b393ee6"
+            },
+            "actor": "Usuário local"
+          }
+        },
+        {
+          "at": "2026-10-02T15:50:39.663Z",
+          "event": "Avaliação: merito / resultados",
+          "actor": "Usuário local",
+          "before": {
+            "status": "reanalise",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-28T15:18:57.527Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "merito:resultados",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-02T15:50:39.663Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "merito:resultados",
+              "fingerprint": "fnv64-v1:b19c7750c4cb59f7"
+            },
+            "actor": "Usuário local"
+          }
+        },
+        {
+          "at": "2026-10-02T15:50:53.031Z",
+          "event": "Avaliação: merito / destinacao",
+          "actor": "Usuário local",
+          "before": {
+            "status": "reanalise",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-28T15:18:59.575Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "merito:destinacao",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-02T15:50:53.031Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "merito:destinacao",
+              "fingerprint": "fnv64-v1:fc11a9b639ef672c"
+            },
+            "actor": "Usuário local"
+          }
+        },
+        {
+          "at": "2026-10-02T15:50:59.648Z",
+          "event": "Avaliação: merito / objetivos",
+          "actor": "Usuário local",
+          "before": {
+            "status": "reanalise",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-28T15:19:01.279Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "merito:objetivos",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-02T15:50:59.648Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "merito:objetivos",
+              "fingerprint": "fnv64-v1:ba132da014ac7650"
+            },
+            "actor": "Usuário local"
+          }
+        },
+        {
+          "at": "2026-10-02T15:52:05.657Z",
+          "event": "Avaliação: merito / capacidade",
+          "actor": "Usuário local",
+          "before": {
+            "status": "reanalise",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-28T15:19:05.135Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "merito:capacidade",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-02T15:52:05.657Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "merito:capacidade",
+              "fingerprint": "fnv64-v1:e948683787eebb55"
+            },
+            "actor": "Usuário local"
+          }
+        },
+        {
+          "at": "2026-10-02T15:52:12.538Z",
+          "event": "Informações institucionais atualizadas",
+          "actor": "Usuário local",
+          "before": {
+            "ouvidoria": {
+              "status": "na",
+              "signature": "",
+              "url": "",
+              "note": "",
+              "clause": false
+            },
+            "falaBR": "na"
+          },
+          "after": {
+            "ouvidoria": {
+              "status": "instituida",
+              "signature": "",
+              "url": "",
+              "note": "",
+              "clause": false
+            },
+            "falaBR": "na"
+          }
+        },
+        {
+          "at": "2026-10-02T15:52:12.538Z",
+          "event": "Reanálise: merito:ouvidoriaInstituida",
+          "actor": "Usuário local",
+          "before": {
+            "status": "reanalise",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-28T17:32:30.105Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "merito:ouvidoriaInstituida",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "reanalise",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-28T17:32:30.105Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "merito:ouvidoriaInstituida",
+              "fingerprint": null,
+              "legacy": true
+            },
+            "reanalysis": {
+              "at": "2026-10-02T15:52:12.538Z",
+              "fields": [
+                "ouvidoria"
+              ],
+              "reason": "Evidência alterada; decisão anterior preservada no histórico."
+            }
+          }
+        },
+        {
+          "at": "2026-10-02T15:52:12.538Z",
+          "event": "Avaliação: merito / ouvidoriaInstituida",
+          "actor": "Usuário local",
+          "before": {
+            "status": "reanalise",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-28T17:32:30.105Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "merito:ouvidoriaInstituida",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-02T15:52:12.537Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "merito:ouvidoriaInstituida",
+              "fingerprint": "fnv64-v1:1335379bb2cd68e8"
+            },
+            "actor": "Usuário local"
+          }
+        },
+        {
+          "at": "2026-10-02T15:52:24.367Z",
+          "event": "Informações institucionais atualizadas",
+          "actor": "Usuário local",
+          "before": {
+            "ouvidoria": {
+              "status": "instituida",
+              "signature": "",
+              "url": "",
+              "note": "",
+              "clause": false
+            },
+            "falaBR": "na"
+          },
+          "after": {
+            "ouvidoria": {
+              "status": "instituida",
+              "signature": "",
+              "url": "",
+              "note": "",
+              "clause": false
+            },
+            "falaBR": "nao_previsto"
+          }
+        },
+        {
+          "at": "2026-10-02T15:52:24.367Z",
+          "event": "Reanálise: merito:falaBRAdesao",
+          "actor": "Usuário local",
+          "before": {
+            "status": "reanalise",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-28T17:34:27.895Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "merito:falaBRAdesao",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "reanalise",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-28T17:34:27.895Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "merito:falaBRAdesao",
+              "fingerprint": null,
+              "legacy": true
+            },
+            "reanalysis": {
+              "at": "2026-10-02T15:52:24.367Z",
+              "fields": [
+                "falaBR"
+              ],
+              "reason": "Evidência alterada; decisão anterior preservada no histórico."
+            }
+          }
+        },
+        {
+          "at": "2026-10-02T15:52:24.367Z",
+          "event": "Avaliação: merito / falaBRAdesao",
+          "actor": "Usuário local",
+          "before": {
+            "status": "reanalise",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-28T17:34:27.895Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "merito:falaBRAdesao",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "no",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-02T15:52:24.366Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "merito:falaBRAdesao",
+              "fingerprint": "fnv64-v1:20325664b9ae9846"
+            },
+            "actor": "Usuário local"
           }
         }
       ],
@@ -34077,6 +34966,30 @@ window.PROFOR_PUBLIC_DATA = {
           "after": {
             "at": "2026-09-30T13:03:54.129Z"
           }
+        },
+        {
+          "at": "2026-10-02T15:11:03.624Z",
+          "event": "Proposta apagada do painel",
+          "actor": "Usuário local",
+          "before": {
+            "id": "2246624",
+            "numero": "36305/2026",
+            "uf": "BA",
+            "programa": "3000020260022",
+            "cnpj": "13699404000167",
+            "proponente": "SECRETARIA DE ADMINISTRACAO PENITENCIARIA E RESSOCIALIZACAO - SEAP",
+            "orgao": "",
+            "objeto": "Aquisição de bens de capital para fortalecer a Ouvidoria da Secretaria de Administração Penitenciária do Estado da Bahia.",
+            "situacao": "Proposta/Plano de Trabalho Cadastrados",
+            "data": "2026-09-29",
+            "vigenciaInicio": "2026-12-01",
+            "vigenciaFim": "2028-12-01",
+            "repasse": 19738668,
+            "contrapartida": 199380,
+            "global": 19938048,
+            "pad": []
+          },
+          "after": null
         }
       ],
       "textos": {
@@ -34088,7 +35001,10 @@ window.PROFOR_PUBLIC_DATA = {
         "relacao": "xxx",
         "capacidade": "xxx",
         "justificativa": ""
-      }
+      },
+      "isDeleted": true,
+      "deletedAt": "2026-10-02T15:11:03.624Z",
+      "deletedBy": "Usuário local"
     },
     {
       "id": "2246762",

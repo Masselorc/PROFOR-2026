@@ -89,7 +89,7 @@ async function scenario(browser, name, seed, run) {
   const blocked = [];
   const dialogs = [];
   const initialErrorCount = pageErrors.length;
-  let gets = 0;
+  let gets = 0, failNext = 0;
   D.validateState(memory);
 
   // Uma única guarda fail-closed: nunca usar route.fetch() ou fallback para API.
@@ -106,6 +106,7 @@ async function scenario(browser, name, seed, run) {
       if (method === 'POST') {
         const attempt = { body: null, saved: null };
         posts.push(attempt); // Conta tentativas também, não só gravações aceitas.
+        if(failNext){const status=failNext;failNext=0;return route.fulfill({status,contentType:'application/json',body:JSON.stringify({error:status===409?'Conflito de revisão simulado':'Falha de escrita simulada'})});}
         try {
           const body = request.postDataJSON();
           attempt.body = clone(body);
@@ -245,7 +246,7 @@ async function scenario(browser, name, seed, run) {
     assert.ok(gets >= 2, 'storage.open/read devem carregar o envelope simulado');
     assert.equal(posts.length, 0, 'exists:true não pode disparar migração/gravação inicial');
     await run({ page, modal, field, result, openReview, diligenceVisibility, automaticFields, deadlineUpdates, validFields,
-      saveOnce, rejectedSave, cancel, snapshot, proposal, review, posts, dialogs, preservedDocument });
+      saveOnce, rejectedSave, cancel, snapshot, proposal, review, posts, dialogs, preservedDocument, fail:status=>{failNext=status;} });
     await settle();
     assert.ok(dialogs.every(d => d.type === 'confirm' && /Descartar as alterações/.test(d.message)), 'Diálogo inesperado');
     results.push({ scenario: name, status: 'passed', stateGets: gets, statePosts: posts.length, pageerrors: pageErrors.length - initialErrorCount });
@@ -331,7 +332,8 @@ async function main() {
     const existing = fixture();
     const active = clone(addDiligence(existing));
     const closed = clone(addDiligence(existing, { status: 'saneada', response: '2026-09-03', note: 'Já saneada', request: 'Não alterar registro saneado.' }));
-    await scenario(browser, 'Reutiliza diligência ativa já existente e preserva saneada', existing, async t => {
+    const closedNegative=clone(addDiligence(existing,{status:'nao_saneada',response:'2026-09-03',note:'Encerrada não saneada',request:'Não alterar encerrada não saneada'}));
+    await scenario(browser, 'Reutiliza diligência ativa já existente e preserva ambas terminais', existing, async t => {
       await t.openReview();
       await t.result('diligencia');
       await t.diligenceVisibility(true);
@@ -340,7 +342,7 @@ async function main() {
       assert.equal(await t.field('due').inputValue(), '2026-09-11', 'Abertura recalcula sem ciência antiga');
       await t.modal.locator('textarea[name="note"]').fill('Providência atualizada da diligência ativa preexistente.');
       await t.saveOnce();
-      assert.equal(t.proposal().diligences.length, 2, 'Não criar terceira diligência');
+      assert.equal(t.proposal().diligences.length, 3, 'Uma ativa e duas encerradas sem criar outra');
       const updated = t.proposal().diligences.find(d => d.id === active.id);
       assert.equal(updated.request, t.review().note);
       assert.equal(updated.science, active.science);
@@ -349,11 +351,33 @@ async function main() {
       assert.equal(updated.automaticDeadline, true);
       assert.equal(updated.confirmed, false);
       assert.deepEqual(t.proposal().diligences.find(d => d.id === closed.id), closed, 'Saneada não pode ser reaberta/alterada implicitamente');
+      assert.deepEqual(t.proposal().diligences.find(d=>d.id===closedNegative.id),closedNegative,'Não saneada não integra o seletor de ativas');
     });
+
+    for(const status of ['nao_saneada','saneada']){
+      const seed=fixture(),terminal=clone(addDiligence(seed,{status,response:'2026-09-03',note:'Conclusão encerrada preservada',request:'Providência encerrada preservada'}));
+      await scenario(browser, `Terminal ${status}: nova aberta, falha/repetição e recarga`,seed,async t=>{
+        await t.openReview();await t.result('diligencia');await t.diligenceVisibility(true);
+        assert.equal(await t.field('status').inputValue(),'aberta');
+        for(const name of ['communication','response','note'])assert.equal(await t.field(name).inputValue(),'','Nova solicitação não herda fatos encerrados');
+        await t.modal.locator('textarea[name="note"]').fill('Nova solicitação após encerramento');
+        const before=t.snapshot();t.fail(status==='nao_saneada'?409:500);
+        await t.modal.getByRole('button',{name:'Salvar',exact:true}).click();await t.modal.locator('#form-error').filter({hasText:/Conflito|Falha/}).waitFor();
+        assert.deepEqual(t.snapshot(),before,'Erro não altera nenhum registro');
+        await t.saveOnce();assert.equal(t.proposal().diligences.length,2);assert.deepEqual(t.proposal().diligences.find(d=>d.id===terminal.id),terminal);
+        const fresh=clone(t.proposal().diligences.find(d=>d.id!==terminal.id));assert.equal(fresh.status,'aberta');assert.equal(fresh.response,'');assert.equal(fresh.note,'');assert.equal(fresh.request,'Nova solicitação após encerramento');
+        const saved=t.snapshot();await t.page.reload({waitUntil:'networkidle'});assert.deepEqual(t.snapshot(),saved);await t.openReview();assert.equal(await t.field('status').inputValue(),'aberta');
+        await t.modal.locator('textarea[name="note"]').fill('Atualização explícita da nova ativa');await t.saveOnce();assert.equal(t.proposal().diligences.length,2);assert.equal(t.proposal().diligences.find(d=>d.id!==terminal.id).id,fresh.id);assert.deepEqual(t.proposal().diligences.find(d=>d.id===terminal.id),terminal);
+        assert.equal(t.proposal().history.filter(h=>/Diligência cadastrada/.test(h.event)).length,2,'Histórico identifica a criação independente');
+        await t.page.goto(`${URL}#painel`);await t.page.locator('button.row-expand[data-uf="AP"]').click();assert.match(await t.page.locator('.row-card').innerText(),/1 aberta\(s\)/);
+        if(status==='nao_saneada')assert.match(await t.page.locator('.row-card').innerText(),/1 encerrada\(s\) não saneada\(s\)/);
+      });
+    }
 
     const multiple = fixture();
     const first = clone(addDiligence(multiple, { note: 'Primeira diligência: não alterar' }));
     const second = clone(addDiligence(multiple, { category: 'PESQUISA DE PREÇOS', note: 'Segunda diligência: editar explicitamente', communication: '2026-09-04', science: '', due: '', confirmed: false, calendarNote: '' }));
+    const terminalMultiple=clone(addDiligence(multiple,{status:'nao_saneada',response:'2026-09-03',note:'Encerrada preservada',request:'Encerrada fora do seletor'}));
     await scenario(browser, 'Mais de uma ativa exige seleção por d_id', multiple, async t => {
       await t.openReview();
       await t.result('diligencia');
@@ -361,6 +385,8 @@ async function main() {
       await selector.waitFor({ state: 'visible' });
       const ids = await selector.locator('option').evaluateAll(options => options.map(o => o.value));
       assert.ok(ids.includes(first.id) && ids.includes(second.id), 'Seletor deve identificar cada diligência ativa por id');
+      assert.ok(!ids.includes(terminalMultiple.id),'Seletor não oferece a terminal');
+      await t.modal.getByRole('button',{name:'Salvar',exact:true}).click();assert.equal(t.posts.length,0,'Sem escolha explícita não grava');
       await selector.selectOption(second.id);
       assert.equal(await t.field('category').inputValue(), second.category);
       assert.equal(await t.field('communication').inputValue(), second.communication);
@@ -368,7 +394,8 @@ async function main() {
       await t.modal.locator('textarea[name="note"]').fill('Somente a segunda diligência recebe esta providência.');
       await t.field('note').fill('Segunda diligência atualizada via seletor.');
       await t.saveOnce();
-      assert.equal(t.proposal().diligences.length, 2);
+      assert.equal(t.proposal().diligences.length, 3);
+      assert.deepEqual(t.proposal().diligences.find(d=>d.id===terminalMultiple.id),terminalMultiple);
       assert.deepEqual(t.proposal().diligences.find(d => d.id === first.id), first);
       assert.equal(t.proposal().diligences.find(d => d.id === second.id).request, t.review().note);
       assert.equal(t.proposal().diligences.find(d => d.id === second.id).note, 'Segunda diligência atualizada via seletor.');
