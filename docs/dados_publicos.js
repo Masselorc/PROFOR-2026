@@ -1,9 +1,9 @@
-/** Snapshot integral de consulta PROFOR/ONASP 2026. Gerado em 2026-10-02T17:51:46.792Z.
+/** Snapshot integral de consulta PROFOR/ONASP 2026. Gerado em 2026-10-02T19:11:15.885Z.
  * Não editar manualmente. Use tools/build_public_docs.cjs. */
-window.PROFOR_PUBLIC_UPDATED_AT = "2026-10-02T17:51:46.792Z";
+window.PROFOR_PUBLIC_UPDATED_AT = "2026-10-02T19:11:15.885Z";
 window.PROFOR_PUBLIC_DATA = {
   "schemaVersion": 1,
-  "revision": 237,
+  "revision": 239,
   "proposals": [
     {
       "id": "2243618",
@@ -19583,100 +19583,172 @@ window.PROFOR_PUBLIC_DATA = {
             "attachments": []
           },
           "17447619": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-02T19:10:41.327Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17447619",
+              "fingerprint": "fnv64-v1:22e19921437fc84a"
+            }
           },
           "17448831": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-02T19:10:41.327Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17448831",
+              "fingerprint": "fnv64-v1:da651d5ce6df3eed"
+            }
           },
           "17448854": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-02T19:10:41.327Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17448854",
+              "fingerprint": "fnv64-v1:389733f283e23df7"
+            }
           },
           "17448857": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "Anexar pesquisa mercadológica do item \"impressora ou equipamento multifuncional\".",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-02T19:10:21.102Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17448857",
+              "fingerprint": "fnv64-v1:6bb7d3cc14ac978f"
+            }
           },
           "17448884": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-02T19:10:41.327Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17448884",
+              "fingerprint": "fnv64-v1:bc9c203e4cb6e5e7"
+            }
           },
           "17448960": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-02T19:10:41.327Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17448960",
+              "fingerprint": "fnv64-v1:aad0160a6d3554d1"
+            }
           },
           "17448983": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-02T19:10:41.327Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17448983",
+              "fingerprint": "fnv64-v1:e8f661727c949451"
+            }
           },
           "17448984": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-02T19:10:41.327Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17448984",
+              "fingerprint": "fnv64-v1:bf745a9956468be4"
+            }
           },
           "17448988": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-02T19:10:41.327Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17448988",
+              "fingerprint": "fnv64-v1:85506ce722798ef5"
+            }
           },
           "17449009": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-02T19:10:41.327Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17449009",
+              "fingerprint": "fnv64-v1:a93dd50cc1584c36"
+            }
           },
           "17449030": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-02T19:10:41.327Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17449030",
+              "fingerprint": "fnv64-v1:a523c15a889b57f4"
+            }
           },
           "17449052": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-02T19:10:41.327Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17449052",
+              "fingerprint": "fnv64-v1:e218aee1b3983c1d"
+            }
           },
           "17449119": {
             "status": "na",
@@ -20058,6 +20130,23 @@ window.PROFOR_PUBLIC_DATA = {
           "note": "",
           "at": "2026-10-01T19:41:34.102Z",
           "base": "2026-10-11",
+          "due": "2026-10-12",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "07cd8727-47b8-46ad-96c4-cb57787e0827",
+          "ref": "pad:17448857",
+          "request": "Anexar pesquisa mercadológica do item \"impressora ou equipamento multifuncional\".",
+          "science": "",
+          "category": "PLANO DE APLICAÇÃO DETALHADO",
+          "communication": "2026-10-02",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-02T19:10:21.102Z",
+          "base": "2026-10-12",
           "due": "2026-10-12",
           "automaticDeadline": true,
           "confirmed": false,
@@ -24240,6 +24329,353 @@ window.PROFOR_PUBLIC_DATA = {
           },
           "after": {
             "at": "2026-10-02T10:27:01.365Z"
+          }
+        },
+        {
+          "at": "2026-10-02T19:10:21.102Z",
+          "event": "Avaliação: pad / 17448857",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Anexar pesquisa mercadológica do item \"impressora ou equipamento multifuncional\".",
+            "document": "",
+            "url": "",
+            "at": "2026-10-02T19:10:21.102Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17448857",
+              "fingerprint": "fnv64-v1:6bb7d3cc14ac978f"
+            }
+          }
+        },
+        {
+          "at": "2026-10-02T19:10:21.105Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "07cd8727-47b8-46ad-96c4-cb57787e0827",
+            "ref": "pad:17448857",
+            "request": "Anexar pesquisa mercadológica do item \"impressora ou equipamento multifuncional\".",
+            "science": "",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "communication": "2026-10-02",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-02T19:10:21.102Z",
+            "base": "2026-10-12",
+            "due": "2026-10-12",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-02T19:10:41.327Z",
+          "event": "Avaliação: pad / 17449030",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-02T19:10:41.327Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17449030",
+              "fingerprint": "fnv64-v1:a523c15a889b57f4"
+            }
+          }
+        },
+        {
+          "at": "2026-10-02T19:10:41.327Z",
+          "event": "Avaliação: pad / 17449009",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-02T19:10:41.327Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17449009",
+              "fingerprint": "fnv64-v1:a93dd50cc1584c36"
+            }
+          }
+        },
+        {
+          "at": "2026-10-02T19:10:41.327Z",
+          "event": "Avaliação: pad / 17449052",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-02T19:10:41.327Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17449052",
+              "fingerprint": "fnv64-v1:e218aee1b3983c1d"
+            }
+          }
+        },
+        {
+          "at": "2026-10-02T19:10:41.327Z",
+          "event": "Avaliação: pad / 17448983",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-02T19:10:41.327Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17448983",
+              "fingerprint": "fnv64-v1:e8f661727c949451"
+            }
+          }
+        },
+        {
+          "at": "2026-10-02T19:10:41.327Z",
+          "event": "Avaliação: pad / 17448854",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-02T19:10:41.327Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17448854",
+              "fingerprint": "fnv64-v1:389733f283e23df7"
+            }
+          }
+        },
+        {
+          "at": "2026-10-02T19:10:41.327Z",
+          "event": "Avaliação: pad / 17448831",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-02T19:10:41.327Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17448831",
+              "fingerprint": "fnv64-v1:da651d5ce6df3eed"
+            }
+          }
+        },
+        {
+          "at": "2026-10-02T19:10:41.327Z",
+          "event": "Avaliação: pad / 17448884",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-02T19:10:41.327Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17448884",
+              "fingerprint": "fnv64-v1:bc9c203e4cb6e5e7"
+            }
+          }
+        },
+        {
+          "at": "2026-10-02T19:10:41.327Z",
+          "event": "Avaliação: pad / 17448960",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-02T19:10:41.327Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17448960",
+              "fingerprint": "fnv64-v1:aad0160a6d3554d1"
+            }
+          }
+        },
+        {
+          "at": "2026-10-02T19:10:41.327Z",
+          "event": "Avaliação: pad / 17448988",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-02T19:10:41.327Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17448988",
+              "fingerprint": "fnv64-v1:85506ce722798ef5"
+            }
+          }
+        },
+        {
+          "at": "2026-10-02T19:10:41.327Z",
+          "event": "Avaliação: pad / 17447619",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-02T19:10:41.327Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17447619",
+              "fingerprint": "fnv64-v1:22e19921437fc84a"
+            }
+          }
+        },
+        {
+          "at": "2026-10-02T19:10:41.327Z",
+          "event": "Avaliação: pad / 17448984",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-02T19:10:41.327Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17448984",
+              "fingerprint": "fnv64-v1:bf745a9956468be4"
+            }
           }
         }
       ],
