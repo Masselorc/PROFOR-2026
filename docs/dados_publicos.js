@@ -1,12 +1,12 @@
 /**
  * Snapshot dos dados públicos do PROFOR/ONASP 2026 (Processo SEI 08016.010062/2026-18)
- * Gerado automaticamente em 2026-10-01T19:42:21.978Z.
+ * Gerado automaticamente em 2026-10-02T10:32:04.481Z.
  * Não editar manualmente. Use tools/build_public_docs.cjs para atualizar.
  */
-window.PROFOR_PUBLIC_UPDATED_AT = "2026-10-01T19:42:21.978Z";
+window.PROFOR_PUBLIC_UPDATED_AT = "2026-10-02T10:32:04.481Z";
 window.PROFOR_PUBLIC_DATA = {
   "schemaVersion": 1,
-  "revision": 210,
+  "revision": 211,
   "proposals": [
     {
       "id": "2243618",
@@ -496,13 +496,24 @@ window.PROFOR_PUBLIC_DATA = {
           "after": {
             "at": "2026-10-01T13:55:12.638Z"
           }
+        },
+        {
+          "at": "2026-10-02T10:27:01.365Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Usuário local",
+          "before": {
+            "at": "2026-10-01T13:55:12.638Z"
+          },
+          "after": {
+            "at": "2026-10-02T10:27:01.365Z"
+          }
         }
       ],
       "isDeleted": true,
       "deletedAt": "2026-09-17T10:49:40.018Z",
       "deletedBy": "Usuário local",
       "textos": {
-        "at": "2026-10-01T13:55:12.638Z",
+        "at": "2026-10-02T10:27:01.365Z",
         "caracterizacao": "Integração de esforços entre o Ministério da Justiça/SENAPPEN e a SEAP/PE para estruturar a Ouvidoria de Serviços Penais. A cooperação atende às diretrizes do PROFOR/ONASP e do Plano Pena Justa, fortalecendo a governança penitenciária, a fiscalização institucional, a proteção dos direitos humanos e o acesso à justiça no âmbito da execução penal em Pernambuco.",
         "publicoAlvo": "Pessoas privadas de liberdade, seus familiares, operadores do direito, órgãos de controle, servidores do sistema penitenciário e a sociedade civil usuária dos serviços da Ouvidoria da SEAP/PE",
         "problema": "Déficit de infraestrutura física, mobiliária e tecnológica na Ouvidoria da SEAP/PE, que limita o acolhimento presencial, compromete a celeridade e o sigilo no fluxo de manifestações e restringe a mobilidade técnica para a realização de inspeções nas unidades prisionais.",
@@ -4491,10 +4502,21 @@ window.PROFOR_PUBLIC_DATA = {
           "after": {
             "at": "2026-10-01T13:55:12.638Z"
           }
+        },
+        {
+          "at": "2026-10-02T10:27:01.365Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Usuário local",
+          "before": {
+            "at": "2026-10-01T13:55:12.638Z"
+          },
+          "after": {
+            "at": "2026-10-02T10:27:01.365Z"
+          }
         }
       ],
       "textos": {
-        "at": "2026-10-01T13:55:12.638Z",
+        "at": "2026-10-02T10:27:01.365Z",
         "caracterizacao": "Aquisição de bens permanentes destinados ao aparelhamento e ao fortalecimento da Ouvidoria de Serviços Penais do Estado do Rio Grande do Sul, a ser formalmente instituída nos termos do Edital nº 37/2026, visando à qualificação de sua capacidade de atendimento, gestão de manifestações e atuação institucional.",
         "publicoAlvo": "Pessoas privadas de liberdade, familiares, servidores do sistema penal e demais cidadãos que utilizam os serviços da Ouvidoria de Serviços Penais.",
         "problema": "Ausência de estrutura material específica e adequada para o funcionamento da Ouvidoria de Serviços Penais do Estado do Rio Grande do Sul, cuja instituição formal será promovida nos termos do Edital nº 37/2026. A insuficiência de equipamentos, mobiliário, recursos tecnológicos e meios de deslocamento limita a implantação da unidade e a capacidade de atendimento, acompanhamento e tratamento das manifestações relacionadas aos serviços penais.",
@@ -7280,10 +7302,21 @@ window.PROFOR_PUBLIC_DATA = {
           "after": {
             "at": "2026-10-01T13:55:12.638Z"
           }
+        },
+        {
+          "at": "2026-10-02T10:27:01.365Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Usuário local",
+          "before": {
+            "at": "2026-10-01T13:55:12.638Z"
+          },
+          "after": {
+            "at": "2026-10-02T10:27:01.365Z"
+          }
         }
       ],
       "textos": {
-        "at": "2026-10-01T13:55:12.638Z",
+        "at": "2026-10-02T10:27:01.365Z",
         "caracterizacao": "A proposta atende ao interesse do Estado de Sergipe em fortalecer a estrutura e a capacidade de atuação da Ouvidoria de Serviços Penais, ampliando sua eficiência no recebimento, tratamento e encaminhamento de manifestações. Para a União, a iniciativa contribui para a implementação das diretrizes do PROFOR/ONASP, o fortalecimento da participação social, da transparência, do controle institucional e da proteção de direitos na política penal.",
         "publicoAlvo": "O público-alvo compreende, prioritariamente, as pessoas privadas de liberdade, egressos do sistema prisional, familiares e demais cidadãos que utilizam os canais da Ouvidoria para apresentar denúncias, reclamações, solicitações, sugestões, elogios e outras manifestações relacionadas aos serviços penais. Abrange também os agentes e servidores responsáveis pelo atendimento e tratamento dessas manifestações.",
         "problema": "A proposta busca enfrentar as limitações estruturais e tecnológicas que podem comprometer a capacidade institucional da Ouvidoria de Serviços Penais para receber, registrar, tratar, acompanhar e responder manifestações de forma eficiente, segura e rastreável. O fortalecimento do aparelhamento permitirá melhores condições para a escuta qualificada, proteção de informações sensíveis, participação social, transparência e controle dos serviços penais.",
@@ -10394,10 +10427,21 @@ window.PROFOR_PUBLIC_DATA = {
           "after": {
             "at": "2026-10-01T13:55:12.638Z"
           }
+        },
+        {
+          "at": "2026-10-02T10:27:01.365Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Usuário local",
+          "before": {
+            "at": "2026-10-01T13:55:12.638Z"
+          },
+          "after": {
+            "at": "2026-10-02T10:27:01.365Z"
+          }
         }
       ],
       "textos": {
-        "at": "2026-10-01T13:55:12.638Z",
+        "at": "2026-10-02T10:27:01.365Z",
         "caracterizacao": "A Ouvidoria da SAP/CE constitui instrumento estratégico de participação social, controle institucional e proteção de direitos no âmbito da política penal do Estado do Ceará, atuando como canal de comunicação entre a Administração Penitenciária e pessoas privadas de liberdade, familiares, visitantes, servidores, colaboradores e demais usuários dos serviços públicos.",
         "publicoAlvo": "pessoas privadas de liberdade nas unidades prisionais do Estado do Ceará; familiares de pessoas privadas de liberdade; visitantes das unidades prisionais; servidores e policiais penais; colaboradores e prestadores de serviços vinculados à política penal; • egressos e demais usuários dos serviços penais;cidadãos que necessitem utilizar os canais da Ouvidoria; gestores da SAP/CE, de forma indireta, mediante acesso a informações gerenciais produzidas pela escuta institucional,egresso",
         "problema": "Embora a Ouvidoria da SAP/CE disponha atualmente de infraestrutura física e tecnológica adequada em sua sede, decorrente inclusive dos investimentos de modernização e reaparelhamento realizados anteriormente, permanece identificada insuficiência de infraestrutura tecnológica descentralizada para realização contínua, padronizada e territorialmente abrangente da escuta institucional diretamente nos estabelecimentos prisionais e demais pontos estratégicos da Administração Penitenciária.",
@@ -10895,13 +10939,24 @@ window.PROFOR_PUBLIC_DATA = {
           "after": {
             "at": "2026-10-01T13:55:12.638Z"
           }
+        },
+        {
+          "at": "2026-10-02T10:27:01.365Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Usuário local",
+          "before": {
+            "at": "2026-10-01T13:55:12.638Z"
+          },
+          "after": {
+            "at": "2026-10-02T10:27:01.365Z"
+          }
         }
       ],
       "isDeleted": true,
       "deletedAt": "2026-09-17T10:49:50.262Z",
       "deletedBy": "Usuário local",
       "textos": {
-        "at": "2026-10-01T13:55:12.638Z",
+        "at": "2026-10-02T10:27:01.365Z",
         "caracterizacao": "A proposta alinha-se estritamente ao PROFOR/ONASP ao prever o aparelhamento físico e tecnológico do setor com bens de capital. As aquisições atendem aos parâmetros mínimos de funcionamento, qualificam o tratamento de manifestações, viabilizam a integração à Plataforma Fala.BR, garantem sigilo de dados sensíveis e subsidiam inspeções prisionais técnicas.",
         "publicoAlvo": "A proposta alinha-se estritamente ao PROFOR/ONASP ao prever o aparelhamento físico e tecnológico do setor com bens de capital. As aquisições atendem aos parâmetros mínimos de funcionamento, qualificam o tratamento de manifestações, viabilizam a integração à Plataforma Fala.BR, garantem sigilo de dados sensíveis e subsidiam inspeções prisionais técnicas.",
         "problema": "Déficit de infraestrutura física, mobiliária e tecnológica na Ouvidoria da SEAP/PE, que limita o acolhimento presencial, compromete a celeridade e o sigilo no fluxo de manifestações e restringe a mobilidade técnica para a realização de inspeções nas unidades prisionais.",
@@ -11577,13 +11632,24 @@ window.PROFOR_PUBLIC_DATA = {
           "after": {
             "at": "2026-10-01T13:55:12.638Z"
           }
+        },
+        {
+          "at": "2026-10-02T10:27:01.365Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Usuário local",
+          "before": {
+            "at": "2026-10-01T13:55:12.638Z"
+          },
+          "after": {
+            "at": "2026-10-02T10:27:01.365Z"
+          }
         }
       ],
       "isDeleted": true,
       "deletedAt": "2026-09-17T10:49:52.475Z",
       "deletedBy": "Usuário local",
       "textos": {
-        "at": "2026-10-01T13:55:12.638Z",
+        "at": "2026-10-02T10:27:01.365Z",
         "caracterizacao": "Integração de esforços entre o Ministério da Justiça/SENAPPEN e a SEAP/PE para estruturar a Ouvidoria de Serviços Penais. A cooperação atende às diretrizes do PROFOR/ONASP e do Plano Pena Justa, fortalecendo a governança penitenciária, a fiscalização institucional, a proteção dos direitos humanos e o acesso à justiça no âmbito da execução penal em Pernambuco.",
         "publicoAlvo": "Pessoas privadas de liberdade, seus familiares, operadores do direito, órgãos de controle, servidores do sistema penitenciário e a sociedade civil usuária dos serviços da Ouvidoria da SEAP/PE.",
         "problema": "Déficit de infraestrutura física, mobiliária e tecnológica na Ouvidoria da SEAP/PE, que limita o acolhimento presencial, compromete a celeridade e o sigilo no fluxo de manifestações e restringe a mobilidade técnica para a realização de inspeções nas unidades prisionais.",
@@ -16334,10 +16400,21 @@ window.PROFOR_PUBLIC_DATA = {
           "after": {
             "at": "2026-10-01T13:55:12.638Z"
           }
+        },
+        {
+          "at": "2026-10-02T10:27:01.365Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Usuário local",
+          "before": {
+            "at": "2026-10-01T13:55:12.638Z"
+          },
+          "after": {
+            "at": "2026-10-02T10:27:01.365Z"
+          }
         }
       ],
       "textos": {
-        "at": "2026-10-01T13:55:12.638Z",
+        "at": "2026-10-02T10:27:01.365Z",
         "caracterizacao": "O interesse do Governo Federal consiste em fortalecer as ouvidorias de serviços penais e aprimorar a participação social, a transparência e a proteção de direitos. O interesse do Distrito Federal converge com essas diretrizes, mediante o aparelhamento da Ouvidoria da SEAPE/DF, ampliando sua capacidade de atendimento, tratamento de manifestações e prestação de serviços aos usuários.",
         "publicoAlvo": "Usuários dos serviços penais do Distrito Federal, incluindo pessoas privadas de liberdade, familiares, servidores e demais cidadãos que utilizem os canais da Ouvidoria da SEAPE/DF, bem como os servidores responsáveis pelo atendimento, registro, tratamento e encaminhamento das manifestações.",
         "problema": "A atual estrutura física, mobiliário e equipamentos tecnológicos limita a capacidade da Ouvidoria da SEAPE/DF de prestar atendimento qualificado, realizar atendimentos externos, tratar e analisar manifestações e assegurar privacidade em demandas sensíveis. A proposta busca superar essas limitações e proporcionar melhores condições para o funcionamento e fortalecimento da unidade.",
@@ -21618,10 +21695,21 @@ window.PROFOR_PUBLIC_DATA = {
             "at": "2026-10-01T19:41:38.763Z",
             "attachments": []
           }
+        },
+        {
+          "at": "2026-10-02T10:27:01.365Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Usuário local",
+          "before": {
+            "at": "2026-10-01T13:55:12.638Z"
+          },
+          "after": {
+            "at": "2026-10-02T10:27:01.365Z"
+          }
         }
       ],
       "textos": {
-        "at": "2026-10-01T13:55:12.638Z",
+        "at": "2026-10-02T10:27:01.365Z",
         "caracterizacao": "Integração de esforços entre o Ministério da Justiça/SENAPPEN e a SEAP/PE para estruturar a Ouvidoria de Serviços Penais. A cooperação atende às diretrizes do PROFOR/ONASP e do Plano Pena Justa, fortalecendo a governança penitenciária, a fiscalização institucional, a proteção dos direitos humanos e o acesso à justiça no âmbito da execução penal em Pernambuco.",
         "publicoAlvo": "Pessoas privadas de liberdade, seus familiares, operadores do direito, órgãos de controle, servidores do sistema penitenciário e a sociedade civil usuária dos serviços da Ouvidoria da SEAP/PE.",
         "problema": "Déficit de infraestrutura física, mobiliária e tecnológica na Ouvidoria da SEAP/PE, que limita o acolhimento presencial, compromete a celeridade e o sigilo no fluxo de manifestações e restringe a mobilidade técnica para a realização de inspeções nas unidades prisionais.",
@@ -23119,10 +23207,21 @@ window.PROFOR_PUBLIC_DATA = {
             "capacidade": "A Ouvidoria-Geral do Estado de Minas Gerais (OGE/MG) conta com estrutura composta por ouvidorias temáticas, chefia e diretorias especializadas (como TI, RH e Planejamento). Possui corpo técnico qualificado para prestar consultoria e suporte, mantendo histórico sólido na execução de acordos de cooperação técnica, apoio a municípios e gestão transparente de recursos, orçamento e instrumentos de repasse. Conforme Documento Declaração de Capacidade Técnica e Gerencial em anexo.",
             "justificativa": ""
           }
+        },
+        {
+          "at": "2026-10-02T10:27:01.365Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Usuário local",
+          "before": {
+            "at": "2026-10-01T13:55:12.638Z"
+          },
+          "after": {
+            "at": "2026-10-02T10:27:01.365Z"
+          }
         }
       ],
       "textos": {
-        "at": "2026-10-01T13:55:12.638Z",
+        "at": "2026-10-02T10:27:01.365Z",
         "caracterizacao": "Há convergência entre as diretrizes do MJSP/SENAPPEN e a missão da OGE-MG. Pelo concedente, busca-se o fortalecimento nacional e a padronização das ouvidorias de serviços penais. Pela OGE-MG, atende à necessidade de modernização tecnológica da Ouvidoria do Sistema Penitenciário e Socioeducativo, ampliando a celeridade e a qualidade no tratamento das manifestações dos cidadãos e na fiscalização dos serviços penais, promovendo a transparência e a garantia dos direitos fundamentais.",
         "publicoAlvo": "Público-Alvo Direto: Servidores e colaboradores da Ouvidoria do Sistema Penitenciário e Socioeducativo da OGE-MG, que operarão os equipamentos no processamento das demandas diárias.Público-Alvo Indireto: pessoas privadas de liberdade (PPL), jovens em cumprimento de medidas socioeducativas, seus familiares, servidores do sistema prisional e socioeducativo, advogados, defensores públicos e a sociedade civil de Minas Gerais que utiliza os canais da OGE-MG.",
         "problema": "A obsolescência, escassez e limitação operacional dos equipamentos de TIC (desktops e notebooks) atualmente em uso na Ouvidoria do Sistema Penitenciário e Socioeducativo. O ecossistema de hardware defasado gera lentidão nos sistemas de atendimento, degradação na segurança da informação, incapacidade de realizar atendimentos ou inspeções externas com suporte computacional móvel (in loco em unidades prisionais e de internação) e consequente gargalo no tempo de resposta ao cidadão.",
@@ -29033,10 +29132,21 @@ window.PROFOR_PUBLIC_DATA = {
           "after": {
             "at": "2026-10-01T13:55:12.638Z"
           }
+        },
+        {
+          "at": "2026-10-02T10:27:01.365Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Usuário local",
+          "before": {
+            "at": "2026-10-01T13:55:12.638Z"
+          },
+          "after": {
+            "at": "2026-10-02T10:27:01.365Z"
+          }
         }
       ],
       "textos": {
-        "at": "2026-10-01T13:55:12.638Z",
+        "at": "2026-10-02T10:27:01.365Z",
         "caracterizacao": "A União, por meio da SENAPPEN, e o Estado do Rio Grande do Norte, por meio da SEAP/RN, compartilham o interesse de fortalecer a Ouvidoria de Serviços Penais. O repasse federal permitirá adquirir bens permanentes para ampliar sua capacidade operacional, enquanto o Estado aportará a contrapartida financeira e assegurará a execução, a guarda, a destinação e a utilização dos bens na finalidade pactuada.",
         "publicoAlvo": "A Ouvidoria de Serviços Penais vinculada à SEAP/RN é a beneficiária direta. O público-alvo compreende pessoas privadas de liberdade, seus familiares, egressos, servidores dos serviços penais e demais cidadãos que apresentem manifestações relacionadas à política penal do Rio Grande do Norte. Os bens também apoiarão a equipe responsável pelo recebimento, tratamento, encaminhamento e resposta às manifestações.",
         "problema": "A Ouvidoria de Serviços Penais do RN necessita ampliar sua capacidade material e tecnológica para atender às demandas institucionais e tratar manifestações com segurança, sigilo e rastreabilidade. O diagnóstico que fundamenta o PROFOR/ONASP identifica a necessidade de reforço das estruturas existentes, sem recursos disponíveis em convênios vigentes para essa finalidade. A proposta busca suprir as necessidades de aparelhamento identificadas pelo Estado.",
@@ -29641,10 +29751,21 @@ window.PROFOR_PUBLIC_DATA = {
           "after": {
             "at": "2026-10-01T13:55:12.638Z"
           }
+        },
+        {
+          "at": "2026-10-02T10:27:01.366Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Usuário local",
+          "before": {
+            "at": "2026-10-01T13:55:12.638Z"
+          },
+          "after": {
+            "at": "2026-10-02T10:27:01.365Z"
+          }
         }
       ],
       "textos": {
-        "at": "2026-10-01T13:55:12.638Z",
+        "at": "2026-10-02T10:27:01.365Z",
         "caracterizacao": "Integração de esforços entre o Ministério da Justiça/SENAPPEN e a SEJUS/ES para estruturar as Ouvidorias de Serviços Penais. A cooperação atende às diretrizes do PROFOR/ONASP e do Plano Pena Justa, fortalecendo a governança penitenciária, a fiscalização institucional, a proteção dos direitos humanos e o acesso à justiça no âmbito da execução penal no Espírito Santo.",
         "publicoAlvo": "Pessoas privadas de liberdade, seus familiares, operadores do direito, pessoas egressas do sistema prisional, órgãos de controle, servidores do sistema penitenciário, a sociedade civil usuária dos serviços das Ouvidorias dos Serviços Penais SEJUS/ES e a própria Administração Pública estadual, mediante a utilização das informações produzidas pela Ouvidoria para identificação de problemas, monitoramento de demandas recorrentes e aperfeiçoamento das políticas públicas penitenciárias",
         "problema": "A insuficiência ou inadequação de equipamentos tecnológicos e mobiliários pode limitar a capacidade operacional da unidade, dificultar a realização de atendimentos, restringir a mobilidade para atividades técnicas externas e comprometer a eficiência, a rastreabilidade e a segurança no tratamento das informações. Nesse contexto, o aparelhamento da Ouvidoria constitui medida necessária para assegurar condições materiais compatíveis com suas atribuições institucionais.",
@@ -30142,13 +30263,24 @@ window.PROFOR_PUBLIC_DATA = {
           "after": {
             "at": "2026-10-01T13:55:12.638Z"
           }
+        },
+        {
+          "at": "2026-10-02T10:27:01.366Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Usuário local",
+          "before": {
+            "at": "2026-10-01T13:55:12.638Z"
+          },
+          "after": {
+            "at": "2026-10-02T10:27:01.366Z"
+          }
         }
       ],
       "isDeleted": true,
       "deletedAt": "2026-09-17T10:49:46.508Z",
       "deletedBy": "Usuário local",
       "textos": {
-        "at": "2026-10-01T13:55:12.638Z",
+        "at": "2026-10-02T10:27:01.366Z",
         "caracterizacao": "Integração de esforços entre o Ministério da Justiça/SENAPPEN e a SEAP/PE para estruturar a Ouvidoria de Serviços Penais. A cooperação atende às diretrizes do PROFOR/ONASP e do Plano Pena Justa, fortalecendo a governança penitenciária, a fiscalização institucional, a proteção dos direitos humanos e o acesso à justiça no âmbito da execução penal em Pernambuco.",
         "publicoAlvo": "Pessoas privadas de liberdade, seus familiares, operadores do direito, órgãos de controle, servidores do sistema penitenciário e a sociedade civil usuária dos serviços da Ouvidoria da SEAP/PE.",
         "problema": "Déficit de infraestrutura física, mobiliária e tecnológica na Ouvidoria da SEAP/PE, que limita o acolhimento presencial, compromete a celeridade e o sigilo no fluxo de manifestações e restringe a mobilidade técnica para a realização de inspeções nas unidades prisionais.",
@@ -30646,13 +30778,24 @@ window.PROFOR_PUBLIC_DATA = {
           "after": {
             "at": "2026-10-01T13:55:12.638Z"
           }
+        },
+        {
+          "at": "2026-10-02T10:27:01.366Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Usuário local",
+          "before": {
+            "at": "2026-10-01T13:55:12.638Z"
+          },
+          "after": {
+            "at": "2026-10-02T10:27:01.366Z"
+          }
         }
       ],
       "isDeleted": true,
       "deletedAt": "2026-09-17T10:49:48.668Z",
       "deletedBy": "Usuário local",
       "textos": {
-        "at": "2026-10-01T13:55:12.638Z",
+        "at": "2026-10-02T10:27:01.366Z",
         "caracterizacao": "Integração de esforços entre o Ministério da Justiça/SENAPPEN e a SEAP/PE para estruturar a Ouvidoria de Serviços Penais. A cooperação atende às diretrizes do PROFOR/ONASP e do Plano Pena Justa, fortalecendo a governança penitenciária, a fiscalização institucional, a proteção dos direitos humanos e o acesso à justiça no âmbito da execução penal em Pernambuco.",
         "publicoAlvo": "Pessoas privadas de liberdade, seus familiares, operadores do direito, órgãos de controle, servidores do sistema penitenciário e a sociedade civil usuária dos serviços da Ouvidoria da SEAP/PE.",
         "problema": "Déficit de infraestrutura física, mobiliária e tecnológica na Ouvidoria da SEAP/PE, que limita o acolhimento presencial, compromete a celeridade e o sigilo no fluxo de manifestações e restringe a mobilidade técnica para a realização de inspeções nas unidades prisionais.",
@@ -31840,10 +31983,21 @@ window.PROFOR_PUBLIC_DATA = {
           "after": {
             "at": "2026-10-01T13:55:12.638Z"
           }
+        },
+        {
+          "at": "2026-10-02T10:27:01.366Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Usuário local",
+          "before": {
+            "at": "2026-10-01T13:55:12.638Z"
+          },
+          "after": {
+            "at": "2026-10-02T10:27:01.366Z"
+          }
         }
       ],
       "textos": {
-        "at": "2026-10-01T13:55:12.638Z",
+        "at": "2026-10-02T10:27:01.366Z",
         "caracterizacao": "A proposta atende ao interesse comum da União e do Estado do Amazonas no fortalecimento das Ouvidorias de Serviços Penais, mediante o aprimoramento de sua estrutura institucional e de sua capacidade de atendimento. A iniciativa está alinhada à atuação da SENAPPEN de apoio aos entes federativos e às diretrizes do PROFOR/ONASP, que busca fortalecer as ouvidorias, qualificar os canais de manifestação, ampliar a capacidade institucional de atendimento e promover a participação social.",
         "publicoAlvo": "A Ouvidoria de Serviços Penais do Estado do Amazonas, como unidade beneficiária dos bens adquiridos, e, indiretamente, os usuários dos serviços penais e demais cidadãos que utilizam os canais de manifestação, acompanhamento e encaminhamento de demandas relacionadas aos serviços penais.",
         "problema": "Necessidade de fortalecimento e aparelhamento da Ouvidoria de Serviços Penais do Estado do Amazonas, de modo a ampliar sua capacidade institucional de atendimento e aprimorar os canais de recebimento, tratamento, acompanhamento e encaminhamento das manifestações relacionadas aos serviços penais, contribuindo para uma escuta institucional qualificada, maior transparência e fortalecimento da participação e do controle social.",
@@ -32778,10 +32932,21 @@ window.PROFOR_PUBLIC_DATA = {
           "after": {
             "at": "2026-10-01T13:55:12.638Z"
           }
+        },
+        {
+          "at": "2026-10-02T10:27:01.366Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Usuário local",
+          "before": {
+            "at": "2026-10-01T13:55:12.638Z"
+          },
+          "after": {
+            "at": "2026-10-02T10:27:01.366Z"
+          }
         }
       ],
       "textos": {
-        "at": "2026-10-01T13:55:12.638Z",
+        "at": "2026-10-02T10:27:01.366Z",
         "caracterizacao": "A Diretoria-Geral de Polícia Penal de Goiás tem interesse em melhorar as condições de trabalho dos servidores da Ouvidoria Adjunta e a estrutura destinada ao atendimento da sociedade. A SENAPPEN, por meio do PROFOR/ONASP, busca fortalecer as ouvidorias de serviços penais. A aquisição dos bens previstos na proposta atende a esses interesses ao qualificar o ambiente em que a Ouvidoria exerce suas atividades.",
         "publicoAlvo": "Ouvidoria Setoria da Polícia Penal do Estado de Goiás.",
         "problema": "Os equipamentos utlizidados pela ouvidoria setorial não atende adequadamente às necessidades físicas e tecnológicas exigidas para o registro das manifestações, além da ausência de itens que ofereçam condições de trabalho para os trabalhadores lotados na ouvidoria.",
@@ -33433,10 +33598,21 @@ window.PROFOR_PUBLIC_DATA = {
             "capacidade": "Secretaria de Estado da Justiça e da Cidadania de Roraima possui capacidade técnica e gerencial para a execução do objeto proposto, dispondo de estrutura administrativa e de servidores dedicados à gestão, instrução, acompanhamento e execução de processos administrativos, licitatórios e instrumentos de repasse.A SEJUC/RR conta com Departamento de Gestão de Convênios e Projetos, responsável pelas atividades relacionadas à formalização, gestão e acompanhamento de convênios e projetos institucionais, bem como, com Comissão Permanente de Licitação própria e servidores dedicados à instrução e instrumentalização dos processos licitatórios necessários à aquisição de bens e à contratação de serviços.Essa estrutura permite o planejamento das contratações, a elaboração dos documentos preparatórios, a realização dos procedimentos licitatórios, o acompanhamento da execução contratual, o recebimento e a incorporação patrimonial dos bens, além do controle da execução física e financeira e da prestação de contas dos recursos transferidos.No âmbito do PROFOR/ONASP 2026, a SEJUC/RR atuará em articulação com a Ouvidoria de Serviços Penais, unidade beneficiária dos bens, assegurando que as aquisições atendam às necessidades identificadas, às especificações aprovadas e à finalidade pública pactuada. A execução observará as disposições do Edital nº 37/2026, da Lei nº 14.133/2021, do Decreto nº 11.531/2023 e das Portarias Conjuntas MGI/MF/CGU nº 33/2023 e nº 28/2024, bem como as demais normas aplicáveis às transferências voluntárias da União.",
             "justificativa": ""
           }
+        },
+        {
+          "at": "2026-10-02T10:27:01.366Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Usuário local",
+          "before": {
+            "at": "2026-10-01T13:55:12.638Z"
+          },
+          "after": {
+            "at": "2026-10-02T10:27:01.366Z"
+          }
         }
       ],
       "textos": {
-        "at": "2026-10-01T13:55:12.638Z",
+        "at": "2026-10-02T10:27:01.366Z",
         "caracterizacao": "A União, por meio da SENAPPEN, e o Estado de Roraima, por meio da SEJUC/RR, compartilham o interesse de fortalecer a Ouvidoria de Serviços Penais. O repasse federal permitirá adquirir bens permanentes para ampliar sua capacidade operacional, enquanto o Estado aportará a contrapartida financeira e assegurará a execução, a guarda, a destinação e a utilização dos bens na finalidade pactuada.",
         "publicoAlvo": "A Ouvidoria de Serviços Penais vinculada à SEJUC/RR é a beneficiária direta. O público-alvo compreende pessoas privadas de liberdade, seus familiares, egressos, servidores dos serviços penais e demais cidadãos que apresentem manifestações relacionadas à política penal do Estado de Roraima. Os bens também apoiarão a equipe responsável pelo recebimento, tratamento, encaminhamento e resposta às manifestações.",
         "problema": "A Ouvidoria de Serviços Penais de Roraima necessita ampliar sua capacidade material e tecnológica para atender às demandas institucionais e tratar manifestações com segurança, sigilo e rastreabilidade. O diagnóstico que fundamenta o PROFOR/ONASP identifica a necessidade de reforço das estruturas existentes, sem recursos disponíveis em convênios vigentes para essa finalidade. A proposta busca suprir as necessidades de aparelhamento identificadas pelo Estado.",
@@ -33755,10 +33931,21 @@ window.PROFOR_PUBLIC_DATA = {
             "capacidade": "O Instituto de Administração Penitenciária do Estado do Amapá – IAPEN/AP, por meio da Ouvidoria Penitenciária, demonstra capacidade técnica e gerencial para execução da proposta, considerando a experiência institucional já desenvolvida na construção e consolidação de um canal próprio de escuta no sistema penitenciário. A unidade mantém rotina permanente de atendimento presencial e remoto, recebimento, escuta, registro, tratamento, encaminhamento, acompanhamento e resposta às manifestações.A Ouvidoria atua de forma articulada com os setores do IAPEN/AP, encaminhando as demandas aos responsáveis e acompanhando seu tratamento, além de integrar sua atuação ao Serviço de Informação ao Cidadão – SIC/AP. Utiliza o OUV Amapá, plataforma disponibilizada pela Controladoria-Geral do Estado do Amapá – CGE/AP e integrada à Rede de Ouvidorias Estadual, como instrumento de apoio ao registro e tratamento das manifestações",
             "justificativa": ""
           }
+        },
+        {
+          "at": "2026-10-02T10:27:01.366Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Usuário local",
+          "before": {
+            "at": "2026-10-01T13:55:12.638Z"
+          },
+          "after": {
+            "at": "2026-10-02T10:27:01.366Z"
+          }
         }
       ],
       "textos": {
-        "at": "2026-10-01T13:55:12.638Z",
+        "at": "2026-10-02T10:27:01.366Z",
         "caracterizacao": "Fortalecer a Ouvidoria Penitenciária do Estado do Amapá, mediante estruturação física, tecnológica e administrativa, contribuindo para a continuidade dos serviços de escuta, acolhimento, registro, tratamento, encaminhamento e acompanhamento de manifestações, em consonância com as finalidades do PROFOR/ONASP 2026",
         "publicoAlvo": "Usuários dos serviços penais, pessoas que utilizam a Ouvidoria Penitenciária do Estado do Amapá para apresentar manifestações, solicitações, reclamações, denúncias, elogios ou outras demandas, além dos servidores responsáveis pelo atendimento, registro, tratamento, encaminhamento e acompanhamento das manifestações.",
         "problema": "A Ouvidoria Penitenciária necessita de melhores condições físicas, tecnológicas e administrativas para executar suas atividades de forma organizada e contínua. As limitações de infraestrutura, equipamentos, gestão documental, recursos tecnológicos e condições de atendimento dificultam a qualificação da escuta, do registro, do acompanhamento das manifestações e da produção de informações institucionais.",
@@ -34077,10 +34264,21 @@ window.PROFOR_PUBLIC_DATA = {
             "capacidade": "A Secretaria de Estado de Administração Penitenciária do Pará (SEAP/PA) dispõe de estrutura organizacional e capacidade técnico-operacional para conduzir o processo legislativo/normativo de criação do setor e gerir a aplicação dos recursos. O órgão conta com quadro de servidores efetivos e equipe técnica experiente na execução de convênios federais via Transferegov.br, assegurando o cumprimento dos prazos licitatórios, a incorporação patrimonial dos bens e a prestação de contas no âmbito do PROFOR/ONASP.",
             "justificativa": ""
           }
+        },
+        {
+          "at": "2026-10-02T10:27:01.366Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Usuário local",
+          "before": {
+            "at": "2026-10-01T13:55:12.638Z"
+          },
+          "after": {
+            "at": "2026-10-02T10:27:01.366Z"
+          }
         }
       ],
       "textos": {
-        "at": "2026-10-01T13:55:12.638Z",
+        "at": "2026-10-02T10:27:01.366Z",
         "caracterizacao": "Integração de esforços entre o Ministério da Justiça/SENAPPEN e a SEAP/PA para a implantação, estruturação física e aparelhamento inicial da Ouvidoria de Serviços Penais. A cooperação atende às diretrizes do PROFOR/ONASP e do Plano Pena Justa, estabelecendo um canal institucional permanente de governança penitenciária, fiscalização, proteção dos direitos humanos e acesso à justiça na execução penal paraense.",
         "publicoAlvo": "Pessoas privadas de liberdade, seus familiares, operadores do direito, órgãos de controle (MP, Defensoria, Judiciário), servidores penitenciários e a sociedade civil.",
         "problema": "Inexistência de uma Ouvidoria especializada em serviços penais no Estado do Pará, resultando na ausência de infraestrutura física e tecnológica própria para acolhimento presencial, no déficit de canais estruturados para o tratamento sigiloso e célere de manifestações relativas à execução penal e na limitação de meios materiais para realização de vistorias e inspeções técnicas nas unidades prisionais do Estado.",
@@ -34399,10 +34597,21 @@ window.PROFOR_PUBLIC_DATA = {
             "capacidade": "DECLARAÇãO DE CAPACIDADE TÉCNICA E GERENCIAL",
             "justificativa": ""
           }
+        },
+        {
+          "at": "2026-10-02T10:27:01.366Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Usuário local",
+          "before": {
+            "at": "2026-10-01T13:55:12.638Z"
+          },
+          "after": {
+            "at": "2026-10-02T10:27:01.366Z"
+          }
         }
       ],
       "textos": {
-        "at": "2026-10-01T13:55:12.638Z",
+        "at": "2026-10-02T10:27:01.366Z",
         "caracterizacao": "A celebração do convênio entre a SEAP/BA e a SENAPPEN atende a interesses recíprocos ao fortalecer a Ouvidoria dos Serviços Penais, promovendo sua estruturação física, tecnológica e operacional. A parceria contribuirá para aprimorar o atendimento, a participação social, a transparência e os mecanismos de controle, em consonância com as diretrizes nacionais de aperfeiçoamento da gestão penitenciária.",
         "publicoAlvo": "O público-alvo beneficiado pelo convênio compreende, direta e indiretamente, os usuários dos serviços penitenciários do Estado da Bahia, incluindo pessoas privadas de liberdade, seus familiares, servidores públicos, visitantes, egressos e demais cidadãos que utilizam os canais da Ouvidoria. A iniciativa também beneficiará os servidores da Ouvidoria da SEAP.",
         "problema": "A Ouvidoria da SEAP recebe denúncias, reclamações, solicitações e pedidos de informação sobre serviços e unidades prisionais. A insuficiência de estrutura física, tecnológica e operacional limita o adequado tratamento e acompanhamento das demandas. A aquisição dos bens de capital permitirá melhorar as condições de trabalho, qualificar o atendimento e fortalecer a escuta social, a transparência, o controle e a participação dos usuários dos serviços penais.",
@@ -34414,8 +34623,8 @@ window.PROFOR_PUBLIC_DATA = {
     }
   ],
   "sync": {
-    "at": "2026-10-01T13:55:12.638Z",
-    "source": "https://api-publica.transferegov.gestao.gov.br/downloads · sincronização completa (com PAD) · 4 arquivo(s)",
+    "at": "2026-10-02T10:27:01.365Z",
+    "source": "https://api-publica.transferegov.gestao.gov.br/downloads · sincronização completa (com PAD) · 4 arquivo(s) · extração reaproveitada pelo servidor",
     "count": 19
   },
   "syncHistory": [
@@ -55778,6 +55987,145 @@ window.PROFOR_PUBLIC_DATA = {
       ],
       "reconstructed": false,
       "source": "https://api-publica.transferegov.gestao.gov.br/downloads · sincronização completa (com PAD) · 4 arquivo(s)",
+      "proposals": 19
+    },
+    {
+      "id": "e1837e390dbc7a4bada35af9284be38a97bf7090c69044d5126e3897fbeeee10",
+      "at": "2026-10-02T10:27:06.998Z",
+      "date": "2026-10-02",
+      "changes": [],
+      "activity": [
+        {
+          "at": "2026-10-02T10:25:22.348Z",
+          "message": "Iniciando atualização de propostas, PAD e textos oficiais."
+        },
+        {
+          "at": "2026-10-02T10:25:23.695Z",
+          "message": "Consultando a lista de arquivos oficiais…"
+        },
+        {
+          "at": "2026-10-02T10:25:24.022Z",
+          "message": "Extração recente encontrada no cache local; preparando os dados…"
+        },
+        {
+          "at": "2026-10-02T10:25:24.022Z",
+          "message": "Consultando a lista para os textos oficiais…"
+        },
+        {
+          "at": "2026-10-02T10:25:24.172Z",
+          "message": "Baixando siconv_justificativas_proposta.zip…"
+        },
+        {
+          "at": "2026-10-02T10:25:26.471Z",
+          "message": "Baixando siconv_justificativas_proposta.zip… 21,5 MB de 716 MB (0%)."
+        },
+        {
+          "at": "2026-10-02T10:25:27.985Z",
+          "message": "Baixando siconv_justificativas_proposta.zip… 78,9 MB de 716 MB (10%)."
+        },
+        {
+          "at": "2026-10-02T10:25:30.376Z",
+          "message": "Baixando siconv_justificativas_proposta.zip… 172 MB de 716 MB (20%)."
+        },
+        {
+          "at": "2026-10-02T10:25:31.972Z",
+          "message": "Baixando siconv_justificativas_proposta.zip… 222,2 MB de 716 MB (30%)."
+        },
+        {
+          "at": "2026-10-02T10:25:35.164Z",
+          "message": "Baixando siconv_justificativas_proposta.zip… 286,7 MB de 716 MB (40%)."
+        },
+        {
+          "at": "2026-10-02T10:25:38.862Z",
+          "message": "Baixando siconv_justificativas_proposta.zip… 415,8 MB de 716 MB (50%)."
+        },
+        {
+          "at": "2026-10-02T10:25:41.645Z",
+          "message": "Baixando siconv_justificativas_proposta.zip… 508,9 MB de 716 MB (70%)."
+        },
+        {
+          "at": "2026-10-02T10:25:43.973Z",
+          "message": "Baixando siconv_justificativas_proposta.zip… 594,9 MB de 716 MB (80%)."
+        },
+        {
+          "at": "2026-10-02T10:25:45.569Z",
+          "message": "Baixando siconv_justificativas_proposta.zip… 659,5 MB de 716 MB (90%)."
+        },
+        {
+          "at": "2026-10-02T10:25:47.199Z",
+          "message": "siconv_justificativas_proposta.zip: download concluído (750800709 bytes)."
+        },
+        {
+          "at": "2026-10-02T10:25:47.199Z",
+          "message": "Lendo siconv_justificativas_proposta.zip e selecionando textos das propostas…"
+        },
+        {
+          "at": "2026-10-02T10:25:48.782Z",
+          "message": "Lendo siconv_justificativas_proposta.zip e selecionando textos das propostas… 24,9 MB de 2.485,2 MB (0%)."
+        },
+        {
+          "at": "2026-10-02T10:25:55.986Z",
+          "message": "Lendo siconv_justificativas_proposta.zip e selecionando textos das propostas… 248,6 MB de 2.485,2 MB (10%)."
+        },
+        {
+          "at": "2026-10-02T10:26:04.780Z",
+          "message": "Lendo siconv_justificativas_proposta.zip e selecionando textos das propostas… 497,2 MB de 2.485,2 MB (20%)."
+        },
+        {
+          "at": "2026-10-02T10:26:13.590Z",
+          "message": "Lendo siconv_justificativas_proposta.zip e selecionando textos das propostas… 745,8 MB de 2.485,2 MB (30%)."
+        },
+        {
+          "at": "2026-10-02T10:26:21.490Z",
+          "message": "Lendo siconv_justificativas_proposta.zip e selecionando textos das propostas… 1.019,2 MB de 2.485,2 MB (40%)."
+        },
+        {
+          "at": "2026-10-02T10:26:26.497Z",
+          "message": "Lendo siconv_justificativas_proposta.zip e selecionando textos das propostas… 1.243 MB de 2.485,2 MB (50%)."
+        },
+        {
+          "at": "2026-10-02T10:26:33.505Z",
+          "message": "Lendo siconv_justificativas_proposta.zip e selecionando textos das propostas… 1.516,4 MB de 2.485,2 MB (60%)."
+        },
+        {
+          "at": "2026-10-02T10:26:39.505Z",
+          "message": "Lendo siconv_justificativas_proposta.zip e selecionando textos das propostas… 1.740,2 MB de 2.485,2 MB (70%)."
+        },
+        {
+          "at": "2026-10-02T10:26:46.500Z",
+          "message": "Lendo siconv_justificativas_proposta.zip e selecionando textos das propostas… 1.988,8 MB de 2.485,2 MB (80%)."
+        },
+        {
+          "at": "2026-10-02T10:26:54.502Z",
+          "message": "Lendo siconv_justificativas_proposta.zip e selecionando textos das propostas… 2.237,3 MB de 2.485,2 MB (90%)."
+        },
+        {
+          "at": "2026-10-02T10:27:01.306Z",
+          "message": "siconv_justificativas_proposta.zip: 1158372 linha(s) lida(s); 19 proposta(s) com textos."
+        },
+        {
+          "at": "2026-10-02T10:27:01.306Z",
+          "message": "Dados e textos recebidos. Aguardando gravação no banco local…"
+        },
+        {
+          "at": "2026-10-02T10:27:01.341Z",
+          "message": "Download concluído. Validando e gravando os dados locais."
+        },
+        {
+          "at": "2026-10-02T10:27:01.344Z",
+          "message": "Validando 19 proposta(s) recebida(s)."
+        },
+        {
+          "at": "2026-10-02T10:27:01.366Z",
+          "message": "Gravando propostas, PAD e textos no banco local."
+        },
+        {
+          "at": "2026-10-02T10:27:06.998Z",
+          "message": "Gravação confirmada no banco local."
+        }
+      ],
+      "reconstructed": false,
+      "source": "https://api-publica.transferegov.gestao.gov.br/downloads · sincronização completa (com PAD) · 4 arquivo(s) · extração reaproveitada pelo servidor",
       "proposals": 19
     }
   ]
