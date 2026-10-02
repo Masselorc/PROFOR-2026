@@ -27,6 +27,23 @@ function source(proposals,textos={},faltando=[]){
   },fetchProposalTexts:async()=>({textos,faltando})};
 }
 
+test('3: headless persiste candidato parcial e aviso, preserva PAD e recupera com extração íntegra',async t=>{
+  const {store,lockPath}=setup(t),p=D.createProposal(data());
+  D.setReview(p,'pad','11',{status:'ok',note:'Decisão humana preservada',document:'Documento fixture',url:''},'Fixture');
+  const previous=D.clone(p.imported.pad),review=D.clone(p.reviews.pad['11']);
+  saved(store,{...D.initialState(),proposals:[p]});
+  const meta={version:1,status:'partial',source:'fixture.csv',at:'2026-10-02T12:00:00Z',received:2,accepted:1,rejected:1,reasons:[{line:2,itemId:'12',reason:'Quantidade inválida na fixture'}]};
+  const partial=data('101',{objeto:'Campo independente atualizado',pad:[{id:'11',descricao:'Candidato, não oficial',quantidade:'2',unitario:5050,total:10100}],padExtraction:meta});
+  const result=await runAndPersist({store,lockPath,source:source([partial],{'101':{}})});
+  let current=store.load().state.proposals[0];assert.deepEqual(current.imported.pad,previous);assert.deepEqual(current.reviews.pad['11'],review);
+  assert.equal(current.padImport.status,'partial');assert.equal(current.padImport.candidate[0].descricao,'Candidato, não oficial');assert.equal(current.imported.objeto,partial.objeto);
+  assert.ok(result.warnings.some(w=>/PAD incompleto/.test(w)));assert.ok(store.history()[0].activity.length);assert.equal(fs.existsSync(lockPath),false);
+  const complete={...meta,status:'complete',received:1,accepted:1,rejected:0,reasons:[]};
+  await runAndPersist({store,lockPath,source:source([data('101',{objeto:partial.objeto,pad:partial.pad,padExtraction:complete})],{'101':{}})});
+  current=store.load().state.proposals[0];assert.equal(current.padImport.status,'complete');assert.equal(current.reviews.pad['11'].status,'reanalise');assert.equal(current.reviews.pad['11'].note,review.note);
+  assert.ok(current.history.some(h=>h.event==='Extração íntegra do PAD recebida; alerta resolvido'));
+});
+
 test('sincronização completa preserva análises, diligências e exclusão; atualiza PAD e textos',async t=>{
   const {store,lockPath}=setup(t);
   const active=D.createProposal(data());

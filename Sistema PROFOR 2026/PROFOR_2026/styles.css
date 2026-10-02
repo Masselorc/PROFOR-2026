@@ -535,3 +535,30 @@ button.program-copy{min-height:28px;padding:3px 8px;font-size:.75rem}
 .report-topic-item input[type=checkbox]{margin:0;width:17px;height:17px;min-height:17px;accent-color:#155b67;cursor:pointer}
 .report-actions{margin-bottom:16px}
 @media print{.report-filter-bar,.report-actions{display:none!important}}
+.review-summary>summary{cursor:pointer;padding:12px 16px;border:1px solid var(--line);border-radius:8px;background:var(--surface);font-weight:600;min-height:44px}
+.review-summary{margin:16px 0}.review-summary[open]>summary{margin-bottom:12px}
+.item-description{min-width:0;flex:1}.item-description>summary{cursor:pointer;min-height:44px;overflow-wrap:anywhere}
+.item-description .description-action{display:block;font-size:.8rem;color:var(--brand);text-decoration:underline;margin-top:4px}
+.item-description[open] .pad-desc-text{display:block;-webkit-line-clamp:unset;overflow:visible}
+.business-text{white-space:pre-wrap;overflow-wrap:anywhere;margin-top:8px}
+#save-state{display:block;margin:12px 0;padding:10px;border:1px solid var(--line);border-radius:6px;background:#f5f8fa;color:var(--ink);overflow-wrap:anywhere}
+#save-state[data-state="error"],#save-state[data-state="conflict"]{color:var(--bad);border-color:var(--bad);font-weight:600}
+.badge.work{background:#e7eff7;color:#244e73}
+.pad-table{min-width:0;table-layout:fixed}
+.pad-table .status-dropdown,.pad-table .status-pill{max-width:100%;white-space:normal}
+.pad-table .status-pill-label{white-space:normal;overflow-wrap:anywhere}
+@media(min-width:761px){.pad-table col.c-pad-item{width:30%}.pad-table col.c-pad-qtd{width:8%}.pad-table col.c-pad-unit{width:12%}.pad-table col.c-pad-total{width:18%}.pad-table col.c-pad-conf{width:12%}.pad-table col.c-pad-acao{width:20%}}
+@media(max-width:760px){
+ .pad-table{min-width:0;width:100%}.pad-table colgroup{display:none}
+ .pad-table thead{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+ .pad-table tbody,.pad-table tfoot{display:block}.pad-table tbody tr{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border:1px solid var(--line);border-radius:8px;margin:12px 0;padding:8px}
+ .pad-table tbody td{display:block;min-width:0;padding:8px!important;white-space:normal!important}
+ .pad-table .pad-desc{grid-column:1/-1}.pad-table .pad-actions{grid-column:1/-1;text-align:left}
+ .pad-table tbody td:nth-child(2)::before{content:'Quantidade';display:block;font-weight:600}
+ .pad-table tbody td:nth-child(3)::before{content:'Valor unitário';display:block;font-weight:600}
+ .pad-table tbody td:nth-child(4)::before{content:'Valor total';display:block;font-weight:600}
+ .pad-table tbody td:nth-child(5)::before{content:'Conferência';display:block;font-weight:600}
+ .pad-table tfoot tr{display:block}.pad-table tfoot td:empty{display:none}
+ .pad-table .status-dropdown,.pad-table .status-pill{max-width:100%}
+ .pad-batch-bar .actions{flex-wrap:wrap}.result-body{min-width:0}
+}

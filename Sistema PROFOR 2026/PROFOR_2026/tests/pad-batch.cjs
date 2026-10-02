@@ -1,4 +1,5 @@
 'use strict';
+const {fulfillStatic}=require('./ui-static.cjs');
 // Aprovação conjunta isolada: todos os GET/POST de /api/state ficam em memória.
 const assert=require('node:assert/strict');
 const fs=require('node:fs');
@@ -38,7 +39,7 @@ async function main(){
           return json({exists:true,state:memory,token});
         }
       }
-      if(url.origin===ORIGIN && request.method()==='GET' && STATIC.has(url.pathname))return route.continue();
+      if(url.origin===ORIGIN && request.method()==='GET' && STATIC.has(url.pathname))return fulfillStatic(route);
       blocked.push(request.url());return route.abort();
     });
     const page=await context.newPage();page.setDefaultTimeout(10000);page.on('pageerror',e=>errors.push(e.message));
@@ -127,17 +128,13 @@ async function main(){
     assert.equal(posts,9);assert.equal(memory.proposals[0].diligences.length,5);
     assert.deepEqual(memory.proposals[0].diligences.find(d=>d.id===extra.id),extraBefore,'Não modifica a diligência que não foi escolhida');
     assert.deepEqual(errors,[]);assert.deepEqual(blocked,[]);
-    // Conferência visual no RN real: apenas seleciona e abre prévia, bloqueando POST.
-    const visual=await browser.newPage({viewport:{width:1440,height:1000}});
-    await visual.route('**/api/state',route=>route.request().method()==='GET'?route.continue():route.abort());
-    await visual.goto(ORIGIN+'/PROFOR_2026.html#proposta/2243160/pad');
+    // Conferência visual reutiliza a mesma fixture isolada, sem servidor real.
+    const visual=page;
     await visual.locator('#pad-batch-header').check();await visual.locator('.pad-batch-bar').scrollIntoViewIfNeeded();
     const output=path.join(root,'output/pad-batch');fs.mkdirSync(output,{recursive:true});
-    await visual.screenshot({path:path.join(output,'rn-selecao.png')});
-    await visual.locator('#pad-batch-action').selectOption('diligencia');await visual.locator('#pad-batch-apply').click();await visual.screenshot({path:path.join(output,'rn-previa.png')});
-    await visual.getByRole('button',{name:'Cancelar',exact:true}).click();
+    await visual.screenshot({path:path.join(output,'fixture-selecao.png')});
     await visual.setViewportSize({width:390,height:844});await visual.locator('.pad-batch-bar').scrollIntoViewIfNeeded();
-    await visual.screenshot({path:path.join(output,'rn-selecao-mobile.png')});
+    await visual.screenshot({path:path.join(output,'fixture-selecao-mobile.png')});
     // A publicação mantém a consulta dos detalhes e não oferece aprovação.
     const publicPage=await browser.newPage();
     await publicPage.goto('file:///'+path.join(root,'docs/index.html').replace(/\\/g,'/')+'#proposta/2243160/pad');

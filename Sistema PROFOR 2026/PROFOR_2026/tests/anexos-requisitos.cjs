@@ -1,4 +1,5 @@
 'use strict';
+const {fulfillStatic}=require('./ui-static.cjs');
 
 /*
  * Teste de integração ISOLADO para expansão de linha e gestão de anexos:
@@ -73,7 +74,7 @@ async function main() {
         token = hash({ parent: token, state: memory });
         return route.fulfill({ status: 200, contentType: 'application/json; charset=utf-8', body: JSON.stringify({ exists: true, state: clone(memory), token }) });
       }
-      if (url.origin === ORIGIN && ['GET', 'HEAD'].includes(request.method()) && STATIC_PATHS.has(url.pathname)) return route.continue();
+      if (url.origin === ORIGIN && ['GET', 'HEAD'].includes(request.method()) && STATIC_PATHS.has(url.pathname)) return fulfillStatic(route);
       return route.abort('blockedbyclient');
     });
 
@@ -86,9 +87,9 @@ async function main() {
     await page.goto(`${URL}#proposta/${PROPOSAL_ID}/proposta`, { waitUntil: 'domcontentloaded' });
     await page.locator('#tab-content h2').filter({ hasText: 'Requisitos da Proposta' }).first().waitFor({ state: 'visible' });
 
-    // 2. Linhas iniciais da tabela devem ser exatamente 7 e SEM coluna Documento
+    // 2. Linhas iniciais da tabela devem ser exatamente 6 e SEM coluna Documento
     let rows = await page.locator('.req-table tbody tr').count();
-    assert.equal(rows, 7, `Aba Requisitos da Proposta deve ter 7 linhas iniciais, obteve ${rows}`);
+    assert.equal(rows, 6, `Aba Requisitos da Proposta deve ter 6 linhas iniciais, obteve ${rows}`);
     const headers = await page.locator('.req-table thead th').allInnerTexts();
     assert.ok(!headers.some(h => /documento/i.test(h)), 'Não deve haver coluna de Documento no cabeçalho da tabela');
     assert.deepEqual(headers.map(h => h.trim().toUpperCase()), ['ITEM', 'REQUISITO', 'FUNDAMENTAÇÃO', 'COMPROVAÇÃO', 'RESULTADO', 'AÇÃO']);
@@ -164,7 +165,7 @@ async function main() {
     await expandBtn.click();
     assert.equal(await detailRow.count(), 0, 'Linha de detalhe deve ser removida ao fechar');
     rows = await page.locator('.req-table tbody tr').count();
-    assert.equal(rows, 7, `Após recolhimento, devem restar exatamente 7 linhas`);
+    assert.equal(rows, 6, `Após recolhimento, devem restar exatamente 6 linhas`);
 
     // 15. Navegar para "Requisitos para Formalização"
     await page.getByRole('link', { name: 'Requisitos para Formalização', exact: true }).click();
@@ -198,7 +199,7 @@ async function main() {
       scenarios: [
         'Sem coluna Documento nas tabelas principais; documento visível apenas no detalhe expandido',
         'Setinha da expansão com a mesma cor do status da análise (dinâmico: neutro -> ok)',
-        'Contagem exata inicial de linhas preservada nas duas abas (7 e 13)',
+        'Contagem exata inicial de linhas preservada nas duas abas (6 e 13)',
         'Expansão e fechamento dinâmico sem poluir o DOM quando fechado',
         'Upload de arquivo, geração de base64, gravação de metadados e pill de anexo',
         'Download nativo via data:URI com nome original',

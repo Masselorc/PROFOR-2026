@@ -118,6 +118,7 @@
     const lastImport=p.history.filter(h=>h.event.includes('importada')||h.event.includes('origem')).at(-1)?.at;
     numbered('identificacao','Identificação da proposta',`<dl class="pr-facts">
       ${fact('Processo SEI da proposta',p.sei?.number || 'Não cadastrado')}
+      ${p.sei?.url?fact('Link do processo SEI',D.safeLink(p.sei.url),true):''}
       ${fact('Programa',D.PROGRAM)}
       ${fact('Proposta',D.fmtProposalNumber(i.numero))}
       ${fact('UF',i.uf)}
@@ -140,7 +141,7 @@
     }
     const merit=D.rows(p,'merito').map(([id,label])=>{
       const review=D.reviewOf(p,'merito',id);
-      return card(label,review,detail('Observação',review?.note),D.rotuloDoResultado(id,statusKey(review)));
+      return card(label,review,detail('Observação',review?.note)+detail('Referência da revisão',D.reviewCurrent(p,'merito',id)?'Atual':'Sem referência atual verificável; decisão histórica preservada'),D.rotuloDoResultado(id,statusKey(review)));
     }).join('');
     numbered('merito','Avaliação de mérito',merit);
     const pad=(i.pad||[]).map(item=>{
@@ -150,9 +151,9 @@
         <div><span class="pr-label">Unitário</span><strong>${e(D.fmtMoney(item.unitario))}</strong></div>
         <div><span class="pr-label">Total</span><strong>${e(D.fmtMoney(item.total))}</strong></div>
       </div>`;
-      return card(item.descricao,review,values+detail('Observação',review?.note),'',true);
+      return card(item.descricao,review,values+detail('Observação',review?.note)+detail('Referência da revisão',D.reviewCurrent(p,'pad',item.id)?'Atual':'Sem referência atual verificável; decisão histórica preservada'),'',true);
     }).join('');
-    numbered('pad','Plano de aplicação detalhado',pad || '<p>Nenhum item do PAD disponível nesta extração.</p>');
+    numbered('pad','Plano de aplicação detalhado',detail('Estado da extração',D.padSituacao(p).titulo)+detail('Limitação da referência',D.padSituacao(p).detalhe)+(pad || '<p>Nenhum item do PAD disponível nesta extração.</p>'));
     numbered('ouvidoria','Instituição da Ouvidoria',table([
       ['Situação',p.ouvidoria.status==='instituida'?'Instituída':p.ouvidoria.status==='pendente'?'Pendente':'Não informada'],
       ['Cláusula suspensiva aplicável confirmada',p.ouvidoria.clause?'Sim':'Não'],
@@ -164,12 +165,23 @@
       const requirements=D.CELEBRACAO.filter(item=>item.aba===tab.id).map(item=>{
         const review=p.reviews.celebracao[item.id];
         const title=`${item.label}${item.sub?' — '+item.sub:''}`;
-        const details=detail('Fundamentação',item.fundamentacao)+detail('Observação',review?.note);
+        const details=detail('Fundamentação',item.fundamentacao)+detail('Observação',review?.note)+detail('Referência da revisão',D.reviewCurrent(p,'celebracao',item.id)?'Atual':'Sem referência atual verificável; decisão histórica preservada');
         return card(title,review,details);
       }).join('');
       numbered('proposta',tab.titulo,requirements);
     }
-    numbered('situacao','Situação final da análise',`<div class="pr-final"><p><strong>${e(D.situation(p))}.</strong></p></div>`);
+    const progress=D.reviewProgress(p),finance=D.finance(p);
+    numbered('situacao','Situação final da análise',`<div class="pr-final"><p><strong>${e(D.situation(p))}.</strong></p></div>`+table([
+      ['Revisão humana',`${progress.done}/${progress.total} revisados (${progress.percent}%) — revisão não significa aprovação`],
+      ['PAD',`${progress.pad.done}/${progress.pad.total} revisados; ${progress.pad.total-progress.pad.done} pendentes; ${finance.errors.length} divergência(s) unitária(s)`],
+      ['Integridade do PAD',D.padSituacao(p).titulo],
+      ['Conclusão técnica',p.conclusion?.result||'Não registrada ou legada sem referência verificável'],
+      ['Autor/data da conclusão',p.conclusion?`${p.conclusion.actor} · ${D.fmtDate(p.conclusion.at)}`:''],
+      ['Evidências da conclusão',p.conclusion?.reference],['Justificativa da conclusão',p.conclusion?.note],
+      ['Aptidão para celebração',D.aptForCelebration(p)?(p.ouvidoria.clause?'Com cláusula suspensiva expressa':'Apta pelos controles atuais'):'Não apta pelos controles atuais'],
+      ['Fala.BR',D.rotuloDoResultado('falaBRAdesao',p.reviews.merito.falaBRAdesao.status)],
+      ['Conflitos institucionais',D.institutionalConflicts(p).length?'Fato e parecer conflitantes; conferir registros':'Nenhum conflito identificado']
+    ]));
     const bodyContent=sections.length>0
       ? sections.join('')
       : '<div class="pr-final" style="text-align:center;padding:24px 16px;"><p><strong>Nenhum tópico selecionado para o relatório.</strong></p><p class="source" style="margin-top:4px;">Marque ao menos uma caixa de seleção acima para exibir o conteúdo.</p></div>';
@@ -439,7 +451,7 @@
   function parseNum(raw) {
     if (raw === null || raw === undefined || raw === '') return null;
     if (typeof raw === 'number') return Number.isFinite(raw) ? raw : null;
-    const s = String(raw).trim().replace(/\./g, '').replace(',', '.');
+    const s = String(raw).trim().replace(',', '.');
     const n = Number(s);
     return Number.isFinite(n) ? n : null;
   }
@@ -503,7 +515,7 @@
       addBaseRow('identificacao', topName, 'Proponente', i.proponente);
       addBaseRow('identificacao', topName, 'CNPJ', D.fmtCnpj(i.cnpj));
       addBaseRow('identificacao', topName, 'Situação no Transferegov', i.situacao);
-      addBaseRow('identificacao', topName, 'Etapa na origem', D.sourceState(p));
+      addBaseRow('identificacao', topName, 'Etapa na origem', D.sourceState(i).label);
       addBaseRow('identificacao', topName, 'Data de envio para análise', D.fmtDate(i.dataEnvio));
       addBaseRow('identificacao', topName, 'Última alteração importada', D.fmtDate(lastImport));
       addBaseRow('identificacao', topName, 'Objeto', i.objeto);
@@ -512,9 +524,9 @@
     // 2. Valores
     if (isTopicIncluded('valores')) {
       const topName = 'Valores';
-      const rep = parseNum(i.repasse);
-      const ctp = parseNum(i.contrapartida);
-      const glb = parseNum(i.global);
+      const rep = (i.repasse === null ? null : i.repasse / 100);
+      const ctp = (i.contrapartida === null ? null : i.contrapartida / 100);
+      const glb = (i.global === null ? null : i.global / 100);
       addBaseRow('valores', topName, 'Repasse', null, null, null, rep, 'Informado');
       addBaseRow('valores', topName, 'Contrapartida', null, null, null, ctp, 'Informado');
       addBaseRow('valores', topName, 'Valor global', null, null, null, glb, 'Informado');
@@ -552,8 +564,8 @@
           const docs = documentNames(review).join('; ');
           const status = D.STATUSES[statusKey(review)] || 'Não analisado';
           const qtd = parseNum(item.quantidade);
-          const vUnit = parseNum(item.unitario);
-          const vTot = parseNum(item.total);
+          const vUnit = (item.unitario === null ? null : item.unitario / 100);
+          const vTot = (item.total === null ? null : item.total / 100);
           addBaseRow('pad', topName, item.descricao, null, qtd, vUnit, vTot, status, review?.note || null, null, docs || null);
         });
       } else {
@@ -592,6 +604,13 @@
     if (isTopicIncluded('situacao')) {
       const topName = 'Situação final da análise';
       addBaseRow('situacao', topName, 'Situação final', D.situation(p));
+      const v=D.reviewProgress(p);
+      addBaseRow('situacao',topName,'Revisão humana',`${v.done}/${v.total} revisados (${v.percent}%)`);
+      addBaseRow('situacao',topName,'PAD revisado',`${v.pad.done}/${v.pad.total} · ${D.finance(p).errors.length} divergência(s) unitária(s)`);
+      addBaseRow('situacao',topName,'Conclusão técnica',p.conclusion?.result||'Não registrada ou legada');
+      addBaseRow('situacao',topName,'Evidências da conclusão',p.conclusion?.reference);
+      addBaseRow('situacao',topName,'Justificativa da conclusão',p.conclusion?.note);
+      addBaseRow('situacao',topName,'Aptidão para celebração',D.aptForCelebration(p)?'Apta pelos controles atuais':'Não apta');
       const blk = D.blockers(p);
       if (blk.length) addBaseRow('situacao', topName, 'Bloqueios técnicos', blk.join('; '));
       const pend = D.pending(p);
@@ -616,8 +635,8 @@
         const docs = documentNames(review).join('; ');
         const status = D.STATUSES[statusKey(review)] || 'Não analisado';
         const qtd = parseNum(item.quantidade);
-        const vUnit = parseNum(item.unitario);
-        const vTot = parseNum(item.total);
+        const vUnit = (item.unitario === null ? null : item.unitario / 100);
+        const vTot = (item.total === null ? null : item.total / 100);
         padRows.push([
           idx + 1,
           item.descricao,
@@ -637,9 +656,9 @@
       const valRows = [
         ['tipo_valor', 'valor_reais', 'percentual_global']
       ];
-      const rep = parseNum(i.repasse);
-      const ctp = parseNum(i.contrapartida);
-      const glb = parseNum(i.global);
+      const rep = (i.repasse === null ? null : i.repasse / 100);
+      const ctp = (i.contrapartida === null ? null : i.contrapartida / 100);
+      const glb = (i.global === null ? null : i.global / 100);
       valRows.push(['Repasse', rep, glb && rep !== null ? rep / glb : null]);
       valRows.push(['Contrapartida', ctp, glb && ctp !== null ? ctp / glb : null]);
       valRows.push(['Valor global', glb, glb ? 1.0 : null]);

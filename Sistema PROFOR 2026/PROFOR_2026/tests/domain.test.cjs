@@ -5,7 +5,8 @@ const T=require('../transferegov.js');
 const fs=require('node:fs');
 const path=require('node:path');
 function data(overrides={}) {return {id:'101',numero:'TESTE-101/2026',uf:'AP',programa:D.PROGRAM,proponente:'DADOS FICTÍCIOS — TESTE',cnpj:'',orgao:'',objeto:'Exclusivo para teste automatizado',situacao:'Teste',data:'2026-09-15',repasse:10000,contrapartida:100,global:10100,pad:[{id:'11',descricao:'Item fictício',quantidade:'2',unitario:5050,total:10100}],...overrides};}
-function ready(){const p=D.createProposal(data());for(const r of D.referenceRows(p))p.reviews[r.group][r.id].status='ok';p.ouvidoria.status='instituida';return p;}
+function ready(){const p=D.createProposal(data({situacao:'Proposta/Plano de Trabalho Enviado para Análise'}));for(const r of D.referenceRows(p))D.markReview(p,r.group,r.id,true,'Teste');return p;}
+function conclude(p){D.confirmConclusion(p,{result:'favoravel',reference:'Evidências sintéticas conferidas',expectedEvidence:D.technicalEvidence(p),operationId:D.uid()},'Teste');}
 test('centavos e vazio sem conversão silenciosa a zero',()=>{assert.equal(D.moneyBR('200.200,20'),20020020);assert.equal(D.moneyBR('0'),0);assert.equal(D.moneyBR(''),null);assert.throws(()=>D.moneyBR('NaN'));assert.throws(()=>D.moneyBR('-1,00'));assert.throws(()=>D.moneyBR('1.2345'));});
 test('multiplicação decimal exata e arredondamento',()=>{assert.equal(D.multiply('3',10),30);assert.equal(D.multiply('1.5',101),152);assert.equal(D.multiply('0.01',100),1);assert.equal(D.quantityBR('1.000,25'),'1000.25');assert.throws(()=>D.quantityBR('0'));});
 test('unitário derivado do total aceita dízimas sem falso erro',()=>{assert.equal(D.multiply('3',522933),1568799);assert.equal(D.unitFromTotal('3',1568800),522933);assert.equal(D.unitFromTotal('4',244063),61016);assert.equal(D.unitFromTotal('1.5',152),101);assert.equal(D.unitMatchesTotal({quantidade:'3',unitario:522933,total:1568800}),true);assert.equal(D.unitMatchesTotal({quantidade:'3',unitario:522934,total:1568800}),false);});
@@ -13,7 +14,7 @@ test('ausência de PAD e valores não equivale a consistência',()=>{const p=D.c
 test('controles financeiros independentes',()=>{const p=ready();assert.equal(D.finance(p).ok,true);p.imported.pad[0].quantidade='3';assert.equal(D.finance(p).errors.length,1);assert.equal(D.finance(p).pad,true);p.imported.contrapartida=0;assert.equal(D.finance(p).composition,false);});
 test('datas inexistentes e mês civil',()=>{assert.throws(()=>D.dateISO('31/02/2026'));assert.equal(D.addMonths('2026-05-31',9),'2027-02-28');assert.equal(D.addMonths('2026-09-15',9),'2027-06-15');});
 test('diligência exclui ciência e prorroga fim de semana',()=>{assert.deepEqual(D.deadline('2026-09-16'),{base:'2026-09-26',adjusted:'2026-09-28'});assert.deepEqual(D.deadline(''),{base:'',adjusted:''});assert.deepEqual(D.deadlineBase('','2026-09-16'),{base:'2026-09-26',adjusted:'2026-09-28'});assert.deepEqual(D.deadlineBase('2026-09-10','2026-09-16'),{base:'2026-09-20',adjusted:'2026-09-21'});});
-test('estado inicial possui 14 UFs e 20 itens de celebração',()=>{assert.equal(Object.keys(D.UFS).length,14);assert.equal(D.REQUIREMENTS.celebracao.length,20);assert.equal(D.initialState().proposals.length,0);});
+test('estado inicial possui 14 UFs e 19 itens de celebração',()=>{assert.equal(Object.keys(D.UFS).length,14);assert.equal(D.REQUIREMENTS.celebracao.length,19);assert.equal(D.initialState().proposals.length,0);});
 test('importação idempotente e ausência de exclusão por omissão',()=>{let s=D.syncProposals(D.initialState(),[data()],'teste').state;const again=D.syncProposals(s,[data()],'teste');assert.equal(again.changes.length,0);assert.equal(D.syncProposals(s,[],'teste').state.proposals.length,1);});
 test('sincronização preserva observação, vínculo e diligência; invalida PAD',()=>{const p=ready();p.reviews.pad['11'].note='Pesquisa conferida';p.conclusion={actor:'Teste',at:D.now()};const s={...D.initialState(),proposals:[p]};const changed=data();changed.pad[0].quantidade='1';const out=D.syncProposals(s,[changed],'teste').state.proposals[0];assert.equal(out.reviews.pad['11'].status,'reanalise');assert.equal(out.reviews.pad['11'].note,'Pesquisa conferida');assert.equal(out.conclusion,null);assert.equal(p.reviews.pad['11'].status,'ok');});
 test('PAD não fornecido preserva o PAD anterior; PAD vazio remove itens importados',()=>{const s={...D.initialState(),proposals:[ready()]};assert.equal(D.syncProposals(s,[data({pad:null})],'teste').state.proposals[0].imported.pad.length,1);assert.equal(D.syncProposals(s,[data({pad:[]})],'teste').state.proposals[0].imported.pad.length,0);});
@@ -23,14 +24,14 @@ test('número da proposta recebe zero à esquerda só na apresentação',()=>{as
 test('formatação de CNPJ aplica máscara XX.XXX.XXX/XXXX-XX e trata zeros à esquerda',()=>{assert.equal(D.fmtCnpj('07954530000118'),'07.954.530/0001-18');assert.equal(D.fmtCnpj('7954530000118'),'07.954.530/0001-18');assert.equal(D.fmtCnpj('07.954.530/0001-18'),'07.954.530/0001-18');assert.equal(D.fmtCnpj(''),'');assert.equal(D.fmtCnpj(null),'');assert.equal(D.fmtCnpj(undefined),'');});
 test('requisito exige justificativa nos estados críticos e permite limpar campos',()=>{const p=ready();assert.throws(()=>D.setReview(p,'merito','destinacao',{status:'no',note:'',document:'',url:''},'Teste'));D.setReview(p,'merito','destinacao',{status:'ok',note:'',document:'',url:''},'Teste');assert.equal(p.reviews.merito.destinacao.note,'');});
 test('links executáveis e credenciais são rejeitados',()=>{assert.throws(()=>D.safeLink('javascript:alert(1)'));assert.throws(()=>D.safeLink('https://user:pass@example.com'));assert.equal(D.safeLink('https://example.com'),'https://example.com/');assert.equal(D.esc('<script>'),'&lt;script&gt;');});
-test('Fala.BR e cláusula suspensiva não impedem conclusão técnica',()=>{const p=ready();p.falaBR='nao_previsto';p.ouvidoria.status='pendente';p.ouvidoria.clause=true;assert.deepEqual(D.blockers(p),[]);assert.deepEqual(D.blockers(p,true),[]);p.conclusion={actor:'Teste',at:D.now()};assert.equal(D.situation(p),'Formalização com cláusula suspensiva');p.ouvidoria.clause=false;assert.ok(D.blockers(p,true).length);});
+test('Fala.BR e cláusula suspensiva não impedem conclusão técnica',()=>{const p=ready();D.markReview(p,'merito','falaBRAdesao',false,'Teste');D.setReview(p,'merito','ouvidoriaInstituida',{status:'no',note:'A instituir',document:'',url:''},'Teste');D.setInstitution(p,{ouvidoria:{...p.ouvidoria,clause:true}},'Teste');D.markReview(p,'merito','ouvidoriaInstituida',false,'Teste');assert.deepEqual(D.blockers(p),[]);assert.deepEqual(D.blockers(p,true),[]);conclude(p);assert.equal(D.situation(p),'Formalização com cláusula suspensiva');p.ouvidoria.clause=false;assert.ok(D.blockers(p,true).length);});
 test('diligência sem registro impede conclusão',()=>{const p=ready();p.reviews.pad['11'].status='diligencia';assert.equal(D.pending(p).length,1);assert.ok(D.blockers(p).includes('Marcação de diligência sem registro ativo'));});
 const diligence=(overrides={})=>({ref:'pad:11',category:'PLANO DE APLICAÇÃO DETALHADO',request:'Comprovar o item fictício',communication:'2026-09-15',science:'2026-09-15',response:'',due:'',confirmed:false,calendarNote:'',status:'aberta',note:'',...overrides});
 test('saneamento exige resposta e decisão não é aplicada ao requisito',()=>{const p=ready();p.reviews.pad['11'].status='diligencia';assert.throws(()=>D.saveDiligence(p,diligence({status:'saneada',note:'Ok'}),'Teste'));const d=D.saveDiligence(p,diligence({status:'saneada',note:'Conferido',response:'2026-09-16'}),'Teste');assert.equal(p.reviews.pad['11'].status,'diligencia');assert.equal(D.mayResolveReference(p,d),true);D.saveDiligence(p,diligence(),'Teste');assert.equal(D.mayResolveReference(p,d),false);});
 test('vencimento automático ignora edição manual e dispensa conferência',()=>{const p=ready();const d=D.saveDiligence(p,diligence({communication:'2020-09-15',science:'2020-09-16',confirmed:true,due:'2099-01-01',calendarNote:''}),'Teste');assert.equal(d.due,'2020-09-25');assert.equal(d.automaticDeadline,true);assert.equal(d.confirmed,false);assert.equal(d.calendarNote,'');assert.equal(D.diligenceLabel(d),'Prazo expirado');assert.equal(D.validateState({...D.initialState(),proposals:[p]}).proposals[0],p);});
 test('prazo recalcula ao editar comunicação e limpa quando ela está vazia',()=>{const p=ready();const first=D.saveDiligence(p,diligence(),'Teste');const updated=D.saveDiligence(p,diligence({id:first.id,communication:'2026-09-16'}),'Teste');assert.equal(updated.due,'2026-09-28');assert.equal(updated.science,'2026-09-15');D.validateState({...D.initialState(),proposals:[p]});const blank=D.saveDiligence(p,diligence({id:first.id,communication:''}),'Teste');assert.equal(blank.due,'');assert.equal(blank.base,'');assert.notEqual(D.diligenceLabel(blank),'Prazo expirado');D.validateState({...D.initialState(),proposals:[p]});});
 test('backup valida cálculo automático e preserva registros legados',()=>{const p=ready();const d=D.saveDiligence(p,diligence(),'Teste');const s={...D.initialState(),proposals:[p]};d.due='2026-09-26';assert.throws(()=>D.validateState(s),/Vencimento automático/);delete d.automaticDeadline;d.confirmed=true;d.calendarNote='Conferência histórica';D.validateState(s);const saved=D.saveDiligence(p,{...d,communication:'2026-09-16'},'Teste');assert.equal(saved.due,'2026-09-28');assert.equal(saved.calendarNote,'Conferência histórica');assert.equal(saved.confirmed,false);D.validateState(s);});
-test('prazo sem ciência usa a data da comunicação como base',()=>{const p=ready();const d=D.saveDiligence(p,diligence({communication:'2026-09-16',science:'',confirmed:true,due:'2026-09-28',calendarNote:'Feriados conferidos'}),'Teste');assert.equal(d.base,'2026-09-26');assert.equal(d.due,'2026-09-28');assert.equal(d.science,'');assert.equal(D.diligenceLabel(d),D.DSTATUS.aberta);});
+test('prazo sem ciência usa a data da comunicação como base',t=>{t.mock.timers.enable({apis:['Date'],now:new Date('2026-09-17T12:00:00Z')});const p=ready();const d=D.saveDiligence(p,diligence({communication:'2026-09-16',science:'',confirmed:true,due:'2026-09-28',calendarNote:'Feriados conferidos'}),'Teste');assert.equal(d.base,'2026-09-26');assert.equal(d.due,'2026-09-28');assert.equal(d.science,'');assert.equal(D.diligenceLabel(d),D.DSTATUS.aberta);});
 test('backup valida versão, status e duplicação',()=>{const s={...D.initialState(),proposals:[ready()]};assert.equal(D.validateState(s),s);assert.throws(()=>D.validateState({...s,schemaVersion:2}));assert.throws(()=>D.validateState({...s,proposals:[ready(),ready()]}));s.proposals[0].reviews.merito.destinacao.status='inventado';assert.throws(()=>D.validateState(s));});
 test('textos oficiais ficam fora de imported e sobrevivem à sincronização',()=>{
   const p=ready();
@@ -62,7 +63,7 @@ test('textos oficiais inválidos são recusados sem alterar a proposta',()=>{
   const legado=ready();assert.equal(legado.textos,undefined);D.validateState({...D.initialState(),proposals:[legado]});
 });
 test('marcação direta de conformidade grava em um clique e cobra justificativa depois',()=>{
-  const p=ready(),s={...D.initialState(),proposals:[p]};
+  const p=ready(),s={...D.initialState(),proposals:[p]},previous=p.history.filter(h=>/Avaliação: merito \/ destinacao/.test(h.event)).length;
   D.markReview(p,'merito','destinacao',true,'Teste');
   assert.equal(D.reviewOf(p,'merito','destinacao').status,'ok','Conformidade grava como atende');
   assert.deepEqual(D.semJustificativa(p),[]);
@@ -81,7 +82,7 @@ test('marcação direta de conformidade grava em um clique e cobra justificativa
   assert.equal(D.reviewOf(p,'merito','destinacao').note,'Não comprova o item 4.2 do edital.','Voltar atrás não apaga a observação');
   assert.throws(()=>D.setReview(p,'merito','destinacao',{status:'no',note:'',document:'',url:''},'Teste'),/justificativa/,'O formulário continua exigindo justificativa');
   assert.throws(()=>D.markReview(p,'merito','destinacao','sim','Teste'),/Marcação inválida/);
-  assert.equal(p.history.filter(h=>/Avaliação: merito \/ destinacao/.test(h.event)).length,5,'Toda marcação entra no histórico');
+  assert.equal(p.history.filter(h=>/Avaliação: merito \/ destinacao/.test(h.event)).length-previous,5,'Toda marcação entra no histórico');
 });
 test('clone preserva undefined sem lançar "undefined is not valid JSON"',()=>{
   assert.equal(D.clone(undefined),undefined);
@@ -203,7 +204,7 @@ test('situação mostra "Em elaboração na origem" quando a proposta não foi e
   assert.equal(D.situation(ready()),'Em análise');
   assert.equal(D.situation(D.createProposal(data({situacao:'Proposta/Plano de Trabalho Cadastrados'}))),'Em elaboração na origem','andamento ONASP da proposta ainda não enviada');
   assert.equal(D.situation(D.createProposal(data({situacao:'Proposta/Plano de Trabalho Enviado para Análise'}))),'Em análise');
-  const enviada=ready();enviada.imported.situacao='Proposta/Plano de Trabalho Enviado para Análise';enviada.conclusion={actor:'Teste',at:D.now()};
+  const enviada=ready();enviada.imported.situacao='Proposta/Plano de Trabalho Enviado para Análise';conclude(enviada);
   assert.equal(D.situation(enviada),'Apta à celebração');
 });
 test('etapa da origem não altera PAD, valores nem bloqueios da análise',()=>{
@@ -219,17 +220,17 @@ test('etapa da origem não altera PAD, valores nem bloqueios da análise',()=>{
    33369201) e os conferidos no ato da celebração. A divisão é de TELA: as duas abas
    leem e gravam a mesma coleção `reviews.celebracao`, sem estado duplicado, sem
    migração de banco e sem invalidar vínculos de diligência ou backups anteriores. */
-test('as duas abas de celebração cobrem os 20 itens da lista, sem sobreposição',()=>{
+test('as duas abas de celebração cobrem os 19 itens da lista, sem sobreposição',()=>{
   const proposta=D.ABAS_CELEBRACAO.find(a=>a.id==='proposta'),formal=D.ABAS_CELEBRACAO.find(a=>a.id==='formalizacao');
   assert.ok(proposta && formal);
   assert.equal(proposta.titulo,'Requisitos da Proposta');
   assert.equal(formal.titulo,'Requisitos para Formalização');
   const idsProposta=D.CELEBRACAO.filter(x=>x.aba==='proposta').map(x=>x.id);
   const idsFormal=D.CELEBRACAO.filter(x=>x.aba==='formalizacao').map(x=>x.id);
-  /* Itens 2, 3, 4, 5, 6, 7 e 11 são os analisados nos dois pareceres dos autos. */
-  assert.deepEqual(idsProposta,['2','3','4','5','6','7','11']);
-  assert.equal(idsProposta.length+idsFormal.length,20);
-  assert.equal(new Set([...idsProposta,...idsFormal]).size,20);
+  /* Itens 3, 4, 5, 6, 7 e 11 são os analisados nos dois pareceres dos autos. */
+  assert.deepEqual(idsProposta,['3','4','5','6','7','11']);
+  assert.equal(idsProposta.length+idsFormal.length,19);
+  assert.equal(new Set([...idsProposta,...idsFormal]).size,19);
   assert.deepEqual([...idsProposta,...idsFormal].sort(),D.REQUIREMENTS.celebracao.map(([id])=>id).sort());
 });
 test('cada item da Lista de Conferência traz fundamentação e comprovação transcritas',()=>{
@@ -270,12 +271,12 @@ test('as duas abas gravam no mesmo item, sem estado duplicado',()=>{
 });
 test('aba e vínculo de diligência mantêm a chave de armazenamento (celebracao:<item>)',()=>{
   const p=ready();
-  assert.equal(D.tabLabel('proposta','2'),'Requisitos da Proposta');
+  assert.equal(D.tabLabel('proposta','3'),'Requisitos da Proposta');
   assert.equal(D.tabLabel('formalizacao','1.1'),'Requisitos para Formalização');
   assert.equal(D.tabLabel('celebracao','1.1'),'Requisitos para Formalização');
   assert.equal(D.tabLabel('merito','destinacao'),'Mérito');
   const refs=D.referenceRows(p).filter(r=>r.group==='celebracao');
-  assert.equal(refs.length,20);
+  assert.equal(refs.length,19);
   assert.equal(refs.find(r=>r.id==='1.1').ref,'celebracao:1.1');
   assert.equal(refs.find(r=>r.id==='1.1').tab,'Requisitos para Formalização');
   /* id numérico do PAD não pode herdar metadados da celebração */
@@ -286,8 +287,8 @@ test('aba e vínculo de diligência mantêm a chave de armazenamento (celebracao
 test('pendências nomeiam as duas abas; conclusão técnica segue sem elas',()=>{
   const p=D.createProposal(data());
   const b=D.blockers(p,true);
-  assert.ok(b.includes('Requisitos da Proposta: 0/7 atendidos'),b.join(' | '));
-  assert.ok(b.includes('Requisitos para Formalização: 0/13 atendidos'));
+  assert.ok(b.includes('Requisitos da Proposta: 0/6 atendidos e atuais; 0/6 revisados'),b.join(' | '));
+  assert.ok(b.includes('Requisitos para Formalização: 0/13 atendidos e atuais; 0/13 revisados'));
   assert.ok(!b.some(x=>x.startsWith('celebracao:')),'nome do grupo não pode vazar para a tela');
   assert.ok(!D.blockers(p).some(x=>x.startsWith('Requisitos')),'celebração não bloqueia a conclusão técnica');
 });

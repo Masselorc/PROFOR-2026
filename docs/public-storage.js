@@ -14,7 +14,7 @@
   async function read(key='current'){
     const state = root.PROFOR_PUBLIC_DATA;
     if(!state) throw new Error('Base de dados pública não localizada.');
-    if(key === 'current') return state;
+    if(key === 'current') return root.Profor.clone(state);
     return null;
   }
 
@@ -29,7 +29,7 @@
   async function history(){
     const state=root.PROFOR_PUBLIC_DATA;
     if(!state)throw new Error('Base de dados pública não localizada.');
-    return Array.isArray(state.syncHistory)?state.syncHistory:[];
+    return root.Profor.clone(Array.isArray(state.syncHistory)?state.syncHistory:[]);
   }
 
   root.ProforStore = { open, read, save, legacy, history };

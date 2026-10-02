@@ -1,4 +1,8 @@
+const {fulfillStatic}=require('./ui-static.cjs');
 const fs = require('fs');
+const path=require('node:path');
+const output=path.resolve(__dirname,'../../../output/playwright/prioridades/painel');
+fs.mkdirSync(output,{recursive:true});
 const assert = require('assert');
 const playwrightPath = process.env.PROFOR_PLAYWRIGHT_PATH ||
   (fs.existsSync('C:/Users/marcelo.cortez/AppData/Local/npm-cache/_npx/9833c18b2d85bc59/node_modules/playwright')
@@ -39,7 +43,7 @@ async function main() {
     if (u.pathname === '/api/state') {
       return route.fulfill({ status: 200, contentType: 'application/json', body: JSON.stringify({ exists: true, state, token: '1' }) });
     }
-    return route.continue();
+    return fulfillStatic(route);
   });
 
   try {
@@ -58,7 +62,7 @@ async function main() {
     assert.ok(btnClasses.includes('tom-'), `Botão deve ter classe de tom: ${btnClasses}`);
 
     // Captura inicial com linhas recolhidas
-    await page.screenshot({ path: 'C:/Users/marcelo.cortez/.gemini/antigravity/brain/5307e7b8-eab1-44af-b1f7-31284bcc5730/painel_recolhido.png' });
+    await page.screenshot({ path: path.join(output,'painel_recolhido.png') });
 
     // 3. Expansão via clique no botão .row-expand
     await expandBtnMG.click();
@@ -84,7 +88,7 @@ async function main() {
     assert.equal(await summaryMG.locator('button.copy-cnpj').count(), 1, 'Botão de cópia de CNPJ presente');
 
     // Captura com MG expandido
-    await page.screenshot({ path: 'C:/Users/marcelo.cortez/.gemini/antigravity/brain/5307e7b8-eab1-44af-b1f7-31284bcc5730/painel_expandido_mg.png' });
+    await page.screenshot({ path: path.join(output,'painel_expandido_mg.png') });
 
     // 7. Recolher via clique no botão .row-expand
     await expandBtnMG.click();
@@ -116,7 +120,7 @@ async function main() {
     await summaryAP.waitFor({ state: 'visible' });
     const textAP = await summaryAP.innerText();
     assert.ok(textAP.includes('Amapá (AP)') && textAP.includes('não tem proposta vinculada'), `Resumo de AP deve ser informativo: ${textAP}`);
-    await page.screenshot({ path: 'C:/Users/marcelo.cortez/.gemini/antigravity/brain/5307e7b8-eab1-44af-b1f7-31284bcc5730/painel_expandido_ap.png' });
+    await page.screenshot({ path: path.join(output,'painel_expandido_ap.png') });
     await expandBtnAP.click();
     assert.equal(await page.locator('tr#summary-AP').count(), 0, 'AP recolhido');
 

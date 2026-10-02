@@ -43,6 +43,7 @@ const BASE_URL = `https://${HOST}/downloads`;
 const CONTAINER_URL = `${BASE_URL}/dadosgov/?restype=container&comp=list`;
 const CACHE_DIR = path.join(__dirname, '.cache');
 const CACHE_FILE = path.join(CACHE_DIR, 'sync-result.json');
+const CACHE_VERSION = 2;
 const DEFAULT_TIMEOUT_MS = 10 * 60 * 1000;
 const MAX_REDIRECTS = 5;
 const EOCD_SIGNATURE = 0x06054b50;
@@ -197,11 +198,13 @@ function enumerateBlobs(xml) {
     const block = text.slice(start, end);
     const lastModified = /<Last-Modified>([\s\S]*?)<\/Last-Modified>/.exec(block);
     const contentLength = /<Content-Length>([\s\S]*?)<\/Content-Length>/.exec(block);
+    const etag = /<Etag>([\s\S]*?)<\/Etag>/i.exec(block);
     const bytes = Number(contentLength ? contentLength[1] : NaN);
     blobs.push({
       name: decodeXml(names[i][1]),
       bytes: Number.isFinite(bytes) ? bytes : null,
-      lastModified: lastModified ? lastModified[1].trim() : null
+      lastModified: lastModified ? lastModified[1].trim() : null,
+      etag: etag ? decodeXml(etag[1].trim()) : null
     });
   }
   return blobs;
@@ -668,15 +671,15 @@ function ensureCacheDir() {
   return CACHE_DIR;
 }
 
-function readCache() {
-  try { return JSON.parse(fs.readFileSync(CACHE_FILE, 'utf8')); }
+function readCache(file=CACHE_FILE) {
+  try { return JSON.parse(fs.readFileSync(file, 'utf8')); }
   catch { return null; }
 }
 
-function writeCache(entry) {
+function writeCache(entry,file=CACHE_FILE) {
   try {
-    ensureCacheDir();
-    fs.writeFileSync(CACHE_FILE, JSON.stringify(entry));
+    fs.mkdirSync(path.dirname(file),{recursive:true});
+    fs.writeFileSync(file, JSON.stringify(entry));
   } catch (err) {
     return `Não foi possível gravar o cache em .cache/: ${err.message}.`;
   }
@@ -685,10 +688,10 @@ function writeCache(entry) {
 
 /* Assinatura de estado dos blobs relevantes: nome, bytes e lastModified. */
 function signatureOf(blobs, names) {
-  return names
+  return [...new Set(names)].sort()
     .map(name => {
       const blob = blobs.find(b => b.name === name);
-      return blob ? `${blob.name}:${blob.bytes}:${blob.lastModified}` : `${name}:ausente`;
+      return blob ? `${blob.name}:${blob.bytes}:${blob.lastModified}:${blob.etag||''}` : `${name}:ausente`;
     })
     .join('|');
 }
@@ -698,6 +701,7 @@ function signatureOf(blobs, names) {
    difere em `source.pad` e no `pad` de cada proposta. */
 function cachedUsable(cached, signature, pad) {
   if (!cached || !cached.response || !Array.isArray(cached.response.proposals)) return false;
+  if (cached.version !== CACHE_VERSION || !signature) return false;
   if (cached.blobs !== signature) return false;
   if (cached.pad !== pad) return false;
   return cached.response.source?.pad === pad;
@@ -729,13 +733,15 @@ async function downloadBlob(blob, options = {}) {
   const stampFile = `${target}.stamp`;
   let current = blob;
   for (let attempt = 1; ; attempt++) {
-    const stamp = `${current.bytes}:${current.lastModified}`;
-    if (!options.force && fs.existsSync(target)) {
+    const stamp = `${current.bytes}:${current.lastModified}:${current.etag||''}`;
+    const reliable=Number.isSafeInteger(current.bytes) && current.bytes>0 && (current.etag || Number.isFinite(Date.parse(current.lastModified)));
+    if (!options.force && reliable && fs.existsSync(target)) {
       try {
         if (fs.readFileSync(stampFile, 'utf8') === stamp) {
           const cachedBytes = fs.statSync(target).size;
+          assertDownloadMatches({observedBytes:cachedBytes,expectedBytes:current.bytes,name:current.name});
           if (typeof options.onBytes === 'function') options.onBytes(cachedBytes, current.bytes);
-          return { path: target, bytes: cachedBytes, cached: true, lastModified: current.lastModified, etag: null, effectiveLastModified: null, expectedBytes: current.bytes };
+          return { path: target, bytes: cachedBytes, cached: true, lastModified: current.lastModified, etag: current.etag || null, effectiveLastModified: null, expectedBytes: current.bytes };
         }
       } catch { /* sem carimbo: baixa novamente */ }
     }
@@ -787,7 +793,9 @@ async function downloadBlob(blob, options = {}) {
     }
     fs.renameSync(partial, target);
     /* Carimbo guarda a identidade usada na comparação com a listagem seguinte. */
-    try { fs.writeFileSync(stampFile, `${current.bytes}:${current.lastModified}`); } catch { /* carimbo é opcional */ }
+    const actualEtag=headers && (headers.etag || headers.ETag),actualDate=headers && (headers['last-modified'] || headers['Last-Modified']);
+    const matchesGeneration=(!current.etag || !actualEtag || current.etag===actualEtag) && (!current.lastModified || !actualDate || Date.parse(current.lastModified)===Date.parse(actualDate));
+    try { if(matchesGeneration)fs.writeFileSync(stampFile, `${current.bytes}:${current.lastModified}:${current.etag||''}`);else if(fs.existsSync(stampFile))fs.unlinkSync(stampFile); } catch { /* carimbo é opcional */ }
     if (typeof options.onBytes === 'function') options.onBytes(written, current.bytes);
     return {
       path: target,
@@ -826,15 +834,20 @@ async function runSync(options = {}) {
   const listedAt = new Date().toISOString();
   const byName = new Map(listed.map(blob => [blob.name, blob]));
   const wanted = pad ? BLOB_ORDER : BLOB_ORDER.filter(name => name !== BLOBS.pad);
-  const available = wanted.map(name => byName.get(name) || { name, bytes: null, lastModified: null });
+  for(const name of wanted)if(!byName.has(name))throw new SyncError(`Fonte obrigatória ausente da listagem: ${name}. Dados anteriores devem ser preservados.`,502);
+  const available = wanted.map(name => byName.get(name));
+  const reliable=available.every(b=>Number.isSafeInteger(b.bytes) && b.bytes>0 && (b.etag || Number.isFinite(Date.parse(b.lastModified))));
+  const listedSignature=reliable?signatureOf(listed,wanted):null;
+  if(!reliable)warnings.push('Metadados de geração incompletos: arquivos revalidados; cache de resultado não certificado.');
+  const cacheFile=options.cacheFile||CACHE_FILE;
   const lastDataStep = 2 * wanted.length + 2;
   const steps = options.totalSteps ?? lastDataStep;
 
   /* Só usa o cache na operação normal do servidor. Execuções com origem
      injetada (testes e diagnóstico offline) sempre recalculam. */
   if (!force && !isolated) {
-    const cached = readCache();
-    if (cachedUsable(cached, signatureOf(listed, [BLOBS.program, BLOBS.proposal]), pad)) {
+    const cached = readCache(cacheFile);
+    if (cachedUsable(cached, listedSignature, pad)) {
       emit({ kind: 'stage', message: 'Extração recente encontrada no cache local; preparando os dados…', step: lastDataStep, steps, loaded: null, total: null });
       /* Devolve o payload COMPLETO com `unchanged` apenas como metadado: o cache
          é do servidor e não conhece o estado do navegador. Um cliente novo (ou
@@ -874,9 +887,10 @@ async function runSync(options = {}) {
     lastModified: files[name]?.lastModified ?? null,
     etag: files[name]?.etag ?? null
   });
-  const signature = [BLOBS.program, BLOBS.proposal]
-    .map(name => `${name}:${files[name].bytes}:${files[name].lastModified}`)
-    .join('|');
+  // Sem geração confiável, reler os arquivos em cada execução. Não certificar
+  // indefinidamente o cache pela hora local. Mudança durante download não sela cache.
+  const signature = available.every(b=>files[b.name].bytes===b.bytes && files[b.name].lastModified===b.lastModified && (!b.etag || !files[b.name].etag || b.etag===files[b.name].etag) && (!b.lastModified || !files[b.name].effectiveLastModified || Date.parse(b.lastModified)===Date.parse(files[b.name].effectiveLastModified)))?listedSignature:null;
+  if(reliable && !signature)warnings.push('Geração recebida difere da listagem: resultado não certificado no cache; revalidação necessária.');
 
   /* Passada 1: ID_PROGRAMA de COD_PROGRAMA = 3000020260022. */
   progress('Lendo programas…');
@@ -951,23 +965,12 @@ async function runSync(options = {}) {
   if (pad) {
     progress('Lendo itens do plano de aplicação…');
     emit({ kind: 'stage', message: `Lendo ${BLOBS.pad} e selecionando itens do PAD…`, step: wanted.length + 5, steps, loaded: 0, total: null });
-    let padItems = 0;
+    const collector=D.padCollector(proposals,BLOBS.pad,listedAt);
     padStats = await scanZipCsv(files[BLOBS.pad].path, COLUMNS[BLOBS.pad], row => {
-      const proposal = proposals.get(text(row.ID_PROPOSTA));
-      if (!proposal) return;
-      const id = text(row.ID_ITEM_PAD);
-      if (!id || proposal.pad.some(item => item.id === id)) { warnings.push(`Item do PAD ignorado (ID ausente ou duplicado) na proposta ${proposal.numero}.`); return; }
-      let quantidade;
-      try { quantidade = quantityBR(row.QTD_ITEM); }
-      catch { warnings.push(`Item ${id} da proposta ${proposal.numero} ignorado: quantidade inválida.`); return; }
-      if (!quantidade) { warnings.push(`Item ${id} da proposta ${proposal.numero} ignorado: quantidade ausente.`); return; }
-      let unitario, total;
-      try { unitario = moneyBR(row.VALOR_UNITARIO_ITEM); total = moneyBR(row.VALOR_TOTAL_ITEM); }
-      catch { warnings.push(`Item ${id} da proposta ${proposal.numero} ignorado: valor monetário inválido.`); return; }
-      if (unitario === null || total === null) { warnings.push(`Item ${id} da proposta ${proposal.numero} ignorado: valor unitário ou total ausente.`); return; }
-      proposal.pad.push({ id, descricao: text(row.DESCRICAO_ITEM), quantidade, unitario, total });
-      padItems++;
+      collector.row(row,{quantity:quantityBR,money:moneyBR});
     }, { sourceName: BLOBS.pad, onBytes: (loaded, total) => emit({ kind: 'progress', loaded, total }) });
+    collector.finish();
+    for(const p of proposals.values())if(p.padExtraction.status==='partial')warnings.push(`Proposta ${p.numero}: importação incompleta do PAD (${p.padExtraction.rejected} rejeição(ões)); último PAD íntegro preservado.`);
     emit({ kind: 'action', message: `${BLOBS.pad}: ${padStats.rows} linha(s) lida(s).` });
   } else {
     warnings.push('PAD não solicitado (pad=0): o PAD anterior de cada proposta existente será preservado.');
@@ -1008,7 +1011,7 @@ async function runSync(options = {}) {
   };
 
   if (!isolated && result.length) {
-    const warning = writeCache({ blobs: signature, pad, at: listedAt, response });
+    const warning = writeCache({ version:CACHE_VERSION, blobs: signature, pad, at: listedAt, response },cacheFile);
     if (warning) response.warnings.push(warning);
   }
   return response;

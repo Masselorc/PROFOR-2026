@@ -41,7 +41,7 @@ O OneDrive sincroniza a pasta completa. Marque-a como **Sempre manter neste disp
 ## Primeiro uso
 
 1. Abra `INICIAR SISTEMA.cmd` ou instale o atalho por `INSTALAR ATALHO.cmd`.
-2. Preencha seu nome no menu lateral, para identificar os registros manuais.
+2. Confira a revisão disponível. Os registros manuais usam a identificação “Usuário local” já adotada pelo sistema.
 3. Clique em **Sincronização** e, na janela, em **Atualizar Dados**. Essa ação baixa, descompacta e cruza as extrações oficiais de propostas e PAD, consulta os textos oficiais das propostas encontradas e grava o conjunto no banco local. Não há nada para anexar nem arquivo para escolher.
 4. Acompanhe a barra, a etapa corrente e o registro de atividades. A operação pode ser cancelada; nada é gravado no banco antes do fim.
 5. Ao concluir, confira o resumo (propostas, textos atualizados, alterações, UFs cobertas, itens de PAD e hora) e a tabela de alterações. Se a extração de propostas não tiver mudado, o servidor pode reutilizar seu cache; os textos são conferidos na mesma execução.
@@ -92,16 +92,9 @@ Conteúdo apurado nessa medição: **12 propostas** vinculadas ao programa, cobr
 
 ### Status e colunas do painel
 
-A tabela principal de acompanhamento foi simplificada para **8 colunas**, todas **centralizadas**:
+A tabela principal tem nove colunas: expansão, Unidade Federativa, Proposta, Valor global, Mérito, Diligências, Celebração, Status e ação de detalhe. Mérito, PAD e celebração usam revisão humana atual; conferência aritmética e aceitação são medidas separadas. Celebração reúne os 19 requisitos existentes uma única vez (6 da proposta e 13 da formalização).
 
-1. **Unidade Federativa** — centralizada na célula (bandeira oficial, sigla e nome).
-2. **Proposta** — número da proposta de referência da UF com link.
-3. **Valor global** — valor global da proposta.
-4. **Habilitação** — progresso das checagens de habilitação.
-5. **Mérito** — progresso dos itens de mérito.
-6. **Diligências** — contagem de diligências abertas e pendências sem registro.
-7. **Celebração** — progresso dos **20 requisitos** da Lista de Conferência (a soma das abas "Requisitos da Proposta" e "Requisitos para Formalização").
-8. **Status** — andamento do trabalho de análise técnica (análise ONASP).
+Busca, status interno, situação na origem e controle são combinados em cada proposta antes do agrupamento por UF. Linha, resumo, valor e link usam somente as correspondentes. A contagem e o total filtrado são indicados separadamente dos cartões, que representam todas as propostas ativas. UFs sem proposta aparecem quando não há critérios incompatíveis; apagadas permanecem na Lixeira.
 
 A coluna **"Status no Transferegov"** foi removida da tabela principal a pedido do usuário, simplificando o acompanhamento e eliminando qualquer proximidade lexical com a coluna de análise. A situação da extração oficial (`SIT_PROPOSTA`), com seu selo conciso e o texto literal da extração, **continua preservada e acessível**:
 - Nos **cartões do resumo expandido** de cada UF (ao clicar na linha ou teclar Enter/Espaço);
@@ -123,12 +116,15 @@ O botão da interface executa sempre a sincronização completa, com PAD e texto
 
 ### Por que a aba "Plano de aplicação" pode aparecer vazia
 
-São **duas causas diferentes**, e a tela agora diz qual é qual (antes as duas mostravam o mesmo aviso):
+A tela distingue quatro estados; extração incompleta não se confunde com ausência legítima de itens:
 
 1. **"Sem itens publicados na origem"** — o arquivo oficial do PAD foi baixado e lido, e a proposta **realmente não tem nenhum item** nos dados abertos do Transferegov. Não há nada a corrigir no sistema; a conferência fica pendente na origem. A aba mostra a origem e a data da última sincronização.
-2. **"PAD não carregado"** — situação herdada de uma sincronização antiga sem PAD ou de importação incompleta. Use o botão único de sincronização para consultar o PAD.
+2. **"PAD não carregado"** — situação herdada de uma sincronização antiga sem PAD ou de um PAD ainda não solicitado. Use o botão único de sincronização para consultar o PAD.
 
-O cartão do resumo expandido também distingue os dois casos ("nenhum item publicado na extração oficial" × "PAD não carregado — sincronize sem a opção rápida").
+3. **“Importação incompleta do PAD”** — rejeições impedem aplicar o candidato. O último PAD íntegro permanece identificado como antigo; candidato e motivos podem ser consultados separadamente.
+4. **PAD íntegro com itens** — itens carregados, com revisão humana própria.
+
+O cartão do resumo expandido também distingue os estados ("nenhum item publicado na extração oficial" × "PAD não carregado — sincronize sem a opção rápida").
 
 **Caso medido em 15/09/2026 nos dados oficiais:** das **12 propostas** do programa, **apenas a RS 35250/2026 tem itens publicados (14)**. **Nenhuma das 6 de Pernambuco** tem — nem a **35405/2026**, a única de PE já **enviada para análise** — e as outras cinco ainda estão "Cadastrados". Ou seja: o PAD não depende do envio da proposta; ele depende de o proponente ter preenchido o plano de aplicação detalhado na plataforma. O arquivo do PAD tem 4.886.962 linhas, e o cruzamento por `ID_PROPOSTA` foi conferido linha a linha (ver `../../tmp/requisitos/`).
 
@@ -136,7 +132,7 @@ O cartão do resumo expandido também distingue os dois casos ("nenhum item publ
 
 ### Apagar uma proposta
 
-No resumo expandido de cada UF, cada proposta tem o botão **🗑 Apagar proposta**. Apagar **não exclui**: a proposta sai do painel e de todas as telas de gestão e acompanhamento, deixa de ser sincronizada e sai da exportação CSV, mas continua guardada no banco com o histórico e as análises. Em troca, ela passa a aparecer na tela **🗑 Propostas apagadas** (menu lateral, com contador), onde o botão é **↺ Restaurar proposta** — e então ela volta ao painel e à sincronização.
+No resumo expandido de cada UF, cada proposta tem o botão **🗑 Apagar proposta**. Apagar **não exclui**: a proposta sai do painel e de todas as telas de gestão e acompanhamento, sai da exportação CSV das propostas ativas; suas evidências importadas continuam sendo atualizadas e reabrem avaliações dependentes quando mudam, mas continua guardada no banco com o histórico e as análises. Em troca, ela passa a aparecer na tela **🗑 Propostas apagadas** (menu lateral, com contador), onde o botão é **↺ Restaurar proposta** — e então ela volta ao painel com as evidências e pendências atuais, preservando as decisões históricas.
 
 ### Ordem das propostas e o Status Proposta da UF
 
@@ -146,9 +142,9 @@ Quando a UF tem mais de uma proposta, o resumo mostra **primeiro as enviadas par
 
 - Sincronização automática pelo servidor local, com cache por assinatura de blob e validação de bytes/ETag contra a listagem da origem.
 - Painel das 14 UFs, propostas múltiplas, pesquisa e filtros. O cabeçalho da tela principal conta com os botões **“⇩ Exportação”** e **“↻ Sincronização”**. Cada linha traz a **bandeira oficial da UF** (Wikimedia Commons, arquivada em `assets/bandeiras/`), tem **bandeira/sigla/nome clicáveis** para abrir a proposta e **expande um resumo** da proposta ao clique ou por Enter/Espaço. As propostas da UF aparecem **por envio** (enviadas primeiro, da mais antiga para a mais nova). **Todas as colunas da tabela estão centralizadas** (inclusive Unidade Federativa, proposta, valores, controles e status). O menu lateral tem **“▤ Propostas”**, que lista as propostas no padrão `UF - NNNNN/AAAA` em ordem alfabética.
-- **Apagar e restaurar propostas:** apagar retira a proposta do painel, das telas de gestão e das sincronizações sem excluí-la do banco; a tela **🗑 Propostas apagadas** lista por UF, com expansão e restauração.
+- **Apagar e restaurar propostas:** apagar retira a proposta do painel, das telas de gestão sem excluí-la do banco; a sincronização preserva a exclusão e invalida decisões cuja evidência mudou; a tela **🗑 Propostas apagadas** lista por UF, com expansão e restauração.
 - Importação CSV em blocos com validação e confirmação (modo offline de contingência), origem e comparação de alterações.
-- Habilitação, mérito, **20 requisitos de celebração em duas abas** (ver abaixo) e links de documentos.
+- Mérito, **19 requisitos de celebração em duas abas** (ver abaixo) e links de documentos.
 - PAD com avaliação manual, três controles financeiros, valores em centavos.
 - Atalhos Transferegov (Acesso Livre) à esquerda abaixo das abas de cada proposta: **Dados** e **PAD** abrem a proposta correta em nova guia pelo endereço de detalhe com `idProposta`; **Requisitos** abre direto a tela de Requisitos para Celebração (`_proposta/Requisitos/listarRequisitosDocumentos.jsf`) e **Anexos** abre direto a listagem de anexos (`ListarAnexosGenericos/AnexosExibirAnexosProposta.do`). Essas duas últimas não carregam `idProposta` na URL e leem a proposta da sessão do Acesso Livre: se a sessão estiver com outra proposta, clique antes em **Dados** para fixar a proposta correta e em seguida use Requisitos/Anexos. Exigem sessão de Acesso Livre ativa no navegador.
 - Diligências vinculadas, pendências sem cadastro, prazos e saneamento confirmado.
@@ -160,14 +156,14 @@ Quando a UF tem mais de uma proposta, o resumo mostra **primeiro as enviadas par
 
 Dentro de uma proposta, os requisitos da **Lista de Conferência dos autos** (SEI nº 36183977) são conferidos em **duas abas**, colocadas **antes de "Diligências"**:
 
-- **Requisitos da Proposta** — os **7 itens** analisados na **Nota Técnica 231 (SEI 33381502)** e no **Parecer 15 (SEI 33369201)**: 2 Proposta de trabalho, 3 Plano de trabalho, 4 Termo de Referência, 5 Plano de Sustentabilidade, 6 Declaração de Compatibilidade de Preços e propostas orçamentárias, 7 Declaração de Contrapartida detalhada e QDD e 11 Declaração de Capacidade Técnica e Gerencial.
+- **Requisitos da Proposta** — os **6 itens disponíveis no código atual**, com os textos já existentes da Lista de Conferência: 3 Plano de trabalho, 4 Termo de Referência, 5 Plano de Sustentabilidade, 6 Declaração de Compatibilidade de Preços e propostas orçamentárias, 7 Declaração de Contrapartida detalhada e QDD e 11 Declaração de Capacidade Técnica e Gerencial.
 - **Requisitos para Formalização** — os **13 itens** conferidos no ato da celebração, na aba "Requisitos para celebração" do Transferegov.br: 1 Cadastro atualizado, 1.1 Delegação de competência, 8 Resolução CNPCP nº 1/2008, 9 PNAMPE, 10 Não duplicidade do objeto, 12 Taxa de administração, 13 Empresas públicas e sociedades de economia mista, 14 Operação de crédito, 15 Dívidas consolidada e mobiliária, 16 Restos a pagar, 17 Despesa total com pessoal, 18 Precatórios da educação básica e 19 CAUC.
 
 **Em cada linha das duas abas:** o **item**, o **requisito com o subtexto da Lista de Conferência** (por exemplo, o item 1.1: "quando houver, assinado pelo(a) Governador(a); caso não haja Delegação de Competência, o(a) Governador(a) assinará o Termo de Convênio como INTERVENIENTE… Normativo delegando ou Declaração de Delegação de Competência — modelo anexo 1 (p. 6)"), e as colunas **Fundamentação** e **Comprovação** transcritas da mesma lista, além de Resultado, Documento e Ação.
 
-Os **20 itens continuam sendo os mesmos** e ficam gravados em **uma única coleção** (`reviews.celebracao`): a divisão é só de tela. Por isso nada se perde, os vínculos de diligência seguem válidos (`celebracao:<item>`) e **os backups feitos antes da mudança continuam aceitos**. A divisão foi confirmada pelo usuário em 15/09/2026.
+Os **19 itens disponíveis permanecem os mesmos** e ficam gravados em **uma única coleção** (`reviews.celebracao`): a divisão é só de tela. Por isso nada se perde, os vínculos de diligência seguem válidos (`celebracao:<item>`) e **os backups feitos antes da mudança continuam aceitos**. A divisão foi confirmada pelo usuário em 15/09/2026.
 
-No painel, a coluna **Celebração** mostra o progresso dos 20 itens juntos; o filtro **Controle** passou a ter duas opções separadas — "Requisitos da Proposta pendentes" e "Requisitos para Formalização pendentes". No relatório do SEI, as seções **10. Requisitos da Proposta** e **11. Requisitos para Formalização** trazem as colunas da lista.
+No painel, a coluna **Celebração** mostra o progresso dos 19 itens juntos; o filtro **Controle** passou a ter duas opções separadas — "Requisitos da Proposta pendentes" e "Requisitos para Formalização pendentes". No relatório do SEI, as seções **10. Requisitos da Proposta** e **11. Requisitos para Formalização** trazem as colunas da lista.
 
 > **Ressalva:** os textos foram transcritos da lista dos autos. A **vigência e a aplicabilidade de cada remissão normativa continuam exigindo conferência do analista** — o sistema não certifica vigência.
 
@@ -181,26 +177,121 @@ No painel, a coluna **Celebração** mostra o progresso dos 20 itens juntos; o f
 - Dias corridos: cálculo depende da ciência. Sábado/domingo são ajustados; feriados e expediente requerem conferência registrada. Prazo da Ouvidoria é referência de mês civil; prorrogações exigem controle do instrumento.
 - Checklist reproduz numeração, títulos, subtextos, fundamentação e comprovação dos autos, separados nas duas abas de conferência. Não certifica vigência ou aplicabilidade de cada remissão. Não há aprovação jurídica automatizada.
 - Histórico registra as alterações como feitas por “Usuário local”, sem exigir identificação pessoal, autenticação ou garantia de imutabilidade contra edição externa do banco/backup.
-- Backups até 50 MB. Armazenamento local sujeito às configurações e limites do navegador. Falha de persistência é exibida; não há fallback silencioso.
-- Não há anexação binária, extensão de prazo formal nem importação de cronogramas nesta etapa; documentos são referenciados por nome/link.
+- Restauração JSON limitada a arquivos menores que 50 MB. O armazenamento canônico é o workspace; espaço e disponibilidade dos arquivos exigem conferência local. Falha de persistência é exibida; não há fallback silencioso.
+- Anexos binários existentes, nomes/links e notas são preservados. Esta manutenção não implementa extensão de prazo formal nem importação de cronogramas.
 - Alvos iniciais: Chrome e Edge. O banco é compartilhado pelos navegadores que acessam o mesmo servidor/workspace.
 
-## Testar
+## Manutenção 02/10/2026 — prioridades selecionadas
 
+A referência da auditoria era `d510580d6499f8c21d7149d6b24c4e98d88137f3`; esta execução partiu de `main`, SHA `2894efb3028c623009fea090b7780de7c0edac3c`. Foram confirmados no HEAD o banco imutável, a paridade integral da projeção pública, a coleção compartilhada de celebração, o cálculo monetário e as travas existentes. Não se recriaram esses mecanismos.
+
+| Prioridade | Implementação e arquivos canônicos | Cobertura principal |
+|---|---|---|
+| 1 | `domain.confirmConclusion`, modal/handler em `app.js`, checagem de token/revisão em `storage.js`, relatório | `prioridades.test.cjs`, `prioridades-ui.cjs` |
+| 2 | Cache versão 2, assinatura de todas as fontes usadas e do modo em `transferegov-sync.cjs` | `sync.test.cjs` |
+| 3 | Coletor comum do PAD em `domain.js`, ZIP/CSV, aplicação compartilhada, candidato separado e alerta em tela | `sync.test.cjs`, `prioridades.test.cjs`, `headless-sync.test.cjs` |
+| 4 | `EVIDENCE_DEPENDENCIES`, assinatura de conteúdo, reanálise seletiva, documentos/anexos e exclusão/restauração | `prioridades.test.cjs`, `textos-oficiais.cjs`, `anexos-requisitos.cjs` |
+| 5 | Progresso humano atual, resultado técnico e aptidão separados no domínio, painel, relatório e CSV | `domain.test.cjs`, `prioridades.test.cjs`, `report-topics.test.cjs` |
+| 6 | Referência canônica, detalhe integral compartilhado, handlers/adaptador somente leitura e gerador seguro | `prioridades-ui.cjs`, `public-snapshot.test.cjs`, `public-pages.cjs` |
+| 7 | `setInstitution`, fato/parecer atômicos, conflito legado visível e reanálise dos dependentes | `prioridades.test.cjs`, `prioridades-ui.cjs`, `analise-merito.cjs` |
+| 8 | `matchesFilters` antes de agrupar; correspondentes, links e totais filtrados | `prioridades-ui.cjs`, `pad-filters.cjs`, `painel-expand.cjs` |
+| 10 | Resumo/descrição/fundamento expansíveis, foco estável, estado de salvamento acessível e PAD responsivo | `prioridades-ui.cjs`, `pad-batch.cjs`, `pad-filters.cjs` |
+
+### Formato e compatibilidade
+
+`schemaVersion` e o formato do registro imutável continuam em 1. Não se regravam revisões antigas. Normalização em memória é determinística e idempotente; preserva campos desconhecidos, notas, links, anexos, diligências e histórico.
+
+- `review.evidence = {version:1, ref, fingerprint}` registra a referência canônica e o conteúdo considerado. A impressão `fnv64-v1:...` compara conteúdo; não substitui o SHA-256 da cadeia nem certifica autenticidade. Documentos/URLs e conteúdo dos anexos participam da comparação. Hora de consulta, ordem das propriedades e revisão global não participam.
+- Avaliação legada sem referência recebe `{version:1, ref, fingerprint:null, legacy:true}`. O resultado histórico fica preservado e visível; não conta como decisão humana atual nem recebe certificação retrospectiva. A confirmação humana cria uma referência atual.
+- `review.reanalysis = {at, fields, reason}` explica a mudança. Histórico guarda decisão anterior e posterior completas. Reanálise preserva nota/documento/URL/anexos; alteração só de formalização recalcula aptidão sem apagar conclusão técnica independente.
+- `p.padImport = {version:1, status, source, at, received, accepted, rejected, reasons}` registra `complete` ou `partial`. `reasons` contém `{line, itemId, reason}`; `candidate` é reservado ao conjunto parcial, separado do PAD íntegro em `p.imported.pad`. No contrato de entrada, o parser envia `imported.padExtraction`, consumido pela aplicação. Sem metadados legados, `pad:null` significa não carregado e `pad:[]` representa extração vazia aceita pelo contrato anterior; não se inventam contagens históricas.
+- Rejeição sem ID verificável marca como parciais todas as propostas do conjunto afetado. `received` conta linhas atribuíveis à proposta; uma rejeição não atribuível pode aumentar `rejected` sem aumentar `received`. IDs verificáveis de propostas fora do programa são ignorados. Propostas não afetadas e campos independentes seguem sendo aplicados na mesma transação; a tela avisa o que ficou antigo. Modo rápido preserva PAD e alerta anteriores. Extração íntegra posterior resolve o alerta com histórico.
+- `p.conclusion` inclui `result` (`favoravel`/`desfavoravel`), `actor`, `at`, `reference`, `note`, `evidence:{version:1,fingerprint}` e `operationId`. `confirmConclusion` exige controles pertinentes e evidência atual. Resultado desfavorável exige justificativa, conserva checks negativos e nunca torna a proposta apta. Conclusão legada sem evidência permanece legível, sem aptidão automática.
+
+Dependências existentes: objeto/vigência → mérito objeto (objeto também destinação); caracterização/justificativa → justificativa; público, problema, resultados e relação → seus checks; capacidade → mérito capacidade e celebração 11; PAD/repasse/global → declaração de preços 6; contrapartida/global → declaração 7; Ouvidoria/Fala.BR → respectivos checks. Mudança material de item reabre sua própria avaliação. Somar corretamente não aprova preço ou documento.
+
+Fala.BR: “Já aderiu” → `aderido`/`ok`; “Previsto no Plano de Trabalho” → `previsto`/`obs`; “Sem previsão” → `nao_previsto`/`no`; não informado → `na`. Os três resultados registrados são permitidos e não bloqueantes. A decisão direta inequívoca grava fato e parecer juntos; editar o fato reabre a avaliação. Ouvidoria `ok` → `instituida`, `no` → `pendente`; cláusula é registro expresso separado. Pendente com cláusula continua pendente. Conflito legado conserva ambos os registros e exige decisão humana.
+
+“Revisado” significa decisão humana registrada e atual. Negativa justificada conta trabalho concluído, sem contar aceite. `na`/`reanalise` não contam. Celebração é contada uma vez; diligência não saneada pode ser terminal desfavorável, enquanto aberta/aguardando/em avaliação continua pendente. Aptidão exige conclusão favorável atual, controles de celebração e origem enviada; rejeitada/cancelada/indeferida/desconhecida nunca é apta.
+
+Cache versão 2 usa nome, bytes, geração/data e ETag real de programa, vínculos, propostas e PAD quando solicitado, com ordem determinística e modo rápida/completa. Payload inteiro é preservado no cache quente. Cache legado é recusado. Bytes e ETag/data são confrontados com o download; uma geração divergente não é certificada. Sem tamanho e geração confiáveis, revalidam-se os arquivos nessa execução e não se sela resultado para reutilização presumida. Isso não desativa o cache das fontes com metadados válidos. Textos oficiais continuam pelo fluxo próprio.
+
+### Validação e reprodução
+
+Execute na raiz da aplicação, `Sistema PROFOR 2026/PROFOR_2026/`. Não existe `package.json`; não se usa `npm test`. Playwright e, para XLSX, Python com `openpyxl` precisam estar disponíveis. Os harnesses aceitam `PROFOR_PLAYWRIGHT_PATH` e o teste XLSX aceita `PROFOR_PYTHON`; use os runtimes já instalados, sem adicionar dependência de produção.
+
+```powershell
+node --test tests/domain.test.cjs tests/prioridades.test.cjs tests/sync.test.cjs tests/headless-sync.test.cjs tests/workspace-store.test.cjs tests/workspace-api.test.cjs tests/public-snapshot.test.cjs tests/report-topics.test.cjs tests/proposal-sei.test.cjs
+node tests/prioridades-ui.cjs
+foreach ($teste in @('analise-merito','anexos-requisitos','review-diligence','textos-oficiais','pad-batch','pad-filters','painel-expand','public-pages','sync-changes-uf')) { node "tests/$teste.cjs"; if ($LASTEXITCODE -ne 0) { throw "Falhou: $teste" } }
 ```
-node --test tests/domain.test.cjs
-node --test tests/sync.test.cjs
-```
 
-Fluxo completo na interface (offline, com banco e perfil próprios; precisa de `PROFOR_UI_PROFILE` apontando para uma pasta nova):
+| Estado | Cenários e evidência desta execução | Limite |
+|---|---|---|
+| PASS | 145 testes Node: domínio, cache quente, ZIP/CSV parcial, headless, store, API real em porta efêmera, snapshot e relatórios HTML/XLSX | Cópias temporárias/fixtures; snapshot real somente lido |
+| PASS | Regressões de mérito, anexos, diligências/saneamento, vencimento, textos/no-op/erro/cancelamento, lote PAD, filtros, expansão e sincronização com UF | Requisições interceptadas; zero escrita no banco administrativo |
+| PASS | Consulta do snapshot real: abas, notas, documentos, diligências, Lixeira e calendário; vínculos comparados dinamicamente | Consulta estática local, não deploy remoto |
+| PASS | 13 grupos na UI nova, cinco decisões de mérito + cinco PAD, foco, erro/conflito, fatos, backup/recuperação e paridade | Fixtures temporárias, capturas e toque simulado; não usuários reais |
+| NÃO EXECUTADO | Transferegov ao vivo, SEI autenticado, deploy e sincronização real do OneDrive | Não necessários nem autorizados nesta manutenção |
+| NÃO EXECUTADO | Runner antigo `tests/ui-flow.js` | Assume controles removidos no HEAD anterior e contém reset do store; fluxos exigidos cobertos pelos harnesses isolados acima |
 
-```
-$env:PROFOR_UI_PROFILE = Join-Path $env:TEMP ('profor-ui-' + (Get-Date -Format 'yyyyMMdd-HHmmss'))
-node tmp/playwright/run-ui-flow.cjs
-```
+Fixtures novas são identificadas como teste: proposta AP 101 com cinco itens PAD e descrição longa; AP 102 com situação/valor diferentes para filtros; RS 990900 com quantidade 2,5 para XLSX. UI cobre clique duplo, revisão/token/bloqueio/evidência supervenientes, falha de gravação, retry recuperável, conclusão desfavorável, fatos institucionais, backup/restauração, cinco decisões de mérito e cinco PAD por teclado, foco e toque simulado. Capturas em `output/playwright/prioridades/` (ignoradas pelo Git) documentam 1366×768, 390×844 e viewport CSS equivalente a 200%. As cinco capturas foram inspecionadas visualmente: texto expandido íntegro, ações desktop sem corte e item/quantidade/valores/ação relacionados em mobile e no viewport equivalente a 200%.
 
-O fluxo percorre as duas abas de celebração (7 + 13 itens), confere que a divisão não criou coleção de estado própria, abre o relatório (seções 10, 11 e 13) e exercita backup, restauração e contingência offline.
+A caracterização inicial encontrou cinco falhas preexistentes em 113 testes selecionados (108 passavam): contagem desatualizada 20/7 contra os 19/6 requisitos já no HEAD, teste de vencimento dependente da data e expectativas antigas de bloqueios. Fixtures foram atualizadas às listas e regras efetivas; nenhum requisito foi criado/apagado para acomodar testes. O harness de textos também procurava botões retirados antes desta tarefa; passou a exercer o botão único. O teste público compara a mesma providência/observação no detalhe compartilhado, em vez de exigir o antigo elemento textarea. A ausência do link SEI no relatório foi corrigida no consumidor afetado.
 
-Os testes de sincronização não usam rede: montam ZIPs de fixture em memória e exercitam parser CSV, leitura de ZIP por seek, allowlist, cache e o pipeline completo com `domain.validateImported`. Os CSVs em `tests/fixtures/` são fictícios, rotulados como teste, e usados apenas em perfil de navegador isolado. Não os utilize para iniciar a base administrativa.
+### Backup, recuperação, alternância e riscos
 
-Planejamento técnico, fontes e decisões estão em `../IMPLEMENTACAO.md`. Atividades estão no `DIARIO_DE_BORDO.md` da raiz do workspace.
+Nesta execução, foram copiados e conferidos por SHA-256 os 211 arquivos do banco real para um backup fora do Git, junto do JSON aceito pelo mecanismo existente, snapshot anterior e manifesto. O snapshot foi regenerado da revisão 211 (20 propostas, 15 ativas e 5 apagadas); nomes e hashes dos registros foram novamente conferidos e permaneceram idênticos. Nenhuma fixture foi gravada no banco administrativo.
+
+Para a continuidade pelo OneDrive, a cópia completa do backup está também dentro do workspace, em `output/continuidade-prioridades-2026-10-02/backup/` (caminho relativo à raiz Git). Os 215 arquivos dessa cópia foram comparados byte a byte e por SHA-256; a cadeia e o JSON de recuperação foram novamente validados. Roteiro, pedido original e metadados da entrega estão na mesma pasta; evidências em `output/playwright/prioridades/`. Tudo é local e excluído do Git, sem depender do backup externo para a retomada. Na raiz Git, execute `node output/continuidade-prioridades-2026-10-02/verificar-backup.cjs` para conferir o backup recebido. O roteiro distingue dependências instaladas em cada máquina (Node.js; Playwright/Python apenas para repetir os testes) dos arquivos compartilhados. Nenhum runtime ou ambiente virtual foi compartilhado como se fosse portátil.
+
+Para recuperar dados pelo fluxo existente, use **Exportação → Restaurar backup JSON**, valide o arquivo e confirme a substituição. O estado anterior é guardado como recuperação e a cadeia imutável continua preservada; teste isso primeiro em cópia descartável. Para recuperar uma cadeia de arquivos, pare o servidor e preserve a cadeia atual fora do Git antes de substituir por uma cópia completa verificada. Não mescle ramos concorrentes por escolha automática de arquivo mais recente.
+
+A alternância foi testada com duas cópias completas, copiadas sequencialmente. Não prova sincronização real nem atomicidade distribuída do OneDrive. O lock por hostname e a recusa de ramos continuam intactos. Falha antes do rename pode deixar um `.tmp` que não participa da cadeia; o teste confirma revisão/token intactos e nova gravação recuperável, sem publicar registro parcial.
+
+Riscos: avaliações antigas exigem confirmação humana antes de voltar a contar como atuais; impressão de conteúdo não é certificação da fonte; aptidão não substitui revisão jurídica/administrativa. Não se alteraram normas, requisitos, categorias, textos, cálculo de prazo da cláusula ou regras de rede. Nenhuma conferência de bens de capital/metas/etapas/cronogramas foi acrescentada; o requisito existente de ID 9 continua presente.
+
+Rollback de código deve ser feito por reversão do commit desta manutenção mediante autorização, preservando `dados/registros/` e o backup. Reverter código não desfaz decisões humanas posteriores. O snapshot anterior foi preservado separadamente; publicação permanece uma operação autorizada à parte. Planejamento e fontes estão em `../IMPLEMENTACAO.md`; o registro desta execução está em `DIARIO_DE_BORDO.md` na raiz.
+
+### Arquivos desta manutenção
+
+Lista exata de 38 arquivos versionados; o diário e as evidências de execução são locais e ignorados pelo Git.
+
+- `README.md`
+- `Sistema PROFOR 2026/PROFOR_2026/PROFOR_2026.html`
+- `Sistema PROFOR 2026/PROFOR_2026/README.md`
+- `Sistema PROFOR 2026/PROFOR_2026/app.js`
+- `Sistema PROFOR 2026/PROFOR_2026/domain.js`
+- `Sistema PROFOR 2026/PROFOR_2026/report.js`
+- `Sistema PROFOR 2026/PROFOR_2026/storage.js`
+- `Sistema PROFOR 2026/PROFOR_2026/styles.css`
+- `Sistema PROFOR 2026/PROFOR_2026/sync-apply.js`
+- `Sistema PROFOR 2026/PROFOR_2026/tests/analise-merito.cjs`
+- `Sistema PROFOR 2026/PROFOR_2026/tests/anexos-requisitos.cjs`
+- `Sistema PROFOR 2026/PROFOR_2026/tests/domain.test.cjs`
+- `Sistema PROFOR 2026/PROFOR_2026/tests/fixtures/state.cjs`
+- `Sistema PROFOR 2026/PROFOR_2026/tests/headless-sync.test.cjs`
+- `Sistema PROFOR 2026/PROFOR_2026/tests/pad-batch.cjs`
+- `Sistema PROFOR 2026/PROFOR_2026/tests/pad-filters.cjs`
+- `Sistema PROFOR 2026/PROFOR_2026/tests/painel-expand.cjs`
+- `Sistema PROFOR 2026/PROFOR_2026/tests/prioridades-ui.cjs`
+- `Sistema PROFOR 2026/PROFOR_2026/tests/prioridades.test.cjs`
+- `Sistema PROFOR 2026/PROFOR_2026/tests/public-pages.cjs`
+- `Sistema PROFOR 2026/PROFOR_2026/tests/public-snapshot.test.cjs`
+- `Sistema PROFOR 2026/PROFOR_2026/tests/report-topics.test.cjs`
+- `Sistema PROFOR 2026/PROFOR_2026/tests/review-diligence.cjs`
+- `Sistema PROFOR 2026/PROFOR_2026/tests/sync.test.cjs`
+- `Sistema PROFOR 2026/PROFOR_2026/tests/textos-oficiais.cjs`
+- `Sistema PROFOR 2026/PROFOR_2026/tests/ui-static.cjs`
+- `Sistema PROFOR 2026/PROFOR_2026/tests/workspace-store.test.cjs`
+- `Sistema PROFOR 2026/PROFOR_2026/transferegov-sync.cjs`
+- `Sistema PROFOR 2026/PROFOR_2026/transferegov.js`
+- `docs/app.js`
+- `docs/dados_publicos.js`
+- `docs/domain.js`
+- `docs/index.html`
+- `docs/public-storage.js`
+- `docs/report.js`
+- `docs/styles.css`
+- `docs/sync-apply.js`
+- `tools/build_public_docs.cjs`

@@ -50,10 +50,9 @@
       D.assert(!proposals.has(item.id),`Proposta duplicada: ${item.id}.`);proposals.set(item.id,item);
     },encoding);
     D.assert([...proposalIds].every(id=>proposals.has(id)),'Extrações inconsistentes: há propostas vinculadas ao programa ausentes do arquivo de propostas.');
-    if(files.pad){progress('Lendo itens do plano de aplicação…');await scan(files.pad,['ID_PROPOSTA','ID_ITEM_PAD','DESCRICAO_ITEM','QTD_ITEM','VALOR_UNITARIO_ITEM','VALOR_TOTAL_ITEM'],r=>{
-      const p=proposals.get(r.ID_PROPOSTA.trim());if(!p)return;
-      p.pad.push({id:r.ID_ITEM_PAD.trim(),descricao:r.DESCRICAO_ITEM,quantidade:D.quantityBR(r.QTD_ITEM),unitario:D.moneyBR(r.VALOR_UNITARIO_ITEM),total:D.moneyBR(r.VALOR_TOTAL_ITEM)});
-    },encoding);}
+    if(files.pad){progress('Lendo itens do plano de aplicação…');const collector=D.padCollector(proposals,files.pad.name);await scan(files.pad,['ID_PROPOSTA','ID_ITEM_PAD','DESCRICAO_ITEM','QTD_ITEM','VALOR_UNITARIO_ITEM','VALOR_TOTAL_ITEM'],r=>collector.row(r),encoding);collector.finish();
+      for(const p of proposals.values())if(p.padExtraction.status==='partial')warnings.push(`Proposta ${p.numero}: importação incompleta do PAD; último PAD íntegro preservado.`);
+    }
     else warnings.push('PAD não fornecido: itens existentes serão preservados; propostas novas ficarão sem PAD.');
     const result=[...proposals.values()];result.forEach(D.validateImported);
     for(const uf of Object.keys(D.UFS))if(result.filter(p=>p.uf===uf).length>1)warnings.push(`${uf}: mais de uma proposta. Conferência manual necessária.`);

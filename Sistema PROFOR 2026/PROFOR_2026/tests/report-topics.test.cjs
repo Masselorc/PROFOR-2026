@@ -7,13 +7,16 @@ const test = require('node:test');
 const assert = require('node:assert/strict');
 const path = require('node:path');
 const fs = require('node:fs');
-const { execSync } = require('node:child_process');
+const { execFileSync } = require('node:child_process');
 
 const playwrightPath = process.env.PROFOR_PLAYWRIGHT_PATH ||
   (fs.existsSync('C:/Users/marcelo.cortez/AppData/Local/npm-cache/_npx/9833c18b2d85bc59/node_modules/playwright')
     ? 'C:/Users/marcelo.cortez/AppData/Local/npm-cache/_npx/9833c18b2d85bc59/node_modules/playwright'
     : 'C:/Users/marcelo.cortez/AppData/Local/Programs/nodejs/node-v24.15.0-win-x64/node_modules/playwright');
 const { chromium } = require(playwrightPath);
+const {fulfillStatic}=require('./ui-static.cjs');
+const {syntheticProposal,syntheticState}=require('./fixtures/state.cjs');
+const os=require('node:os');
 
 const ROOT_DIR = path.resolve(__dirname, '..');
 global.globalThis = global;
@@ -24,10 +27,7 @@ global.Profor = D;
 const ProforReport = require(path.join(ROOT_DIR, 'report.js'));
 
 test('ProforReport: filtragem de tópicos e renumeração sequencial HTML', async () => {
-  const storePath = path.join(ROOT_DIR, 'dados', 'registros');
-  const store = require(path.join(ROOT_DIR, 'workspace-store.cjs')).createStore(storePath);
-  const state = store.load().state;
-  const p = state.proposals.find(item => item.imported.uf === 'RS');
+  const p=syntheticProposal();
   assert.ok(p, 'Proposta do RS encontrada');
 
   const available = ProforReport.availableTopics(p);
@@ -64,10 +64,7 @@ test('ProforReport: filtragem de tópicos e renumeração sequencial HTML', asyn
 });
 
 test('ProforReport: exportação XLSX estruturada como banco de dados para IAs', async () => {
-  const storePath = path.join(ROOT_DIR, 'dados', 'registros');
-  const store = require(path.join(ROOT_DIR, 'workspace-store.cjs')).createStore(storePath);
-  const state = store.load().state;
-  const p = state.proposals.find(item => item.imported.uf === 'RS');
+  const p=syntheticProposal();
   assert.ok(p, 'Proposta do RS encontrada');
 
   // Caso 1: XLSX completo com todos os tópicos
@@ -75,7 +72,7 @@ test('ProforReport: exportação XLSX estruturada como banco de dados para IAs',
   assert.ok(fullBytes instanceof Uint8Array, 'Deve retornar um Uint8Array');
   assert.ok(fullBytes.length > 3000, 'Arquivo gerado deve conter bytes válidos de ZIP/XLSX');
 
-  const tmpFull = path.join(__dirname, 'tmp_full.xlsx');
+  const tmpFull = path.join(os.tmpdir(), `profor-full-${process.pid}.xlsx`);
   fs.writeFileSync(tmpFull, Buffer.from(fullBytes));
 
   // Validação estrita via Python openpyxl (o mesmo motor usado por Pandas/IAs)
@@ -94,15 +91,18 @@ pad_rows = list(ws_pad.iter_rows(values_only=True))
 assert len(pad_rows) > 1, 'Aba PAD deve conter itens'
 assert isinstance(pad_rows[1][2], (int, float)), 'Quantidade deve ser numérica'
 assert isinstance(pad_rows[1][3], (int, float)), 'Valor unitário deve ser numérico'
+assert pad_rows[1][2] == 2.5, 'Quantidade fracionária preservada'
+assert pad_rows[1][3] == 40.4, 'Centavos convertidos para reais no unitário'
+assert pad_rows[1][4] == 101, 'Centavos convertidos para reais no total'
 print('FULL_OK')
 `;
-  const fullOut = execSync('python', { input: pyCheckFull, encoding: 'utf-8' });
+  const fullOut = execFileSync(process.env.PROFOR_PYTHON || 'python', [], { input: pyCheckFull, encoding: 'utf-8' });
   assert.match(fullOut, /FULL_OK/);
   fs.unlinkSync(tmpFull);
 
   // Caso 2: XLSX com "Apenas PAD"
   const padBytes = ProforReport.xlsx(p, { topics: ['pad'] });
-  const tmpPad = path.join(__dirname, 'tmp_pad.xlsx');
+  const tmpPad = path.join(os.tmpdir(), `profor-pad-${process.pid}.xlsx`);
   fs.writeFileSync(tmpPad, Buffer.from(padBytes));
 
   const pyCheckPad = `
@@ -117,7 +117,7 @@ for r in list(ws.iter_rows(values_only=True))[1:]:
     assert r[3] == 'pad', f'Todos os tópicos em Base_Dados devem ser pad, veio: {r[3]}'
 print('PAD_ONLY_OK')
 `;
-  const padOut = execSync('python', { input: pyCheckPad, encoding: 'utf-8' });
+  const padOut = execFileSync(process.env.PROFOR_PYTHON || 'python', [], { input: pyCheckPad, encoding: 'utf-8' });
   assert.match(padOut, /PAD_ONLY_OK/);
   fs.unlinkSync(tmpPad);
 });
@@ -179,24 +179,13 @@ test('UI: Modal de relatório com botão Salvar XLSX, atalhos e download', async
   await browser.close();
 });
 
-test('UI Servidor Local: Botão Salvar XLSX funciona em http://127.0.0.1:8766/', async () => {
+test('UI HTTP isolada: Botão Salvar XLSX funciona sem servidor real', async () => {
   const browser = await chromium.launch({ channel: 'chrome', headless: true });
   const context = await browser.newContext({ viewport: { width: 1400, height: 900 } });
   const page = await context.newPage();
 
-  try {
-    const res = await page.goto('http://127.0.0.1:8766/', { waitUntil: 'domcontentloaded', timeout: 5000 });
-    if (!res || !res.ok()) {
-      console.log('Servidor local não respondeu com 200, pulando subteste de servidor.');
-      await browser.close();
-      return;
-    }
-  } catch (err) {
-    console.log('Servidor local não acessível na porta 8766, pulando subteste de servidor:', err.message);
-    await browser.close();
-    return;
-  }
-
+  await context.route('**/*',route=>{const url=new URL(route.request().url());if(url.pathname==='/api/state')return route.fulfill({json:{exists:true,state:syntheticState(),token:'fixture',recovery:null}});if(url.pathname.startsWith('/api/'))return route.abort();return fulfillStatic(route);});
+  await page.goto('http://127.0.0.1:9879/PROFOR_2026.html');
   await page.waitForSelector('tr.uf-row');
   await page.locator('tr.uf-row').first().click();
   await page.waitForSelector('.btn-detail');

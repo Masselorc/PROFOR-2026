@@ -32,3 +32,19 @@ test('cliente migra IndexedDB uma vez e funciona em outro navegador sem IndexedD
   const second=client(undefined);await second.open();assert.equal((await second.read()).lastBackup,legacyState.lastBackup);
   const a=await first.read(),b=await second.read();await first.save(a,a.revision);await assert.rejects(second.save(b,b.revision),/outra aba/);
 });
+test('alternância entre duas cópias completas preserva a cadeia sem simular garantia do OneDrive',t=>{
+ const a=fixture(t),b=fixture(t);put(a.store);
+ const copy=(from,to)=>{for(const name of fs.readdirSync(from))if(!fs.existsSync(path.join(to,name)))fs.copyFileSync(path.join(from,name),path.join(to,name));};
+ copy(a.dir,b.dir);let next=D.clone(b.store.load().state);next.lastBackup='2026-10-02T12:00:00Z';put(b.store,next);copy(b.dir,a.dir);
+ assert.equal(a.store.load().token,b.store.load().token);next=D.clone(a.store.load().state);next.lastBackup='2026-10-02T13:00:00Z';put(a.store,next);copy(a.dir,b.dir);
+ assert.deepEqual(a.store.load(),b.store.load());assert.equal(fs.readdirSync(a.dir).length,3);
+});
+test('falha simulada no rename não publica registro parcial; revisão/token intactos permitem recuperar',t=>{
+ const {dir,store}=fixture(t);put(store);const before=store.load(),names=fs.readdirSync(dir),rename=fs.renameSync;
+ fs.renameSync=function(){throw new Error('Falha de disco no rename');};
+ try{assert.throws(()=>store.save({state:before.state,expected:before.state.revision,token:before.token}),/Falha de disco/);}finally{fs.renameSync=rename;}
+ assert.deepEqual(store.load(),before);assert.deepEqual(fs.readdirSync(dir).filter(name=>name.endsWith('.json')),names);
+ // Um .tmp interrompido não é registro da cadeia e é ignorado pelo contrato existente.
+ const recovered=store.save({state:before.state,expected:before.state.revision,token:before.token});
+ assert.equal(recovered.state.revision,before.state.revision+1);assert.equal(store.load().token,recovered.token);
+});

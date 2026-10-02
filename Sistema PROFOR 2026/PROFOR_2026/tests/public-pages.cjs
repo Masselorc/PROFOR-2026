@@ -119,8 +119,8 @@ async function run() {
       await note.focus();await page.keyboard.press('Control+a');await page.keyboard.insertText('Tentativa de alteração');
       assert.equal(await note.inputValue(),review.note,'Texto não pode ser alterado');
       const linked=df.diligences.filter(d=>d.ref==='pad:'+item.id);
-      assert.deepEqual(await page.locator('#modal-content textarea[name="d_request"]').evaluateAll(els=>els.map(el=>el.value)),Array.from(linked,d=>d.request));
-      assert.deepEqual(await page.locator('#modal-content textarea[name="d_note"]').evaluateAll(els=>els.map(el=>el.value)),Array.from(linked,d=>d.note));
+      assert.deepEqual(await page.locator('#modal-content dt:has-text("Providência solicitada") + dd').allTextContents(),Array.from(linked,d=>d.request));
+      assert.deepEqual(await page.locator('#modal-content dt:has-text("Observação / conclusão") + dd').allTextContents(),Array.from(linked,d=>d.note||'Não informado'));
       if(review.status==='obs'){
         await note.evaluate(el=>{el.setSelectionRange(0,0);el.blur();});
         const output=path.join(ROOT,'output/public-review');fs.mkdirSync(output,{recursive:true});

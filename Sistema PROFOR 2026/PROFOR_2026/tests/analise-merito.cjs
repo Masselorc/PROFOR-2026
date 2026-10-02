@@ -1,4 +1,5 @@
 'use strict';
+const {fulfillStatic}=require('./ui-static.cjs');
 
 /*
  * Teste de integração ISOLADO da aba de Mérito: textos oficiais na própria tela e
@@ -103,7 +104,7 @@ async function main() {
         token = hash({ parent: token, state: memory });
         return route.fulfill({ status: 200, contentType: 'application/json; charset=utf-8', body: JSON.stringify({ exists: true, state: clone(memory), token }) });
       }
-      if (url.origin === ORIGIN && ['GET', 'HEAD'].includes(request.method()) && STATIC_PATHS.has(url.pathname)) return route.continue();
+      if (url.origin === ORIGIN && ['GET', 'HEAD'].includes(request.method()) && STATIC_PATHS.has(url.pathname)) return fulfillStatic(route);
       blocked.push(request.url());
       return route.abort('blockedbyclient');
     });

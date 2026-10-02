@@ -4,7 +4,7 @@
   async function request(method='GET',body){
     const response=await fetch('/api/state',{method,cache:'no-store',headers:body?{'Content-Type':'application/json'}:{},body:body?JSON.stringify(body):undefined});
     const result=await response.json();
-    if(!response.ok)throw new Error(result.error||'Não foi possível acessar o banco do workspace.');
+    if(!response.ok)throw Object.assign(new Error(result.error||'Não foi possível acessar o banco do workspace.'),{status:response.status});
     return result;
   }
   // Somente migração: nenhuma gravação ou exclusão no IndexedDB antigo.
@@ -42,11 +42,16 @@
     Profor.validateState(state);
     const result=await request('POST',{state,expected,token,restore,syncRun});token=result.token;return result.state;
   }
+  async function checkCurrent(expected){
+    const current=await request();
+    if(current.token!==token || current.state.revision!==expected)throw Object.assign(new Error('Conflito: o banco mudou. Recarregue e confira as evidências antes de confirmar.'),{status:409});
+    return current.state;
+  }
   async function history(){
     const response=await fetch('/api/sync/history',{cache:'no-store'});
     const result=await response.json();
     if(!response.ok)throw new Error(result.error||'Não foi possível ler os registros de atualização.');
     return result.entries;
   }
-  root.ProforStore={open,read,save,history,legacy};
+  root.ProforStore={open,read,save,checkCurrent,history,legacy};
 })(globalThis);

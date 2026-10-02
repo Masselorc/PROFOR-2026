@@ -70,6 +70,8 @@
   const expandDel=new Set();
   /* Requisitos com a linha expandida (estado só da interface, por aba e id: `${g}:${id}`). */
   const expandedReqs=new Set();
+  const summaryClosed=new Set(),expandedDescriptions=new Set();
+  let conclusionContext=null,conclusionSubmitting=false;
   /* Rótulos e ORDEM das abas vêm do domínio: as duas abas de celebração
      ("Requisitos da Proposta" e "Requisitos para Formalização") ficam antes de
      "Diligências", conforme a Lista de Conferência dos autos (SEI nº 36183977). */
@@ -121,12 +123,14 @@
   function link(r){return r.url?`<a href="${e(D.safeLink(r.url))}" target="_blank" rel="noopener noreferrer">${e(r.document || 'Documento')}</a>`:e(r.document || '—');}
   async function persist(next,opts={}){
     if(isReadOnly())throw new Error('Ambiente de consulta pública (somente leitura).');
-    D.assert(!busy,'Aguarde a gravação em andamento.');busy=true;$('#save-state').textContent='Salvando…';
-    try{state=await ProforStore.save(next,state.revision,opts);$('#save-state').textContent='Salvo na pasta do sistema · '+new Date().toLocaleTimeString('pt-BR');renderSideNav();}
-    catch(err){$('#save-state').textContent='Não foi possível salvar';throw err;}
+    D.assert(!busy,'Aguarde a gravação em andamento.');
+    const expected=opts.restore?state.revision:next.revision;
+    if(expected!==state.revision){$('#save-state').textContent='Conflito de revisão — alteração não salva';$('#save-state').dataset.state='conflict';throw Object.assign(new Error('A revisão mudou; reabra a ação antes de salvar.'),{status:409});}busy=true;$('#save-state').textContent='Salvando…';$('#save-state').dataset.state='saving';
+    try{state=await ProforStore.save(next,expected,opts);$('#save-state').textContent=`Salvo localmente · revisão ${state.revision} · ${new Date().toLocaleTimeString('pt-BR',{timeZone:'America/Sao_Paulo'})} (Brasília)`;$('#save-state').dataset.state='saved';renderSideNav();}
+    catch(err){$('#save-state').textContent=err.status===409?'Conflito de revisão — recarregue e confira os dados':'Falha ao salvar — alteração não confirmada';$('#save-state').dataset.state=err.status===409?'conflict':'error';throw err;}
     finally{busy=false;}
   }
-  async function change(fn){if(isReadOnly())return;const next=D.clone(state);const p=next.proposals.find(x=>x.id===selected);fn(p,next);await persist(next);render();}
+  async function change(fn){D.assert(!isReadOnly(),'Consulta pública: alteração indisponível.');D.assert(!busy,'Aguarde a gravação em andamento.');const next=D.clone(state);const p=next.proposals.find(x=>x.id===selected);fn(p,next);await persist(next);render();}
   function closeModal(){if(busy)return; if(modalDirty && !confirm('Descartar as alterações ainda não salvas deste formulário?'))return;cancelSync('closed');$('#modal').close();modalDirty=false;}
   function modal(title,html){if(!$('#modal').open){const el=document.activeElement;focusReturn={id:el?.id,dataset:{...el?.dataset}};}$('#modal-title').textContent=title;$('#modal-content').innerHTML=html;modalDirty=false;if(!$('#modal').open)$('#modal').showModal();}
   function formError(err){const el=$('#form-error');if(el){el.textContent=err.message;el.focus();}else toast(err.message,true);}
@@ -254,8 +258,9 @@
     if(isReadOnly()){
       const saveStateEl=$('#save-state');
       if(saveStateEl){
-        const dt=window.PROFOR_PUBLIC_UPDATED_AT ? new Date(window.PROFOR_PUBLIC_UPDATED_AT).toLocaleDateString('pt-BR') : '';
-        saveStateEl.textContent=dt ? `Dados atualizados em ${dt}` : 'Base de dados pública';
+        const stamp=at=>new Date(at).toLocaleString('pt-BR',{timeZone:'America/Sao_Paulo'})+' (Brasília, UTC−3)';
+        const dt=window.PROFOR_PUBLIC_UPDATED_AT ? stamp(window.PROFOR_PUBLIC_UPDATED_AT) : '';
+        saveStateEl.textContent=`Consulta pública · ${dt?'Snapshot gerado em '+dt:'Geração não informada'} · Última sincronização da origem: ${state.sync?.at?stamp(state.sync.at):'não informada'}`;
       }
     }
     const menuServidor=$('#server-open');
@@ -303,17 +308,17 @@
   }
   function renderPanel(){
     /* Só propostas ativas: as apagadas saem do painel e das demais telas de
-       gestão e acompanhamento, e não entram na sincronização. */
+       gestão e acompanhamento. Novas evidências continuam invalidando avaliações antes de eventual restauração. */
     const ps=D.activeProposals(state),apagadas=D.deletedProposals(state);
     const received=new Set(ps.map(p=>p.imported.uf)).size;
     const pendingCount=ps.reduce((n,p)=>n+D.pending(p).length,0);
-    const apt=ps.filter(p=>p.conclusion && !D.blockers(p,true).length).length;
+    const apt=ps.filter(D.aptForCelebration).length;
     const enviadas=new Set(ps.filter(p=>D.sourceState(p.imported).key==='enviada').map(p=>p.imported.uf)).size;
-    const acoesPainel=button('↻ Sincronização','sync','','primary');
+    const acoesPainel=button('⇩ Exportação','export')+button('↻ Sincronização','sync','','primary');
     const subPainel='Acompanhe a análise, as diligências e a preparação para celebração.';
     const fontePainel=`Última sincronização: ${state.sync?e(new Date(state.sync.at).toLocaleString('pt-BR')):'ainda não realizada'}${state.sync?.source?` · origem: ${e(String(state.sync.source))}`:''}. Dados locais são uma fotografia da extração e não comprovam recebimento ou situação atual no Transferegov.`;
     $('#main').innerHTML=`<div class="page-head"><div><div class="eyebrow">PROFOR / ONASP 2026</div><h1>Visão geral das propostas</h1><p class="muted">${subPainel}</p></div><div class="page-actions">${acoesPainel}</div></div>
-      <div class="stats dashboard-stats" aria-label="Resumo das propostas">
+      <div class="stats dashboard-stats" aria-label="Resumo de todas as propostas ativas, antes dos filtros">
         <div class="stat stat-eligible"><div class="stat-header"><span class="stat-label">UFs elegíveis</span><span class="stat-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg></span></div><strong class="stat-value">14</strong><span class="stat-note">UFs do edital</span></div>
         <div class="stat stat-received"><div class="stat-header"><span class="stat-label">UFs com proposta importada</span><span class="stat-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h8l4 4v14H7z"/><path d="M15 3v5h4M10 13h6M10 17h6"/></svg></span></div><strong class="stat-value">${received}</strong><span class="stat-note">De 14 elegíveis</span></div>
         <div class="stat stat-sent"><div class="stat-header"><span class="stat-label">UFs com envio para análise</span><span class="stat-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 11 18-8-8 18-2-8-8-2Z"/><path d="m11 13 6-6"/></svg></span></div><strong class="stat-value">${enviadas}</strong><span class="stat-note">Envio registrado</span></div>
@@ -322,7 +327,7 @@
       </div>
       <section class="section" aria-label="Acompanhamento por UF"><h2 class="sr-only">Acompanhamento por UF</h2>
       <div class="filters panel-filters"><label class="search">Buscar proposta ou proponente<input id="search" type="search" value="${e(filters.search)}" placeholder="Número, nome ou UF"></label><label>UF<select id="filter-uf">${options({'':'Todas as UFs',...D.UFS},filters.uf)}</select></label><label>Status no Transferegov<select id="filter-source">${options({'':'Todos os status',...Object.fromEntries(SOURCE_CHAVES.map(k=>[k,SOURCE_ROTULO[k]]))},filters.source)}</select></label><label>Status<select id="filter-status">${options(Object.fromEntries(['','Sem proposta importada',...STATUS_PROPOSTA].map(x=>[x,x || 'Todos os status'])),filters.status)}</select></label><label>Controle<select id="filter-control">${options({'':'Todos os controles',financial:'Inconsistência financeira',unlinked:'Diligência sem registro',ouvidoria:'Ouvidoria pendente',merito:'Mérito pendente',proposta:'Requisitos da Proposta pendentes',formalizacao:'Requisitos para Formalização pendentes'},filters.control)}</select></label></div>
-      <div class="table-wrap"><table class="table-fit"><colgroup><col class="c-expand"><col class="c-uf"><col class="c-proposta"><col class="c-valor"><col class="c-ctrl"><col class="c-dilig"><col class="c-ctrl"><col class="c-status"><col class="c-detalhar"></colgroup><thead><tr><th class="cell-center c-expand-th" scope="col"><span class="sr-only">Expandir linha</span></th><th class="cell-center">Unidade Federativa</th><th class="cell-center">Proposta</th><th class="cell-center">Valor global</th><th class="cell-center">Mérito</th><th class="cell-center">Diligências</th><th class="cell-center" title="Requisitos da Proposta + Requisitos para Formalização">Celebração</th><th class="cell-center">Status</th><th class="cell-center c-detalhar-th" scope="col"><span class="sr-only">Ações</span></th></tr></thead><tbody id="uf-rows"></tbody></table></div></section>
+      <p id="panel-filter-count" class="source" role="status" aria-live="polite"></p><div class="table-wrap"><table class="table-fit"><colgroup><col class="c-expand"><col class="c-uf"><col class="c-proposta"><col class="c-valor"><col class="c-ctrl"><col class="c-dilig"><col class="c-ctrl"><col class="c-status"><col class="c-detalhar"></colgroup><thead><tr><th class="cell-center c-expand-th" scope="col"><span class="sr-only">Expandir linha</span></th><th class="cell-center">Unidade Federativa</th><th class="cell-center">Proposta</th><th class="cell-center">Valor global</th><th class="cell-center">Mérito</th><th class="cell-center">Diligências</th><th class="cell-center" title="Requisitos da Proposta + Requisitos para Formalização">Celebração</th><th class="cell-center">Status</th><th class="cell-center c-detalhar-th" scope="col"><span class="sr-only">Ações</span></th></tr></thead><tbody id="uf-rows"></tbody></table></div></section>
       ${!ps.length?'<div class="info"><strong>Seu painel está pronto para receber as propostas.</strong><br>Use “Sincronização” para baixar automaticamente as extrações oficiais; o modo offline de anexar arquivos CSV fica como contingência. Nenhuma proposta foi presumida ou criada neste banco.</div>':''}
       <section class="section"><div class="section-head"><h2>Controles de consistência</h2></div><div class="section-body consistency"><span>${badge(String(ps.filter(p=>D.finance(p).ok).length),'good')} Valores consistentes</span><span>${badge(String(ps.filter(p=>!D.finance(p).ok).length),'bad')} Dados financeiros ausentes ou divergentes</span><span>${badge(String(pendingCount),pendingCount?'bad':'')} Diligências sem registro</span><span>${badge(String(ps.filter(p=>p.ouvidoria.status==='pendente').length),'warn')} Ouvidorias pendentes</span>${apagadas.length?`<span>${badge(String(apagadas.length),'bad')} Propostas apagadas (fora do painel)</span>`:''}</div></section>
       <p class="source">${fontePainel}</p>`;
@@ -355,9 +360,9 @@
      "[object Object]" na célula e no resumo. */
   function nomeUf(uf){return D.UFS[uf] || uf;}
   function ufTone(sit){
-    if(['Apta à celebração','Em análise'].includes(sit))return 'tom-ok';
+    if(['Apta à celebração'].includes(sit))return 'tom-ok';
     if(['Em diligência','Em elaboração na origem','Requer nova análise','Formalização com cláusula suspensiva'].includes(sit))return 'tom-aviso';
-    if(['Apagada do painel'].includes(sit))return 'tom-no';
+    if(['Apagada do painel','Análise técnica desfavorável'].includes(sit))return 'tom-no';
     return 'tom-neutro';
   }
   /* Célula da UF: bandeira, sigla e nome em disposição horizontal e centralizada.
@@ -366,7 +371,7 @@
   function ufCell(uf,name,ps,modo='ativas'){
     texto(uf,'Célula da UF: código');texto(name,'Célula da UF: nome');texto(modo,'Célula da UF: modo');
     const flag=ufFlag(uf,name);
-    const multi=ps.length>1?`<span class="cell-sub uf-multi">(${ps.length})</span>`:'';
+    const multi=ps.length>1?`<span class="cell-sub uf-multi">(${ps.length} correspondentes)</span>`:'';
     return `<div class="uf">${flag}<span class="uf-pill uf-code">${textoHtml(uf,'Célula da UF: código')}</span><span class="uf-nome uf-name">${textoHtml(name,'Célula da UF: nome')}</span>${multi}</div>`;
   }
   /* Resumo da linha expandida. Sem proposta, não inventa dado nenhum. */
@@ -375,15 +380,15 @@
     const apagadas=modo==='apagadas';
     if(!ps.length)return `<div class="expansion-wrap"><div class="expansion-header"><div class="expansion-header-info"><span class="expansion-eyebrow">Resumo Executivo da UF</span><h3 class="expansion-title"><span class="uf-cell">${ufFlag(uf,name)}<span class="uf-code">${textoHtml(uf,'UF')}</span></span> ${textoHtml(name,'Resumo da UF: nome')}</h3></div><div class="expansion-badges">${sitBadge(sit||'Sem proposta importada')}</div></div><div class="row-card"><p class="muted"><strong>${textoHtml(name,'Resumo da UF: nome')} (${textoHtml(uf,'Resumo da UF: código')})</strong> não tem proposta vinculada ao programa ${textoHtml(D.PROGRAM,'Resumo da UF: programa')} na última extração. A ausência na extração não exclui uma proposta local já cadastrada.</p><p class="source">Use “Sincronização” para atualizar. O banco desta origem é separado do banco do arquivo HTML.</p></div></div>`;
     const cards=ps.map(p=>{
-      const i=p.imported,f=D.finance(p),s=D.sourceState(i),pSit=D.situation(p);
+      const i=p.imported,f=D.finance(p),s=D.sourceState(i),pSit=D.situation(p),padState=D.padSituacao(p,state.sync);
       const faltam=['Repasse','Contrapartida','Valor global'].filter((_,n)=>[i.repasse,i.contrapartida,i.global][n]===null);
       const avisos=[];
       if(faltam.length)avisos.push(`${faltam.join(', ')} sem valor na extração`);
       if(!f.composition && f.complete)avisos.push('repasse + contrapartida difere do valor global');
-      if(!f.padComplete)avisos.push(i.pad===null?'PAD não carregado: a última sincronização foi a rápida, sem o arquivo do plano de aplicação':'sem itens de PAD publicados na extração oficial para esta proposta');
+      if(padState.key==='incompleto' || !f.padComplete)avisos.push(`${padState.titulo}: ${padState.detalhe}`);
       else if(!f.pad)avisos.push('somatório do PAD difere do valor global');
       if(f.errors.length)avisos.push(`${f.errors.length} item(ns) com valor unitário incompatível com total ÷ quantidade`);
-      const pend=D.pending(p).length, dilig=p.diligences.filter(d=>d.status!=='saneada').length;
+      const pend=D.pending(p).length, dilig=p.diligences.filter(d=>!D.diligenceTerminal(d)).length,encerradas=p.diligences.filter(d=>d.status==='nao_saneada').length;
       return `<div class="row-card${apagadas?' row-card-deleted':''}">
         <div class="row-card-head">
           <div class="row-card-title">${proposalLink(p.id,i.numero,'Resumo')}<span class="muted">${textoHtml(i.proponente,'Resumo: proponente')}</span></div>
@@ -398,20 +403,20 @@
           <div><dt>${apagadas?'Apagada em':'Cadastramento'}</dt><dd>${apagadas?textoHtml(D.fmtDate(p.deletedAt)+' · '+D.fmtDate(p.imported.data),'Resumo: datas'):textoHtml(D.fmtDate(i.data),'Resumo: data')}</dd></div>
           <div><dt>CNPJ</dt><dd>${textoHtml(D.fmtCnpj(i.cnpj)||'não informado','Resumo: CNPJ')}${D.fmtCnpj(i.cnpj)?cnpjCopyButton(i.cnpj):''}</dd></div>
           <div><dt>Valores</dt><dd>Repasse ${textoHtml(D.fmtMoney(i.repasse),'Resumo: repasse')} · Contrapartida ${textoHtml(D.fmtMoney(i.contrapartida),'Resumo: contrapartida')} · Global ${textoHtml(D.fmtMoney(i.global),'Resumo: valor global')}</dd></div>
-          <div><dt>Itens do PAD</dt><dd>${(i.pad||[]).length?`${i.pad.length} item(ns)${f.pad?' — soma confere com o global':' — soma difere do global'}`:(i.pad===null?'PAD não carregado — sincronize sem a opção rápida':'nenhum item publicado na extração oficial')}</dd></div>
+          <div><dt>Itens do PAD</dt><dd>${padState.key==='incompleto'?textoHtml(padState.titulo+' — '+padState.detalhe,'Resumo: PAD incompleto'):(i.pad||[]).length?`${i.pad.length} item(ns)${f.pad?' — soma confere com o global':' — soma difere do global'}`:textoHtml(padState.titulo,'Resumo: PAD')}</dd></div>
           <div><dt>Vigência na origem</dt><dd>${i.vigenciaInicio||i.vigenciaFim?`${textoHtml(D.fmtDate(i.vigenciaInicio),'Resumo: início da vigência')} a ${textoHtml(D.fmtDate(i.vigenciaFim),'Resumo: fim da vigência')}`:'não informada na extração'}</dd></div>
           <div><dt>Controles</dt><dd>Mérito ${D.groupProgress(p,'merito').done}/${D.groupProgress(p,'merito').total} · Requisitos da Proposta ${D.groupProgress(p,'proposta').done}/${D.groupProgress(p,'proposta').total} · Requisitos para Formalização ${D.groupProgress(p,'formalizacao').done}/${D.groupProgress(p,'formalizacao').total}</dd></div>
-          <div><dt>Diligências</dt><dd>${dilig} não saneada(s)${pend?` · <strong>${pend} marcação(ões) sem registro</strong>`:''}</dd></div>
+          <div><dt>Diligências</dt><dd>${dilig} aberta(s)${encerradas?` · ${encerradas} encerrada(s) não saneada(s)`:''}${pend?` · <strong>${pend} marcação(ões) sem registro</strong>`:''}</dd></div>
         </dl>
-        ${apagadas?'<p class="source">Fora das telas de gestão e das sincronizações. Use “Restaurar proposta” para devolvê-la ao painel.</p>':''}
+        ${apagadas?'<p class="source">Fora das telas de gestão. Sincronizações podem atualizar suas evidências, preservando a exclusão. Use “Restaurar proposta” para devolvê-la ao painel.</p>':''}
         ${avisos.length?`<p class="source warn-text">A conferir: ${textoHtml(avisos.join(' · '),'Resumo: avisos')}.</p>`:''}
         ${i.objeto?`<div class="row-objeto"><span class="cell-sub">Objeto</span><div class="row-objeto-text">${textoHtml(i.objeto,'Resumo: objeto')}</div></div>`:'<p class="source">Objeto não informado nesta extração.</p>'}
       </div>`;
     }).join('');
     const rodape=apagadas
-      ? 'Propostas apagadas ficam guardadas no banco: não somem da base, apenas saem das telas de gestão e das sincronizações até serem restauradas.'
+      ? 'Propostas apagadas ficam guardadas no banco. Evidências importadas continuam sendo conferidas; a exclusão permanece até restauração explícita.'
       : (isReadOnly() ? 'Resumo informativo gerado a partir da base oficial do PROFOR / ONASP 2026.' : 'Resumo informativo gerado a partir da extração. Apagar uma proposta a retira do painel e das demais telas de gestão, sem removê-la do banco.');
-    return `<div class="expansion-wrap"><div class="expansion-header"><div class="expansion-header-info"><span class="expansion-eyebrow">Resumo Executivo da UF</span><h3 class="expansion-title"><span class="uf-cell">${ufFlag(uf,name)}<span class="uf-code">${textoHtml(uf,'UF')}</span></span> ${textoHtml(name,'Resumo da UF: nome')}</h3></div><div class="expansion-badges">${ps.length>1?`<span class="head-badge">${ps.length} proposta(s)</span>`:''}${sitBadge(sit)}</div></div>${cards}<p class="source">${rodape}</p></div>`;
+    return `<div class="expansion-wrap"><div class="expansion-header"><div class="expansion-header-info"><span class="expansion-eyebrow">Resumo Executivo da UF</span><h3 class="expansion-title"><span class="uf-cell">${ufFlag(uf,name)}<span class="uf-code">${textoHtml(uf,'UF')}</span></span> ${textoHtml(name,'Resumo da UF: nome')}</h3></div><div class="expansion-badges">${ps.length>1?`<span class="head-badge">${ps.length} proposta(s) correspondente(s)</span>`:''}${sitBadge(sit)}</div></div>${cards}<p class="source">${rodape}</p></div>`;
   }
   function deletedWhen(p){return p.deletedAt?e(new Date(p.deletedAt).toLocaleString('pt-BR')):'não registrada';}
   /* ---- UFs a partir das duas listas ----
@@ -459,8 +464,8 @@
   const SOURCE_ROTULO=Object.fromEntries(SOURCE_CHAVES.map(k=>[k,D.sourceState({situacao:SOURCE_SITUACAO[k]}).label]));
   /* Vocabulário do "Status Proposta" — as mesmas saídas de D.situation(), na
      ordem de precedência do domínio. */
-  const STATUS_PROPOSTA=['Em elaboração na origem','Em análise','Em diligência','Requer nova análise','Apta à celebração','Pendente de celebração','Formalização com cláusula suspensiva'];
-  const SIT_CLASSES={'Apta à celebração':'good','Em análise':'good','Em diligência':'warn','Em elaboração na origem':'warn','Requer nova análise':'warn','Formalização com cláusula suspensiva':'warn','Pendente de celebração':'','Sem proposta importada':'','Apagada do painel':'bad'};
+  const STATUS_PROPOSTA=['Em elaboração na origem','Em análise','Em diligência','Requer nova análise','Análise técnica desfavorável','Apta à celebração','Pendente de celebração','Formalização com cláusula suspensiva'];
+  const SIT_CLASSES={'Apta à celebração':'good','Em análise':'work','Análise técnica desfavorável':'bad','Em diligência':'warn','Em elaboração na origem':'warn','Requer nova análise':'warn','Formalização com cláusula suspensiva':'warn','Pendente de celebração':'','Sem proposta importada':'','Apagada do painel':'bad'};
   function sitBadge(rotulo){return badge(rotulo,SIT_CLASSES[rotulo]!==undefined?SIT_CLASSES[rotulo]:'');}
   /* ---- Molde da linha ----
      As colunas de cada modo, na MESMA ordem do <thead>. O molde monta um <td>
@@ -481,7 +486,7 @@
     const valor=p?textoHtml(D.fmtMoney(p.imported.global),'Linha: valor global'):vazio;
     /* Status na origem: termo conciso com o texto literal da extração logo abaixo. */
     const etapa=p?sourceBadge(p):vazio;
-    const abertas=p?p.diligences.filter(d=>d.status!=='saneada').length:0;
+    const abertas=p?p.diligences.filter(d=>!D.diligenceTerminal(d)).length:0;
     const semRegistro=p?D.pending(p).length:0;
     const tom=ufTone(sit);
     const chevronSvg=`<svg class="chevron-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>`;
@@ -509,22 +514,19 @@
     const ufs=modo==='apagadas'?deletedUfs():activeUfs();
     const abertoSet=modo==='apagadas'?expandDel:expand;
     const colunas=COLUNAS[modo];
-    let html='';
+    let html='',matchedCount=0,matchedUfs=0,matchedTotal=0,missingValue=false;
     for(const [uf,lista] of ufs){
       if(filters.uf && filters.uf!==uf)continue;
       const name=nomeUf(uf);
-      /* Status Proposta (e o filtro homônimo): proposta de referência da UF —
-         a primeira da ordem de envio. O filtro de origem usa a mesma linha. */
-      const primeiro=lista[0]||null;
-      const sit=lista.length?ufSituation(lista,modo):'Sem proposta importada';
-      if(filters.status && filters.status!==sit)continue;
-      if(filters.source){if(!primeiro || D.sourceState(primeiro.imported).key!==filters.source)continue;}
-      if(filters.search && !`${uf} ${name} ${lista.map(p=>proposalNumber(p.imported.numero)+' '+p.imported.proponente).join(' ')}`.toLocaleLowerCase('pt-BR').includes(filters.search.toLocaleLowerCase('pt-BR')))continue;
-      if(filters.control){if(!primeiro)continue;const c=filters.control;const ok=lista.some(p=>{if(c==='financial')return !D.finance(p).ok;if(c==='unlinked')return D.pending(p).length>0;if(c==='ouvidoria')return p.ouvidoria.status==='pendente';if(['merito','proposta','formalizacao'].includes(c)){const r=D.groupProgress(p,c);return r.done!==r.total;}return true;});if(!ok)continue;}
+      const matching=lista.filter(p=>D.matchesFilters(p,filters));
+      if(lista.length && !matching.length)continue;
+      if(!lista.length && (filters.source || filters.control || (filters.status && filters.status!=='Sem proposta importada') || (filters.search && !`${uf} ${name}`.toLocaleLowerCase('pt-BR').includes(filters.search.toLocaleLowerCase('pt-BR')))))continue;
+      const correspondentes=matching;matchedCount+=matching.length;if(matching.length)matchedUfs++;for(const proposal of matching){if(proposal.imported.global===null)missingValue=true;else matchedTotal+=proposal.imported.global;}
+      const sit=correspondentes.length?ufSituation(correspondentes,modo):'Sem proposta importada';
       const aberto=abertoSet.has(uf);
-      const celulas=celulasDaLinha(modo,uf,name,lista,sit,aberto);
+      const celulas=celulasDaLinha(modo,uf,name,correspondentes,sit,aberto);
       html+=`<tr class="uf-row${aberto?' open row-is-expanded':''}${modo==='apagadas'?' uf-row-deleted':''}" data-uf="${textoHtml(uf,'Linha: UF')}" data-modo="${textoHtml(modo,'Linha: modo')}" tabindex="0" aria-expanded="${aberto?'true':'false'}" title="Clique para ${aberto?'recolher':'ver as propostas desta UF'}">${celulas}</tr>`;
-      if(aberto)html+=`<tr class="uf-summary row-summary-detail" id="summary-${textoHtml(uf,'UF')}"><td colspan="${colunas.length}">${rowSummary(uf,name,lista,modo,sit)}</td></tr>`;
+      if(aberto)html+=`<tr class="uf-summary row-summary-detail" id="summary-${textoHtml(uf,'UF')}"><td colspan="${colunas.length}">${rowSummary(uf,name,correspondentes,modo,sit)}</td></tr>`;
     }
     const alvo=modo==='apagadas'?$('#del-rows'):$('#uf-rows');
     if(alvo){
@@ -534,6 +536,7 @@
       const tabela=alvo.closest('table');
       const colunasCabecalho=tabela?tabela.querySelectorAll('thead th').length:0;
       D.assert(!colunasCabecalho || colunasCabecalho===colunas.length,`Tabela do modo ${modo}: ${colunas.length} célula(s) por linha para ${colunasCabecalho} coluna(s) no cabeçalho.`);
+      const count=$('#panel-filter-count');if(modo==='ativas' && count)count.textContent=`${matchedCount} proposta(s) correspondentes em ${matchedUfs} UF(s) · Total filtrado: ${D.fmtMoney(matchedTotal)}${missingValue?' (há valores não informados)':''}. Os indicadores acima abrangem todas as propostas ativas.`;
       alvo.innerHTML=html || `<tr><td colspan="${colunas.length}" class="empty">${modo==='apagadas'?'Nenhuma proposta apagada.':'Nenhuma proposta corresponde aos filtros.'}</td></tr>`;
     }
   }
@@ -552,27 +555,26 @@
      inspirado no padrão do projeto Parâmetros Mínimos. Mostra situação,
      checklist dos critérios obrigatórios, equação financeira e escala de progresso. */
   function renderResultSection(p){
-    const i=p.imported, sit=D.situation(p), f=D.finance(p);
-    const mProg=D.groupProgress(p,'merito'), pProg=D.groupProgress(p,'proposta'), fProg=D.groupProgress(p,'formalizacao');
-    const totalDone=mProg.done+pProg.done+fProg.done;
-    const totalReqs=mProg.total+pProg.total+fProg.total;
-    const pct=totalReqs>0?Math.round((totalDone/totalReqs)*100):0;
-    const abertas=p.diligences.filter(d=>d.status!=='saneada').length;
+    const i=p.imported, sit=D.situation(p), f=D.finance(p),padState=D.padSituacao(p,state.sync);
+    const mProg=D.groupProgress(p,'merito'), pProg=D.groupProgress(p,'proposta'), fProg=D.groupProgress(p,'formalizacao'),padProg=D.groupProgress(p,'pad'),all=D.reviewProgress(p);
+    const totalDone=all.done,totalReqs=all.total,pct=all.percent;
+    const abertas=p.diligences.filter(d=>!D.diligenceTerminal(d)).length;
     const semReg=D.pending(p).length;
     const allPass=sit==='Apta à celebração';
     const isWarn=['Em diligência','Requer nova análise','Formalização com cláusula suspensiva','Pendente de celebração','Em elaboração na origem'].includes(sit);
-    const pillTom=allPass?'status-pass':sit==='Em análise'?'status-pass':isWarn?'status-fail':'status-neutral';
+    const pillTom=allPass?'status-pass':isWarn?'status-fail':'status-neutral';
 
     const iconPass=`<svg class="status-icon-svg" viewBox="0 0 20 20" fill="currentColor" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>`;
     const iconFail=`<svg class="status-icon-svg" viewBox="0 0 20 20" fill="currentColor" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/></svg>`;
     const iconInfo=`<svg class="status-icon-svg" viewBox="0 0 20 20" fill="currentColor" width="18" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/></svg>`;
-    const statusSvg=allPass||sit==='Em análise'?iconPass:isWarn?iconFail:iconInfo;
+    const statusSvg=allPass?iconPass:isWarn?iconFail:iconInfo;
 
-    const padOk=f.padComplete && f.pad;
-    const meritoOk=mProg.done===mProg.total;
-    const propOk=pProg.done===pProg.total;
-    const formOk=fProg.done===fProg.total;
-    const diligOk=abertas===0 && semReg===0;
+    const padOk=f.ok && padProg.accepted===padProg.total && p.padImport?.status!=='partial';
+    const meritoOk=mProg.accepted===mProg.total;
+    const propOk=pProg.accepted===pProg.total;
+    const formOk=fProg.accepted===fProg.total;
+    const encerradasSemSaneamento=p.diligences.filter(d=>d.status==='nao_saneada').length;
+    const diligOk=abertas===0 && semReg===0 && encerradasSemSaneamento===0;
 
     return `<section class="section result-section" aria-label="Resultado consolidado da análise técnica">
       <div class="result-header">
@@ -597,35 +599,35 @@
                 <span class="crit-icon">${meritoOk?'✓':'!'}</span>
                 <div class="crit-info">
                   <strong>1. Análise de Mérito (10 itens)</strong>
-                  <span>${meritoOk?'Todos os 10 itens de mérito aprovados em conformidade':`${mProg.done} de ${mProg.total} itens analisados/em conformidade`}</span>
+                  <span>${meritoOk?'Todos os itens de mérito atendidos e atuais':`${mProg.done} de ${mProg.total} itens revisados`}</span>
                 </div>
               </li>
               <li class="criteria-item ${padOk?'crit-pass':'crit-warn'}">
                 <span class="crit-icon">${padOk?'✓':'!'}</span>
                 <div class="crit-info">
-                  <strong>2. Plano de Aplicação Detalhado (PAD)</strong>
-                  <span>${!f.padComplete?(i.pad===null?'Arquivo do PAD não carregado nesta base':'Sem itens de PAD publicados na extração oficial'):f.pad?`Soma do PAD (${textoHtml(D.fmtMoney(f.sum),'Painel: soma PAD')}) confere com o valor global`:`Soma do PAD (${textoHtml(D.fmtMoney(f.sum),'Painel: soma PAD')}) diverge do global (${textoHtml(D.fmtMoney(i.global),'Painel: global')})`}</span>
+                  <strong>2. Plano de Aplicação Detalhado (PAD)</strong><span>${padProg.done}/${padProg.total} revisados · ${padProg.total-padProg.done} pendentes · ${f.errors.length} divergência(s) unitária(s)</span>
+                  <span>${padState.key==='incompleto' || !f.padComplete?textoHtml(padState.titulo+' — '+padState.detalhe,'Painel: situação do PAD'):f.pad?`Soma do PAD (${textoHtml(D.fmtMoney(f.sum),'Painel: soma PAD')}) confere com o valor global`:`Soma do PAD (${textoHtml(D.fmtMoney(f.sum),'Painel: soma PAD')}) diverge do global (${textoHtml(D.fmtMoney(i.global),'Painel: global')})`}</span>
                 </div>
               </li>
               <li class="criteria-item ${propOk?'crit-pass':'crit-warn'}">
                 <span class="crit-icon">${propOk?'✓':'!'}</span>
                 <div class="crit-info">
                   <strong>3. Requisitos da Proposta (Celebração)</strong>
-                  <span>${propOk?'Todos os 7 requisitos da proposta atendidos (NT nº 231 / Parecer nº 15)':`${pProg.done} de ${pProg.total} requisitos da proposta atendidos`}</span>
+                  <span>${propOk?'Requisitos da proposta atendidos e atuais':`${pProg.done}/${pProg.total} revisados · ${pProg.accepted} atendidos e atuais`}</span>
                 </div>
               </li>
               <li class="criteria-item ${formOk?'crit-pass':'crit-warn'}">
                 <span class="crit-icon">${formOk?'✓':'!'}</span>
                 <div class="crit-info">
                   <strong>4. Requisitos para Formalização (Celebração)</strong>
-                  <span>${formOk?'Todos os 13 requisitos de formalização conferidos e atendidos':`${fProg.done} de ${fProg.total} requisitos de formalização atendidos`}</span>
+                  <span>${formOk?'Todos os 13 requisitos de formalização conferidos e atendidos':`${fProg.done}/${fProg.total} revisados · ${fProg.accepted} atendidos e atuais`}</span>
                 </div>
               </li>
               <li class="criteria-item ${diligOk?'crit-pass':'crit-warn'}">
                 <span class="crit-icon">${diligOk?'✓':'!'}</span>
                 <div class="crit-info">
                   <strong>5. Diligências e Condições Especiais</strong>
-                  <span>${diligOk?'Nenhuma pendência ou diligência não saneada':`${abertas} diligência(s) aberta(s)${semReg?` · ${semReg} marcação(ões) sem registro`:''}`}</span>
+                  <span>${diligOk?'Nenhuma pendência ou diligência não saneada':`${abertas} diligência(s) aberta(s)${encerradasSemSaneamento?` · ${encerradasSemSaneamento} encerrada(s) não saneada(s)`:''}${semReg?` · ${semReg} marcação(ões) sem registro`:''}`}</span>
                 </div>
               </li>
             </ul>
@@ -658,19 +660,19 @@
 
           <div class="score-gauge-box">
             <div class="gauge-header">
-              <span>Aproveitamento Global dos Requisitos</span>
-              <strong id="gauge-score-val">${totalDone} / ${totalReqs} requisitos (${pct}%)</strong>
+              <span>Progresso da revisão humana</span>
+              <strong id="gauge-score-val">${totalDone} / ${totalReqs} itens revisados (${pct}%)</strong>
             </div>
             <div class="gauge-track">
               <div id="final-score-fill" class="gauge-fill ${pct===100?'gauge-fill-pass':'gauge-fill-fail'}" style="width:${pct}%;"></div>
-              <div class="gauge-marker gauge-marker-100 ${pct===100?'marker-pass':(pct>0?'marker-warn':'marker-zero')}" style="left:${pct}%;" title="Aproveitamento atual: ${pct}% completo (${totalDone} de ${totalReqs} requisitos)">
+              <div class="gauge-marker gauge-marker-100 ${pct===100?'marker-pass':(pct>0?'marker-warn':'marker-zero')}" style="left:${pct}%;" title="Revisão atual: ${pct}% revisado (${totalDone} de ${totalReqs} requisitos)">
                 <div class="marker-line"></div>
                 <span class="marker-label" style="transform:translateX(-${pct}%);">${pct}% completo</span>
               </div>
             </div>
             <div class="gauge-footer">
               <span>0%</span>
-              <span class="gauge-target">Meta para celebração: 100% de conformidade</span>
+              <span class="gauge-target">Revisão concluída não significa aprovação</span>
               <span>100%</span>
             </div>
           </div>
@@ -696,9 +698,12 @@
         </div>
         <div class="actions">${button('Gerar relatório','report')}${isReadOnly()?'':button(p.conclusion?'Rever conclusão':'Concluir análise técnica','conclude','','primary')}</div>
       </div>
-      ${renderResultSection(p)}
+      <details class="review-summary" data-proposal-summary="${e(p.id)}" ${summaryClosed.has(p.id)?'':'open'}><summary>Resumo da revisão · ${D.reviewProgress(p).done}/${D.reviewProgress(p).total} revisados · PAD ${D.groupProgress(p,'pad').done}/${D.groupProgress(p,'pad').total} · ${D.finance(p).errors.length} divergência(s) unitária(s) · ${D.blockers(p,true).length} pendência(s) de aptidão</summary>${renderResultSection(p)}</details>
+      ${D.institutionalConflicts(p).length?'<div class="info warning">Conflito legado entre fato institucional e parecer. Os dois registros foram preservados; confira em Mérito → Editar informações.</div>':''}
+      ${p.conclusion?`<p class="info">Conclusão técnica: ${e(({favoravel:'Favorável',desfavoravel:'Desfavorável'})[p.conclusion.result]||'Legada, sem referência verificável')} · ${e(p.conclusion.actor)} · ${e(D.fmtDate(p.conclusion.at))}${p.conclusion.reference?` · Evidências: ${e(p.conclusion.reference)}`:''}${p.conclusion.note?` · Justificativa: ${e(p.conclusion.note)}`:''}</p>`:''}
       ${D.pending(p).length?`<div class="info error">${D.pending(p).length} pendência(s) marcada(s) como diligência sem registro ativo. ${isReadOnly()?'':'<a href="#proposta/'+e(p.id)+'/diligencias">Cadastrar diligência</a>'}</div>`:''}
       <nav class="tabs dim-tabs" aria-label="Seções da proposta">${Object.entries(tabNames).filter(([id])=>id!=='merito').map(([id,name])=>`<a data-tab="${id}" class="${id===activeTab?'active':''}" ${id===activeTab?'aria-current="page"':''} href="#proposta/${e(p.id)}/${id}">${name}</a>`).join('')}</nav>${transferegovBox(p)}<div id="tab-content"></div>`;
+    document.querySelector('[data-proposal-summary]')?.addEventListener('toggle',ev=>{const el=ev.currentTarget;if(el.open)summaryClosed.delete(el.dataset.proposalSummary);else summaryClosed.add(el.dataset.proposalSummary);});
     if(activeTab==='dados')renderData(p);
     else if(activeTab==='diligencias')renderDiligences(p);
     else if(activeTab==='historico')renderHistory(p);
@@ -1078,8 +1083,8 @@
       D.assert(meta && meta.aba===g,`Sem metadados da Lista de Conferência para o item ${id} da aba ${g}.`);
       return {...meta,id,label};
     });
-    const aceitos=itens.filter(x=>['ok','obs'].includes(D.reviewOf(p,g,x.id).status)).length;
-    $('#tab-content').innerHTML=`<section class="section"><div class="section-head"><h2>${textoHtml(aba.titulo,'Aba de celebração: título')}</h2><span class="source">${aceitos} de ${itens.length} requisito(s) atendido(s)</span></div>
+    const revisão=D.groupProgress(p,g),aceitos=revisão.accepted;
+    $('#tab-content').innerHTML=`<section class="section"><div class="section-head"><h2>${textoHtml(aba.titulo,'Aba de celebração: título')}</h2><span class="source">${revisão.done}/${revisão.total} revisados · ${aceitos} atendidos e atuais</span></div>
       <div class="section-body"><p class="source">${textoHtml(aba.nota,'Aba de celebração: nota')}</p></div>
       <div class="table-wrap"><table class="req-table"><colgroup><col class="c-req-item"><col class="c-req"><col class="c-req-fund"><col class="c-req-comp"><col class="c-req-res"><col class="c-req-acao"></colgroup><thead><tr><th>Item</th><th>Requisito</th><th>Fundamentação</th><th>Comprovação</th><th>Resultado</th><th>Ação</th></tr></thead><tbody>${itens.map(x=>{
         const r=D.reviewOf(p,g,x.id);
@@ -1101,9 +1106,9 @@
           </div>
         </td>
         <td class="review-title req-title">${textoHtml(x.label,'Requisito: título')}${x.sub?`<div class="review-note">${textoHtml(x.sub,'Requisito: subtexto da Lista de Conferência')}</div>`:''}${r.note?`<div class="review-note"><strong>Observação:</strong> ${textoHtml(r.note,'Requisito: observação')}</div>`:''}</td>
-        <td class="req-fund">${textoHtml(x.fundamentacao,'Requisito: fundamentação')}</td>
+        <td class="req-fund">${descriptionHtml(p,g,x.id+'-fund',x.fundamentacao)}</td>
         <td class="req-comp">${textoHtml(x.comprovacao,'Requisito: comprovação')}</td>
-        <td class="cell-center">${reviewBadge(r)}</td>
+        <td class="cell-center">${reviewBadge(r)}${evidenceNotice(p,g,x.id)}</td>
         <td class="cell-ctrl cell-center"><div class="review-actions">${acaoDeAnalise(p,g,x.id,r)}${!isReadOnly() && D.pending(p).some(pending=>pending.ref==='celebracao:'+x.id)?button('Criar diligência','diligence',`data-ref="${e('celebracao:'+x.id)}"`):''}</div></td></tr>`;
         const detailRow=isExpanded?`<tr class="row-summary-detail" id="detail-${e(g)}-${safeId}"><td colspan="6">${renderExpansionDetail(p,g,x,r)}</td></tr>`:'';
         return mainRow+detailRow;
@@ -1146,7 +1151,7 @@
   async function selecionarAnalise(grupo,item,valor){
     const antes=D.reviewOf(current(),grupo,item).status;
     if(valor==='detalhes'){editReview(grupo,item);return;}
-    if(valor===antes)return;
+    if(valor===antes && D.reviewCurrent(current(),grupo,item))return;
     if(valor!=='na' && !opcoesDoItem(grupo,item).some(o=>o.valor===valor))return;
     const direto = grupo === 'merito' && (item === 'ouvidoriaInstituida' || item === 'falaBRAdesao');
     if(direto){
@@ -1201,11 +1206,12 @@
   async function runStatusChoice(control,valor){
     const root=control.closest('[data-status-dropdown]'),trigger=root?.querySelector('[data-status-toggle]');
     if(!root||!trigger)return;
-    const {group,id}=root.dataset;
+    const {group,id}=root.dataset,proposalId=selected,scrollY=window.scrollY;
+    D.assert(!isReadOnly(),'Consulta pública: avaliação indisponível.');
     closeStatusDropdown(false);
     trigger.disabled=true;root.classList.add('disabled');trigger.setAttribute('aria-busy','true');
     try{await selecionarAnalise(group,id,valor);}
-    finally{if(trigger.isConnected){trigger.disabled=false;root.classList.remove('disabled');trigger.removeAttribute('aria-busy');}}
+    finally{if(trigger.isConnected){trigger.disabled=false;root.classList.remove('disabled');trigger.removeAttribute('aria-busy');}if(selected===proposalId && !$('#modal').open){const equivalent=[...document.querySelectorAll('[data-status-dropdown]')].find(el=>el.dataset.group===group && el.dataset.id===id)?.querySelector('[data-status-toggle]');equivalent?.focus({preventScroll:true});window.scrollTo({top:scrollY});}}
   }
   /* Textos oficiais na própria lista, sempre completos e visíveis dentro do
      painel. Cada item mostra só o que é dele — nenhum item aglutina campos de
@@ -1273,19 +1279,21 @@
     const batchEnabled=pad && !isReadOnly() && padItems.length>0;
     const batchBar=batchEnabled?`<div class="pad-batch-bar" aria-label="Ação conjunta no PAD"><p id="pad-batch-count" role="status" aria-live="polite">${padBatchItems.size} ${padBatchItems.size===1?'item selecionado':'itens selecionados'}${batchHidden?` · ${batchHidden} fora dos filtros atuais`:''}.</p><div class="actions"><button id="pad-batch-clear" type="button" class="quiet" ${padBatchItems.size?'':'disabled'}>Limpar seleção</button><select id="pad-batch-action" aria-label="Ação para os itens selecionados">${options({'':'Escolha a ação',na:'Analisar',...Object.fromEntries(OPCOES_PAD.map(o=>[o.valor,o.rotulo]))},padBatchAction)}</select><button id="pad-batch-apply" type="button" class="primary" ${padBatchItems.size&&padBatchAction?'':'disabled'}>Aplicar</button></div></div>`:'';
     const somaVisivel=linhasPad.reduce((a,x)=>a+x.total,0);
+    const padReview=D.groupProgress(p,'pad');
     const diffCents=Number.isSafeInteger(f.sum) && Number.isSafeInteger(p.imported.global)?f.sum-p.imported.global:null;
     const cobertura=(Number.isSafeInteger(f.sum) && Number.isSafeInteger(p.imported.global) && p.imported.global>0)?Math.min(1,f.sum/p.imported.global):null;
     const semItens=pad
-      ? `<tr><td colspan="6" class="empty">${filtroPadAtivo?'Nenhum item corresponde aos filtros. Limpe a busca ou use “Exibir todos”.':`Nenhum item do PAD para conferir nesta proposta${ps.key==='nao-carregado'?' — o arquivo não foi carregado nesta base.':' — o plano de aplicação detalhado ainda não consta dos dados abertos do Transferegov.'}`}</td></tr>`
+      ? `<tr><td colspan="6" class="empty">${filtroPadAtivo?'Nenhum item corresponde aos filtros. Limpe a busca ou use “Exibir todos”.':ps.key==='incompleto'?'Importação incompleta: nenhum PAD íntegro disponível para conferir. Consulte a candidata e as rejeições acima.':`Nenhum item do PAD para conferir nesta proposta${ps.key==='nao-carregado'?' — o arquivo não foi carregado nesta base.':' — o plano de aplicação detalhado ainda não consta dos dados abertos do Transferegov.'}`}</td></tr>`
       : `<tr><td colspan="${merito?3:4}" class="empty">Nenhum item nesta lista para esta proposta.</td></tr>`;
     const cartoesPad=pad?`<div class="section-body pad-cards">
         <div class="pad-totals">
-          <div class="pad-total"><span class="pad-total-label">Soma do PAD</span><strong>${D.fmtMoney(f.sum)}</strong><span class="pad-total-sub">${padItems.length} ${padItems.length===1?'item previsto':'itens previstos'}</span></div>
+          <div class="pad-total"><span class="pad-total-label">Soma do PAD</span><strong>${D.fmtMoney(f.sum)}</strong><span class="pad-total-sub">${padReview.done}/${padReview.total} revisados · ${f.errors.length} divergência(s) · ${padItems.length} ${padItems.length===1?'item previsto':'itens previstos'}</span></div>
           <div class="pad-total"><span class="pad-total-label">Valor global</span><strong>${D.fmtMoney(p.imported.global)}</strong><span class="pad-total-sub">extração oficial</span></div>
           <div class="pad-total"><span class="pad-total-label">Diferença</span><strong class="${diffCents===null?'':diffCents===0?'pad-diff-ok':'pad-diff-bad'}">${diffCents===null?'Não calculável':(diffCents===0?'R$ 0,00':D.fmtMoney(diffCents))}</strong><span class="pad-total-sub">${diffCents===null?'valores ausentes na extração':diffCents===0?'soma confere com o global':'soma diverge do global'}</span></div>
         </div>
         ${cobertura===null||cobertura>=1?'':`<div class="pad-cover" role="img" aria-label="Cobertura do PAD sobre o valor global: ${pctBR(cobertura)}"><div class="pad-cover-bar" style="width:${(cobertura*100).toFixed(1)}%"></div></div>`}
         ${ps.key==='com-itens'?'':`<div class="info warning"><strong>${textoHtml(ps.titulo,'PAD: situação')}.</strong> ${textoHtml(ps.detalhe,'PAD: motivo')}</div>`}
+        ${p.padImport?.status==='partial'?`<details class="info warning"><summary>Inspecionar extração candidata e rejeições (sem aplicação ao PAD oficial)</summary><p>Fonte: ${e(p.padImport.source)} · ${e(D.fmtDate(p.padImport.at))} · ${p.padImport.received} recebida(s), ${p.padImport.accepted} aceita(s), ${p.padImport.rejected} rejeição(ões).</p><ul>${p.padImport.reasons.map(r=>`<li>Linha ${r.line}${r.itemId?' · item '+e(r.itemId):''}: ${e(r.reason)}</li>`).join('')}</ul><p>Candidata parcial, conservada somente para inspeção:</p><ul>${(p.padImport.candidate||[]).map(i=>`<li>${e(i.descricao)} · quantidade ${e(fmtQty(i.quantidade))} · total ${e(D.fmtMoney(i.total))}</li>`).join('')}</ul></details>`:''}
         ${padItems.length?`<div class="filters pad-filter">
           <label class="search">Buscar item do PAD<input id="pad-search" type="search" value="${e(padSearch)}" placeholder="Descrição do item" autocomplete="off"></label>
           <div class="pad-select-control"><span id="pad-select-label" class="pad-filter-label">Selecionar itens do PAD</span>
@@ -1317,8 +1325,8 @@
       ${cartoesPad}
       ${batchBar}
       <div class="table-wrap"><table class="${pad?'pad-table':'review-table'}"><colgroup>${pad?'<col class="c-pad-item"><col class="c-pad-qtd"><col class="c-pad-unit"><col class="c-pad-total"><col class="c-pad-conf"><col class="c-pad-acao">':''}</colgroup><thead><tr><th scope="col">${batchEnabled?'<label class="pad-batch-heading"><input id="pad-batch-header" type="checkbox" aria-label="Selecionar todos os itens exibidos">Item</label>':pad?'Item':'Requisito'}</th>${pad?'<th scope="col" class="cell-right pad-case">Qtd</th><th scope="col" class="cell-right pad-case">Valor unitário</th><th scope="col" class="cell-right pad-case">Valor total</th>':''}<th scope="col" class="${pad?'pad-th-conf':''}">${pad?'Conferência':'Resultado'}</th>${!pad&&!merito?'<th scope="col">Documento</th>':''}<th scope="col" class="cell-center pad-th-action">Ação</th></tr></thead><tbody>${pad
-        ? linhasPad.map(item=>{const [id,label]=[item.id,item.descricao];const r=D.reviewOf(p,g,id);const divergente=!D.unitMatchesTotal(item);const parte=f.sum>0?item.total/f.sum:null;return `<tr data-pad-item="${e(id)}" ${batchEnabled && padBatchItems.has(id)?'class="pad-batch-selected"':''}><td class="pad-desc">${batchEnabled?`<div class="pad-batch-row"><input id="pad-batch-${e(id)}" type="checkbox" data-pad-batch="${e(id)}" aria-label="Selecionar ${e(label)} para ação conjunta" ${padBatchItems.has(id)?'checked':''}><span class="pad-desc-text" title="${e(label)}">${e(label)}</span></div>`:`<span class="pad-desc-text" title="${e(label)}">${e(label)}</span>`}</td><td class="number cell-right">${e(fmtQty(item.quantidade))}</td><td class="number cell-right">${D.fmtMoney(item.unitario)}${divergente?badge('Divergente','bad'):''}</td><td class="number cell-right">${D.fmtMoney(item.total)}${parte===null?'':`<span class="cell-sub pad-share"><span class="pad-share-bar" style="--w:${(parte*100).toFixed(1)}%"></span>${e(pctBR(parte))}</span>`}</td><td class="pad-conf">${reviewBadge(r)}</td><td class="cell-center pad-actions"><div class="review-actions">${acaoDeAnalise(p,g,id,r)}${!isReadOnly() && D.pending(p).some(pending=>pending.ref===g+':'+id)?button('Criar diligência','diligence',`data-ref="${e(g+':'+id)}"`):''}</div></td></tr>`;}).join('') || semItens
-        : D.rows(p,g).map(([id,label])=>{const r=D.reviewOf(p,g,id);const opcao=opcaoAtual(g,id,r.status),custom=merito&&!!OPCOES_DA_ACAO[id];const ausente=id==='ouvidoriaInstituida' && r.status==='no';const resultado=(custom && opcao)?badge(opcao.rotulo,tomDoResultado(opcao.tom)):reviewBadge(r);const titulo=(merito && !isReadOnly())?`<button type="button" class="review-open" data-action="review" data-group="${e(g)}" data-id="${e(id)}" title="Abrir o detalhe do item: observação, documento, diligência e histórico">${e(label)}</button>`:e(label);return `<tr><td class="review-title">${titulo}${textosInlineHtml(p,id)}${r.note?`<div class="review-note">${e(r.note)}</div>`:''}${ausente?`<div class="info warning review-alert">A instituição da Ouvidoria Específica de Serviços Penais será cláusula suspensiva do Convênio.</div>`:''}</td><td>${resultado}</td>${merito?'':`<td>${link(r)}</td>`}<td class="${merito?'cell-center':''}"><div class="review-actions">${acaoDeAnalise(p,g,id,r)}${!isReadOnly() && D.pending(p).some(pending=>pending.ref===g+':'+id)?button('Criar diligência','diligence',`data-ref="${e(g+':'+id)}"`):''}</div></td></tr>`;}).join('') || semItens}</tbody>${rodapePad}</table></div></section>`;
+        ? linhasPad.map(item=>{const [id,label]=[item.id,item.descricao];const r=D.reviewOf(p,g,id);const divergente=!D.unitMatchesTotal(item);const parte=f.sum>0?item.total/f.sum:null;return `<tr data-pad-item="${e(id)}" ${batchEnabled && padBatchItems.has(id)?'class="pad-batch-selected"':''}><td class="pad-desc">${batchEnabled?`<div class="pad-batch-row"><input id="pad-batch-${e(id)}" type="checkbox" data-pad-batch="${e(id)}" aria-label="Selecionar ${e(label)} para ação conjunta" ${padBatchItems.has(id)?'checked':''}>${descriptionHtml(p,g,id,label)}</div>`:descriptionHtml(p,g,id,label)}</td><td class="number cell-right">${e(fmtQty(item.quantidade))}</td><td class="number cell-right">${D.fmtMoney(item.unitario)}${divergente?badge('Divergente','bad'):''}</td><td class="number cell-right">${D.fmtMoney(item.total)}${parte===null?'':`<span class="cell-sub pad-share"><span class="pad-share-bar" style="--w:${(parte*100).toFixed(1)}%"></span>${e(pctBR(parte))}</span>`}</td><td class="pad-conf">${reviewBadge(r)}${evidenceNotice(p,g,id)}</td><td class="cell-center pad-actions"><div class="review-actions">${acaoDeAnalise(p,g,id,r)}${!isReadOnly() && D.pending(p).some(pending=>pending.ref===g+':'+id)?button('Criar diligência','diligence',`data-ref="${e(g+':'+id)}"`):''}</div></td></tr>`;}).join('') || semItens
+        : D.rows(p,g).map(([id,label])=>{const r=D.reviewOf(p,g,id);const opcao=opcaoAtual(g,id,r.status),custom=merito&&!!OPCOES_DA_ACAO[id];const ausente=id==='ouvidoriaInstituida' && r.status==='no';const resultado=(custom && opcao)?badge(opcao.rotulo,tomDoResultado(opcao.tom)):reviewBadge(r);const titulo=(merito && !isReadOnly())?`<button type="button" class="review-open" data-action="review" data-group="${e(g)}" data-id="${e(id)}" title="Abrir o detalhe do item: observação, documento, diligência e histórico">${e(label)}</button>`:e(label);return `<tr><td class="review-title">${titulo}${textosInlineHtml(p,id)}${r.note?`<div class="review-note">${e(r.note)}</div>`:''}${ausente?`<div class="info warning review-alert">A instituição da Ouvidoria Específica de Serviços Penais será cláusula suspensiva do Convênio.</div>`:''}</td><td>${resultado}${evidenceNotice(p,g,id)}</td>${merito?'':`<td>${link(r)}</td>`}<td class="${merito?'cell-center':''}"><div class="review-actions">${acaoDeAnalise(p,g,id,r)}${!isReadOnly() && D.pending(p).some(pending=>pending.ref===g+':'+id)?button('Criar diligência','diligence',`data-ref="${e(g+':'+id)}"`):''}</div></td></tr>`;}).join('') || semItens}</tbody>${rodapePad}</table></div></section>`;
     if(opts.secao)return html;
     $('#tab-content').innerHTML=html;
     if(pad){
@@ -1397,7 +1405,7 @@
       for(const id of ids){
         D.assert(proposal.imported.pad.some(item=>item.id===id),'Um item selecionado não consta mais do PAD.');
         const review=D.reviewOf(proposal,'pad',id),note=commonNote || review.note;
-        if(review.status!==status || review.note!==note)D.setReview(proposal,'pad',id,{...review,status,note},name);
+        if(review.status!==status || review.note!==note || !D.reviewCurrent(proposal,'pad',id))D.setReview(proposal,'pad',id,{...review,status,note},name);
         if(integrated){
           const linked=proposal.diligences.filter(d=>d.ref==='pad:'+id && d.status!=='saneada');
           const old=linked.length===1?linked[0]:linked.find(d=>d.id===fd.get('d_'+id));
@@ -1411,9 +1419,9 @@
   function viewReview(p,group,id,r,label){
     const field=(name,title,value,multiline=false)=>`<label>${e(title)}${multiline?`<textarea name="${e(name)}" rows="6" readonly>${e(value || '')}</textarea>`:`<input name="${e(name)}" value="${e(value || '')}" readonly>`}</label>`;
     const resultado=opcaoAtual(group,id,r.status)?.rotulo || D.STATUSES[r.status];
-    const diligences=p.diligences.filter(d=>d.ref===group+':'+id);
-    const details=diligences.map(d=>`<fieldset class="form-stack"><legend>Diligência vinculada ao item</legend>${field('d_request','Providência solicitada / justificativa',d.request,true)}${field('d_category','Categoria',d.category)}<div class="forms-grid">${field('d_communication','Data da comunicação',D.fmtDate(d.communication))}${field('d_science','Data da ciência',D.fmtDate(d.science))}${field('d_due','Vencimento registrado',D.fmtDate(d.due))}${field('d_response','Data da resposta',D.fmtDate(d.response))}</div>${field('d_status','Situação',D.DSTATUS[d.status])}${field('d_note','Observação / conclusão',d.note,true)}</fieldset>`).join('');
-    modal('Detalhes da análise',`<p><strong>${textoHtml(D.tabLabel(group,id),'Consulta: aba')}</strong></p><p>${textoHtml(label,'Consulta: item')}</p><div class="form-stack">${field('status','Resultado',resultado)}${field('note',r.status==='diligencia'?'Providência solicitada / justificativa':'Observação / justificativa',r.note,true)}${r.document?field('document','Nome do documento',r.document):''}${r.url?`<p>${link(r)}</p>`:''}${details}</div><div class="dialog-actions">${button('Fechar','close')}</div>`);
+    const diligences=p.diligences.filter(d=>d.ref===D.canonicalRef(group,id));
+    const details=diligences.map(d=>'<fieldset><legend>Diligência vinculada</legend>'+businessDiligenceHtml(p,d)+'</fieldset>').join('');
+    modal('Detalhes da análise',`<p><strong>${textoHtml(D.tabLabel(group,id),'Consulta: aba')}</strong></p><p>${textoHtml(label,'Consulta: item')}</p><div class="form-stack">${field('status','Resultado',resultado)}${field('note',r.status==='diligencia'?'Providência solicitada / justificativa':'Observação / justificativa',r.note,true)}${r.document?field('document','Nome do documento',r.document):''}${r.url?`<p>${link(r)}</p>`:''}${evidenceNotice(p,group,id)}${attachmentsHtml(r)}${details}</div><div class="dialog-actions">${button('Fechar','close')}</div>`);
   }
   function editReview(group,id,initialStatus=''){
     const p=current(),r=D.reviewOf(p,group,id),label=D.rows(p,group).find(x=>x[0]===id)[1];
@@ -1476,12 +1484,21 @@
   function reviewDiligenceFields(d){
     return `<label>Categoria<select name="d_category">${options(Object.fromEntries(D.CATEGORIES.map(x=>[x,x])),d.category)}</select></label><label>Data da comunicação<input type="date" name="d_communication" value="${e(d.communication)}"></label><label>Vencimento<input type="date" name="d_due" readonly value="${e(D.deadline(d.communication).adjusted)}"></label><div class="forms-grid"><label>Data da resposta<input type="date" name="d_response" value="${e(d.response)}"></label><label>Situação<select name="d_status">${options(D.DSTATUS,d.status)}</select></label></div><label>Observação / conclusão<textarea name="d_note">${e(d.note)}</textarea></label>`;
   }
-  function editInstitution(){const p=current(),o=p.ouvidoria;modal('Ouvidoria e Fala.BR',`<form class="form-stack"><label>Instituição da Ouvidoria<select name="status">${options({na:'Não informada',instituida:'Instituída',pendente:'Pendente de instituição'},o.status)}</select></label><label class="checkline"><input name="clause" type="checkbox" ${o.clause?'checked':''}>Confirmei a aplicabilidade da cláusula suspensiva no instrumento.</label><label>Data da assinatura<input name="signature" type="date" value="${e(o.signature)}"></label><label>Link do ato normativo (opcional)<input name="url" type="url" value="${e(o.url)}"></label><label>Adesão ao Fala.BR<select name="falaBR">${options({na:'Não informada',aderido:'Já aderido',previsto:'Prevista no Plano de Trabalho',nao_previsto:'Não prevista no Plano de Trabalho'},p.falaBR)}</select></label><label>Observação<textarea name="note">${e(o.note)}</textarea></label>${formEnd()}</form>`);bindForm(async fd=>{const name=actor(),data=Object.fromEntries(fd);D.dateISO(data.signature);D.safeLink(data.url);await change(p=>{const before={ouvidoria:p.ouvidoria,falaBR:p.falaBR};p.ouvidoria={status:data.status,signature:data.signature,url:data.url,note:data.note,clause:fd.has('clause') && data.status==='pendente'};p.falaBR=data.falaBR;D.log(p,'Informações institucionais atualizadas',before,{ouvidoria:p.ouvidoria,falaBR:p.falaBR},name);});saved('Informações institucionais salvas.');});}
+  function editInstitution(){const p=current(),o=p.ouvidoria;modal('Ouvidoria e Fala.BR',`<form class="form-stack"><label>Instituição da Ouvidoria<select name="status">${options({na:'Não informada',instituida:'Instituída',pendente:'Pendente de instituição'},o.status)}</select></label><label class="checkline"><input name="clause" type="checkbox" ${o.clause?'checked':''}>Confirmei a aplicabilidade da cláusula suspensiva no instrumento.</label><label>Data da assinatura<input name="signature" type="date" value="${e(o.signature)}"></label><label>Link do ato normativo (opcional)<input name="url" type="url" value="${e(o.url)}"></label><label>Adesão ao Fala.BR<select name="falaBR">${options({na:'Não informada',aderido:'Já aderido',previsto:'Prevista no Plano de Trabalho',nao_previsto:'Não prevista no Plano de Trabalho'},p.falaBR)}</select></label><label>Observação<textarea name="note">${e(o.note)}</textarea></label>${formEnd()}</form>`);bindForm(async fd=>{const name=actor(),data=Object.fromEntries(fd);D.dateISO(data.signature);D.safeLink(data.url);await change(p=>{D.setInstitution(p,{ouvidoria:{status:data.status,signature:data.signature,url:data.url,note:data.note,clause:fd.has('clause') && data.status==='pendente'},falaBR:data.falaBR},name);});saved('Informações institucionais salvas.');});}
+  function businessDiligenceHtml(p,d){
+    const ref=D.referenceRows(p).find(r=>r.ref===d.ref);
+    const fields=[['Categoria',d.category],['Requisito vinculado',ref?ref.tab+' · '+ref.label:d.ref||'Sem vínculo'],['Providência solicitada',d.request],['Comunicação',D.fmtDate(d.communication)],['Ciência histórica',D.fmtDate(d.science)],['Vencimento',D.fmtDate(d.due)],['Resposta',D.fmtDate(d.response)],['Situação',D.diligenceLabel(d)],['Observação / conclusão',d.note],['Conferência histórica de expediente',d.calendarNote],['Prazo automático',d.automaticDeadline?'Sim':'Não'],['Conferência histórica registrada',d.confirmed?'Sim':'Não']];
+    return '<dl class="data-grid">'+fields.map(([label,value])=>`<div class="wide"><dt>${e(label)}</dt><dd class="business-text">${e(value||'Não informado')}</dd></div>`).join('')+'</dl>';
+  }
+  function viewDiligence(id){const p=current(),d=p.diligences.find(d=>d.id===id);D.assert(d,'Diligência não encontrada.');modal('Detalhes da diligência',businessDiligenceHtml(p,d)+`<div class="dialog-actions">${button('Fechar','close')}</div>`);}
+  function attachmentsHtml(r){return (r.attachments||[]).length?'<ul>'+r.attachments.map(a=>`<li><a href="${e(a.data)}" download="${e(a.name)}">${e(a.name)}</a> · ${e(a.note||'')}</li>`).join('')+'</ul>':'';}
+  function evidenceNotice(p,g,id){const r=D.reviewOf(p,g,id);if(r.status==='na' || D.reviewCurrent(p,g,id))return '';return `<p class="source warn-text">${e(r.reanalysis?.reason||'Avaliação sem referência atual verificável; requer confirmação humana.')}${r.reanalysis?.fields?' Campos: '+e(r.reanalysis.fields.join(', ')):''}</p>`;}
+  function descriptionHtml(p,g,id,label){const key=p.id+':'+D.canonicalRef(g,id),preview=label.length>180?label.slice(0,180)+'…':label;return `<details class="item-description" data-description="${e(key)}" ${expandedDescriptions.has(key)?'open':''}><summary><span class="pad-desc-text">${e(preview)}</span><span class="description-action">Ver conteúdo completo / recolher</span></summary><div class="business-text">${e(label)}</div></details>`;}
   function renderDiligences(p){
     const unlinked=D.pending(p);
     const unlinkedItems=unlinked.map(r=>`<div class="info warning">${e(r.tab+' → '+r.label)} ${isReadOnly()?'':button('Criar diligência','diligence',`data-ref="${e(r.ref)}"`)}</div>`).join('') || '<p class="muted">Nenhuma marcação sem registro ativo.</p>';
     const novaBtn=isReadOnly()?'':button('Nova diligência','diligence','','primary');
-    $('#tab-content').innerHTML=`<section class="section"><div class="section-head"><h2>Pendências sem diligência cadastrada: ${unlinked.length}</h2></div><div class="section-body">${unlinkedItems}</div></section><section class="section"><div class="section-head"><h2>Diligências registradas</h2>${novaBtn}</div><div class="table-wrap"><table><thead><tr><th>Categoria / providência</th><th>Vencimento</th><th>Situação</th><th>Ação</th></tr></thead><tbody>${p.diligences.map((d,n)=>`<tr><td><strong>${n+1}. ${e(d.category)}</strong><div class="review-note">${e(d.request)}</div><span class="source">${e(D.referenceRows(p).find(r=>r.ref===d.ref)?.label || d.ref || 'Sem vínculo')}</span></td><td>${D.fmtDate(d.due)}</td><td>${badge(D.diligenceLabel(d),d.status==='saneada'?'good':'warn')}</td><td>${isReadOnly()?'<span class="muted">—</span>':button('Editar','diligence',`data-id="${e(d.id)}"`)}</td></tr>`).join('') || '<tr><td colspan="4" class="empty">Nenhuma diligência cadastrada.</td></tr>'}</tbody></table></div></section>`;
+    $('#tab-content').innerHTML=`<section class="section"><div class="section-head"><h2>Pendências sem diligência cadastrada: ${unlinked.length}</h2></div><div class="section-body">${unlinkedItems}</div></section><section class="section"><div class="section-head"><h2>Diligências registradas</h2>${novaBtn}</div><div class="table-wrap"><table><thead><tr><th>Categoria / providência</th><th>Vencimento</th><th>Situação</th><th>Ação</th></tr></thead><tbody>${p.diligences.map((d,n)=>`<tr><td><strong>${n+1}. ${e(d.category)}</strong><div class="review-note">${e(d.request)}</div><span class="source">${e(D.referenceRows(p).find(r=>r.ref===d.ref)?.label || d.ref || 'Sem vínculo')}</span></td><td>${D.fmtDate(d.due)}</td><td>${badge(D.diligenceLabel(d),d.status==='saneada'?'good':'warn')}</td><td>${button('Ver detalhes','view-diligence',`data-id="${e(d.id)}"`)}${isReadOnly()?'':button('Editar','diligence',`data-id="${e(d.id)}"`)}</td></tr>`).join('') || '<tr><td colspan="4" class="empty">Nenhuma diligência cadastrada.</td></tr>'}</tbody></table></div></section>`;
   }
   function editDiligence(id,ref=''){
     const p=current(),old=p.diligences.find(d=>d.id===id);const d=old || {ref,category:ref.startsWith('pad:')?'PLANO DE APLICAÇÃO DETALHADO':ref.startsWith('habilitacao:')?'HABILITAÇÃO':'OUTRO',request:'',communication:'',science:'',response:'',status:'aberta',note:'',due:'',confirmed:false,calendarNote:''};
@@ -1496,7 +1513,27 @@
     });
   }
   function renderHistory(p){$('#tab-content').innerHTML=`<section class="section"><div class="section-head"><h2>Histórico de alterações</h2><small>${p.history.length} registro(s)</small></div><div class="section-body"><ol class="timeline">${p.history.slice().reverse().map(h=>`<li><small>${e(new Date(h.at).toLocaleString('pt-BR'))} · ${e(h.actor)}</small><strong>${e(h.event)}</strong><details><summary>Ver dados anteriores e posteriores</summary><pre>${e(JSON.stringify({antes:h.before,depois:h.after},null,2))}</pre></details></li>`).join('')}</ol></div></section>`;}
-  function conclusion(){const p=current(),blocks=D.blockers(p);modal('Conclusão da análise técnica',`<p>A conclusão será registrada em nome do analista. Os requisitos de celebração continuam sendo acompanhados em sua própria aba.</p>${blocks.length?`<div class="info error"><strong>Há pendências para concluir:</strong><ul>${blocks.map(x=>`<li>${e(x)}</li>`).join('')}</ul></div><div class="dialog-actions">${button('Voltar à análise','close')}</div>`:`<div class="info">Mérito, PAD e diligências passaram pelos controles operacionais.</div><div class="dialog-actions">${button('Cancelar','close')}${button('Registrar conclusão técnica','confirm-conclusion','','primary')}</div>`}`);}
+  function conclusion(){
+    D.assert(!isReadOnly(),'Consulta pública: conclusão indisponível.');
+    const p=current();conclusionContext={proposalId:p.id,revision:state.revision,evidence:D.technicalEvidence(p),operationId:D.uid()};
+    modal('Conclusão da análise técnica',`<p>Registre o resultado técnico. Os requisitos posteriores de celebração continuam em suas próprias abas.</p><form class="form-stack" id="conclusion-form"><label>Resultado<select name="result">${options({favoravel:'Favorável',desfavoravel:'Desfavorável'},p.conclusion?.result||'favoravel')}</select></label><label>Justificativa<textarea name="note">${e(p.conclusion?.note||'')}</textarea></label><label>Referência das evidências consideradas<textarea name="reference" required>${e(p.conclusion?.reference||'')}</textarea></label><div id="conclusion-blocks" class="info warning"></div><p id="form-error" class="error-message" role="alert" tabindex="-1"></p><div class="dialog-actions">${button('Cancelar','close')}${button('Registrar conclusão técnica','confirm-conclusion','','primary')}</div></form>`);
+    const form=$('#conclusion-form');
+    const update=()=>{const b=D.conclusionBlocks(current(),form.elements.result.value);$('#conclusion-blocks').textContent=b.length?b.join(' · '):'Controles atuais permitem registrar este resultado.';};
+    form.addEventListener('input',()=>modalDirty=true);form.elements.result.addEventListener('change',update);form.addEventListener('submit',ev=>{ev.preventDefault();confirmConclusionNow().catch(formError);});update();
+  }
+  async function confirmConclusionNow(){
+    if(conclusionSubmitting)return;
+    D.assert(!isReadOnly(),'Consulta pública: conclusão indisponível.');
+    const ctx=conclusionContext,form=$('#conclusion-form'),btn=$('[data-action="confirm-conclusion"]');
+    D.assert(ctx && form && ctx.proposalId===selected && ctx.revision===state.revision,'A revisão mudou. Reabra e confira a conclusão.');
+    const input=Object.fromEntries(new FormData(form));conclusionSubmitting=true;btn.disabled=true;
+    try{
+      const persisted=await ProforStore.checkCurrent(ctx.revision),next=D.clone(persisted),p=next.proposals.find(x=>x.id===ctx.proposalId && !x.isDeleted);
+      D.assert(p,'Proposta indisponível.');D.confirmConclusion(p,{...input,expectedEvidence:ctx.evidence,operationId:ctx.operationId},actor());
+      await persist(next);conclusionContext=null;render();saved('Conclusão técnica registrada e salva localmente.');
+    }catch(err){formError(err);if(err.status===409){$('#save-state').textContent='Conflito de revisão — conclusão não salva';$('#save-state').dataset.state='conflict';}throw err;}
+    finally{conclusionSubmitting=false;if(btn.isConnected)btn.disabled=false;}
+  }
   /* Sincronização automática: a interface apenas chama o servidor local e grava o resultado no banco. */
   const SYNC_PATH='/api/sync',SYNC_TIMEOUT_MS=45*60*1000;
   const SYNC_SERVER_HELP=location.protocol==='file:'
@@ -1669,6 +1706,7 @@
     syncRestart();
   }
   async function startSync(){
+    D.assert(!isReadOnly(),'Consulta pública: sincronização indisponível.');
     if(syncRun){toast('Já existe uma sincronização em andamento. Aguarde ou cancele a operação.',true);return;}
     const run={controller:new AbortController(),started:Date.now(),pad:true,reason:'',id:crypto.randomUUID(),activity:[]};
     syncRun=run;syncStartTimers(run);
@@ -1793,7 +1831,7 @@
   }
   function importDialog(){modal('Modo offline: anexar arquivos CSV do Transferegov',`<p>Programa <strong>${D.PROGRAM}</strong>. Modo offline de contingência: baixe e extraia os ZIPs no <a href="https://api-publica.transferegov.gestao.gov.br/downloads" target="_blank" rel="noopener noreferrer">portal oficial de dados</a> e selecione os CSVs abaixo. O caminho principal é <strong>Sincronização → Atualizar Dados</strong>, que dispensa qualquer anexo.</p><form class="form-stack"><label>1. Programas — siconv_programa.csv<input name="program" type="file" accept=".csv" required></label><label>2. Programas / propostas — siconv_programa_proposta.csv<input name="links" type="file" accept=".csv" required></label><label>3. Propostas — siconv_proposta.csv<input name="proposal" type="file" accept=".csv" required></label><label>4. Plano de aplicação detalhado (opcional)<input name="pad" type="file" accept=".csv"></label><label>Codificação dos CSVs<select name="encoding"><option value="utf-8">UTF-8 (extração oficial atual)</option><option value="windows-1252">Windows-1252 (extrações antigas)</option></select></label><p id="import-progress" role="status"></p>${formEnd('Conferir importação')}</form>`);bindForm(async fd=>{const startedAt=D.now(),activity=[{at:startedAt,message:'Iniciando importação manual de arquivos CSV.'}];const files=Object.fromEntries(['program','links','proposal','pad'].map(k=>[k,fd.get(k)?.size?fd.get(k):null]));const result=await Transferegov.importFiles(files,msg=>{$('#import-progress').textContent=msg;activity.push({at:D.now(),message:msg});},fd.get('encoding'));const preview=D.syncProposals(state,result.proposals,result.source);modalDirty=false;modal('Conferir importação',`<p><strong>${result.proposals.length} proposta(s)</strong> vinculada(s) ao programa. ${preview.changes.length} alteração(ões) detectada(s).</p>${result.warnings.map(w=>`<div class="info warning">${e(w)}</div>`).join('')}${syncChangesHtml(preview.changes)}<p id="form-error" class="error-message" role="alert"></p><div class="dialog-actions">${button('Cancelar','close')}<button id="commit-import" class="primary">Confirmar importação</button></div>`);$('#commit-import').onclick=async()=>{const btn=$('#commit-import');btn.disabled=true;try{activity.push({at:D.now(),message:'Gravando importação manual no banco local.'});await persist(preview.state,{syncRun:{startedAt,activity}});syncHistory=null;render();saved('Importação concluída e salva no banco local.');}catch(err){formError(err);btn.disabled=false;}};});}
   function download(name,type,content){const url=URL.createObjectURL(new Blob([content],{type}));const a=document.createElement('a');a.href=url;a.download=name;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),30000);}
-  function backupDialog(){modal('Backup e exportação',`<p>O banco fica na pasta dados/registros do sistema e acompanha o workspace pelo OneDrive. Antes de trocar de máquina, feche o sistema e aguarde a sincronização do OneDrive nas duas máquinas.</p><p>Última exportação solicitada: ${state.lastBackup?e(new Date(state.lastBackup).toLocaleString('pt-BR')):'nenhuma'}.</p><div class="actions">${button('Exportar backup JSON','backup','','primary')}${button('Exportar CSV','csv')}${button('Exportar cópia de recuperação','recovery')}${button('Resgatar banco antigo deste navegador','legacy')}</div><hr><form class="form-stack"><label>Restaurar backup JSON<input type="file" name="backup" accept=".json" required></label><p class="source">A restauração substitui o banco atual. A versão anterior ficará preservada como cópia de recuperação local.</p>${formEnd('Validar restauração')}</form>`);bindForm(async fd=>{const file=fd.get('backup');D.assert(file.size<50*1024*1024,'Backup acima do limite de 50 MB.');const imported=D.validateState(JSON.parse(await file.text()));modalDirty=false;modal('Confirmar restauração',`<p>Substituir ${state.proposals.length} proposta(s) local(is) pelas ${imported.proposals.length} proposta(s) deste backup?</p><p>A cópia do banco atual será preservada antes da substituição.</p><p id="form-error" class="error-message" role="alert"></p><div class="dialog-actions">${button('Cancelar','close')}<button id="restore-confirm" class="primary">Restaurar este backup</button></div>`);$('#restore-confirm').onclick=async()=>{const btn=$('#restore-confirm');btn.disabled=true;try{await persist(imported,{restore:true});selected=null;location.hash='painel';render();saved('Backup restaurado. A versão anterior foi preservada.');}catch(err){formError(err);btn.disabled=false;}};});}
+  function backupDialog(){if(isReadOnly()){modal('Exportação de consulta',`<p>Consulta pública em modo de leitura.</p>${button('Exportar CSV','csv')}${button('Fechar','close')}`);return;}modal('Backup e exportação',`<p>O banco fica na pasta dados/registros do sistema e acompanha o workspace pelo OneDrive. Antes de trocar de máquina, feche o sistema e aguarde a sincronização do OneDrive nas duas máquinas.</p><p>Última exportação solicitada: ${state.lastBackup?e(new Date(state.lastBackup).toLocaleString('pt-BR')):'nenhuma'}.</p><div class="actions">${button('Exportar backup JSON','backup','','primary')}${button('Exportar CSV','csv')}${button('Exportar cópia de recuperação','recovery')}${button('Resgatar banco antigo deste navegador','legacy')}</div><hr><form class="form-stack"><label>Restaurar backup JSON<input type="file" name="backup" accept=".json" required></label><p class="source">A restauração substitui o banco atual. A versão anterior ficará preservada como cópia de recuperação local.</p>${formEnd('Validar restauração')}</form>`);bindForm(async fd=>{const file=fd.get('backup');D.assert(file.size<50*1024*1024,'Backup acima do limite de 50 MB.');const imported=D.validateState(JSON.parse(await file.text()));modalDirty=false;modal('Confirmar restauração',`<p>Substituir ${state.proposals.length} proposta(s) local(is) pelas ${imported.proposals.length} proposta(s) deste backup?</p><p>A cópia do banco atual será preservada antes da substituição.</p><p id="form-error" class="error-message" role="alert"></p><div class="dialog-actions">${button('Cancelar','close')}<button id="restore-confirm" class="primary">Restaurar este backup</button></div>`);$('#restore-confirm').onclick=async()=>{const btn=$('#restore-confirm');btn.disabled=true;try{await persist(imported,{restore:true});selected=null;location.hash='painel';render();saved('Backup restaurado. A versão anterior foi preservada.');}catch(err){formError(err);btn.disabled=false;}};});}
   let activeReportTopics=null;
   function selectedReportTopics(){
     if(!activeReportTopics){
@@ -1859,8 +1897,10 @@
       });
     }
   }
+  const PUBLIC_ACTIONS=new Set(['close','review','view-diligence','sync','export','csv','report','report-select-all','report-select-none','report-select-pad','save-report','save-xlsx','print','copy-text','copy-html','copy-program-code','copy-proposal','copy-cnpj','history-day','history-prev','history-next','history-today','toggle-uf-expand','toggle-uf','ver-apagadas']);
   async function handleAction(target){const action=target.dataset.action;
-    if(action==='close')closeModal();else if(action==='import')importDialog();else if(action==='sync')syncDialog();else if(action==='sync-start')startSync();else if(action==='history-day'){selectedHistoryDay=target.dataset.day;renderRecords();document.querySelector(`[data-action="history-day"][data-day="${selectedHistoryDay}"]`)?.focus();}else if(action==='history-prev' || action==='history-next'){moveCalendar(action==='history-prev'?-1:1);document.querySelector(`[data-action="${action}"]`)?.focus();}else if(action==='history-today'){selectedHistoryDay=D.localToday();calendarStart=calendarWeek(selectedHistoryDay.slice(0,7)+'-01');renderRecords();document.querySelector('[data-action="history-today"]')?.focus();}else if(action==='export')backupDialog();else if(action==='sync-cancel')cancelSync('user');else if(action==='sync-retry')syncRestart();else if(action==='review')editReview(target.dataset.group,target.dataset.id);else if(action==='sei')editSei();else if(action==='institution')editInstitution();else if(action==='diligence')editDiligence(target.dataset.id,target.dataset.ref);else if(action==='conclude')conclusion();else if(action==='report')report();else if(action==='copy-program-code'){await navigator.clipboard.writeText(target.dataset.code);toast(`Código ${target.dataset.code} copiado.`);}else if(action==='copy-proposal'){await navigator.clipboard.writeText(target.dataset.number);toast(`Proposta ${target.dataset.number} copiada.`);}else if(action==='copy-cnpj'){await navigator.clipboard.writeText(target.dataset.cnpj);toast(`CNPJ ${target.dataset.cnpj} copiado.`);}
+    if(isReadOnly() && !PUBLIC_ACTIONS.has(action))throw new Error('Consulta pública: ação de alteração indisponível.');
+    if(action==='close')closeModal();else if(action==='import')importDialog();else if(action==='sync')syncDialog();else if(action==='sync-start')startSync();else if(action==='history-day'){selectedHistoryDay=target.dataset.day;renderRecords();document.querySelector(`[data-action="history-day"][data-day="${selectedHistoryDay}"]`)?.focus();}else if(action==='history-prev' || action==='history-next'){moveCalendar(action==='history-prev'?-1:1);document.querySelector(`[data-action="${action}"]`)?.focus();}else if(action==='history-today'){selectedHistoryDay=D.localToday();calendarStart=calendarWeek(selectedHistoryDay.slice(0,7)+'-01');renderRecords();document.querySelector('[data-action="history-today"]')?.focus();}else if(action==='export')backupDialog();else if(action==='sync-cancel')cancelSync('user');else if(action==='sync-retry')syncRestart();else if(action==='review')editReview(target.dataset.group,target.dataset.id);else if(action==='sei')editSei();else if(action==='institution')editInstitution();else if(action==='view-diligence')viewDiligence(target.dataset.id);else if(action==='diligence')editDiligence(target.dataset.id,target.dataset.ref);else if(action==='conclude')conclusion();else if(action==='confirm-conclusion')await confirmConclusionNow();else if(action==='report')report();else if(action==='copy-program-code'){await navigator.clipboard.writeText(target.dataset.code);toast(`Código ${target.dataset.code} copiado.`);}else if(action==='copy-proposal'){await navigator.clipboard.writeText(target.dataset.number);toast(`Proposta ${target.dataset.number} copiada.`);}else if(action==='copy-cnpj'){await navigator.clipboard.writeText(target.dataset.cnpj);toast(`CNPJ ${target.dataset.cnpj} copiado.`);}
     else if(action==='report-select-all'){
       const listEl=$('#report-topics-list');
       if(listEl){
@@ -1917,17 +1957,17 @@
     }
   }
   /* ---- Apagar e restaurar proposta ----
-     Apagar tira a proposta do painel e das demais telas de gestão e a exclui das
-     sincronizações; o registro continua no banco local e volta com "Restaurar". */
+     Apagar tira a proposta do painel e das demais telas de gestão sem apagar o registro. Evidências importadas ainda são atualizadas e invalidadas
+     quando mudam; a proposta continua apagada até "Restaurar". */
   async function confirmDeleteProposal(id){
     const p=state.proposals.find(x=>x.id===id);
     D.assert(p && !p.isDeleted,'Proposta não encontrada ou já apagada.');
-    modal('Apagar proposta',`<p>Apagar a proposta <span class="proposal-number"><strong>${e(proposalNumber(p.imported.numero))}</strong>${proposalCopyButton(p.imported.numero)}</span> (${e(p.imported.uf)} · ${e(p.imported.proponente)})?</p><div class="info"><strong>O que acontece:</strong><ul><li>ela sai do painel e das telas de gestão e acompanhamento;</li><li>deixa de ser sincronizada, porque está sendo desconsiderada;</li><li><strong>não</strong> é excluída do banco: o histórico é preservado e ela pode ser restaurada depois, na tela “Propostas apagadas”;</li><li>a origem no Transferegov não é alterada.</li></ul></div><p id="form-error" class="error-message" role="alert" tabindex="-1"></p><div class="dialog-actions">${button('Cancelar','close')}<button class="danger" type="button" data-action="delete-proposal-now" data-id="${e(id)}">Apagar do painel</button></div>`);
+    modal('Apagar proposta',`<p>Apagar a proposta <span class="proposal-number"><strong>${e(proposalNumber(p.imported.numero))}</strong>${proposalCopyButton(p.imported.numero)}</span> (${e(p.imported.uf)} · ${e(p.imported.proponente)})?</p><div class="info"><strong>O que acontece:</strong><ul><li>ela sai do painel e das telas de gestão e acompanhamento;</li><li>as evidências importadas continuam sendo conferidas, preservando a exclusão e exigindo reanálise quando mudam;</li><li><strong>não</strong> é excluída do banco: o histórico é preservado e ela pode ser restaurada depois, na tela “Propostas apagadas”;</li><li>a origem no Transferegov não é alterada.</li></ul></div><p id="form-error" class="error-message" role="alert" tabindex="-1"></p><div class="dialog-actions">${button('Cancelar','close')}<button class="danger" type="button" data-action="delete-proposal-now" data-id="${e(id)}">Apagar do painel</button></div>`);
   }
   async function confirmRestoreProposal(id){
     const p=state.proposals.find(x=>x.id===id);
     D.assert(p && p.isDeleted,'Proposta não encontrada ou não está apagada.');
-    modal('Restaurar proposta',`<p>Restaurar a proposta <span class="proposal-number"><strong>${e(proposalNumber(p.imported.numero))}</strong>${proposalCopyButton(p.imported.numero)}</span> (${e(p.imported.uf)} · ${e(p.imported.proponente)})?</p><div class="info">Ela volta ao painel e às demais telas de gestão, e passa a ser sincronizada novamente. O histórico e as análises já registradas são preservados.</div><div class="dialog-actions">${button('Cancelar','close')}<button class="primary" type="button" data-action="restore-proposal-now" data-id="${e(id)}">Restaurar</button></div>`);
+    modal('Restaurar proposta',`<p>Restaurar a proposta <span class="proposal-number"><strong>${e(proposalNumber(p.imported.numero))}</strong>${proposalCopyButton(p.imported.numero)}</span> (${e(p.imported.uf)} · ${e(p.imported.proponente)})?</p><div class="info">Ela volta ao painel e às demais telas de gestão, com as evidências e pendências de reanálise registradas durante a exclusão. O histórico e as análises anteriores são preservados.</div><div class="dialog-actions">${button('Cancelar','close')}<button class="primary" type="button" data-action="restore-proposal-now" data-id="${e(id)}">Restaurar</button></div>`);
   }
   async function deleteProposalNow(id){
     const nome=actor();
@@ -1965,6 +2005,7 @@
     if(statusDropdownOpen&&!ev.target.closest('[data-status-dropdown]'))closeStatusDropdown(false);
     if(ev.target.closest('.skip')){ev.preventDefault();$('#main').focus();return;}
     if(ev.target.closest('#props-open')){ev.preventDefault();toggleProposalNav();return;}
+    if(isReadOnly() && ev.target.closest('[data-action="delete-proposal-now"],[data-action="restore-proposal-now"],[data-status-value],[data-status-details]')){toast('Consulta pública: alteração indisponível.',true);return;}
     if(ev.target.closest('[data-action="delete-proposal-now"]')){const b=ev.target.closest('[data-action]');deleteProposalNow(b.dataset.id).catch(formError);return;}
     if(ev.target.closest('[data-action="restore-proposal-now"]')){const b=ev.target.closest('[data-action]');restoreProposalNow(b.dataset.id).catch(formError);return;}
     if(ev.target.closest('tr[data-uf] a'))return;
@@ -2016,6 +2057,7 @@
     const novo=document.querySelector(`tr[data-uf="${uf}"][data-modo="${modo}"]`);
     if(novo)novo.focus();
   });
+  document.addEventListener('toggle',ev=>{const el=ev.target;if(el.matches?.('[data-description]')){if(el.open)expandedDescriptions.add(el.dataset.description);else expandedDescriptions.delete(el.dataset.description);}},true);
   window.addEventListener('resize',()=>closeStatusDropdown(false));
   document.addEventListener('scroll',()=>{if(statusDropdownOpen)positionStatusPopover(statusDropdownOpen);},true);
   const modalEl=$('#modal');
@@ -2026,5 +2068,5 @@
   const modalCloseBtn=$('#modal-close');
   if(modalCloseBtn)modalCloseBtn.onclick=closeModal;
   window.addEventListener('hashchange',route);window.addEventListener('beforeunload',ev=>{if(modalDirty || busy || syncRun){ev.preventDefault();ev.returnValue='';}});
-  (async()=>{try{await ProforStore.open();state=isReadOnly()?await ProforStore.read():D.validateState(await ProforStore.read());$('#save-state').textContent='Banco do workspace disponível';renderSideNav();route();runAutoSyncFromQuery();}catch(err){$('#save-state').textContent='Banco indisponível';$('#main').innerHTML=`<h1>Não foi possível abrir o banco local</h1><div class="info error">${e(err.message)}</div><p>Abra INICIAR SISTEMA.cmd na pasta do workspace. Aguarde o OneDrive concluir a sincronização antes de usar esta máquina.</p>`;}})();
+  (async()=>{try{await ProforStore.open();state=D.validateState(D.clone(await ProforStore.read()));$('#save-state').textContent=`Banco do workspace disponível · revisão ${state.revision}`;$('#save-state').dataset.state='ready';renderSideNav();route();runAutoSyncFromQuery();}catch(err){$('#save-state').textContent='Banco indisponível';$('#save-state').dataset.state='error';$('#main').innerHTML=`<h1>Não foi possível abrir o banco local</h1><div class="info error">${e(err.message)}</div><p>Abra INICIAR SISTEMA.cmd na pasta do workspace. Aguarde o OneDrive concluir a sincronização antes de usar esta máquina.</p>`;}})();
 })();

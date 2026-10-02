@@ -1,4 +1,5 @@
 'use strict';
+const {fulfillStatic}=require('./ui-static.cjs');
 
 /*
  * Teste de integração ISOLADO do formulário Analisar → Em diligência.
@@ -127,7 +128,7 @@ async function scenario(browser, name, seed, run) {
       }
     }
     if (url.origin === ORIGIN && ['GET', 'HEAD'].includes(method) && STATIC_PATHS.has(url.pathname)) {
-      return route.continue();
+      return fulfillStatic(route);
     }
     blocked.push({ method, url: request.url() });
     return route.abort('blockedbyclient'); // Inclui /api/sync, suas subrotas e qualquer mutação real.

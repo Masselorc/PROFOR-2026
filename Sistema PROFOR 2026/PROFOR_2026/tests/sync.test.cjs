@@ -12,6 +12,7 @@ const { Readable } = require('node:stream');
 const S = require('../transferegov-sync.cjs');
 const T = require('../transferegov.js');
 const D = require('../domain.js');
+const A = require('../sync-apply.js');
 
 /* ---------- ajuda: CRC32, ZIP e CSV de fixture ---------- */
 
@@ -492,7 +493,7 @@ test('ZIP sem entrada CSV e ZIP com CSV ambíguo são recusados', async () => {
 test('enumerateBlobs lê Name, Last-Modified e Content-Length do XML do Azure', () => {
   const blobs = S.enumerateBlobs(CONTAINER_XML);
   assert.equal(blobs.length, 4);
-  assert.deepEqual(blobs[0], { name: 'siconv_programa.zip', bytes: 11117617, lastModified: 'Mon, 15 Sep 2026 11:12:28 GMT' });
+  assert.deepEqual(blobs[0], { name: 'siconv_programa.zip', bytes: 11117617, lastModified: 'Mon, 15 Sep 2026 11:12:28 GMT', etag:null });
   assert.equal(blobs[2].name, 'siconv_proposta.zip');
   assert.equal(blobs[2].bytes, 205515057);
   assert.equal(S.enumerateBlobs('<EnumerationResults><Blobs/></EnumerationResults>').length, 0);
@@ -766,26 +767,26 @@ test('três tentativas com geração divergente falham com erro 502 explícito',
 });
 
 test('cache por assinatura de blob evita nova execução e ainda entrega o payload', async () => {
-  S.resetCache();
+
   const world = fixtureWorld();
-  const common = { agentModule: world.agentModule, containerUrl: S.CONTAINER_URL, cache: true, timeoutMs: 5000 };
+  const common = { agentModule: world.agentModule, containerUrl: S.CONTAINER_URL, cache: true, cacheFile:path.join(world.dir,"result.json"), timeoutMs: 5000 };
   const first = await S.runSync({ ...common, dir: newTempDir(), pad: false, force: true });
   assert.equal(first.unchanged, undefined);
-  const cached = S.readCache();
+  const cached = S.readCache(common.cacheFile);
   assert.ok(cached && cached.response.proposals.length === 2);
   assert.equal(cached.pad, false);
   const second = await S.runSync({ ...common, dir: newTempDir(), pad: false });
   assert.equal(second.unchanged, true);
   assert.equal(second.proposals.length, 2);
-  S.resetCache();
+
 });
 
 test('regressão: cache quente entrega proposals mesmo para navegador sem dados', async () => {
   /* Defeito original: com o cache do servidor quente, a rota respondia só
      `{unchanged:true}` e um IndexedDB vazio ficava sem nenhuma proposta. */
-  S.resetCache();
+
   const world = fixtureWorld();
-  const common = { agentModule: world.agentModule, containerUrl: S.CONTAINER_URL, cache: true, timeoutMs: 5000 };
+  const common = { agentModule: world.agentModule, containerUrl: S.CONTAINER_URL, cache: true, cacheFile:path.join(world.dir,"result.json"), timeoutMs: 5000 };
   const fresh = await S.runSync({ ...common, dir: newTempDir(), pad: false, force: true });
   assert.equal(fresh.proposals.length, 2);
 
@@ -799,13 +800,13 @@ test('regressão: cache quente entrega proposals mesmo para navegador sem dados'
   assert.equal(typeof warm.cachedAt, 'string');
   /* O payload do cache tem de ser validável como qualquer outro. */
   for (const proposal of warm.proposals) D.validateImported(proposal);
-  S.resetCache();
+
 });
 
 test('cache com PAD não é servido a pedido sem PAD (e vice-versa)', async () => {
-  S.resetCache();
+
   const world = fixtureWorld();
-  const common = { agentModule: world.agentModule, containerUrl: S.CONTAINER_URL, cache: true, timeoutMs: 5000 };
+  const common = { agentModule: world.agentModule, containerUrl: S.CONTAINER_URL, cache: true, cacheFile:path.join(world.dir,"result.json"), timeoutMs: 5000 };
   const withPad = await S.runSync({ ...common, dir: newTempDir(), pad: true, force: true });
   assert.equal(withPad.source.pad, true);
   assert.equal(withPad.proposals.find(p => p.id === '101').pad.length, 2);
@@ -815,16 +816,16 @@ test('cache com PAD não é servido a pedido sem PAD (e vice-versa)', async () =
   assert.equal(withoutPad.unchanged, undefined);
   assert.equal(withoutPad.source.pad, false);
   assert.ok(withoutPad.proposals.every(proposal => proposal.pad === null));
-  assert.equal(S.readCache().pad, false);
+  assert.equal(S.readCache(common.cacheFile).pad, false);
 
   const reuse = await S.runSync({ ...common, dir: newTempDir(), pad: false });
   assert.equal(reuse.unchanged, true);
   assert.ok(reuse.proposals.every(proposal => proposal.pad === null));
-  S.resetCache();
+
 });
 
 test('cachedUsable exige geração, formato e payload', () => {
-  const entry = { blobs: 'a:1:x', pad: true, at: '2026-09-15T00:00:00.000Z', response: { proposals: [{ id: '1' }], source: { pad: true } } };
+  const entry = { version:2, blobs: 'a:1:x', pad: true, at: '2026-09-15T00:00:00.000Z', response: { proposals: [{ id: '1' }], source: { pad: true } } };
   assert.equal(S.cachedUsable(entry, 'a:1:x', true), true);
   assert.equal(S.cachedUsable(entry, 'a:1:x', false), false, 'formato diferente');
   assert.equal(S.cachedUsable(entry, 'a:2:x', true), false, 'geração diferente');
@@ -851,7 +852,7 @@ test('assinatura de blobs muda quando Last-Modified ou bytes mudam', () => {
   copy[2].lastModified = 'Tue, 16 Sep 2026 11:12:30 GMT';
   const second = S.signatureOf(copy, ['siconv_programa.zip', 'siconv_proposta.zip']);
   assert.notEqual(first, second);
-  assert.equal(S.signatureOf(copy, ['siconv_programa.zip']), 'siconv_programa.zip:11117617:Mon, 15 Sep 2026 11:12:28 GMT');
+  assert.equal(S.signatureOf(copy, ['siconv_programa.zip']), 'siconv_programa.zip:11117617:Mon, 15 Sep 2026 11:12:28 GMT:');
 });
 
 /* ---------- textos da proposta (busca sob demanda) ----------
@@ -1017,4 +1018,53 @@ test('o blob de textos fica fora do pipeline das quatro passadas', async () => {
   const agent = { get(url, options, callback) { requested.push(String(url)); return world.agentModule.get(url, options, callback); } };
   await S.runSync({ agentModule: agent, dir: newTempDir(), containerUrl: S.CONTAINER_URL, pad: true, force: true, timeoutMs: 5000 });
   assert.ok(!requested.some(url => url.includes('justificativas')), 'a sincronização normal não baixa o blob de textos');
+});
+
+/* Prioridades 2–3: cache quente e parser com fontes simuladas, sem cache real. */
+function controlledAgent(blobs, transform=xml=>xml, headers={}) {
+ const agent=fakeAgent(blobs);return {get(url,opts,cb){
+  if(String(url).includes('comp=list')){const body=Buffer.from(transform(containerXml(blobs)));const r=Readable.from([body]);r.statusCode=200;r.headers={};process.nextTick(()=>cb(r));return {setTimeout(){},on(){},destroy(){}};}
+  return agent.get(url,opts,r=>{Object.assign(r.headers,headers);cb(r);});
+ }};
+}
+test('2: alteração só no PAD ou vínculo invalida cache; no-op reutiliza payload integral',async t=>{
+ const world=fixtureWorld();t.after(()=>fs.rmSync(world.dir,{recursive:true,force:true}));
+ const common={dir:world.dir,cache:true,cacheFile:path.join(world.dir,'result.json'),containerUrl:S.CONTAINER_URL,pad:true,timeoutMs:5000};
+ const run=agentModule=>S.runSync({...common,agentModule});const first=await run(fakeAgent(world.blobs));
+ assert.equal((await run(fakeAgent(world.blobs))).unchanged,true);
+ const padChanged={...world.blobs,[S.BLOBS.pad]:buildZip([['siconv_plano_aplicacao_detalhado.csv',PAD_CSV.replace('Item fictício A','Item fictício alterado apenas no PAD')]])};
+ const second=await run(fakeAgent(padChanged));assert.equal(second.unchanged,undefined);assert.match(second.proposals[0].pad[0].descricao,/alterado/);
+ const linkChanged={...padChanged,[S.BLOBS.links]:buildZip([['siconv_programa_proposta.csv','ID_PROGRAMA;ID_PROPOSTA\r\n1;102\r\n']])};
+ const third=await run(fakeAgent(linkChanged));assert.equal(third.unchanged,undefined);assert.deepEqual(third.proposals.map(p=>p.id),['102']);assert.equal(first.proposals.length,2);
+});
+test('2: assinatura independe da ordem; ETag real, versão legada e modo distinguem gerações',()=>{
+ const list=S.enumerateBlobs(CONTAINER_XML),wanted=Object.values(S.BLOBS);
+ assert.equal(S.signatureOf(list,wanted),S.signatureOf(list.slice().reverse(),wanted.slice().reverse()));
+ const xml=CONTAINER_XML.replace('<Content-Length>11117617</Content-Length>','<Content-Length>11117617</Content-Length><Etag>&quot;real-generation&quot;</Etag>');
+ const tagged=S.enumerateBlobs(xml);assert.equal(tagged[0].etag,'"real-generation"');assert.notEqual(S.signatureOf(tagged,wanted),S.signatureOf(list,wanted));
+ const entry={version:1,blobs:'x',pad:true,response:{proposals:[],source:{pad:true}}};assert.equal(S.cachedUsable(entry,'x',true),false);assert.equal(S.cachedUsable({...entry,version:2},null,true),false);
+});
+test('2: fonte ausente ou ilegível não reutiliza/apaga cache; sem geração confiável revalida',async t=>{
+ const world=fixtureWorld();t.after(()=>fs.rmSync(world.dir,{recursive:true,force:true}));
+ const common={dir:world.dir,cache:true,cacheFile:path.join(world.dir,'result.json'),containerUrl:S.CONTAINER_URL,pad:true,timeoutMs:5000};
+ await S.runSync({...common,agentModule:world.agentModule});const saved=fs.readFileSync(common.cacheFile,'utf8');
+ const missing=controlledAgent(world.blobs,xml=>xml.replace(/<Blob>\s*<Name>siconv_plano_aplicacao_detalhado.zip<\/Name>[\s\S]*?<\/Blob>/,''));
+ await assert.rejects(()=>S.runSync({...common,agentModule:missing}),/Fonte obrigatória ausente/);assert.equal(fs.readFileSync(common.cacheFile,'utf8'),saved);
+ const unknown=controlledAgent(world.blobs,xml=>xml.replace(/<Last-Modified>[\s\S]*?<\/Last-Modified>/g,''));
+ assert.equal((await S.runSync({...common,agentModule:unknown})).unchanged,undefined);assert.equal((await S.runSync({...common,agentModule:unknown})).unchanged,undefined);
+ const broken=fakeAgent(world.blobs,{...world.blobs,[S.BLOBS.pad]:null});await assert.rejects(()=>S.runSync({...common,force:true,agentModule:broken}),/404/);
+});
+test('3: ZIP e CSV propagam parcial até aplicação e preservam PAD completo anterior',async t=>{
+ const world=fixtureWorld();t.after(()=>fs.rmSync(world.dir,{recursive:true,force:true}));
+ const brokenCsv=PAD_CSV+'101;13;Linha sem quantidade;0;0,00;0,00\r\n';
+ const blobs={...world.blobs,[S.BLOBS.pad]:buildZip([['siconv_plano_aplicacao_detalhado.csv',brokenCsv]])};
+ const complete=await S.runSync({dir:world.dir,agentModule:world.agentModule,containerUrl:S.CONTAINER_URL,pad:true});
+ const initial=A.applySyncResult(D.initialState(),{...complete,textos:{},textosFaltando:['101','102']}).state;
+ initial.proposals[0].reviews.pad['11'].note='Preservar pesquisa humana';
+ const partial=await S.runSync({dir:world.dir,force:true,agentModule:fakeAgent(blobs),containerUrl:S.CONTAINER_URL,pad:true});
+ assert.equal(partial.proposals[0].padExtraction.status,'partial');assert.equal(partial.proposals[1].padExtraction.status,'complete');
+ const applied=A.applySyncResult(initial,{...partial,textos:{},textosFaltando:['101','102']});assert.deepEqual(applied.state.proposals[0].imported.pad,initial.proposals[0].imported.pad);assert.equal(applied.state.proposals[0].reviews.pad['11'].note,'Preservar pesquisa humana');assert.ok(applied.warnings.some(w=>/incompleto/.test(w)));
+ const file=(name,body)=>new File([body],name);
+ const csv=await T.importFiles({program:file('p.csv',PROGRAM_CSV),links:file('l.csv',LINKS_CSV),proposal:file('r.csv',PROPOSAL_CSV.replaceAll('"FICTÍCIO"','FICTÍCIO').replace('31/02/2026','28/02/2026')),pad:file('a.csv',brokenCsv)});
+ assert.equal(csv.proposals[0].padExtraction.status,'partial');assert.deepEqual(D.syncProposals(initial,csv.proposals,'fixture').state.proposals[0].imported.pad,initial.proposals[0].imported.pad);
 });

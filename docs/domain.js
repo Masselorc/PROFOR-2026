@@ -139,7 +139,9 @@
     for(const campo of Object.keys(CAMPOS_TEXTOS)) after[campo]=String(dados?.[campo] ?? '').trim();
     validateTextos(after);
     const before=p.textos || null;
+    const fields=Object.keys(CAMPOS_TEXTOS).filter(k=>(before?.[k]||'')!==after[k]);
     p.textos=after;log(p,'Textos oficiais da proposta obtidos',before,after,actor);
+    invalidateEvidence(p,fields.map(k=>'textos.'+k),actor);
     return after;
   }
   function setSei(p,data,actor) {
@@ -253,6 +255,7 @@
                          corrigir aqui, a conferência fica pendente na origem. */
   function padSituacao(p,sync) {
     const pad=p?.imported?.pad;
+    if(p?.padImport?.status==='partial')return {key:'incompleto',titulo:'Importação incompleta do PAD',detalhe:`${pad?.length?'Último PAD íntegro preservado; estes itens não foram atualizados integralmente.':'Não há PAD íntegro anterior disponível.'} ${p.padImport.reasons.map(r=>r.reason).join(' ')}`};
     if(pad===null || pad===undefined) return {key:'nao-carregado',titulo:'PAD não carregado',
       detalhe:`A última sincronização foi a rápida, que não baixa o arquivo do Plano de Aplicação Detalhado${sync?.at?`, feita em ${fmtDate(sync.at)}`:''}. Use "Sincronizar com o Transferegov" na modalidade completa para carregá-lo.`};
     if(!pad.length) return {key:'sem-itens',titulo:'Sem itens publicados na origem',
@@ -260,6 +263,106 @@
     return {key:'com-itens',titulo:`${pad.length} item(ns) publicado(s)`,detalhe:''};
   }
   function log(p,event,before=null,after=null,actor='Sistema') { p.history.push({at:now(),event,actor,before:clone(before),after:clone(after)}); }
+  /* Referências de conteúdo, independentes de hora/revisão global. FNV64 é uma
+     impressão de comparação, não uma assinatura de segurança do banco. */
+  function canonical(value){
+    if(Array.isArray(value))return '['+value.map(canonical).join(',')+']';
+    if(value && typeof value==='object')return '{'+Object.keys(value).sort().map(k=>JSON.stringify(k)+':'+canonical(value[k])).join(',')+'}';
+    return JSON.stringify(value??null);
+  }
+  function fingerprint(value){let n=14695981039346656037n;for(const c of canonical(value)){n^=BigInt(c.codePointAt(0));n=BigInt.asUintN(64,n*1099511628211n);}return 'fnv64-v1:'+n.toString(16).padStart(16,'0');}
+  const EVIDENCE_DEPENDENCIES={
+    'imported.objeto':['merito:objeto','merito:destinacao'],
+    'imported.vigenciaInicio':['merito:objeto'],'imported.vigenciaFim':['merito:objeto'],
+    'textos.caracterizacao':['merito:justificativa'],'textos.justificativa':['merito:justificativa'],
+    'textos.publicoAlvo':['merito:publicoAlvo'],'textos.problema':['merito:problema'],
+    'textos.resultados':['merito:resultados'],'textos.relacao':['merito:objetivos'],
+    'textos.capacidade':['merito:capacidade','celebracao:11'],
+    'imported.repasse':['celebracao:6'],'imported.global':['celebracao:6','celebracao:7'],
+    'imported.contrapartida':['celebracao:7'],'imported.pad':['celebracao:6'],
+    ouvidoria:['merito:ouvidoriaInstituida'],falaBR:['merito:falaBRAdesao']
+  };
+  const canonicalRef=(group,id)=>storage(group)+':'+id;
+  function evidenceOf(p,group,id){
+    const ref=canonicalRef(group,id),values={};
+    for(const [field,refs] of Object.entries(EVIDENCE_DEPENDENCIES))if(refs.includes(ref)){
+      const [parent,key]=field.split('.');let v=key?p[parent]?.[key]:p[parent];
+      if(field==='imported.pad')v=(v||[]).slice().sort((a,b)=>a.id.localeCompare(b.id));values[field]=v??null;
+    }
+    if(storage(group)==='pad')values.item=(p.imported.pad||[]).find(x=>x.id===id)||null;
+    const r=reviewOf(p,group,id);
+    values.documents={document:r?.document||'',url:r?.url||'',attachments:(r?.attachments||[]).map(a=>({id:a.id,name:a.name,data:a.data})).sort((a,b)=>a.id.localeCompare(b.id))};
+    return {version:1,ref,fingerprint:fingerprint(values)};
+  }
+  function reviewCurrent(p,group,id){const r=reviewOf(p,group,id);return !!r?.at && !!r.evidence?.fingerprint && r.evidence.fingerprint===evidenceOf(p,group,id).fingerprint;}
+  function reopenConclusion(p,reason,actor){if(p.conclusion){log(p,reason,p.conclusion,null,actor);p.conclusion=null;}}
+  function invalidateReview(p,group,id,fields,actor,previous){
+    const r=p.reviews?.[storage(group)]?.[id];if(!r || r.status==='na')return;
+    const before=previous||clone(r);r.status='reanalise';r.reanalysis={at:now(),fields:clone(fields),reason:'Evidência alterada; decisão anterior preservada no histórico.'};
+    log(p,`Reanálise: ${canonicalRef(group,id)}`,before,r,actor);
+  }
+  function invalidateEvidence(p,fields,actor){
+    const refs=new Set(fields.flatMap(f=>EVIDENCE_DEPENDENCIES[f]||[]));
+    for(const ref of refs){const [g,id]=ref.split(':');invalidateReview(p,g,id,fields,actor);}
+    if([...refs].some(r=>r.startsWith('merito:')) || fields.includes('imported.pad') || fields.includes('ouvidoria') || fields.includes('falaBR'))reopenConclusion(p,'Conclusão reaberta por alteração de evidência',actor);
+  }
+  const INSTITUTION_RESULTS={ouvidoriaInstituida:{ok:'instituida',no:'pendente'},falaBRAdesao:{ok:'aderido',obs:'previsto',no:'nao_previsto'}};
+  function institutionalConflicts(p){return Object.entries(INSTITUTION_RESULTS).flatMap(([id,map])=>{
+    const r=p.reviews.merito[id],expected=map[r?.status],fact=id==='falaBRAdesao'?p.falaBR:p.ouvidoria.status;
+    return expected && fact!==expected?[{id,fact,review:r.status,expected}]:[];
+  });}
+  function setInstitution(p,data,actor){
+    const after={...clone(p.ouvidoria),...clone(data.ouvidoria)},fala=data.falaBR??p.falaBR;
+    assert(['na','instituida','pendente'].includes(after.status) && ['na','aderido','previsto','nao_previsto'].includes(fala),'Situação institucional inválida.');
+    assert(typeof after.clause==='boolean','Cláusula inválida.');
+    for(const k of ['signature','url','note'])assert(typeof after[k]==='string','Informação institucional incompleta.');
+    dateISO(after.signature);after.url=safeLink(after.url);if(after.status!=='pendente')after.clause=false;
+    const before={ouvidoria:clone(p.ouvidoria),falaBR:p.falaBR},fields=[];
+    if(canonical(after)!==canonical(before.ouvidoria))fields.push('ouvidoria');if(fala!==p.falaBR)fields.push('falaBR');
+    if(!fields.length)return;
+    p.ouvidoria=after;p.falaBR=fala;log(p,'Informações institucionais atualizadas',before,{ouvidoria:after,falaBR:fala},actor);invalidateEvidence(p,fields,actor);
+  }
+  /* Contrato comum ao CSV de contingência e à extração ZIP. Candidatos nunca
+     são evidência oficial quando uma rejeição compromete a completude. */
+  function padCollector(proposals,source,at=now()) {
+    const counts=new Map([...proposals.keys()].map(id=>[id,{version:1,status:'complete',source,at,received:0,accepted:0,rejected:0,reasons:[]} ]));
+    const seen=new Map([...proposals.keys()].map(id=>[id,new Set()]));
+    let line=0;
+    function reject(meta,id,reason){meta.status='partial';meta.rejected++;meta.reasons.push({line,itemId:id,reason});}
+    return {
+      row(row,convert={quantity:quantityBR,money:moneyBR}) {
+        line++;
+        const proposalId=String(row.ID_PROPOSTA??'').trim();
+        if(!/^\d{1,80}$/.test(proposalId)){
+          for(const meta of counts.values())reject(meta,'','Linha sem ID de proposta verificável; conjunto afetado preservado.');
+          return;
+        }
+        const p=proposals.get(proposalId);if(!p)return;
+        const meta=counts.get(proposalId),id=String(row.ID_ITEM_PAD??'').trim();meta.received++;
+        try{
+          assert(/^\d{1,100}$/.test(id),'ID de item ausente ou inválido.');
+          assert(!seen.get(proposalId).has(id),'ID de item duplicado.');seen.get(proposalId).add(id);
+          const item={id,descricao:String(row.DESCRICAO_ITEM??'').trim(),quantidade:convert.quantity(row.QTD_ITEM),unitario:convert.money(row.VALOR_UNITARIO_ITEM),total:convert.money(row.VALOR_TOTAL_ITEM)};
+          validateImported({...p,pad:[item]});p.pad.push(item);meta.accepted++;
+        }catch(err){reject(meta,id,err.message);}
+      },
+      finish(){for(const [id,meta] of counts)proposals.get(id).padExtraction=meta;return [...counts.values()];}
+    };
+  }
+  function applyPadCandidate(p,incoming,actor){
+    const meta=incoming.padExtraction;
+    if(meta?.status==='partial'){
+      const after={...clone(meta),candidate:clone(incoming.pad||[])};
+      if(JSON.stringify({...p.padImport,at:null})!==JSON.stringify({...after,at:null}))log(p,'Importação incompleta do PAD; referência íntegra preservada',p.padImport||null,after,actor);
+      p.padImport=after;reopenConclusion(p,'Conclusão reaberta: extração do PAD incompleta',actor);return clone(p.imported?.pad??null);
+    }
+    if(incoming.pad===null)return clone(p.imported?.pad??null);
+    if(meta){
+      if(p.padImport?.status==='partial')log(p,'Extração íntegra do PAD recebida; alerta resolvido',p.padImport,meta,actor);
+      p.padImport=clone(meta);
+    }
+    return clone(incoming.pad);
+  }
   function validateImported(i) {
     assert(i && typeof i==='object','Dados da proposta ausentes.');
     for(const key of ['id','numero','uf','programa','proponente','cnpj','orgao','objeto','situacao','data']) assert(typeof i[key]==='string',`Campo inválido: ${key}.`);
@@ -275,6 +378,7 @@
     }
     for(const key of ['repasse','contrapartida','global']) assert(i[key]===null || (Number.isSafeInteger(i[key]) && i[key]>=0),`Valor inválido: ${key}.`);
     assert(i.pad===null || Array.isArray(i.pad),'PAD inválido.');
+    if(i.padExtraction!==undefined)validatePadExtraction(i.padExtraction);
     const ids=new Set();
     for(const item of i.pad || []) {
       assert(typeof item.id==='string' && /^\d{1,100}$/.test(item.id) && !ids.has(item.id),'ID de item ausente ou duplicado.'); ids.add(item.id);
@@ -284,11 +388,22 @@
     }
     return i;
   }
+  function validatePadExtraction(meta){
+    assert(meta?.version===1 && ['complete','partial','not-requested'].includes(meta.status),'Metadados de completude do PAD inválidos.');
+    assert(typeof meta.source==='string' && typeof meta.at==='string' && Number.isFinite(Date.parse(meta.at)),'Origem/data da extração inválida.');
+    for(const key of ['received','accepted','rejected'])assert(Number.isSafeInteger(meta[key]) && meta[key]>=0,'Contagem de extração inválida.');
+    assert(Array.isArray(meta.reasons) && meta.reasons.every(r=>typeof r.reason==='string' && Number.isSafeInteger(r.line) && typeof r.itemId==='string'),'Rejeições do PAD inválidas.');
+    assert(meta.status!=='complete' || (meta.rejected===0 && meta.reasons.length===0 && meta.received===meta.accepted),'Extração declarada íntegra contém rejeições.');
+    assert(meta.status!=='partial' || meta.rejected>0,'Extração parcial sem rejeições.');
+  }
   function createProposal(imported,actor='Sistema') {
     validateImported(imported);
     const p={id:imported.id,imported:clone(imported),reviews:{},diligences:[],ouvidoria:{status:'na',signature:'',url:'',note:'',clause:false},falaBR:'na',conclusion:null,history:[]};
+    if(imported.padExtraction?.status==='partial'){p.imported.pad=null;p.padImport={...clone(imported.padExtraction),candidate:clone(imported.pad||[])};}
+    else if(imported.padExtraction)p.padImport=clone(imported.padExtraction);
+    delete p.imported.padExtraction;
     for(const [group,rows] of Object.entries(REQUIREMENTS)) p.reviews[group]=Object.fromEntries(rows.map(([id])=>[id,blankReview()]));
-    p.reviews.pad=Object.fromEntries((imported.pad || []).map(x=>[x.id,blankReview()]));
+    p.reviews.pad=Object.fromEntries((p.imported.pad || []).map(x=>[x.id,blankReview()]));
     log(p,'Proposta importada',null,imported,actor); return p;
   }
   function syncProposals(state,incoming,source,actor='Sistema') {
@@ -303,20 +418,21 @@
          proposta pelo estado, e não só pelo número. */
       if(!p) { p=createProposal(i,actor); next.proposals.push(p); changes.push({id:i.id,numero:i.numero,uf:i.uf,field:'Proposta',before:null,after:'Nova proposta'}); continue; }
       assert(i.uf===p.imported.uf,'UF de uma proposta existente foi alterada. Confira a origem antes de importar.');
-      if(p.isDeleted){p.imported.pad=clone(i.pad===null?p.imported.pad:i.pad);continue;}
-      const fresh=clone(i); if(fresh.pad===null) fresh.pad=clone(p.imported.pad);
-      const changed=Object.keys(fresh).filter(k=>JSON.stringify(fresh[k])!==JSON.stringify(p.imported[k]));
+      const fresh={...clone(p.imported),...clone(i)};fresh.pad=applyPadCandidate(p,i,actor);
+      delete fresh.padExtraction;
+      const content=(key,value)=>key==='pad' && Array.isArray(value)?value.slice().sort((a,b)=>a.id.localeCompare(b.id)):value;
+      const changed=Object.keys(fresh).filter(k=>canonical(content(k,fresh[k]))!==canonical(content(k,p.imported[k])));
       if(!changed.length) continue;
       for(const key of changed) changes.push({id:i.id,numero:i.numero,uf:i.uf,field:key,before:clone(p.imported[key]),after:clone(fresh[key])});
-      if(changed.some(k=>k!=='pad')) for(const group of ['merito']) for(const review of Object.values(p.reviews[group] || {})) if(review.status!=='na') review.status='reanalise';
       for(const item of fresh.pad || []) {
         const old=(p.imported.pad || []).find(x=>x.id===item.id);
         if(!p.reviews.pad[item.id]) p.reviews.pad[item.id]=blankReview();
-        else if(JSON.stringify(old)!==JSON.stringify(item) && p.reviews.pad[item.id].status!=='na') { p.reviews.pad[item.id].status='reanalise'; log(p,`Conferência do item ${item.id} invalidada`,old,item,actor); }
+        else if(canonical(old)!==canonical(item))invalidateReview(p,'pad',item.id,['imported.pad:'+item.id],actor);
       }
+      for(const old of p.imported.pad||[])if(!(fresh.pad||[]).some(x=>x.id===old.id))invalidateReview(p,'pad',old.id,['imported.pad:'+old.id],actor);
       log(p,'Dados da origem alterados; conferir análise',p.imported,fresh,actor);
       p.imported=fresh;
-      if(p.conclusion) {log(p,'Conclusão requer nova confirmação após importação',p.conclusion,null,actor);p.conclusion=null;}
+      invalidateEvidence(p,changed.map(k=>'imported.'+k),actor);
     }
     next.sync={at:now(),source,count:incoming.length};
     return {state:next,changes};
@@ -358,22 +474,33 @@
      não não conformidades a sanar. */
   const RESULTADO_PREVISTO = new Set(['ouvidoriaInstituida','falaBRAdesao']);
   const accepted = (r,id) => ['ok','obs'].includes(r.status) || (r.status==='no' && RESULTADO_PREVISTO.has(id));
-  function groupProgress(p,g) { const rs=rows(p,g); return {done:rs.filter(([id])=>accepted(reviewOf(p,g,id),id)).length,total:rs.length}; }
+  const diligenceTerminal=d=>['saneada','nao_saneada'].includes(d.status);
+  function reviewed(p,g,id){
+    const r=reviewOf(p,g,id);if(!reviewCurrent(p,g,id))return false;
+    if(['ok','obs','no'].includes(r.status))return r.status!=='no' || !!r.note.trim() || (storage(g)==='merito' && RESULTADO_PREVISTO.has(id));
+    const ds=p.diligences.filter(d=>d.ref===canonicalRef(g,id));
+    return r.status==='diligencia' && !!r.note.trim() && ds.length>0 && ds.every(diligenceTerminal);
+  }
+  function groupProgress(p,g) { const rs=rows(p,g); return {done:rs.filter(([id])=>reviewed(p,g,id)).length,accepted:rs.filter(([id])=>reviewCurrent(p,g,id) && accepted(reviewOf(p,g,id),storage(g)==='merito'?id:'')).length,total:rs.length}; }
+  function reviewProgress(p){const groups=['merito','pad','celebracao'].map(g=>groupProgress(p,g));const done=groups.reduce((n,g)=>n+g.done,0),total=groups.reduce((n,g)=>n+g.total,0);return {done,total,percent:total?Math.round(done/total*100):0,pad:groupProgress(p,'pad')};}
   function blockers(p,celebration=false) {
     const b=[];
     /* Grupos sem lista própria ficam fora da contagem: um grupo vazio não pode
        bloquear a conclusão nem inflar as pendências. */
-    for(const g of ['merito','pad',...(celebration?ABAS_CELEBRACAO.map(a=>a.id):[])]) { const v=groupProgress(p,g); if(!v.total)continue; if(v.done!==v.total)b.push(`${PENDENCIA[g] || g}: ${v.done}/${v.total} atendidos`); }
+    for(const g of ['merito','pad',...(celebration?ABAS_CELEBRACAO.map(a=>a.id):[])]) { const v=groupProgress(p,g); if(!v.total)continue; if(v.accepted!==v.total)b.push(`${PENDENCIA[g] || g}: ${v.accepted}/${v.total} atendidos e atuais; ${v.done}/${v.total} revisados`); }
     const f=finance(p);
     if(!f.complete)b.push('Valores da proposta incompletos');
     else if(!f.composition)b.push('Repasse + contrapartida diverge do valor global');
     if(!f.padComplete)b.push('PAD sem itens importados'); else if(!f.pad)b.push('Somatório do PAD diverge do valor global');
     if(f.errors.length)b.push(`${f.errors.length} item(ns) com valor unitário incompatível com total ÷ quantidade`);
+    if(p.padImport?.status==='partial')b.push('Importação incompleta do PAD; referência anterior preservada');
+    if(institutionalConflicts(p).length)b.push('Fato institucional e parecer conflitantes; conferir ambos os registros');
     if(pending(p).length)b.push('Marcação de diligência sem registro ativo');
-    const sem=semJustificativa(p);
+    const sem=semJustificativa(p).filter(r=>celebration || !r.ref.startsWith('celebracao:'));
     if(sem.length)b.push(`${sem.length} item(ns) marcado(s) como não conforme sem justificativa`);
-    if(p.diligences.some(d=>d.status!=='saneada'))b.push('Diligência ainda não saneada');
+    if(p.diligences.some(d=>d.status!=='saneada' && (celebration || !d.ref.startsWith('celebracao:'))))b.push('Diligência ainda não saneada');
     if(celebration && p.ouvidoria.status!=='instituida' && !(p.ouvidoria.status==='pendente' && p.ouvidoria.clause)) b.push('Confirmar instituição da Ouvidoria ou aplicação da cláusula suspensiva');
+    if(celebration && sourceState(p.imported).key!=='enviada')b.push('Situação oficial não permite presumir aptidão: '+sourceState(p.imported).label);
     return [...new Set(b)];
   }
   /* Etapa da proposta NO TRANSFEREGOV, lida da extração oficial (campo SIT_PROPOSTA).
@@ -391,11 +518,11 @@
   };
   function sourceState(imported) {
     const raw=String(imported?.situacao ?? '');
-    const s=raw.toLocaleLowerCase('pt-BR');
+    const s=raw.toLocaleLowerCase('pt-BR').trim();
     if(!s.trim())return {key:'desconhecida',raw,indefinida:true,...SOURCE_STATES.desconhecida};
-    if(s.includes('cadastrad') || s.includes('elabora'))return {key:'cadastrada',raw,indefinida:false,...SOURCE_STATES.cadastrada};
-    if(s.includes('enviad'))return {key:'enviada',raw,indefinida:false,...SOURCE_STATES.enviada};
-    if(s.includes('rejeit') || s.includes('cancelad') || s.includes('indeferid'))return {key:'rejeitada',raw,indefinida:false,...SOURCE_STATES.rejeitada};
+    if(['proposta/plano de trabalho cadastrados','proposta/plano de trabalho em elaboração','em elaboração','cadastrada'].includes(s))return {key:'cadastrada',raw,indefinida:false,...SOURCE_STATES.cadastrada};
+    if(['proposta/plano de trabalho enviado para análise','enviada para análise'].includes(s))return {key:'enviada',raw,indefinida:false,...SOURCE_STATES.enviada};
+    if(['proposta/plano de trabalho rejeitados','proposta/plano de trabalho cancelados','proposta/plano de trabalho indeferidos','rejeitada','cancelada','indeferida'].includes(s))return {key:'rejeitada',raw,indefinida:false,...SOURCE_STATES.rejeitada};
     return {key:'desconhecida',raw,indefinida:true,...SOURCE_STATES.desconhecida};
   }
   /* Situação geral da UF a partir das propostas dela. Regra do analista:
@@ -420,6 +547,19 @@
   }
   function activeProposals(s) { return (s.proposals || []).filter(p=>!p.isDeleted); }
   function deletedProposals(s) { return (s.proposals || []).filter(p=>p.isDeleted); }
+  function matchesFilters(p,filters={}){
+    const i=p.imported,query=String(filters.search||'').trim().toLocaleLowerCase('pt-BR');
+    if(filters.uf && i.uf!==filters.uf)return false;
+    if(query && !`${i.uf} ${UFS[i.uf]} ${fmtProposalNumber(i.numero)} ${i.proponente}`.toLocaleLowerCase('pt-BR').includes(query))return false;
+    if(filters.status && filters.status!==situation(p))return false;
+    if(filters.source && filters.source!==sourceState(i).key)return false;
+    const c=filters.control;
+    if(c==='financial')return !finance(p).ok || p.padImport?.status==='partial';
+    if(c==='unlinked')return pending(p).length>0;
+    if(c==='ouvidoria')return p.ouvidoria.status==='pendente';
+    if(['merito','pad','proposta','formalizacao'].includes(c)){const r=groupProgress(p,c);return r.done!==r.total;}
+    return true;
+  }
   /* Marcar como apagada registra o ator e a hora e guarda o retrato no histórico.
      Nada é removido do banco: a proposta sai do painel e continua podendo voltar. */
   function deleteProposal(p,actor='Usuário local') {
@@ -437,12 +577,36 @@
   }
   function situation(p) {
     if(p?.imported && sourceState(p.imported).key==='cadastrada')return 'Em elaboração na origem';
-    if(pending(p).length || p.diligences.some(d=>d.status!=='saneada'))return 'Em diligência';
+    if(pending(p).length || p.diligences.some(d=>!diligenceTerminal(d)))return 'Em diligência';
     if(referenceRows(p).some(r=>r.review.status==='reanalise'))return 'Requer nova análise';
-    if(p.conclusion && !blockers(p,true).length)return p.ouvidoria.status==='pendente'?'Formalização com cláusula suspensiva':'Apta à celebração';
+    if(p.conclusion?.result==='desfavoravel')return 'Análise técnica desfavorável';
+    if(aptForCelebration(p))return p.ouvidoria.status==='pendente'?'Formalização com cláusula suspensiva':'Apta à celebração';
     if(p.conclusion)return 'Pendente de celebração';
     return 'Em análise';
   }
+  function technicalEvidence(p){return fingerprint({refs:referenceRows(p).filter(r=>['merito','pad'].includes(r.group)).map(r=>({ref:r.ref,evidence:evidenceOf(p,r.group,r.id),review:{status:r.review.status,note:r.review.note,at:r.review.at}})).sort((a,b)=>a.ref.localeCompare(b.ref)),padIncomplete:p.padImport?.status==='partial',ouvidoria:p.ouvidoria,falaBR:p.falaBR,diligences:p.diligences.filter(d=>!d.ref.startsWith('celebracao:')).slice().sort((a,b)=>a.id.localeCompare(b.id))});}
+  function conclusionBlocks(p,result='favoravel'){
+    if(result==='favoravel')return blockers(p);
+    const b=[];
+    for(const g of ['merito','pad']){const v=groupProgress(p,g);if(v.done!==v.total)b.push(`${PENDENCIA[g]||g}: ${v.done}/${v.total} revisados e atuais`);}
+    if(p.imported.pad===null || p.padImport?.status==='partial')b.push('PAD não carregado ou importação incompleta');
+    if(semJustificativa(p).some(r=>!r.ref.startsWith('celebracao:')))b.push('Resultado negativo sem justificativa');
+    if(pending(p).length)b.push('Marcação de diligência sem registro');
+    if(p.diligences.some(d=>!diligenceTerminal(d) && !d.ref.startsWith('celebracao:')))b.push('Diligência aberta ou resposta ainda em avaliação; decidir seu encerramento separadamente');
+    if(institutionalConflicts(p).length)b.push('Fato institucional e parecer conflitantes');return b;
+  }
+  function confirmConclusion(p,data,actor){
+    assert(['favoravel','desfavoravel'].includes(data.result),'Resultado da conclusão inválido.');
+    assert(data.reference?.trim(),'Informe a referência das evidências consideradas.');
+    assert(data.result!=='desfavoravel' || data.note?.trim(),'Justifique a conclusão desfavorável.');
+    assert(typeof actor==='string' && actor.trim(),'Autor da conclusão obrigatório.');
+    const blocks=conclusionBlocks(p,data.result);assert(!blocks.length,blocks.join(' · '));
+    const evidence=technicalEvidence(p);assert(data.expectedEvidence===evidence,'As evidências mudaram após abrir a conclusão. Reabra e confira a análise.');
+    assert(!p.conclusion || p.conclusion.operationId!==data.operationId,'Esta conclusão já foi registrada.');
+    const after={result:data.result,note:data.note?.trim()||'',reference:data.reference.trim(),actor,at:now(),evidence:{version:1,fingerprint:evidence},operationId:data.operationId||uid()};
+    log(p,'Conclusão da análise técnica registrada',p.conclusion,after,actor);p.conclusion=after;return after;
+  }
+  function aptForCelebration(p){return p.conclusion?.result==='favoravel' && p.conclusion.evidence?.fingerprint===technicalEvidence(p) && !blockers(p,true).length;}
   function setReview(p,group,id,data,actor,opts={}) {
     assert(rows(p,group).some(r=>r[0]===id),'Requisito não encontrado.');
     assert(Object.hasOwn(STATUSES,data.status) && data.status!=='reanalise','Status inválido.');
@@ -454,9 +618,14 @@
     const g=storage(group);
     const before=clone(p.reviews[g][id]);
     const attachments=Array.isArray(data.attachments)?data.attachments:(Array.isArray(before?.attachments)?clone(before.attachments):[]);
-    const after={status:data.status,note:data.note.trim(),document:data.document.trim(),url:safeLink(data.url.trim()),at:now(),attachments};
+    const after={...before,status:data.status,note:data.note.trim(),document:data.document.trim(),url:safeLink(data.url.trim()),at:now(),actor,attachments};
     assert(!after.url || after.document,'Dê um nome ao documento vinculado.');
-    p.reviews[g][id]=after; log(p,`Avaliação: ${g} / ${id}`,before,after,actor);
+    if(g==='merito' && INSTITUTION_RESULTS[id]?.[data.status]){
+      const fact=INSTITUTION_RESULTS[id][data.status];
+      setInstitution(p,id==='falaBRAdesao'?{falaBR:fact,ouvidoria:p.ouvidoria}:{ouvidoria:{...p.ouvidoria,status:fact},falaBR:p.falaBR},actor);
+    }
+    p.reviews[g][id]=after;after.evidence=evidenceOf(p,g,id);delete after.reanalysis;
+    log(p,`Avaliação: ${g} / ${id}`,before,after,actor);
     if(p.conclusion && g!=='celebracao') {log(p,'Conclusão reaberta por alteração da análise',p.conclusion,null,actor);p.conclusion=null;}
   }
   function addAttachment(p,group,id,file,actor) {
@@ -468,6 +637,7 @@
     const g=storage(group);
     const r=p.reviews[g][id];
     assert(r,'Requisito não encontrado.');
+    const previous=clone(r);
     if(!Array.isArray(r.attachments)) r.attachments=[];
     const att={
       id:file.id || ('att-'+uid()),
@@ -481,6 +651,7 @@
     };
     r.attachments.push(att);
     log(p,`Anexo adicionado ao requisito ${id}: ${att.name}`,null,{name:att.name,size:att.size},actor);
+    invalidateReview(p,g,id,['documents'],actor,previous);if(g!=='celebracao')reopenConclusion(p,'Conclusão reaberta por alteração de documento',actor);
     return att;
   }
   function removeAttachment(p,group,id,attachmentId,actor) {
@@ -488,10 +659,12 @@
     const g=storage(group);
     const r=p.reviews[g][id];
     assert(r && Array.isArray(r.attachments),'Requisito sem anexos.');
+    const previous=clone(r);
     const idx=r.attachments.findIndex(a=>a.id===attachmentId);
     assert(idx>=0,'Anexo não encontrado.');
     const removed=r.attachments.splice(idx,1)[0];
     log(p,`Anexo removido do requisito ${id}: ${removed.name}`,{name:removed.name},null,actor);
+    invalidateReview(p,g,id,['documents'],actor,previous);if(g!=='celebracao')reopenConclusion(p,'Conclusão reaberta por remoção de documento',actor);
     return removed;
   }
   /* Marcação direta, sem formulário: `true` = conformidade, `false` = não
@@ -539,7 +712,7 @@
     const after={...data,science:old?.science || data.science || '',id:old?.id || uid(),at:now(),base:calculated.base,due:calculated.adjusted,automaticDeadline:true,confirmed:false,calendarNote:old?.calendarNote || ''};
     log(p,old?'Diligência atualizada':'Diligência cadastrada',old || null,after,actor);
     if(old)p.diligences[p.diligences.indexOf(old)]=after; else p.diligences.push(after);
-    if(p.conclusion) { log(p,'Conclusão reaberta por diligência',p.conclusion,null,actor); p.conclusion=null; }
+    if(!after.ref.startsWith('celebracao:'))reopenConclusion(p,'Conclusão reaberta por diligência',actor);
     return after;
   }
   function mayResolveReference(p,d) { return d.status==='saneada' && !!d.ref && !p.diligences.some(x=>x.ref===d.ref && x.status!=='saneada'); }
@@ -557,6 +730,8 @@
         for(const [id] of rows(p,group)) {
           if(!p.reviews[group][id]) p.reviews[group][id]=blankReview();
           else if(!Array.isArray(p.reviews[group][id].attachments)) p.reviews[group][id].attachments=[];
+          const r=p.reviews[group][id];
+          if(!r.evidence && r.status!=='na')r.evidence={version:1,ref:canonicalRef(group,id),fingerprint:null,legacy:true};
         }
       }
     }
@@ -572,6 +747,7 @@
       if(p.isDeleted){assert(p.deletedAt===null || p.deletedAt===undefined || typeof p.deletedAt==='string','Data de exclusão inválida.');assert(p.deletedBy===undefined || typeof p.deletedBy==='string','Autor da exclusão inválido.');}
       if(p.sei!==undefined)validateSei(p.sei);
       if(p.textos!==undefined)validateTextos(p.textos);
+      if(p.padImport!==undefined){validatePadExtraction(p.padImport);if(p.padImport.candidate!==undefined)validateImported({...p.imported,pad:p.padImport.candidate});}
       assert(p.reviews && Array.isArray(p.history) && Array.isArray(p.diligences) && p.ouvidoria,'Análise incompleta no backup.');
       /* Só os grupos com lista própria são conferidos; a extinta Habilitação
          permanece no banco antigo sem ser validada nem exibida. */
@@ -588,6 +764,7 @@
              que bloqueia a conclusão (`semJustificativa`), não como recusa do
              dado. O formulário continua exigindo justificativa ao salvar. */
           safeLink(r.url); assert(r.status!=='diligencia' || r.note.trim(),'Justificativa ausente no backup.');
+          if(r.evidence)assert(r.evidence.version===1 && r.evidence.ref===canonicalRef(group,id) && (r.evidence.fingerprint===null || typeof r.evidence.fingerprint==='string'),'Referência de evidência inválida.');
           if(r.attachments!==undefined){
             assert(Array.isArray(r.attachments),'Lista de anexos do requisito inválida.');
             for(const a of r.attachments){
@@ -625,16 +802,17 @@
       }
       for(const h of p.history)assert(h && typeof h.at==='string' && typeof h.event==='string' && typeof h.actor==='string','Histórico inválido.');
       assert(p.conclusion===null || (typeof p.conclusion?.actor==='string' && typeof p.conclusion?.at==='string'),'Conclusão inválida.');
+      if(p.conclusion?.result!==undefined)assert(['favoravel','desfavoravel'].includes(p.conclusion.result) && typeof p.conclusion.reference==='string' && p.conclusion.reference.trim() && typeof p.conclusion.evidence?.fingerprint==='string' && (p.conclusion.result!=='desfavoravel' || p.conclusion.note?.trim()),'Resultado/evidência da conclusão inválidos.');
     }
     return state;
   }
   function csvCell(value) { let s=String(value ?? ''); if(/^[\s]*[=+@-]/.test(s))s="'"+s; return '"'+s.replace(/"/g,'""')+'"'; }
   function exportCSV(state) {
-    const lines=[['UF','Proposta','Proponente','Repasse','Contrapartida','Valor global','Situação','Pendências sem diligência']];
+    const lines=[['UF','Proposta','Proponente','Repasse','Contrapartida','Valor global','Situação','Pendências sem diligência','PAD revisado','Total PAD','Divergências unitárias','Revisão geral','Total revisão','Conclusão técnica','Aptidão para celebração']];
     /* Só propostas ativas: as apagadas estão fora das telas e das exportações. */
-    for(const p of (state.proposals || []).filter(x=>!x.isDeleted))lines.push([p.imported.uf,fmtProposalNumber(p.imported.numero),p.imported.proponente,...['repasse','contrapartida','global'].map(k=>p.imported[k]===null?'':(p.imported[k]/100).toFixed(2).replace('.',',')),situation(p),pending(p).length]);
+    for(const p of activeProposals(state)){const v=reviewProgress(p);lines.push([p.imported.uf,fmtProposalNumber(p.imported.numero),p.imported.proponente,...['repasse','contrapartida','global'].map(k=>p.imported[k]===null?'':(p.imported[k]/100).toFixed(2).replace('.',',')),situation(p),pending(p).length,v.pad.done,v.pad.total,finance(p).errors.length,v.done,v.total,p.conclusion?.result||'Não registrada ou legada',aptForCelebration(p)?(p.ouvidoria.clause?'Com cláusula suspensiva':'Apta'):'Não apta']);}
     return '\uFEFF'+lines.map(r=>r.map(csvCell).join(';')).join('\r\n');
   }
-  const api={UFS,PROGRAM,REQUIREMENTS,CELEBRACAO,ABAS_CELEBRACAO,TAB_LABELS,celebracaoItem,metaRequisito,reviewOf,tabLabel,rows,STATUSES,DSTATUS,CATEGORIES,CAMPOS_TEXTOS,clone,now,uid,esc,assert,safeLink,setSei,setTextos,moneyBR,quantityBR,multiply,unitFromTotal,unitMatchesTotal,dateISO,addDays,addMonths,deadline,deadlineBase,fmtMoney,fmtDate,fmtProposalNumber,fmtCnpj,localToday,initialState,createProposal,validateImported,syncProposals,log,referenceRows,pending,finance,groupProgress,blockers,situation,sourceState,SOURCE_STATES,ufState,orderBySend,activeProposals,deletedProposals,deleteProposal,restoreProposal,setReview,markReview,addAttachment,removeAttachment,resultadoPrevisto,rotuloDoResultado,semJustificativa,saveDiligence,mayResolveReference,diligenceLabel,validateState,normalizeState,exportCSV,padSituacao};
+  const api={matchesFilters,canonicalRef,EVIDENCE_DEPENDENCIES,evidenceOf,reviewCurrent,institutionalConflicts,setInstitution,reviewProgress,conclusionBlocks,confirmConclusion,technicalEvidence,aptForCelebration,diligenceTerminal,padCollector,UFS,PROGRAM,REQUIREMENTS,CELEBRACAO,ABAS_CELEBRACAO,TAB_LABELS,celebracaoItem,metaRequisito,reviewOf,tabLabel,rows,STATUSES,DSTATUS,CATEGORIES,CAMPOS_TEXTOS,clone,now,uid,esc,assert,safeLink,setSei,setTextos,moneyBR,quantityBR,multiply,unitFromTotal,unitMatchesTotal,dateISO,addDays,addMonths,deadline,deadlineBase,fmtMoney,fmtDate,fmtProposalNumber,fmtCnpj,localToday,initialState,createProposal,validateImported,syncProposals,log,referenceRows,pending,finance,groupProgress,blockers,situation,sourceState,SOURCE_STATES,ufState,orderBySend,activeProposals,deletedProposals,deleteProposal,restoreProposal,setReview,markReview,addAttachment,removeAttachment,resultadoPrevisto,rotuloDoResultado,semJustificativa,saveDiligence,mayResolveReference,diligenceLabel,validateState,normalizeState,exportCSV,padSituacao};
   if(typeof module!=='undefined')module.exports=api; else root.Profor=api;
 })(globalThis);

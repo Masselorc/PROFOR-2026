@@ -1,4 +1,5 @@
 'use strict';
+const {fulfillStatic}=require('./ui-static.cjs');
 /* Interação do PAD pelo servidor real, com /api/state isolada em memória.
    Verifica seleção múltipla, busca combinada, totais e ausência de gravações. */
 const assert=require('node:assert/strict');
@@ -42,7 +43,7 @@ async function main(){
         if(route.request().method()!=='GET'){writes++;return route.abort();}
         return route.fulfill({status:200,contentType:'application/json',body:JSON.stringify({exists:true,state:memory,token:createHash('sha256').update(JSON.stringify(memory)).digest('hex'),recovery:null})});
       }
-      if(url.origin===ORIGIN && STATIC.has(url.pathname))return route.continue();
+      if(url.origin===ORIGIN && STATIC.has(url.pathname))return fulfillStatic(route);
       return route.abort();
     });
     const page=await context.newPage();page.on('pageerror',error=>errors.push(error.message));

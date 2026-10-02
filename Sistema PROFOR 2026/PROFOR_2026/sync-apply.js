@@ -20,6 +20,7 @@
       return {state:next,changes:[],textsChecked:0,textsChanged:0,warnings,empty:true};
     }
     const preview=D.syncProposals(state,result.proposals,source,actor);
+    for(const p of preview.state.proposals)if(ids.has(p.id) && p.padImport?.status==='partial')warnings.push(`Proposta ${p.imported.numero}: PAD incompleto; referência anterior preservada. ${p.padImport.reasons.map(r=>r.reason).join(' ')}`);
     let textsChecked=0,textsChanged=0;
     for(const proposal of preview.state.proposals){
       if(!ids.has(proposal.id)||!Object.hasOwn(result.textos,proposal.id))continue;
