@@ -1,9 +1,9 @@
-/** Snapshot integral de consulta PROFOR/ONASP 2026. Gerado em 2026-10-02T16:01:30.927Z.
+/** Snapshot integral de consulta PROFOR/ONASP 2026. Gerado em 2026-10-02T17:51:46.792Z.
  * Não editar manualmente. Use tools/build_public_docs.cjs. */
-window.PROFOR_PUBLIC_UPDATED_AT = "2026-10-02T16:01:30.927Z";
+window.PROFOR_PUBLIC_UPDATED_AT = "2026-10-02T17:51:46.792Z";
 window.PROFOR_PUBLIC_DATA = {
   "schemaVersion": 1,
-  "revision": 235,
+  "revision": 237,
   "proposals": [
     {
       "id": "2243618",
@@ -1047,134 +1047,200 @@ window.PROFOR_PUBLIC_DATA = {
         },
         "pad": {
           "17408665": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "Anexar comprovante de preços que comprovem o valor médio utilizado para basear o valor unitário.\nAs pesquisas de preços podem ser realizadas em sítios eletrônicos, devendo ser obtidas três cotações para cada item.\nEm cada pesquisa, a captura de tela deve apresentar a data da consulta, com a barra de tarefas do Windows visível, além do link completo da página acessada, de modo a permitir a conferência posterior do valor pesquisado.\nApós a obtenção das três cotações, deverá ser calculada a média aritmética dos preços encontrados. Esse será o valor a ser registrado no Plano de Aplicação Detalhado.",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-02T17:32:47.288Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17408665",
+              "fingerprint": "fnv64-v1:becbd2fa5138e34e"
+            }
           },
           "17408672": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "Anexar comprovante de preços que comprovem o valor médio utilizado para basear o valor unitário.\nAs pesquisas de preços podem ser realizadas em sítios eletrônicos, devendo ser obtidas três cotações para cada item.\nEm cada pesquisa, a captura de tela deve apresentar a data da consulta, com a barra de tarefas do Windows visível, além do link completo da página acessada, de modo a permitir a conferência posterior do valor pesquisado.\nApós a obtenção das três cotações, deverá ser calculada a média aritmética dos preços encontrados. Esse será o valor a ser registrado no Plano de Aplicação Detalhado.",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-02T17:32:47.292Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17408672",
+              "fingerprint": "fnv64-v1:3810b1afce79c43d"
+            }
           },
           "17408676": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "Anexar comprovante de preços que comprovem o valor médio utilizado para basear o valor unitário.\nAs pesquisas de preços podem ser realizadas em sítios eletrônicos, devendo ser obtidas três cotações para cada item.\nEm cada pesquisa, a captura de tela deve apresentar a data da consulta, com a barra de tarefas do Windows visível, além do link completo da página acessada, de modo a permitir a conferência posterior do valor pesquisado.\nApós a obtenção das três cotações, deverá ser calculada a média aritmética dos preços encontrados. Esse será o valor a ser registrado no Plano de Aplicação Detalhado.",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-02T17:32:47.291Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17408676",
+              "fingerprint": "fnv64-v1:f3d5c78780b29a7a"
+            }
           },
           "17408679": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "Anexar comprovante de preços que comprovem o valor médio utilizado para basear o valor unitário.\nAs pesquisas de preços podem ser realizadas em sítios eletrônicos, devendo ser obtidas três cotações para cada item.\nEm cada pesquisa, a captura de tela deve apresentar a data da consulta, com a barra de tarefas do Windows visível, além do link completo da página acessada, de modo a permitir a conferência posterior do valor pesquisado.\nApós a obtenção das três cotações, deverá ser calculada a média aritmética dos preços encontrados. Esse será o valor a ser registrado no Plano de Aplicação Detalhado.",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-02T17:32:47.287Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17408679",
+              "fingerprint": "fnv64-v1:bb8ed3ce01fca45f"
+            }
           },
           "17408680": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "Anexar comprovante de preços que comprovem o valor médio utilizado para basear o valor unitário.\nAs pesquisas de preços podem ser realizadas em sítios eletrônicos, devendo ser obtidas três cotações para cada item.\nEm cada pesquisa, a captura de tela deve apresentar a data da consulta, com a barra de tarefas do Windows visível, além do link completo da página acessada, de modo a permitir a conferência posterior do valor pesquisado.\nApós a obtenção das três cotações, deverá ser calculada a média aritmética dos preços encontrados. Esse será o valor a ser registrado no Plano de Aplicação Detalhado.",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-02T17:32:47.283Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17408680",
+              "fingerprint": "fnv64-v1:036f6f463cf89972"
+            }
           },
           "17408681": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "Anexar comprovante de preços que comprovem o valor médio utilizado para basear o valor unitário.\nAs pesquisas de preços podem ser realizadas em sítios eletrônicos, devendo ser obtidas três cotações para cada item.\nEm cada pesquisa, a captura de tela deve apresentar a data da consulta, com a barra de tarefas do Windows visível, além do link completo da página acessada, de modo a permitir a conferência posterior do valor pesquisado.\nApós a obtenção das três cotações, deverá ser calculada a média aritmética dos preços encontrados. Esse será o valor a ser registrado no Plano de Aplicação Detalhado.",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-02T17:32:47.280Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17408681",
+              "fingerprint": "fnv64-v1:f76b5c6e3b6a7db9"
+            }
           },
           "17408691": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "Anexar comprovante de preços que comprovem o valor médio utilizado para basear o valor unitário.\nAs pesquisas de preços podem ser realizadas em sítios eletrônicos, devendo ser obtidas três cotações para cada item.\nEm cada pesquisa, a captura de tela deve apresentar a data da consulta, com a barra de tarefas do Windows visível, além do link completo da página acessada, de modo a permitir a conferência posterior do valor pesquisado.\nApós a obtenção das três cotações, deverá ser calculada a média aritmética dos preços encontrados. Esse será o valor a ser registrado no Plano de Aplicação Detalhado.",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-02T17:32:47.285Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17408691",
+              "fingerprint": "fnv64-v1:3ae9d239a9006e76"
+            }
           },
           "17408692": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "Anexar comprovante de preços que comprovem o valor médio utilizado para basear o valor unitário.\nAs pesquisas de preços podem ser realizadas em sítios eletrônicos, devendo ser obtidas três cotações para cada item.\nEm cada pesquisa, a captura de tela deve apresentar a data da consulta, com a barra de tarefas do Windows visível, além do link completo da página acessada, de modo a permitir a conferência posterior do valor pesquisado.\nApós a obtenção das três cotações, deverá ser calculada a média aritmética dos preços encontrados. Esse será o valor a ser registrado no Plano de Aplicação Detalhado.",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-02T17:32:47.281Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17408692",
+              "fingerprint": "fnv64-v1:89369b8615677807"
+            }
           },
           "17408694": {
             "status": "diligencia",
             "note": "Anexar comprovante de preços que comprovem o valor médio utilizado para basear o valor unitário.\nAs pesquisas de preços podem ser realizadas em sítios eletrônicos, devendo ser obtidas três cotações para cada item.\nEm cada pesquisa, a captura de tela deve apresentar a data da consulta, com a barra de tarefas do Windows visível, além do link completo da página acessada, de modo a permitir a conferência posterior do valor pesquisado.\nApós a obtenção das três cotações, deverá ser calculada a média aritmética dos preços encontrados. Esse será o valor a ser registrado no Plano de Aplicação Detalhado.",
             "document": "",
             "url": "",
-            "at": "2026-09-23T18:03:04.680Z",
+            "at": "2026-10-02T17:32:47.282Z",
             "attachments": [],
             "evidence": {
               "version": 1,
               "ref": "pad:17408694",
-              "fingerprint": null,
-              "legacy": true
-            }
+              "fingerprint": "fnv64-v1:cbd63dca4d612e4c"
+            },
+            "actor": "Usuário local"
           },
           "17408696": {
             "status": "diligencia",
             "note": "Anexar comprovante de preços que comprovem o valor médio utilizado para basear o valor unitário.\nAs pesquisas de preços podem ser realizadas em sítios eletrônicos, devendo ser obtidas três cotações para cada item.\nEm cada pesquisa, a captura de tela deve apresentar a data da consulta, com a barra de tarefas do Windows visível, além do link completo da página acessada, de modo a permitir a conferência posterior do valor pesquisado.\nApós a obtenção das três cotações, deverá ser calculada a média aritmética dos preços encontrados. Esse será o valor a ser registrado no Plano de Aplicação Detalhado.",
             "document": "",
             "url": "",
-            "at": "2026-09-23T18:03:22.695Z",
+            "at": "2026-10-02T17:32:47.284Z",
             "attachments": [],
             "evidence": {
               "version": 1,
               "ref": "pad:17408696",
-              "fingerprint": null,
-              "legacy": true
-            }
+              "fingerprint": "fnv64-v1:faef91ea3190b485"
+            },
+            "actor": "Usuário local"
           },
           "17408697": {
             "status": "diligencia",
             "note": "Anexar comprovante de preços que comprovem o valor médio utilizado para basear o valor unitário.\nAs pesquisas de preços podem ser realizadas em sítios eletrônicos, devendo ser obtidas três cotações para cada item.\nEm cada pesquisa, a captura de tela deve apresentar a data da consulta, com a barra de tarefas do Windows visível, além do link completo da página acessada, de modo a permitir a conferência posterior do valor pesquisado.\nApós a obtenção das três cotações, deverá ser calculada a média aritmética dos preços encontrados. Esse será o valor a ser registrado no Plano de Aplicação Detalhado.",
             "document": "",
             "url": "",
-            "at": "2026-09-23T18:03:35.189Z",
+            "at": "2026-10-02T17:32:47.290Z",
             "attachments": [],
             "evidence": {
               "version": 1,
               "ref": "pad:17408697",
-              "fingerprint": null,
-              "legacy": true
-            }
+              "fingerprint": "fnv64-v1:adb013a245cc18d7"
+            },
+            "actor": "Usuário local"
           },
           "17408699": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "Anexar comprovante de preços que comprovem o valor médio utilizado para basear o valor unitário.\nAs pesquisas de preços podem ser realizadas em sítios eletrônicos, devendo ser obtidas três cotações para cada item.\nEm cada pesquisa, a captura de tela deve apresentar a data da consulta, com a barra de tarefas do Windows visível, além do link completo da página acessada, de modo a permitir a conferência posterior do valor pesquisado.\nApós a obtenção das três cotações, deverá ser calculada a média aritmética dos preços encontrados. Esse será o valor a ser registrado no Plano de Aplicação Detalhado.",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-02T17:32:47.289Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17408699",
+              "fingerprint": "fnv64-v1:605313aad3321d41"
+            }
           },
           "17408700": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "Anexar comprovante de preços que comprovem o valor médio utilizado para basear o valor unitário.\nAs pesquisas de preços podem ser realizadas em sítios eletrônicos, devendo ser obtidas três cotações para cada item.\nEm cada pesquisa, a captura de tela deve apresentar a data da consulta, com a barra de tarefas do Windows visível, além do link completo da página acessada, de modo a permitir a conferência posterior do valor pesquisado.\nApós a obtenção das três cotações, deverá ser calculada a média aritmética dos preços encontrados. Esse será o valor a ser registrado no Plano de Aplicação Detalhado.",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-02T17:32:47.286Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17408700",
+              "fingerprint": "fnv64-v1:0e7c6262fc379b52"
+            }
           },
           "17408703": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "Anexar comprovante de preços que comprovem o valor médio utilizado para basear o valor unitário.\nAs pesquisas de preços podem ser realizadas em sítios eletrônicos, devendo ser obtidas três cotações para cada item.\nEm cada pesquisa, a captura de tela deve apresentar a data da consulta, com a barra de tarefas do Windows visível, além do link completo da página acessada, de modo a permitir a conferência posterior do valor pesquisado.\nApós a obtenção das três cotações, deverá ser calculada a média aritmética dos preços encontrados. Esse será o valor a ser registrado no Plano de Aplicação Detalhado.",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-02T17:32:47.288Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17408703",
+              "fingerprint": "fnv64-v1:38a69b20a8478918"
+            }
           }
         }
       },
@@ -1185,13 +1251,13 @@ window.PROFOR_PUBLIC_DATA = {
           "request": "Anexar comprovante de preços que comprovem o valor médio utilizado para basear o valor unitário.\nAs pesquisas de preços podem ser realizadas em sítios eletrônicos, devendo ser obtidas três cotações para cada item.\nEm cada pesquisa, a captura de tela deve apresentar a data da consulta, com a barra de tarefas do Windows visível, além do link completo da página acessada, de modo a permitir a conferência posterior do valor pesquisado.\nApós a obtenção das três cotações, deverá ser calculada a média aritmética dos preços encontrados. Esse será o valor a ser registrado no Plano de Aplicação Detalhado.",
           "science": "",
           "category": "PLANO DE APLICAÇÃO DETALHADO",
-          "communication": "2026-09-23",
+          "communication": "2026-10-02",
           "response": "",
           "status": "aberta",
           "note": "",
-          "at": "2026-09-23T18:03:04.681Z",
-          "base": "2026-10-03",
-          "due": "2026-10-05",
+          "at": "2026-10-02T17:32:47.282Z",
+          "base": "2026-10-12",
+          "due": "2026-10-12",
           "automaticDeadline": true,
           "confirmed": false,
           "calendarNote": ""
@@ -1202,13 +1268,13 @@ window.PROFOR_PUBLIC_DATA = {
           "request": "Anexar comprovante de preços que comprovem o valor médio utilizado para basear o valor unitário.\nAs pesquisas de preços podem ser realizadas em sítios eletrônicos, devendo ser obtidas três cotações para cada item.\nEm cada pesquisa, a captura de tela deve apresentar a data da consulta, com a barra de tarefas do Windows visível, além do link completo da página acessada, de modo a permitir a conferência posterior do valor pesquisado.\nApós a obtenção das três cotações, deverá ser calculada a média aritmética dos preços encontrados. Esse será o valor a ser registrado no Plano de Aplicação Detalhado.",
           "science": "",
           "category": "PLANO DE APLICAÇÃO DETALHADO",
-          "communication": "2026-09-23",
+          "communication": "2026-10-02",
           "response": "",
           "status": "aberta",
           "note": "",
-          "at": "2026-09-23T18:03:22.695Z",
-          "base": "2026-10-03",
-          "due": "2026-10-05",
+          "at": "2026-10-02T17:32:47.284Z",
+          "base": "2026-10-12",
+          "due": "2026-10-12",
           "automaticDeadline": true,
           "confirmed": false,
           "calendarNote": ""
@@ -1219,13 +1285,13 @@ window.PROFOR_PUBLIC_DATA = {
           "request": "Anexar comprovante de preços que comprovem o valor médio utilizado para basear o valor unitário.\nAs pesquisas de preços podem ser realizadas em sítios eletrônicos, devendo ser obtidas três cotações para cada item.\nEm cada pesquisa, a captura de tela deve apresentar a data da consulta, com a barra de tarefas do Windows visível, além do link completo da página acessada, de modo a permitir a conferência posterior do valor pesquisado.\nApós a obtenção das três cotações, deverá ser calculada a média aritmética dos preços encontrados. Esse será o valor a ser registrado no Plano de Aplicação Detalhado.",
           "science": "",
           "category": "PLANO DE APLICAÇÃO DETALHADO",
-          "communication": "2026-09-23",
+          "communication": "2026-10-02",
           "response": "",
           "status": "aberta",
           "note": "",
-          "at": "2026-09-23T18:03:35.189Z",
-          "base": "2026-10-03",
-          "due": "2026-10-05",
+          "at": "2026-10-02T17:32:47.290Z",
+          "base": "2026-10-12",
+          "due": "2026-10-12",
           "automaticDeadline": true,
           "confirmed": false,
           "calendarNote": ""
@@ -1243,6 +1309,193 @@ window.PROFOR_PUBLIC_DATA = {
           "at": "2026-09-23T18:17:00.954Z",
           "base": "2026-10-03",
           "due": "2026-10-05",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "f5a5d0fd-f38c-402b-8155-f98033208cbb",
+          "ref": "pad:17408681",
+          "category": "PLANO DE APLICAÇÃO DETALHADO",
+          "request": "Anexar comprovante de preços que comprovem o valor médio utilizado para basear o valor unitário.\nAs pesquisas de preços podem ser realizadas em sítios eletrônicos, devendo ser obtidas três cotações para cada item.\nEm cada pesquisa, a captura de tela deve apresentar a data da consulta, com a barra de tarefas do Windows visível, além do link completo da página acessada, de modo a permitir a conferência posterior do valor pesquisado.\nApós a obtenção das três cotações, deverá ser calculada a média aritmética dos preços encontrados. Esse será o valor a ser registrado no Plano de Aplicação Detalhado.",
+          "communication": "2026-10-02",
+          "science": "",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-02T17:32:47.280Z",
+          "base": "2026-10-12",
+          "due": "2026-10-12",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "15a7dcb5-047f-4d74-8eae-b32477df4460",
+          "ref": "pad:17408692",
+          "category": "PLANO DE APLICAÇÃO DETALHADO",
+          "request": "Anexar comprovante de preços que comprovem o valor médio utilizado para basear o valor unitário.\nAs pesquisas de preços podem ser realizadas em sítios eletrônicos, devendo ser obtidas três cotações para cada item.\nEm cada pesquisa, a captura de tela deve apresentar a data da consulta, com a barra de tarefas do Windows visível, além do link completo da página acessada, de modo a permitir a conferência posterior do valor pesquisado.\nApós a obtenção das três cotações, deverá ser calculada a média aritmética dos preços encontrados. Esse será o valor a ser registrado no Plano de Aplicação Detalhado.",
+          "communication": "2026-10-02",
+          "science": "",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-02T17:32:47.281Z",
+          "base": "2026-10-12",
+          "due": "2026-10-12",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "11fcef9c-84cf-4f70-8188-5ccaed5e7687",
+          "ref": "pad:17408680",
+          "category": "PLANO DE APLICAÇÃO DETALHADO",
+          "request": "Anexar comprovante de preços que comprovem o valor médio utilizado para basear o valor unitário.\nAs pesquisas de preços podem ser realizadas em sítios eletrônicos, devendo ser obtidas três cotações para cada item.\nEm cada pesquisa, a captura de tela deve apresentar a data da consulta, com a barra de tarefas do Windows visível, além do link completo da página acessada, de modo a permitir a conferência posterior do valor pesquisado.\nApós a obtenção das três cotações, deverá ser calculada a média aritmética dos preços encontrados. Esse será o valor a ser registrado no Plano de Aplicação Detalhado.",
+          "communication": "2026-10-02",
+          "science": "",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-02T17:32:47.283Z",
+          "base": "2026-10-12",
+          "due": "2026-10-12",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "46e48d6a-4bf7-4525-bfba-8bf05066d28b",
+          "ref": "pad:17408691",
+          "category": "PLANO DE APLICAÇÃO DETALHADO",
+          "request": "Anexar comprovante de preços que comprovem o valor médio utilizado para basear o valor unitário.\nAs pesquisas de preços podem ser realizadas em sítios eletrônicos, devendo ser obtidas três cotações para cada item.\nEm cada pesquisa, a captura de tela deve apresentar a data da consulta, com a barra de tarefas do Windows visível, além do link completo da página acessada, de modo a permitir a conferência posterior do valor pesquisado.\nApós a obtenção das três cotações, deverá ser calculada a média aritmética dos preços encontrados. Esse será o valor a ser registrado no Plano de Aplicação Detalhado.",
+          "communication": "2026-10-02",
+          "science": "",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-02T17:32:47.285Z",
+          "base": "2026-10-12",
+          "due": "2026-10-12",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "3621eda4-8764-438d-89a0-5f91d11a5d3f",
+          "ref": "pad:17408700",
+          "category": "PLANO DE APLICAÇÃO DETALHADO",
+          "request": "Anexar comprovante de preços que comprovem o valor médio utilizado para basear o valor unitário.\nAs pesquisas de preços podem ser realizadas em sítios eletrônicos, devendo ser obtidas três cotações para cada item.\nEm cada pesquisa, a captura de tela deve apresentar a data da consulta, com a barra de tarefas do Windows visível, além do link completo da página acessada, de modo a permitir a conferência posterior do valor pesquisado.\nApós a obtenção das três cotações, deverá ser calculada a média aritmética dos preços encontrados. Esse será o valor a ser registrado no Plano de Aplicação Detalhado.",
+          "communication": "2026-10-02",
+          "science": "",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-02T17:32:47.286Z",
+          "base": "2026-10-12",
+          "due": "2026-10-12",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "a94e5f25-9b34-467d-8b95-bf5d7cf96fab",
+          "ref": "pad:17408679",
+          "category": "PLANO DE APLICAÇÃO DETALHADO",
+          "request": "Anexar comprovante de preços que comprovem o valor médio utilizado para basear o valor unitário.\nAs pesquisas de preços podem ser realizadas em sítios eletrônicos, devendo ser obtidas três cotações para cada item.\nEm cada pesquisa, a captura de tela deve apresentar a data da consulta, com a barra de tarefas do Windows visível, além do link completo da página acessada, de modo a permitir a conferência posterior do valor pesquisado.\nApós a obtenção das três cotações, deverá ser calculada a média aritmética dos preços encontrados. Esse será o valor a ser registrado no Plano de Aplicação Detalhado.",
+          "communication": "2026-10-02",
+          "science": "",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-02T17:32:47.287Z",
+          "base": "2026-10-12",
+          "due": "2026-10-12",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "215e024f-bc5c-4642-b7ee-f973a90e7674",
+          "ref": "pad:17408703",
+          "category": "PLANO DE APLICAÇÃO DETALHADO",
+          "request": "Anexar comprovante de preços que comprovem o valor médio utilizado para basear o valor unitário.\nAs pesquisas de preços podem ser realizadas em sítios eletrônicos, devendo ser obtidas três cotações para cada item.\nEm cada pesquisa, a captura de tela deve apresentar a data da consulta, com a barra de tarefas do Windows visível, além do link completo da página acessada, de modo a permitir a conferência posterior do valor pesquisado.\nApós a obtenção das três cotações, deverá ser calculada a média aritmética dos preços encontrados. Esse será o valor a ser registrado no Plano de Aplicação Detalhado.",
+          "communication": "2026-10-02",
+          "science": "",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-02T17:32:47.288Z",
+          "base": "2026-10-12",
+          "due": "2026-10-12",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "fe848924-a061-419f-9ff2-057a809dd56b",
+          "ref": "pad:17408665",
+          "category": "PLANO DE APLICAÇÃO DETALHADO",
+          "request": "Anexar comprovante de preços que comprovem o valor médio utilizado para basear o valor unitário.\nAs pesquisas de preços podem ser realizadas em sítios eletrônicos, devendo ser obtidas três cotações para cada item.\nEm cada pesquisa, a captura de tela deve apresentar a data da consulta, com a barra de tarefas do Windows visível, além do link completo da página acessada, de modo a permitir a conferência posterior do valor pesquisado.\nApós a obtenção das três cotações, deverá ser calculada a média aritmética dos preços encontrados. Esse será o valor a ser registrado no Plano de Aplicação Detalhado.",
+          "communication": "2026-10-02",
+          "science": "",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-02T17:32:47.288Z",
+          "base": "2026-10-12",
+          "due": "2026-10-12",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "051e1892-0c20-4b15-bd1c-6c8cbb361e77",
+          "ref": "pad:17408699",
+          "category": "PLANO DE APLICAÇÃO DETALHADO",
+          "request": "Anexar comprovante de preços que comprovem o valor médio utilizado para basear o valor unitário.\nAs pesquisas de preços podem ser realizadas em sítios eletrônicos, devendo ser obtidas três cotações para cada item.\nEm cada pesquisa, a captura de tela deve apresentar a data da consulta, com a barra de tarefas do Windows visível, além do link completo da página acessada, de modo a permitir a conferência posterior do valor pesquisado.\nApós a obtenção das três cotações, deverá ser calculada a média aritmética dos preços encontrados. Esse será o valor a ser registrado no Plano de Aplicação Detalhado.",
+          "communication": "2026-10-02",
+          "science": "",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-02T17:32:47.289Z",
+          "base": "2026-10-12",
+          "due": "2026-10-12",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "8fb23cf2-0650-480c-a92f-2d7d0a4fdd9b",
+          "ref": "pad:17408676",
+          "category": "PLANO DE APLICAÇÃO DETALHADO",
+          "request": "Anexar comprovante de preços que comprovem o valor médio utilizado para basear o valor unitário.\nAs pesquisas de preços podem ser realizadas em sítios eletrônicos, devendo ser obtidas três cotações para cada item.\nEm cada pesquisa, a captura de tela deve apresentar a data da consulta, com a barra de tarefas do Windows visível, além do link completo da página acessada, de modo a permitir a conferência posterior do valor pesquisado.\nApós a obtenção das três cotações, deverá ser calculada a média aritmética dos preços encontrados. Esse será o valor a ser registrado no Plano de Aplicação Detalhado.",
+          "communication": "2026-10-02",
+          "science": "",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-02T17:32:47.291Z",
+          "base": "2026-10-12",
+          "due": "2026-10-12",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "943fde25-d8d2-4bcf-bf13-092a42e1684a",
+          "ref": "pad:17408672",
+          "category": "PLANO DE APLICAÇÃO DETALHADO",
+          "request": "Anexar comprovante de preços que comprovem o valor médio utilizado para basear o valor unitário.\nAs pesquisas de preços podem ser realizadas em sítios eletrônicos, devendo ser obtidas três cotações para cada item.\nEm cada pesquisa, a captura de tela deve apresentar a data da consulta, com a barra de tarefas do Windows visível, além do link completo da página acessada, de modo a permitir a conferência posterior do valor pesquisado.\nApós a obtenção das três cotações, deverá ser calculada a média aritmética dos preços encontrados. Esse será o valor a ser registrado no Plano de Aplicação Detalhado.",
+          "communication": "2026-10-02",
+          "science": "",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-02T17:32:47.292Z",
+          "base": "2026-10-12",
+          "due": "2026-10-12",
           "automaticDeadline": true,
           "confirmed": false,
           "calendarNote": ""
@@ -4623,6 +4876,772 @@ window.PROFOR_PUBLIC_DATA = {
           },
           "after": {
             "at": "2026-10-02T10:27:01.365Z"
+          }
+        },
+        {
+          "at": "2026-10-02T17:32:47.280Z",
+          "event": "Avaliação: pad / 17408681",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Anexar comprovante de preços que comprovem o valor médio utilizado para basear o valor unitário.\nAs pesquisas de preços podem ser realizadas em sítios eletrônicos, devendo ser obtidas três cotações para cada item.\nEm cada pesquisa, a captura de tela deve apresentar a data da consulta, com a barra de tarefas do Windows visível, além do link completo da página acessada, de modo a permitir a conferência posterior do valor pesquisado.\nApós a obtenção das três cotações, deverá ser calculada a média aritmética dos preços encontrados. Esse será o valor a ser registrado no Plano de Aplicação Detalhado.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-02T17:32:47.280Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17408681",
+              "fingerprint": "fnv64-v1:f76b5c6e3b6a7db9"
+            }
+          }
+        },
+        {
+          "at": "2026-10-02T17:32:47.281Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "f5a5d0fd-f38c-402b-8155-f98033208cbb",
+            "ref": "pad:17408681",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Anexar comprovante de preços que comprovem o valor médio utilizado para basear o valor unitário.\nAs pesquisas de preços podem ser realizadas em sítios eletrônicos, devendo ser obtidas três cotações para cada item.\nEm cada pesquisa, a captura de tela deve apresentar a data da consulta, com a barra de tarefas do Windows visível, além do link completo da página acessada, de modo a permitir a conferência posterior do valor pesquisado.\nApós a obtenção das três cotações, deverá ser calculada a média aritmética dos preços encontrados. Esse será o valor a ser registrado no Plano de Aplicação Detalhado.",
+            "communication": "2026-10-02",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-02T17:32:47.280Z",
+            "base": "2026-10-12",
+            "due": "2026-10-12",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-02T17:32:47.281Z",
+          "event": "Avaliação: pad / 17408692",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Anexar comprovante de preços que comprovem o valor médio utilizado para basear o valor unitário.\nAs pesquisas de preços podem ser realizadas em sítios eletrônicos, devendo ser obtidas três cotações para cada item.\nEm cada pesquisa, a captura de tela deve apresentar a data da consulta, com a barra de tarefas do Windows visível, além do link completo da página acessada, de modo a permitir a conferência posterior do valor pesquisado.\nApós a obtenção das três cotações, deverá ser calculada a média aritmética dos preços encontrados. Esse será o valor a ser registrado no Plano de Aplicação Detalhado.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-02T17:32:47.281Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17408692",
+              "fingerprint": "fnv64-v1:89369b8615677807"
+            }
+          }
+        },
+        {
+          "at": "2026-10-02T17:32:47.282Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "15a7dcb5-047f-4d74-8eae-b32477df4460",
+            "ref": "pad:17408692",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Anexar comprovante de preços que comprovem o valor médio utilizado para basear o valor unitário.\nAs pesquisas de preços podem ser realizadas em sítios eletrônicos, devendo ser obtidas três cotações para cada item.\nEm cada pesquisa, a captura de tela deve apresentar a data da consulta, com a barra de tarefas do Windows visível, além do link completo da página acessada, de modo a permitir a conferência posterior do valor pesquisado.\nApós a obtenção das três cotações, deverá ser calculada a média aritmética dos preços encontrados. Esse será o valor a ser registrado no Plano de Aplicação Detalhado.",
+            "communication": "2026-10-02",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-02T17:32:47.281Z",
+            "base": "2026-10-12",
+            "due": "2026-10-12",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-02T17:32:47.282Z",
+          "event": "Avaliação: pad / 17408694",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "Anexar comprovante de preços que comprovem o valor médio utilizado para basear o valor unitário.\nAs pesquisas de preços podem ser realizadas em sítios eletrônicos, devendo ser obtidas três cotações para cada item.\nEm cada pesquisa, a captura de tela deve apresentar a data da consulta, com a barra de tarefas do Windows visível, além do link completo da página acessada, de modo a permitir a conferência posterior do valor pesquisado.\nApós a obtenção das três cotações, deverá ser calculada a média aritmética dos preços encontrados. Esse será o valor a ser registrado no Plano de Aplicação Detalhado.",
+            "document": "",
+            "url": "",
+            "at": "2026-09-23T18:03:04.680Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17408694",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Anexar comprovante de preços que comprovem o valor médio utilizado para basear o valor unitário.\nAs pesquisas de preços podem ser realizadas em sítios eletrônicos, devendo ser obtidas três cotações para cada item.\nEm cada pesquisa, a captura de tela deve apresentar a data da consulta, com a barra de tarefas do Windows visível, além do link completo da página acessada, de modo a permitir a conferência posterior do valor pesquisado.\nApós a obtenção das três cotações, deverá ser calculada a média aritmética dos preços encontrados. Esse será o valor a ser registrado no Plano de Aplicação Detalhado.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-02T17:32:47.282Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17408694",
+              "fingerprint": "fnv64-v1:cbd63dca4d612e4c"
+            },
+            "actor": "Usuário local"
+          }
+        },
+        {
+          "at": "2026-10-02T17:32:47.283Z",
+          "event": "Diligência atualizada",
+          "actor": "Usuário local",
+          "before": {
+            "id": "a6ac0df0-e1fd-4b4e-a74e-7067d129f0fe",
+            "ref": "pad:17408694",
+            "request": "Anexar comprovante de preços que comprovem o valor médio utilizado para basear o valor unitário.\nAs pesquisas de preços podem ser realizadas em sítios eletrônicos, devendo ser obtidas três cotações para cada item.\nEm cada pesquisa, a captura de tela deve apresentar a data da consulta, com a barra de tarefas do Windows visível, além do link completo da página acessada, de modo a permitir a conferência posterior do valor pesquisado.\nApós a obtenção das três cotações, deverá ser calculada a média aritmética dos preços encontrados. Esse será o valor a ser registrado no Plano de Aplicação Detalhado.",
+            "science": "",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "communication": "2026-09-23",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-09-23T18:03:04.681Z",
+            "base": "2026-10-03",
+            "due": "2026-10-05",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          },
+          "after": {
+            "id": "a6ac0df0-e1fd-4b4e-a74e-7067d129f0fe",
+            "ref": "pad:17408694",
+            "request": "Anexar comprovante de preços que comprovem o valor médio utilizado para basear o valor unitário.\nAs pesquisas de preços podem ser realizadas em sítios eletrônicos, devendo ser obtidas três cotações para cada item.\nEm cada pesquisa, a captura de tela deve apresentar a data da consulta, com a barra de tarefas do Windows visível, além do link completo da página acessada, de modo a permitir a conferência posterior do valor pesquisado.\nApós a obtenção das três cotações, deverá ser calculada a média aritmética dos preços encontrados. Esse será o valor a ser registrado no Plano de Aplicação Detalhado.",
+            "science": "",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "communication": "2026-10-02",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-02T17:32:47.282Z",
+            "base": "2026-10-12",
+            "due": "2026-10-12",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-02T17:32:47.283Z",
+          "event": "Avaliação: pad / 17408680",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Anexar comprovante de preços que comprovem o valor médio utilizado para basear o valor unitário.\nAs pesquisas de preços podem ser realizadas em sítios eletrônicos, devendo ser obtidas três cotações para cada item.\nEm cada pesquisa, a captura de tela deve apresentar a data da consulta, com a barra de tarefas do Windows visível, além do link completo da página acessada, de modo a permitir a conferência posterior do valor pesquisado.\nApós a obtenção das três cotações, deverá ser calculada a média aritmética dos preços encontrados. Esse será o valor a ser registrado no Plano de Aplicação Detalhado.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-02T17:32:47.283Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17408680",
+              "fingerprint": "fnv64-v1:036f6f463cf89972"
+            }
+          }
+        },
+        {
+          "at": "2026-10-02T17:32:47.284Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "11fcef9c-84cf-4f70-8188-5ccaed5e7687",
+            "ref": "pad:17408680",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Anexar comprovante de preços que comprovem o valor médio utilizado para basear o valor unitário.\nAs pesquisas de preços podem ser realizadas em sítios eletrônicos, devendo ser obtidas três cotações para cada item.\nEm cada pesquisa, a captura de tela deve apresentar a data da consulta, com a barra de tarefas do Windows visível, além do link completo da página acessada, de modo a permitir a conferência posterior do valor pesquisado.\nApós a obtenção das três cotações, deverá ser calculada a média aritmética dos preços encontrados. Esse será o valor a ser registrado no Plano de Aplicação Detalhado.",
+            "communication": "2026-10-02",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-02T17:32:47.283Z",
+            "base": "2026-10-12",
+            "due": "2026-10-12",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-02T17:32:47.284Z",
+          "event": "Avaliação: pad / 17408696",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "Anexar comprovante de preços que comprovem o valor médio utilizado para basear o valor unitário.\nAs pesquisas de preços podem ser realizadas em sítios eletrônicos, devendo ser obtidas três cotações para cada item.\nEm cada pesquisa, a captura de tela deve apresentar a data da consulta, com a barra de tarefas do Windows visível, além do link completo da página acessada, de modo a permitir a conferência posterior do valor pesquisado.\nApós a obtenção das três cotações, deverá ser calculada a média aritmética dos preços encontrados. Esse será o valor a ser registrado no Plano de Aplicação Detalhado.",
+            "document": "",
+            "url": "",
+            "at": "2026-09-23T18:03:22.695Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17408696",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Anexar comprovante de preços que comprovem o valor médio utilizado para basear o valor unitário.\nAs pesquisas de preços podem ser realizadas em sítios eletrônicos, devendo ser obtidas três cotações para cada item.\nEm cada pesquisa, a captura de tela deve apresentar a data da consulta, com a barra de tarefas do Windows visível, além do link completo da página acessada, de modo a permitir a conferência posterior do valor pesquisado.\nApós a obtenção das três cotações, deverá ser calculada a média aritmética dos preços encontrados. Esse será o valor a ser registrado no Plano de Aplicação Detalhado.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-02T17:32:47.284Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17408696",
+              "fingerprint": "fnv64-v1:faef91ea3190b485"
+            },
+            "actor": "Usuário local"
+          }
+        },
+        {
+          "at": "2026-10-02T17:32:47.285Z",
+          "event": "Diligência atualizada",
+          "actor": "Usuário local",
+          "before": {
+            "id": "68f56055-3bff-4d66-aa4a-49aca3560741",
+            "ref": "pad:17408696",
+            "request": "Anexar comprovante de preços que comprovem o valor médio utilizado para basear o valor unitário.\nAs pesquisas de preços podem ser realizadas em sítios eletrônicos, devendo ser obtidas três cotações para cada item.\nEm cada pesquisa, a captura de tela deve apresentar a data da consulta, com a barra de tarefas do Windows visível, além do link completo da página acessada, de modo a permitir a conferência posterior do valor pesquisado.\nApós a obtenção das três cotações, deverá ser calculada a média aritmética dos preços encontrados. Esse será o valor a ser registrado no Plano de Aplicação Detalhado.",
+            "science": "",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "communication": "2026-09-23",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-09-23T18:03:22.695Z",
+            "base": "2026-10-03",
+            "due": "2026-10-05",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          },
+          "after": {
+            "id": "68f56055-3bff-4d66-aa4a-49aca3560741",
+            "ref": "pad:17408696",
+            "request": "Anexar comprovante de preços que comprovem o valor médio utilizado para basear o valor unitário.\nAs pesquisas de preços podem ser realizadas em sítios eletrônicos, devendo ser obtidas três cotações para cada item.\nEm cada pesquisa, a captura de tela deve apresentar a data da consulta, com a barra de tarefas do Windows visível, além do link completo da página acessada, de modo a permitir a conferência posterior do valor pesquisado.\nApós a obtenção das três cotações, deverá ser calculada a média aritmética dos preços encontrados. Esse será o valor a ser registrado no Plano de Aplicação Detalhado.",
+            "science": "",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "communication": "2026-10-02",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-02T17:32:47.284Z",
+            "base": "2026-10-12",
+            "due": "2026-10-12",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-02T17:32:47.285Z",
+          "event": "Avaliação: pad / 17408691",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Anexar comprovante de preços que comprovem o valor médio utilizado para basear o valor unitário.\nAs pesquisas de preços podem ser realizadas em sítios eletrônicos, devendo ser obtidas três cotações para cada item.\nEm cada pesquisa, a captura de tela deve apresentar a data da consulta, com a barra de tarefas do Windows visível, além do link completo da página acessada, de modo a permitir a conferência posterior do valor pesquisado.\nApós a obtenção das três cotações, deverá ser calculada a média aritmética dos preços encontrados. Esse será o valor a ser registrado no Plano de Aplicação Detalhado.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-02T17:32:47.285Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17408691",
+              "fingerprint": "fnv64-v1:3ae9d239a9006e76"
+            }
+          }
+        },
+        {
+          "at": "2026-10-02T17:32:47.286Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "46e48d6a-4bf7-4525-bfba-8bf05066d28b",
+            "ref": "pad:17408691",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Anexar comprovante de preços que comprovem o valor médio utilizado para basear o valor unitário.\nAs pesquisas de preços podem ser realizadas em sítios eletrônicos, devendo ser obtidas três cotações para cada item.\nEm cada pesquisa, a captura de tela deve apresentar a data da consulta, com a barra de tarefas do Windows visível, além do link completo da página acessada, de modo a permitir a conferência posterior do valor pesquisado.\nApós a obtenção das três cotações, deverá ser calculada a média aritmética dos preços encontrados. Esse será o valor a ser registrado no Plano de Aplicação Detalhado.",
+            "communication": "2026-10-02",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-02T17:32:47.285Z",
+            "base": "2026-10-12",
+            "due": "2026-10-12",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-02T17:32:47.286Z",
+          "event": "Avaliação: pad / 17408700",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Anexar comprovante de preços que comprovem o valor médio utilizado para basear o valor unitário.\nAs pesquisas de preços podem ser realizadas em sítios eletrônicos, devendo ser obtidas três cotações para cada item.\nEm cada pesquisa, a captura de tela deve apresentar a data da consulta, com a barra de tarefas do Windows visível, além do link completo da página acessada, de modo a permitir a conferência posterior do valor pesquisado.\nApós a obtenção das três cotações, deverá ser calculada a média aritmética dos preços encontrados. Esse será o valor a ser registrado no Plano de Aplicação Detalhado.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-02T17:32:47.286Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17408700",
+              "fingerprint": "fnv64-v1:0e7c6262fc379b52"
+            }
+          }
+        },
+        {
+          "at": "2026-10-02T17:32:47.287Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "3621eda4-8764-438d-89a0-5f91d11a5d3f",
+            "ref": "pad:17408700",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Anexar comprovante de preços que comprovem o valor médio utilizado para basear o valor unitário.\nAs pesquisas de preços podem ser realizadas em sítios eletrônicos, devendo ser obtidas três cotações para cada item.\nEm cada pesquisa, a captura de tela deve apresentar a data da consulta, com a barra de tarefas do Windows visível, além do link completo da página acessada, de modo a permitir a conferência posterior do valor pesquisado.\nApós a obtenção das três cotações, deverá ser calculada a média aritmética dos preços encontrados. Esse será o valor a ser registrado no Plano de Aplicação Detalhado.",
+            "communication": "2026-10-02",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-02T17:32:47.286Z",
+            "base": "2026-10-12",
+            "due": "2026-10-12",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-02T17:32:47.287Z",
+          "event": "Avaliação: pad / 17408679",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Anexar comprovante de preços que comprovem o valor médio utilizado para basear o valor unitário.\nAs pesquisas de preços podem ser realizadas em sítios eletrônicos, devendo ser obtidas três cotações para cada item.\nEm cada pesquisa, a captura de tela deve apresentar a data da consulta, com a barra de tarefas do Windows visível, além do link completo da página acessada, de modo a permitir a conferência posterior do valor pesquisado.\nApós a obtenção das três cotações, deverá ser calculada a média aritmética dos preços encontrados. Esse será o valor a ser registrado no Plano de Aplicação Detalhado.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-02T17:32:47.287Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17408679",
+              "fingerprint": "fnv64-v1:bb8ed3ce01fca45f"
+            }
+          }
+        },
+        {
+          "at": "2026-10-02T17:32:47.287Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "a94e5f25-9b34-467d-8b95-bf5d7cf96fab",
+            "ref": "pad:17408679",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Anexar comprovante de preços que comprovem o valor médio utilizado para basear o valor unitário.\nAs pesquisas de preços podem ser realizadas em sítios eletrônicos, devendo ser obtidas três cotações para cada item.\nEm cada pesquisa, a captura de tela deve apresentar a data da consulta, com a barra de tarefas do Windows visível, além do link completo da página acessada, de modo a permitir a conferência posterior do valor pesquisado.\nApós a obtenção das três cotações, deverá ser calculada a média aritmética dos preços encontrados. Esse será o valor a ser registrado no Plano de Aplicação Detalhado.",
+            "communication": "2026-10-02",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-02T17:32:47.287Z",
+            "base": "2026-10-12",
+            "due": "2026-10-12",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-02T17:32:47.288Z",
+          "event": "Avaliação: pad / 17408703",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Anexar comprovante de preços que comprovem o valor médio utilizado para basear o valor unitário.\nAs pesquisas de preços podem ser realizadas em sítios eletrônicos, devendo ser obtidas três cotações para cada item.\nEm cada pesquisa, a captura de tela deve apresentar a data da consulta, com a barra de tarefas do Windows visível, além do link completo da página acessada, de modo a permitir a conferência posterior do valor pesquisado.\nApós a obtenção das três cotações, deverá ser calculada a média aritmética dos preços encontrados. Esse será o valor a ser registrado no Plano de Aplicação Detalhado.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-02T17:32:47.288Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17408703",
+              "fingerprint": "fnv64-v1:38a69b20a8478918"
+            }
+          }
+        },
+        {
+          "at": "2026-10-02T17:32:47.288Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "215e024f-bc5c-4642-b7ee-f973a90e7674",
+            "ref": "pad:17408703",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Anexar comprovante de preços que comprovem o valor médio utilizado para basear o valor unitário.\nAs pesquisas de preços podem ser realizadas em sítios eletrônicos, devendo ser obtidas três cotações para cada item.\nEm cada pesquisa, a captura de tela deve apresentar a data da consulta, com a barra de tarefas do Windows visível, além do link completo da página acessada, de modo a permitir a conferência posterior do valor pesquisado.\nApós a obtenção das três cotações, deverá ser calculada a média aritmética dos preços encontrados. Esse será o valor a ser registrado no Plano de Aplicação Detalhado.",
+            "communication": "2026-10-02",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-02T17:32:47.288Z",
+            "base": "2026-10-12",
+            "due": "2026-10-12",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-02T17:32:47.288Z",
+          "event": "Avaliação: pad / 17408665",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Anexar comprovante de preços que comprovem o valor médio utilizado para basear o valor unitário.\nAs pesquisas de preços podem ser realizadas em sítios eletrônicos, devendo ser obtidas três cotações para cada item.\nEm cada pesquisa, a captura de tela deve apresentar a data da consulta, com a barra de tarefas do Windows visível, além do link completo da página acessada, de modo a permitir a conferência posterior do valor pesquisado.\nApós a obtenção das três cotações, deverá ser calculada a média aritmética dos preços encontrados. Esse será o valor a ser registrado no Plano de Aplicação Detalhado.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-02T17:32:47.288Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17408665",
+              "fingerprint": "fnv64-v1:becbd2fa5138e34e"
+            }
+          }
+        },
+        {
+          "at": "2026-10-02T17:32:47.289Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "fe848924-a061-419f-9ff2-057a809dd56b",
+            "ref": "pad:17408665",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Anexar comprovante de preços que comprovem o valor médio utilizado para basear o valor unitário.\nAs pesquisas de preços podem ser realizadas em sítios eletrônicos, devendo ser obtidas três cotações para cada item.\nEm cada pesquisa, a captura de tela deve apresentar a data da consulta, com a barra de tarefas do Windows visível, além do link completo da página acessada, de modo a permitir a conferência posterior do valor pesquisado.\nApós a obtenção das três cotações, deverá ser calculada a média aritmética dos preços encontrados. Esse será o valor a ser registrado no Plano de Aplicação Detalhado.",
+            "communication": "2026-10-02",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-02T17:32:47.288Z",
+            "base": "2026-10-12",
+            "due": "2026-10-12",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-02T17:32:47.289Z",
+          "event": "Avaliação: pad / 17408699",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Anexar comprovante de preços que comprovem o valor médio utilizado para basear o valor unitário.\nAs pesquisas de preços podem ser realizadas em sítios eletrônicos, devendo ser obtidas três cotações para cada item.\nEm cada pesquisa, a captura de tela deve apresentar a data da consulta, com a barra de tarefas do Windows visível, além do link completo da página acessada, de modo a permitir a conferência posterior do valor pesquisado.\nApós a obtenção das três cotações, deverá ser calculada a média aritmética dos preços encontrados. Esse será o valor a ser registrado no Plano de Aplicação Detalhado.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-02T17:32:47.289Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17408699",
+              "fingerprint": "fnv64-v1:605313aad3321d41"
+            }
+          }
+        },
+        {
+          "at": "2026-10-02T17:32:47.289Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "051e1892-0c20-4b15-bd1c-6c8cbb361e77",
+            "ref": "pad:17408699",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Anexar comprovante de preços que comprovem o valor médio utilizado para basear o valor unitário.\nAs pesquisas de preços podem ser realizadas em sítios eletrônicos, devendo ser obtidas três cotações para cada item.\nEm cada pesquisa, a captura de tela deve apresentar a data da consulta, com a barra de tarefas do Windows visível, além do link completo da página acessada, de modo a permitir a conferência posterior do valor pesquisado.\nApós a obtenção das três cotações, deverá ser calculada a média aritmética dos preços encontrados. Esse será o valor a ser registrado no Plano de Aplicação Detalhado.",
+            "communication": "2026-10-02",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-02T17:32:47.289Z",
+            "base": "2026-10-12",
+            "due": "2026-10-12",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-02T17:32:47.290Z",
+          "event": "Avaliação: pad / 17408697",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "Anexar comprovante de preços que comprovem o valor médio utilizado para basear o valor unitário.\nAs pesquisas de preços podem ser realizadas em sítios eletrônicos, devendo ser obtidas três cotações para cada item.\nEm cada pesquisa, a captura de tela deve apresentar a data da consulta, com a barra de tarefas do Windows visível, além do link completo da página acessada, de modo a permitir a conferência posterior do valor pesquisado.\nApós a obtenção das três cotações, deverá ser calculada a média aritmética dos preços encontrados. Esse será o valor a ser registrado no Plano de Aplicação Detalhado.",
+            "document": "",
+            "url": "",
+            "at": "2026-09-23T18:03:35.189Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17408697",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Anexar comprovante de preços que comprovem o valor médio utilizado para basear o valor unitário.\nAs pesquisas de preços podem ser realizadas em sítios eletrônicos, devendo ser obtidas três cotações para cada item.\nEm cada pesquisa, a captura de tela deve apresentar a data da consulta, com a barra de tarefas do Windows visível, além do link completo da página acessada, de modo a permitir a conferência posterior do valor pesquisado.\nApós a obtenção das três cotações, deverá ser calculada a média aritmética dos preços encontrados. Esse será o valor a ser registrado no Plano de Aplicação Detalhado.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-02T17:32:47.290Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17408697",
+              "fingerprint": "fnv64-v1:adb013a245cc18d7"
+            },
+            "actor": "Usuário local"
+          }
+        },
+        {
+          "at": "2026-10-02T17:32:47.291Z",
+          "event": "Diligência atualizada",
+          "actor": "Usuário local",
+          "before": {
+            "id": "470db77b-0ad5-4656-96b4-1afa1cf8594d",
+            "ref": "pad:17408697",
+            "request": "Anexar comprovante de preços que comprovem o valor médio utilizado para basear o valor unitário.\nAs pesquisas de preços podem ser realizadas em sítios eletrônicos, devendo ser obtidas três cotações para cada item.\nEm cada pesquisa, a captura de tela deve apresentar a data da consulta, com a barra de tarefas do Windows visível, além do link completo da página acessada, de modo a permitir a conferência posterior do valor pesquisado.\nApós a obtenção das três cotações, deverá ser calculada a média aritmética dos preços encontrados. Esse será o valor a ser registrado no Plano de Aplicação Detalhado.",
+            "science": "",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "communication": "2026-09-23",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-09-23T18:03:35.189Z",
+            "base": "2026-10-03",
+            "due": "2026-10-05",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          },
+          "after": {
+            "id": "470db77b-0ad5-4656-96b4-1afa1cf8594d",
+            "ref": "pad:17408697",
+            "request": "Anexar comprovante de preços que comprovem o valor médio utilizado para basear o valor unitário.\nAs pesquisas de preços podem ser realizadas em sítios eletrônicos, devendo ser obtidas três cotações para cada item.\nEm cada pesquisa, a captura de tela deve apresentar a data da consulta, com a barra de tarefas do Windows visível, além do link completo da página acessada, de modo a permitir a conferência posterior do valor pesquisado.\nApós a obtenção das três cotações, deverá ser calculada a média aritmética dos preços encontrados. Esse será o valor a ser registrado no Plano de Aplicação Detalhado.",
+            "science": "",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "communication": "2026-10-02",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-02T17:32:47.290Z",
+            "base": "2026-10-12",
+            "due": "2026-10-12",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-02T17:32:47.291Z",
+          "event": "Avaliação: pad / 17408676",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Anexar comprovante de preços que comprovem o valor médio utilizado para basear o valor unitário.\nAs pesquisas de preços podem ser realizadas em sítios eletrônicos, devendo ser obtidas três cotações para cada item.\nEm cada pesquisa, a captura de tela deve apresentar a data da consulta, com a barra de tarefas do Windows visível, além do link completo da página acessada, de modo a permitir a conferência posterior do valor pesquisado.\nApós a obtenção das três cotações, deverá ser calculada a média aritmética dos preços encontrados. Esse será o valor a ser registrado no Plano de Aplicação Detalhado.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-02T17:32:47.291Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17408676",
+              "fingerprint": "fnv64-v1:f3d5c78780b29a7a"
+            }
+          }
+        },
+        {
+          "at": "2026-10-02T17:32:47.291Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "8fb23cf2-0650-480c-a92f-2d7d0a4fdd9b",
+            "ref": "pad:17408676",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Anexar comprovante de preços que comprovem o valor médio utilizado para basear o valor unitário.\nAs pesquisas de preços podem ser realizadas em sítios eletrônicos, devendo ser obtidas três cotações para cada item.\nEm cada pesquisa, a captura de tela deve apresentar a data da consulta, com a barra de tarefas do Windows visível, além do link completo da página acessada, de modo a permitir a conferência posterior do valor pesquisado.\nApós a obtenção das três cotações, deverá ser calculada a média aritmética dos preços encontrados. Esse será o valor a ser registrado no Plano de Aplicação Detalhado.",
+            "communication": "2026-10-02",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-02T17:32:47.291Z",
+            "base": "2026-10-12",
+            "due": "2026-10-12",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-02T17:32:47.292Z",
+          "event": "Avaliação: pad / 17408672",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Anexar comprovante de preços que comprovem o valor médio utilizado para basear o valor unitário.\nAs pesquisas de preços podem ser realizadas em sítios eletrônicos, devendo ser obtidas três cotações para cada item.\nEm cada pesquisa, a captura de tela deve apresentar a data da consulta, com a barra de tarefas do Windows visível, além do link completo da página acessada, de modo a permitir a conferência posterior do valor pesquisado.\nApós a obtenção das três cotações, deverá ser calculada a média aritmética dos preços encontrados. Esse será o valor a ser registrado no Plano de Aplicação Detalhado.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-02T17:32:47.292Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17408672",
+              "fingerprint": "fnv64-v1:3810b1afce79c43d"
+            }
+          }
+        },
+        {
+          "at": "2026-10-02T17:32:47.292Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "943fde25-d8d2-4bcf-bf13-092a42e1684a",
+            "ref": "pad:17408672",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Anexar comprovante de preços que comprovem o valor médio utilizado para basear o valor unitário.\nAs pesquisas de preços podem ser realizadas em sítios eletrônicos, devendo ser obtidas três cotações para cada item.\nEm cada pesquisa, a captura de tela deve apresentar a data da consulta, com a barra de tarefas do Windows visível, além do link completo da página acessada, de modo a permitir a conferência posterior do valor pesquisado.\nApós a obtenção das três cotações, deverá ser calculada a média aritmética dos preços encontrados. Esse será o valor a ser registrado no Plano de Aplicação Detalhado.",
+            "communication": "2026-10-02",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-02T17:32:47.292Z",
+            "base": "2026-10-12",
+            "due": "2026-10-12",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
           }
         }
       ],
@@ -34132,208 +35151,784 @@ window.PROFOR_PUBLIC_DATA = {
         },
         "pad": {
           "17455008": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-02T17:29:11.520Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455008",
+              "fingerprint": "fnv64-v1:3c029a3499537f72"
+            }
           },
           "17455011": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-02T17:29:11.521Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455011",
+              "fingerprint": "fnv64-v1:c05551ec9783afa4"
+            }
           },
           "17455013": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-02T17:29:11.519Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455013",
+              "fingerprint": "fnv64-v1:4f33335c91ef7b44"
+            }
           },
           "17455015": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-02T17:29:11.522Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455015",
+              "fingerprint": "fnv64-v1:357428fc6a940f53"
+            }
           },
           "17455016": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-02T17:29:11.477Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455016",
+              "fingerprint": "fnv64-v1:8d7141dc5d55b374"
+            }
           },
           "17455017": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-02T17:29:11.523Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455017",
+              "fingerprint": "fnv64-v1:a96979d7b8653a40"
+            }
           },
           "17455019": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-02T17:29:11.518Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455019",
+              "fingerprint": "fnv64-v1:2ffdbbba8d1affeb"
+            }
           },
           "17455022": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-02T17:29:11.511Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455022",
+              "fingerprint": "fnv64-v1:64d40dda438fd654"
+            }
           },
           "17455024": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-02T17:29:11.488Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455024",
+              "fingerprint": "fnv64-v1:6a0ae8991cccec42"
+            }
           },
           "17455025": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-02T17:29:11.517Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455025",
+              "fingerprint": "fnv64-v1:3a556d43fa354fb6"
+            }
           },
           "17455026": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-02T17:29:11.492Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455026",
+              "fingerprint": "fnv64-v1:e4a635d1e7467180"
+            }
           },
           "17455028": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-02T17:29:11.486Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455028",
+              "fingerprint": "fnv64-v1:ed327f1ac0675027"
+            }
           },
           "17455030": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-02T17:29:11.483Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455030",
+              "fingerprint": "fnv64-v1:00d6d88301edc28b"
+            }
           },
           "17455031": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-02T17:29:11.481Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455031",
+              "fingerprint": "fnv64-v1:8801ac3ef976ac28"
+            }
           },
           "17455032": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-02T17:29:11.485Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455032",
+              "fingerprint": "fnv64-v1:2173db87db0c0561"
+            }
           },
           "17455036": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-02T17:29:11.490Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455036",
+              "fingerprint": "fnv64-v1:cb16e94d33184a79"
+            }
           },
           "17455038": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-02T17:29:11.494Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455038",
+              "fingerprint": "fnv64-v1:48f26938b5a42867"
+            }
           },
           "17455039": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-02T17:29:11.508Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455039",
+              "fingerprint": "fnv64-v1:11d6b7b01d211ca1"
+            }
           },
           "17455041": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-02T17:29:11.514Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455041",
+              "fingerprint": "fnv64-v1:e2dcf1995bd4388c"
+            }
           },
           "17455048": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-02T17:29:11.516Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455048",
+              "fingerprint": "fnv64-v1:7de13bc81a8c0a5c"
+            }
           },
           "17455049": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-02T17:29:11.504Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455049",
+              "fingerprint": "fnv64-v1:a5f61ac90a872bdb"
+            }
           },
           "17455070": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-02T17:29:11.499Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455070",
+              "fingerprint": "fnv64-v1:f7c90f8d24b900ad"
+            }
           },
           "17455103": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-02T17:29:11.497Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455103",
+              "fingerprint": "fnv64-v1:99eac077ab673393"
+            }
           },
           "17455104": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-02T17:29:11.501Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455104",
+              "fingerprint": "fnv64-v1:8507a389718e6d6a"
+            }
           },
           "17455748": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-02T17:29:11.525Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455748",
+              "fingerprint": "fnv64-v1:5786c6f55ec44c45"
+            }
           }
         }
       },
-      "diligences": [],
+      "diligences": [
+        {
+          "id": "52c187d5-fd84-4ad8-82cf-595a1375b563",
+          "ref": "pad:17455016",
+          "category": "PLANO DE APLICAÇÃO DETALHADO",
+          "request": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+          "communication": "2026-10-02",
+          "science": "",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-02T17:29:11.477Z",
+          "base": "2026-10-12",
+          "due": "2026-10-12",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "eab54878-d9d9-4b2b-b13b-22b2409443c7",
+          "ref": "pad:17455031",
+          "category": "PLANO DE APLICAÇÃO DETALHADO",
+          "request": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+          "communication": "2026-10-02",
+          "science": "",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-02T17:29:11.481Z",
+          "base": "2026-10-12",
+          "due": "2026-10-12",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "4c921844-5a2b-450e-88db-768d940e2feb",
+          "ref": "pad:17455030",
+          "category": "PLANO DE APLICAÇÃO DETALHADO",
+          "request": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+          "communication": "2026-10-02",
+          "science": "",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-02T17:29:11.483Z",
+          "base": "2026-10-12",
+          "due": "2026-10-12",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "dd5de536-c01b-460a-ba5d-0d068aa0e152",
+          "ref": "pad:17455032",
+          "category": "PLANO DE APLICAÇÃO DETALHADO",
+          "request": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+          "communication": "2026-10-02",
+          "science": "",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-02T17:29:11.485Z",
+          "base": "2026-10-12",
+          "due": "2026-10-12",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "cc8633a9-9a04-4e30-a3c8-a5a72f33ba5f",
+          "ref": "pad:17455028",
+          "category": "PLANO DE APLICAÇÃO DETALHADO",
+          "request": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+          "communication": "2026-10-02",
+          "science": "",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-02T17:29:11.486Z",
+          "base": "2026-10-12",
+          "due": "2026-10-12",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "6d27a628-008b-4e3a-89d6-02be93ef7dca",
+          "ref": "pad:17455024",
+          "category": "PLANO DE APLICAÇÃO DETALHADO",
+          "request": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+          "communication": "2026-10-02",
+          "science": "",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-02T17:29:11.488Z",
+          "base": "2026-10-12",
+          "due": "2026-10-12",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "d1c9e8df-d1f1-42b8-84e7-e6315bf16c54",
+          "ref": "pad:17455036",
+          "category": "PLANO DE APLICAÇÃO DETALHADO",
+          "request": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+          "communication": "2026-10-02",
+          "science": "",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-02T17:29:11.490Z",
+          "base": "2026-10-12",
+          "due": "2026-10-12",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "aac4095d-b6b2-4997-a47d-beef30e4e2d5",
+          "ref": "pad:17455026",
+          "category": "PLANO DE APLICAÇÃO DETALHADO",
+          "request": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+          "communication": "2026-10-02",
+          "science": "",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-02T17:29:11.492Z",
+          "base": "2026-10-12",
+          "due": "2026-10-12",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "681d82dc-a092-4679-9eb0-4b356447786e",
+          "ref": "pad:17455038",
+          "category": "PLANO DE APLICAÇÃO DETALHADO",
+          "request": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+          "communication": "2026-10-02",
+          "science": "",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-02T17:29:11.494Z",
+          "base": "2026-10-12",
+          "due": "2026-10-12",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "a9870d99-8db1-4ff7-964c-4184a44e28c4",
+          "ref": "pad:17455103",
+          "category": "PLANO DE APLICAÇÃO DETALHADO",
+          "request": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+          "communication": "2026-10-02",
+          "science": "",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-02T17:29:11.497Z",
+          "base": "2026-10-12",
+          "due": "2026-10-12",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "90ff9606-5150-43d9-a3fa-1a7a3b5481bc",
+          "ref": "pad:17455070",
+          "category": "PLANO DE APLICAÇÃO DETALHADO",
+          "request": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+          "communication": "2026-10-02",
+          "science": "",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-02T17:29:11.499Z",
+          "base": "2026-10-12",
+          "due": "2026-10-12",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "55035c42-0876-4956-a141-987b441e40c5",
+          "ref": "pad:17455104",
+          "category": "PLANO DE APLICAÇÃO DETALHADO",
+          "request": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+          "communication": "2026-10-02",
+          "science": "",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-02T17:29:11.501Z",
+          "base": "2026-10-12",
+          "due": "2026-10-12",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "2865581c-a51f-4aed-9d71-4ad9c9e001ae",
+          "ref": "pad:17455049",
+          "category": "PLANO DE APLICAÇÃO DETALHADO",
+          "request": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+          "communication": "2026-10-02",
+          "science": "",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-02T17:29:11.504Z",
+          "base": "2026-10-12",
+          "due": "2026-10-12",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "f2d9a7a3-8179-42cb-b499-8cb09b304e78",
+          "ref": "pad:17455039",
+          "category": "PLANO DE APLICAÇÃO DETALHADO",
+          "request": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+          "communication": "2026-10-02",
+          "science": "",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-02T17:29:11.508Z",
+          "base": "2026-10-12",
+          "due": "2026-10-12",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "e4a915f5-660c-45a1-9151-dbef76cbf9fa",
+          "ref": "pad:17455022",
+          "category": "PLANO DE APLICAÇÃO DETALHADO",
+          "request": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+          "communication": "2026-10-02",
+          "science": "",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-02T17:29:11.511Z",
+          "base": "2026-10-12",
+          "due": "2026-10-12",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "d17c7e7e-64dd-4cd2-b286-6584425be35e",
+          "ref": "pad:17455041",
+          "category": "PLANO DE APLICAÇÃO DETALHADO",
+          "request": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+          "communication": "2026-10-02",
+          "science": "",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-02T17:29:11.514Z",
+          "base": "2026-10-12",
+          "due": "2026-10-12",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "07c4f98b-2bf4-469a-a905-71b0f03544b3",
+          "ref": "pad:17455048",
+          "category": "PLANO DE APLICAÇÃO DETALHADO",
+          "request": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+          "communication": "2026-10-02",
+          "science": "",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-02T17:29:11.516Z",
+          "base": "2026-10-12",
+          "due": "2026-10-12",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "1eb0a778-dbf5-40f0-b6d9-4f36330ab514",
+          "ref": "pad:17455025",
+          "category": "PLANO DE APLICAÇÃO DETALHADO",
+          "request": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+          "communication": "2026-10-02",
+          "science": "",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-02T17:29:11.517Z",
+          "base": "2026-10-12",
+          "due": "2026-10-12",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "d0f3efa3-1ece-4211-9434-4d638a73fa85",
+          "ref": "pad:17455019",
+          "category": "PLANO DE APLICAÇÃO DETALHADO",
+          "request": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+          "communication": "2026-10-02",
+          "science": "",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-02T17:29:11.518Z",
+          "base": "2026-10-12",
+          "due": "2026-10-12",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "6f0dc1cc-b2bd-4089-8fe1-9ff4d28322f9",
+          "ref": "pad:17455013",
+          "category": "PLANO DE APLICAÇÃO DETALHADO",
+          "request": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+          "communication": "2026-10-02",
+          "science": "",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-02T17:29:11.519Z",
+          "base": "2026-10-12",
+          "due": "2026-10-12",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "96af4631-1804-4c90-b059-1c7e63dfe34d",
+          "ref": "pad:17455008",
+          "category": "PLANO DE APLICAÇÃO DETALHADO",
+          "request": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+          "communication": "2026-10-02",
+          "science": "",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-02T17:29:11.520Z",
+          "base": "2026-10-12",
+          "due": "2026-10-12",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "f7ea6272-3f30-4d0b-91f7-1fffba3e4c48",
+          "ref": "pad:17455011",
+          "category": "PLANO DE APLICAÇÃO DETALHADO",
+          "request": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+          "communication": "2026-10-02",
+          "science": "",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-02T17:29:11.521Z",
+          "base": "2026-10-12",
+          "due": "2026-10-12",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "03140af8-46dd-4e90-a670-a713fc2e15db",
+          "ref": "pad:17455015",
+          "category": "PLANO DE APLICAÇÃO DETALHADO",
+          "request": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+          "communication": "2026-10-02",
+          "science": "",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-02T17:29:11.522Z",
+          "base": "2026-10-12",
+          "due": "2026-10-12",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "04e47078-f3fe-4656-81c8-afa2b008aba7",
+          "ref": "pad:17455017",
+          "category": "PLANO DE APLICAÇÃO DETALHADO",
+          "request": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+          "communication": "2026-10-02",
+          "science": "",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-02T17:29:11.524Z",
+          "base": "2026-10-12",
+          "due": "2026-10-12",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "9f36fb24-b026-4ef6-b02b-ebd029c1a5af",
+          "ref": "pad:17455748",
+          "category": "PLANO DE APLICAÇÃO DETALHADO",
+          "request": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+          "communication": "2026-10-02",
+          "science": "",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-02T17:29:11.525Z",
+          "base": "2026-10-12",
+          "due": "2026-10-12",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        }
+      ],
       "ouvidoria": {
         "status": "na",
         "signature": "",
@@ -34632,6 +36227,1256 @@ window.PROFOR_PUBLIC_DATA = {
           },
           "after": {
             "at": "2026-10-02T10:27:01.366Z"
+          }
+        },
+        {
+          "at": "2026-10-02T17:29:11.477Z",
+          "event": "Avaliação: pad / 17455016",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-02T17:29:11.477Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455016",
+              "fingerprint": "fnv64-v1:8d7141dc5d55b374"
+            }
+          }
+        },
+        {
+          "at": "2026-10-02T17:29:11.479Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "52c187d5-fd84-4ad8-82cf-595a1375b563",
+            "ref": "pad:17455016",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "communication": "2026-10-02",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-02T17:29:11.477Z",
+            "base": "2026-10-12",
+            "due": "2026-10-12",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-02T17:29:11.481Z",
+          "event": "Avaliação: pad / 17455031",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-02T17:29:11.481Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455031",
+              "fingerprint": "fnv64-v1:8801ac3ef976ac28"
+            }
+          }
+        },
+        {
+          "at": "2026-10-02T17:29:11.482Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "eab54878-d9d9-4b2b-b13b-22b2409443c7",
+            "ref": "pad:17455031",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "communication": "2026-10-02",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-02T17:29:11.481Z",
+            "base": "2026-10-12",
+            "due": "2026-10-12",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-02T17:29:11.483Z",
+          "event": "Avaliação: pad / 17455030",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-02T17:29:11.483Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455030",
+              "fingerprint": "fnv64-v1:00d6d88301edc28b"
+            }
+          }
+        },
+        {
+          "at": "2026-10-02T17:29:11.484Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "4c921844-5a2b-450e-88db-768d940e2feb",
+            "ref": "pad:17455030",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "communication": "2026-10-02",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-02T17:29:11.483Z",
+            "base": "2026-10-12",
+            "due": "2026-10-12",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-02T17:29:11.485Z",
+          "event": "Avaliação: pad / 17455032",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-02T17:29:11.485Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455032",
+              "fingerprint": "fnv64-v1:2173db87db0c0561"
+            }
+          }
+        },
+        {
+          "at": "2026-10-02T17:29:11.485Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "dd5de536-c01b-460a-ba5d-0d068aa0e152",
+            "ref": "pad:17455032",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "communication": "2026-10-02",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-02T17:29:11.485Z",
+            "base": "2026-10-12",
+            "due": "2026-10-12",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-02T17:29:11.486Z",
+          "event": "Avaliação: pad / 17455028",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-02T17:29:11.486Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455028",
+              "fingerprint": "fnv64-v1:ed327f1ac0675027"
+            }
+          }
+        },
+        {
+          "at": "2026-10-02T17:29:11.487Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "cc8633a9-9a04-4e30-a3c8-a5a72f33ba5f",
+            "ref": "pad:17455028",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "communication": "2026-10-02",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-02T17:29:11.486Z",
+            "base": "2026-10-12",
+            "due": "2026-10-12",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-02T17:29:11.488Z",
+          "event": "Avaliação: pad / 17455024",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-02T17:29:11.488Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455024",
+              "fingerprint": "fnv64-v1:6a0ae8991cccec42"
+            }
+          }
+        },
+        {
+          "at": "2026-10-02T17:29:11.489Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "6d27a628-008b-4e3a-89d6-02be93ef7dca",
+            "ref": "pad:17455024",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "communication": "2026-10-02",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-02T17:29:11.488Z",
+            "base": "2026-10-12",
+            "due": "2026-10-12",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-02T17:29:11.490Z",
+          "event": "Avaliação: pad / 17455036",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-02T17:29:11.490Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455036",
+              "fingerprint": "fnv64-v1:cb16e94d33184a79"
+            }
+          }
+        },
+        {
+          "at": "2026-10-02T17:29:11.491Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "d1c9e8df-d1f1-42b8-84e7-e6315bf16c54",
+            "ref": "pad:17455036",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "communication": "2026-10-02",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-02T17:29:11.490Z",
+            "base": "2026-10-12",
+            "due": "2026-10-12",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-02T17:29:11.492Z",
+          "event": "Avaliação: pad / 17455026",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-02T17:29:11.492Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455026",
+              "fingerprint": "fnv64-v1:e4a635d1e7467180"
+            }
+          }
+        },
+        {
+          "at": "2026-10-02T17:29:11.493Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "aac4095d-b6b2-4997-a47d-beef30e4e2d5",
+            "ref": "pad:17455026",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "communication": "2026-10-02",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-02T17:29:11.492Z",
+            "base": "2026-10-12",
+            "due": "2026-10-12",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-02T17:29:11.494Z",
+          "event": "Avaliação: pad / 17455038",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-02T17:29:11.494Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455038",
+              "fingerprint": "fnv64-v1:48f26938b5a42867"
+            }
+          }
+        },
+        {
+          "at": "2026-10-02T17:29:11.496Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "681d82dc-a092-4679-9eb0-4b356447786e",
+            "ref": "pad:17455038",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "communication": "2026-10-02",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-02T17:29:11.494Z",
+            "base": "2026-10-12",
+            "due": "2026-10-12",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-02T17:29:11.497Z",
+          "event": "Avaliação: pad / 17455103",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-02T17:29:11.497Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455103",
+              "fingerprint": "fnv64-v1:99eac077ab673393"
+            }
+          }
+        },
+        {
+          "at": "2026-10-02T17:29:11.498Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "a9870d99-8db1-4ff7-964c-4184a44e28c4",
+            "ref": "pad:17455103",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "communication": "2026-10-02",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-02T17:29:11.497Z",
+            "base": "2026-10-12",
+            "due": "2026-10-12",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-02T17:29:11.499Z",
+          "event": "Avaliação: pad / 17455070",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-02T17:29:11.499Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455070",
+              "fingerprint": "fnv64-v1:f7c90f8d24b900ad"
+            }
+          }
+        },
+        {
+          "at": "2026-10-02T17:29:11.500Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "90ff9606-5150-43d9-a3fa-1a7a3b5481bc",
+            "ref": "pad:17455070",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "communication": "2026-10-02",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-02T17:29:11.499Z",
+            "base": "2026-10-12",
+            "due": "2026-10-12",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-02T17:29:11.501Z",
+          "event": "Avaliação: pad / 17455104",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-02T17:29:11.501Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455104",
+              "fingerprint": "fnv64-v1:8507a389718e6d6a"
+            }
+          }
+        },
+        {
+          "at": "2026-10-02T17:29:11.503Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "55035c42-0876-4956-a141-987b441e40c5",
+            "ref": "pad:17455104",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "communication": "2026-10-02",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-02T17:29:11.501Z",
+            "base": "2026-10-12",
+            "due": "2026-10-12",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-02T17:29:11.504Z",
+          "event": "Avaliação: pad / 17455049",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-02T17:29:11.504Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455049",
+              "fingerprint": "fnv64-v1:a5f61ac90a872bdb"
+            }
+          }
+        },
+        {
+          "at": "2026-10-02T17:29:11.506Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "2865581c-a51f-4aed-9d71-4ad9c9e001ae",
+            "ref": "pad:17455049",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "communication": "2026-10-02",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-02T17:29:11.504Z",
+            "base": "2026-10-12",
+            "due": "2026-10-12",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-02T17:29:11.508Z",
+          "event": "Avaliação: pad / 17455039",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-02T17:29:11.508Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455039",
+              "fingerprint": "fnv64-v1:11d6b7b01d211ca1"
+            }
+          }
+        },
+        {
+          "at": "2026-10-02T17:29:11.510Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "f2d9a7a3-8179-42cb-b499-8cb09b304e78",
+            "ref": "pad:17455039",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "communication": "2026-10-02",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-02T17:29:11.508Z",
+            "base": "2026-10-12",
+            "due": "2026-10-12",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-02T17:29:11.511Z",
+          "event": "Avaliação: pad / 17455022",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-02T17:29:11.511Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455022",
+              "fingerprint": "fnv64-v1:64d40dda438fd654"
+            }
+          }
+        },
+        {
+          "at": "2026-10-02T17:29:11.513Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "e4a915f5-660c-45a1-9151-dbef76cbf9fa",
+            "ref": "pad:17455022",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "communication": "2026-10-02",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-02T17:29:11.511Z",
+            "base": "2026-10-12",
+            "due": "2026-10-12",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-02T17:29:11.514Z",
+          "event": "Avaliação: pad / 17455041",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-02T17:29:11.514Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455041",
+              "fingerprint": "fnv64-v1:e2dcf1995bd4388c"
+            }
+          }
+        },
+        {
+          "at": "2026-10-02T17:29:11.514Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "d17c7e7e-64dd-4cd2-b286-6584425be35e",
+            "ref": "pad:17455041",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "communication": "2026-10-02",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-02T17:29:11.514Z",
+            "base": "2026-10-12",
+            "due": "2026-10-12",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-02T17:29:11.516Z",
+          "event": "Avaliação: pad / 17455048",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-02T17:29:11.516Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455048",
+              "fingerprint": "fnv64-v1:7de13bc81a8c0a5c"
+            }
+          }
+        },
+        {
+          "at": "2026-10-02T17:29:11.516Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "07c4f98b-2bf4-469a-a905-71b0f03544b3",
+            "ref": "pad:17455048",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "communication": "2026-10-02",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-02T17:29:11.516Z",
+            "base": "2026-10-12",
+            "due": "2026-10-12",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-02T17:29:11.517Z",
+          "event": "Avaliação: pad / 17455025",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-02T17:29:11.517Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455025",
+              "fingerprint": "fnv64-v1:3a556d43fa354fb6"
+            }
+          }
+        },
+        {
+          "at": "2026-10-02T17:29:11.517Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "1eb0a778-dbf5-40f0-b6d9-4f36330ab514",
+            "ref": "pad:17455025",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "communication": "2026-10-02",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-02T17:29:11.517Z",
+            "base": "2026-10-12",
+            "due": "2026-10-12",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-02T17:29:11.518Z",
+          "event": "Avaliação: pad / 17455019",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-02T17:29:11.518Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455019",
+              "fingerprint": "fnv64-v1:2ffdbbba8d1affeb"
+            }
+          }
+        },
+        {
+          "at": "2026-10-02T17:29:11.518Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "d0f3efa3-1ece-4211-9434-4d638a73fa85",
+            "ref": "pad:17455019",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "communication": "2026-10-02",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-02T17:29:11.518Z",
+            "base": "2026-10-12",
+            "due": "2026-10-12",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-02T17:29:11.519Z",
+          "event": "Avaliação: pad / 17455013",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-02T17:29:11.519Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455013",
+              "fingerprint": "fnv64-v1:4f33335c91ef7b44"
+            }
+          }
+        },
+        {
+          "at": "2026-10-02T17:29:11.519Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "6f0dc1cc-b2bd-4089-8fe1-9ff4d28322f9",
+            "ref": "pad:17455013",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "communication": "2026-10-02",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-02T17:29:11.519Z",
+            "base": "2026-10-12",
+            "due": "2026-10-12",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-02T17:29:11.520Z",
+          "event": "Avaliação: pad / 17455008",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-02T17:29:11.520Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455008",
+              "fingerprint": "fnv64-v1:3c029a3499537f72"
+            }
+          }
+        },
+        {
+          "at": "2026-10-02T17:29:11.520Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "96af4631-1804-4c90-b059-1c7e63dfe34d",
+            "ref": "pad:17455008",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "communication": "2026-10-02",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-02T17:29:11.520Z",
+            "base": "2026-10-12",
+            "due": "2026-10-12",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-02T17:29:11.521Z",
+          "event": "Avaliação: pad / 17455011",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-02T17:29:11.521Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455011",
+              "fingerprint": "fnv64-v1:c05551ec9783afa4"
+            }
+          }
+        },
+        {
+          "at": "2026-10-02T17:29:11.522Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "f7ea6272-3f30-4d0b-91f7-1fffba3e4c48",
+            "ref": "pad:17455011",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "communication": "2026-10-02",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-02T17:29:11.521Z",
+            "base": "2026-10-12",
+            "due": "2026-10-12",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-02T17:29:11.522Z",
+          "event": "Avaliação: pad / 17455015",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-02T17:29:11.522Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455015",
+              "fingerprint": "fnv64-v1:357428fc6a940f53"
+            }
+          }
+        },
+        {
+          "at": "2026-10-02T17:29:11.523Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "03140af8-46dd-4e90-a670-a713fc2e15db",
+            "ref": "pad:17455015",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "communication": "2026-10-02",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-02T17:29:11.522Z",
+            "base": "2026-10-12",
+            "due": "2026-10-12",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-02T17:29:11.524Z",
+          "event": "Avaliação: pad / 17455017",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-02T17:29:11.523Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455017",
+              "fingerprint": "fnv64-v1:a96979d7b8653a40"
+            }
+          }
+        },
+        {
+          "at": "2026-10-02T17:29:11.524Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "04e47078-f3fe-4656-81c8-afa2b008aba7",
+            "ref": "pad:17455017",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "communication": "2026-10-02",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-02T17:29:11.524Z",
+            "base": "2026-10-12",
+            "due": "2026-10-12",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-02T17:29:11.525Z",
+          "event": "Avaliação: pad / 17455748",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-02T17:29:11.525Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455748",
+              "fingerprint": "fnv64-v1:5786c6f55ec44c45"
+            }
+          }
+        },
+        {
+          "at": "2026-10-02T17:29:11.526Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "9f36fb24-b026-4ef6-b02b-ebd029c1a5af",
+            "ref": "pad:17455748",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "communication": "2026-10-02",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-02T17:29:11.525Z",
+            "base": "2026-10-12",
+            "due": "2026-10-12",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
           }
         }
       ],
