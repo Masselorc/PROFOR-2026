@@ -1,9 +1,9 @@
-/** Snapshot integral de consulta PROFOR/ONASP 2026. Gerado em 2026-10-05T18:33:56.030Z.
+/** Snapshot integral de consulta PROFOR/ONASP 2026. Gerado em 2026-10-05T18:47:50.839Z.
  * Não editar manualmente. Use tools/build_public_docs.cjs. */
-window.PROFOR_PUBLIC_UPDATED_AT = "2026-10-05T18:33:56.030Z";
+window.PROFOR_PUBLIC_UPDATED_AT = "2026-10-05T18:47:50.839Z";
 window.PROFOR_PUBLIC_DATA = {
   "schemaVersion": 1,
-  "revision": 276,
+  "revision": 277,
   "proposals": [
     {
       "id": "2243618",
@@ -7288,184 +7288,691 @@ window.PROFOR_PUBLIC_DATA = {
         },
         "pad": {
           "17435270": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "Solicita-se ao Estado de Sergipe que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética dos três preços apresentados nas pesquisas anexadas como orçamento.",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-05T18:45:13.127Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17435270",
+              "fingerprint": "fnv64-v1:7674ef13c76fac1d"
+            }
           },
           "17435291": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "Solicita-se ao Estado de Sergipe que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética dos três preços apresentados nas pesquisas anexadas como orçamento.",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-05T18:45:13.137Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17435291",
+              "fingerprint": "fnv64-v1:94c4b180fb437af1"
+            }
           },
           "17435303": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "Solicita-se ao Estado de Sergipe que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética dos três preços apresentados nas pesquisas anexadas como orçamento.",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-05T18:45:13.136Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17435303",
+              "fingerprint": "fnv64-v1:50b408edfa1955c7"
+            }
           },
           "17435305": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "Solicita-se ao Estado de Sergipe que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética dos três preços apresentados nas pesquisas anexadas como orçamento.",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-05T18:45:13.139Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17435305",
+              "fingerprint": "fnv64-v1:72a2f993437c7f52"
+            }
           },
           "17435307": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "Solicita-se ao Estado de Sergipe que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética dos três preços apresentados nas pesquisas anexadas como orçamento.",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-05T18:45:13.140Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17435307",
+              "fingerprint": "fnv64-v1:58fdccddb8f0b57a"
+            }
           },
           "17435308": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "Solicita-se ao Estado de Sergipe que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética dos três preços apresentados nas pesquisas anexadas como orçamento.",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-05T18:45:13.135Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17435308",
+              "fingerprint": "fnv64-v1:fda9ebc17fbe6589"
+            }
           },
           "17435309": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "Solicita-se ao Estado de Sergipe que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética dos três preços apresentados nas pesquisas anexadas como orçamento.",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-05T18:45:13.132Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17435309",
+              "fingerprint": "fnv64-v1:81b9a60f5a06ee1e"
+            }
           },
           "17435310": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "Solicita-se ao Estado de Sergipe que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética dos três preços apresentados nas pesquisas anexadas como orçamento.",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-05T18:45:13.130Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17435310",
+              "fingerprint": "fnv64-v1:32cf59790dd020e0"
+            }
           },
           "17435311": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "Solicita-se ao Estado de Sergipe que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética dos três preços apresentados nas pesquisas anexadas como orçamento.",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-05T18:45:13.128Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17435311",
+              "fingerprint": "fnv64-v1:8ef931573e086a50"
+            }
           },
           "17435312": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "Solicita-se ao Estado de Sergipe que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética dos três preços apresentados nas pesquisas anexadas como orçamento.",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-05T18:45:13.133Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17435312",
+              "fingerprint": "fnv64-v1:172987103db3c690"
+            }
           },
           "17435314": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "Solicita-se ao Estado de Sergipe que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética dos três preços apresentados nas pesquisas anexadas como orçamento.",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-05T18:45:13.134Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17435314",
+              "fingerprint": "fnv64-v1:19b34ea05aa63c26"
+            }
           },
           "17435371": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "Solicita-se ao Estado de Sergipe que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética dos três preços apresentados nas pesquisas anexadas como orçamento.",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-05T18:45:13.116Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17435371",
+              "fingerprint": "fnv64-v1:31104319e73aec7d"
+            }
           },
           "17435372": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "Solicita-se ao Estado de Sergipe que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética dos três preços apresentados nas pesquisas anexadas como orçamento.",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-05T18:45:13.141Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17435372",
+              "fingerprint": "fnv64-v1:7f3d90a88c629a8b"
+            }
           },
           "17435374": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "Solicita-se ao Estado de Sergipe que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética dos três preços apresentados nas pesquisas anexadas como orçamento.",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-05T18:45:13.124Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17435374",
+              "fingerprint": "fnv64-v1:8edad3f46bb8ca13"
+            }
           },
           "17435375": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "Solicita-se ao Estado de Sergipe que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética dos três preços apresentados nas pesquisas anexadas como orçamento.",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-05T18:45:13.118Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17435375",
+              "fingerprint": "fnv64-v1:7fe402896869ee4e"
+            }
           },
           "17435376": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "Solicita-se ao Estado de Sergipe que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética dos três preços apresentados nas pesquisas anexadas como orçamento.",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-05T18:45:13.123Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17435376",
+              "fingerprint": "fnv64-v1:46450d58b29cb1e0"
+            }
           },
           "17435432": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "Solicita-se ao Estado de Sergipe que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética dos três preços apresentados nas pesquisas anexadas como orçamento.",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-05T18:45:13.121Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17435432",
+              "fingerprint": "fnv64-v1:ed45125fe329ec7a"
+            }
           },
           "17435433": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "Solicita-se ao Estado de Sergipe que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética dos três preços apresentados nas pesquisas anexadas como orçamento.",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-05T18:45:13.119Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17435433",
+              "fingerprint": "fnv64-v1:394c50e444d0538c"
+            }
           },
           "17435434": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "Solicita-se ao Estado de Sergipe que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética dos três preços apresentados nas pesquisas anexadas como orçamento.",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-05T18:45:13.120Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17435434",
+              "fingerprint": "fnv64-v1:803c19c5ca3a7859"
+            }
           },
           "17435437": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "Solicita-se ao Estado de Sergipe que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética dos três preços apresentados nas pesquisas anexadas como orçamento.",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-05T18:45:13.138Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17435437",
+              "fingerprint": "fnv64-v1:f254f8d0bbd1df24"
+            }
           },
           "17435438": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "Solicita-se ao Estado de Sergipe que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética dos três preços apresentados nas pesquisas anexadas como orçamento.",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-05T18:45:13.141Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17435438",
+              "fingerprint": "fnv64-v1:3df9e1f42999a88d"
+            }
           },
           "17439632": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "Solicita-se ao Estado de Sergipe que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética dos três preços apresentados nas pesquisas anexadas como orçamento.",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-05T18:45:13.125Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17439632",
+              "fingerprint": "fnv64-v1:ed657455d4da3cfb"
+            }
           }
         }
       },
-      "diligences": [],
+      "diligences": [
+        {
+          "id": "6cab6c9c-6b46-43e7-9fdd-de63fd542661",
+          "ref": "pad:17435371",
+          "category": "PLANO DE APLICAÇÃO DETALHADO",
+          "request": "Solicita-se ao Estado de Sergipe que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética dos três preços apresentados nas pesquisas anexadas como orçamento.",
+          "communication": "2026-10-05",
+          "science": "",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-05T18:45:13.116Z",
+          "base": "2026-10-15",
+          "due": "2026-10-15",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "21c3f5d9-166f-421d-a3dc-b04940b3f5a5",
+          "ref": "pad:17435375",
+          "category": "PLANO DE APLICAÇÃO DETALHADO",
+          "request": "Solicita-se ao Estado de Sergipe que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética dos três preços apresentados nas pesquisas anexadas como orçamento.",
+          "communication": "2026-10-05",
+          "science": "",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-05T18:45:13.118Z",
+          "base": "2026-10-15",
+          "due": "2026-10-15",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "4bc22a72-416b-4e74-8f80-6395d65a54a7",
+          "ref": "pad:17435433",
+          "category": "PLANO DE APLICAÇÃO DETALHADO",
+          "request": "Solicita-se ao Estado de Sergipe que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética dos três preços apresentados nas pesquisas anexadas como orçamento.",
+          "communication": "2026-10-05",
+          "science": "",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-05T18:45:13.119Z",
+          "base": "2026-10-15",
+          "due": "2026-10-15",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "52f4b3b8-b267-43c6-8852-def14017da38",
+          "ref": "pad:17435434",
+          "category": "PLANO DE APLICAÇÃO DETALHADO",
+          "request": "Solicita-se ao Estado de Sergipe que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética dos três preços apresentados nas pesquisas anexadas como orçamento.",
+          "communication": "2026-10-05",
+          "science": "",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-05T18:45:13.120Z",
+          "base": "2026-10-15",
+          "due": "2026-10-15",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "508f5cf0-f4eb-4667-90e8-23a2281fe0ce",
+          "ref": "pad:17435432",
+          "category": "PLANO DE APLICAÇÃO DETALHADO",
+          "request": "Solicita-se ao Estado de Sergipe que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética dos três preços apresentados nas pesquisas anexadas como orçamento.",
+          "communication": "2026-10-05",
+          "science": "",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-05T18:45:13.121Z",
+          "base": "2026-10-15",
+          "due": "2026-10-15",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "d460f1f6-e20d-41b9-b114-8eb8887199e6",
+          "ref": "pad:17435376",
+          "category": "PLANO DE APLICAÇÃO DETALHADO",
+          "request": "Solicita-se ao Estado de Sergipe que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética dos três preços apresentados nas pesquisas anexadas como orçamento.",
+          "communication": "2026-10-05",
+          "science": "",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-05T18:45:13.123Z",
+          "base": "2026-10-15",
+          "due": "2026-10-15",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "c0f96e7d-b1f4-499d-8431-5aa6ebe6383c",
+          "ref": "pad:17435374",
+          "category": "PLANO DE APLICAÇÃO DETALHADO",
+          "request": "Solicita-se ao Estado de Sergipe que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética dos três preços apresentados nas pesquisas anexadas como orçamento.",
+          "communication": "2026-10-05",
+          "science": "",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-05T18:45:13.124Z",
+          "base": "2026-10-15",
+          "due": "2026-10-15",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "3f36279d-82b1-44c2-a12e-f94674a00016",
+          "ref": "pad:17439632",
+          "category": "PLANO DE APLICAÇÃO DETALHADO",
+          "request": "Solicita-se ao Estado de Sergipe que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética dos três preços apresentados nas pesquisas anexadas como orçamento.",
+          "communication": "2026-10-05",
+          "science": "",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-05T18:45:13.125Z",
+          "base": "2026-10-15",
+          "due": "2026-10-15",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "8fdb51a5-fdc3-4ee8-81fb-2f0969b9390a",
+          "ref": "pad:17435270",
+          "category": "PLANO DE APLICAÇÃO DETALHADO",
+          "request": "Solicita-se ao Estado de Sergipe que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética dos três preços apresentados nas pesquisas anexadas como orçamento.",
+          "communication": "2026-10-05",
+          "science": "",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-05T18:45:13.127Z",
+          "base": "2026-10-15",
+          "due": "2026-10-15",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "b8cb90d9-6313-4689-bb42-65a137f3c3de",
+          "ref": "pad:17435311",
+          "category": "PLANO DE APLICAÇÃO DETALHADO",
+          "request": "Solicita-se ao Estado de Sergipe que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética dos três preços apresentados nas pesquisas anexadas como orçamento.",
+          "communication": "2026-10-05",
+          "science": "",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-05T18:45:13.128Z",
+          "base": "2026-10-15",
+          "due": "2026-10-15",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "55d1d7d6-7687-40dd-bc95-1e05e75167f0",
+          "ref": "pad:17435310",
+          "category": "PLANO DE APLICAÇÃO DETALHADO",
+          "request": "Solicita-se ao Estado de Sergipe que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética dos três preços apresentados nas pesquisas anexadas como orçamento.",
+          "communication": "2026-10-05",
+          "science": "",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-05T18:45:13.130Z",
+          "base": "2026-10-15",
+          "due": "2026-10-15",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "ef8b98d8-53fa-42dd-b53d-169e20f1ff83",
+          "ref": "pad:17435309",
+          "category": "PLANO DE APLICAÇÃO DETALHADO",
+          "request": "Solicita-se ao Estado de Sergipe que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética dos três preços apresentados nas pesquisas anexadas como orçamento.",
+          "communication": "2026-10-05",
+          "science": "",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-05T18:45:13.132Z",
+          "base": "2026-10-15",
+          "due": "2026-10-15",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "89224c39-1fce-4668-b202-64e05bc0b1cc",
+          "ref": "pad:17435312",
+          "category": "PLANO DE APLICAÇÃO DETALHADO",
+          "request": "Solicita-se ao Estado de Sergipe que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética dos três preços apresentados nas pesquisas anexadas como orçamento.",
+          "communication": "2026-10-05",
+          "science": "",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-05T18:45:13.133Z",
+          "base": "2026-10-15",
+          "due": "2026-10-15",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "f33b4847-ad3e-48d2-8f53-f7b866c886ab",
+          "ref": "pad:17435314",
+          "category": "PLANO DE APLICAÇÃO DETALHADO",
+          "request": "Solicita-se ao Estado de Sergipe que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética dos três preços apresentados nas pesquisas anexadas como orçamento.",
+          "communication": "2026-10-05",
+          "science": "",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-05T18:45:13.134Z",
+          "base": "2026-10-15",
+          "due": "2026-10-15",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "c47daccc-1c32-46b2-9329-22a6e91987b1",
+          "ref": "pad:17435308",
+          "category": "PLANO DE APLICAÇÃO DETALHADO",
+          "request": "Solicita-se ao Estado de Sergipe que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética dos três preços apresentados nas pesquisas anexadas como orçamento.",
+          "communication": "2026-10-05",
+          "science": "",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-05T18:45:13.135Z",
+          "base": "2026-10-15",
+          "due": "2026-10-15",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "5d3d5dde-15f3-4fbd-b734-deba679d4bba",
+          "ref": "pad:17435303",
+          "category": "PLANO DE APLICAÇÃO DETALHADO",
+          "request": "Solicita-se ao Estado de Sergipe que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética dos três preços apresentados nas pesquisas anexadas como orçamento.",
+          "communication": "2026-10-05",
+          "science": "",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-05T18:45:13.136Z",
+          "base": "2026-10-15",
+          "due": "2026-10-15",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "66649fb0-9a9e-40d2-b2fa-880423c7b0e8",
+          "ref": "pad:17435291",
+          "category": "PLANO DE APLICAÇÃO DETALHADO",
+          "request": "Solicita-se ao Estado de Sergipe que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética dos três preços apresentados nas pesquisas anexadas como orçamento.",
+          "communication": "2026-10-05",
+          "science": "",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-05T18:45:13.137Z",
+          "base": "2026-10-15",
+          "due": "2026-10-15",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "b720b784-facb-46b0-82d8-8802879b6db3",
+          "ref": "pad:17435437",
+          "category": "PLANO DE APLICAÇÃO DETALHADO",
+          "request": "Solicita-se ao Estado de Sergipe que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética dos três preços apresentados nas pesquisas anexadas como orçamento.",
+          "communication": "2026-10-05",
+          "science": "",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-05T18:45:13.138Z",
+          "base": "2026-10-15",
+          "due": "2026-10-15",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "d1c0755d-0eba-4f54-878a-a22b909f2bbd",
+          "ref": "pad:17435305",
+          "category": "PLANO DE APLICAÇÃO DETALHADO",
+          "request": "Solicita-se ao Estado de Sergipe que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética dos três preços apresentados nas pesquisas anexadas como orçamento.",
+          "communication": "2026-10-05",
+          "science": "",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-05T18:45:13.139Z",
+          "base": "2026-10-15",
+          "due": "2026-10-15",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "83f38f12-4dd1-4659-aed3-562592081c80",
+          "ref": "pad:17435307",
+          "category": "PLANO DE APLICAÇÃO DETALHADO",
+          "request": "Solicita-se ao Estado de Sergipe que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética dos três preços apresentados nas pesquisas anexadas como orçamento.",
+          "communication": "2026-10-05",
+          "science": "",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-05T18:45:13.140Z",
+          "base": "2026-10-15",
+          "due": "2026-10-15",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "30e59619-2ee8-451e-9293-227ecfda161a",
+          "ref": "pad:17435372",
+          "category": "PLANO DE APLICAÇÃO DETALHADO",
+          "request": "Solicita-se ao Estado de Sergipe que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética dos três preços apresentados nas pesquisas anexadas como orçamento.",
+          "communication": "2026-10-05",
+          "science": "",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-05T18:45:13.141Z",
+          "base": "2026-10-15",
+          "due": "2026-10-15",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "5a819e92-4b0a-4b20-84eb-ae3bb9896a3b",
+          "ref": "pad:17435438",
+          "category": "PLANO DE APLICAÇÃO DETALHADO",
+          "request": "Solicita-se ao Estado de Sergipe que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética dos três preços apresentados nas pesquisas anexadas como orçamento.",
+          "communication": "2026-10-05",
+          "science": "",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-05T18:45:13.141Z",
+          "base": "2026-10-15",
+          "due": "2026-10-15",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        }
+      ],
       "ouvidoria": {
         "status": "na",
         "signature": "",
@@ -9598,6 +10105,1106 @@ window.PROFOR_PUBLIC_DATA = {
           },
           "after": {
             "at": "2026-10-05T13:42:43.023Z"
+          }
+        },
+        {
+          "at": "2026-10-05T18:45:13.116Z",
+          "event": "Avaliação: pad / 17435371",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Solicita-se ao Estado de Sergipe que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética dos três preços apresentados nas pesquisas anexadas como orçamento.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T18:45:13.116Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17435371",
+              "fingerprint": "fnv64-v1:31104319e73aec7d"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T18:45:13.117Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "6cab6c9c-6b46-43e7-9fdd-de63fd542661",
+            "ref": "pad:17435371",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Solicita-se ao Estado de Sergipe que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética dos três preços apresentados nas pesquisas anexadas como orçamento.",
+            "communication": "2026-10-05",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-05T18:45:13.116Z",
+            "base": "2026-10-15",
+            "due": "2026-10-15",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-05T18:45:13.118Z",
+          "event": "Avaliação: pad / 17435375",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Solicita-se ao Estado de Sergipe que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética dos três preços apresentados nas pesquisas anexadas como orçamento.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T18:45:13.118Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17435375",
+              "fingerprint": "fnv64-v1:7fe402896869ee4e"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T18:45:13.119Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "21c3f5d9-166f-421d-a3dc-b04940b3f5a5",
+            "ref": "pad:17435375",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Solicita-se ao Estado de Sergipe que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética dos três preços apresentados nas pesquisas anexadas como orçamento.",
+            "communication": "2026-10-05",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-05T18:45:13.118Z",
+            "base": "2026-10-15",
+            "due": "2026-10-15",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-05T18:45:13.119Z",
+          "event": "Avaliação: pad / 17435433",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Solicita-se ao Estado de Sergipe que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética dos três preços apresentados nas pesquisas anexadas como orçamento.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T18:45:13.119Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17435433",
+              "fingerprint": "fnv64-v1:394c50e444d0538c"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T18:45:13.120Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "4bc22a72-416b-4e74-8f80-6395d65a54a7",
+            "ref": "pad:17435433",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Solicita-se ao Estado de Sergipe que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética dos três preços apresentados nas pesquisas anexadas como orçamento.",
+            "communication": "2026-10-05",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-05T18:45:13.119Z",
+            "base": "2026-10-15",
+            "due": "2026-10-15",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-05T18:45:13.120Z",
+          "event": "Avaliação: pad / 17435434",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Solicita-se ao Estado de Sergipe que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética dos três preços apresentados nas pesquisas anexadas como orçamento.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T18:45:13.120Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17435434",
+              "fingerprint": "fnv64-v1:803c19c5ca3a7859"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T18:45:13.121Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "52f4b3b8-b267-43c6-8852-def14017da38",
+            "ref": "pad:17435434",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Solicita-se ao Estado de Sergipe que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética dos três preços apresentados nas pesquisas anexadas como orçamento.",
+            "communication": "2026-10-05",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-05T18:45:13.120Z",
+            "base": "2026-10-15",
+            "due": "2026-10-15",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-05T18:45:13.121Z",
+          "event": "Avaliação: pad / 17435432",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Solicita-se ao Estado de Sergipe que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética dos três preços apresentados nas pesquisas anexadas como orçamento.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T18:45:13.121Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17435432",
+              "fingerprint": "fnv64-v1:ed45125fe329ec7a"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T18:45:13.122Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "508f5cf0-f4eb-4667-90e8-23a2281fe0ce",
+            "ref": "pad:17435432",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Solicita-se ao Estado de Sergipe que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética dos três preços apresentados nas pesquisas anexadas como orçamento.",
+            "communication": "2026-10-05",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-05T18:45:13.121Z",
+            "base": "2026-10-15",
+            "due": "2026-10-15",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-05T18:45:13.123Z",
+          "event": "Avaliação: pad / 17435376",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Solicita-se ao Estado de Sergipe que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética dos três preços apresentados nas pesquisas anexadas como orçamento.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T18:45:13.123Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17435376",
+              "fingerprint": "fnv64-v1:46450d58b29cb1e0"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T18:45:13.123Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "d460f1f6-e20d-41b9-b114-8eb8887199e6",
+            "ref": "pad:17435376",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Solicita-se ao Estado de Sergipe que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética dos três preços apresentados nas pesquisas anexadas como orçamento.",
+            "communication": "2026-10-05",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-05T18:45:13.123Z",
+            "base": "2026-10-15",
+            "due": "2026-10-15",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-05T18:45:13.124Z",
+          "event": "Avaliação: pad / 17435374",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Solicita-se ao Estado de Sergipe que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética dos três preços apresentados nas pesquisas anexadas como orçamento.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T18:45:13.124Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17435374",
+              "fingerprint": "fnv64-v1:8edad3f46bb8ca13"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T18:45:13.125Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "c0f96e7d-b1f4-499d-8431-5aa6ebe6383c",
+            "ref": "pad:17435374",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Solicita-se ao Estado de Sergipe que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética dos três preços apresentados nas pesquisas anexadas como orçamento.",
+            "communication": "2026-10-05",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-05T18:45:13.124Z",
+            "base": "2026-10-15",
+            "due": "2026-10-15",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-05T18:45:13.125Z",
+          "event": "Avaliação: pad / 17439632",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Solicita-se ao Estado de Sergipe que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética dos três preços apresentados nas pesquisas anexadas como orçamento.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T18:45:13.125Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17439632",
+              "fingerprint": "fnv64-v1:ed657455d4da3cfb"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T18:45:13.126Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "3f36279d-82b1-44c2-a12e-f94674a00016",
+            "ref": "pad:17439632",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Solicita-se ao Estado de Sergipe que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética dos três preços apresentados nas pesquisas anexadas como orçamento.",
+            "communication": "2026-10-05",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-05T18:45:13.125Z",
+            "base": "2026-10-15",
+            "due": "2026-10-15",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-05T18:45:13.127Z",
+          "event": "Avaliação: pad / 17435270",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Solicita-se ao Estado de Sergipe que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética dos três preços apresentados nas pesquisas anexadas como orçamento.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T18:45:13.127Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17435270",
+              "fingerprint": "fnv64-v1:7674ef13c76fac1d"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T18:45:13.128Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "8fdb51a5-fdc3-4ee8-81fb-2f0969b9390a",
+            "ref": "pad:17435270",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Solicita-se ao Estado de Sergipe que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética dos três preços apresentados nas pesquisas anexadas como orçamento.",
+            "communication": "2026-10-05",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-05T18:45:13.127Z",
+            "base": "2026-10-15",
+            "due": "2026-10-15",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-05T18:45:13.128Z",
+          "event": "Avaliação: pad / 17435311",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Solicita-se ao Estado de Sergipe que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética dos três preços apresentados nas pesquisas anexadas como orçamento.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T18:45:13.128Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17435311",
+              "fingerprint": "fnv64-v1:8ef931573e086a50"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T18:45:13.129Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "b8cb90d9-6313-4689-bb42-65a137f3c3de",
+            "ref": "pad:17435311",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Solicita-se ao Estado de Sergipe que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética dos três preços apresentados nas pesquisas anexadas como orçamento.",
+            "communication": "2026-10-05",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-05T18:45:13.128Z",
+            "base": "2026-10-15",
+            "due": "2026-10-15",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-05T18:45:13.130Z",
+          "event": "Avaliação: pad / 17435310",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Solicita-se ao Estado de Sergipe que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética dos três preços apresentados nas pesquisas anexadas como orçamento.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T18:45:13.130Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17435310",
+              "fingerprint": "fnv64-v1:32cf59790dd020e0"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T18:45:13.131Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "55d1d7d6-7687-40dd-bc95-1e05e75167f0",
+            "ref": "pad:17435310",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Solicita-se ao Estado de Sergipe que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética dos três preços apresentados nas pesquisas anexadas como orçamento.",
+            "communication": "2026-10-05",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-05T18:45:13.130Z",
+            "base": "2026-10-15",
+            "due": "2026-10-15",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-05T18:45:13.132Z",
+          "event": "Avaliação: pad / 17435309",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Solicita-se ao Estado de Sergipe que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética dos três preços apresentados nas pesquisas anexadas como orçamento.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T18:45:13.132Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17435309",
+              "fingerprint": "fnv64-v1:81b9a60f5a06ee1e"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T18:45:13.132Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "ef8b98d8-53fa-42dd-b53d-169e20f1ff83",
+            "ref": "pad:17435309",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Solicita-se ao Estado de Sergipe que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética dos três preços apresentados nas pesquisas anexadas como orçamento.",
+            "communication": "2026-10-05",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-05T18:45:13.132Z",
+            "base": "2026-10-15",
+            "due": "2026-10-15",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-05T18:45:13.133Z",
+          "event": "Avaliação: pad / 17435312",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Solicita-se ao Estado de Sergipe que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética dos três preços apresentados nas pesquisas anexadas como orçamento.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T18:45:13.133Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17435312",
+              "fingerprint": "fnv64-v1:172987103db3c690"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T18:45:13.134Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "89224c39-1fce-4668-b202-64e05bc0b1cc",
+            "ref": "pad:17435312",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Solicita-se ao Estado de Sergipe que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética dos três preços apresentados nas pesquisas anexadas como orçamento.",
+            "communication": "2026-10-05",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-05T18:45:13.133Z",
+            "base": "2026-10-15",
+            "due": "2026-10-15",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-05T18:45:13.134Z",
+          "event": "Avaliação: pad / 17435314",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Solicita-se ao Estado de Sergipe que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética dos três preços apresentados nas pesquisas anexadas como orçamento.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T18:45:13.134Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17435314",
+              "fingerprint": "fnv64-v1:19b34ea05aa63c26"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T18:45:13.134Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "f33b4847-ad3e-48d2-8f53-f7b866c886ab",
+            "ref": "pad:17435314",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Solicita-se ao Estado de Sergipe que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética dos três preços apresentados nas pesquisas anexadas como orçamento.",
+            "communication": "2026-10-05",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-05T18:45:13.134Z",
+            "base": "2026-10-15",
+            "due": "2026-10-15",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-05T18:45:13.135Z",
+          "event": "Avaliação: pad / 17435308",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Solicita-se ao Estado de Sergipe que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética dos três preços apresentados nas pesquisas anexadas como orçamento.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T18:45:13.135Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17435308",
+              "fingerprint": "fnv64-v1:fda9ebc17fbe6589"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T18:45:13.135Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "c47daccc-1c32-46b2-9329-22a6e91987b1",
+            "ref": "pad:17435308",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Solicita-se ao Estado de Sergipe que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética dos três preços apresentados nas pesquisas anexadas como orçamento.",
+            "communication": "2026-10-05",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-05T18:45:13.135Z",
+            "base": "2026-10-15",
+            "due": "2026-10-15",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-05T18:45:13.136Z",
+          "event": "Avaliação: pad / 17435303",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Solicita-se ao Estado de Sergipe que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética dos três preços apresentados nas pesquisas anexadas como orçamento.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T18:45:13.136Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17435303",
+              "fingerprint": "fnv64-v1:50b408edfa1955c7"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T18:45:13.136Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "5d3d5dde-15f3-4fbd-b734-deba679d4bba",
+            "ref": "pad:17435303",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Solicita-se ao Estado de Sergipe que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética dos três preços apresentados nas pesquisas anexadas como orçamento.",
+            "communication": "2026-10-05",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-05T18:45:13.136Z",
+            "base": "2026-10-15",
+            "due": "2026-10-15",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-05T18:45:13.137Z",
+          "event": "Avaliação: pad / 17435291",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Solicita-se ao Estado de Sergipe que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética dos três preços apresentados nas pesquisas anexadas como orçamento.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T18:45:13.137Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17435291",
+              "fingerprint": "fnv64-v1:94c4b180fb437af1"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T18:45:13.137Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "66649fb0-9a9e-40d2-b2fa-880423c7b0e8",
+            "ref": "pad:17435291",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Solicita-se ao Estado de Sergipe que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética dos três preços apresentados nas pesquisas anexadas como orçamento.",
+            "communication": "2026-10-05",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-05T18:45:13.137Z",
+            "base": "2026-10-15",
+            "due": "2026-10-15",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-05T18:45:13.138Z",
+          "event": "Avaliação: pad / 17435437",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Solicita-se ao Estado de Sergipe que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética dos três preços apresentados nas pesquisas anexadas como orçamento.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T18:45:13.138Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17435437",
+              "fingerprint": "fnv64-v1:f254f8d0bbd1df24"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T18:45:13.138Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "b720b784-facb-46b0-82d8-8802879b6db3",
+            "ref": "pad:17435437",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Solicita-se ao Estado de Sergipe que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética dos três preços apresentados nas pesquisas anexadas como orçamento.",
+            "communication": "2026-10-05",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-05T18:45:13.138Z",
+            "base": "2026-10-15",
+            "due": "2026-10-15",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-05T18:45:13.139Z",
+          "event": "Avaliação: pad / 17435305",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Solicita-se ao Estado de Sergipe que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética dos três preços apresentados nas pesquisas anexadas como orçamento.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T18:45:13.139Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17435305",
+              "fingerprint": "fnv64-v1:72a2f993437c7f52"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T18:45:13.139Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "d1c0755d-0eba-4f54-878a-a22b909f2bbd",
+            "ref": "pad:17435305",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Solicita-se ao Estado de Sergipe que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética dos três preços apresentados nas pesquisas anexadas como orçamento.",
+            "communication": "2026-10-05",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-05T18:45:13.139Z",
+            "base": "2026-10-15",
+            "due": "2026-10-15",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-05T18:45:13.140Z",
+          "event": "Avaliação: pad / 17435307",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Solicita-se ao Estado de Sergipe que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética dos três preços apresentados nas pesquisas anexadas como orçamento.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T18:45:13.140Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17435307",
+              "fingerprint": "fnv64-v1:58fdccddb8f0b57a"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T18:45:13.140Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "83f38f12-4dd1-4659-aed3-562592081c80",
+            "ref": "pad:17435307",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Solicita-se ao Estado de Sergipe que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética dos três preços apresentados nas pesquisas anexadas como orçamento.",
+            "communication": "2026-10-05",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-05T18:45:13.140Z",
+            "base": "2026-10-15",
+            "due": "2026-10-15",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-05T18:45:13.141Z",
+          "event": "Avaliação: pad / 17435372",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Solicita-se ao Estado de Sergipe que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética dos três preços apresentados nas pesquisas anexadas como orçamento.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T18:45:13.141Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17435372",
+              "fingerprint": "fnv64-v1:7f3d90a88c629a8b"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T18:45:13.141Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "30e59619-2ee8-451e-9293-227ecfda161a",
+            "ref": "pad:17435372",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Solicita-se ao Estado de Sergipe que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética dos três preços apresentados nas pesquisas anexadas como orçamento.",
+            "communication": "2026-10-05",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-05T18:45:13.141Z",
+            "base": "2026-10-15",
+            "due": "2026-10-15",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-05T18:45:13.141Z",
+          "event": "Avaliação: pad / 17435438",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Solicita-se ao Estado de Sergipe que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética dos três preços apresentados nas pesquisas anexadas como orçamento.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T18:45:13.141Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17435438",
+              "fingerprint": "fnv64-v1:3df9e1f42999a88d"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T18:45:13.142Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "5a819e92-4b0a-4b20-84eb-ae3bb9896a3b",
+            "ref": "pad:17435438",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Solicita-se ao Estado de Sergipe que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética dos três preços apresentados nas pesquisas anexadas como orçamento.",
+            "communication": "2026-10-05",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-05T18:45:13.141Z",
+            "base": "2026-10-15",
+            "due": "2026-10-15",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
           }
         }
       ],
