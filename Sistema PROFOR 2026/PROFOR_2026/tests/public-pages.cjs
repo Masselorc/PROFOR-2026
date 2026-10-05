@@ -60,9 +60,9 @@ async function run() {
     assert.ok(await page.locator('#filter-status').isVisible(), 'Filtro de status proposta visível');
     assert.ok(await page.locator('#filter-control').isVisible(), 'Filtro de controle visível');
 
-    // 14 UFs na tabela com botão de expansão
+    // Apenas UFs com proposta ativa na tabela
     const rowsCount = await page.locator('#uf-rows tr.uf-row').count();
-    assert.equal(rowsCount, Object.keys(D.UFS).length, '14 UFs presentes na tabela');
+    assert.equal(rowsCount, new Set(D.activeProposals(data).map(p=>p.imported.uf)).size, 'Somente UFs com propostas ativas presentes na tabela');
 
     // Botão Sincronização presente no painel
     const syncBtn = page.locator('button[data-action="sync"]');

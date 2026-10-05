@@ -1,9 +1,9 @@
-/** Snapshot integral de consulta PROFOR/ONASP 2026. Gerado em 2026-10-05T13:43:11.275Z.
+/** Snapshot integral de consulta PROFOR/ONASP 2026. Gerado em 2026-10-05T15:06:02.031Z.
  * Não editar manualmente. Use tools/build_public_docs.cjs. */
-window.PROFOR_PUBLIC_UPDATED_AT = "2026-10-05T13:43:11.275Z";
+window.PROFOR_PUBLIC_UPDATED_AT = "2026-10-05T15:06:02.031Z";
 window.PROFOR_PUBLIC_DATA = {
   "schemaVersion": 1,
-  "revision": 240,
+  "revision": 241,
   "proposals": [
     {
       "id": "2243618",
@@ -40391,6 +40391,66 @@ window.PROFOR_PUBLIC_DATA = {
           "after": {
             "at": "2026-10-05T13:42:43.023Z"
           }
+        },
+        {
+          "at": "2026-10-05T14:58:32.409Z",
+          "event": "Proposta apagada do painel",
+          "actor": "Usuário local",
+          "before": {
+            "id": "2247182",
+            "numero": "36373/2026",
+            "uf": "AP",
+            "programa": "3000020260022",
+            "cnpj": "04615070000105",
+            "proponente": "INSTITUTO DE ADMINISTRACAO PENITENCIARIA",
+            "orgao": "",
+            "objeto": "estruturação da Ouvidoria Penitenciária do Instituto de Administração Penitenciária do Estado do Amapá – IAPEN/AP, mediante aquisição de bens permanentes e equipamentos destinados ao fortalecimento da infraestrutura física, tecnológica e administrativa, visando qualificar o atendimento, a escuta, o registro, o tratamento e o acompanhamento das manifestações",
+            "situacao": "Proposta/Plano de Trabalho Cadastrados",
+            "data": "2026-09-30",
+            "vigenciaInicio": "2026-12-30",
+            "vigenciaFim": "2028-06-30",
+            "repasse": 20000000,
+            "contrapartida": 20021,
+            "global": 20020021,
+            "pad": [
+              {
+                "id": "17458731",
+                "descricao": "veículo",
+                "quantidade": "1",
+                "unitario": 19080639,
+                "total": 19080639
+              },
+              {
+                "id": "17458715",
+                "descricao": "Cadeira Presidente Extra Giratória, estofamento em couro sintético, regulagem de altura, base giratória, braços com apoio, mecanismo de inclinação e capacidade mínima de 120 kg",
+                "quantidade": "3",
+                "unitario": 77164,
+                "total": 231491
+              },
+              {
+                "id": "17458705",
+                "descricao": "Mesa de Escritório Escrivaninha com 2 Gavetas",
+                "quantidade": "4",
+                "unitario": 54247,
+                "total": 216988
+              },
+              {
+                "id": "17458689",
+                "descricao": "Mesa de Reunião Pés Metal 2m Caixa de Tomadas F5",
+                "quantidade": "2",
+                "unitario": 170024,
+                "total": 340047
+              },
+              {
+                "id": "17458714",
+                "descricao": "Cadeira Escritório Ergonômica Giratória com Apoio Lombar",
+                "quantidade": "4",
+                "unitario": 37714,
+                "total": 150856
+              }
+            ]
+          },
+          "after": null
         }
       ],
       "textos": {
@@ -40402,7 +40462,10 @@ window.PROFOR_PUBLIC_DATA = {
         "relacao": "A proposta está alinhada ao PROFOR/ONASP 2026 ao buscar reduzir assimetrias estruturais e fortalecer a capacidade de funcionamento da Ouvidoria de Serviços Penais, por meio da aquisição de equipamentos e mobiliários necessários ao atendimento, à gestão documental, ao uso de tecnologias, à articulação institucional e à qualificação dos serviços.",
         "capacidade": "O Instituto de Administração Penitenciária do Estado do Amapá – IAPEN/AP, por meio da Ouvidoria Penitenciária, demonstra capacidade técnica e gerencial para execução da proposta, considerando a experiência institucional já desenvolvida na construção e consolidação de um canal próprio de escuta no sistema penitenciário. A unidade mantém rotina permanente de atendimento presencial e remoto, recebimento, escuta, registro, tratamento, encaminhamento, acompanhamento e resposta às manifestações.A Ouvidoria atua de forma articulada com os setores do IAPEN/AP, encaminhando as demandas aos responsáveis e acompanhando seu tratamento, além de integrar sua atuação ao Serviço de Informação ao Cidadão – SIC/AP. Utiliza o OUV Amapá, plataforma disponibilizada pela Controladoria-Geral do Estado do Amapá – CGE/AP e integrada à Rede de Ouvidorias Estadual, como instrumento de apoio ao registro e tratamento das manifestações",
         "justificativa": ""
-      }
+      },
+      "isDeleted": true,
+      "deletedAt": "2026-10-05T14:58:32.409Z",
+      "deletedBy": "Usuário local"
     },
     {
       "id": "2247131",
