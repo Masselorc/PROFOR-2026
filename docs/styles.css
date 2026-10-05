@@ -122,6 +122,13 @@ button.review-open:hover{background:transparent;text-decoration-color:var(--bran
 .pad-batch-bar p{margin:0;font-size:.8125rem;color:var(--muted)}
 .pad-batch-bar .actions{flex-wrap:wrap}
 .pad-batch-bar select{width:auto;min-width:220px;max-width:100%;margin:0}
+#review-batch-header,[data-review-batch]{width:18px;height:18px;min-width:18px;margin:0 10px 0 0;vertical-align:middle;accent-color:var(--brand);cursor:pointer}
+.req-item-col-wrapper [data-review-batch]{margin-right:0}
+.req-table.batch-enabled .req-item-col-wrapper{flex-wrap:wrap}
+@media(min-width:1180px){.req-table.batch-enabled col.c-req-item{width:11%}.req-table.batch-enabled col.c-req{width:24%}}
+.review-table.batch-enabled{min-width:760px}
+.review-table tbody tr.pad-batch-selected,.req-table tbody tr.pad-batch-selected{background:#e8f3f3}
+@media print{#review-batch-header,[data-review-batch]{display:none}}
 .pad-batch-heading,.pad-batch-row{display:flex;align-items:flex-start;gap:10px;margin:0}
 .pad-batch-heading{align-items:center;font-size:inherit}
 .pad-batch-row .pad-desc-text{min-width:0;flex:1}

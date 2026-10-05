@@ -1,9 +1,9 @@
-/** Snapshot integral de consulta PROFOR/ONASP 2026. Gerado em 2026-10-05T17:27:58.396Z.
+/** Snapshot integral de consulta PROFOR/ONASP 2026. Gerado em 2026-10-05T18:06:36.213Z.
  * Não editar manualmente. Use tools/build_public_docs.cjs. */
-window.PROFOR_PUBLIC_UPDATED_AT = "2026-10-05T17:27:58.396Z";
+window.PROFOR_PUBLIC_UPDATED_AT = "2026-10-05T18:06:36.213Z";
 window.PROFOR_PUBLIC_DATA = {
   "schemaVersion": 1,
-  "revision": 253,
+  "revision": 256,
   "proposals": [
     {
       "id": "2243618",
@@ -850,18 +850,18 @@ window.PROFOR_PUBLIC_DATA = {
             }
           },
           "ouvidoriaInstituida": {
-            "status": "reanalise",
+            "status": "no",
             "note": "Ausencia de instrumento normativo que comprove a institucionalização da Ouvidoria Específica.",
             "document": "",
             "url": "",
-            "at": "2026-09-23T17:54:53.678Z",
+            "at": "2026-10-05T18:00:06.014Z",
             "attachments": [],
             "evidence": {
               "version": 1,
               "ref": "merito:ouvidoriaInstituida",
-              "fingerprint": null,
-              "legacy": true
-            }
+              "fingerprint": "fnv64-v1:a27e8ca67caeb499"
+            },
+            "actor": "Usuário local"
           },
           "ouvidoriaAto": {
             "status": "na",
@@ -885,18 +885,18 @@ window.PROFOR_PUBLIC_DATA = {
             "at": null
           },
           "falaBRAdesao": {
-            "status": "reanalise",
+            "status": "no",
             "note": "Ausência de previsão do fala.br",
             "document": "",
             "url": "",
-            "at": "2026-09-23T17:57:47.105Z",
+            "at": "2026-10-05T18:00:17.626Z",
             "attachments": [],
             "evidence": {
               "version": 1,
               "ref": "merito:falaBRAdesao",
-              "fingerprint": null,
-              "legacy": true
-            }
+              "fingerprint": "fnv64-v1:20325664b9ae9846"
+            },
+            "actor": "Usuário local"
           }
         },
         "celebracao": {
@@ -1081,12 +1081,18 @@ window.PROFOR_PUBLIC_DATA = {
             "attachments": []
           },
           "19": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-05T18:02:09.583Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:19",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
           },
           "1.1": {
             "status": "na",
@@ -1554,13 +1560,13 @@ window.PROFOR_PUBLIC_DATA = {
         }
       ],
       "ouvidoria": {
-        "status": "na",
+        "status": "pendente",
         "signature": "",
         "url": "",
         "note": "",
         "clause": false
       },
-      "falaBR": "na",
+      "falaBR": "nao_previsto",
       "conclusion": null,
       "history": [
         {
@@ -5705,6 +5711,229 @@ window.PROFOR_PUBLIC_DATA = {
           },
           "after": {
             "at": "2026-10-05T13:42:43.023Z"
+          }
+        },
+        {
+          "at": "2026-10-05T18:00:06.015Z",
+          "event": "Informações institucionais atualizadas",
+          "actor": "Usuário local",
+          "before": {
+            "ouvidoria": {
+              "status": "na",
+              "signature": "",
+              "url": "",
+              "note": "",
+              "clause": false
+            },
+            "falaBR": "na"
+          },
+          "after": {
+            "ouvidoria": {
+              "status": "pendente",
+              "signature": "",
+              "url": "",
+              "note": "",
+              "clause": false
+            },
+            "falaBR": "na"
+          }
+        },
+        {
+          "at": "2026-10-05T18:00:06.016Z",
+          "event": "Reanálise: merito:ouvidoriaInstituida",
+          "actor": "Usuário local",
+          "before": {
+            "status": "reanalise",
+            "note": "Ausencia de instrumento normativo que comprove a institucionalização da Ouvidoria Específica.",
+            "document": "",
+            "url": "",
+            "at": "2026-09-23T17:54:53.678Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "merito:ouvidoriaInstituida",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "reanalise",
+            "note": "Ausencia de instrumento normativo que comprove a institucionalização da Ouvidoria Específica.",
+            "document": "",
+            "url": "",
+            "at": "2026-09-23T17:54:53.678Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "merito:ouvidoriaInstituida",
+              "fingerprint": null,
+              "legacy": true
+            },
+            "reanalysis": {
+              "at": "2026-10-05T18:00:06.016Z",
+              "fields": [
+                "ouvidoria"
+              ],
+              "reason": "Evidência alterada; decisão anterior preservada no histórico."
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T18:00:06.016Z",
+          "event": "Avaliação: merito / ouvidoriaInstituida",
+          "actor": "Usuário local",
+          "before": {
+            "status": "reanalise",
+            "note": "Ausencia de instrumento normativo que comprove a institucionalização da Ouvidoria Específica.",
+            "document": "",
+            "url": "",
+            "at": "2026-09-23T17:54:53.678Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "merito:ouvidoriaInstituida",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "no",
+            "note": "Ausencia de instrumento normativo que comprove a institucionalização da Ouvidoria Específica.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T18:00:06.014Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "merito:ouvidoriaInstituida",
+              "fingerprint": "fnv64-v1:a27e8ca67caeb499"
+            },
+            "actor": "Usuário local"
+          }
+        },
+        {
+          "at": "2026-10-05T18:00:17.626Z",
+          "event": "Informações institucionais atualizadas",
+          "actor": "Usuário local",
+          "before": {
+            "ouvidoria": {
+              "status": "pendente",
+              "signature": "",
+              "url": "",
+              "note": "",
+              "clause": false
+            },
+            "falaBR": "na"
+          },
+          "after": {
+            "ouvidoria": {
+              "status": "pendente",
+              "signature": "",
+              "url": "",
+              "note": "",
+              "clause": false
+            },
+            "falaBR": "nao_previsto"
+          }
+        },
+        {
+          "at": "2026-10-05T18:00:17.626Z",
+          "event": "Reanálise: merito:falaBRAdesao",
+          "actor": "Usuário local",
+          "before": {
+            "status": "reanalise",
+            "note": "Ausência de previsão do fala.br",
+            "document": "",
+            "url": "",
+            "at": "2026-09-23T17:57:47.105Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "merito:falaBRAdesao",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "reanalise",
+            "note": "Ausência de previsão do fala.br",
+            "document": "",
+            "url": "",
+            "at": "2026-09-23T17:57:47.105Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "merito:falaBRAdesao",
+              "fingerprint": null,
+              "legacy": true
+            },
+            "reanalysis": {
+              "at": "2026-10-05T18:00:17.626Z",
+              "fields": [
+                "falaBR"
+              ],
+              "reason": "Evidência alterada; decisão anterior preservada no histórico."
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T18:00:17.626Z",
+          "event": "Avaliação: merito / falaBRAdesao",
+          "actor": "Usuário local",
+          "before": {
+            "status": "reanalise",
+            "note": "Ausência de previsão do fala.br",
+            "document": "",
+            "url": "",
+            "at": "2026-09-23T17:57:47.105Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "merito:falaBRAdesao",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "no",
+            "note": "Ausência de previsão do fala.br",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T18:00:17.626Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "merito:falaBRAdesao",
+              "fingerprint": "fnv64-v1:20325664b9ae9846"
+            },
+            "actor": "Usuário local"
+          }
+        },
+        {
+          "at": "2026-10-05T18:02:09.584Z",
+          "event": "Avaliação: celebracao / 19",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T18:02:09.583Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:19",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
           }
         }
       ],

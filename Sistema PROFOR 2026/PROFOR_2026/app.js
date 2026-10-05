@@ -64,6 +64,7 @@
   const padSelectedItems=new Set();
   const padSelectedStatuses=new Set();
   const padBatchItems=new Set();
+  const reviewBatch={owner:null,items:new Set(),action:''};
   /* UFs com o resumo da proposta expandido no painel (estado só da interface). */
   const expand=new Set();
   /* O mesmo, para a tela de propostas apagadas. */
@@ -148,7 +149,7 @@
     activeTab=Object.hasOwn(tabNames,aba)?aba:'dados';
     if(activeTab==='merito')activeTab='analise';
     if(activeTab==='pad' && (prevSelected!==selected || prevTab!=='pad')){padSearch='';padItemSearch='';padSearchOwner=null;padSelectedItems.clear();padSelectedStatuses.clear();padBatchItems.clear();padBatchAction='';padSelectorOpen=false;padStatusOpen=false;}
-    if(prevSelected!==selected || prevTab!==activeTab)expandedReqs.clear();
+    if(prevSelected!==selected || prevTab!==activeTab){expandedReqs.clear();reviewBatch.owner=null;reviewBatch.items.clear();reviewBatch.action='';}
     render();if(from===location.hash){const next=[...document.querySelectorAll('.tabs a')].find(a=>a.getAttribute('href')===from);(next || $('#main')).focus();}}
   function render(){
     if(!state)return;
@@ -1116,6 +1117,7 @@
         return mainRow+detailRow;
       }).join('')}</tbody></table></div></section>`;
     initRequisitosExpansion($('#tab-content table.req-table'),p,g,itens);
+    initReviewBatch(p,g);
   }
   /* Aba de Mérito. A antiga aba Habilitação foi extinta: a etapa de habilitação do
      Edital é verificada na origem e nos itens específicos, e a análise continua
@@ -1123,6 +1125,7 @@
      permanecem no banco, sem serem exibidas nem exigidas. */
   function renderAnalise(p){
     $('#tab-content').innerHTML=renderReviews(p,'merito',{secao:true});
+    initReviewBatch(p,'merito');
   }
   /* Um único controle na coluna Ação, em todas as telas. O aceite simples é
      gravado imediatamente; as demais escolhas abrem o formulário completo já
@@ -1390,32 +1393,75 @@
       }
     }
   }
+  function initReviewBatch(p,group){
+    if(isReadOnly())return;
+    const owner=p.id+':'+group;
+    if(reviewBatch.owner!==owner){reviewBatch.owner=owner;reviewBatch.items.clear();reviewBatch.action='';}
+    const items=D.rows(p,group),table=$('#tab-content table');
+    if(!table || !items.length)return;
+    table.classList.add('batch-enabled');
+    for(const id of reviewBatch.items)if(!items.some(item=>item[0]===id))reviewBatch.items.delete(id);
+    const bar=document.createElement('div');bar.className='pad-batch-bar';
+    bar.setAttribute('aria-label','Ação conjunta nos itens');
+    bar.innerHTML='<p id="review-batch-count" role="status" aria-live="polite"></p><div class="actions"><button id="review-batch-clear" type="button" class="quiet">Limpar seleção</button><select id="review-batch-action" aria-label="Ação para os itens selecionados"></select><button id="review-batch-apply" type="button" class="primary">Aplicar</button></div>';
+    table.closest('.table-wrap').before(bar);
+    const header=document.createElement('input');header.type='checkbox';header.id='review-batch-header';header.setAttribute('aria-label','Selecionar todos os itens desta aba');
+    table.querySelector('thead th').prepend(header);
+    const rows=[...table.querySelectorAll(group==='merito'?'tbody > tr':'tbody > tr[data-req-row]')];
+    rows.forEach((row,index)=>{
+      const [id,label]=items[index],input=document.createElement('input');
+      input.type='checkbox';input.dataset.reviewBatch=id;input.setAttribute('aria-label','Selecionar '+label+' para ação conjunta');
+      input.checked=reviewBatch.items.has(id);
+      (group==='merito'?row.querySelector('td'):row.querySelector('.req-item-col-wrapper')).prepend(input);
+      input.addEventListener('change',()=>{if(input.checked)reviewBatch.items.add(id);else reviewBatch.items.delete(id);update();});
+    });
+    function update(){
+      const selected=items.filter(([id])=>reviewBatch.items.has(id)),common=OPCOES_PADRAO.filter(o=>selected.every(([id])=>opcoesDoItem(group,id).some(option=>option.valor===o.valor)));
+      if(reviewBatch.action!=='na' && !common.some(o=>o.valor===reviewBatch.action))reviewBatch.action='';
+      $('#review-batch-count').textContent=selected.length+' '+(selected.length===1?'item selecionado':'itens selecionados');
+      $('#review-batch-action').innerHTML=options({'':'Escolha a ação',na:'Analisar',...Object.fromEntries(common.map(o=>[o.valor,o.rotulo]))},reviewBatch.action);
+      $('#review-batch-clear').disabled=!selected.length;$('#review-batch-apply').disabled=!selected.length || !reviewBatch.action;
+      header.checked=selected.length===items.length;header.indeterminate=selected.length>0 && selected.length<items.length;
+      rows.forEach((row,index)=>{const checked=reviewBatch.items.has(items[index][0]);row.classList.toggle('pad-batch-selected',checked);row.querySelector('[data-review-batch]').checked=checked;});
+    }
+    header.addEventListener('change',()=>{reviewBatch.items.clear();if(header.checked)items.forEach(([id])=>reviewBatch.items.add(id));update();});
+    $('#review-batch-clear').onclick=()=>{reviewBatch.items.clear();update();};
+    $('#review-batch-action').onchange=ev=>{reviewBatch.action=ev.target.value;$('#review-batch-apply').disabled=!reviewBatch.items.size || !reviewBatch.action;};
+    $('#review-batch-apply').onclick=()=>applyReviewBatch(group,items.filter(([id])=>reviewBatch.items.has(id)).map(([id,descricao])=>({id,descricao})),reviewBatch.action,()=>{reviewBatch.items.clear();reviewBatch.action='';});
+    update();
+  }
   function applyPadBatch(){
     if(isReadOnly() || busy || !padBatchItems.size || !padBatchAction)return;
-    const p=current(),proposalId=p.id,items=p.imported.pad.filter(item=>padBatchItems.has(item.id));
-    D.assert(items.length,'Selecione pelo menos um item do PAD.');
-    const ids=items.map(item=>item.id),status=padBatchAction,action=status==='na'?'Analisar':OPCOES_PAD.find(o=>o.valor===status)?.rotulo;
+    const p=current(),items=p.imported.pad.filter(item=>padBatchItems.has(item.id));
+    applyReviewBatch('pad',items,padBatchAction,()=>{padBatchItems.clear();padBatchAction='';});
+  }
+  function applyReviewBatch(group,items,status,clearSelection){
+    if(isReadOnly() || busy)return;
+    const p=current(),proposalId=p.id;
+    D.assert(items.length,'Selecione pelo menos um item.');
+    const ids=items.map(item=>item.id),action=status==='na'?'Analisar':(group==='pad'?OPCOES_PAD:OPCOES_PADRAO).find(o=>o.valor===status)?.rotulo;
     D.assert(action,'Escolha uma ação válida.');
     const noteNeeded=['obs','no','diligencia'].includes(status),integrated=status==='diligencia';
-    const active=id=>p.diligences.filter(d=>d.ref==='pad:'+id && !D.diligenceTerminal(d));
+    const active=id=>p.diligences.filter(d=>d.ref===D.canonicalRef(group,id) && !D.diligenceTerminal(d));
     const multiple=integrated?items.filter(item=>active(item.id).length>1):[];
-    modal('Aplicar ação aos itens',`<p><strong>${e(action)}</strong> para <strong>${items.length} ${items.length===1?'item selecionado':'itens selecionados'}</strong>.</p><details><summary>Ver itens selecionados</summary><ul class="pad-batch-preview">${items.map(item=>`<li>${e(item.descricao)}</li>`).join('')}</ul></details><form class="form-stack">${noteNeeded?`<label>${integrated?'Providência solicitada / justificativa':'Observação / justificativa'}<textarea name="note" maxlength="10000" ${integrated || items.some(item=>!D.reviewOf(p,'pad',item.id).note.trim())?'required':''}></textarea></label><p class="source">O texto preenchido será aplicado a todos os itens selecionados.${integrated?'':' Deixe vazio para manter as observações existentes.'}</p>`:''}${integrated?`<fieldset class="form-stack"><legend>Diligência</legend><label>Data da comunicação (opcional)<input name="communication" type="date"></label><label>Observação da diligência (opcional)<textarea name="d_note" maxlength="10000"></textarea></label>${multiple.map(item=>`<label>Diligência a atualizar: ${e(item.descricao)}<select name="d_${e(item.id)}" required>${options({'':'Selecione',...Object.fromEntries(active(item.id).map(d=>[d.id,d.request]))},'')}</select></label>`).join('')}<p class="source">Cada item terá sua própria diligência. Se já existir uma aberta, ela será atualizada.</p></fieldset>`:''}${formEnd('Aplicar')}</form>`);
+    modal('Aplicar ação aos itens',`<p><strong>${e(action)}</strong> para <strong>${items.length} ${items.length===1?'item selecionado':'itens selecionados'}</strong>.</p><details><summary>Ver itens selecionados</summary><ul class="pad-batch-preview">${items.map(item=>`<li>${e(item.descricao)}${group==='merito'?` — ${e(status==='na'?'Analisar':opcaoAtual(group,item.id,status)?.rotulo || action)}`:''}</li>`).join('')}</ul></details><form class="form-stack">${noteNeeded?`<label>${integrated?'Providência solicitada / justificativa':'Observação / justificativa'}<textarea name="note" maxlength="10000" ${integrated || items.some(item=>!D.reviewOf(p,group,item.id).note.trim())?'required':''}></textarea></label><p class="source">O texto preenchido será aplicado a todos os itens selecionados.${integrated?'':' Deixe vazio para manter as observações existentes.'}</p>`:''}${integrated?`<fieldset class="form-stack"><legend>Diligência</legend><label>Data da comunicação (opcional)<input name="communication" type="date"></label><label>Observação da diligência (opcional)<textarea name="d_note" maxlength="10000"></textarea></label>${multiple.map(item=>`<label>Diligência a atualizar: ${e(item.descricao)}<select name="d_${e(item.id)}" required>${options({'':'Selecione',...Object.fromEntries(active(item.id).map(d=>[d.id,d.request]))},'')}</select></label>`).join('')}<p class="source">Cada item terá sua própria diligência. Se já existir uma aberta, ela será atualizada.</p></fieldset>`:''}${formEnd('Aplicar')}</form>`);
     bindForm(async fd=>{
       D.assert(current()?.id===proposalId,'A proposta mudou. Abra novamente a ação conjunta.');
       const next=D.clone(state),proposal=next.proposals.find(item=>item.id===proposalId),name=actor();
       const commonNote=String(fd.get('note') || '').trim();
       for(const id of ids){
-        D.assert(proposal.imported.pad.some(item=>item.id===id),'Um item selecionado não consta mais do PAD.');
-        const review=D.reviewOf(proposal,'pad',id),note=commonNote || review.note;
-        if(review.status!==status || review.note!==note || !D.reviewCurrent(proposal,'pad',id))D.setReview(proposal,'pad',id,{...review,status,note},name);
+        D.assert(D.rows(proposal,group).some(item=>item[0]===id),'Um item selecionado não consta mais desta aba.');
+        D.assert(status==='na' || opcoesDoItem(group,id).some(o=>o.valor===status),'Ação indisponível para um dos itens selecionados.');
+        const review=D.reviewOf(proposal,group,id),note=commonNote || review.note;
+        if(review.status!==status || review.note!==note || !D.reviewCurrent(proposal,group,id))D.setReview(proposal,group,id,{...review,status,note},name);
         if(integrated){
-          const linked=proposal.diligences.filter(d=>d.ref==='pad:'+id && !D.diligenceTerminal(d));
+          const linked=proposal.diligences.filter(d=>d.ref===D.canonicalRef(group,id) && !D.diligenceTerminal(d));
           const old=linked.length===1?linked[0]:linked.find(d=>d.id===fd.get('d_'+id));
           D.assert(linked.length<=1 || old,'Selecione a diligência de cada item com mais de uma aberta.');
-          D.saveDiligence(proposal,{...old,id:old?.id || '',ref:'pad:'+id,category:'PLANO DE APLICAÇÃO DETALHADO',request:note,communication:fd.get('communication') || old?.communication || '',science:old?.science || '',response:old?.response || '',status:old?.status || 'aberta',note:String(fd.get('d_note') || '').trim() || old?.note || ''},name);
+          D.saveDiligence(proposal,{...old,id:old?.id || '',ref:D.canonicalRef(group,id),category:group==='pad'?'PLANO DE APLICAÇÃO DETALHADO':'OUTRO',request:note,communication:fd.get('communication') || old?.communication || '',science:old?.science || '',response:old?.response || '',status:old?.status || 'aberta',note:String(fd.get('d_note') || '').trim() || old?.note || ''},name);
         }
       }
-      await persist(next);padBatchItems.clear();padBatchAction='';render();saved(`${action} aplicado a ${items.length} ${items.length===1?'item':'itens'}.`);
+      await persist(next);clearSelection();render();saved(`${action} aplicado a ${items.length} ${items.length===1?'item':'itens'}.`);
     });
   }
   function viewReview(p,group,id,r,label){
