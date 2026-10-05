@@ -1,9 +1,9 @@
-/** Snapshot integral de consulta PROFOR/ONASP 2026. Gerado em 2026-10-05T15:06:02.031Z.
+/** Snapshot integral de consulta PROFOR/ONASP 2026. Gerado em 2026-10-05T16:23:56.027Z.
  * Não editar manualmente. Use tools/build_public_docs.cjs. */
-window.PROFOR_PUBLIC_UPDATED_AT = "2026-10-05T15:06:02.031Z";
+window.PROFOR_PUBLIC_UPDATED_AT = "2026-10-05T16:23:56.027Z";
 window.PROFOR_PUBLIC_DATA = {
   "schemaVersion": 1,
-  "revision": 241,
+  "revision": 243,
   "proposals": [
     {
       "id": "2243618",
@@ -39403,204 +39403,354 @@ window.PROFOR_PUBLIC_DATA = {
         },
         "pad": {
           "17452932": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-05T16:23:10.705Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17452932",
+              "fingerprint": "fnv64-v1:74965c0a733d3cdb"
+            }
           },
           "17452933": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-05T16:22:58.336Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17452933",
+              "fingerprint": "fnv64-v1:d7b2a947f8df0718"
+            }
           },
           "17452934": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-05T16:23:10.705Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17452934",
+              "fingerprint": "fnv64-v1:43e8d8c834f2f1f7"
+            }
           },
           "17452935": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-05T16:23:10.705Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17452935",
+              "fingerprint": "fnv64-v1:89745594bfc78169"
+            }
           },
           "17452936": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-05T16:23:10.705Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17452936",
+              "fingerprint": "fnv64-v1:cfca1ab337545117"
+            }
           },
           "17452937": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-05T16:23:10.705Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17452937",
+              "fingerprint": "fnv64-v1:47ea1b1c661d70f0"
+            }
           },
           "17452938": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-05T16:23:10.705Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17452938",
+              "fingerprint": "fnv64-v1:5f4dec0799655847"
+            }
           },
           "17452939": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-05T16:23:10.705Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17452939",
+              "fingerprint": "fnv64-v1:182a3de2583733ca"
+            }
           },
           "17452940": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-05T16:23:10.705Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17452940",
+              "fingerprint": "fnv64-v1:7a8c1ed2e1c61713"
+            }
           },
           "17452941": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-05T16:23:10.705Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17452941",
+              "fingerprint": "fnv64-v1:865d9a05264eb9d2"
+            }
           },
           "17452942": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-05T16:23:10.705Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17452942",
+              "fingerprint": "fnv64-v1:02354f9f8c08902a"
+            }
           },
           "17452943": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-05T16:23:10.705Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17452943",
+              "fingerprint": "fnv64-v1:9475bd98dc00e4dc"
+            }
           },
           "17452944": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-05T16:23:10.705Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17452944",
+              "fingerprint": "fnv64-v1:897d0590bffe0899"
+            }
           },
           "17452945": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-05T16:23:10.705Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17452945",
+              "fingerprint": "fnv64-v1:c04726cbd7141fd9"
+            }
           },
           "17452946": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-05T16:23:10.705Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17452946",
+              "fingerprint": "fnv64-v1:3938d7bf2c67edde"
+            }
           },
           "17452947": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-05T16:23:10.705Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17452947",
+              "fingerprint": "fnv64-v1:ef263be1c640c026"
+            }
           },
           "17452948": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-05T16:23:10.705Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17452948",
+              "fingerprint": "fnv64-v1:e8346f930d7e1841"
+            }
           },
           "17452949": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-05T16:23:10.705Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17452949",
+              "fingerprint": "fnv64-v1:1ce9dc405c63b1cf"
+            }
           },
           "17452950": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-05T16:23:10.705Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17452950",
+              "fingerprint": "fnv64-v1:10334052e9a6dece"
+            }
           },
           "17452951": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-05T16:23:10.705Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17452951",
+              "fingerprint": "fnv64-v1:979bc69a59ffa1f1"
+            }
           },
           "17452952": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-05T16:23:10.705Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17452952",
+              "fingerprint": "fnv64-v1:8170d0acef632bb6"
+            }
           },
           "17452953": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-05T16:23:10.705Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17452953",
+              "fingerprint": "fnv64-v1:4c2162efa0085547"
+            }
           },
           "17452954": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-05T16:23:10.705Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17452954",
+              "fingerprint": "fnv64-v1:82f85b07c66422d0"
+            }
           },
           "17452955": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-05T16:23:10.705Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17452955",
+              "fingerprint": "fnv64-v1:940ee0a92053f3c5"
+            }
           },
           "17452956": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-05T16:23:10.705Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17452956",
+              "fingerprint": "fnv64-v1:658cc3a3e00bdb53"
+            }
           }
         }
       },
@@ -39892,6 +40042,681 @@ window.PROFOR_PUBLIC_DATA = {
           },
           "after": {
             "at": "2026-10-05T13:42:43.023Z"
+          }
+        },
+        {
+          "at": "2026-10-05T16:22:58.339Z",
+          "event": "Avaliação: pad / 17452933",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T16:22:58.336Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17452933",
+              "fingerprint": "fnv64-v1:d7b2a947f8df0718"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T16:23:10.705Z",
+          "event": "Avaliação: pad / 17452954",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T16:23:10.705Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17452954",
+              "fingerprint": "fnv64-v1:82f85b07c66422d0"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T16:23:10.705Z",
+          "event": "Avaliação: pad / 17452947",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T16:23:10.705Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17452947",
+              "fingerprint": "fnv64-v1:ef263be1c640c026"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T16:23:10.705Z",
+          "event": "Avaliação: pad / 17452949",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T16:23:10.705Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17452949",
+              "fingerprint": "fnv64-v1:1ce9dc405c63b1cf"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T16:23:10.705Z",
+          "event": "Avaliação: pad / 17452948",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T16:23:10.705Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17452948",
+              "fingerprint": "fnv64-v1:e8346f930d7e1841"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T16:23:10.705Z",
+          "event": "Avaliação: pad / 17452951",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T16:23:10.705Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17452951",
+              "fingerprint": "fnv64-v1:979bc69a59ffa1f1"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T16:23:10.705Z",
+          "event": "Avaliação: pad / 17452955",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T16:23:10.705Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17452955",
+              "fingerprint": "fnv64-v1:940ee0a92053f3c5"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T16:23:10.705Z",
+          "event": "Avaliação: pad / 17452938",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T16:23:10.705Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17452938",
+              "fingerprint": "fnv64-v1:5f4dec0799655847"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T16:23:10.705Z",
+          "event": "Avaliação: pad / 17452953",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T16:23:10.705Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17452953",
+              "fingerprint": "fnv64-v1:4c2162efa0085547"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T16:23:10.705Z",
+          "event": "Avaliação: pad / 17452934",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T16:23:10.705Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17452934",
+              "fingerprint": "fnv64-v1:43e8d8c834f2f1f7"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T16:23:10.705Z",
+          "event": "Avaliação: pad / 17452950",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T16:23:10.705Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17452950",
+              "fingerprint": "fnv64-v1:10334052e9a6dece"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T16:23:10.705Z",
+          "event": "Avaliação: pad / 17452952",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T16:23:10.705Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17452952",
+              "fingerprint": "fnv64-v1:8170d0acef632bb6"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T16:23:10.705Z",
+          "event": "Avaliação: pad / 17452932",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T16:23:10.705Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17452932",
+              "fingerprint": "fnv64-v1:74965c0a733d3cdb"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T16:23:10.705Z",
+          "event": "Avaliação: pad / 17452942",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T16:23:10.705Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17452942",
+              "fingerprint": "fnv64-v1:02354f9f8c08902a"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T16:23:10.705Z",
+          "event": "Avaliação: pad / 17452956",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T16:23:10.705Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17452956",
+              "fingerprint": "fnv64-v1:658cc3a3e00bdb53"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T16:23:10.705Z",
+          "event": "Avaliação: pad / 17452941",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T16:23:10.705Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17452941",
+              "fingerprint": "fnv64-v1:865d9a05264eb9d2"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T16:23:10.705Z",
+          "event": "Avaliação: pad / 17452939",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T16:23:10.705Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17452939",
+              "fingerprint": "fnv64-v1:182a3de2583733ca"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T16:23:10.705Z",
+          "event": "Avaliação: pad / 17452937",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T16:23:10.705Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17452937",
+              "fingerprint": "fnv64-v1:47ea1b1c661d70f0"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T16:23:10.705Z",
+          "event": "Avaliação: pad / 17452940",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T16:23:10.705Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17452940",
+              "fingerprint": "fnv64-v1:7a8c1ed2e1c61713"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T16:23:10.705Z",
+          "event": "Avaliação: pad / 17452943",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T16:23:10.705Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17452943",
+              "fingerprint": "fnv64-v1:9475bd98dc00e4dc"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T16:23:10.705Z",
+          "event": "Avaliação: pad / 17452945",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T16:23:10.705Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17452945",
+              "fingerprint": "fnv64-v1:c04726cbd7141fd9"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T16:23:10.705Z",
+          "event": "Avaliação: pad / 17452946",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T16:23:10.705Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17452946",
+              "fingerprint": "fnv64-v1:3938d7bf2c67edde"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T16:23:10.705Z",
+          "event": "Avaliação: pad / 17452944",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T16:23:10.705Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17452944",
+              "fingerprint": "fnv64-v1:897d0590bffe0899"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T16:23:10.705Z",
+          "event": "Avaliação: pad / 17452936",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T16:23:10.705Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17452936",
+              "fingerprint": "fnv64-v1:cfca1ab337545117"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T16:23:10.705Z",
+          "event": "Avaliação: pad / 17452935",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T16:23:10.705Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17452935",
+              "fingerprint": "fnv64-v1:89745594bfc78169"
+            }
           }
         }
       ],
