@@ -1,9 +1,9 @@
-/** Snapshot integral de consulta PROFOR/ONASP 2026. Gerado em 2026-10-05T16:23:56.027Z.
+/** Snapshot integral de consulta PROFOR/ONASP 2026. Gerado em 2026-10-05T17:27:58.396Z.
  * Não editar manualmente. Use tools/build_public_docs.cjs. */
-window.PROFOR_PUBLIC_UPDATED_AT = "2026-10-05T16:23:56.027Z";
+window.PROFOR_PUBLIC_UPDATED_AT = "2026-10-05T17:27:58.396Z";
 window.PROFOR_PUBLIC_DATA = {
   "schemaVersion": 1,
-  "revision": 243,
+  "revision": 253,
   "proposals": [
     {
       "id": "2243618",
@@ -36257,11 +36257,11 @@ window.PROFOR_PUBLIC_DATA = {
         },
         "pad": {
           "17455008": {
-            "status": "diligencia",
+            "status": "ok",
             "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
             "document": "",
             "url": "",
-            "at": "2026-10-02T17:29:11.520Z",
+            "at": "2026-10-05T17:27:17.318Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
@@ -36271,11 +36271,11 @@ window.PROFOR_PUBLIC_DATA = {
             }
           },
           "17455011": {
-            "status": "diligencia",
+            "status": "ok",
             "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
             "document": "",
             "url": "",
-            "at": "2026-10-02T17:29:11.521Z",
+            "at": "2026-10-05T17:27:17.318Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
@@ -36285,11 +36285,11 @@ window.PROFOR_PUBLIC_DATA = {
             }
           },
           "17455013": {
-            "status": "diligencia",
+            "status": "ok",
             "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
             "document": "",
             "url": "",
-            "at": "2026-10-02T17:29:11.519Z",
+            "at": "2026-10-05T17:27:17.318Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
@@ -36299,11 +36299,11 @@ window.PROFOR_PUBLIC_DATA = {
             }
           },
           "17455015": {
-            "status": "diligencia",
+            "status": "ok",
             "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
             "document": "",
             "url": "",
-            "at": "2026-10-02T17:29:11.522Z",
+            "at": "2026-10-05T17:27:17.318Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
@@ -36313,11 +36313,11 @@ window.PROFOR_PUBLIC_DATA = {
             }
           },
           "17455016": {
-            "status": "diligencia",
+            "status": "ok",
             "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
             "document": "",
             "url": "",
-            "at": "2026-10-02T17:29:11.477Z",
+            "at": "2026-10-05T16:59:50.882Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
@@ -36327,11 +36327,11 @@ window.PROFOR_PUBLIC_DATA = {
             }
           },
           "17455017": {
-            "status": "diligencia",
+            "status": "ok",
             "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
             "document": "",
             "url": "",
-            "at": "2026-10-02T17:29:11.523Z",
+            "at": "2026-10-05T17:27:17.318Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
@@ -36341,11 +36341,11 @@ window.PROFOR_PUBLIC_DATA = {
             }
           },
           "17455019": {
-            "status": "diligencia",
+            "status": "ok",
             "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
             "document": "",
             "url": "",
-            "at": "2026-10-02T17:29:11.518Z",
+            "at": "2026-10-05T17:26:32.071Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
@@ -36356,10 +36356,10 @@ window.PROFOR_PUBLIC_DATA = {
           },
           "17455022": {
             "status": "diligencia",
-            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "note": "No item “Cabo de rede”, os preços comprovados nas imagens divergem dos valores utilizados na memória de cálculo da pesquisa mercadológica e, consequentemente, do valor médio unitário registrado no Plano de Aplicação Detalhado. Conferir e corrigir a memória de cálculo com base nos três preços efetivamente comprovados, incluindo os fretes considerados, recalcular a média e atualizar o valor correspondente no PAD.",
             "document": "",
             "url": "",
-            "at": "2026-10-02T17:29:11.511Z",
+            "at": "2026-10-05T17:22:28.241Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
@@ -36369,11 +36369,11 @@ window.PROFOR_PUBLIC_DATA = {
             }
           },
           "17455024": {
-            "status": "diligencia",
+            "status": "ok",
             "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
             "document": "",
             "url": "",
-            "at": "2026-10-02T17:29:11.488Z",
+            "at": "2026-10-05T17:27:17.318Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
@@ -36384,10 +36384,10 @@ window.PROFOR_PUBLIC_DATA = {
           },
           "17455025": {
             "status": "diligencia",
-            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "note": "No item “Ar-condicionado”, o preço de R$ 1.689,67 utilizado na memória de cálculo não foi identificado nos comprovantes da pesquisa mercadológica apresentada. Apresentar o comprovante desse valor ou corrigir a memória de cálculo com base nos preços efetivamente comprovados, incluindo os fretes considerados. Após a correção, recalcular a média dos três preços e atualizar o valor médio unitário no Plano de Aplicação Detalhado.",
             "document": "",
             "url": "",
-            "at": "2026-10-02T17:29:11.517Z",
+            "at": "2026-10-05T17:24:56.732Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
@@ -36397,11 +36397,11 @@ window.PROFOR_PUBLIC_DATA = {
             }
           },
           "17455026": {
-            "status": "diligencia",
+            "status": "ok",
             "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
             "document": "",
             "url": "",
-            "at": "2026-10-02T17:29:11.492Z",
+            "at": "2026-10-05T17:27:17.318Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
@@ -36411,11 +36411,11 @@ window.PROFOR_PUBLIC_DATA = {
             }
           },
           "17455028": {
-            "status": "diligencia",
+            "status": "ok",
             "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
             "document": "",
             "url": "",
-            "at": "2026-10-02T17:29:11.486Z",
+            "at": "2026-10-05T17:27:17.318Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
@@ -36426,10 +36426,10 @@ window.PROFOR_PUBLIC_DATA = {
           },
           "17455030": {
             "status": "diligencia",
-            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "note": "No item “Fogão por indução”, os preços de R$ 1.775,80 (R$ 1.683,90 mais R$ 91,90 de frete) e de R$ 949,00 estão comprovados na pesquisa apresentada. Entretanto, o preço de R$ 907,09 utilizado na composição não foi identificado no respectivo comprovante, que apresenta R$ 874,90 à vista ou R$ 930,74 a prazo. Apresentar o comprovante do valor de R$ 907,09 ou corrigir esse preço na composição, utilizando o valor efetivamente comprovado. Após a correção, recalcular a média dos três preços e atualizar o valor médio unitário no Plano de Aplicação Detalhado.",
             "document": "",
             "url": "",
-            "at": "2026-10-02T17:29:11.483Z",
+            "at": "2026-10-05T17:06:22.132Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
@@ -36439,11 +36439,11 @@ window.PROFOR_PUBLIC_DATA = {
             }
           },
           "17455031": {
-            "status": "diligencia",
+            "status": "ok",
             "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
             "document": "",
             "url": "",
-            "at": "2026-10-02T17:29:11.481Z",
+            "at": "2026-10-05T17:27:17.318Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
@@ -36453,11 +36453,11 @@ window.PROFOR_PUBLIC_DATA = {
             }
           },
           "17455032": {
-            "status": "diligencia",
+            "status": "ok",
             "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
             "document": "",
             "url": "",
-            "at": "2026-10-02T17:29:11.485Z",
+            "at": "2026-10-05T17:27:17.318Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
@@ -36467,11 +36467,11 @@ window.PROFOR_PUBLIC_DATA = {
             }
           },
           "17455036": {
-            "status": "diligencia",
+            "status": "ok",
             "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
             "document": "",
             "url": "",
-            "at": "2026-10-02T17:29:11.490Z",
+            "at": "2026-10-05T17:27:17.318Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
@@ -36481,11 +36481,11 @@ window.PROFOR_PUBLIC_DATA = {
             }
           },
           "17455038": {
-            "status": "diligencia",
+            "status": "ok",
             "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
             "document": "",
             "url": "",
-            "at": "2026-10-02T17:29:11.494Z",
+            "at": "2026-10-05T16:43:53.320Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
@@ -36495,11 +36495,11 @@ window.PROFOR_PUBLIC_DATA = {
             }
           },
           "17455039": {
-            "status": "diligencia",
+            "status": "ok",
             "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
             "document": "",
             "url": "",
-            "at": "2026-10-02T17:29:11.508Z",
+            "at": "2026-10-05T17:27:17.318Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
@@ -36509,11 +36509,11 @@ window.PROFOR_PUBLIC_DATA = {
             }
           },
           "17455041": {
-            "status": "diligencia",
+            "status": "ok",
             "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
             "document": "",
             "url": "",
-            "at": "2026-10-02T17:29:11.514Z",
+            "at": "2026-10-05T17:27:17.318Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
@@ -36523,11 +36523,11 @@ window.PROFOR_PUBLIC_DATA = {
             }
           },
           "17455048": {
-            "status": "diligencia",
+            "status": "ok",
             "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
             "document": "",
             "url": "",
-            "at": "2026-10-02T17:29:11.516Z",
+            "at": "2026-10-05T17:27:17.318Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
@@ -36537,11 +36537,11 @@ window.PROFOR_PUBLIC_DATA = {
             }
           },
           "17455049": {
-            "status": "diligencia",
+            "status": "ok",
             "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
             "document": "",
             "url": "",
-            "at": "2026-10-02T17:29:11.504Z",
+            "at": "2026-10-05T17:27:17.318Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
@@ -36551,11 +36551,11 @@ window.PROFOR_PUBLIC_DATA = {
             }
           },
           "17455070": {
-            "status": "diligencia",
+            "status": "ok",
             "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
             "document": "",
             "url": "",
-            "at": "2026-10-02T17:29:11.499Z",
+            "at": "2026-10-05T17:18:25.844Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
@@ -36565,11 +36565,11 @@ window.PROFOR_PUBLIC_DATA = {
             }
           },
           "17455103": {
-            "status": "diligencia",
+            "status": "ok",
             "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
             "document": "",
             "url": "",
-            "at": "2026-10-02T17:29:11.497Z",
+            "at": "2026-10-05T17:27:17.318Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
@@ -36579,11 +36579,11 @@ window.PROFOR_PUBLIC_DATA = {
             }
           },
           "17455104": {
-            "status": "diligencia",
+            "status": "ok",
             "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
             "document": "",
             "url": "",
-            "at": "2026-10-02T17:29:11.501Z",
+            "at": "2026-10-05T17:27:17.318Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
@@ -36594,10 +36594,10 @@ window.PROFOR_PUBLIC_DATA = {
           },
           "17455748": {
             "status": "diligencia",
-            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "note": "Remover o item “Sanduicheira” da última linha do Plano de Aplicação Detalhado, com valor unitário de R$ 199,98, por duplicidade. Já consta no plano o mesmo item com valor unitário de R$ 194,11, compatível com a pesquisa de preços apresentada, que deverá permanecer.",
             "document": "",
             "url": "",
-            "at": "2026-10-02T17:29:11.525Z",
+            "at": "2026-10-05T16:44:26.460Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
@@ -36647,13 +36647,13 @@ window.PROFOR_PUBLIC_DATA = {
           "id": "4c921844-5a2b-450e-88db-768d940e2feb",
           "ref": "pad:17455030",
           "category": "PLANO DE APLICAÇÃO DETALHADO",
-          "request": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+          "request": "No item “Fogão por indução”, os preços de R$ 1.775,80 (R$ 1.683,90 mais R$ 91,90 de frete) e de R$ 949,00 estão comprovados na pesquisa apresentada. Entretanto, o preço de R$ 907,09 utilizado na composição não foi identificado no respectivo comprovante, que apresenta R$ 874,90 à vista ou R$ 930,74 a prazo. Apresentar o comprovante do valor de R$ 907,09 ou corrigir esse preço na composição, utilizando o valor efetivamente comprovado. Após a correção, recalcular a média dos três preços e atualizar o valor médio unitário no Plano de Aplicação Detalhado.",
           "communication": "2026-10-02",
           "science": "",
           "response": "",
           "status": "aberta",
           "note": "",
-          "at": "2026-10-02T17:29:11.483Z",
+          "at": "2026-10-05T17:06:22.132Z",
           "base": "2026-10-12",
           "due": "2026-10-12",
           "automaticDeadline": true,
@@ -36851,13 +36851,13 @@ window.PROFOR_PUBLIC_DATA = {
           "id": "e4a915f5-660c-45a1-9151-dbef76cbf9fa",
           "ref": "pad:17455022",
           "category": "PLANO DE APLICAÇÃO DETALHADO",
-          "request": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+          "request": "No item “Cabo de rede”, os preços comprovados nas imagens divergem dos valores utilizados na memória de cálculo da pesquisa mercadológica e, consequentemente, do valor médio unitário registrado no Plano de Aplicação Detalhado. Conferir e corrigir a memória de cálculo com base nos três preços efetivamente comprovados, incluindo os fretes considerados, recalcular a média e atualizar o valor correspondente no PAD.",
           "communication": "2026-10-02",
           "science": "",
           "response": "",
           "status": "aberta",
           "note": "",
-          "at": "2026-10-02T17:29:11.511Z",
+          "at": "2026-10-05T17:22:28.242Z",
           "base": "2026-10-12",
           "due": "2026-10-12",
           "automaticDeadline": true,
@@ -36902,13 +36902,13 @@ window.PROFOR_PUBLIC_DATA = {
           "id": "1eb0a778-dbf5-40f0-b6d9-4f36330ab514",
           "ref": "pad:17455025",
           "category": "PLANO DE APLICAÇÃO DETALHADO",
-          "request": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+          "request": "No item “Ar-condicionado”, o preço de R$ 1.689,67 utilizado na memória de cálculo não foi identificado nos comprovantes da pesquisa mercadológica apresentada. Apresentar o comprovante desse valor ou corrigir a memória de cálculo com base nos preços efetivamente comprovados, incluindo os fretes considerados. Após a correção, recalcular a média dos três preços e atualizar o valor médio unitário no Plano de Aplicação Detalhado.",
           "communication": "2026-10-02",
           "science": "",
           "response": "",
           "status": "aberta",
           "note": "",
-          "at": "2026-10-02T17:29:11.517Z",
+          "at": "2026-10-05T17:24:56.732Z",
           "base": "2026-10-12",
           "due": "2026-10-12",
           "automaticDeadline": true,
@@ -37021,15 +37021,15 @@ window.PROFOR_PUBLIC_DATA = {
           "id": "9f36fb24-b026-4ef6-b02b-ebd029c1a5af",
           "ref": "pad:17455748",
           "category": "PLANO DE APLICAÇÃO DETALHADO",
-          "request": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
-          "communication": "2026-10-02",
+          "request": "Remover o item “Sanduicheira” da última linha do Plano de Aplicação Detalhado, com valor unitário de R$ 199,98, por duplicidade. Já consta no plano o mesmo item com valor unitário de R$ 194,11, compatível com a pesquisa de preços apresentada, que deverá permanecer.",
+          "communication": "2026-10-05",
           "science": "",
           "response": "",
           "status": "aberta",
           "note": "",
-          "at": "2026-10-02T17:29:11.525Z",
-          "base": "2026-10-12",
-          "due": "2026-10-12",
+          "at": "2026-10-05T16:44:26.461Z",
+          "base": "2026-10-15",
+          "due": "2026-10-15",
           "automaticDeadline": true,
           "confirmed": false,
           "calendarNote": ""
@@ -38594,6 +38594,1812 @@ window.PROFOR_PUBLIC_DATA = {
           },
           "after": {
             "at": "2026-10-05T13:42:43.023Z"
+          }
+        },
+        {
+          "at": "2026-10-05T16:25:53.609Z",
+          "event": "Avaliação: pad / 17455016",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-02T17:29:11.477Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455016",
+              "fingerprint": "fnv64-v1:8d7141dc5d55b374"
+            }
+          },
+          "after": {
+            "status": "na",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T16:25:53.609Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455016",
+              "fingerprint": "fnv64-v1:8d7141dc5d55b374"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T16:25:53.609Z",
+          "event": "Avaliação: pad / 17455031",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-02T17:29:11.481Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455031",
+              "fingerprint": "fnv64-v1:8801ac3ef976ac28"
+            }
+          },
+          "after": {
+            "status": "na",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T16:25:53.609Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455031",
+              "fingerprint": "fnv64-v1:8801ac3ef976ac28"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T16:25:53.609Z",
+          "event": "Avaliação: pad / 17455030",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-02T17:29:11.483Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455030",
+              "fingerprint": "fnv64-v1:00d6d88301edc28b"
+            }
+          },
+          "after": {
+            "status": "na",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T16:25:53.609Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455030",
+              "fingerprint": "fnv64-v1:00d6d88301edc28b"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T16:25:53.609Z",
+          "event": "Avaliação: pad / 17455032",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-02T17:29:11.485Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455032",
+              "fingerprint": "fnv64-v1:2173db87db0c0561"
+            }
+          },
+          "after": {
+            "status": "na",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T16:25:53.609Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455032",
+              "fingerprint": "fnv64-v1:2173db87db0c0561"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T16:25:53.609Z",
+          "event": "Avaliação: pad / 17455028",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-02T17:29:11.486Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455028",
+              "fingerprint": "fnv64-v1:ed327f1ac0675027"
+            }
+          },
+          "after": {
+            "status": "na",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T16:25:53.609Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455028",
+              "fingerprint": "fnv64-v1:ed327f1ac0675027"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T16:25:53.609Z",
+          "event": "Avaliação: pad / 17455024",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-02T17:29:11.488Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455024",
+              "fingerprint": "fnv64-v1:6a0ae8991cccec42"
+            }
+          },
+          "after": {
+            "status": "na",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T16:25:53.609Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455024",
+              "fingerprint": "fnv64-v1:6a0ae8991cccec42"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T16:25:53.609Z",
+          "event": "Avaliação: pad / 17455036",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-02T17:29:11.490Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455036",
+              "fingerprint": "fnv64-v1:cb16e94d33184a79"
+            }
+          },
+          "after": {
+            "status": "na",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T16:25:53.609Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455036",
+              "fingerprint": "fnv64-v1:cb16e94d33184a79"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T16:25:53.609Z",
+          "event": "Avaliação: pad / 17455026",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-02T17:29:11.492Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455026",
+              "fingerprint": "fnv64-v1:e4a635d1e7467180"
+            }
+          },
+          "after": {
+            "status": "na",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T16:25:53.609Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455026",
+              "fingerprint": "fnv64-v1:e4a635d1e7467180"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T16:25:53.609Z",
+          "event": "Avaliação: pad / 17455038",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-02T17:29:11.494Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455038",
+              "fingerprint": "fnv64-v1:48f26938b5a42867"
+            }
+          },
+          "after": {
+            "status": "na",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T16:25:53.609Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455038",
+              "fingerprint": "fnv64-v1:48f26938b5a42867"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T16:25:53.609Z",
+          "event": "Avaliação: pad / 17455103",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-02T17:29:11.497Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455103",
+              "fingerprint": "fnv64-v1:99eac077ab673393"
+            }
+          },
+          "after": {
+            "status": "na",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T16:25:53.609Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455103",
+              "fingerprint": "fnv64-v1:99eac077ab673393"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T16:25:53.609Z",
+          "event": "Avaliação: pad / 17455070",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-02T17:29:11.499Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455070",
+              "fingerprint": "fnv64-v1:f7c90f8d24b900ad"
+            }
+          },
+          "after": {
+            "status": "na",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T16:25:53.609Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455070",
+              "fingerprint": "fnv64-v1:f7c90f8d24b900ad"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T16:25:53.609Z",
+          "event": "Avaliação: pad / 17455104",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-02T17:29:11.501Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455104",
+              "fingerprint": "fnv64-v1:8507a389718e6d6a"
+            }
+          },
+          "after": {
+            "status": "na",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T16:25:53.609Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455104",
+              "fingerprint": "fnv64-v1:8507a389718e6d6a"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T16:25:53.609Z",
+          "event": "Avaliação: pad / 17455049",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-02T17:29:11.504Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455049",
+              "fingerprint": "fnv64-v1:a5f61ac90a872bdb"
+            }
+          },
+          "after": {
+            "status": "na",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T16:25:53.609Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455049",
+              "fingerprint": "fnv64-v1:a5f61ac90a872bdb"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T16:25:53.609Z",
+          "event": "Avaliação: pad / 17455039",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-02T17:29:11.508Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455039",
+              "fingerprint": "fnv64-v1:11d6b7b01d211ca1"
+            }
+          },
+          "after": {
+            "status": "na",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T16:25:53.609Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455039",
+              "fingerprint": "fnv64-v1:11d6b7b01d211ca1"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T16:25:53.609Z",
+          "event": "Avaliação: pad / 17455022",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-02T17:29:11.511Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455022",
+              "fingerprint": "fnv64-v1:64d40dda438fd654"
+            }
+          },
+          "after": {
+            "status": "na",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T16:25:53.609Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455022",
+              "fingerprint": "fnv64-v1:64d40dda438fd654"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T16:25:53.609Z",
+          "event": "Avaliação: pad / 17455041",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-02T17:29:11.514Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455041",
+              "fingerprint": "fnv64-v1:e2dcf1995bd4388c"
+            }
+          },
+          "after": {
+            "status": "na",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T16:25:53.609Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455041",
+              "fingerprint": "fnv64-v1:e2dcf1995bd4388c"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T16:25:53.609Z",
+          "event": "Avaliação: pad / 17455048",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-02T17:29:11.516Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455048",
+              "fingerprint": "fnv64-v1:7de13bc81a8c0a5c"
+            }
+          },
+          "after": {
+            "status": "na",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T16:25:53.609Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455048",
+              "fingerprint": "fnv64-v1:7de13bc81a8c0a5c"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T16:25:53.609Z",
+          "event": "Avaliação: pad / 17455025",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-02T17:29:11.517Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455025",
+              "fingerprint": "fnv64-v1:3a556d43fa354fb6"
+            }
+          },
+          "after": {
+            "status": "na",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T16:25:53.609Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455025",
+              "fingerprint": "fnv64-v1:3a556d43fa354fb6"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T16:25:53.609Z",
+          "event": "Avaliação: pad / 17455019",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-02T17:29:11.518Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455019",
+              "fingerprint": "fnv64-v1:2ffdbbba8d1affeb"
+            }
+          },
+          "after": {
+            "status": "na",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T16:25:53.609Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455019",
+              "fingerprint": "fnv64-v1:2ffdbbba8d1affeb"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T16:25:53.610Z",
+          "event": "Avaliação: pad / 17455013",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-02T17:29:11.519Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455013",
+              "fingerprint": "fnv64-v1:4f33335c91ef7b44"
+            }
+          },
+          "after": {
+            "status": "na",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T16:25:53.609Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455013",
+              "fingerprint": "fnv64-v1:4f33335c91ef7b44"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T16:25:53.610Z",
+          "event": "Avaliação: pad / 17455008",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-02T17:29:11.520Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455008",
+              "fingerprint": "fnv64-v1:3c029a3499537f72"
+            }
+          },
+          "after": {
+            "status": "na",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T16:25:53.610Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455008",
+              "fingerprint": "fnv64-v1:3c029a3499537f72"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T16:25:53.610Z",
+          "event": "Avaliação: pad / 17455011",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-02T17:29:11.521Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455011",
+              "fingerprint": "fnv64-v1:c05551ec9783afa4"
+            }
+          },
+          "after": {
+            "status": "na",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T16:25:53.610Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455011",
+              "fingerprint": "fnv64-v1:c05551ec9783afa4"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T16:25:53.610Z",
+          "event": "Avaliação: pad / 17455015",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-02T17:29:11.522Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455015",
+              "fingerprint": "fnv64-v1:357428fc6a940f53"
+            }
+          },
+          "after": {
+            "status": "na",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T16:25:53.610Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455015",
+              "fingerprint": "fnv64-v1:357428fc6a940f53"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T16:25:53.610Z",
+          "event": "Avaliação: pad / 17455017",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-02T17:29:11.523Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455017",
+              "fingerprint": "fnv64-v1:a96979d7b8653a40"
+            }
+          },
+          "after": {
+            "status": "na",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T16:25:53.610Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455017",
+              "fingerprint": "fnv64-v1:a96979d7b8653a40"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T16:25:53.610Z",
+          "event": "Avaliação: pad / 17455748",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-02T17:29:11.525Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455748",
+              "fingerprint": "fnv64-v1:5786c6f55ec44c45"
+            }
+          },
+          "after": {
+            "status": "na",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T16:25:53.610Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455748",
+              "fingerprint": "fnv64-v1:5786c6f55ec44c45"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T16:43:53.320Z",
+          "event": "Avaliação: pad / 17455038",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T16:25:53.609Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455038",
+              "fingerprint": "fnv64-v1:48f26938b5a42867"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T16:43:53.320Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455038",
+              "fingerprint": "fnv64-v1:48f26938b5a42867"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T16:44:26.461Z",
+          "event": "Avaliação: pad / 17455748",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T16:25:53.610Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455748",
+              "fingerprint": "fnv64-v1:5786c6f55ec44c45"
+            }
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Remover o item “Sanduicheira” da última linha do Plano de Aplicação Detalhado, com valor unitário de R$ 199,98, por duplicidade. Já consta no plano o mesmo item com valor unitário de R$ 194,11, compatível com a pesquisa de preços apresentada, que deverá permanecer.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T16:44:26.460Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455748",
+              "fingerprint": "fnv64-v1:5786c6f55ec44c45"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T16:44:26.467Z",
+          "event": "Diligência atualizada",
+          "actor": "Usuário local",
+          "before": {
+            "id": "9f36fb24-b026-4ef6-b02b-ebd029c1a5af",
+            "ref": "pad:17455748",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "communication": "2026-10-02",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-02T17:29:11.525Z",
+            "base": "2026-10-12",
+            "due": "2026-10-12",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          },
+          "after": {
+            "id": "9f36fb24-b026-4ef6-b02b-ebd029c1a5af",
+            "ref": "pad:17455748",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Remover o item “Sanduicheira” da última linha do Plano de Aplicação Detalhado, com valor unitário de R$ 199,98, por duplicidade. Já consta no plano o mesmo item com valor unitário de R$ 194,11, compatível com a pesquisa de preços apresentada, que deverá permanecer.",
+            "communication": "2026-10-05",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-05T16:44:26.461Z",
+            "base": "2026-10-15",
+            "due": "2026-10-15",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-05T16:59:50.882Z",
+          "event": "Avaliação: pad / 17455016",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T16:25:53.609Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455016",
+              "fingerprint": "fnv64-v1:8d7141dc5d55b374"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T16:59:50.882Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455016",
+              "fingerprint": "fnv64-v1:8d7141dc5d55b374"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T17:06:22.132Z",
+          "event": "Avaliação: pad / 17455030",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T16:25:53.609Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455030",
+              "fingerprint": "fnv64-v1:00d6d88301edc28b"
+            }
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "No item “Fogão por indução”, os preços de R$ 1.775,80 (R$ 1.683,90 mais R$ 91,90 de frete) e de R$ 949,00 estão comprovados na pesquisa apresentada. Entretanto, o preço de R$ 907,09 utilizado na composição não foi identificado no respectivo comprovante, que apresenta R$ 874,90 à vista ou R$ 930,74 a prazo. Apresentar o comprovante do valor de R$ 907,09 ou corrigir esse preço na composição, utilizando o valor efetivamente comprovado. Após a correção, recalcular a média dos três preços e atualizar o valor médio unitário no Plano de Aplicação Detalhado.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T17:06:22.132Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455030",
+              "fingerprint": "fnv64-v1:00d6d88301edc28b"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T17:06:22.137Z",
+          "event": "Diligência atualizada",
+          "actor": "Usuário local",
+          "before": {
+            "id": "4c921844-5a2b-450e-88db-768d940e2feb",
+            "ref": "pad:17455030",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "communication": "2026-10-02",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-02T17:29:11.483Z",
+            "base": "2026-10-12",
+            "due": "2026-10-12",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          },
+          "after": {
+            "id": "4c921844-5a2b-450e-88db-768d940e2feb",
+            "ref": "pad:17455030",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "No item “Fogão por indução”, os preços de R$ 1.775,80 (R$ 1.683,90 mais R$ 91,90 de frete) e de R$ 949,00 estão comprovados na pesquisa apresentada. Entretanto, o preço de R$ 907,09 utilizado na composição não foi identificado no respectivo comprovante, que apresenta R$ 874,90 à vista ou R$ 930,74 a prazo. Apresentar o comprovante do valor de R$ 907,09 ou corrigir esse preço na composição, utilizando o valor efetivamente comprovado. Após a correção, recalcular a média dos três preços e atualizar o valor médio unitário no Plano de Aplicação Detalhado.",
+            "communication": "2026-10-02",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-05T17:06:22.132Z",
+            "base": "2026-10-12",
+            "due": "2026-10-12",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-05T17:18:25.844Z",
+          "event": "Avaliação: pad / 17455070",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T16:25:53.609Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455070",
+              "fingerprint": "fnv64-v1:f7c90f8d24b900ad"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T17:18:25.844Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455070",
+              "fingerprint": "fnv64-v1:f7c90f8d24b900ad"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T17:22:28.241Z",
+          "event": "Avaliação: pad / 17455022",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T16:25:53.609Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455022",
+              "fingerprint": "fnv64-v1:64d40dda438fd654"
+            }
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "No item “Cabo de rede”, os preços comprovados nas imagens divergem dos valores utilizados na memória de cálculo da pesquisa mercadológica e, consequentemente, do valor médio unitário registrado no Plano de Aplicação Detalhado. Conferir e corrigir a memória de cálculo com base nos três preços efetivamente comprovados, incluindo os fretes considerados, recalcular a média e atualizar o valor correspondente no PAD.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T17:22:28.241Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455022",
+              "fingerprint": "fnv64-v1:64d40dda438fd654"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T17:22:28.244Z",
+          "event": "Diligência atualizada",
+          "actor": "Usuário local",
+          "before": {
+            "id": "e4a915f5-660c-45a1-9151-dbef76cbf9fa",
+            "ref": "pad:17455022",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "communication": "2026-10-02",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-02T17:29:11.511Z",
+            "base": "2026-10-12",
+            "due": "2026-10-12",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          },
+          "after": {
+            "id": "e4a915f5-660c-45a1-9151-dbef76cbf9fa",
+            "ref": "pad:17455022",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "No item “Cabo de rede”, os preços comprovados nas imagens divergem dos valores utilizados na memória de cálculo da pesquisa mercadológica e, consequentemente, do valor médio unitário registrado no Plano de Aplicação Detalhado. Conferir e corrigir a memória de cálculo com base nos três preços efetivamente comprovados, incluindo os fretes considerados, recalcular a média e atualizar o valor correspondente no PAD.",
+            "communication": "2026-10-02",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-05T17:22:28.242Z",
+            "base": "2026-10-12",
+            "due": "2026-10-12",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-05T17:24:56.732Z",
+          "event": "Avaliação: pad / 17455025",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T16:25:53.609Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455025",
+              "fingerprint": "fnv64-v1:3a556d43fa354fb6"
+            }
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "No item “Ar-condicionado”, o preço de R$ 1.689,67 utilizado na memória de cálculo não foi identificado nos comprovantes da pesquisa mercadológica apresentada. Apresentar o comprovante desse valor ou corrigir a memória de cálculo com base nos preços efetivamente comprovados, incluindo os fretes considerados. Após a correção, recalcular a média dos três preços e atualizar o valor médio unitário no Plano de Aplicação Detalhado.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T17:24:56.732Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455025",
+              "fingerprint": "fnv64-v1:3a556d43fa354fb6"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T17:24:56.733Z",
+          "event": "Diligência atualizada",
+          "actor": "Usuário local",
+          "before": {
+            "id": "1eb0a778-dbf5-40f0-b6d9-4f36330ab514",
+            "ref": "pad:17455025",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "communication": "2026-10-02",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-02T17:29:11.517Z",
+            "base": "2026-10-12",
+            "due": "2026-10-12",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          },
+          "after": {
+            "id": "1eb0a778-dbf5-40f0-b6d9-4f36330ab514",
+            "ref": "pad:17455025",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "No item “Ar-condicionado”, o preço de R$ 1.689,67 utilizado na memória de cálculo não foi identificado nos comprovantes da pesquisa mercadológica apresentada. Apresentar o comprovante desse valor ou corrigir a memória de cálculo com base nos preços efetivamente comprovados, incluindo os fretes considerados. Após a correção, recalcular a média dos três preços e atualizar o valor médio unitário no Plano de Aplicação Detalhado.",
+            "communication": "2026-10-02",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-05T17:24:56.732Z",
+            "base": "2026-10-12",
+            "due": "2026-10-12",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-05T17:26:32.071Z",
+          "event": "Avaliação: pad / 17455019",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T16:25:53.609Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455019",
+              "fingerprint": "fnv64-v1:2ffdbbba8d1affeb"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T17:26:32.071Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455019",
+              "fingerprint": "fnv64-v1:2ffdbbba8d1affeb"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T17:27:17.318Z",
+          "event": "Avaliação: pad / 17455031",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T16:25:53.609Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455031",
+              "fingerprint": "fnv64-v1:8801ac3ef976ac28"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T17:27:17.318Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455031",
+              "fingerprint": "fnv64-v1:8801ac3ef976ac28"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T17:27:17.318Z",
+          "event": "Avaliação: pad / 17455032",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T16:25:53.609Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455032",
+              "fingerprint": "fnv64-v1:2173db87db0c0561"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T17:27:17.318Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455032",
+              "fingerprint": "fnv64-v1:2173db87db0c0561"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T17:27:17.318Z",
+          "event": "Avaliação: pad / 17455028",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T16:25:53.609Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455028",
+              "fingerprint": "fnv64-v1:ed327f1ac0675027"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T17:27:17.318Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455028",
+              "fingerprint": "fnv64-v1:ed327f1ac0675027"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T17:27:17.318Z",
+          "event": "Avaliação: pad / 17455024",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T16:25:53.609Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455024",
+              "fingerprint": "fnv64-v1:6a0ae8991cccec42"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T17:27:17.318Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455024",
+              "fingerprint": "fnv64-v1:6a0ae8991cccec42"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T17:27:17.318Z",
+          "event": "Avaliação: pad / 17455036",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T16:25:53.609Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455036",
+              "fingerprint": "fnv64-v1:cb16e94d33184a79"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T17:27:17.318Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455036",
+              "fingerprint": "fnv64-v1:cb16e94d33184a79"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T17:27:17.318Z",
+          "event": "Avaliação: pad / 17455026",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T16:25:53.609Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455026",
+              "fingerprint": "fnv64-v1:e4a635d1e7467180"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T17:27:17.318Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455026",
+              "fingerprint": "fnv64-v1:e4a635d1e7467180"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T17:27:17.318Z",
+          "event": "Avaliação: pad / 17455103",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T16:25:53.609Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455103",
+              "fingerprint": "fnv64-v1:99eac077ab673393"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T17:27:17.318Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455103",
+              "fingerprint": "fnv64-v1:99eac077ab673393"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T17:27:17.318Z",
+          "event": "Avaliação: pad / 17455104",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T16:25:53.609Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455104",
+              "fingerprint": "fnv64-v1:8507a389718e6d6a"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T17:27:17.318Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455104",
+              "fingerprint": "fnv64-v1:8507a389718e6d6a"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T17:27:17.318Z",
+          "event": "Avaliação: pad / 17455049",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T16:25:53.609Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455049",
+              "fingerprint": "fnv64-v1:a5f61ac90a872bdb"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T17:27:17.318Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455049",
+              "fingerprint": "fnv64-v1:a5f61ac90a872bdb"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T17:27:17.318Z",
+          "event": "Avaliação: pad / 17455039",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T16:25:53.609Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455039",
+              "fingerprint": "fnv64-v1:11d6b7b01d211ca1"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T17:27:17.318Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455039",
+              "fingerprint": "fnv64-v1:11d6b7b01d211ca1"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T17:27:17.318Z",
+          "event": "Avaliação: pad / 17455041",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T16:25:53.609Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455041",
+              "fingerprint": "fnv64-v1:e2dcf1995bd4388c"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T17:27:17.318Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455041",
+              "fingerprint": "fnv64-v1:e2dcf1995bd4388c"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T17:27:17.318Z",
+          "event": "Avaliação: pad / 17455048",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T16:25:53.609Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455048",
+              "fingerprint": "fnv64-v1:7de13bc81a8c0a5c"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T17:27:17.318Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455048",
+              "fingerprint": "fnv64-v1:7de13bc81a8c0a5c"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T17:27:17.318Z",
+          "event": "Avaliação: pad / 17455013",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T16:25:53.609Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455013",
+              "fingerprint": "fnv64-v1:4f33335c91ef7b44"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T17:27:17.318Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455013",
+              "fingerprint": "fnv64-v1:4f33335c91ef7b44"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T17:27:17.318Z",
+          "event": "Avaliação: pad / 17455008",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T16:25:53.610Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455008",
+              "fingerprint": "fnv64-v1:3c029a3499537f72"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T17:27:17.318Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455008",
+              "fingerprint": "fnv64-v1:3c029a3499537f72"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T17:27:17.318Z",
+          "event": "Avaliação: pad / 17455011",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T16:25:53.610Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455011",
+              "fingerprint": "fnv64-v1:c05551ec9783afa4"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T17:27:17.318Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455011",
+              "fingerprint": "fnv64-v1:c05551ec9783afa4"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T17:27:17.318Z",
+          "event": "Avaliação: pad / 17455015",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T16:25:53.610Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455015",
+              "fingerprint": "fnv64-v1:357428fc6a940f53"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T17:27:17.318Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455015",
+              "fingerprint": "fnv64-v1:357428fc6a940f53"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T17:27:17.318Z",
+          "event": "Avaliação: pad / 17455017",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T16:25:53.610Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455017",
+              "fingerprint": "fnv64-v1:a96979d7b8653a40"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T17:27:17.318Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455017",
+              "fingerprint": "fnv64-v1:a96979d7b8653a40"
+            }
           }
         }
       ],
