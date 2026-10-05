@@ -1,9 +1,9 @@
-/** Snapshot integral de consulta PROFOR/ONASP 2026. Gerado em 2026-10-05T18:29:28.838Z.
+/** Snapshot integral de consulta PROFOR/ONASP 2026. Gerado em 2026-10-05T18:33:56.030Z.
  * Não editar manualmente. Use tools/build_public_docs.cjs. */
-window.PROFOR_PUBLIC_UPDATED_AT = "2026-10-05T18:29:28.838Z";
+window.PROFOR_PUBLIC_UPDATED_AT = "2026-10-05T18:33:56.030Z";
 window.PROFOR_PUBLIC_DATA = {
   "schemaVersion": 1,
-  "revision": 268,
+  "revision": 276,
   "proposals": [
     {
       "id": "2243618",
@@ -45401,332 +45401,788 @@ window.PROFOR_PUBLIC_DATA = {
       "reviews": {
         "merito": {
           "objeto": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-05T18:30:50.443Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:objeto",
+              "fingerprint": "fnv64-v1:0ded0dbece2464e8"
+            }
           },
           "justificativa": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-05T18:30:50.443Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:justificativa",
+              "fingerprint": "fnv64-v1:c54aed778c1cb065"
+            }
           },
           "publicoAlvo": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-05T18:30:50.443Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:publicoAlvo",
+              "fingerprint": "fnv64-v1:f2b29cdd8dbe3125"
+            }
           },
           "problema": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-05T18:30:50.443Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:problema",
+              "fingerprint": "fnv64-v1:e094fde3ef6e3054"
+            }
           },
           "resultados": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-05T18:30:50.443Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:resultados",
+              "fingerprint": "fnv64-v1:bbacc4bc1bd9ff82"
+            }
           },
           "destinacao": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-05T18:30:50.443Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:destinacao",
+              "fingerprint": "fnv64-v1:67c889300b0904c8"
+            }
           },
           "objetivos": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-05T18:30:50.443Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:objetivos",
+              "fingerprint": "fnv64-v1:3045b234a3238af9"
+            }
           },
           "capacidade": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-05T18:30:50.443Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:capacidade",
+              "fingerprint": "fnv64-v1:5bd2f2311c3cb340"
+            }
           },
           "ouvidoriaInstituida": {
-            "status": "na",
+            "status": "no",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-05T18:30:06.903Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:ouvidoriaInstituida",
+              "fingerprint": "fnv64-v1:a27e8ca67caeb499"
+            }
           },
           "falaBRAdesao": {
-            "status": "na",
+            "status": "no",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-05T18:30:32.442Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:falaBRAdesao",
+              "fingerprint": "fnv64-v1:20325664b9ae9846"
+            }
           }
         },
         "celebracao": {
           "1": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-05T18:33:30.621Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:1",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
           },
           "3": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-05T18:33:14.265Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:3",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
           },
           "4": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "Documento ausente.",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-05T18:32:58.518Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:4",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
           },
           "5": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-05T18:33:14.265Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:5",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
           },
           "6": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-05T18:33:14.265Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:6",
+              "fingerprint": "fnv64-v1:05063160506f780b"
+            }
           },
           "7": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "QDD faltando.",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-05T18:32:24.831Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:7",
+              "fingerprint": "fnv64-v1:ea6fac0201f4f8e2"
+            }
           },
           "8": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-05T18:33:30.621Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:8",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
           },
           "9": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-05T18:33:30.621Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:9",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
           },
           "10": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-05T18:33:30.621Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:10",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
           },
           "11": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "Documento ausente.",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-05T18:32:58.519Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:11",
+              "fingerprint": "fnv64-v1:5bd2f2311c3cb340"
+            }
           },
           "12": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-05T18:33:30.621Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:12",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
           },
           "13": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-05T18:33:30.621Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:13",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
           },
           "14": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-05T18:33:30.621Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:14",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
           },
           "15": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-05T18:33:30.621Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:15",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
           },
           "16": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-05T18:33:30.621Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:16",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
           },
           "17": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-05T18:33:30.621Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:17",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
           },
           "18": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-05T18:33:30.621Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:18",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
           },
           "19": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-05T18:33:30.621Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:19",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
           },
           "1.1": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-05T18:33:30.621Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:1.1",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
           }
         },
         "pad": {
           "17455398": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "Anexar pesquisa mercadológica.",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-05T18:31:38.636Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455398",
+              "fingerprint": "fnv64-v1:5a1111dbe0878631"
+            }
           },
           "17455418": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "Anexar pesquisa mercadológica.",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-05T18:31:38.634Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455418",
+              "fingerprint": "fnv64-v1:548cf23fa77e13e1"
+            }
           },
           "17455420": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "Anexar pesquisa mercadológica.",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-05T18:31:38.632Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455420",
+              "fingerprint": "fnv64-v1:23fb61be4d46b3c3"
+            }
           },
           "17455422": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "Anexar pesquisa mercadológica.",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-05T18:31:38.632Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455422",
+              "fingerprint": "fnv64-v1:bea49e52dc182906"
+            }
           },
           "17455423": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "Anexar pesquisa mercadológica.",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-05T18:31:38.637Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455423",
+              "fingerprint": "fnv64-v1:afc83ea16ef5c8b6"
+            }
           },
           "17455424": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "Anexar pesquisa mercadológica.",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-05T18:31:38.635Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455424",
+              "fingerprint": "fnv64-v1:859fc1172610fcd1"
+            }
           },
           "17455426": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "Anexar pesquisa mercadológica.",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-05T18:31:38.636Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455426",
+              "fingerprint": "fnv64-v1:85999276f579c4db"
+            }
           },
           "17455427": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "Anexar pesquisa mercadológica.",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-05T18:31:38.633Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455427",
+              "fingerprint": "fnv64-v1:1e317ffc3c5b62b2"
+            }
           },
           "17455475": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "Anexar pesquisa mercadológica.",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-05T18:31:38.635Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455475",
+              "fingerprint": "fnv64-v1:c29863265651c94a"
+            }
           },
           "17455732": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "Anexar pesquisa mercadológica.",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-05T18:31:38.631Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455732",
+              "fingerprint": "fnv64-v1:5ba258d643a59a7e"
+            }
           }
         }
       },
-      "diligences": [],
+      "diligences": [
+        {
+          "id": "378933c2-749e-4f33-83c7-54c497aa4c26",
+          "ref": "pad:17455732",
+          "category": "PLANO DE APLICAÇÃO DETALHADO",
+          "request": "Anexar pesquisa mercadológica.",
+          "communication": "2026-10-05",
+          "science": "",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-05T18:31:38.631Z",
+          "base": "2026-10-15",
+          "due": "2026-10-15",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "92c08cba-6cdc-4bb0-bf2c-b3342a9661e1",
+          "ref": "pad:17455420",
+          "category": "PLANO DE APLICAÇÃO DETALHADO",
+          "request": "Anexar pesquisa mercadológica.",
+          "communication": "2026-10-05",
+          "science": "",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-05T18:31:38.632Z",
+          "base": "2026-10-15",
+          "due": "2026-10-15",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "f926237b-361a-4ea0-a4c6-19e9351833eb",
+          "ref": "pad:17455422",
+          "category": "PLANO DE APLICAÇÃO DETALHADO",
+          "request": "Anexar pesquisa mercadológica.",
+          "communication": "2026-10-05",
+          "science": "",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-05T18:31:38.632Z",
+          "base": "2026-10-15",
+          "due": "2026-10-15",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "e2292979-ec62-4d07-8587-955ac3328e21",
+          "ref": "pad:17455427",
+          "category": "PLANO DE APLICAÇÃO DETALHADO",
+          "request": "Anexar pesquisa mercadológica.",
+          "communication": "2026-10-05",
+          "science": "",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-05T18:31:38.633Z",
+          "base": "2026-10-15",
+          "due": "2026-10-15",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "3b3c52af-7aca-4c32-93a3-e6ee73543904",
+          "ref": "pad:17455418",
+          "category": "PLANO DE APLICAÇÃO DETALHADO",
+          "request": "Anexar pesquisa mercadológica.",
+          "communication": "2026-10-05",
+          "science": "",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-05T18:31:38.634Z",
+          "base": "2026-10-15",
+          "due": "2026-10-15",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "93e673e0-3869-4ade-a7e4-0993f4da92e2",
+          "ref": "pad:17455424",
+          "category": "PLANO DE APLICAÇÃO DETALHADO",
+          "request": "Anexar pesquisa mercadológica.",
+          "communication": "2026-10-05",
+          "science": "",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-05T18:31:38.635Z",
+          "base": "2026-10-15",
+          "due": "2026-10-15",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "2cdd4c4b-d17e-43a5-92c5-a741915c9075",
+          "ref": "pad:17455475",
+          "category": "PLANO DE APLICAÇÃO DETALHADO",
+          "request": "Anexar pesquisa mercadológica.",
+          "communication": "2026-10-05",
+          "science": "",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-05T18:31:38.636Z",
+          "base": "2026-10-15",
+          "due": "2026-10-15",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "3a703900-ada8-4599-adfb-7749054da426",
+          "ref": "pad:17455398",
+          "category": "PLANO DE APLICAÇÃO DETALHADO",
+          "request": "Anexar pesquisa mercadológica.",
+          "communication": "2026-10-05",
+          "science": "",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-05T18:31:38.636Z",
+          "base": "2026-10-15",
+          "due": "2026-10-15",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "6494b578-719f-4bda-93f7-93298d04a1f9",
+          "ref": "pad:17455426",
+          "category": "PLANO DE APLICAÇÃO DETALHADO",
+          "request": "Anexar pesquisa mercadológica.",
+          "communication": "2026-10-05",
+          "science": "",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-05T18:31:38.636Z",
+          "base": "2026-10-15",
+          "due": "2026-10-15",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "074a4fd7-2520-4d04-922c-ee38073ec296",
+          "ref": "pad:17455423",
+          "category": "PLANO DE APLICAÇÃO DETALHADO",
+          "request": "Anexar pesquisa mercadológica.",
+          "communication": "2026-10-05",
+          "science": "",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-05T18:31:38.637Z",
+          "base": "2026-10-15",
+          "due": "2026-10-15",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "3324199e-4a5b-440a-8264-4f01aef2b32b",
+          "ref": "celebracao:7",
+          "request": "QDD faltando.",
+          "science": "",
+          "category": "OUTRO",
+          "communication": "",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-05T18:32:24.831Z",
+          "base": "",
+          "due": "",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "5aa03328-0d84-48b5-9d16-aec58d6b9ac0",
+          "ref": "celebracao:4",
+          "category": "OUTRO",
+          "request": "Documento ausente.",
+          "communication": "2026-10-05",
+          "science": "",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-05T18:32:58.518Z",
+          "base": "2026-10-15",
+          "due": "2026-10-15",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "d1617c8c-ce81-4676-ae05-84bcf48abd4d",
+          "ref": "celebracao:11",
+          "category": "OUTRO",
+          "request": "Documento ausente.",
+          "communication": "2026-10-05",
+          "science": "",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-05T18:32:58.520Z",
+          "base": "2026-10-15",
+          "due": "2026-10-15",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        }
+      ],
       "ouvidoria": {
-        "status": "na",
+        "status": "pendente",
         "signature": "",
         "url": "",
         "note": "",
         "clause": false
       },
-      "falaBR": "na",
+      "falaBR": "nao_previsto",
       "conclusion": null,
       "history": [
         {
@@ -45901,6 +46357,1408 @@ window.PROFOR_PUBLIC_DATA = {
           },
           "after": {
             "at": "2026-10-05T13:42:43.023Z"
+          }
+        },
+        {
+          "at": "2026-10-05T18:30:06.903Z",
+          "event": "Informações institucionais atualizadas",
+          "actor": "Usuário local",
+          "before": {
+            "ouvidoria": {
+              "status": "na",
+              "signature": "",
+              "url": "",
+              "note": "",
+              "clause": false
+            },
+            "falaBR": "na"
+          },
+          "after": {
+            "ouvidoria": {
+              "status": "pendente",
+              "signature": "",
+              "url": "",
+              "note": "",
+              "clause": false
+            },
+            "falaBR": "na"
+          }
+        },
+        {
+          "at": "2026-10-05T18:30:06.903Z",
+          "event": "Avaliação: merito / ouvidoriaInstituida",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "no",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T18:30:06.903Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:ouvidoriaInstituida",
+              "fingerprint": "fnv64-v1:a27e8ca67caeb499"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T18:30:32.442Z",
+          "event": "Informações institucionais atualizadas",
+          "actor": "Usuário local",
+          "before": {
+            "ouvidoria": {
+              "status": "pendente",
+              "signature": "",
+              "url": "",
+              "note": "",
+              "clause": false
+            },
+            "falaBR": "na"
+          },
+          "after": {
+            "ouvidoria": {
+              "status": "pendente",
+              "signature": "",
+              "url": "",
+              "note": "",
+              "clause": false
+            },
+            "falaBR": "nao_previsto"
+          }
+        },
+        {
+          "at": "2026-10-05T18:30:32.442Z",
+          "event": "Avaliação: merito / falaBRAdesao",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "no",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T18:30:32.442Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:falaBRAdesao",
+              "fingerprint": "fnv64-v1:20325664b9ae9846"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T18:30:50.443Z",
+          "event": "Avaliação: merito / objeto",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T18:30:50.443Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:objeto",
+              "fingerprint": "fnv64-v1:0ded0dbece2464e8"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T18:30:50.443Z",
+          "event": "Avaliação: merito / justificativa",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T18:30:50.443Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:justificativa",
+              "fingerprint": "fnv64-v1:c54aed778c1cb065"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T18:30:50.443Z",
+          "event": "Avaliação: merito / publicoAlvo",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T18:30:50.443Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:publicoAlvo",
+              "fingerprint": "fnv64-v1:f2b29cdd8dbe3125"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T18:30:50.443Z",
+          "event": "Avaliação: merito / problema",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T18:30:50.443Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:problema",
+              "fingerprint": "fnv64-v1:e094fde3ef6e3054"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T18:30:50.443Z",
+          "event": "Avaliação: merito / resultados",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T18:30:50.443Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:resultados",
+              "fingerprint": "fnv64-v1:bbacc4bc1bd9ff82"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T18:30:50.443Z",
+          "event": "Avaliação: merito / destinacao",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T18:30:50.443Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:destinacao",
+              "fingerprint": "fnv64-v1:67c889300b0904c8"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T18:30:50.443Z",
+          "event": "Avaliação: merito / objetivos",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T18:30:50.443Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:objetivos",
+              "fingerprint": "fnv64-v1:3045b234a3238af9"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T18:30:50.443Z",
+          "event": "Avaliação: merito / capacidade",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T18:30:50.443Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:capacidade",
+              "fingerprint": "fnv64-v1:5bd2f2311c3cb340"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T18:31:38.631Z",
+          "event": "Avaliação: pad / 17455732",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Anexar pesquisa mercadológica.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T18:31:38.631Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455732",
+              "fingerprint": "fnv64-v1:5ba258d643a59a7e"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T18:31:38.631Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "378933c2-749e-4f33-83c7-54c497aa4c26",
+            "ref": "pad:17455732",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Anexar pesquisa mercadológica.",
+            "communication": "2026-10-05",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-05T18:31:38.631Z",
+            "base": "2026-10-15",
+            "due": "2026-10-15",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-05T18:31:38.632Z",
+          "event": "Avaliação: pad / 17455420",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Anexar pesquisa mercadológica.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T18:31:38.632Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455420",
+              "fingerprint": "fnv64-v1:23fb61be4d46b3c3"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T18:31:38.632Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "92c08cba-6cdc-4bb0-bf2c-b3342a9661e1",
+            "ref": "pad:17455420",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Anexar pesquisa mercadológica.",
+            "communication": "2026-10-05",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-05T18:31:38.632Z",
+            "base": "2026-10-15",
+            "due": "2026-10-15",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-05T18:31:38.632Z",
+          "event": "Avaliação: pad / 17455422",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Anexar pesquisa mercadológica.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T18:31:38.632Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455422",
+              "fingerprint": "fnv64-v1:bea49e52dc182906"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T18:31:38.633Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "f926237b-361a-4ea0-a4c6-19e9351833eb",
+            "ref": "pad:17455422",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Anexar pesquisa mercadológica.",
+            "communication": "2026-10-05",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-05T18:31:38.632Z",
+            "base": "2026-10-15",
+            "due": "2026-10-15",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-05T18:31:38.633Z",
+          "event": "Avaliação: pad / 17455427",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Anexar pesquisa mercadológica.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T18:31:38.633Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455427",
+              "fingerprint": "fnv64-v1:1e317ffc3c5b62b2"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T18:31:38.634Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "e2292979-ec62-4d07-8587-955ac3328e21",
+            "ref": "pad:17455427",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Anexar pesquisa mercadológica.",
+            "communication": "2026-10-05",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-05T18:31:38.633Z",
+            "base": "2026-10-15",
+            "due": "2026-10-15",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-05T18:31:38.634Z",
+          "event": "Avaliação: pad / 17455418",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Anexar pesquisa mercadológica.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T18:31:38.634Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455418",
+              "fingerprint": "fnv64-v1:548cf23fa77e13e1"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T18:31:38.634Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "3b3c52af-7aca-4c32-93a3-e6ee73543904",
+            "ref": "pad:17455418",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Anexar pesquisa mercadológica.",
+            "communication": "2026-10-05",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-05T18:31:38.634Z",
+            "base": "2026-10-15",
+            "due": "2026-10-15",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-05T18:31:38.635Z",
+          "event": "Avaliação: pad / 17455424",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Anexar pesquisa mercadológica.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T18:31:38.635Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455424",
+              "fingerprint": "fnv64-v1:859fc1172610fcd1"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T18:31:38.635Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "93e673e0-3869-4ade-a7e4-0993f4da92e2",
+            "ref": "pad:17455424",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Anexar pesquisa mercadológica.",
+            "communication": "2026-10-05",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-05T18:31:38.635Z",
+            "base": "2026-10-15",
+            "due": "2026-10-15",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-05T18:31:38.635Z",
+          "event": "Avaliação: pad / 17455475",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Anexar pesquisa mercadológica.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T18:31:38.635Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455475",
+              "fingerprint": "fnv64-v1:c29863265651c94a"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T18:31:38.636Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "2cdd4c4b-d17e-43a5-92c5-a741915c9075",
+            "ref": "pad:17455475",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Anexar pesquisa mercadológica.",
+            "communication": "2026-10-05",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-05T18:31:38.636Z",
+            "base": "2026-10-15",
+            "due": "2026-10-15",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-05T18:31:38.636Z",
+          "event": "Avaliação: pad / 17455398",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Anexar pesquisa mercadológica.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T18:31:38.636Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455398",
+              "fingerprint": "fnv64-v1:5a1111dbe0878631"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T18:31:38.636Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "3a703900-ada8-4599-adfb-7749054da426",
+            "ref": "pad:17455398",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Anexar pesquisa mercadológica.",
+            "communication": "2026-10-05",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-05T18:31:38.636Z",
+            "base": "2026-10-15",
+            "due": "2026-10-15",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-05T18:31:38.636Z",
+          "event": "Avaliação: pad / 17455426",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Anexar pesquisa mercadológica.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T18:31:38.636Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455426",
+              "fingerprint": "fnv64-v1:85999276f579c4db"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T18:31:38.636Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "6494b578-719f-4bda-93f7-93298d04a1f9",
+            "ref": "pad:17455426",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Anexar pesquisa mercadológica.",
+            "communication": "2026-10-05",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-05T18:31:38.636Z",
+            "base": "2026-10-15",
+            "due": "2026-10-15",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-05T18:31:38.637Z",
+          "event": "Avaliação: pad / 17455423",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Anexar pesquisa mercadológica.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T18:31:38.637Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455423",
+              "fingerprint": "fnv64-v1:afc83ea16ef5c8b6"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T18:31:38.637Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "074a4fd7-2520-4d04-922c-ee38073ec296",
+            "ref": "pad:17455423",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Anexar pesquisa mercadológica.",
+            "communication": "2026-10-05",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-05T18:31:38.637Z",
+            "base": "2026-10-15",
+            "due": "2026-10-15",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-05T18:32:24.831Z",
+          "event": "Avaliação: celebracao / 7",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "QDD faltando.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T18:32:24.831Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:7",
+              "fingerprint": "fnv64-v1:ea6fac0201f4f8e2"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T18:32:24.831Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "3324199e-4a5b-440a-8264-4f01aef2b32b",
+            "ref": "celebracao:7",
+            "request": "QDD faltando.",
+            "science": "",
+            "category": "OUTRO",
+            "communication": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-05T18:32:24.831Z",
+            "base": "",
+            "due": "",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-05T18:32:58.518Z",
+          "event": "Avaliação: celebracao / 4",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Documento ausente.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T18:32:58.518Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:4",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T18:32:58.519Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "5aa03328-0d84-48b5-9d16-aec58d6b9ac0",
+            "ref": "celebracao:4",
+            "category": "OUTRO",
+            "request": "Documento ausente.",
+            "communication": "2026-10-05",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-05T18:32:58.518Z",
+            "base": "2026-10-15",
+            "due": "2026-10-15",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-05T18:32:58.519Z",
+          "event": "Avaliação: celebracao / 11",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Documento ausente.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T18:32:58.519Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:11",
+              "fingerprint": "fnv64-v1:5bd2f2311c3cb340"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T18:32:58.520Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "d1617c8c-ce81-4676-ae05-84bcf48abd4d",
+            "ref": "celebracao:11",
+            "category": "OUTRO",
+            "request": "Documento ausente.",
+            "communication": "2026-10-05",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-05T18:32:58.520Z",
+            "base": "2026-10-15",
+            "due": "2026-10-15",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-05T18:33:14.265Z",
+          "event": "Avaliação: celebracao / 3",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T18:33:14.265Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:3",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T18:33:14.265Z",
+          "event": "Avaliação: celebracao / 5",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T18:33:14.265Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:5",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T18:33:14.265Z",
+          "event": "Avaliação: celebracao / 6",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T18:33:14.265Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:6",
+              "fingerprint": "fnv64-v1:05063160506f780b"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T18:33:30.621Z",
+          "event": "Avaliação: celebracao / 1",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T18:33:30.621Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:1",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T18:33:30.621Z",
+          "event": "Avaliação: celebracao / 1.1",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T18:33:30.621Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:1.1",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T18:33:30.621Z",
+          "event": "Avaliação: celebracao / 8",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T18:33:30.621Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:8",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T18:33:30.621Z",
+          "event": "Avaliação: celebracao / 9",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T18:33:30.621Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:9",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T18:33:30.621Z",
+          "event": "Avaliação: celebracao / 10",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T18:33:30.621Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:10",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T18:33:30.621Z",
+          "event": "Avaliação: celebracao / 12",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T18:33:30.621Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:12",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T18:33:30.621Z",
+          "event": "Avaliação: celebracao / 13",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T18:33:30.621Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:13",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T18:33:30.621Z",
+          "event": "Avaliação: celebracao / 14",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T18:33:30.621Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:14",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T18:33:30.621Z",
+          "event": "Avaliação: celebracao / 15",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T18:33:30.621Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:15",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T18:33:30.621Z",
+          "event": "Avaliação: celebracao / 16",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T18:33:30.621Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:16",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T18:33:30.621Z",
+          "event": "Avaliação: celebracao / 17",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T18:33:30.621Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:17",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T18:33:30.621Z",
+          "event": "Avaliação: celebracao / 18",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T18:33:30.621Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:18",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-05T18:33:30.621Z",
+          "event": "Avaliação: celebracao / 19",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T18:33:30.621Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:19",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
           }
         }
       ],
