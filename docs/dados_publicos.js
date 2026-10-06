@@ -1,9 +1,9 @@
-/** Snapshot integral de consulta PROFOR/ONASP 2026. Gerado em 2026-10-06T12:43:22.005Z.
+/** Snapshot integral de consulta PROFOR/ONASP 2026. Gerado em 2026-10-06T12:49:07.995Z.
  * Não editar manualmente. Use tools/build_public_docs.cjs. */
-window.PROFOR_PUBLIC_UPDATED_AT = "2026-10-06T12:43:22.005Z";
+window.PROFOR_PUBLIC_UPDATED_AT = "2026-10-06T12:49:07.995Z";
 window.PROFOR_PUBLIC_DATA = {
   "schemaVersion": 1,
-  "revision": 278,
+  "revision": 279,
   "proposals": [
     {
       "id": "2243618",
@@ -40303,11 +40303,11 @@ window.PROFOR_PUBLIC_DATA = {
             }
           },
           "6": {
-            "status": "ok",
-            "note": "",
+            "status": "diligencia",
+            "note": "Falta o documento",
             "document": "",
             "url": "",
-            "at": "2026-10-05T18:24:00.609Z",
+            "at": "2026-10-06T12:48:06.951Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
@@ -41339,6 +41339,23 @@ window.PROFOR_PUBLIC_DATA = {
           "at": "2026-10-05T18:23:19.276Z",
           "base": "",
           "due": "",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "bea48fed-de40-40ec-adb9-2cd477ff689d",
+          "ref": "celebracao:6",
+          "request": "Falta o documento",
+          "science": "",
+          "category": "OUTRO",
+          "communication": "2026-10-05",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-06T12:48:06.952Z",
+          "base": "2026-10-15",
+          "due": "2026-10-15",
           "automaticDeadline": true,
           "confirmed": false,
           "calendarNote": ""
@@ -46015,6 +46032,62 @@ window.PROFOR_PUBLIC_DATA = {
           },
           "after": {
             "at": "2026-10-06T12:41:57.865Z"
+          }
+        },
+        {
+          "at": "2026-10-06T12:48:06.952Z",
+          "event": "Avaliação: celebracao / 6",
+          "actor": "Usuário local",
+          "before": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T18:24:00.609Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:6",
+              "fingerprint": "fnv64-v1:44eb105b99d965cf"
+            }
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Falta o documento",
+            "document": "",
+            "url": "",
+            "at": "2026-10-06T12:48:06.951Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:6",
+              "fingerprint": "fnv64-v1:44eb105b99d965cf"
+            }
+          }
+        },
+        {
+          "at": "2026-10-06T12:48:06.954Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "bea48fed-de40-40ec-adb9-2cd477ff689d",
+            "ref": "celebracao:6",
+            "request": "Falta o documento",
+            "science": "",
+            "category": "OUTRO",
+            "communication": "2026-10-05",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-06T12:48:06.952Z",
+            "base": "2026-10-15",
+            "due": "2026-10-15",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
           }
         }
       ],
