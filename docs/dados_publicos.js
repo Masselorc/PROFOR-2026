@@ -1,9 +1,9 @@
-/** Snapshot integral de consulta PROFOR/ONASP 2026. Gerado em 2026-10-06T15:34:46.036Z.
+/** Snapshot integral de consulta PROFOR/ONASP 2026. Gerado em 2026-10-06T16:08:13.954Z.
  * Não editar manualmente. Use tools/build_public_docs.cjs. */
-window.PROFOR_PUBLIC_UPDATED_AT = "2026-10-06T15:34:46.036Z";
+window.PROFOR_PUBLIC_UPDATED_AT = "2026-10-06T16:08:13.954Z";
 window.PROFOR_PUBLIC_DATA = {
   "schemaVersion": 1,
-  "revision": 291,
+  "revision": 292,
   "proposals": [
     {
       "id": "2243618",
@@ -12282,96 +12282,350 @@ window.PROFOR_PUBLIC_DATA = {
         },
         "pad": {
           "17408693": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "Solicita-se anexar nova versão legível da pesquisa mercadológica, com melhor qualidade de imagem, tendo em vista que o documento apresentado está majoritariamente ilegível e dificulta a conferência dos produtos, preços, condições de pagamento, datas das consultas e links completos. Solicita-se, ainda, anexar planilha com a memória de cálculo de cada item, identificando as três cotações utilizadas, a soma dos preços, a divisão por três e a média aritmética resultante, com referência aos respectivos comprovantes. A média apurada deve corresponder ao valor unitário registrado no Plano de Aplicação Detalhado.",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-06T16:07:40.797Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17408693",
+              "fingerprint": "fnv64-v1:8f4a838cc83ad89d"
+            }
           },
           "17408695": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "Solicita-se anexar nova versão legível da pesquisa mercadológica, com melhor qualidade de imagem, tendo em vista que o documento apresentado está majoritariamente ilegível e dificulta a conferência dos produtos, preços, condições de pagamento, datas das consultas e links completos. Solicita-se, ainda, anexar planilha com a memória de cálculo de cada item, identificando as três cotações utilizadas, a soma dos preços, a divisão por três e a média aritmética resultante, com referência aos respectivos comprovantes. A média apurada deve corresponder ao valor unitário registrado no Plano de Aplicação Detalhado.",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-06T16:07:40.795Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17408695",
+              "fingerprint": "fnv64-v1:f09e6e65f765526f"
+            }
           },
           "17408698": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "Solicita-se anexar nova versão legível da pesquisa mercadológica, com melhor qualidade de imagem, tendo em vista que o documento apresentado está majoritariamente ilegível e dificulta a conferência dos produtos, preços, condições de pagamento, datas das consultas e links completos. Solicita-se, ainda, anexar planilha com a memória de cálculo de cada item, identificando as três cotações utilizadas, a soma dos preços, a divisão por três e a média aritmética resultante, com referência aos respectivos comprovantes. A média apurada deve corresponder ao valor unitário registrado no Plano de Aplicação Detalhado.",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-06T16:07:40.799Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17408698",
+              "fingerprint": "fnv64-v1:5b420784e5ba8b2a"
+            }
           },
           "17408701": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "Solicita-se anexar nova versão legível da pesquisa mercadológica, com melhor qualidade de imagem, tendo em vista que o documento apresentado está majoritariamente ilegível e dificulta a conferência dos produtos, preços, condições de pagamento, datas das consultas e links completos. Solicita-se, ainda, anexar planilha com a memória de cálculo de cada item, identificando as três cotações utilizadas, a soma dos preços, a divisão por três e a média aritmética resultante, com referência aos respectivos comprovantes. A média apurada deve corresponder ao valor unitário registrado no Plano de Aplicação Detalhado.",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-06T16:07:40.804Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17408701",
+              "fingerprint": "fnv64-v1:294f3183e22d5d76"
+            }
           },
           "17408704": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "Solicita-se anexar nova versão legível da pesquisa mercadológica, com melhor qualidade de imagem, tendo em vista que o documento apresentado está majoritariamente ilegível e dificulta a conferência dos produtos, preços, condições de pagamento, datas das consultas e links completos. Solicita-se, ainda, anexar planilha com a memória de cálculo de cada item, identificando as três cotações utilizadas, a soma dos preços, a divisão por três e a média aritmética resultante, com referência aos respectivos comprovantes. A média apurada deve corresponder ao valor unitário registrado no Plano de Aplicação Detalhado.",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-06T16:07:40.806Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17408704",
+              "fingerprint": "fnv64-v1:8b1cd5613212842e"
+            }
           },
           "17408708": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "Solicita-se anexar nova versão legível da pesquisa mercadológica, com melhor qualidade de imagem, tendo em vista que o documento apresentado está majoritariamente ilegível e dificulta a conferência dos produtos, preços, condições de pagamento, datas das consultas e links completos. Solicita-se, ainda, anexar planilha com a memória de cálculo de cada item, identificando as três cotações utilizadas, a soma dos preços, a divisão por três e a média aritmética resultante, com referência aos respectivos comprovantes. A média apurada deve corresponder ao valor unitário registrado no Plano de Aplicação Detalhado.",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-06T16:07:40.808Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17408708",
+              "fingerprint": "fnv64-v1:644a73aa829cfce7"
+            }
           },
           "17408710": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "Solicita-se anexar nova versão legível da pesquisa mercadológica, com melhor qualidade de imagem, tendo em vista que o documento apresentado está majoritariamente ilegível e dificulta a conferência dos produtos, preços, condições de pagamento, datas das consultas e links completos. Solicita-se, ainda, anexar planilha com a memória de cálculo de cada item, identificando as três cotações utilizadas, a soma dos preços, a divisão por três e a média aritmética resultante, com referência aos respectivos comprovantes. A média apurada deve corresponder ao valor unitário registrado no Plano de Aplicação Detalhado.",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-06T16:07:40.801Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17408710",
+              "fingerprint": "fnv64-v1:1791b4a3bf87c791"
+            }
           },
           "17408711": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "Solicita-se anexar nova versão legível da pesquisa mercadológica, com melhor qualidade de imagem, tendo em vista que o documento apresentado está majoritariamente ilegível e dificulta a conferência dos produtos, preços, condições de pagamento, datas das consultas e links completos. Solicita-se, ainda, anexar planilha com a memória de cálculo de cada item, identificando as três cotações utilizadas, a soma dos preços, a divisão por três e a média aritmética resultante, com referência aos respectivos comprovantes. A média apurada deve corresponder ao valor unitário registrado no Plano de Aplicação Detalhado.",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-06T16:07:40.802Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17408711",
+              "fingerprint": "fnv64-v1:34ab6fcf10c1386d"
+            }
           },
           "17408758": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "Solicita-se anexar nova versão legível da pesquisa mercadológica, com melhor qualidade de imagem, tendo em vista que o documento apresentado está majoritariamente ilegível e dificulta a conferência dos produtos, preços, condições de pagamento, datas das consultas e links completos. Solicita-se, ainda, anexar planilha com a memória de cálculo de cada item, identificando as três cotações utilizadas, a soma dos preços, a divisão por três e a média aritmética resultante, com referência aos respectivos comprovantes. A média apurada deve corresponder ao valor unitário registrado no Plano de Aplicação Detalhado.",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-06T16:07:40.809Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17408758",
+              "fingerprint": "fnv64-v1:4098632a73c82901"
+            }
           },
           "17408761": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "Solicita-se anexar nova versão legível da pesquisa mercadológica, com melhor qualidade de imagem, tendo em vista que o documento apresentado está majoritariamente ilegível e dificulta a conferência dos produtos, preços, condições de pagamento, datas das consultas e links completos. Solicita-se, ainda, anexar planilha com a memória de cálculo de cada item, identificando as três cotações utilizadas, a soma dos preços, a divisão por três e a média aritmética resultante, com referência aos respectivos comprovantes. A média apurada deve corresponder ao valor unitário registrado no Plano de Aplicação Detalhado.",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-06T16:07:40.798Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17408761",
+              "fingerprint": "fnv64-v1:fa85f4adc9eea67b"
+            }
           },
           "17408779": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "Solicita-se anexar nova versão legível da pesquisa mercadológica, com melhor qualidade de imagem, tendo em vista que o documento apresentado está majoritariamente ilegível e dificulta a conferência dos produtos, preços, condições de pagamento, datas das consultas e links completos. Solicita-se, ainda, anexar planilha com a memória de cálculo de cada item, identificando as três cotações utilizadas, a soma dos preços, a divisão por três e a média aritmética resultante, com referência aos respectivos comprovantes. A média apurada deve corresponder ao valor unitário registrado no Plano de Aplicação Detalhado.",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-06T16:07:40.792Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17408779",
+              "fingerprint": "fnv64-v1:a785517572a33868"
+            }
           }
         }
       },
-      "diligences": [],
+      "diligences": [
+        {
+          "id": "ccc65011-9ac0-44bc-8442-2b24d7535a18",
+          "ref": "pad:17408779",
+          "category": "PLANO DE APLICAÇÃO DETALHADO",
+          "request": "Solicita-se anexar nova versão legível da pesquisa mercadológica, com melhor qualidade de imagem, tendo em vista que o documento apresentado está majoritariamente ilegível e dificulta a conferência dos produtos, preços, condições de pagamento, datas das consultas e links completos. Solicita-se, ainda, anexar planilha com a memória de cálculo de cada item, identificando as três cotações utilizadas, a soma dos preços, a divisão por três e a média aritmética resultante, com referência aos respectivos comprovantes. A média apurada deve corresponder ao valor unitário registrado no Plano de Aplicação Detalhado.",
+          "communication": "2026-10-06",
+          "science": "",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-06T16:07:40.793Z",
+          "base": "2026-10-16",
+          "due": "2026-10-16",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "af182ea0-9311-4071-a7fa-1591015192d6",
+          "ref": "pad:17408695",
+          "category": "PLANO DE APLICAÇÃO DETALHADO",
+          "request": "Solicita-se anexar nova versão legível da pesquisa mercadológica, com melhor qualidade de imagem, tendo em vista que o documento apresentado está majoritariamente ilegível e dificulta a conferência dos produtos, preços, condições de pagamento, datas das consultas e links completos. Solicita-se, ainda, anexar planilha com a memória de cálculo de cada item, identificando as três cotações utilizadas, a soma dos preços, a divisão por três e a média aritmética resultante, com referência aos respectivos comprovantes. A média apurada deve corresponder ao valor unitário registrado no Plano de Aplicação Detalhado.",
+          "communication": "2026-10-06",
+          "science": "",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-06T16:07:40.795Z",
+          "base": "2026-10-16",
+          "due": "2026-10-16",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "7ba549c4-7101-4d49-bca6-0bcd4ba804a6",
+          "ref": "pad:17408693",
+          "category": "PLANO DE APLICAÇÃO DETALHADO",
+          "request": "Solicita-se anexar nova versão legível da pesquisa mercadológica, com melhor qualidade de imagem, tendo em vista que o documento apresentado está majoritariamente ilegível e dificulta a conferência dos produtos, preços, condições de pagamento, datas das consultas e links completos. Solicita-se, ainda, anexar planilha com a memória de cálculo de cada item, identificando as três cotações utilizadas, a soma dos preços, a divisão por três e a média aritmética resultante, com referência aos respectivos comprovantes. A média apurada deve corresponder ao valor unitário registrado no Plano de Aplicação Detalhado.",
+          "communication": "2026-10-06",
+          "science": "",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-06T16:07:40.797Z",
+          "base": "2026-10-16",
+          "due": "2026-10-16",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "f8668634-30c9-4a73-886f-69c71c319836",
+          "ref": "pad:17408761",
+          "category": "PLANO DE APLICAÇÃO DETALHADO",
+          "request": "Solicita-se anexar nova versão legível da pesquisa mercadológica, com melhor qualidade de imagem, tendo em vista que o documento apresentado está majoritariamente ilegível e dificulta a conferência dos produtos, preços, condições de pagamento, datas das consultas e links completos. Solicita-se, ainda, anexar planilha com a memória de cálculo de cada item, identificando as três cotações utilizadas, a soma dos preços, a divisão por três e a média aritmética resultante, com referência aos respectivos comprovantes. A média apurada deve corresponder ao valor unitário registrado no Plano de Aplicação Detalhado.",
+          "communication": "2026-10-06",
+          "science": "",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-06T16:07:40.798Z",
+          "base": "2026-10-16",
+          "due": "2026-10-16",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "94f686e9-f26b-48b8-afd9-27a5dc6d76e8",
+          "ref": "pad:17408698",
+          "category": "PLANO DE APLICAÇÃO DETALHADO",
+          "request": "Solicita-se anexar nova versão legível da pesquisa mercadológica, com melhor qualidade de imagem, tendo em vista que o documento apresentado está majoritariamente ilegível e dificulta a conferência dos produtos, preços, condições de pagamento, datas das consultas e links completos. Solicita-se, ainda, anexar planilha com a memória de cálculo de cada item, identificando as três cotações utilizadas, a soma dos preços, a divisão por três e a média aritmética resultante, com referência aos respectivos comprovantes. A média apurada deve corresponder ao valor unitário registrado no Plano de Aplicação Detalhado.",
+          "communication": "2026-10-06",
+          "science": "",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-06T16:07:40.799Z",
+          "base": "2026-10-16",
+          "due": "2026-10-16",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "829b5a21-efbd-4109-abd9-fc3a10c0cd68",
+          "ref": "pad:17408710",
+          "category": "PLANO DE APLICAÇÃO DETALHADO",
+          "request": "Solicita-se anexar nova versão legível da pesquisa mercadológica, com melhor qualidade de imagem, tendo em vista que o documento apresentado está majoritariamente ilegível e dificulta a conferência dos produtos, preços, condições de pagamento, datas das consultas e links completos. Solicita-se, ainda, anexar planilha com a memória de cálculo de cada item, identificando as três cotações utilizadas, a soma dos preços, a divisão por três e a média aritmética resultante, com referência aos respectivos comprovantes. A média apurada deve corresponder ao valor unitário registrado no Plano de Aplicação Detalhado.",
+          "communication": "2026-10-06",
+          "science": "",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-06T16:07:40.801Z",
+          "base": "2026-10-16",
+          "due": "2026-10-16",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "6fe203a1-0477-4746-95cb-5bc9ef490597",
+          "ref": "pad:17408711",
+          "category": "PLANO DE APLICAÇÃO DETALHADO",
+          "request": "Solicita-se anexar nova versão legível da pesquisa mercadológica, com melhor qualidade de imagem, tendo em vista que o documento apresentado está majoritariamente ilegível e dificulta a conferência dos produtos, preços, condições de pagamento, datas das consultas e links completos. Solicita-se, ainda, anexar planilha com a memória de cálculo de cada item, identificando as três cotações utilizadas, a soma dos preços, a divisão por três e a média aritmética resultante, com referência aos respectivos comprovantes. A média apurada deve corresponder ao valor unitário registrado no Plano de Aplicação Detalhado.",
+          "communication": "2026-10-06",
+          "science": "",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-06T16:07:40.802Z",
+          "base": "2026-10-16",
+          "due": "2026-10-16",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "77858d2f-3518-4d87-b3f4-5e56619bfc0f",
+          "ref": "pad:17408701",
+          "category": "PLANO DE APLICAÇÃO DETALHADO",
+          "request": "Solicita-se anexar nova versão legível da pesquisa mercadológica, com melhor qualidade de imagem, tendo em vista que o documento apresentado está majoritariamente ilegível e dificulta a conferência dos produtos, preços, condições de pagamento, datas das consultas e links completos. Solicita-se, ainda, anexar planilha com a memória de cálculo de cada item, identificando as três cotações utilizadas, a soma dos preços, a divisão por três e a média aritmética resultante, com referência aos respectivos comprovantes. A média apurada deve corresponder ao valor unitário registrado no Plano de Aplicação Detalhado.",
+          "communication": "2026-10-06",
+          "science": "",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-06T16:07:40.804Z",
+          "base": "2026-10-16",
+          "due": "2026-10-16",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "0b1332c6-5bfd-47fc-88c4-229df0295de3",
+          "ref": "pad:17408704",
+          "category": "PLANO DE APLICAÇÃO DETALHADO",
+          "request": "Solicita-se anexar nova versão legível da pesquisa mercadológica, com melhor qualidade de imagem, tendo em vista que o documento apresentado está majoritariamente ilegível e dificulta a conferência dos produtos, preços, condições de pagamento, datas das consultas e links completos. Solicita-se, ainda, anexar planilha com a memória de cálculo de cada item, identificando as três cotações utilizadas, a soma dos preços, a divisão por três e a média aritmética resultante, com referência aos respectivos comprovantes. A média apurada deve corresponder ao valor unitário registrado no Plano de Aplicação Detalhado.",
+          "communication": "2026-10-06",
+          "science": "",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-06T16:07:40.806Z",
+          "base": "2026-10-16",
+          "due": "2026-10-16",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "2232474c-a63b-4007-94a5-30d0217247a0",
+          "ref": "pad:17408708",
+          "category": "PLANO DE APLICAÇÃO DETALHADO",
+          "request": "Solicita-se anexar nova versão legível da pesquisa mercadológica, com melhor qualidade de imagem, tendo em vista que o documento apresentado está majoritariamente ilegível e dificulta a conferência dos produtos, preços, condições de pagamento, datas das consultas e links completos. Solicita-se, ainda, anexar planilha com a memória de cálculo de cada item, identificando as três cotações utilizadas, a soma dos preços, a divisão por três e a média aritmética resultante, com referência aos respectivos comprovantes. A média apurada deve corresponder ao valor unitário registrado no Plano de Aplicação Detalhado.",
+          "communication": "2026-10-06",
+          "science": "",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-06T16:07:40.808Z",
+          "base": "2026-10-16",
+          "due": "2026-10-16",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "e28347a6-f735-4db5-af3f-9b9de8138628",
+          "ref": "pad:17408758",
+          "category": "PLANO DE APLICAÇÃO DETALHADO",
+          "request": "Solicita-se anexar nova versão legível da pesquisa mercadológica, com melhor qualidade de imagem, tendo em vista que o documento apresentado está majoritariamente ilegível e dificulta a conferência dos produtos, preços, condições de pagamento, datas das consultas e links completos. Solicita-se, ainda, anexar planilha com a memória de cálculo de cada item, identificando as três cotações utilizadas, a soma dos preços, a divisão por três e a média aritmética resultante, com referência aos respectivos comprovantes. A média apurada deve corresponder ao valor unitário registrado no Plano de Aplicação Detalhado.",
+          "communication": "2026-10-06",
+          "science": "",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-06T16:07:40.809Z",
+          "base": "2026-10-16",
+          "due": "2026-10-16",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        }
+      ],
       "ouvidoria": {
         "status": "na",
         "signature": "",
@@ -15005,6 +15259,556 @@ window.PROFOR_PUBLIC_DATA = {
           },
           "after": {
             "at": "2026-10-06T12:41:57.865Z"
+          }
+        },
+        {
+          "at": "2026-10-06T16:07:40.792Z",
+          "event": "Avaliação: pad / 17408779",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Solicita-se anexar nova versão legível da pesquisa mercadológica, com melhor qualidade de imagem, tendo em vista que o documento apresentado está majoritariamente ilegível e dificulta a conferência dos produtos, preços, condições de pagamento, datas das consultas e links completos. Solicita-se, ainda, anexar planilha com a memória de cálculo de cada item, identificando as três cotações utilizadas, a soma dos preços, a divisão por três e a média aritmética resultante, com referência aos respectivos comprovantes. A média apurada deve corresponder ao valor unitário registrado no Plano de Aplicação Detalhado.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-06T16:07:40.792Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17408779",
+              "fingerprint": "fnv64-v1:a785517572a33868"
+            }
+          }
+        },
+        {
+          "at": "2026-10-06T16:07:40.794Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "ccc65011-9ac0-44bc-8442-2b24d7535a18",
+            "ref": "pad:17408779",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Solicita-se anexar nova versão legível da pesquisa mercadológica, com melhor qualidade de imagem, tendo em vista que o documento apresentado está majoritariamente ilegível e dificulta a conferência dos produtos, preços, condições de pagamento, datas das consultas e links completos. Solicita-se, ainda, anexar planilha com a memória de cálculo de cada item, identificando as três cotações utilizadas, a soma dos preços, a divisão por três e a média aritmética resultante, com referência aos respectivos comprovantes. A média apurada deve corresponder ao valor unitário registrado no Plano de Aplicação Detalhado.",
+            "communication": "2026-10-06",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-06T16:07:40.793Z",
+            "base": "2026-10-16",
+            "due": "2026-10-16",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-06T16:07:40.795Z",
+          "event": "Avaliação: pad / 17408695",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Solicita-se anexar nova versão legível da pesquisa mercadológica, com melhor qualidade de imagem, tendo em vista que o documento apresentado está majoritariamente ilegível e dificulta a conferência dos produtos, preços, condições de pagamento, datas das consultas e links completos. Solicita-se, ainda, anexar planilha com a memória de cálculo de cada item, identificando as três cotações utilizadas, a soma dos preços, a divisão por três e a média aritmética resultante, com referência aos respectivos comprovantes. A média apurada deve corresponder ao valor unitário registrado no Plano de Aplicação Detalhado.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-06T16:07:40.795Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17408695",
+              "fingerprint": "fnv64-v1:f09e6e65f765526f"
+            }
+          }
+        },
+        {
+          "at": "2026-10-06T16:07:40.796Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "af182ea0-9311-4071-a7fa-1591015192d6",
+            "ref": "pad:17408695",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Solicita-se anexar nova versão legível da pesquisa mercadológica, com melhor qualidade de imagem, tendo em vista que o documento apresentado está majoritariamente ilegível e dificulta a conferência dos produtos, preços, condições de pagamento, datas das consultas e links completos. Solicita-se, ainda, anexar planilha com a memória de cálculo de cada item, identificando as três cotações utilizadas, a soma dos preços, a divisão por três e a média aritmética resultante, com referência aos respectivos comprovantes. A média apurada deve corresponder ao valor unitário registrado no Plano de Aplicação Detalhado.",
+            "communication": "2026-10-06",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-06T16:07:40.795Z",
+            "base": "2026-10-16",
+            "due": "2026-10-16",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-06T16:07:40.797Z",
+          "event": "Avaliação: pad / 17408693",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Solicita-se anexar nova versão legível da pesquisa mercadológica, com melhor qualidade de imagem, tendo em vista que o documento apresentado está majoritariamente ilegível e dificulta a conferência dos produtos, preços, condições de pagamento, datas das consultas e links completos. Solicita-se, ainda, anexar planilha com a memória de cálculo de cada item, identificando as três cotações utilizadas, a soma dos preços, a divisão por três e a média aritmética resultante, com referência aos respectivos comprovantes. A média apurada deve corresponder ao valor unitário registrado no Plano de Aplicação Detalhado.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-06T16:07:40.797Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17408693",
+              "fingerprint": "fnv64-v1:8f4a838cc83ad89d"
+            }
+          }
+        },
+        {
+          "at": "2026-10-06T16:07:40.798Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "7ba549c4-7101-4d49-bca6-0bcd4ba804a6",
+            "ref": "pad:17408693",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Solicita-se anexar nova versão legível da pesquisa mercadológica, com melhor qualidade de imagem, tendo em vista que o documento apresentado está majoritariamente ilegível e dificulta a conferência dos produtos, preços, condições de pagamento, datas das consultas e links completos. Solicita-se, ainda, anexar planilha com a memória de cálculo de cada item, identificando as três cotações utilizadas, a soma dos preços, a divisão por três e a média aritmética resultante, com referência aos respectivos comprovantes. A média apurada deve corresponder ao valor unitário registrado no Plano de Aplicação Detalhado.",
+            "communication": "2026-10-06",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-06T16:07:40.797Z",
+            "base": "2026-10-16",
+            "due": "2026-10-16",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-06T16:07:40.798Z",
+          "event": "Avaliação: pad / 17408761",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Solicita-se anexar nova versão legível da pesquisa mercadológica, com melhor qualidade de imagem, tendo em vista que o documento apresentado está majoritariamente ilegível e dificulta a conferência dos produtos, preços, condições de pagamento, datas das consultas e links completos. Solicita-se, ainda, anexar planilha com a memória de cálculo de cada item, identificando as três cotações utilizadas, a soma dos preços, a divisão por três e a média aritmética resultante, com referência aos respectivos comprovantes. A média apurada deve corresponder ao valor unitário registrado no Plano de Aplicação Detalhado.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-06T16:07:40.798Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17408761",
+              "fingerprint": "fnv64-v1:fa85f4adc9eea67b"
+            }
+          }
+        },
+        {
+          "at": "2026-10-06T16:07:40.799Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "f8668634-30c9-4a73-886f-69c71c319836",
+            "ref": "pad:17408761",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Solicita-se anexar nova versão legível da pesquisa mercadológica, com melhor qualidade de imagem, tendo em vista que o documento apresentado está majoritariamente ilegível e dificulta a conferência dos produtos, preços, condições de pagamento, datas das consultas e links completos. Solicita-se, ainda, anexar planilha com a memória de cálculo de cada item, identificando as três cotações utilizadas, a soma dos preços, a divisão por três e a média aritmética resultante, com referência aos respectivos comprovantes. A média apurada deve corresponder ao valor unitário registrado no Plano de Aplicação Detalhado.",
+            "communication": "2026-10-06",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-06T16:07:40.798Z",
+            "base": "2026-10-16",
+            "due": "2026-10-16",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-06T16:07:40.799Z",
+          "event": "Avaliação: pad / 17408698",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Solicita-se anexar nova versão legível da pesquisa mercadológica, com melhor qualidade de imagem, tendo em vista que o documento apresentado está majoritariamente ilegível e dificulta a conferência dos produtos, preços, condições de pagamento, datas das consultas e links completos. Solicita-se, ainda, anexar planilha com a memória de cálculo de cada item, identificando as três cotações utilizadas, a soma dos preços, a divisão por três e a média aritmética resultante, com referência aos respectivos comprovantes. A média apurada deve corresponder ao valor unitário registrado no Plano de Aplicação Detalhado.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-06T16:07:40.799Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17408698",
+              "fingerprint": "fnv64-v1:5b420784e5ba8b2a"
+            }
+          }
+        },
+        {
+          "at": "2026-10-06T16:07:40.800Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "94f686e9-f26b-48b8-afd9-27a5dc6d76e8",
+            "ref": "pad:17408698",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Solicita-se anexar nova versão legível da pesquisa mercadológica, com melhor qualidade de imagem, tendo em vista que o documento apresentado está majoritariamente ilegível e dificulta a conferência dos produtos, preços, condições de pagamento, datas das consultas e links completos. Solicita-se, ainda, anexar planilha com a memória de cálculo de cada item, identificando as três cotações utilizadas, a soma dos preços, a divisão por três e a média aritmética resultante, com referência aos respectivos comprovantes. A média apurada deve corresponder ao valor unitário registrado no Plano de Aplicação Detalhado.",
+            "communication": "2026-10-06",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-06T16:07:40.799Z",
+            "base": "2026-10-16",
+            "due": "2026-10-16",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-06T16:07:40.801Z",
+          "event": "Avaliação: pad / 17408710",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Solicita-se anexar nova versão legível da pesquisa mercadológica, com melhor qualidade de imagem, tendo em vista que o documento apresentado está majoritariamente ilegível e dificulta a conferência dos produtos, preços, condições de pagamento, datas das consultas e links completos. Solicita-se, ainda, anexar planilha com a memória de cálculo de cada item, identificando as três cotações utilizadas, a soma dos preços, a divisão por três e a média aritmética resultante, com referência aos respectivos comprovantes. A média apurada deve corresponder ao valor unitário registrado no Plano de Aplicação Detalhado.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-06T16:07:40.801Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17408710",
+              "fingerprint": "fnv64-v1:1791b4a3bf87c791"
+            }
+          }
+        },
+        {
+          "at": "2026-10-06T16:07:40.801Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "829b5a21-efbd-4109-abd9-fc3a10c0cd68",
+            "ref": "pad:17408710",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Solicita-se anexar nova versão legível da pesquisa mercadológica, com melhor qualidade de imagem, tendo em vista que o documento apresentado está majoritariamente ilegível e dificulta a conferência dos produtos, preços, condições de pagamento, datas das consultas e links completos. Solicita-se, ainda, anexar planilha com a memória de cálculo de cada item, identificando as três cotações utilizadas, a soma dos preços, a divisão por três e a média aritmética resultante, com referência aos respectivos comprovantes. A média apurada deve corresponder ao valor unitário registrado no Plano de Aplicação Detalhado.",
+            "communication": "2026-10-06",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-06T16:07:40.801Z",
+            "base": "2026-10-16",
+            "due": "2026-10-16",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-06T16:07:40.802Z",
+          "event": "Avaliação: pad / 17408711",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Solicita-se anexar nova versão legível da pesquisa mercadológica, com melhor qualidade de imagem, tendo em vista que o documento apresentado está majoritariamente ilegível e dificulta a conferência dos produtos, preços, condições de pagamento, datas das consultas e links completos. Solicita-se, ainda, anexar planilha com a memória de cálculo de cada item, identificando as três cotações utilizadas, a soma dos preços, a divisão por três e a média aritmética resultante, com referência aos respectivos comprovantes. A média apurada deve corresponder ao valor unitário registrado no Plano de Aplicação Detalhado.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-06T16:07:40.802Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17408711",
+              "fingerprint": "fnv64-v1:34ab6fcf10c1386d"
+            }
+          }
+        },
+        {
+          "at": "2026-10-06T16:07:40.803Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "6fe203a1-0477-4746-95cb-5bc9ef490597",
+            "ref": "pad:17408711",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Solicita-se anexar nova versão legível da pesquisa mercadológica, com melhor qualidade de imagem, tendo em vista que o documento apresentado está majoritariamente ilegível e dificulta a conferência dos produtos, preços, condições de pagamento, datas das consultas e links completos. Solicita-se, ainda, anexar planilha com a memória de cálculo de cada item, identificando as três cotações utilizadas, a soma dos preços, a divisão por três e a média aritmética resultante, com referência aos respectivos comprovantes. A média apurada deve corresponder ao valor unitário registrado no Plano de Aplicação Detalhado.",
+            "communication": "2026-10-06",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-06T16:07:40.802Z",
+            "base": "2026-10-16",
+            "due": "2026-10-16",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-06T16:07:40.804Z",
+          "event": "Avaliação: pad / 17408701",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Solicita-se anexar nova versão legível da pesquisa mercadológica, com melhor qualidade de imagem, tendo em vista que o documento apresentado está majoritariamente ilegível e dificulta a conferência dos produtos, preços, condições de pagamento, datas das consultas e links completos. Solicita-se, ainda, anexar planilha com a memória de cálculo de cada item, identificando as três cotações utilizadas, a soma dos preços, a divisão por três e a média aritmética resultante, com referência aos respectivos comprovantes. A média apurada deve corresponder ao valor unitário registrado no Plano de Aplicação Detalhado.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-06T16:07:40.804Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17408701",
+              "fingerprint": "fnv64-v1:294f3183e22d5d76"
+            }
+          }
+        },
+        {
+          "at": "2026-10-06T16:07:40.805Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "77858d2f-3518-4d87-b3f4-5e56619bfc0f",
+            "ref": "pad:17408701",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Solicita-se anexar nova versão legível da pesquisa mercadológica, com melhor qualidade de imagem, tendo em vista que o documento apresentado está majoritariamente ilegível e dificulta a conferência dos produtos, preços, condições de pagamento, datas das consultas e links completos. Solicita-se, ainda, anexar planilha com a memória de cálculo de cada item, identificando as três cotações utilizadas, a soma dos preços, a divisão por três e a média aritmética resultante, com referência aos respectivos comprovantes. A média apurada deve corresponder ao valor unitário registrado no Plano de Aplicação Detalhado.",
+            "communication": "2026-10-06",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-06T16:07:40.804Z",
+            "base": "2026-10-16",
+            "due": "2026-10-16",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-06T16:07:40.806Z",
+          "event": "Avaliação: pad / 17408704",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Solicita-se anexar nova versão legível da pesquisa mercadológica, com melhor qualidade de imagem, tendo em vista que o documento apresentado está majoritariamente ilegível e dificulta a conferência dos produtos, preços, condições de pagamento, datas das consultas e links completos. Solicita-se, ainda, anexar planilha com a memória de cálculo de cada item, identificando as três cotações utilizadas, a soma dos preços, a divisão por três e a média aritmética resultante, com referência aos respectivos comprovantes. A média apurada deve corresponder ao valor unitário registrado no Plano de Aplicação Detalhado.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-06T16:07:40.806Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17408704",
+              "fingerprint": "fnv64-v1:8b1cd5613212842e"
+            }
+          }
+        },
+        {
+          "at": "2026-10-06T16:07:40.807Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "0b1332c6-5bfd-47fc-88c4-229df0295de3",
+            "ref": "pad:17408704",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Solicita-se anexar nova versão legível da pesquisa mercadológica, com melhor qualidade de imagem, tendo em vista que o documento apresentado está majoritariamente ilegível e dificulta a conferência dos produtos, preços, condições de pagamento, datas das consultas e links completos. Solicita-se, ainda, anexar planilha com a memória de cálculo de cada item, identificando as três cotações utilizadas, a soma dos preços, a divisão por três e a média aritmética resultante, com referência aos respectivos comprovantes. A média apurada deve corresponder ao valor unitário registrado no Plano de Aplicação Detalhado.",
+            "communication": "2026-10-06",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-06T16:07:40.806Z",
+            "base": "2026-10-16",
+            "due": "2026-10-16",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-06T16:07:40.808Z",
+          "event": "Avaliação: pad / 17408708",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Solicita-se anexar nova versão legível da pesquisa mercadológica, com melhor qualidade de imagem, tendo em vista que o documento apresentado está majoritariamente ilegível e dificulta a conferência dos produtos, preços, condições de pagamento, datas das consultas e links completos. Solicita-se, ainda, anexar planilha com a memória de cálculo de cada item, identificando as três cotações utilizadas, a soma dos preços, a divisão por três e a média aritmética resultante, com referência aos respectivos comprovantes. A média apurada deve corresponder ao valor unitário registrado no Plano de Aplicação Detalhado.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-06T16:07:40.808Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17408708",
+              "fingerprint": "fnv64-v1:644a73aa829cfce7"
+            }
+          }
+        },
+        {
+          "at": "2026-10-06T16:07:40.808Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "2232474c-a63b-4007-94a5-30d0217247a0",
+            "ref": "pad:17408708",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Solicita-se anexar nova versão legível da pesquisa mercadológica, com melhor qualidade de imagem, tendo em vista que o documento apresentado está majoritariamente ilegível e dificulta a conferência dos produtos, preços, condições de pagamento, datas das consultas e links completos. Solicita-se, ainda, anexar planilha com a memória de cálculo de cada item, identificando as três cotações utilizadas, a soma dos preços, a divisão por três e a média aritmética resultante, com referência aos respectivos comprovantes. A média apurada deve corresponder ao valor unitário registrado no Plano de Aplicação Detalhado.",
+            "communication": "2026-10-06",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-06T16:07:40.808Z",
+            "base": "2026-10-16",
+            "due": "2026-10-16",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-06T16:07:40.809Z",
+          "event": "Avaliação: pad / 17408758",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Solicita-se anexar nova versão legível da pesquisa mercadológica, com melhor qualidade de imagem, tendo em vista que o documento apresentado está majoritariamente ilegível e dificulta a conferência dos produtos, preços, condições de pagamento, datas das consultas e links completos. Solicita-se, ainda, anexar planilha com a memória de cálculo de cada item, identificando as três cotações utilizadas, a soma dos preços, a divisão por três e a média aritmética resultante, com referência aos respectivos comprovantes. A média apurada deve corresponder ao valor unitário registrado no Plano de Aplicação Detalhado.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-06T16:07:40.809Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17408758",
+              "fingerprint": "fnv64-v1:4098632a73c82901"
+            }
+          }
+        },
+        {
+          "at": "2026-10-06T16:07:40.810Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "e28347a6-f735-4db5-af3f-9b9de8138628",
+            "ref": "pad:17408758",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Solicita-se anexar nova versão legível da pesquisa mercadológica, com melhor qualidade de imagem, tendo em vista que o documento apresentado está majoritariamente ilegível e dificulta a conferência dos produtos, preços, condições de pagamento, datas das consultas e links completos. Solicita-se, ainda, anexar planilha com a memória de cálculo de cada item, identificando as três cotações utilizadas, a soma dos preços, a divisão por três e a média aritmética resultante, com referência aos respectivos comprovantes. A média apurada deve corresponder ao valor unitário registrado no Plano de Aplicação Detalhado.",
+            "communication": "2026-10-06",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-06T16:07:40.809Z",
+            "base": "2026-10-16",
+            "due": "2026-10-16",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
           }
         }
       ],
