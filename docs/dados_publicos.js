@@ -1,9 +1,9 @@
-/** Snapshot integral de consulta PROFOR/ONASP 2026. Gerado em 2026-10-06T14:36:28.157Z.
+/** Snapshot integral de consulta PROFOR/ONASP 2026. Gerado em 2026-10-06T15:34:46.036Z.
  * Não editar manualmente. Use tools/build_public_docs.cjs. */
-window.PROFOR_PUBLIC_UPDATED_AT = "2026-10-06T14:36:28.157Z";
+window.PROFOR_PUBLIC_UPDATED_AT = "2026-10-06T15:34:46.036Z";
 window.PROFOR_PUBLIC_DATA = {
   "schemaVersion": 1,
-  "revision": 290,
+  "revision": 291,
   "proposals": [
     {
       "id": "2243618",
@@ -37836,24 +37836,71 @@ window.PROFOR_PUBLIC_DATA = {
         },
         "pad": {
           "17450621": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "Solicita-se corrigir os valores unitários dos notebooks e das TVs de 55 polegadas no Plano de Aplicação Detalhado, pois os valores atualmente registrados não correspondem à média aritmética das três pesquisas de preços apresentadas para cada item.\nPara os notebooks, o PAD registra R$ 4.654,00 por unidade. Nas pesquisas apresentadas, os preços normais identificados são R$ 4.899,90 (Amazon), R$ 6.000,00 (Lenovo) e R$ 5.899,00 (Dell). A soma desses valores é de R$ 16.798,90, que, dividida por três e arredondada ao final para duas casas decimais, resulta em R$ 5.599,63. Assim, o valor unitário do item deve ser corrigido para refletir essa média.\nPara as TVs de 55 polegadas, o PAD registra R$ 2.637,26 por unidade. Os preços normais identificados nas três pesquisas são R$ 2.899,00 (Carrefour), R$ 2.999,00 (Mercado Livre) e R$ 2.807,70 (Leroy Merlin). A soma é de R$ 8.705,70 e a divisão por três resulta na média de R$ 2.901,90. O valor unitário do item deve ser corrigido para essa média.\nSolicita-se apresentar a memória de cálculo de cada item, identificando os três preços utilizados, a soma, a divisão por três e a média resultante, com referência aos respectivos comprovantes.",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-06T15:34:08.420Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17450621",
+              "fingerprint": "fnv64-v1:e7c4899e66ebeaba"
+            }
           },
           "17450808": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "Solicita-se corrigir os valores unitários dos notebooks e das TVs de 55 polegadas no Plano de Aplicação Detalhado, pois os valores atualmente registrados não correspondem à média aritmética das três pesquisas de preços apresentadas para cada item.\nPara os notebooks, o PAD registra R$ 4.654,00 por unidade. Nas pesquisas apresentadas, os preços normais identificados são R$ 4.899,90 (Amazon), R$ 6.000,00 (Lenovo) e R$ 5.899,00 (Dell). A soma desses valores é de R$ 16.798,90, que, dividida por três e arredondada ao final para duas casas decimais, resulta em R$ 5.599,63. Assim, o valor unitário do item deve ser corrigido para refletir essa média.\nPara as TVs de 55 polegadas, o PAD registra R$ 2.637,26 por unidade. Os preços normais identificados nas três pesquisas são R$ 2.899,00 (Carrefour), R$ 2.999,00 (Mercado Livre) e R$ 2.807,70 (Leroy Merlin). A soma é de R$ 8.705,70 e a divisão por três resulta na média de R$ 2.901,90. O valor unitário do item deve ser corrigido para essa média.\nSolicita-se apresentar a memória de cálculo de cada item, identificando os três preços utilizados, a soma, a divisão por três e a média resultante, com referência aos respectivos comprovantes.",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-06T15:34:08.423Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17450808",
+              "fingerprint": "fnv64-v1:56af64d915935be5"
+            }
           }
         }
       },
-      "diligences": [],
+      "diligences": [
+        {
+          "id": "0a662b25-3542-4d58-90bf-936c998d18fb",
+          "ref": "pad:17450621",
+          "category": "PLANO DE APLICAÇÃO DETALHADO",
+          "request": "Solicita-se corrigir os valores unitários dos notebooks e das TVs de 55 polegadas no Plano de Aplicação Detalhado, pois os valores atualmente registrados não correspondem à média aritmética das três pesquisas de preços apresentadas para cada item.\nPara os notebooks, o PAD registra R$ 4.654,00 por unidade. Nas pesquisas apresentadas, os preços normais identificados são R$ 4.899,90 (Amazon), R$ 6.000,00 (Lenovo) e R$ 5.899,00 (Dell). A soma desses valores é de R$ 16.798,90, que, dividida por três e arredondada ao final para duas casas decimais, resulta em R$ 5.599,63. Assim, o valor unitário do item deve ser corrigido para refletir essa média.\nPara as TVs de 55 polegadas, o PAD registra R$ 2.637,26 por unidade. Os preços normais identificados nas três pesquisas são R$ 2.899,00 (Carrefour), R$ 2.999,00 (Mercado Livre) e R$ 2.807,70 (Leroy Merlin). A soma é de R$ 8.705,70 e a divisão por três resulta na média de R$ 2.901,90. O valor unitário do item deve ser corrigido para essa média.\nSolicita-se apresentar a memória de cálculo de cada item, identificando os três preços utilizados, a soma, a divisão por três e a média resultante, com referência aos respectivos comprovantes.",
+          "communication": "2026-10-06",
+          "science": "",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-06T15:34:08.421Z",
+          "base": "2026-10-16",
+          "due": "2026-10-16",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "64588d9d-af48-4eb1-825a-035239a73480",
+          "ref": "pad:17450808",
+          "category": "PLANO DE APLICAÇÃO DETALHADO",
+          "request": "Solicita-se corrigir os valores unitários dos notebooks e das TVs de 55 polegadas no Plano de Aplicação Detalhado, pois os valores atualmente registrados não correspondem à média aritmética das três pesquisas de preços apresentadas para cada item.\nPara os notebooks, o PAD registra R$ 4.654,00 por unidade. Nas pesquisas apresentadas, os preços normais identificados são R$ 4.899,90 (Amazon), R$ 6.000,00 (Lenovo) e R$ 5.899,00 (Dell). A soma desses valores é de R$ 16.798,90, que, dividida por três e arredondada ao final para duas casas decimais, resulta em R$ 5.599,63. Assim, o valor unitário do item deve ser corrigido para refletir essa média.\nPara as TVs de 55 polegadas, o PAD registra R$ 2.637,26 por unidade. Os preços normais identificados nas três pesquisas são R$ 2.899,00 (Carrefour), R$ 2.999,00 (Mercado Livre) e R$ 2.807,70 (Leroy Merlin). A soma é de R$ 8.705,70 e a divisão por três resulta na média de R$ 2.901,90. O valor unitário do item deve ser corrigido para essa média.\nSolicita-se apresentar a memória de cálculo de cada item, identificando os três preços utilizados, a soma, a divisão por três e a média resultante, com referência aos respectivos comprovantes.",
+          "communication": "2026-10-06",
+          "science": "",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-06T15:34:08.423Z",
+          "base": "2026-10-16",
+          "due": "2026-10-16",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        }
+      ],
       "ouvidoria": {
         "status": "na",
         "signature": "",
@@ -38116,6 +38163,106 @@ window.PROFOR_PUBLIC_DATA = {
           },
           "after": {
             "at": "2026-10-06T12:41:57.865Z"
+          }
+        },
+        {
+          "at": "2026-10-06T15:34:08.420Z",
+          "event": "Avaliação: pad / 17450621",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Solicita-se corrigir os valores unitários dos notebooks e das TVs de 55 polegadas no Plano de Aplicação Detalhado, pois os valores atualmente registrados não correspondem à média aritmética das três pesquisas de preços apresentadas para cada item.\nPara os notebooks, o PAD registra R$ 4.654,00 por unidade. Nas pesquisas apresentadas, os preços normais identificados são R$ 4.899,90 (Amazon), R$ 6.000,00 (Lenovo) e R$ 5.899,00 (Dell). A soma desses valores é de R$ 16.798,90, que, dividida por três e arredondada ao final para duas casas decimais, resulta em R$ 5.599,63. Assim, o valor unitário do item deve ser corrigido para refletir essa média.\nPara as TVs de 55 polegadas, o PAD registra R$ 2.637,26 por unidade. Os preços normais identificados nas três pesquisas são R$ 2.899,00 (Carrefour), R$ 2.999,00 (Mercado Livre) e R$ 2.807,70 (Leroy Merlin). A soma é de R$ 8.705,70 e a divisão por três resulta na média de R$ 2.901,90. O valor unitário do item deve ser corrigido para essa média.\nSolicita-se apresentar a memória de cálculo de cada item, identificando os três preços utilizados, a soma, a divisão por três e a média resultante, com referência aos respectivos comprovantes.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-06T15:34:08.420Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17450621",
+              "fingerprint": "fnv64-v1:e7c4899e66ebeaba"
+            }
+          }
+        },
+        {
+          "at": "2026-10-06T15:34:08.422Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "0a662b25-3542-4d58-90bf-936c998d18fb",
+            "ref": "pad:17450621",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Solicita-se corrigir os valores unitários dos notebooks e das TVs de 55 polegadas no Plano de Aplicação Detalhado, pois os valores atualmente registrados não correspondem à média aritmética das três pesquisas de preços apresentadas para cada item.\nPara os notebooks, o PAD registra R$ 4.654,00 por unidade. Nas pesquisas apresentadas, os preços normais identificados são R$ 4.899,90 (Amazon), R$ 6.000,00 (Lenovo) e R$ 5.899,00 (Dell). A soma desses valores é de R$ 16.798,90, que, dividida por três e arredondada ao final para duas casas decimais, resulta em R$ 5.599,63. Assim, o valor unitário do item deve ser corrigido para refletir essa média.\nPara as TVs de 55 polegadas, o PAD registra R$ 2.637,26 por unidade. Os preços normais identificados nas três pesquisas são R$ 2.899,00 (Carrefour), R$ 2.999,00 (Mercado Livre) e R$ 2.807,70 (Leroy Merlin). A soma é de R$ 8.705,70 e a divisão por três resulta na média de R$ 2.901,90. O valor unitário do item deve ser corrigido para essa média.\nSolicita-se apresentar a memória de cálculo de cada item, identificando os três preços utilizados, a soma, a divisão por três e a média resultante, com referência aos respectivos comprovantes.",
+            "communication": "2026-10-06",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-06T15:34:08.421Z",
+            "base": "2026-10-16",
+            "due": "2026-10-16",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-06T15:34:08.423Z",
+          "event": "Avaliação: pad / 17450808",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Solicita-se corrigir os valores unitários dos notebooks e das TVs de 55 polegadas no Plano de Aplicação Detalhado, pois os valores atualmente registrados não correspondem à média aritmética das três pesquisas de preços apresentadas para cada item.\nPara os notebooks, o PAD registra R$ 4.654,00 por unidade. Nas pesquisas apresentadas, os preços normais identificados são R$ 4.899,90 (Amazon), R$ 6.000,00 (Lenovo) e R$ 5.899,00 (Dell). A soma desses valores é de R$ 16.798,90, que, dividida por três e arredondada ao final para duas casas decimais, resulta em R$ 5.599,63. Assim, o valor unitário do item deve ser corrigido para refletir essa média.\nPara as TVs de 55 polegadas, o PAD registra R$ 2.637,26 por unidade. Os preços normais identificados nas três pesquisas são R$ 2.899,00 (Carrefour), R$ 2.999,00 (Mercado Livre) e R$ 2.807,70 (Leroy Merlin). A soma é de R$ 8.705,70 e a divisão por três resulta na média de R$ 2.901,90. O valor unitário do item deve ser corrigido para essa média.\nSolicita-se apresentar a memória de cálculo de cada item, identificando os três preços utilizados, a soma, a divisão por três e a média resultante, com referência aos respectivos comprovantes.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-06T15:34:08.423Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17450808",
+              "fingerprint": "fnv64-v1:56af64d915935be5"
+            }
+          }
+        },
+        {
+          "at": "2026-10-06T15:34:08.423Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "64588d9d-af48-4eb1-825a-035239a73480",
+            "ref": "pad:17450808",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Solicita-se corrigir os valores unitários dos notebooks e das TVs de 55 polegadas no Plano de Aplicação Detalhado, pois os valores atualmente registrados não correspondem à média aritmética das três pesquisas de preços apresentadas para cada item.\nPara os notebooks, o PAD registra R$ 4.654,00 por unidade. Nas pesquisas apresentadas, os preços normais identificados são R$ 4.899,90 (Amazon), R$ 6.000,00 (Lenovo) e R$ 5.899,00 (Dell). A soma desses valores é de R$ 16.798,90, que, dividida por três e arredondada ao final para duas casas decimais, resulta em R$ 5.599,63. Assim, o valor unitário do item deve ser corrigido para refletir essa média.\nPara as TVs de 55 polegadas, o PAD registra R$ 2.637,26 por unidade. Os preços normais identificados nas três pesquisas são R$ 2.899,00 (Carrefour), R$ 2.999,00 (Mercado Livre) e R$ 2.807,70 (Leroy Merlin). A soma é de R$ 8.705,70 e a divisão por três resulta na média de R$ 2.901,90. O valor unitário do item deve ser corrigido para essa média.\nSolicita-se apresentar a memória de cálculo de cada item, identificando os três preços utilizados, a soma, a divisão por três e a média resultante, com referência aos respectivos comprovantes.",
+            "communication": "2026-10-06",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-06T15:34:08.423Z",
+            "base": "2026-10-16",
+            "due": "2026-10-16",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
           }
         }
       ],
