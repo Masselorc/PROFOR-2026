@@ -1,9 +1,9 @@
-/** Snapshot integral de consulta PROFOR/ONASP 2026. Gerado em 2026-10-06T14:18:57.824Z.
+/** Snapshot integral de consulta PROFOR/ONASP 2026. Gerado em 2026-10-06T14:25:17.965Z.
  * Não editar manualmente. Use tools/build_public_docs.cjs. */
-window.PROFOR_PUBLIC_UPDATED_AT = "2026-10-06T14:18:57.824Z";
+window.PROFOR_PUBLIC_UPDATED_AT = "2026-10-06T14:25:17.965Z";
 window.PROFOR_PUBLIC_DATA = {
   "schemaVersion": 1,
-  "revision": 283,
+  "revision": 284,
   "proposals": [
     {
       "id": "2243618",
@@ -29882,64 +29882,133 @@ window.PROFOR_PUBLIC_DATA = {
         },
         "pad": {
           "17425883": {
-            "status": "ok",
-            "note": "",
+            "status": "diligencia",
+            "note": "Solicita-se a apresentação de pesquisa mercadológica com três cotações para cada item do Plano de Aplicação Detalhado (PAD), acompanhadas dos respectivos comprovantes de preços e da memória de cálculo.\nAs pesquisas poderão ser realizadas em sítios eletrônicos. Nesse caso, cada captura de tela deverá apresentar o preço unitário pesquisado, a data da consulta, com a barra de tarefas do Windows visível, e o link completo da página acessada, de modo a permitir a conferência posterior das informações.\nPara cada item, o preço unitário de referência deverá corresponder à média aritmética dos três preços obtidos. O cálculo consiste em somar os três preços unitários e dividir o resultado por três. A média resultante deverá ser registrada como valor unitário do item no PAD.\nA memória de cálculo deverá identificar o item do PAD e apresentar os três preços unitários pesquisados, a soma, a divisão por três e a média obtida, com referência aos respectivos comprovantes. Dessa forma, será possível conferir a correspondência entre as cotações, o cálculo da média e o valor unitário registrado no plano.",
             "document": "",
             "url": "",
-            "at": "2026-09-28T13:29:05.983Z",
+            "at": "2026-10-06T14:24:39.295Z",
             "attachments": [],
             "evidence": {
               "version": 1,
               "ref": "pad:17425883",
-              "fingerprint": null,
-              "legacy": true
-            }
+              "fingerprint": "fnv64-v1:1c7aa7966772bde7"
+            },
+            "actor": "Usuário local"
           },
           "17425889": {
-            "status": "ok",
-            "note": "",
+            "status": "diligencia",
+            "note": "Solicita-se a apresentação de pesquisa mercadológica com três cotações para cada item do Plano de Aplicação Detalhado (PAD), acompanhadas dos respectivos comprovantes de preços e da memória de cálculo.\nAs pesquisas poderão ser realizadas em sítios eletrônicos. Nesse caso, cada captura de tela deverá apresentar o preço unitário pesquisado, a data da consulta, com a barra de tarefas do Windows visível, e o link completo da página acessada, de modo a permitir a conferência posterior das informações.\nPara cada item, o preço unitário de referência deverá corresponder à média aritmética dos três preços obtidos. O cálculo consiste em somar os três preços unitários e dividir o resultado por três. A média resultante deverá ser registrada como valor unitário do item no PAD.\nA memória de cálculo deverá identificar o item do PAD e apresentar os três preços unitários pesquisados, a soma, a divisão por três e a média obtida, com referência aos respectivos comprovantes. Dessa forma, será possível conferir a correspondência entre as cotações, o cálculo da média e o valor unitário registrado no plano.",
             "document": "",
             "url": "",
-            "at": "2026-09-28T13:29:03.253Z",
+            "at": "2026-10-06T14:24:39.293Z",
             "attachments": [],
             "evidence": {
               "version": 1,
               "ref": "pad:17425889",
-              "fingerprint": null,
-              "legacy": true
-            }
+              "fingerprint": "fnv64-v1:800847a5271131bc"
+            },
+            "actor": "Usuário local"
           },
           "17425890": {
-            "status": "ok",
-            "note": "",
+            "status": "diligencia",
+            "note": "Solicita-se a apresentação de pesquisa mercadológica com três cotações para cada item do Plano de Aplicação Detalhado (PAD), acompanhadas dos respectivos comprovantes de preços e da memória de cálculo.\nAs pesquisas poderão ser realizadas em sítios eletrônicos. Nesse caso, cada captura de tela deverá apresentar o preço unitário pesquisado, a data da consulta, com a barra de tarefas do Windows visível, e o link completo da página acessada, de modo a permitir a conferência posterior das informações.\nPara cada item, o preço unitário de referência deverá corresponder à média aritmética dos três preços obtidos. O cálculo consiste em somar os três preços unitários e dividir o resultado por três. A média resultante deverá ser registrada como valor unitário do item no PAD.\nA memória de cálculo deverá identificar o item do PAD e apresentar os três preços unitários pesquisados, a soma, a divisão por três e a média obtida, com referência aos respectivos comprovantes. Dessa forma, será possível conferir a correspondência entre as cotações, o cálculo da média e o valor unitário registrado no plano.",
             "document": "",
             "url": "",
-            "at": "2026-09-28T13:29:08.704Z",
+            "at": "2026-10-06T14:24:39.298Z",
             "attachments": [],
             "evidence": {
               "version": 1,
               "ref": "pad:17425890",
-              "fingerprint": null,
-              "legacy": true
-            }
+              "fingerprint": "fnv64-v1:e176ee0b17534e00"
+            },
+            "actor": "Usuário local"
           },
           "17425892": {
-            "status": "ok",
-            "note": "",
+            "status": "diligencia",
+            "note": "Solicita-se a apresentação de pesquisa mercadológica com três cotações para cada item do Plano de Aplicação Detalhado (PAD), acompanhadas dos respectivos comprovantes de preços e da memória de cálculo.\nAs pesquisas poderão ser realizadas em sítios eletrônicos. Nesse caso, cada captura de tela deverá apresentar o preço unitário pesquisado, a data da consulta, com a barra de tarefas do Windows visível, e o link completo da página acessada, de modo a permitir a conferência posterior das informações.\nPara cada item, o preço unitário de referência deverá corresponder à média aritmética dos três preços obtidos. O cálculo consiste em somar os três preços unitários e dividir o resultado por três. A média resultante deverá ser registrada como valor unitário do item no PAD.\nA memória de cálculo deverá identificar o item do PAD e apresentar os três preços unitários pesquisados, a soma, a divisão por três e a média obtida, com referência aos respectivos comprovantes. Dessa forma, será possível conferir a correspondência entre as cotações, o cálculo da média e o valor unitário registrado no plano.",
             "document": "",
             "url": "",
-            "at": "2026-09-28T13:29:18.138Z",
+            "at": "2026-10-06T14:24:39.289Z",
             "attachments": [],
             "evidence": {
               "version": 1,
               "ref": "pad:17425892",
-              "fingerprint": null,
-              "legacy": true
-            }
+              "fingerprint": "fnv64-v1:994107777e8b9574"
+            },
+            "actor": "Usuário local"
           }
         }
       },
-      "diligences": [],
+      "diligences": [
+        {
+          "id": "730701e1-d33f-4332-90b8-bda3f62a7c98",
+          "ref": "pad:17425892",
+          "category": "PLANO DE APLICAÇÃO DETALHADO",
+          "request": "Solicita-se a apresentação de pesquisa mercadológica com três cotações para cada item do Plano de Aplicação Detalhado (PAD), acompanhadas dos respectivos comprovantes de preços e da memória de cálculo.\nAs pesquisas poderão ser realizadas em sítios eletrônicos. Nesse caso, cada captura de tela deverá apresentar o preço unitário pesquisado, a data da consulta, com a barra de tarefas do Windows visível, e o link completo da página acessada, de modo a permitir a conferência posterior das informações.\nPara cada item, o preço unitário de referência deverá corresponder à média aritmética dos três preços obtidos. O cálculo consiste em somar os três preços unitários e dividir o resultado por três. A média resultante deverá ser registrada como valor unitário do item no PAD.\nA memória de cálculo deverá identificar o item do PAD e apresentar os três preços unitários pesquisados, a soma, a divisão por três e a média obtida, com referência aos respectivos comprovantes. Dessa forma, será possível conferir a correspondência entre as cotações, o cálculo da média e o valor unitário registrado no plano.",
+          "communication": "2026-10-06",
+          "science": "",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-06T14:24:39.290Z",
+          "base": "2026-10-16",
+          "due": "2026-10-16",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "ac3cd9c4-dfc7-452a-a920-72783a8c4aa6",
+          "ref": "pad:17425889",
+          "category": "PLANO DE APLICAÇÃO DETALHADO",
+          "request": "Solicita-se a apresentação de pesquisa mercadológica com três cotações para cada item do Plano de Aplicação Detalhado (PAD), acompanhadas dos respectivos comprovantes de preços e da memória de cálculo.\nAs pesquisas poderão ser realizadas em sítios eletrônicos. Nesse caso, cada captura de tela deverá apresentar o preço unitário pesquisado, a data da consulta, com a barra de tarefas do Windows visível, e o link completo da página acessada, de modo a permitir a conferência posterior das informações.\nPara cada item, o preço unitário de referência deverá corresponder à média aritmética dos três preços obtidos. O cálculo consiste em somar os três preços unitários e dividir o resultado por três. A média resultante deverá ser registrada como valor unitário do item no PAD.\nA memória de cálculo deverá identificar o item do PAD e apresentar os três preços unitários pesquisados, a soma, a divisão por três e a média obtida, com referência aos respectivos comprovantes. Dessa forma, será possível conferir a correspondência entre as cotações, o cálculo da média e o valor unitário registrado no plano.",
+          "communication": "2026-10-06",
+          "science": "",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-06T14:24:39.293Z",
+          "base": "2026-10-16",
+          "due": "2026-10-16",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "6d42675c-26c9-4a02-850a-af7898b4413e",
+          "ref": "pad:17425883",
+          "category": "PLANO DE APLICAÇÃO DETALHADO",
+          "request": "Solicita-se a apresentação de pesquisa mercadológica com três cotações para cada item do Plano de Aplicação Detalhado (PAD), acompanhadas dos respectivos comprovantes de preços e da memória de cálculo.\nAs pesquisas poderão ser realizadas em sítios eletrônicos. Nesse caso, cada captura de tela deverá apresentar o preço unitário pesquisado, a data da consulta, com a barra de tarefas do Windows visível, e o link completo da página acessada, de modo a permitir a conferência posterior das informações.\nPara cada item, o preço unitário de referência deverá corresponder à média aritmética dos três preços obtidos. O cálculo consiste em somar os três preços unitários e dividir o resultado por três. A média resultante deverá ser registrada como valor unitário do item no PAD.\nA memória de cálculo deverá identificar o item do PAD e apresentar os três preços unitários pesquisados, a soma, a divisão por três e a média obtida, com referência aos respectivos comprovantes. Dessa forma, será possível conferir a correspondência entre as cotações, o cálculo da média e o valor unitário registrado no plano.",
+          "communication": "2026-10-06",
+          "science": "",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-06T14:24:39.295Z",
+          "base": "2026-10-16",
+          "due": "2026-10-16",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "ba0bd5b6-3cdf-4745-a77c-57a8ca77b84e",
+          "ref": "pad:17425890",
+          "category": "PLANO DE APLICAÇÃO DETALHADO",
+          "request": "Solicita-se a apresentação de pesquisa mercadológica com três cotações para cada item do Plano de Aplicação Detalhado (PAD), acompanhadas dos respectivos comprovantes de preços e da memória de cálculo.\nAs pesquisas poderão ser realizadas em sítios eletrônicos. Nesse caso, cada captura de tela deverá apresentar o preço unitário pesquisado, a data da consulta, com a barra de tarefas do Windows visível, e o link completo da página acessada, de modo a permitir a conferência posterior das informações.\nPara cada item, o preço unitário de referência deverá corresponder à média aritmética dos três preços obtidos. O cálculo consiste em somar os três preços unitários e dividir o resultado por três. A média resultante deverá ser registrada como valor unitário do item no PAD.\nA memória de cálculo deverá identificar o item do PAD e apresentar os três preços unitários pesquisados, a soma, a divisão por três e a média obtida, com referência aos respectivos comprovantes. Dessa forma, será possível conferir a correspondência entre as cotações, o cálculo da média e o valor unitário registrado no plano.",
+          "communication": "2026-10-06",
+          "science": "",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-06T14:24:39.298Z",
+          "base": "2026-10-16",
+          "due": "2026-10-16",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        }
+      ],
       "ouvidoria": {
         "status": "na",
         "signature": "",
@@ -31065,6 +31134,230 @@ window.PROFOR_PUBLIC_DATA = {
           },
           "after": {
             "at": "2026-10-06T12:41:57.865Z"
+          }
+        },
+        {
+          "at": "2026-10-06T14:24:39.290Z",
+          "event": "Avaliação: pad / 17425892",
+          "actor": "Usuário local",
+          "before": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-28T13:29:18.138Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17425892",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Solicita-se a apresentação de pesquisa mercadológica com três cotações para cada item do Plano de Aplicação Detalhado (PAD), acompanhadas dos respectivos comprovantes de preços e da memória de cálculo.\nAs pesquisas poderão ser realizadas em sítios eletrônicos. Nesse caso, cada captura de tela deverá apresentar o preço unitário pesquisado, a data da consulta, com a barra de tarefas do Windows visível, e o link completo da página acessada, de modo a permitir a conferência posterior das informações.\nPara cada item, o preço unitário de referência deverá corresponder à média aritmética dos três preços obtidos. O cálculo consiste em somar os três preços unitários e dividir o resultado por três. A média resultante deverá ser registrada como valor unitário do item no PAD.\nA memória de cálculo deverá identificar o item do PAD e apresentar os três preços unitários pesquisados, a soma, a divisão por três e a média obtida, com referência aos respectivos comprovantes. Dessa forma, será possível conferir a correspondência entre as cotações, o cálculo da média e o valor unitário registrado no plano.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-06T14:24:39.289Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17425892",
+              "fingerprint": "fnv64-v1:994107777e8b9574"
+            },
+            "actor": "Usuário local"
+          }
+        },
+        {
+          "at": "2026-10-06T14:24:39.292Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "730701e1-d33f-4332-90b8-bda3f62a7c98",
+            "ref": "pad:17425892",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Solicita-se a apresentação de pesquisa mercadológica com três cotações para cada item do Plano de Aplicação Detalhado (PAD), acompanhadas dos respectivos comprovantes de preços e da memória de cálculo.\nAs pesquisas poderão ser realizadas em sítios eletrônicos. Nesse caso, cada captura de tela deverá apresentar o preço unitário pesquisado, a data da consulta, com a barra de tarefas do Windows visível, e o link completo da página acessada, de modo a permitir a conferência posterior das informações.\nPara cada item, o preço unitário de referência deverá corresponder à média aritmética dos três preços obtidos. O cálculo consiste em somar os três preços unitários e dividir o resultado por três. A média resultante deverá ser registrada como valor unitário do item no PAD.\nA memória de cálculo deverá identificar o item do PAD e apresentar os três preços unitários pesquisados, a soma, a divisão por três e a média obtida, com referência aos respectivos comprovantes. Dessa forma, será possível conferir a correspondência entre as cotações, o cálculo da média e o valor unitário registrado no plano.",
+            "communication": "2026-10-06",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-06T14:24:39.290Z",
+            "base": "2026-10-16",
+            "due": "2026-10-16",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-06T14:24:39.293Z",
+          "event": "Avaliação: pad / 17425889",
+          "actor": "Usuário local",
+          "before": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-28T13:29:03.253Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17425889",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Solicita-se a apresentação de pesquisa mercadológica com três cotações para cada item do Plano de Aplicação Detalhado (PAD), acompanhadas dos respectivos comprovantes de preços e da memória de cálculo.\nAs pesquisas poderão ser realizadas em sítios eletrônicos. Nesse caso, cada captura de tela deverá apresentar o preço unitário pesquisado, a data da consulta, com a barra de tarefas do Windows visível, e o link completo da página acessada, de modo a permitir a conferência posterior das informações.\nPara cada item, o preço unitário de referência deverá corresponder à média aritmética dos três preços obtidos. O cálculo consiste em somar os três preços unitários e dividir o resultado por três. A média resultante deverá ser registrada como valor unitário do item no PAD.\nA memória de cálculo deverá identificar o item do PAD e apresentar os três preços unitários pesquisados, a soma, a divisão por três e a média obtida, com referência aos respectivos comprovantes. Dessa forma, será possível conferir a correspondência entre as cotações, o cálculo da média e o valor unitário registrado no plano.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-06T14:24:39.293Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17425889",
+              "fingerprint": "fnv64-v1:800847a5271131bc"
+            },
+            "actor": "Usuário local"
+          }
+        },
+        {
+          "at": "2026-10-06T14:24:39.294Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "ac3cd9c4-dfc7-452a-a920-72783a8c4aa6",
+            "ref": "pad:17425889",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Solicita-se a apresentação de pesquisa mercadológica com três cotações para cada item do Plano de Aplicação Detalhado (PAD), acompanhadas dos respectivos comprovantes de preços e da memória de cálculo.\nAs pesquisas poderão ser realizadas em sítios eletrônicos. Nesse caso, cada captura de tela deverá apresentar o preço unitário pesquisado, a data da consulta, com a barra de tarefas do Windows visível, e o link completo da página acessada, de modo a permitir a conferência posterior das informações.\nPara cada item, o preço unitário de referência deverá corresponder à média aritmética dos três preços obtidos. O cálculo consiste em somar os três preços unitários e dividir o resultado por três. A média resultante deverá ser registrada como valor unitário do item no PAD.\nA memória de cálculo deverá identificar o item do PAD e apresentar os três preços unitários pesquisados, a soma, a divisão por três e a média obtida, com referência aos respectivos comprovantes. Dessa forma, será possível conferir a correspondência entre as cotações, o cálculo da média e o valor unitário registrado no plano.",
+            "communication": "2026-10-06",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-06T14:24:39.293Z",
+            "base": "2026-10-16",
+            "due": "2026-10-16",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-06T14:24:39.295Z",
+          "event": "Avaliação: pad / 17425883",
+          "actor": "Usuário local",
+          "before": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-28T13:29:05.983Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17425883",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Solicita-se a apresentação de pesquisa mercadológica com três cotações para cada item do Plano de Aplicação Detalhado (PAD), acompanhadas dos respectivos comprovantes de preços e da memória de cálculo.\nAs pesquisas poderão ser realizadas em sítios eletrônicos. Nesse caso, cada captura de tela deverá apresentar o preço unitário pesquisado, a data da consulta, com a barra de tarefas do Windows visível, e o link completo da página acessada, de modo a permitir a conferência posterior das informações.\nPara cada item, o preço unitário de referência deverá corresponder à média aritmética dos três preços obtidos. O cálculo consiste em somar os três preços unitários e dividir o resultado por três. A média resultante deverá ser registrada como valor unitário do item no PAD.\nA memória de cálculo deverá identificar o item do PAD e apresentar os três preços unitários pesquisados, a soma, a divisão por três e a média obtida, com referência aos respectivos comprovantes. Dessa forma, será possível conferir a correspondência entre as cotações, o cálculo da média e o valor unitário registrado no plano.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-06T14:24:39.295Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17425883",
+              "fingerprint": "fnv64-v1:1c7aa7966772bde7"
+            },
+            "actor": "Usuário local"
+          }
+        },
+        {
+          "at": "2026-10-06T14:24:39.296Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "6d42675c-26c9-4a02-850a-af7898b4413e",
+            "ref": "pad:17425883",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Solicita-se a apresentação de pesquisa mercadológica com três cotações para cada item do Plano de Aplicação Detalhado (PAD), acompanhadas dos respectivos comprovantes de preços e da memória de cálculo.\nAs pesquisas poderão ser realizadas em sítios eletrônicos. Nesse caso, cada captura de tela deverá apresentar o preço unitário pesquisado, a data da consulta, com a barra de tarefas do Windows visível, e o link completo da página acessada, de modo a permitir a conferência posterior das informações.\nPara cada item, o preço unitário de referência deverá corresponder à média aritmética dos três preços obtidos. O cálculo consiste em somar os três preços unitários e dividir o resultado por três. A média resultante deverá ser registrada como valor unitário do item no PAD.\nA memória de cálculo deverá identificar o item do PAD e apresentar os três preços unitários pesquisados, a soma, a divisão por três e a média obtida, com referência aos respectivos comprovantes. Dessa forma, será possível conferir a correspondência entre as cotações, o cálculo da média e o valor unitário registrado no plano.",
+            "communication": "2026-10-06",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-06T14:24:39.295Z",
+            "base": "2026-10-16",
+            "due": "2026-10-16",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-06T14:24:39.298Z",
+          "event": "Avaliação: pad / 17425890",
+          "actor": "Usuário local",
+          "before": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-28T13:29:08.704Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17425890",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Solicita-se a apresentação de pesquisa mercadológica com três cotações para cada item do Plano de Aplicação Detalhado (PAD), acompanhadas dos respectivos comprovantes de preços e da memória de cálculo.\nAs pesquisas poderão ser realizadas em sítios eletrônicos. Nesse caso, cada captura de tela deverá apresentar o preço unitário pesquisado, a data da consulta, com a barra de tarefas do Windows visível, e o link completo da página acessada, de modo a permitir a conferência posterior das informações.\nPara cada item, o preço unitário de referência deverá corresponder à média aritmética dos três preços obtidos. O cálculo consiste em somar os três preços unitários e dividir o resultado por três. A média resultante deverá ser registrada como valor unitário do item no PAD.\nA memória de cálculo deverá identificar o item do PAD e apresentar os três preços unitários pesquisados, a soma, a divisão por três e a média obtida, com referência aos respectivos comprovantes. Dessa forma, será possível conferir a correspondência entre as cotações, o cálculo da média e o valor unitário registrado no plano.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-06T14:24:39.298Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17425890",
+              "fingerprint": "fnv64-v1:e176ee0b17534e00"
+            },
+            "actor": "Usuário local"
+          }
+        },
+        {
+          "at": "2026-10-06T14:24:39.299Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "ba0bd5b6-3cdf-4745-a77c-57a8ca77b84e",
+            "ref": "pad:17425890",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Solicita-se a apresentação de pesquisa mercadológica com três cotações para cada item do Plano de Aplicação Detalhado (PAD), acompanhadas dos respectivos comprovantes de preços e da memória de cálculo.\nAs pesquisas poderão ser realizadas em sítios eletrônicos. Nesse caso, cada captura de tela deverá apresentar o preço unitário pesquisado, a data da consulta, com a barra de tarefas do Windows visível, e o link completo da página acessada, de modo a permitir a conferência posterior das informações.\nPara cada item, o preço unitário de referência deverá corresponder à média aritmética dos três preços obtidos. O cálculo consiste em somar os três preços unitários e dividir o resultado por três. A média resultante deverá ser registrada como valor unitário do item no PAD.\nA memória de cálculo deverá identificar o item do PAD e apresentar os três preços unitários pesquisados, a soma, a divisão por três e a média obtida, com referência aos respectivos comprovantes. Dessa forma, será possível conferir a correspondência entre as cotações, o cálculo da média e o valor unitário registrado no plano.",
+            "communication": "2026-10-06",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-06T14:24:39.298Z",
+            "base": "2026-10-16",
+            "due": "2026-10-16",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
           }
         }
       ],
