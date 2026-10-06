@@ -1,9 +1,9 @@
-/** Snapshot integral de consulta PROFOR/ONASP 2026. Gerado em 2026-10-06T12:49:07.995Z.
+/** Snapshot integral de consulta PROFOR/ONASP 2026. Gerado em 2026-10-06T13:28:47.507Z.
  * Não editar manualmente. Use tools/build_public_docs.cjs. */
-window.PROFOR_PUBLIC_UPDATED_AT = "2026-10-06T12:49:07.995Z";
+window.PROFOR_PUBLIC_UPDATED_AT = "2026-10-06T13:28:47.507Z";
 window.PROFOR_PUBLIC_DATA = {
   "schemaVersion": 1,
-  "revision": 279,
+  "revision": 280,
   "proposals": [
     {
       "id": "2243618",
@@ -1112,11 +1112,11 @@ window.PROFOR_PUBLIC_DATA = {
             }
           },
           "15": {
-            "status": "ok",
-            "note": "",
+            "status": "diligencia",
+            "note": "Documento ausente.",
             "document": "",
             "url": "",
-            "at": "2026-10-05T18:29:04.705Z",
+            "at": "2026-10-06T13:28:03.012Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
@@ -1126,11 +1126,11 @@ window.PROFOR_PUBLIC_DATA = {
             }
           },
           "16": {
-            "status": "ok",
-            "note": "",
+            "status": "diligencia",
+            "note": "Documento ausente.",
             "document": "",
             "url": "",
-            "at": "2026-10-05T18:29:04.705Z",
+            "at": "2026-10-06T13:28:03.018Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
@@ -1140,11 +1140,11 @@ window.PROFOR_PUBLIC_DATA = {
             }
           },
           "17": {
-            "status": "ok",
-            "note": "",
+            "status": "diligencia",
+            "note": "Documento ausente.",
             "document": "",
             "url": "",
-            "at": "2026-10-05T18:29:04.705Z",
+            "at": "2026-10-06T13:28:03.019Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
@@ -1154,11 +1154,11 @@ window.PROFOR_PUBLIC_DATA = {
             }
           },
           "18": {
-            "status": "ok",
-            "note": "",
+            "status": "diligencia",
+            "note": "Documento ausente.",
             "document": "",
             "url": "",
-            "at": "2026-10-05T18:29:04.705Z",
+            "at": "2026-10-06T13:28:03.020Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
@@ -1713,6 +1713,74 @@ window.PROFOR_PUBLIC_DATA = {
           "status": "aberta",
           "note": "",
           "at": "2026-10-05T18:28:35.186Z",
+          "base": "2026-10-15",
+          "due": "2026-10-15",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "725d07ce-acdf-484c-ab30-0887e0411a9a",
+          "ref": "celebracao:15",
+          "category": "OUTRO",
+          "request": "Documento ausente.",
+          "communication": "2026-10-05",
+          "science": "",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-06T13:28:03.012Z",
+          "base": "2026-10-15",
+          "due": "2026-10-15",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "dc102d12-6ed9-4393-ab58-74ac06be3dcd",
+          "ref": "celebracao:16",
+          "category": "OUTRO",
+          "request": "Documento ausente.",
+          "communication": "2026-10-05",
+          "science": "",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-06T13:28:03.018Z",
+          "base": "2026-10-15",
+          "due": "2026-10-15",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "fc2966c5-a96d-4067-b192-0a5c324a9e1a",
+          "ref": "celebracao:17",
+          "category": "OUTRO",
+          "request": "Documento ausente.",
+          "communication": "2026-10-05",
+          "science": "",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-06T13:28:03.019Z",
+          "base": "2026-10-15",
+          "due": "2026-10-15",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "d3ae3e52-672e-4f97-b9fa-b7727f657ba9",
+          "ref": "celebracao:18",
+          "category": "OUTRO",
+          "request": "Documento ausente.",
+          "communication": "2026-10-05",
+          "science": "",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-06T13:28:03.020Z",
           "base": "2026-10-15",
           "due": "2026-10-15",
           "automaticDeadline": true,
@@ -7058,6 +7126,230 @@ window.PROFOR_PUBLIC_DATA = {
           },
           "after": {
             "at": "2026-10-06T12:41:57.865Z"
+          }
+        },
+        {
+          "at": "2026-10-06T13:28:03.012Z",
+          "event": "Avaliação: celebracao / 15",
+          "actor": "Usuário local",
+          "before": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T18:29:04.705Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:15",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Documento ausente.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-06T13:28:03.012Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:15",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-06T13:28:03.016Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "725d07ce-acdf-484c-ab30-0887e0411a9a",
+            "ref": "celebracao:15",
+            "category": "OUTRO",
+            "request": "Documento ausente.",
+            "communication": "2026-10-05",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-06T13:28:03.012Z",
+            "base": "2026-10-15",
+            "due": "2026-10-15",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-06T13:28:03.018Z",
+          "event": "Avaliação: celebracao / 16",
+          "actor": "Usuário local",
+          "before": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T18:29:04.705Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:16",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Documento ausente.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-06T13:28:03.018Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:16",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-06T13:28:03.019Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "dc102d12-6ed9-4393-ab58-74ac06be3dcd",
+            "ref": "celebracao:16",
+            "category": "OUTRO",
+            "request": "Documento ausente.",
+            "communication": "2026-10-05",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-06T13:28:03.018Z",
+            "base": "2026-10-15",
+            "due": "2026-10-15",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-06T13:28:03.019Z",
+          "event": "Avaliação: celebracao / 17",
+          "actor": "Usuário local",
+          "before": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T18:29:04.705Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:17",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Documento ausente.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-06T13:28:03.019Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:17",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-06T13:28:03.020Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "fc2966c5-a96d-4067-b192-0a5c324a9e1a",
+            "ref": "celebracao:17",
+            "category": "OUTRO",
+            "request": "Documento ausente.",
+            "communication": "2026-10-05",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-06T13:28:03.019Z",
+            "base": "2026-10-15",
+            "due": "2026-10-15",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-06T13:28:03.020Z",
+          "event": "Avaliação: celebracao / 18",
+          "actor": "Usuário local",
+          "before": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T18:29:04.705Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:18",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Documento ausente.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-06T13:28:03.020Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:18",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-06T13:28:03.021Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "d3ae3e52-672e-4f97-b9fa-b7727f657ba9",
+            "ref": "celebracao:18",
+            "category": "OUTRO",
+            "request": "Documento ausente.",
+            "communication": "2026-10-05",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-06T13:28:03.020Z",
+            "base": "2026-10-15",
+            "due": "2026-10-15",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
           }
         }
       ],
