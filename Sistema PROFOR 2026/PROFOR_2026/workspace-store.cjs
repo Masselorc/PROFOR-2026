@@ -83,7 +83,9 @@ function createStore(directory){
     const old=load();
     if(token!==old.token || expected!==old.state.revision)throw fail('O banco foi alterado em outra aba ou máquina. Recarregue a página antes de salvar.');
     if(syncRun && (!state.sync?.at || state.sync.at===old.state.sync?.at))throw fail('Registro de sincronização sem atualização correspondente do banco.',400);
-    const next=D.clone(state);next.revision=expected+1;
+    const next=D.clone(state);
+    D.reconcileStateDiligences(next,'Sistema — conciliação de requisitos');
+    D.validateState(next);next.revision=expected+1;
     const record={format:1,parent:old.token,savedAt:new Date().toISOString(),nonce:crypto.randomUUID(),state:next,recovery:restore?old.state:(old.recovery||(!old.exists?recovery:null))};
     if(syncRun)record.syncRun={startedAt:syncRun.startedAt,finishedAt:record.savedAt,activity:syncRun.activity};
     const text=JSON.stringify(record,null,2)+'\n',id=digest(text);

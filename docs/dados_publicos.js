@@ -1,9 +1,9 @@
-/** Snapshot integral de consulta PROFOR/ONASP 2026. Gerado em 2026-10-06T13:28:47.507Z.
+/** Snapshot integral de consulta PROFOR/ONASP 2026. Gerado em 2026-10-06T13:43:10.108Z.
  * Não editar manualmente. Use tools/build_public_docs.cjs. */
-window.PROFOR_PUBLIC_UPDATED_AT = "2026-10-06T13:28:47.507Z";
+window.PROFOR_PUBLIC_UPDATED_AT = "2026-10-06T13:43:10.108Z";
 window.PROFOR_PUBLIC_DATA = {
   "schemaVersion": 1,
-  "revision": 280,
+  "revision": 282,
   "proposals": [
     {
       "id": "2243618",
@@ -40554,10 +40554,10 @@ window.PROFOR_PUBLIC_DATA = {
           },
           "3": {
             "status": "diligencia",
-            "note": "Fala.BR - incluir manifestação a respeito da plataforma Fala.br no Plano de trabalho.",
+            "note": "Fala.BR - incluir manifestação a respeito da plataforma Fala.br no Plano de trabalho.\nSolicita-se corrigir os valores do Plano de Trabalho para que constem: repasse de R$ 200.000,00, contrapartida de R$ 200,21 e valor total de R$ 200.200,21.",
             "document": "",
             "url": "",
-            "at": "2026-10-05T18:21:43.593Z",
+            "at": "2026-10-06T13:36:13.416Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
@@ -40610,10 +40610,10 @@ window.PROFOR_PUBLIC_DATA = {
           },
           "7": {
             "status": "diligencia",
-            "note": "Falta: Declaração compatib. preços",
+            "note": "Falta: Declaração de contrapartida corrigida para R$ 200,21",
             "document": "",
             "url": "",
-            "at": "2026-10-05T18:22:27.424Z",
+            "at": "2026-10-06T13:38:23.839Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
@@ -41587,16 +41587,16 @@ window.PROFOR_PUBLIC_DATA = {
         {
           "id": "492261b4-1760-4707-8959-f4381dda05fc",
           "ref": "celebracao:3",
-          "request": "Fala.BR - incluir manifestação a respeito da plataforma Fala.br no Plano de trabalho.",
+          "request": "Fala.BR - incluir manifestação a respeito da plataforma Fala.br no Plano de trabalho.\nSolicita-se corrigir os valores do Plano de Trabalho para que constem: repasse de R$ 200.000,00, contrapartida de R$ 200,21 e valor total de R$ 200.200,21.",
           "science": "",
           "category": "OUTRO",
-          "communication": "",
+          "communication": "2026-10-05",
           "response": "",
           "status": "aberta",
           "note": "",
-          "at": "2026-10-05T18:21:43.594Z",
-          "base": "",
-          "due": "",
+          "at": "2026-10-06T13:36:13.418Z",
+          "base": "2026-10-15",
+          "due": "2026-10-15",
           "automaticDeadline": true,
           "confirmed": false,
           "calendarNote": ""
@@ -41604,14 +41604,14 @@ window.PROFOR_PUBLIC_DATA = {
         {
           "id": "d06557f3-487b-4041-8774-25bf101addec",
           "ref": "celebracao:7",
-          "request": "Falta: Declaração compatib. preços",
+          "request": "Falta: Declaração de contrapartida corrigida para R$ 200,21",
           "science": "",
           "category": "OUTRO",
           "communication": "2026-10-05",
           "response": "",
           "status": "aberta",
           "note": "",
-          "at": "2026-10-05T18:22:27.424Z",
+          "at": "2026-10-06T13:38:23.840Z",
           "base": "2026-10-15",
           "due": "2026-10-15",
           "automaticDeadline": true,
@@ -46375,6 +46375,150 @@ window.PROFOR_PUBLIC_DATA = {
             "status": "aberta",
             "note": "",
             "at": "2026-10-06T12:48:06.952Z",
+            "base": "2026-10-15",
+            "due": "2026-10-15",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-06T13:36:13.416Z",
+          "event": "Avaliação: celebracao / 3",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "Fala.BR - incluir manifestação a respeito da plataforma Fala.br no Plano de trabalho.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T18:21:43.593Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:3",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Fala.BR - incluir manifestação a respeito da plataforma Fala.br no Plano de trabalho.\nSolicita-se corrigir os valores do Plano de Trabalho para que constem: repasse de R$ 200.000,00, contrapartida de R$ 200,21 e valor total de R$ 200.200,21.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-06T13:36:13.416Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:3",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-06T13:36:13.419Z",
+          "event": "Diligência atualizada",
+          "actor": "Usuário local",
+          "before": {
+            "id": "492261b4-1760-4707-8959-f4381dda05fc",
+            "ref": "celebracao:3",
+            "request": "Fala.BR - incluir manifestação a respeito da plataforma Fala.br no Plano de trabalho.",
+            "science": "",
+            "category": "OUTRO",
+            "communication": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-05T18:21:43.594Z",
+            "base": "",
+            "due": "",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          },
+          "after": {
+            "id": "492261b4-1760-4707-8959-f4381dda05fc",
+            "ref": "celebracao:3",
+            "request": "Fala.BR - incluir manifestação a respeito da plataforma Fala.br no Plano de trabalho.\nSolicita-se corrigir os valores do Plano de Trabalho para que constem: repasse de R$ 200.000,00, contrapartida de R$ 200,21 e valor total de R$ 200.200,21.",
+            "science": "",
+            "category": "OUTRO",
+            "communication": "2026-10-05",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-06T13:36:13.418Z",
+            "base": "2026-10-15",
+            "due": "2026-10-15",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-06T13:38:23.839Z",
+          "event": "Avaliação: celebracao / 7",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "Falta: Declaração compatib. preços",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T18:22:27.424Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:7",
+              "fingerprint": "fnv64-v1:ebe42b5fecc77703"
+            }
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Falta: Declaração de contrapartida corrigida para R$ 200,21",
+            "document": "",
+            "url": "",
+            "at": "2026-10-06T13:38:23.839Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:7",
+              "fingerprint": "fnv64-v1:ebe42b5fecc77703"
+            }
+          }
+        },
+        {
+          "at": "2026-10-06T13:38:23.840Z",
+          "event": "Diligência atualizada",
+          "actor": "Usuário local",
+          "before": {
+            "id": "d06557f3-487b-4041-8774-25bf101addec",
+            "ref": "celebracao:7",
+            "request": "Falta: Declaração compatib. preços",
+            "science": "",
+            "category": "OUTRO",
+            "communication": "2026-10-05",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-05T18:22:27.424Z",
+            "base": "2026-10-15",
+            "due": "2026-10-15",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          },
+          "after": {
+            "id": "d06557f3-487b-4041-8774-25bf101addec",
+            "ref": "celebracao:7",
+            "request": "Falta: Declaração de contrapartida corrigida para R$ 200,21",
+            "science": "",
+            "category": "OUTRO",
+            "communication": "2026-10-05",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-06T13:38:23.840Z",
             "base": "2026-10-15",
             "due": "2026-10-15",
             "automaticDeadline": true,

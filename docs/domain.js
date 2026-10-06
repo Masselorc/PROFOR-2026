@@ -106,7 +106,8 @@
     celebracao: CELEBRACAO.map(x=>[x.id,x.label])
   };
   const STATUSES = {na:'Não analisado',ok:'Atende',obs:'Atendido com observação',diligencia:'Em diligência',no:'Não atende',reanalise:'Requer nova análise'};
-  const DSTATUS = {aberta:'Aberta',aguardando:'Aguardando resposta',recebida:'Resposta recebida',saneada:'Saneada / atendida',nao_saneada:'Não saneada'};
+  const DSTATUS = {aberta:'Aberta',aguardando:'Aguardando resposta',recebida:'Resposta recebida',saneada:'Saneada / atendida',nao_saneada:'Não saneada',baixada:'Encerrada por atendimento do requisito'};
+  const DILIGENCE_SCOPES = {review:'A revisar — alcance não confirmado',requirement:'Somente a pendência deste requisito',independent:'Obrigação independente (ex.: anexar em aba específica)'};
   const CATEGORIES = ['VALOR GLOBAL','VALOR DE REPASSE','VALOR DE CONTRAPARTIDA','PLANO DE APLICAÇÃO DETALHADO','PESQUISA DE PREÇOS','PLANO DE TRABALHO','METAS / ETAPAS / CRONOGRAMAS','INSTITUIÇÃO DA OUVIDORIA','ANEXO / DOCUMENTO','CAPACIDADE TÉCNICA E GERENCIAL','HABILITAÇÃO','OUTRO'];
   /* Textos oficiais da proposta, buscados sob demanda no arquivo público
      `siconv_justificativas_proposta.zip`. Ficam FORA de `imported` de propósito:
@@ -516,7 +517,7 @@
     return TAB_LABELS[g] || g;
   }
   function referenceRows(p) { return Object.keys(p.reviews).flatMap(g=>rows(p,g).map(([id,label])=>({ref:g+':'+id,group:g,tab:tabLabel(g,id),id,label,review:reviewOf(p,g,id)}))); }
-  function pending(p) { return referenceRows(p).filter(r=>r.review.status==='diligencia' && !p.diligences.some(d=>d.ref===r.ref && d.status!=='saneada')); }
+  function pending(p) { return referenceRows(p).filter(r=>r.review.status==='diligencia' && !p.diligences.some(d=>d.ref===r.ref && !['saneada','baixada'].includes(d.status))); }
   function finance(p) {
     const i=p.imported, items=i.pad;
     const complete=[i.repasse,i.contrapartida,i.global].every(x=>Number.isSafeInteger(x));
@@ -531,7 +532,35 @@
      não não conformidades a sanar. */
   const RESULTADO_PREVISTO = new Set(['ouvidoriaInstituida','falaBRAdesao']);
   const accepted = (r,id) => ['ok','obs'].includes(r.status) || (r.status==='no' && RESULTADO_PREVISTO.has(id));
-  const diligenceTerminal=d=>['saneada','nao_saneada'].includes(d.status);
+  const diligenceTerminal=d=>['saneada','nao_saneada','baixada'].includes(d.status);
+  /* A referência identifica o item, mas não comprova o alcance da providência.
+     Registros legados sem alcance explícito nunca são baixados por texto. */
+  function diligenceReviewIssue(p,d){
+    if(diligenceTerminal(d))return '';
+    const r=referenceRows(p).find(r=>r.ref===d.ref);
+    if(r?.review.status!=='ok')return '';
+    if(!reviewCurrent(p,r.group,r.id))return 'Requisito marcado como Atende, mas a evidência requer nova conferência. Diligência mantida aberta.';
+    if(d.scope==='independent')return 'Requisito atende; a obrigação independente permanece aberta. Atende não comprova anexação, entrega ou comunicação.';
+    if(d.scope!=='requirement')return 'Requisito atende; revise o alcance desta diligência. Confirme se trata somente do requisito ou de obrigação independente. Nenhuma anexação foi presumida.';
+    return '';
+  }
+  function reconcileDiligences(p,actor='Sistema',ref=null){
+    const closed=[];
+    for(const d of p.diligences){
+      if(diligenceTerminal(d) || d.scope!=='requirement' || (ref && d.ref!==ref))continue;
+      const r=referenceRows(p).find(r=>r.ref===d.ref);
+      if(!r || r.review.status!=='ok' || !reviewCurrent(p,r.group,r.id))continue;
+      const before=clone(d),at=now();
+      d.status='baixada';d.at=at;
+      d.closedByReview={ref:d.ref,at,actor,reason:'Baixa automática: requisito marcado como Atende; diligência explicitamente restrita à pendência deste requisito. Não comprova entrega, anexação ou comunicação.'};
+      log(p,'Diligência encerrada por atendimento do requisito',before,d,actor);closed.push(d.id);
+      if(r.group!=='celebracao')reopenConclusion(p,'Conclusão reaberta por baixa de diligência vinculada ao requisito',actor);
+    }
+    return closed;
+  }
+  function reconcileStateDiligences(state,actor='Sistema'){
+    return state.proposals.flatMap(p=>reconcileDiligences(p,actor).map(id=>({proposal:p.id,id})));
+  }
   function reviewed(p,g,id){
     const r=reviewOf(p,g,id);if(!reviewCurrent(p,g,id))return false;
     if(['ok','obs','no'].includes(r.status))return r.status!=='no' || !!r.note.trim() || (storage(g)==='merito' && RESULTADO_PREVISTO.has(id));
@@ -555,7 +584,7 @@
     if(pending(p).length)b.push('Marcação de diligência sem registro ativo');
     const sem=semJustificativa(p).filter(r=>celebration || !r.ref.startsWith('celebracao:'));
     if(sem.length)b.push(`${sem.length} item(ns) marcado(s) como não conforme sem justificativa`);
-    if(p.diligences.some(d=>d.status!=='saneada' && (celebration || !d.ref.startsWith('celebracao:'))))b.push('Diligência ainda não saneada');
+    if(p.diligences.some(d=>!['saneada','baixada'].includes(d.status) && (celebration || !d.ref.startsWith('celebracao:'))))b.push('Diligência ainda não saneada');
     if(celebration && p.ouvidoria.status!=='instituida' && !(p.ouvidoria.status==='pendente' && p.ouvidoria.clause)) b.push('Confirmar instituição da Ouvidoria ou aplicação da cláusula suspensiva');
     if(celebration && sourceState(p.imported).key!=='enviada')b.push('Situação oficial não permite presumir aptidão: '+sourceState(p.imported).label);
     return [...new Set(b)];
@@ -694,6 +723,7 @@
     }
     p.reviews[g][id]=after;after.evidence=evidenceOf(p,g,id);delete after.reanalysis;
     log(p,`Avaliação: ${g} / ${id}`,before,after,actor);
+    if(after.status==='ok')reconcileDiligences(p,actor,canonicalRef(g,id));
     if(g!=='celebracao')reopenConclusion(p,'Conclusão reaberta por alteração da análise',actor);
   }
   function addAttachment(p,group,id,file,actor) {
@@ -763,6 +793,10 @@
   const ROTULOS_DE_ITEM={ouvidoriaInstituida:{no:'Ausente'},falaBRAdesao:{ok:'Já aderiu',obs:'Previsto no Plano de Trabalho',no:'Sem previsão'}};
   const rotuloDoResultado = (id,status) => ROTULOS_DE_ITEM[id]?.[status] || STATUSES[status];
   function saveDiligence(p,data,actor) {
+    const existing=p.diligences.find(x=>x.id===data.id);
+    assert(data.status!=='baixada' && existing?.status!=='baixada','Baixa automática é registrada pelo requisito; consulte o histórico desta diligência.');
+    assert(data.scope===undefined || Object.hasOwn(DILIGENCE_SCOPES,data.scope),'Alcance da diligência inválido.');
+    assert(data.scope!=='requirement' || !!data.ref,'Informe o requisito para uma diligência exclusiva.');
     assert(CATEGORIES.includes(data.category),'Categoria inválida.');
     assert(!data.ref || referenceRows(p).some(r=>r.ref===data.ref),'Vínculo inválido.');
     assert(data.request.trim(),'Informe a providência solicitada.');
@@ -778,20 +812,30 @@
     /* Um salvamento sem edição conserva também o vencimento/conferência legados.
        Metadados derivados só mudam quando há alteração dos campos editáveis;
        não migrar uma diligência na confirmação de um formulário inalterado. */
-    const editable=['ref','category','request','communication','science','response','status','note'];
-    if(old && editable.filter(k=>Object.hasOwn(data,k)).every(k=>canonical(old[k])===canonical(k==='science'?(old.science || data.science || ''):data[k])))return old;
+    const editable=['ref','category','request','communication','science','response','status','note','scope'];
+    const unchanged=k=>canonical(old[k])===canonical(k==='science'?(old.science || data.science || ''):data[k]);
+    if(old && editable.filter(k=>Object.hasOwn(data,k)).every(unchanged)){reconcileDiligences(p,actor,old.ref || null);return old;}
+    if(old && editable.filter(k=>k!=='scope' && Object.hasOwn(data,k)).every(unchanged)){
+      const after={...old,scope:data.scope,at:now()};
+      log(p,'Alcance da diligência atualizado',old,after,actor);p.diligences[p.diligences.indexOf(old)]=after;
+      reconcileDiligences(p,actor,after.ref || null);
+      if(!after.ref.startsWith('celebracao:'))reopenConclusion(p,'Conclusão reaberta por alteração do alcance da diligência',actor);
+      return after;
+    }
     // Prazo derivado: nunca aceitar vencimento ou conferência enviados pelo formulário.
     // Os registros anteriores permanecem no histórico, sem migração silenciosa do banco.
     const after={...old,...data,science:old?.science || data.science || '',id:old?.id || uid(),at:now(),base:calculated.base,due:calculated.adjusted,automaticDeadline:true,confirmed:false,calendarNote:old?.calendarNote || ''};
+    if(old && data.scope===undefined && (old.ref!==after.ref || old.request!==after.request))after.scope='review';
     if(old && canonical(diligenceEvidence(old))===canonical(diligenceEvidence(after)))return old;
     const beforeEvidence=technicalEvidence(p);
     log(p,old?'Diligência atualizada':'Diligência cadastrada',old || null,after,actor);
     if(old)p.diligences[p.diligences.indexOf(old)]=after; else p.diligences.push(after);
+    reconcileDiligences(p,actor,after.ref || null);
     if(beforeEvidence!==technicalEvidence(p))reopenConclusion(p,'Conclusão reaberta por diligência; evidência técnica anterior/posterior alterada',actor);
     return after;
   }
-  function mayResolveReference(p,d) { return d.status==='saneada' && !!d.ref && !p.diligences.some(x=>x.ref===d.ref && x.status!=='saneada'); }
-  function diligenceLabel(d) { return (d.automaticDeadline || d.confirmed) && d.due && !d.response && !['saneada','nao_saneada'].includes(d.status) && d.due<localToday() ? 'Prazo expirado' : DSTATUS[d.status]; }
+  function mayResolveReference(p,d) { return d.status==='saneada' && !!d.ref && !p.diligences.some(x=>x.ref===d.ref && !['saneada','baixada'].includes(x.status)); }
+  function diligenceLabel(d) { return (d.automaticDeadline || d.confirmed) && d.due && !d.response && !diligenceTerminal(d) && d.due<localToday() ? 'Prazo expirado' : DSTATUS[d.status]; }
   /* Requisito criado depois do último salvamento não tem entrada em
      `reviews` no banco antigo — foi o caso do item de conteúdo da proposta no
      Mérito. A normalização preenche a entrada em branco antes da validação, o
@@ -864,6 +908,9 @@
       for(const d of p.diligences) {
         assert(typeof d.id==='string' && !dids.has(d.id),'ID de diligência inválido.'); dids.add(d.id);
         assert(CATEGORIES.includes(d.category) && Object.hasOwn(DSTATUS,d.status),'Diligência inválida.');
+        assert(d.scope===undefined || Object.hasOwn(DILIGENCE_SCOPES,d.scope),'Alcance da diligência inválido.');
+        assert(d.scope!=='requirement' || !!d.ref,'Diligência exclusiva sem requisito.');
+        if(d.status==='baixada')assert(d.scope==='requirement' && d.closedByReview?.ref===d.ref && typeof d.closedByReview.actor==='string' && !!d.closedByReview.reason && Number.isFinite(Date.parse(d.closedByReview.at)),'Baixa automática sem motivo, vínculo ou data.');
         for(const k of ['request','ref','communication','science','response','due','note','calendarNote'])assert(typeof d[k]==='string','Diligência incompleta.');
         for(const k of ['communication','science','response','due'])dateISO(d[k]);
         assert(typeof d.confirmed==='boolean' && d.request.trim(),'Conferência ou providência inválida.');
@@ -892,6 +939,6 @@
     for(const p of activeProposals(state)){const v=reviewProgress(p);lines.push([p.imported.uf,fmtProposalNumber(p.imported.numero),p.imported.proponente,...['repasse','contrapartida','global'].map(k=>p.imported[k]===null?'':(p.imported[k]/100).toFixed(2).replace('.',',')),situation(p),pending(p).length,v.pad.done,v.pad.total,finance(p).errors.length,v.done,v.total,p.conclusion?.result||'Não registrada ou legada',aptForCelebration(p)?(p.ouvidoria.clause?'Com cláusula suspensiva':'Apta'):'Não apta',conclusionValidity(p).label]);}
     return '\uFEFF'+lines.map(r=>r.map(csvCell).join(';')).join('\r\n');
   }
-  const api={matchesFilters,canonicalRef,EVIDENCE_DEPENDENCIES,evidenceOf,reviewCurrent,reviewValidity,institutionalConflicts,institutionalAssessment,institutionalFields,setInstitution,reviewProgress,conclusionBlocks,confirmConclusion,technicalEvidence,conclusionValidity,conclusionCurrent,aptForCelebration,diligenceTerminal,padCollector,padReferenceContext,UFS,PROGRAM,REQUIREMENTS,CELEBRACAO,ABAS_CELEBRACAO,TAB_LABELS,celebracaoItem,metaRequisito,reviewOf,tabLabel,rows,STATUSES,DSTATUS,CATEGORIES,CAMPOS_TEXTOS,clone,now,uid,esc,assert,safeLink,setSei,setTextos,moneyBR,quantityBR,multiply,unitFromTotal,unitMatchesTotal,dateISO,addDays,addMonths,deadline,deadlineBase,fmtMoney,fmtDate,fmtProposalNumber,fmtCnpj,localToday,initialState,createProposal,validateImported,syncProposals,log,referenceRows,pending,finance,groupProgress,blockers,situation,sourceState,SOURCE_STATES,ufState,orderBySend,activeProposals,deletedProposals,deleteProposal,restoreProposal,setReview,markReview,addAttachment,removeAttachment,resultadoPrevisto,rotuloDoResultado,semJustificativa,saveDiligence,mayResolveReference,diligenceLabel,validateState,normalizeState,exportCSV,padSituacao};
+  const api={DILIGENCE_SCOPES,diligenceReviewIssue,reconcileDiligences,reconcileStateDiligences,matchesFilters,canonicalRef,EVIDENCE_DEPENDENCIES,evidenceOf,reviewCurrent,reviewValidity,institutionalConflicts,institutionalAssessment,institutionalFields,setInstitution,reviewProgress,conclusionBlocks,confirmConclusion,technicalEvidence,conclusionValidity,conclusionCurrent,aptForCelebration,diligenceTerminal,padCollector,padReferenceContext,UFS,PROGRAM,REQUIREMENTS,CELEBRACAO,ABAS_CELEBRACAO,TAB_LABELS,celebracaoItem,metaRequisito,reviewOf,tabLabel,rows,STATUSES,DSTATUS,CATEGORIES,CAMPOS_TEXTOS,clone,now,uid,esc,assert,safeLink,setSei,setTextos,moneyBR,quantityBR,multiply,unitFromTotal,unitMatchesTotal,dateISO,addDays,addMonths,deadline,deadlineBase,fmtMoney,fmtDate,fmtProposalNumber,fmtCnpj,localToday,initialState,createProposal,validateImported,syncProposals,log,referenceRows,pending,finance,groupProgress,blockers,situation,sourceState,SOURCE_STATES,ufState,orderBySend,activeProposals,deletedProposals,deleteProposal,restoreProposal,setReview,markReview,addAttachment,removeAttachment,resultadoPrevisto,rotuloDoResultado,semJustificativa,saveDiligence,mayResolveReference,diligenceLabel,validateState,normalizeState,exportCSV,padSituacao};
   if(typeof module!=='undefined')module.exports=api; else root.Profor=api;
 })(globalThis);

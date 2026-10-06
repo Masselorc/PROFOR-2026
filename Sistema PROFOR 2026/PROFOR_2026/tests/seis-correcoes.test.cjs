@@ -125,6 +125,6 @@ test('1: no-op de diligência confirmada legada conserva prazo e conclusão com 
 });
 
 test('regressão: terminais, centavos e quantidades fracionárias conservam contratos',()=>{
- for(const status of Object.keys(D.DSTATUS))assert.equal(D.diligenceTerminal({status}),['saneada','nao_saneada'].includes(status));
+ for(const status of Object.keys(D.DSTATUS))assert.equal(D.diligenceTerminal({status}),['saneada','nao_saneada','baixada'].includes(status));
  const p=D.createProposal(data({pad:[{id:'11',descricao:'Quantidade fracionária',quantidade:'2.5',unitario:4040,total:10100}]}));assert.equal(D.finance(p).ok,true);assert.equal(D.unitFromTotal('2.5',10100),4040);assert.equal(D.finance(p).sum,10100);
 });
