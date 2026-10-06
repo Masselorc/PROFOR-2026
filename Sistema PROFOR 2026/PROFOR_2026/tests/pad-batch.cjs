@@ -73,8 +73,12 @@ async function main(){
     const after=memory.proposals[0];
     for(const id of ['1','3']){assert.equal(after.reviews.pad[id].status,'ok');for(const field of ['note','document','url','attachments'])assert.deepEqual(after.reviews.pad[id][field],before.reviews.pad[id][field]);}
     for(const id of ['2','4'])assert.deepEqual(after.reviews.pad[id],before.reviews.pad[id]);
-    assert.deepEqual(after.diligences,before.diligences,'Não encerra diligências sem análise');
-    assert.equal(after.history.length,before.history.length+2,'Histórico individual preservado');
+    const closedDiligence=after.diligences[0];
+    assert.equal(closedDiligence.status,'baixada');
+    assert.equal(closedDiligence.closedByReview.ref,'pad:3');
+    assert.equal(closedDiligence.closedByReview.reason,'Encerrada por confirmação de conformidade do requisito');
+    for(const field of Object.keys(before.diligences[0]).filter(k=>!['status','at'].includes(k)))assert.deepEqual(closedDiligence[field],before.diligences[0][field]);
+    assert.equal(after.history.length,before.history.length+3,'Duas análises e uma baixa no histórico');
     assert.equal(await page.locator('[data-pad-batch]:checked').count(),0);
     await page.locator('#pad-search').fill('monitor');await page.locator('#pad-batch-header').check();
     assert.equal(await page.locator('[data-pad-batch]:checked').count(),1,'Selecionar todos respeita o filtro');
@@ -109,15 +113,18 @@ async function main(){
     await apply('diligencia','Solicitação comum aos quatro itens');
     await page.locator('#modal-content input[name="communication"]').fill('2026-09-30');
     await submit();
-    assert.equal(memory.proposals[0].diligences.length,4,'Uma diligência por item, reutilizando a existente');
-    assert.equal(memory.proposals[0].diligences.find(d=>d.ref==='pad:3').id,oldDiligence.id);
+    assert.equal(memory.proposals[0].diligences.length,5,'Quatro diligências abertas e a baixa anterior preservada');
+    assert.deepEqual(memory.proposals[0].diligences.find(d=>d.id===oldDiligence.id),oldDiligence);
+    const activeDiligence=memory.proposals[0].diligences.find(d=>d.ref==='pad:3' && !D.diligenceTerminal(d));
+    assert.notEqual(activeDiligence.id,oldDiligence.id);
+    assert.equal(memory.proposals[0].diligences.filter(d=>!D.diligenceTerminal(d)).length,4);
     assert.ok(Object.values(memory.proposals[0].reviews.pad).every(r=>r.status==='diligencia'));
     const diligenceIDs=memory.proposals[0].diligences.map(d=>d.id);
     await apply('diligencia','Atualização da solicitação');await submit();
     assert.deepEqual(memory.proposals[0].diligences.map(d=>d.id),diligenceIDs,'Repetir ação não duplica diligências');
     for(const id of ['1','2','3','4'])for(const field of ['document','url','attachments'])assert.deepEqual(memory.proposals[0].reviews.pad[id][field],documents[id][field]);
     assert.equal(posts,8,'Uma persistência por ação do conjunto, incluindo a falha');
-    const extra=D.saveDiligence(memory.proposals[0],{...memory.proposals[0].diligences.find(d=>d.ref==='pad:3'),id:'',request:'Outra diligência ativa'},'Fixture');
+    const extra=D.saveDiligence(memory.proposals[0],{...memory.proposals[0].diligences.find(d=>d.id===activeDiligence.id),id:'',request:'Outra diligência ativa'},'Fixture');
     const extraBefore=clone(extra);memory.revision++;token=hash(memory);
     await page.reload();await page.locator('#pad-batch-header').waitFor();
     await page.locator('#pad-batch-2').check();await page.locator('#pad-batch-3').check();
@@ -125,9 +132,9 @@ async function main(){
     await page.locator('#modal-content textarea[name="note"]').fill('Solicitação para o conjunto');
     await page.locator('#modal-content button[type="submit"]').click();
     assert.equal(posts,8,'Exige indicar a diligência quando há mais de uma ativa');
-    await page.locator('#modal-content select[name="d_3"]').selectOption(oldDiligence.id);
+    await page.locator('#modal-content select[name="d_3"]').selectOption(activeDiligence.id);
     await submit();
-    assert.equal(posts,9);assert.equal(memory.proposals[0].diligences.length,5);
+    assert.equal(posts,9);assert.equal(memory.proposals[0].diligences.length,6);
     assert.deepEqual(memory.proposals[0].diligences.find(d=>d.id===extra.id),extraBefore,'Não modifica a diligência que não foi escolhida');
     const terminalCases=[];
     for(const terminal of ['nao_saneada','saneada']){

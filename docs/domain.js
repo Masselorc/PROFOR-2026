@@ -533,33 +533,46 @@
   const RESULTADO_PREVISTO = new Set(['ouvidoriaInstituida','falaBRAdesao']);
   const accepted = (r,id) => ['ok','obs'].includes(r.status) || (r.status==='no' && RESULTADO_PREVISTO.has(id));
   const diligenceTerminal=d=>['saneada','nao_saneada','baixada'].includes(d.status);
-  /* A referência identifica o item, mas não comprova o alcance da providência.
-     Registros legados sem alcance explícito nunca são baixados por texto. */
+  /* A confirmação do analista é o status ok. A diligência pertence à proposta
+     que a contém e precisa coincidir com a referência canônica completa.
+     Scope, documentos locais, texto da solicitação e campos novos não decidem a baixa. */
+  function diligenceReference(p,d){
+    const refs=referenceRows(p).filter(r=>r.ref===d.ref);
+    if(!p.id || !d.ref || refs.length!==1)return {reason:'Vínculo ausente ou não corresponde a um único requisito atual da proposta. Confira proposta, grupo e item; nenhum texto ou ID parcial será usado para a baixa.'};
+    const r=refs[0];
+    if((d.proposalId!==undefined && d.proposalId!==p.id) || (d.group!==undefined && d.group!==r.group) || (d.item!==undefined && d.item!==r.id))return {reason:'Vínculo inconsistente: proposta, grupo ou item informado na diligência diverge da referência canônica.'};
+    return {reference:r};
+  }
   function diligenceReviewIssue(p,d){
     if(diligenceTerminal(d))return '';
-    const r=referenceRows(p).find(r=>r.ref===d.ref);
-    if(r?.review.status!=='ok')return '';
-    if(!reviewCurrent(p,r.group,r.id))return 'Requisito marcado como Atende, mas a evidência requer nova conferência. Diligência mantida aberta.';
-    if(d.scope==='independent')return 'Requisito atende; a obrigação independente permanece aberta. Atende não comprova anexação, entrega ou comunicação.';
-    if(d.scope!=='requirement')return 'Requisito atende; revise o alcance desta diligência. Confirme se trata somente do requisito ou de obrigação independente. Nenhuma anexação foi presumida.';
-    return '';
+    return diligenceReference(p,d).reason || '';
   }
-  function reconcileDiligences(p,actor='Sistema',ref=null){
+  function reconcileDiligences(p,actor=null,ref=null){
     const closed=[];
     for(const d of p.diligences){
-      if(diligenceTerminal(d) || d.scope!=='requirement' || (ref && d.ref!==ref))continue;
-      const r=referenceRows(p).find(r=>r.ref===d.ref);
-      if(!r || r.review.status!=='ok' || !reviewCurrent(p,r.group,r.id))continue;
+      if(diligenceTerminal(d) || (ref && d.ref!==ref))continue;
+      const r=diligenceReference(p,d).reference;
+      if(!r || r.review.status!=='ok')continue;
       const before=clone(d),at=now();
       d.status='baixada';d.at=at;
-      d.closedByReview={ref:d.ref,at,actor,reason:'Baixa automática: requisito marcado como Atende; diligência explicitamente restrita à pendência deste requisito. Não comprova entrega, anexação ou comunicação.'};
-      log(p,'Diligência encerrada por atendimento do requisito',before,d,actor);closed.push(d.id);
-      if(r.group!=='celebracao')reopenConclusion(p,'Conclusão reaberta por baixa de diligência vinculada ao requisito',actor);
+      d.closedByReview={proposalId:p.id,group:r.group,item:r.id,ref:d.ref,at,reason:'Encerrada por confirmação de conformidade do requisito'};
+      if(typeof actor==='string' && actor.trim())d.closedByReview.actor=actor;
+      if(typeof r.review.actor==='string' && r.review.actor.trim())d.closedByReview.confirmedBy=r.review.actor;
+      log(p,'Diligência encerrada por atendimento do requisito',before,d,actor || 'Sistema');closed.push(d.id);
     }
     return closed;
   }
-  function reconcileStateDiligences(state,actor='Sistema'){
-    return state.proposals.flatMap(p=>reconcileDiligences(p,actor).map(id=>({proposal:p.id,id})));
+  function reconcileStateDiligences(state,actor=null,previous=null){
+    return state.proposals.flatMap(p=>{
+      if(!previous)return reconcileDiligences(p,actor).map(id=>({proposal:p.id,id}));
+      const old=previous.proposals.find(x=>x.id===p.id),refs=new Set();
+      for(const d of p.diligences){
+        const r=diligenceReference(p,d).reference;if(!r)continue;
+        const oldReview=old?.reviews?.[r.group]?.[r.id],oldD=old?.diligences.find(x=>x.id===d.id);
+        if(canonical(oldReview)!==canonical(r.review) || canonical(oldD)!==canonical(d))refs.add(r.ref);
+      }
+      return [...refs].flatMap(ref=>reconcileDiligences(p,actor,ref).map(id=>({proposal:p.id,id})));
+    });
   }
   function reviewed(p,g,id){
     const r=reviewOf(p,g,id);if(!reviewCurrent(p,g,id))return false;
@@ -796,7 +809,6 @@
     const existing=p.diligences.find(x=>x.id===data.id);
     assert(data.status!=='baixada' && existing?.status!=='baixada','Baixa automática é registrada pelo requisito; consulte o histórico desta diligência.');
     assert(data.scope===undefined || Object.hasOwn(DILIGENCE_SCOPES,data.scope),'Alcance da diligência inválido.');
-    assert(data.scope!=='requirement' || !!data.ref,'Informe o requisito para uma diligência exclusiva.');
     assert(CATEGORIES.includes(data.category),'Categoria inválida.');
     assert(!data.ref || referenceRows(p).some(r=>r.ref===data.ref),'Vínculo inválido.');
     assert(data.request.trim(),'Informe a providência solicitada.');
@@ -909,8 +921,11 @@
         assert(typeof d.id==='string' && !dids.has(d.id),'ID de diligência inválido.'); dids.add(d.id);
         assert(CATEGORIES.includes(d.category) && Object.hasOwn(DSTATUS,d.status),'Diligência inválida.');
         assert(d.scope===undefined || Object.hasOwn(DILIGENCE_SCOPES,d.scope),'Alcance da diligência inválido.');
-        assert(d.scope!=='requirement' || !!d.ref,'Diligência exclusiva sem requisito.');
-        if(d.status==='baixada')assert(d.scope==='requirement' && d.closedByReview?.ref===d.ref && typeof d.closedByReview.actor==='string' && !!d.closedByReview.reason && Number.isFinite(Date.parse(d.closedByReview.at)),'Baixa automática sem motivo, vínculo ou data.');
+        if(d.status==='baixada'){
+          const c=d.closedByReview;
+          assert(c?.ref===d.ref && !!c.reason && Number.isFinite(Date.parse(c.at)) && (c.actor===undefined || typeof c.actor==='string') && (c.confirmedBy===undefined || typeof c.confirmedBy==='string'),'Baixa automática sem motivo, vínculo ou data.');
+          if(c.proposalId!==undefined)assert(c.proposalId===p.id && c.ref===c.group+':'+c.item,'Baixa automática com vínculo divergente.');
+        }
         for(const k of ['request','ref','communication','science','response','due','note','calendarNote'])assert(typeof d[k]==='string','Diligência incompleta.');
         for(const k of ['communication','science','response','due'])dateISO(d[k]);
         assert(typeof d.confirmed==='boolean' && d.request.trim(),'Conferência ou providência inválida.');
