@@ -191,12 +191,15 @@ async function handleApi(req, res, url) {
       progressRuns.set(id, run);
     }
     let response;
+    const controller = new AbortController();
+    const cancelDownload = () => controller.abort();
+    res.once('close', cancelDownload);
     try {
       const onEvent = run ? event => progressEvent(run, event) : undefined;
-      response = await sync.sync({ pad, force, totalSteps, onEvent });
+      response = await sync.sync({ pad, force, totalSteps, onEvent, signal: controller.signal });
       const ids = response.proposals.map(proposal => proposal.id);
       const texts = await sync.fetchProposalTexts(ids, () => {}, {
-        maxIds: ids.length, progressBase: dataSteps, totalSteps, onEvent
+        maxIds: ids.length, progressBase: dataSteps, totalSteps, onEvent, signal: controller.signal
       });
       response = { ...response, textos: texts.textos, textosFaltando: texts.faltando, textosStats: texts.stats };
       if (run) {
@@ -206,6 +209,8 @@ async function handleApi(req, res, url) {
     } catch (err) {
       if (run) { run.status = 'error'; run.message = err.message; run.updated = Date.now(); }
       throw err;
+    } finally {
+      res.removeListener('close', cancelDownload);
     }
     /* A resposta em cache também carrega o payload; `unchanged` é só metadado. */
     const prefix = response.unchanged ? 'Sincronização (cache): origem sem alteração' : 'Sincronização:';

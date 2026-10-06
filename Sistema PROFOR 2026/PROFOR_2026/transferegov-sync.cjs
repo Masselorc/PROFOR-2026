@@ -45,6 +45,8 @@ const CACHE_DIR = path.join(__dirname, '.cache');
 const CACHE_FILE = path.join(CACHE_DIR, 'sync-result.json');
 const CACHE_VERSION = 2;
 const DEFAULT_TIMEOUT_MS = 10 * 60 * 1000;
+const DOWNLOAD_IDLE_MS = 45 * 1000;
+const MAX_NETWORK_RETRIES = 5;
 const MAX_REDIRECTS = 5;
 const EOCD_SIGNATURE = 0x06054b50;
 const ZIP64_EOCD_SIGNATURE = 0x06064b50;
@@ -139,7 +141,10 @@ function openStream(url, options = {}) {
   const redirects = options.redirects ?? MAX_REDIRECTS;
   const agentModule = options.agentModule || http;
   return new Promise((resolve, reject) => {
+    let response;
     const req = agentModule.get(url, { headers: options.headers || {} }, res => {
+      response = res;
+      res.once('close', () => options.signal?.removeEventListener('abort', abort));
       const status = res.statusCode || 0;
       if ([301, 302, 303, 307, 308].includes(status) && res.headers.location) {
         res.resume();
@@ -149,9 +154,9 @@ function openStream(url, options = {}) {
         resolve(openStream(next, { ...options, redirects: redirects - 1 }));
         return;
       }
-      if (status !== 200) {
+      if (status !== 200 && !(status === 206 && options.headers?.Range)) {
         res.resume();
-        reject(new SyncError(`A origem respondeu HTTP ${status}.`, status === 404 ? 502 : 502));
+        reject(new SyncError(`A origem respondeu HTTP ${status}.`, 502, status === 412 ? 'stale' : 'origin'));
         return;
       }
       resolve({ status, headers: res.headers, stream: res });
@@ -160,10 +165,86 @@ function openStream(url, options = {}) {
       req.destroy(new SyncError(`Tempo limite de ${Math.round(timeoutMs / 1000)}s excedido ao consultar a origem.`, 504, 'timeout'));
     });
     req.on('error', err => {
+      options.signal?.removeEventListener('abort', abort);
+      if (response && !response.destroyed) response.destroy(err);
       if (err instanceof SyncError) { reject(err); return; }
       reject(new SyncError(`Falha de rede ao consultar a origem: ${err.message}.`, err.code === 'ETIMEDOUT' ? 504 : 502));
     });
+    const abort = () => req.destroy(new SyncError('Download cancelado.', 499, 'cancelled'));
+    if (options.signal?.aborted) abort();
+    else options.signal?.addEventListener('abort', abort, { once: true });
   });
+}
+
+/* Retoma apenas com ETag forte: If-Match impede anexar outra geração ao ZIP.
+   Uma resposta 200 à retomada exige reiniciar; 206 exige intervalo e ETag exatos. */
+async function receiveDownload(blob, partial, options) {
+  const fd = fs.openSync(partial, 'w');
+  let written = 0, headers = {}, validator = null, retries = 0;
+  let progressAt = 0, bytesAt = 0;
+  const idleMs = options.downloadIdleMs ?? Math.min(options.timeoutMs ?? DEFAULT_TIMEOUT_MS, DOWNLOAD_IDLE_MS);
+  const limit = options.networkRetries ?? MAX_NETWORK_RETRIES;
+  const notify = () => {
+    if (options.onProgress && blob.bytes && written - progressAt >= blob.bytes / 20) {
+      progressAt = written;
+      options.onProgress(`  ${blob.name}: ${Math.round(100 * written / blob.bytes)}%`);
+    }
+    if (options.onBytes && (written - bytesAt >= Math.max(1, (blob.bytes || written) / 100) || written === blob.bytes)) {
+      options.onBytes(written, blob.bytes); bytesAt = written;
+    }
+  };
+  try {
+    for (;;) {
+      if (options.signal?.aborted) throw new SyncError('Download cancelado.', 499, 'cancelled');
+      let stream, timer;
+      try {
+        const resume = written > 0 && validator;
+        const requestHeaders = { ...options.headers, ...(resume ? { Range: `bytes=${written}-`, 'If-Match': validator } : {}) };
+        const result = await openStream(withCacheBuster(`${BASE_URL}/dadosgov/${blob.name}`, options.cacheBuster ?? Date.now()), { ...options, timeoutMs: idleMs, headers: requestHeaders });
+        stream = result.stream;
+        const etag = result.headers?.etag || result.headers?.ETag;
+        if (result.status === 206) {
+          const range = /^bytes (\d+)-(\d+)\/(\d+)$/.exec(result.headers?.['content-range'] || '');
+          if (!resume || etag !== validator || !range || Number(range[1]) !== written || Number(range[2]) !== blob.bytes - 1 || Number(range[3]) !== blob.bytes) {
+            throw new SyncError(`Intervalo ou versão inválida ao retomar ${blob.name}.`, 502, 'stale');
+          }
+        } else {
+          if (written) {
+            fs.ftruncateSync(fd, 0); written = progressAt = bytesAt = 0;
+            options.onBytes?.(0, blob.bytes);
+            options.onProgress?.(`A origem não confirmou a retomada de ${blob.name}; reiniciando o arquivo completo.`);
+          }
+          headers = result.headers || {};
+          validator = etag && !/^W\//i.test(etag) ? etag : null;
+        }
+        const resetTimer = () => {
+          clearTimeout(timer);
+          timer = setTimeout(() => stream.destroy(new SyncError(`Download de ${blob.name} sem receber dados por ${Math.round(idleMs / 1000)}s.`, 504, 'timeout')), idleMs);
+        };
+        resetTimer();
+        for await (const chunk of stream) {
+          resetTimer();
+          fs.writeSync(fd, chunk, 0, chunk.length, written);
+          written += chunk.length; notify();
+        }
+        if (written < blob.bytes && validator) throw new SyncError(`Conexão encerrada antes de concluir ${blob.name}.`, 502, 'network');
+        return { written, headers };
+      } catch (err) {
+        if (err.code === 'stale' || (err instanceof SyncError && ![502, 504].includes(err.status)) || /^(EACCES|EPERM|ENOSPC|EIO)$/.test(err.code || '')) throw err;
+        if (retries >= limit) throw new SyncError(`Falha ao baixar ${blob.name} após ${retries + 1} tentativas: ${err.message}`, 502, 'network');
+        retries++;
+        options.onRetry?.({ name: blob.name, attempt: retries, written, expected: blob.bytes, reason: 'network', resumed: Boolean(written && validator) });
+        if (!validator) {
+          fs.ftruncateSync(fd, 0); written = progressAt = bytesAt = 0;
+          options.onBytes?.(0, blob.bytes);
+        }
+        await sleep(options.retryDelayMs ?? 500);
+      } finally {
+        clearTimeout(timer);
+        if (stream && !stream.destroyed) stream.destroy();
+      }
+    }
+  } finally { fs.closeSync(fd); }
 }
 
 /* Coleta o corpo inteiro como texto, com limite defensivo. */
@@ -745,39 +826,16 @@ async function downloadBlob(blob, options = {}) {
         }
       } catch { /* sem carimbo: baixa novamente */ }
     }
-    const url = withCacheBuster(`${BASE_URL}/dadosgov/${current.name}`, options.cacheBuster);
-    const { stream, headers } = await openStream(url, options);
     const partial = `${target}.parcial`;
-    let written = 0;
-    let progressAt = 0;
-    let bytesAt = 0;
-    const fd = fs.openSync(partial, 'w');
+    let written = 0, headers = {}, stale = null;
     try {
-      for await (const chunk of stream) {
-        fs.writeSync(fd, chunk);
-        written += chunk.length;
-        /* Avisa no máximo a cada 5% para não inundar o log em 200 MB. */
-        if (typeof options.onProgress === 'function' && current.bytes) {
-          if (written - progressAt >= current.bytes / 20) {
-            progressAt = written;
-            options.onProgress(`  ${current.name}: ${Math.round((written / current.bytes) * 100)}%`);
-          }
-        }
-        if (typeof options.onBytes === 'function' && (written - bytesAt >= Math.max(1, (current.bytes || written) / 100) || written === current.bytes)) {
-          options.onBytes(written, current.bytes);
-          bytesAt = written;
-        }
-      }
+      ({ written, headers } = await receiveDownload(current, partial, options));
+      assertDownloadMatches({ observedBytes: written, expectedBytes: current.bytes, name: current.name });
     } catch (err) {
-      try { fs.closeSync(fd); } catch { /* já fechado */ }
       try { fs.unlinkSync(partial); } catch { /* já removido */ }
-      if (err instanceof SyncError) throw err;
-      throw new SyncError(`Falha ao baixar ${current.name}: ${err.message}.`, 502);
+      if (err.code === 'stale') stale = err;
+      else throw err;
     }
-    fs.closeSync(fd);
-    let stale = null;
-    try { assertDownloadMatches({ observedBytes: written, expectedBytes: current.bytes, name: current.name }); }
-    catch (err) { stale = err; }
     if (stale) {
       try { fs.unlinkSync(partial); } catch { /* já removido */ }
       if (attempt >= MAX_DOWNLOAD_ATTEMPTS) {
@@ -864,7 +922,7 @@ async function runSync(options = {}) {
     emit({ kind: 'stage', message: `Baixando ${blob.name}…`, step: index + 2, steps, loaded: 0, total: blob.bytes });
     const result = await downloadBlob(blob, { ...runOptions, dir, timeoutMs, force,
       onBytes: (loaded, total) => emit({ kind: 'progress', loaded, total }),
-      onRetry: retry => emit({ kind: 'action', message: `Nova tentativa de baixar ${retry.name}: a origem entregou uma versão diferente da listagem.` }) });
+      onRetry: retry => emit({ kind: 'action', message: retry.reason === 'network' ? `Conexão interrompida em ${retry.name}; tentativa ${retry.attempt} de ${MAX_NETWORK_RETRIES}: ${retry.resumed ? 'retomando a partir de ' + retry.written + ' bytes' : 'reiniciando com uma nova conexão'}.` : `Nova tentativa de baixar ${retry.name}: a origem entregou uma versão diferente da listagem.` }) });
     emit({ kind: 'action', message: `${blob.name}: ${result.cached ? 'cópia local reutilizada' : 'download concluído'} (${result.bytes} bytes).` });
     files[blob.name] = {
       path: result.path,
@@ -1109,7 +1167,7 @@ async function fetchProposalTexts(ids, onProgress = () => {}, options = {}) {
     timeoutMs,
     onProgress: message => progress(String(message).trim()),
     onBytes: (loaded, total) => emit({ kind: 'progress', loaded, total }),
-    onRetry: retry => emit({ kind: 'action', message: `Nova tentativa de baixar ${retry.name}: a origem entregou uma versão diferente da listagem.` })
+    onRetry: retry => emit({ kind: 'action', message: retry.reason === 'network' ? `Conexão interrompida em ${retry.name}; tentativa ${retry.attempt} de ${MAX_NETWORK_RETRIES}: ${retry.resumed ? 'retomando a partir de ' + retry.written + ' bytes' : 'reiniciando com uma nova conexão'}.` : `Nova tentativa de baixar ${retry.name}: a origem entregou uma versão diferente da listagem.` })
   });
   emit({ kind: 'action', message: `${BLOBS.textos}: ${file.cached ? 'cópia local reutilizada' : 'download concluído'} (${file.bytes} bytes).` });
   if (file.cached) progress(`Usando a cópia já baixada de ${BLOBS.textos} (mesma geração).`);
