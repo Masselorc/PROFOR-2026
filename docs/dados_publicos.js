@@ -1,9 +1,9 @@
-/** Snapshot integral de consulta PROFOR/ONASP 2026. Gerado em 2026-10-07T12:40:59.618Z.
+/** Snapshot integral de consulta PROFOR/ONASP 2026. Gerado em 2026-10-08T13:16:22.140Z.
  * Não editar manualmente. Use tools/build_public_docs.cjs. */
-window.PROFOR_PUBLIC_UPDATED_AT = "2026-10-07T12:40:59.618Z";
+window.PROFOR_PUBLIC_UPDATED_AT = "2026-10-08T13:16:22.140Z";
 window.PROFOR_PUBLIC_DATA = {
   "schemaVersion": 1,
-  "revision": 296,
+  "revision": 297,
   "proposals": [
     {
       "id": "2243618",
@@ -578,13 +578,24 @@ window.PROFOR_PUBLIC_DATA = {
           "after": {
             "at": "2026-10-07T12:34:16.925Z"
           }
+        },
+        {
+          "at": "2026-10-08T12:43:51.889Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Usuário local",
+          "before": {
+            "at": "2026-10-07T12:34:16.925Z"
+          },
+          "after": {
+            "at": "2026-10-08T12:43:51.889Z"
+          }
         }
       ],
       "isDeleted": true,
       "deletedAt": "2026-09-17T10:49:40.018Z",
       "deletedBy": "Usuário local",
       "textos": {
-        "at": "2026-10-07T12:34:16.925Z",
+        "at": "2026-10-08T12:43:51.889Z",
         "caracterizacao": "Integração de esforços entre o Ministério da Justiça/SENAPPEN e a SEAP/PE para estruturar a Ouvidoria de Serviços Penais. A cooperação atende às diretrizes do PROFOR/ONASP e do Plano Pena Justa, fortalecendo a governança penitenciária, a fiscalização institucional, a proteção dos direitos humanos e o acesso à justiça no âmbito da execução penal em Pernambuco.",
         "publicoAlvo": "Pessoas privadas de liberdade, seus familiares, operadores do direito, órgãos de controle, servidores do sistema penitenciário e a sociedade civil usuária dos serviços da Ouvidoria da SEAP/PE",
         "problema": "Déficit de infraestrutura física, mobiliária e tecnológica na Ouvidoria da SEAP/PE, que limita o acolhimento presencial, compromete a celeridade e o sigilo no fluxo de manifestações e restringe a mobilidade técnica para a realização de inspeções nas unidades prisionais.",
@@ -597,7 +608,7 @@ window.PROFOR_PUBLIC_DATA = {
         "version": 1,
         "status": "complete",
         "source": "siconv_plano_aplicacao_detalhado.zip",
-        "at": "2026-10-07T12:32:16.843Z",
+        "at": "2026-10-08T12:40:10.474Z",
         "received": 0,
         "accepted": 0,
         "rejected": 0,
@@ -7432,10 +7443,21 @@ window.PROFOR_PUBLIC_DATA = {
           "after": {
             "at": "2026-10-07T12:34:16.925Z"
           }
+        },
+        {
+          "at": "2026-10-08T12:43:51.889Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Usuário local",
+          "before": {
+            "at": "2026-10-07T12:34:16.925Z"
+          },
+          "after": {
+            "at": "2026-10-08T12:43:51.889Z"
+          }
         }
       ],
       "textos": {
-        "at": "2026-10-07T12:34:16.925Z",
+        "at": "2026-10-08T12:43:51.889Z",
         "caracterizacao": "Aquisição de bens permanentes destinados ao aparelhamento e ao fortalecimento da Ouvidoria de Serviços Penais do Estado do Rio Grande do Sul, a ser formalmente instituída nos termos do Edital nº 37/2026, visando à qualificação de sua capacidade de atendimento, gestão de manifestações e atuação institucional.",
         "publicoAlvo": "Pessoas privadas de liberdade, familiares, servidores do sistema penal e demais cidadãos que utilizam os serviços da Ouvidoria de Serviços Penais.",
         "problema": "Ausência de estrutura material específica e adequada para o funcionamento da Ouvidoria de Serviços Penais do Estado do Rio Grande do Sul, cuja instituição formal será promovida nos termos do Edital nº 37/2026. A insuficiência de equipamentos, mobiliário, recursos tecnológicos e meios de deslocamento limita a implantação da unidade e a capacidade de atendimento, acompanhamento e tratamento das manifestações relacionadas aos serviços penais.",
@@ -7448,7 +7470,7 @@ window.PROFOR_PUBLIC_DATA = {
         "version": 1,
         "status": "complete",
         "source": "siconv_plano_aplicacao_detalhado.zip",
-        "at": "2026-10-07T12:32:16.843Z",
+        "at": "2026-10-08T12:40:10.474Z",
         "received": 14,
         "accepted": 14,
         "rejected": 0,
@@ -11882,10 +11904,21 @@ window.PROFOR_PUBLIC_DATA = {
           "after": {
             "at": "2026-10-07T12:34:16.925Z"
           }
+        },
+        {
+          "at": "2026-10-08T12:43:51.889Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Usuário local",
+          "before": {
+            "at": "2026-10-07T12:34:16.925Z"
+          },
+          "after": {
+            "at": "2026-10-08T12:43:51.889Z"
+          }
         }
       ],
       "textos": {
-        "at": "2026-10-07T12:34:16.925Z",
+        "at": "2026-10-08T12:43:51.889Z",
         "caracterizacao": "A proposta atende ao interesse do Estado de Sergipe em fortalecer a estrutura e a capacidade de atuação da Ouvidoria de Serviços Penais, ampliando sua eficiência no recebimento, tratamento e encaminhamento de manifestações. Para a União, a iniciativa contribui para a implementação das diretrizes do PROFOR/ONASP, o fortalecimento da participação social, da transparência, do controle institucional e da proteção de direitos na política penal.",
         "publicoAlvo": "O público-alvo compreende, prioritariamente, as pessoas privadas de liberdade, egressos do sistema prisional, familiares e demais cidadãos que utilizam os canais da Ouvidoria para apresentar denúncias, reclamações, solicitações, sugestões, elogios e outras manifestações relacionadas aos serviços penais. Abrange também os agentes e servidores responsáveis pelo atendimento e tratamento dessas manifestações.",
         "problema": "A proposta busca enfrentar as limitações estruturais e tecnológicas que podem comprometer a capacidade institucional da Ouvidoria de Serviços Penais para receber, registrar, tratar, acompanhar e responder manifestações de forma eficiente, segura e rastreável. O fortalecimento do aparelhamento permitirá melhores condições para a escuta qualificada, proteção de informações sensíveis, participação social, transparência e controle dos serviços penais.",
@@ -11898,7 +11931,7 @@ window.PROFOR_PUBLIC_DATA = {
         "version": 1,
         "status": "complete",
         "source": "siconv_plano_aplicacao_detalhado.zip",
-        "at": "2026-10-07T12:32:16.843Z",
+        "at": "2026-10-08T12:40:10.474Z",
         "received": 22,
         "accepted": 22,
         "rejected": 0,
@@ -15854,10 +15887,21 @@ window.PROFOR_PUBLIC_DATA = {
           "after": {
             "at": "2026-10-07T12:34:16.925Z"
           }
+        },
+        {
+          "at": "2026-10-08T12:43:51.889Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Usuário local",
+          "before": {
+            "at": "2026-10-07T12:34:16.925Z"
+          },
+          "after": {
+            "at": "2026-10-08T12:43:51.889Z"
+          }
         }
       ],
       "textos": {
-        "at": "2026-10-07T12:34:16.925Z",
+        "at": "2026-10-08T12:43:51.889Z",
         "caracterizacao": "A Ouvidoria da SAP/CE constitui instrumento estratégico de participação social, controle institucional e proteção de direitos no âmbito da política penal do Estado do Ceará, atuando como canal de comunicação entre a Administração Penitenciária e pessoas privadas de liberdade, familiares, visitantes, servidores, colaboradores e demais usuários dos serviços públicos.",
         "publicoAlvo": "pessoas privadas de liberdade nas unidades prisionais do Estado do Ceará; familiares de pessoas privadas de liberdade; visitantes das unidades prisionais; servidores e policiais penais; colaboradores e prestadores de serviços vinculados à política penal; • egressos e demais usuários dos serviços penais;cidadãos que necessitem utilizar os canais da Ouvidoria; gestores da SAP/CE, de forma indireta, mediante acesso a informações gerenciais produzidas pela escuta institucional,egresso",
         "problema": "Embora a Ouvidoria da SAP/CE disponha atualmente de infraestrutura física e tecnológica adequada em sua sede, decorrente inclusive dos investimentos de modernização e reaparelhamento realizados anteriormente, permanece identificada insuficiência de infraestrutura tecnológica descentralizada para realização contínua, padronizada e territorialmente abrangente da escuta institucional diretamente nos estabelecimentos prisionais e demais pontos estratégicos da Administração Penitenciária.",
@@ -15870,7 +15914,7 @@ window.PROFOR_PUBLIC_DATA = {
         "version": 1,
         "status": "complete",
         "source": "siconv_plano_aplicacao_detalhado.zip",
-        "at": "2026-10-07T12:32:16.843Z",
+        "at": "2026-10-08T12:40:10.474Z",
         "received": 11,
         "accepted": 11,
         "rejected": 0,
@@ -16450,13 +16494,24 @@ window.PROFOR_PUBLIC_DATA = {
           "after": {
             "at": "2026-10-07T12:34:16.925Z"
           }
+        },
+        {
+          "at": "2026-10-08T12:43:51.889Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Usuário local",
+          "before": {
+            "at": "2026-10-07T12:34:16.925Z"
+          },
+          "after": {
+            "at": "2026-10-08T12:43:51.889Z"
+          }
         }
       ],
       "isDeleted": true,
       "deletedAt": "2026-09-17T10:49:50.262Z",
       "deletedBy": "Usuário local",
       "textos": {
-        "at": "2026-10-07T12:34:16.925Z",
+        "at": "2026-10-08T12:43:51.889Z",
         "caracterizacao": "A proposta alinha-se estritamente ao PROFOR/ONASP ao prever o aparelhamento físico e tecnológico do setor com bens de capital. As aquisições atendem aos parâmetros mínimos de funcionamento, qualificam o tratamento de manifestações, viabilizam a integração à Plataforma Fala.BR, garantem sigilo de dados sensíveis e subsidiam inspeções prisionais técnicas.",
         "publicoAlvo": "A proposta alinha-se estritamente ao PROFOR/ONASP ao prever o aparelhamento físico e tecnológico do setor com bens de capital. As aquisições atendem aos parâmetros mínimos de funcionamento, qualificam o tratamento de manifestações, viabilizam a integração à Plataforma Fala.BR, garantem sigilo de dados sensíveis e subsidiam inspeções prisionais técnicas.",
         "problema": "Déficit de infraestrutura física, mobiliária e tecnológica na Ouvidoria da SEAP/PE, que limita o acolhimento presencial, compromete a celeridade e o sigilo no fluxo de manifestações e restringe a mobilidade técnica para a realização de inspeções nas unidades prisionais.",
@@ -16469,7 +16524,7 @@ window.PROFOR_PUBLIC_DATA = {
         "version": 1,
         "status": "complete",
         "source": "siconv_plano_aplicacao_detalhado.zip",
-        "at": "2026-10-07T12:32:16.843Z",
+        "at": "2026-10-08T12:40:10.474Z",
         "received": 0,
         "accepted": 0,
         "rejected": 0,
@@ -17313,13 +17368,24 @@ window.PROFOR_PUBLIC_DATA = {
           "after": {
             "at": "2026-10-07T12:34:16.925Z"
           }
+        },
+        {
+          "at": "2026-10-08T12:43:51.889Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Usuário local",
+          "before": {
+            "at": "2026-10-07T12:34:16.925Z"
+          },
+          "after": {
+            "at": "2026-10-08T12:43:51.889Z"
+          }
         }
       ],
       "isDeleted": true,
       "deletedAt": "2026-09-17T10:49:52.475Z",
       "deletedBy": "Usuário local",
       "textos": {
-        "at": "2026-10-07T12:34:16.925Z",
+        "at": "2026-10-08T12:43:51.889Z",
         "caracterizacao": "Integração de esforços entre o Ministério da Justiça/SENAPPEN e a SEAP/PE para estruturar a Ouvidoria de Serviços Penais. A cooperação atende às diretrizes do PROFOR/ONASP e do Plano Pena Justa, fortalecendo a governança penitenciária, a fiscalização institucional, a proteção dos direitos humanos e o acesso à justiça no âmbito da execução penal em Pernambuco.",
         "publicoAlvo": "Pessoas privadas de liberdade, seus familiares, operadores do direito, órgãos de controle, servidores do sistema penitenciário e a sociedade civil usuária dos serviços da Ouvidoria da SEAP/PE.",
         "problema": "Déficit de infraestrutura física, mobiliária e tecnológica na Ouvidoria da SEAP/PE, que limita o acolhimento presencial, compromete a celeridade e o sigilo no fluxo de manifestações e restringe a mobilidade técnica para a realização de inspeções nas unidades prisionais.",
@@ -17332,7 +17398,7 @@ window.PROFOR_PUBLIC_DATA = {
         "version": 1,
         "status": "complete",
         "source": "siconv_plano_aplicacao_detalhado.zip",
-        "at": "2026-10-07T12:32:16.843Z",
+        "at": "2026-10-08T12:40:10.474Z",
         "received": 6,
         "accepted": 6,
         "rejected": 0,
@@ -23898,10 +23964,21 @@ window.PROFOR_PUBLIC_DATA = {
           "after": {
             "at": "2026-10-07T12:34:16.925Z"
           }
+        },
+        {
+          "at": "2026-10-08T12:43:51.889Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Usuário local",
+          "before": {
+            "at": "2026-10-07T12:34:16.925Z"
+          },
+          "after": {
+            "at": "2026-10-08T12:43:51.889Z"
+          }
         }
       ],
       "textos": {
-        "at": "2026-10-07T12:34:16.925Z",
+        "at": "2026-10-08T12:43:51.889Z",
         "caracterizacao": "O interesse do Governo Federal consiste em fortalecer as ouvidorias de serviços penais e aprimorar a participação social, a transparência e a proteção de direitos. O interesse do Distrito Federal converge com essas diretrizes, mediante o aparelhamento da Ouvidoria da SEAPE/DF, ampliando sua capacidade de atendimento, tratamento de manifestações e prestação de serviços aos usuários.",
         "publicoAlvo": "Usuários dos serviços penais do Distrito Federal, incluindo pessoas privadas de liberdade, familiares, servidores e demais cidadãos que utilizem os canais da Ouvidoria da SEAPE/DF, bem como os servidores responsáveis pelo atendimento, registro, tratamento e encaminhamento das manifestações.",
         "problema": "A atual estrutura física, mobiliário e equipamentos tecnológicos limita a capacidade da Ouvidoria da SEAPE/DF de prestar atendimento qualificado, realizar atendimentos externos, tratar e analisar manifestações e assegurar privacidade em demandas sensíveis. A proposta busca superar essas limitações e proporcionar melhores condições para o funcionamento e fortalecimento da unidade.",
@@ -23914,7 +23991,7 @@ window.PROFOR_PUBLIC_DATA = {
         "version": 1,
         "status": "complete",
         "source": "siconv_plano_aplicacao_detalhado.zip",
-        "at": "2026-10-07T12:32:16.843Z",
+        "at": "2026-10-08T12:40:10.474Z",
         "received": 29,
         "accepted": 29,
         "rejected": 0,
@@ -30390,10 +30467,21 @@ window.PROFOR_PUBLIC_DATA = {
           "after": {
             "at": "2026-10-07T12:34:16.925Z"
           }
+        },
+        {
+          "at": "2026-10-08T12:43:51.889Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Usuário local",
+          "before": {
+            "at": "2026-10-07T12:34:16.925Z"
+          },
+          "after": {
+            "at": "2026-10-08T12:43:51.889Z"
+          }
         }
       ],
       "textos": {
-        "at": "2026-10-07T12:34:16.925Z",
+        "at": "2026-10-08T12:43:51.889Z",
         "caracterizacao": "Integração de esforços entre o Ministério da Justiça/SENAPPEN e a SEAP/PE para estruturar a Ouvidoria de Serviços Penais. A cooperação atende às diretrizes do PROFOR/ONASP e do Plano Pena Justa, fortalecendo a governança penitenciária, a fiscalização institucional, a proteção dos direitos humanos e o acesso à justiça no âmbito da execução penal em Pernambuco.",
         "publicoAlvo": "Pessoas privadas de liberdade, seus familiares, operadores do direito, órgãos de controle, servidores do sistema penitenciário e a sociedade civil usuária dos serviços da Ouvidoria da SEAP/PE.",
         "problema": "Déficit de infraestrutura física, mobiliária e tecnológica na Ouvidoria da SEAP/PE, que limita o acolhimento presencial, compromete a celeridade e o sigilo no fluxo de manifestações e restringe a mobilidade técnica para a realização de inspeções nas unidades prisionais.",
@@ -30406,7 +30494,7 @@ window.PROFOR_PUBLIC_DATA = {
         "version": 1,
         "status": "complete",
         "source": "siconv_plano_aplicacao_detalhado.zip",
-        "at": "2026-10-07T12:32:16.843Z",
+        "at": "2026-10-08T12:40:10.474Z",
         "received": 13,
         "accepted": 13,
         "rejected": 0,
@@ -32262,10 +32350,21 @@ window.PROFOR_PUBLIC_DATA = {
           "after": {
             "at": "2026-10-07T12:34:16.925Z"
           }
+        },
+        {
+          "at": "2026-10-08T12:43:51.889Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Usuário local",
+          "before": {
+            "at": "2026-10-07T12:34:16.925Z"
+          },
+          "after": {
+            "at": "2026-10-08T12:43:51.889Z"
+          }
         }
       ],
       "textos": {
-        "at": "2026-10-07T12:34:16.925Z",
+        "at": "2026-10-08T12:43:51.889Z",
         "caracterizacao": "Há convergência entre as diretrizes do MJSP/SENAPPEN e a missão da OGE-MG. Pelo concedente, busca-se o fortalecimento nacional e a padronização das ouvidorias de serviços penais. Pela OGE-MG, atende à necessidade de modernização tecnológica da Ouvidoria do Sistema Penitenciário e Socioeducativo, ampliando a celeridade e a qualidade no tratamento das manifestações dos cidadãos e na fiscalização dos serviços penais, promovendo a transparência e a garantia dos direitos fundamentais.",
         "publicoAlvo": "Público-Alvo Direto: Servidores e colaboradores da Ouvidoria do Sistema Penitenciário e Socioeducativo da OGE-MG, que operarão os equipamentos no processamento das demandas diárias.Público-Alvo Indireto: pessoas privadas de liberdade (PPL), jovens em cumprimento de medidas socioeducativas, seus familiares, servidores do sistema prisional e socioeducativo, advogados, defensores públicos e a sociedade civil de Minas Gerais que utiliza os canais da OGE-MG.",
         "problema": "A obsolescência, escassez e limitação operacional dos equipamentos de TIC (desktops e notebooks) atualmente em uso na Ouvidoria do Sistema Penitenciário e Socioeducativo. O ecossistema de hardware defasado gera lentidão nos sistemas de atendimento, degradação na segurança da informação, incapacidade de realizar atendimentos ou inspeções externas com suporte computacional móvel (in loco em unidades prisionais e de internação) e consequente gargalo no tempo de resposta ao cidadão.",
@@ -32278,7 +32377,7 @@ window.PROFOR_PUBLIC_DATA = {
         "version": 1,
         "status": "complete",
         "source": "siconv_plano_aplicacao_detalhado.zip",
-        "at": "2026-10-07T12:32:16.843Z",
+        "at": "2026-10-08T12:40:10.474Z",
         "received": 4,
         "accepted": 4,
         "rejected": 0,
@@ -38380,10 +38479,21 @@ window.PROFOR_PUBLIC_DATA = {
           "after": {
             "at": "2026-10-07T12:34:16.925Z"
           }
+        },
+        {
+          "at": "2026-10-08T12:43:51.889Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Usuário local",
+          "before": {
+            "at": "2026-10-07T12:34:16.925Z"
+          },
+          "after": {
+            "at": "2026-10-08T12:43:51.889Z"
+          }
         }
       ],
       "textos": {
-        "at": "2026-10-07T12:34:16.925Z",
+        "at": "2026-10-08T12:43:51.889Z",
         "caracterizacao": "A União, por meio da SENAPPEN, e o Estado do Rio Grande do Norte, por meio da SEAP/RN, compartilham o interesse de fortalecer a Ouvidoria de Serviços Penais. O repasse federal permitirá adquirir bens permanentes para ampliar sua capacidade operacional, enquanto o Estado aportará a contrapartida financeira e assegurará a execução, a guarda, a destinação e a utilização dos bens na finalidade pactuada.",
         "publicoAlvo": "A Ouvidoria de Serviços Penais vinculada à SEAP/RN é a beneficiária direta. O público-alvo compreende pessoas privadas de liberdade, seus familiares, egressos, servidores dos serviços penais e demais cidadãos que apresentem manifestações relacionadas à política penal do Rio Grande do Norte. Os bens também apoiarão a equipe responsável pelo recebimento, tratamento, encaminhamento e resposta às manifestações.",
         "problema": "A Ouvidoria de Serviços Penais do RN necessita ampliar sua capacidade material e tecnológica para atender às demandas institucionais e tratar manifestações com segurança, sigilo e rastreabilidade. O diagnóstico que fundamenta o PROFOR/ONASP identifica a necessidade de reforço das estruturas existentes, sem recursos disponíveis em convênios vigentes para essa finalidade. A proposta busca suprir as necessidades de aparelhamento identificadas pelo Estado.",
@@ -38396,7 +38506,7 @@ window.PROFOR_PUBLIC_DATA = {
         "version": 1,
         "status": "complete",
         "source": "siconv_plano_aplicacao_detalhado.zip",
-        "at": "2026-10-07T12:32:16.843Z",
+        "at": "2026-10-08T12:40:10.474Z",
         "received": 25,
         "accepted": 25,
         "rejected": 0,
@@ -39189,10 +39299,21 @@ window.PROFOR_PUBLIC_DATA = {
           "after": {
             "at": "2026-10-07T12:34:16.925Z"
           }
+        },
+        {
+          "at": "2026-10-08T12:43:51.889Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Usuário local",
+          "before": {
+            "at": "2026-10-07T12:34:16.925Z"
+          },
+          "after": {
+            "at": "2026-10-08T12:43:51.889Z"
+          }
         }
       ],
       "textos": {
-        "at": "2026-10-07T12:34:16.925Z",
+        "at": "2026-10-08T12:43:51.889Z",
         "caracterizacao": "Integração de esforços entre o Ministério da Justiça/SENAPPEN e a SEJUS/ES para estruturar as Ouvidorias de Serviços Penais. A cooperação atende às diretrizes do PROFOR/ONASP e do Plano Pena Justa, fortalecendo a governança penitenciária, a fiscalização institucional, a proteção dos direitos humanos e o acesso à justiça no âmbito da execução penal no Espírito Santo.",
         "publicoAlvo": "Pessoas privadas de liberdade, seus familiares, operadores do direito, pessoas egressas do sistema prisional, órgãos de controle, servidores do sistema penitenciário, a sociedade civil usuária dos serviços das Ouvidorias dos Serviços Penais SEJUS/ES e a própria Administração Pública estadual, mediante a utilização das informações produzidas pela Ouvidoria para identificação de problemas, monitoramento de demandas recorrentes e aperfeiçoamento das políticas públicas penitenciárias",
         "problema": "A insuficiência ou inadequação de equipamentos tecnológicos e mobiliários pode limitar a capacidade operacional da unidade, dificultar a realização de atendimentos, restringir a mobilidade para atividades técnicas externas e comprometer a eficiência, a rastreabilidade e a segurança no tratamento das informações. Nesse contexto, o aparelhamento da Ouvidoria constitui medida necessária para assegurar condições materiais compatíveis com suas atribuições institucionais.",
@@ -39205,7 +39326,7 @@ window.PROFOR_PUBLIC_DATA = {
         "version": 1,
         "status": "complete",
         "source": "siconv_plano_aplicacao_detalhado.zip",
-        "at": "2026-10-07T12:32:16.843Z",
+        "at": "2026-10-08T12:40:10.474Z",
         "received": 2,
         "accepted": 2,
         "rejected": 0,
@@ -39785,13 +39906,24 @@ window.PROFOR_PUBLIC_DATA = {
           "after": {
             "at": "2026-10-07T12:34:16.925Z"
           }
+        },
+        {
+          "at": "2026-10-08T12:43:51.889Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Usuário local",
+          "before": {
+            "at": "2026-10-07T12:34:16.925Z"
+          },
+          "after": {
+            "at": "2026-10-08T12:43:51.889Z"
+          }
         }
       ],
       "isDeleted": true,
       "deletedAt": "2026-09-17T10:49:46.508Z",
       "deletedBy": "Usuário local",
       "textos": {
-        "at": "2026-10-07T12:34:16.925Z",
+        "at": "2026-10-08T12:43:51.889Z",
         "caracterizacao": "Integração de esforços entre o Ministério da Justiça/SENAPPEN e a SEAP/PE para estruturar a Ouvidoria de Serviços Penais. A cooperação atende às diretrizes do PROFOR/ONASP e do Plano Pena Justa, fortalecendo a governança penitenciária, a fiscalização institucional, a proteção dos direitos humanos e o acesso à justiça no âmbito da execução penal em Pernambuco.",
         "publicoAlvo": "Pessoas privadas de liberdade, seus familiares, operadores do direito, órgãos de controle, servidores do sistema penitenciário e a sociedade civil usuária dos serviços da Ouvidoria da SEAP/PE.",
         "problema": "Déficit de infraestrutura física, mobiliária e tecnológica na Ouvidoria da SEAP/PE, que limita o acolhimento presencial, compromete a celeridade e o sigilo no fluxo de manifestações e restringe a mobilidade técnica para a realização de inspeções nas unidades prisionais.",
@@ -39804,7 +39936,7 @@ window.PROFOR_PUBLIC_DATA = {
         "version": 1,
         "status": "complete",
         "source": "siconv_plano_aplicacao_detalhado.zip",
-        "at": "2026-10-07T12:32:16.843Z",
+        "at": "2026-10-08T12:40:10.474Z",
         "received": 0,
         "accepted": 0,
         "rejected": 0,
@@ -40384,13 +40516,24 @@ window.PROFOR_PUBLIC_DATA = {
           "after": {
             "at": "2026-10-07T12:34:16.926Z"
           }
+        },
+        {
+          "at": "2026-10-08T12:43:51.889Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Usuário local",
+          "before": {
+            "at": "2026-10-07T12:34:16.926Z"
+          },
+          "after": {
+            "at": "2026-10-08T12:43:51.889Z"
+          }
         }
       ],
       "isDeleted": true,
       "deletedAt": "2026-09-17T10:49:48.668Z",
       "deletedBy": "Usuário local",
       "textos": {
-        "at": "2026-10-07T12:34:16.926Z",
+        "at": "2026-10-08T12:43:51.889Z",
         "caracterizacao": "Integração de esforços entre o Ministério da Justiça/SENAPPEN e a SEAP/PE para estruturar a Ouvidoria de Serviços Penais. A cooperação atende às diretrizes do PROFOR/ONASP e do Plano Pena Justa, fortalecendo a governança penitenciária, a fiscalização institucional, a proteção dos direitos humanos e o acesso à justiça no âmbito da execução penal em Pernambuco.",
         "publicoAlvo": "Pessoas privadas de liberdade, seus familiares, operadores do direito, órgãos de controle, servidores do sistema penitenciário e a sociedade civil usuária dos serviços da Ouvidoria da SEAP/PE.",
         "problema": "Déficit de infraestrutura física, mobiliária e tecnológica na Ouvidoria da SEAP/PE, que limita o acolhimento presencial, compromete a celeridade e o sigilo no fluxo de manifestações e restringe a mobilidade técnica para a realização de inspeções nas unidades prisionais.",
@@ -40403,7 +40546,7 @@ window.PROFOR_PUBLIC_DATA = {
         "version": 1,
         "status": "complete",
         "source": "siconv_plano_aplicacao_detalhado.zip",
-        "at": "2026-10-07T12:32:16.843Z",
+        "at": "2026-10-08T12:40:10.474Z",
         "received": 0,
         "accepted": 0,
         "rejected": 0,
@@ -42160,10 +42303,21 @@ window.PROFOR_PUBLIC_DATA = {
           "after": {
             "at": "2026-10-07T12:34:16.926Z"
           }
+        },
+        {
+          "at": "2026-10-08T12:43:51.889Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Usuário local",
+          "before": {
+            "at": "2026-10-07T12:34:16.926Z"
+          },
+          "after": {
+            "at": "2026-10-08T12:43:51.889Z"
+          }
         }
       ],
       "textos": {
-        "at": "2026-10-07T12:34:16.926Z",
+        "at": "2026-10-08T12:43:51.889Z",
         "caracterizacao": "A proposta atende ao interesse comum da União e do Estado do Amazonas no fortalecimento das Ouvidorias de Serviços Penais, mediante o aprimoramento de sua estrutura institucional e de sua capacidade de atendimento. A iniciativa está alinhada à atuação da SENAPPEN de apoio aos entes federativos e às diretrizes do PROFOR/ONASP, que busca fortalecer as ouvidorias, qualificar os canais de manifestação, ampliar a capacidade institucional de atendimento e promover a participação social.",
         "publicoAlvo": "A Ouvidoria de Serviços Penais do Estado do Amazonas, como unidade beneficiária dos bens adquiridos, e, indiretamente, os usuários dos serviços penais e demais cidadãos que utilizam os canais de manifestação, acompanhamento e encaminhamento de demandas relacionadas aos serviços penais.",
         "problema": "Necessidade de fortalecimento e aparelhamento da Ouvidoria de Serviços Penais do Estado do Amazonas, de modo a ampliar sua capacidade institucional de atendimento e aprimorar os canais de recebimento, tratamento, acompanhamento e encaminhamento das manifestações relacionadas aos serviços penais, contribuindo para uma escuta institucional qualificada, maior transparência e fortalecimento da participação e do controle social.",
@@ -42176,7 +42330,7 @@ window.PROFOR_PUBLIC_DATA = {
         "version": 1,
         "status": "complete",
         "source": "siconv_plano_aplicacao_detalhado.zip",
-        "at": "2026-10-07T12:32:16.843Z",
+        "at": "2026-10-08T12:40:10.474Z",
         "received": 16,
         "accepted": 16,
         "rejected": 0,
@@ -49760,10 +49914,21 @@ window.PROFOR_PUBLIC_DATA = {
           "after": {
             "at": "2026-10-07T12:34:16.926Z"
           }
+        },
+        {
+          "at": "2026-10-08T12:43:51.889Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Usuário local",
+          "before": {
+            "at": "2026-10-07T12:34:16.926Z"
+          },
+          "after": {
+            "at": "2026-10-08T12:43:51.889Z"
+          }
         }
       ],
       "textos": {
-        "at": "2026-10-07T12:34:16.926Z",
+        "at": "2026-10-08T12:43:51.889Z",
         "caracterizacao": "A Diretoria-Geral de Polícia Penal de Goiás tem interesse em melhorar as condições de trabalho dos servidores da Ouvidoria Adjunta e a estrutura destinada ao atendimento da sociedade. A SENAPPEN, por meio do PROFOR/ONASP, busca fortalecer as ouvidorias de serviços penais. A aquisição dos bens previstos na proposta atende a esses interesses ao qualificar o ambiente em que a Ouvidoria exerce suas atividades.",
         "publicoAlvo": "Ouvidoria Setoria da Polícia Penal do Estado de Goiás.",
         "problema": "Os equipamentos utlizidados pela ouvidoria setorial não atende adequadamente às necessidades físicas e tecnológicas exigidas para o registro das manifestações, além da ausência de itens que ofereçam condições de trabalho para os trabalhadores lotados na ouvidoria.",
@@ -49776,7 +49941,7 @@ window.PROFOR_PUBLIC_DATA = {
         "version": 1,
         "status": "complete",
         "source": "siconv_plano_aplicacao_detalhado.zip",
-        "at": "2026-10-07T12:32:16.843Z",
+        "at": "2026-10-08T12:40:10.474Z",
         "received": 25,
         "accepted": 25,
         "rejected": 0,
@@ -53836,10 +54001,21 @@ window.PROFOR_PUBLIC_DATA = {
           "after": {
             "at": "2026-10-07T12:34:16.926Z"
           }
+        },
+        {
+          "at": "2026-10-08T12:43:51.889Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Usuário local",
+          "before": {
+            "at": "2026-10-07T12:34:16.926Z"
+          },
+          "after": {
+            "at": "2026-10-08T12:43:51.889Z"
+          }
         }
       ],
       "textos": {
-        "at": "2026-10-07T12:34:16.926Z",
+        "at": "2026-10-08T12:43:51.889Z",
         "caracterizacao": "A União, por meio da SENAPPEN, e o Estado de Roraima, por meio da SEJUC/RR, compartilham o interesse de fortalecer a Ouvidoria de Serviços Penais. O repasse federal permitirá adquirir bens permanentes para ampliar sua capacidade operacional, enquanto o Estado aportará a contrapartida financeira e assegurará a execução, a guarda, a destinação e a utilização dos bens na finalidade pactuada.",
         "publicoAlvo": "A Ouvidoria de Serviços Penais vinculada à SEJUC/RR é a beneficiária direta. O público-alvo compreende pessoas privadas de liberdade, seus familiares, egressos, servidores dos serviços penais e demais cidadãos que apresentem manifestações relacionadas à política penal do Estado de Roraima. Os bens também apoiarão a equipe responsável pelo recebimento, tratamento, encaminhamento e resposta às manifestações.",
         "problema": "A Ouvidoria de Serviços Penais de Roraima necessita ampliar sua capacidade material e tecnológica para atender às demandas institucionais e tratar manifestações com segurança, sigilo e rastreabilidade. O diagnóstico que fundamenta o PROFOR/ONASP identifica a necessidade de reforço das estruturas existentes, sem recursos disponíveis em convênios vigentes para essa finalidade. A proposta busca suprir as necessidades de aparelhamento identificadas pelo Estado.",
@@ -53852,7 +54028,7 @@ window.PROFOR_PUBLIC_DATA = {
         "version": 1,
         "status": "complete",
         "source": "siconv_plano_aplicacao_detalhado.zip",
-        "at": "2026-10-07T12:32:16.843Z",
+        "at": "2026-10-08T12:40:10.474Z",
         "received": 25,
         "accepted": 25,
         "rejected": 0,
@@ -54426,10 +54602,21 @@ window.PROFOR_PUBLIC_DATA = {
           "after": {
             "at": "2026-10-07T12:34:16.926Z"
           }
+        },
+        {
+          "at": "2026-10-08T12:43:51.889Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Usuário local",
+          "before": {
+            "at": "2026-10-07T12:34:16.926Z"
+          },
+          "after": {
+            "at": "2026-10-08T12:43:51.889Z"
+          }
         }
       ],
       "textos": {
-        "at": "2026-10-07T12:34:16.926Z",
+        "at": "2026-10-08T12:43:51.889Z",
         "caracterizacao": "Fortalecer a Ouvidoria Penitenciária do Estado do Amapá, mediante estruturação física, tecnológica e administrativa, contribuindo para a continuidade dos serviços de escuta, acolhimento, registro, tratamento, encaminhamento e acompanhamento de manifestações, em consonância com as finalidades do PROFOR/ONASP 2026",
         "publicoAlvo": "Usuários dos serviços penais, pessoas que utilizam a Ouvidoria Penitenciária do Estado do Amapá para apresentar manifestações, solicitações, reclamações, denúncias, elogios ou outras demandas, além dos servidores responsáveis pelo atendimento, registro, tratamento, encaminhamento e acompanhamento das manifestações.",
         "problema": "A Ouvidoria Penitenciária necessita de melhores condições físicas, tecnológicas e administrativas para executar suas atividades de forma organizada e contínua. As limitações de infraestrutura, equipamentos, gestão documental, recursos tecnológicos e condições de atendimento dificultam a qualificação da escuta, do registro, do acompanhamento das manifestações e da produção de informações institucionais.",
@@ -54445,7 +54632,7 @@ window.PROFOR_PUBLIC_DATA = {
         "version": 1,
         "status": "complete",
         "source": "siconv_plano_aplicacao_detalhado.zip",
-        "at": "2026-10-07T12:32:16.843Z",
+        "at": "2026-10-08T12:40:10.474Z",
         "received": 5,
         "accepted": 5,
         "rejected": 0,
@@ -57110,10 +57297,21 @@ window.PROFOR_PUBLIC_DATA = {
           "after": {
             "at": "2026-10-07T12:34:16.926Z"
           }
+        },
+        {
+          "at": "2026-10-08T12:43:51.889Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Usuário local",
+          "before": {
+            "at": "2026-10-07T12:34:16.926Z"
+          },
+          "after": {
+            "at": "2026-10-08T12:43:51.889Z"
+          }
         }
       ],
       "textos": {
-        "at": "2026-10-07T12:34:16.926Z",
+        "at": "2026-10-08T12:43:51.889Z",
         "caracterizacao": "Integração de esforços entre o Ministério da Justiça/SENAPPEN e a SEAP/PA para a implantação, estruturação física e aparelhamento inicial da Ouvidoria de Serviços Penais. A cooperação atende às diretrizes do PROFOR/ONASP e do Plano Pena Justa, estabelecendo um canal institucional permanente de governança penitenciária, fiscalização, proteção dos direitos humanos e acesso à justiça na execução penal paraense.",
         "publicoAlvo": "Pessoas privadas de liberdade, seus familiares, operadores do direito, órgãos de controle (MP, Defensoria, Judiciário), servidores penitenciários e a sociedade civil.",
         "problema": "Inexistência de uma Ouvidoria especializada em serviços penais no Estado do Pará, resultando na ausência de infraestrutura física e tecnológica própria para acolhimento presencial, no déficit de canais estruturados para o tratamento sigiloso e célere de manifestações relativas à execução penal e na limitação de meios materiais para realização de vistorias e inspeções técnicas nas unidades prisionais do Estado.",
@@ -57126,7 +57324,7 @@ window.PROFOR_PUBLIC_DATA = {
         "version": 1,
         "status": "complete",
         "source": "siconv_plano_aplicacao_detalhado.zip",
-        "at": "2026-10-07T12:32:16.843Z",
+        "at": "2026-10-08T12:40:10.474Z",
         "received": 10,
         "accepted": 10,
         "rejected": 0,
@@ -58520,10 +58718,21 @@ window.PROFOR_PUBLIC_DATA = {
           "after": {
             "at": "2026-10-07T12:34:16.926Z"
           }
+        },
+        {
+          "at": "2026-10-08T12:43:51.889Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Usuário local",
+          "before": {
+            "at": "2026-10-07T12:34:16.926Z"
+          },
+          "after": {
+            "at": "2026-10-08T12:43:51.889Z"
+          }
         }
       ],
       "textos": {
-        "at": "2026-10-07T12:34:16.926Z",
+        "at": "2026-10-08T12:43:51.889Z",
         "caracterizacao": "A celebração do convênio entre a SEAP/BA e a SENAPPEN atende a interesses recíprocos ao fortalecer a Ouvidoria dos Serviços Penais, promovendo sua estruturação física, tecnológica e operacional. A parceria contribuirá para aprimorar o atendimento, a participação social, a transparência e os mecanismos de controle, em consonância com as diretrizes nacionais de aperfeiçoamento da gestão penitenciária.",
         "publicoAlvo": "O público-alvo beneficiado pelo convênio compreende, direta e indiretamente, os usuários dos serviços penitenciários do Estado da Bahia, incluindo pessoas privadas de liberdade, seus familiares, servidores públicos, visitantes, egressos e demais cidadãos que utilizam os canais da Ouvidoria. A iniciativa também beneficiará os servidores da Ouvidoria da SEAP.",
         "problema": "A Ouvidoria da SEAP recebe denúncias, reclamações, solicitações e pedidos de informação sobre serviços e unidades prisionais. A insuficiência de estrutura física, tecnológica e operacional limita o adequado tratamento e acompanhamento das demandas. A aquisição dos bens de capital permitirá melhorar as condições de trabalho, qualificar o atendimento e fortalecer a escuta social, a transparência, o controle e a participação dos usuários dos serviços penais.",
@@ -58536,7 +58745,7 @@ window.PROFOR_PUBLIC_DATA = {
         "version": 1,
         "status": "complete",
         "source": "siconv_plano_aplicacao_detalhado.zip",
-        "at": "2026-10-07T12:32:16.843Z",
+        "at": "2026-10-08T12:40:10.474Z",
         "received": 18,
         "accepted": 18,
         "rejected": 0,
@@ -58545,7 +58754,7 @@ window.PROFOR_PUBLIC_DATA = {
     }
   ],
   "sync": {
-    "at": "2026-10-07T12:34:16.925Z",
+    "at": "2026-10-08T12:43:51.889Z",
     "source": "https://api-publica.transferegov.gestao.gov.br/downloads · sincronização completa (com PAD) · 4 arquivo(s)",
     "count": 19
   },
@@ -82972,8 +83181,8 @@ window.PROFOR_PUBLIC_DATA = {
       "proposals": 19
     },
     {
-      "id": "5d2278deabfe67f9a23bbeffde1f2b20f90b4618a987982aa5a64e11d7854d52",
-      "at": "2026-10-07T12:34:16.925Z",
+      "id": "d7db5537bc19285a253c5e9d116a3015110ed0a7a2af344a642f2beca0e089b1",
+      "at": "2026-10-07T12:34:22.954Z",
       "date": "2026-10-07",
       "changes": [
         {
@@ -83345,8 +83554,756 @@ window.PROFOR_PUBLIC_DATA = {
           ]
         }
       ],
-      "activity": [],
-      "reconstructed": true,
+      "activity": [
+        {
+          "at": "2026-10-07T12:32:12.009Z",
+          "message": "Iniciando atualização de propostas, PAD e textos oficiais."
+        },
+        {
+          "at": "2026-10-07T12:32:16.596Z",
+          "message": "Consultando a lista de arquivos oficiais…"
+        },
+        {
+          "at": "2026-10-07T12:32:16.870Z",
+          "message": "Baixando siconv_programa.zip…"
+        },
+        {
+          "at": "2026-10-07T12:32:18.428Z",
+          "message": "Baixando siconv_programa.zip… 1,1 MB de 10,6 MB (10%)."
+        },
+        {
+          "at": "2026-10-07T12:32:18.800Z",
+          "message": "siconv_programa.zip: download concluído (11141542 bytes)."
+        },
+        {
+          "at": "2026-10-07T12:32:18.800Z",
+          "message": "Baixando siconv_programa_proposta.zip…"
+        },
+        {
+          "at": "2026-10-07T12:32:20.019Z",
+          "message": "Baixando siconv_programa_proposta.zip… 264,6 KB de 6,2 MB (0%)."
+        },
+        {
+          "at": "2026-10-07T12:32:20.571Z",
+          "message": "siconv_programa_proposta.zip: download concluído (6503500 bytes)."
+        },
+        {
+          "at": "2026-10-07T12:32:20.571Z",
+          "message": "Baixando siconv_proposta.zip…"
+        },
+        {
+          "at": "2026-10-07T12:32:22.428Z",
+          "message": "Baixando siconv_proposta.zip… 7,9 MB de 196,3 MB (0%)."
+        },
+        {
+          "at": "2026-10-07T12:32:23.231Z",
+          "message": "Baixando siconv_proposta.zip… 41,4 MB de 196,3 MB (20%)."
+        },
+        {
+          "at": "2026-10-07T12:32:24.029Z",
+          "message": "Baixando siconv_proposta.zip… 78,8 MB de 196,3 MB (40%)."
+        },
+        {
+          "at": "2026-10-07T12:32:24.837Z",
+          "message": "Baixando siconv_proposta.zip… 116,2 MB de 196,3 MB (50%)."
+        },
+        {
+          "at": "2026-10-07T12:32:25.631Z",
+          "message": "Baixando siconv_proposta.zip… 151,7 MB de 196,3 MB (70%)."
+        },
+        {
+          "at": "2026-10-07T12:32:26.429Z",
+          "message": "Baixando siconv_proposta.zip… 185,1 MB de 196,3 MB (90%)."
+        },
+        {
+          "at": "2026-10-07T12:32:26.635Z",
+          "message": "siconv_proposta.zip: download concluído (205879612 bytes)."
+        },
+        {
+          "at": "2026-10-07T12:32:26.635Z",
+          "message": "Baixando siconv_plano_aplicacao_detalhado.zip…"
+        },
+        {
+          "at": "2026-10-07T12:32:28.826Z",
+          "message": "Baixando siconv_plano_aplicacao_detalhado.zip… 25,1 MB de 278,3 MB (0%)."
+        },
+        {
+          "at": "2026-10-07T12:32:29.635Z",
+          "message": "Baixando siconv_plano_aplicacao_detalhado.zip… 64,3 MB de 278,3 MB (20%)."
+        },
+        {
+          "at": "2026-10-07T12:32:30.425Z",
+          "message": "Baixando siconv_plano_aplicacao_detalhado.zip… 89,4 MB de 278,3 MB (30%)."
+        },
+        {
+          "at": "2026-10-07T12:32:31.225Z",
+          "message": "Baixando siconv_plano_aplicacao_detalhado.zip… 122,9 MB de 278,3 MB (40%)."
+        },
+        {
+          "at": "2026-10-07T12:32:32.020Z",
+          "message": "Baixando siconv_plano_aplicacao_detalhado.zip… 164,8 MB de 278,3 MB (50%)."
+        },
+        {
+          "at": "2026-10-07T12:32:32.823Z",
+          "message": "Baixando siconv_plano_aplicacao_detalhado.zip… 198,3 MB de 278,3 MB (70%)."
+        },
+        {
+          "at": "2026-10-07T12:32:33.624Z",
+          "message": "Baixando siconv_plano_aplicacao_detalhado.zip… 234,7 MB de 278,3 MB (80%)."
+        },
+        {
+          "at": "2026-10-07T12:32:34.425Z",
+          "message": "Baixando siconv_plano_aplicacao_detalhado.zip… 271 MB de 278,3 MB (90%)."
+        },
+        {
+          "at": "2026-10-07T12:32:34.554Z",
+          "message": "siconv_plano_aplicacao_detalhado.zip: download concluído (291794455 bytes)."
+        },
+        {
+          "at": "2026-10-07T12:32:34.554Z",
+          "message": "Lendo siconv_programa.zip e localizando o programa…"
+        },
+        {
+          "at": "2026-10-07T12:32:35.231Z",
+          "message": "Lendo siconv_programa.zip e localizando o programa… 40,5 MB de 336,8 MB (10%)."
+        },
+        {
+          "at": "2026-10-07T12:32:36.020Z",
+          "message": "Lendo siconv_programa.zip e localizando o programa… 84,4 MB de 336,8 MB (20%)."
+        },
+        {
+          "at": "2026-10-07T12:32:36.828Z",
+          "message": "Lendo siconv_programa.zip e localizando o programa… 128,3 MB de 336,8 MB (30%)."
+        },
+        {
+          "at": "2026-10-07T12:32:37.626Z",
+          "message": "Lendo siconv_programa.zip e localizando o programa… 175,5 MB de 336,8 MB (50%)."
+        },
+        {
+          "at": "2026-10-07T12:32:38.437Z",
+          "message": "Lendo siconv_programa.zip e localizando o programa… 219,4 MB de 336,8 MB (60%)."
+        },
+        {
+          "at": "2026-10-07T12:32:39.224Z",
+          "message": "Lendo siconv_programa.zip e localizando o programa… 266,6 MB de 336,8 MB (70%)."
+        },
+        {
+          "at": "2026-10-07T12:32:40.031Z",
+          "message": "Lendo siconv_programa.zip e localizando o programa… 313,9 MB de 336,8 MB (90%)."
+        },
+        {
+          "at": "2026-10-07T12:32:40.409Z",
+          "message": "siconv_programa.zip: 1257662 linha(s) lida(s)."
+        },
+        {
+          "at": "2026-10-07T12:32:40.409Z",
+          "message": "Lendo siconv_programa_proposta.zip e cruzando vínculos…"
+        },
+        {
+          "at": "2026-10-07T12:32:40.831Z",
+          "message": "Lendo siconv_programa_proposta.zip e cruzando vínculos… 6 MB de 15,8 MB (30%)."
+        },
+        {
+          "at": "2026-10-07T12:32:41.480Z",
+          "message": "siconv_programa_proposta.zip: 1159880 linha(s) lida(s)."
+        },
+        {
+          "at": "2026-10-07T12:32:41.480Z",
+          "message": "Lendo siconv_proposta.zip e selecionando as propostas…"
+        },
+        {
+          "at": "2026-10-07T12:32:41.638Z",
+          "message": "Lendo siconv_proposta.zip e selecionando as propostas… 7,2 MB de 720,6 MB (0%)."
+        },
+        {
+          "at": "2026-10-07T12:32:43.223Z",
+          "message": "Lendo siconv_proposta.zip e selecionando as propostas… 86,6 MB de 720,6 MB (10%)."
+        },
+        {
+          "at": "2026-10-07T12:32:45.079Z",
+          "message": "Lendo siconv_proposta.zip e selecionando as propostas… 187,7 MB de 720,6 MB (20%)."
+        },
+        {
+          "at": "2026-10-07T12:32:46.087Z",
+          "message": "Lendo siconv_proposta.zip e selecionando as propostas… 238,2 MB de 720,6 MB (30%)."
+        },
+        {
+          "at": "2026-10-07T12:32:47.080Z",
+          "message": "Lendo siconv_proposta.zip e selecionando as propostas… 296 MB de 720,6 MB (40%)."
+        },
+        {
+          "at": "2026-10-07T12:32:49.079Z",
+          "message": "Lendo siconv_proposta.zip e selecionando as propostas… 404,3 MB de 720,6 MB (50%)."
+        },
+        {
+          "at": "2026-10-07T12:32:50.087Z",
+          "message": "Lendo siconv_proposta.zip e selecionando as propostas… 462 MB de 720,6 MB (60%)."
+        },
+        {
+          "at": "2026-10-07T12:32:51.076Z",
+          "message": "Lendo siconv_proposta.zip e selecionando as propostas… 519,8 MB de 720,6 MB (70%)."
+        },
+        {
+          "at": "2026-10-07T12:32:52.085Z",
+          "message": "Lendo siconv_proposta.zip e selecionando as propostas… 577,5 MB de 720,6 MB (80%)."
+        },
+        {
+          "at": "2026-10-07T12:32:54.077Z",
+          "message": "Lendo siconv_proposta.zip e selecionando as propostas… 700,2 MB de 720,6 MB (90%)."
+        },
+        {
+          "at": "2026-10-07T12:32:54.423Z",
+          "message": "siconv_proposta.zip: 1158524 linha(s) lida(s)."
+        },
+        {
+          "at": "2026-10-07T12:32:54.423Z",
+          "message": "Lendo siconv_plano_aplicacao_detalhado.zip e selecionando itens do PAD…"
+        },
+        {
+          "at": "2026-10-07T12:32:55.087Z",
+          "message": "Lendo siconv_plano_aplicacao_detalhado.zip e selecionando itens do PAD… 24,7 MB de 1.233,3 MB (0%)."
+        },
+        {
+          "at": "2026-10-07T12:32:57.093Z",
+          "message": "Lendo siconv_plano_aplicacao_detalhado.zip e selecionando itens do PAD… 123,4 MB de 1.233,3 MB (10%)."
+        },
+        {
+          "at": "2026-10-07T12:33:00.097Z",
+          "message": "Lendo siconv_plano_aplicacao_detalhado.zip e selecionando itens do PAD… 246,9 MB de 1.233,3 MB (20%)."
+        },
+        {
+          "at": "2026-10-07T12:33:03.089Z",
+          "message": "Lendo siconv_plano_aplicacao_detalhado.zip e selecionando itens do PAD… 382,7 MB de 1.233,3 MB (30%)."
+        },
+        {
+          "at": "2026-10-07T12:33:06.089Z",
+          "message": "Lendo siconv_plano_aplicacao_detalhado.zip e selecionando itens do PAD… 506,1 MB de 1.233,3 MB (40%)."
+        },
+        {
+          "at": "2026-10-07T12:33:09.085Z",
+          "message": "Lendo siconv_plano_aplicacao_detalhado.zip e selecionando itens do PAD… 629,5 MB de 1.233,3 MB (50%)."
+        },
+        {
+          "at": "2026-10-07T12:33:12.101Z",
+          "message": "Lendo siconv_plano_aplicacao_detalhado.zip e selecionando itens do PAD… 753 MB de 1.233,3 MB (60%)."
+        },
+        {
+          "at": "2026-10-07T12:33:15.090Z",
+          "message": "Lendo siconv_plano_aplicacao_detalhado.zip e selecionando itens do PAD… 876,4 MB de 1.233,3 MB (70%)."
+        },
+        {
+          "at": "2026-10-07T12:33:18.090Z",
+          "message": "Lendo siconv_plano_aplicacao_detalhado.zip e selecionando itens do PAD… 1.024,5 MB de 1.233,3 MB (80%)."
+        },
+        {
+          "at": "2026-10-07T12:33:21.078Z",
+          "message": "Lendo siconv_plano_aplicacao_detalhado.zip e selecionando itens do PAD… 1.148 MB de 1.233,3 MB (90%)."
+        },
+        {
+          "at": "2026-10-07T12:33:23.028Z",
+          "message": "siconv_plano_aplicacao_detalhado.zip: 4902678 linha(s) lida(s)."
+        },
+        {
+          "at": "2026-10-07T12:33:23.028Z",
+          "message": "Validando as propostas e preparando a resposta…"
+        },
+        {
+          "at": "2026-10-07T12:33:23.033Z",
+          "message": "Consultando a lista para os textos oficiais…"
+        },
+        {
+          "at": "2026-10-07T12:33:23.164Z",
+          "message": "Baixando siconv_justificativas_proposta.zip…"
+        },
+        {
+          "at": "2026-10-07T12:33:26.078Z",
+          "message": "Baixando siconv_justificativas_proposta.zip… 50,2 MB de 716 MB (0%)."
+        },
+        {
+          "at": "2026-10-07T12:33:27.092Z",
+          "message": "Baixando siconv_justificativas_proposta.zip… 86 MB de 716 MB (10%)."
+        },
+        {
+          "at": "2026-10-07T12:33:29.078Z",
+          "message": "Baixando siconv_justificativas_proposta.zip… 186,4 MB de 716 MB (20%)."
+        },
+        {
+          "at": "2026-10-07T12:33:30.083Z",
+          "message": "Baixando siconv_justificativas_proposta.zip… 229,4 MB de 716 MB (30%)."
+        },
+        {
+          "at": "2026-10-07T12:33:32.086Z",
+          "message": "Baixando siconv_justificativas_proposta.zip… 315,5 MB de 716 MB (40%)."
+        },
+        {
+          "at": "2026-10-07T12:33:33.091Z",
+          "message": "Baixando siconv_justificativas_proposta.zip… 358,5 MB de 716 MB (50%)."
+        },
+        {
+          "at": "2026-10-07T12:33:35.081Z",
+          "message": "Baixando siconv_justificativas_proposta.zip… 437,4 MB de 716 MB (60%)."
+        },
+        {
+          "at": "2026-10-07T12:33:37.077Z",
+          "message": "Baixando siconv_justificativas_proposta.zip… 537,8 MB de 716 MB (70%)."
+        },
+        {
+          "at": "2026-10-07T12:33:38.082Z",
+          "message": "Baixando siconv_justificativas_proposta.zip… 573,6 MB de 716 MB (80%)."
+        },
+        {
+          "at": "2026-10-07T12:33:40.085Z",
+          "message": "Baixando siconv_justificativas_proposta.zip… 645,3 MB de 716 MB (90%)."
+        },
+        {
+          "at": "2026-10-07T12:33:41.968Z",
+          "message": "siconv_justificativas_proposta.zip: download concluído (750814653 bytes)."
+        },
+        {
+          "at": "2026-10-07T12:33:41.968Z",
+          "message": "Lendo siconv_justificativas_proposta.zip e selecionando textos das propostas…"
+        },
+        {
+          "at": "2026-10-07T12:33:43.079Z",
+          "message": "Lendo siconv_justificativas_proposta.zip e selecionando textos das propostas… 49,7 MB de 2.485,5 MB (0%)."
+        },
+        {
+          "at": "2026-10-07T12:34:01.083Z",
+          "message": "Lendo siconv_justificativas_proposta.zip e selecionando textos das propostas… 1.317,5 MB de 2.485,5 MB (50%)."
+        },
+        {
+          "at": "2026-10-07T12:34:16.859Z",
+          "message": "siconv_justificativas_proposta.zip: 1158524 linha(s) lida(s); 19 proposta(s) com textos."
+        },
+        {
+          "at": "2026-10-07T12:34:16.860Z",
+          "message": "Dados e textos recebidos. Aguardando gravação no banco local…"
+        },
+        {
+          "at": "2026-10-07T12:34:16.897Z",
+          "message": "Download concluído. Validando e gravando os dados locais."
+        },
+        {
+          "at": "2026-10-07T12:34:16.898Z",
+          "message": "Validando 19 proposta(s) recebida(s)."
+        },
+        {
+          "at": "2026-10-07T12:34:16.926Z",
+          "message": "Gravando propostas, PAD e textos no banco local."
+        },
+        {
+          "at": "2026-10-07T12:34:22.954Z",
+          "message": "Gravação confirmada no banco local."
+        }
+      ],
+      "reconstructed": false,
+      "source": "https://api-publica.transferegov.gestao.gov.br/downloads · sincronização completa (com PAD) · 4 arquivo(s)",
+      "proposals": 19
+    },
+    {
+      "id": "af488fcc513a74717b7b97571ff402d52cf6ed6090994569199f625a76b5ed89",
+      "at": "2026-10-08T12:44:00.606Z",
+      "date": "2026-10-08",
+      "changes": [],
+      "activity": [
+        {
+          "at": "2026-10-08T12:40:04.339Z",
+          "message": "Iniciando atualização de propostas, PAD e textos oficiais."
+        },
+        {
+          "at": "2026-10-08T12:40:10.206Z",
+          "message": "Consultando a lista de arquivos oficiais…"
+        },
+        {
+          "at": "2026-10-08T12:40:10.592Z",
+          "message": "Baixando siconv_programa.zip…"
+        },
+        {
+          "at": "2026-10-08T12:40:12.355Z",
+          "message": "Baixando siconv_programa.zip… 4,7 MB de 10,6 MB (40%)."
+        },
+        {
+          "at": "2026-10-08T12:40:12.742Z",
+          "message": "siconv_programa.zip: download concluído (11149385 bytes)."
+        },
+        {
+          "at": "2026-10-08T12:40:12.742Z",
+          "message": "Baixando siconv_programa_proposta.zip…"
+        },
+        {
+          "at": "2026-10-08T12:40:14.754Z",
+          "message": "Baixando siconv_programa_proposta.zip… 4,2 MB de 6,2 MB (60%)."
+        },
+        {
+          "at": "2026-10-08T12:40:14.900Z",
+          "message": "siconv_programa_proposta.zip: download concluído (6504098 bytes)."
+        },
+        {
+          "at": "2026-10-08T12:40:14.900Z",
+          "message": "Baixando siconv_proposta.zip…"
+        },
+        {
+          "at": "2026-10-08T12:40:17.267Z",
+          "message": "Baixando siconv_proposta.zip… 11,8 MB de 196,3 MB (0%)."
+        },
+        {
+          "at": "2026-10-08T12:40:18.281Z",
+          "message": "Baixando siconv_proposta.zip… 23,6 MB de 196,3 MB (10%)."
+        },
+        {
+          "at": "2026-10-08T12:40:20.307Z",
+          "message": "Baixando siconv_proposta.zip… 47,3 MB de 196,3 MB (20%)."
+        },
+        {
+          "at": "2026-10-08T12:40:21.269Z",
+          "message": "Baixando siconv_proposta.zip… 59,1 MB de 196,3 MB (30%)."
+        },
+        {
+          "at": "2026-10-08T12:40:23.269Z",
+          "message": "Baixando siconv_proposta.zip… 80,7 MB de 196,3 MB (40%)."
+        },
+        {
+          "at": "2026-10-08T12:40:25.272Z",
+          "message": "Baixando siconv_proposta.zip… 102,4 MB de 196,3 MB (50%)."
+        },
+        {
+          "at": "2026-10-08T12:40:27.267Z",
+          "message": "Baixando siconv_proposta.zip… 126 MB de 196,3 MB (60%)."
+        },
+        {
+          "at": "2026-10-08T12:40:28.261Z",
+          "message": "Baixando siconv_proposta.zip… 139,8 MB de 196,3 MB (70%)."
+        },
+        {
+          "at": "2026-10-08T12:40:30.263Z",
+          "message": "Baixando siconv_proposta.zip… 167,4 MB de 196,3 MB (80%)."
+        },
+        {
+          "at": "2026-10-08T12:40:31.263Z",
+          "message": "Baixando siconv_proposta.zip… 181,2 MB de 196,3 MB (90%)."
+        },
+        {
+          "at": "2026-10-08T12:40:32.282Z",
+          "message": "siconv_proposta.zip: download concluído (205878814 bytes)."
+        },
+        {
+          "at": "2026-10-08T12:40:32.282Z",
+          "message": "Baixando siconv_plano_aplicacao_detalhado.zip…"
+        },
+        {
+          "at": "2026-10-08T12:40:35.267Z",
+          "message": "Baixando siconv_plano_aplicacao_detalhado.zip… 2,8 MB de 278,5 MB (0%)."
+        },
+        {
+          "at": "2026-10-08T12:40:37.260Z",
+          "message": "Baixando siconv_plano_aplicacao_detalhado.zip… 30,7 MB de 278,5 MB (10%)."
+        },
+        {
+          "at": "2026-10-08T12:40:40.263Z",
+          "message": "Baixando siconv_plano_aplicacao_detalhado.zip… 67,1 MB de 278,5 MB (20%)."
+        },
+        {
+          "at": "2026-10-08T12:40:42.254Z",
+          "message": "Baixando siconv_plano_aplicacao_detalhado.zip… 92,2 MB de 278,5 MB (30%)."
+        },
+        {
+          "at": "2026-10-08T12:40:44.265Z",
+          "message": "Baixando siconv_plano_aplicacao_detalhado.zip… 120,2 MB de 278,5 MB (40%)."
+        },
+        {
+          "at": "2026-10-08T12:40:46.272Z",
+          "message": "Baixando siconv_plano_aplicacao_detalhado.zip… 148,2 MB de 278,5 MB (50%)."
+        },
+        {
+          "at": "2026-10-08T12:40:48.265Z",
+          "message": "Baixando siconv_plano_aplicacao_detalhado.zip… 173,3 MB de 278,5 MB (60%)."
+        },
+        {
+          "at": "2026-10-08T12:40:50.262Z",
+          "message": "Baixando siconv_plano_aplicacao_detalhado.zip… 201,3 MB de 278,5 MB (70%)."
+        },
+        {
+          "at": "2026-10-08T12:40:52.258Z",
+          "message": "Baixando siconv_plano_aplicacao_detalhado.zip… 229,3 MB de 278,5 MB (80%)."
+        },
+        {
+          "at": "2026-10-08T12:40:54.267Z",
+          "message": "Baixando siconv_plano_aplicacao_detalhado.zip… 260 MB de 278,5 MB (90%)."
+        },
+        {
+          "at": "2026-10-08T12:40:55.556Z",
+          "message": "siconv_plano_aplicacao_detalhado.zip: download concluído (292021665 bytes)."
+        },
+        {
+          "at": "2026-10-08T12:40:55.556Z",
+          "message": "Lendo siconv_programa.zip e localizando o programa…"
+        },
+        {
+          "at": "2026-10-08T12:40:56.274Z",
+          "message": "Lendo siconv_programa.zip e localizando o programa… 3,4 MB de 336,8 MB (0%)."
+        },
+        {
+          "at": "2026-10-08T12:40:57.271Z",
+          "message": "Lendo siconv_programa.zip e localizando o programa… 47,3 MB de 336,8 MB (10%)."
+        },
+        {
+          "at": "2026-10-08T12:40:58.263Z",
+          "message": "Lendo siconv_programa.zip e localizando o programa… 104,6 MB de 336,8 MB (30%)."
+        },
+        {
+          "at": "2026-10-08T12:40:59.266Z",
+          "message": "Lendo siconv_programa.zip e localizando o programa… 158,6 MB de 336,8 MB (40%)."
+        },
+        {
+          "at": "2026-10-08T12:41:00.270Z",
+          "message": "Lendo siconv_programa.zip e localizando o programa… 212,6 MB de 336,8 MB (60%)."
+        },
+        {
+          "at": "2026-10-08T12:41:01.269Z",
+          "message": "Lendo siconv_programa.zip e localizando o programa… 263,3 MB de 336,8 MB (70%)."
+        },
+        {
+          "at": "2026-10-08T12:41:02.266Z",
+          "message": "Lendo siconv_programa.zip e localizando o programa… 320,6 MB de 336,8 MB (90%)."
+        },
+        {
+          "at": "2026-10-08T12:41:02.494Z",
+          "message": "siconv_programa.zip: 1257662 linha(s) lida(s)."
+        },
+        {
+          "at": "2026-10-08T12:41:02.495Z",
+          "message": "Lendo siconv_programa_proposta.zip e cruzando vínculos…"
+        },
+        {
+          "at": "2026-10-08T12:41:03.280Z",
+          "message": "Lendo siconv_programa_proposta.zip e cruzando vínculos… 11,2 MB de 15,8 MB (70%)."
+        },
+        {
+          "at": "2026-10-08T12:41:03.563Z",
+          "message": "siconv_programa_proposta.zip: 1159924 linha(s) lida(s)."
+        },
+        {
+          "at": "2026-10-08T12:41:03.563Z",
+          "message": "Lendo siconv_proposta.zip e selecionando as propostas…"
+        },
+        {
+          "at": "2026-10-08T12:41:04.554Z",
+          "message": "Lendo siconv_proposta.zip e selecionando as propostas… 28,9 MB de 720,6 MB (0%)."
+        },
+        {
+          "at": "2026-10-08T12:41:06.543Z",
+          "message": "Lendo siconv_proposta.zip e selecionando as propostas… 79,4 MB de 720,6 MB (10%)."
+        },
+        {
+          "at": "2026-10-08T12:41:08.265Z",
+          "message": "Lendo siconv_proposta.zip e selecionando as propostas… 187,7 MB de 720,6 MB (20%)."
+        },
+        {
+          "at": "2026-10-08T12:41:09.259Z",
+          "message": "Lendo siconv_proposta.zip e selecionando as propostas… 231 MB de 720,6 MB (30%)."
+        },
+        {
+          "at": "2026-10-08T12:41:11.267Z",
+          "message": "Lendo siconv_proposta.zip e selecionando as propostas… 324,8 MB de 720,6 MB (40%)."
+        },
+        {
+          "at": "2026-10-08T12:41:12.266Z",
+          "message": "Lendo siconv_proposta.zip e selecionando as propostas… 360,9 MB de 720,6 MB (50%)."
+        },
+        {
+          "at": "2026-10-08T12:41:14.267Z",
+          "message": "Lendo siconv_proposta.zip e selecionando as propostas… 454,8 MB de 720,6 MB (60%)."
+        },
+        {
+          "at": "2026-10-08T12:41:15.265Z",
+          "message": "Lendo siconv_proposta.zip e selecionando as propostas… 505,3 MB de 720,6 MB (70%)."
+        },
+        {
+          "at": "2026-10-08T12:41:18.338Z",
+          "message": "Lendo siconv_proposta.zip e selecionando as propostas… 577,5 MB de 720,6 MB (80%)."
+        },
+        {
+          "at": "2026-10-08T12:41:19.276Z",
+          "message": "Lendo siconv_proposta.zip e selecionando as propostas… 664,1 MB de 720,6 MB (90%)."
+        },
+        {
+          "at": "2026-10-08T12:41:20.294Z",
+          "message": "siconv_proposta.zip: 1158568 linha(s) lida(s)."
+        },
+        {
+          "at": "2026-10-08T12:41:20.295Z",
+          "message": "Lendo siconv_plano_aplicacao_detalhado.zip e selecionando itens do PAD…"
+        },
+        {
+          "at": "2026-10-08T12:41:21.274Z",
+          "message": "Lendo siconv_plano_aplicacao_detalhado.zip e selecionando itens do PAD… 24,7 MB de 1.233,9 MB (0%)."
+        },
+        {
+          "at": "2026-10-08T12:41:24.270Z",
+          "message": "Lendo siconv_plano_aplicacao_detalhado.zip e selecionando itens do PAD… 160,5 MB de 1.233,9 MB (10%)."
+        },
+        {
+          "at": "2026-10-08T12:41:26.266Z",
+          "message": "Lendo siconv_plano_aplicacao_detalhado.zip e selecionando itens do PAD… 246,9 MB de 1.233,9 MB (20%)."
+        },
+        {
+          "at": "2026-10-08T12:41:30.260Z",
+          "message": "Lendo siconv_plano_aplicacao_detalhado.zip e selecionando itens do PAD… 395 MB de 1.233,9 MB (30%)."
+        },
+        {
+          "at": "2026-10-08T12:41:33.268Z",
+          "message": "Lendo siconv_plano_aplicacao_detalhado.zip e selecionando itens do PAD… 518,4 MB de 1.233,9 MB (40%)."
+        },
+        {
+          "at": "2026-10-08T12:41:36.267Z",
+          "message": "Lendo siconv_plano_aplicacao_detalhado.zip e selecionando itens do PAD… 641,9 MB de 1.233,9 MB (50%)."
+        },
+        {
+          "at": "2026-10-08T12:41:39.266Z",
+          "message": "Lendo siconv_plano_aplicacao_detalhado.zip e selecionando itens do PAD… 765,3 MB de 1.233,9 MB (60%)."
+        },
+        {
+          "at": "2026-10-08T12:41:42.271Z",
+          "message": "Lendo siconv_plano_aplicacao_detalhado.zip e selecionando itens do PAD… 888,8 MB de 1.233,9 MB (70%)."
+        },
+        {
+          "at": "2026-10-08T12:41:45.274Z",
+          "message": "Lendo siconv_plano_aplicacao_detalhado.zip e selecionando itens do PAD… 999,8 MB de 1.233,9 MB (80%)."
+        },
+        {
+          "at": "2026-10-08T12:41:48.260Z",
+          "message": "Lendo siconv_plano_aplicacao_detalhado.zip e selecionando itens do PAD… 1.123,3 MB de 1.233,9 MB (90%)."
+        },
+        {
+          "at": "2026-10-08T12:41:50.903Z",
+          "message": "siconv_plano_aplicacao_detalhado.zip: 4903647 linha(s) lida(s)."
+        },
+        {
+          "at": "2026-10-08T12:41:50.903Z",
+          "message": "Validando as propostas e preparando a resposta…"
+        },
+        {
+          "at": "2026-10-08T12:41:50.926Z",
+          "message": "Consultando a lista para os textos oficiais…"
+        },
+        {
+          "at": "2026-10-08T12:41:51.267Z",
+          "message": "Baixando siconv_justificativas_proposta.zip…"
+        },
+        {
+          "at": "2026-10-08T12:41:54.269Z",
+          "message": "Baixando siconv_justificativas_proposta.zip… 7,2 MB de 716 MB (0%)."
+        },
+        {
+          "at": "2026-10-08T12:42:01.257Z",
+          "message": "Baixando siconv_justificativas_proposta.zip… 71,7 MB de 716 MB (10%)."
+        },
+        {
+          "at": "2026-10-08T12:42:10.269Z",
+          "message": "Baixando siconv_justificativas_proposta.zip… 150,6 MB de 716 MB (20%)."
+        },
+        {
+          "at": "2026-10-08T12:42:18.259Z",
+          "message": "Baixando siconv_justificativas_proposta.zip… 222,3 MB de 716 MB (30%)."
+        },
+        {
+          "at": "2026-10-08T12:42:26.329Z",
+          "message": "Baixando siconv_justificativas_proposta.zip… 286,8 MB de 716 MB (40%)."
+        },
+        {
+          "at": "2026-10-08T12:42:34.265Z",
+          "message": "Baixando siconv_justificativas_proposta.zip… 358,6 MB de 716 MB (50%)."
+        },
+        {
+          "at": "2026-10-08T12:42:42.264Z",
+          "message": "Baixando siconv_justificativas_proposta.zip… 430,3 MB de 716 MB (60%)."
+        },
+        {
+          "at": "2026-10-08T12:42:50.261Z",
+          "message": "Baixando siconv_justificativas_proposta.zip… 502 MB de 716 MB (70%)."
+        },
+        {
+          "at": "2026-10-08T12:42:59.271Z",
+          "message": "Baixando siconv_justificativas_proposta.zip… 573,7 MB de 716 MB (80%)."
+        },
+        {
+          "at": "2026-10-08T12:43:07.274Z",
+          "message": "Baixando siconv_justificativas_proposta.zip… 645,4 MB de 716 MB (90%)."
+        },
+        {
+          "at": "2026-10-08T12:43:14.981Z",
+          "message": "siconv_justificativas_proposta.zip: download concluído (750819880 bytes)."
+        },
+        {
+          "at": "2026-10-08T12:43:14.981Z",
+          "message": "Lendo siconv_justificativas_proposta.zip e selecionando textos das propostas…"
+        },
+        {
+          "at": "2026-10-08T12:43:16.260Z",
+          "message": "Lendo siconv_justificativas_proposta.zip e selecionando textos das propostas… 74,6 MB de 2.485,6 MB (0%)."
+        },
+        {
+          "at": "2026-10-08T12:43:19.261Z",
+          "message": "Lendo siconv_justificativas_proposta.zip e selecionando textos das propostas… 248,6 MB de 2.485,6 MB (10%)."
+        },
+        {
+          "at": "2026-10-08T12:43:23.260Z",
+          "message": "Lendo siconv_justificativas_proposta.zip e selecionando textos das propostas… 522 MB de 2.485,6 MB (20%)."
+        },
+        {
+          "at": "2026-10-08T12:43:27.263Z",
+          "message": "Lendo siconv_justificativas_proposta.zip e selecionando textos das propostas… 770,6 MB de 2.485,6 MB (30%)."
+        },
+        {
+          "at": "2026-10-08T12:43:31.277Z",
+          "message": "Lendo siconv_justificativas_proposta.zip e selecionando textos das propostas… 1.019,2 MB de 2.485,6 MB (40%)."
+        },
+        {
+          "at": "2026-10-08T12:43:34.269Z",
+          "message": "Lendo siconv_justificativas_proposta.zip e selecionando textos das propostas… 1.243 MB de 2.485,6 MB (50%)."
+        },
+        {
+          "at": "2026-10-08T12:43:38.408Z",
+          "message": "Lendo siconv_justificativas_proposta.zip e selecionando textos das propostas… 1.516,4 MB de 2.485,6 MB (60%)."
+        },
+        {
+          "at": "2026-10-08T12:43:42.268Z",
+          "message": "Lendo siconv_justificativas_proposta.zip e selecionando textos das propostas… 1.789,9 MB de 2.485,6 MB (70%)."
+        },
+        {
+          "at": "2026-10-08T12:43:45.307Z",
+          "message": "Lendo siconv_justificativas_proposta.zip e selecionando textos das propostas… 1.988,8 MB de 2.485,6 MB (80%)."
+        },
+        {
+          "at": "2026-10-08T12:43:49.270Z",
+          "message": "Lendo siconv_justificativas_proposta.zip e selecionando textos das propostas… 2.287,1 MB de 2.485,6 MB (90%)."
+        },
+        {
+          "at": "2026-10-08T12:43:51.819Z",
+          "message": "siconv_justificativas_proposta.zip: 1158568 linha(s) lida(s); 19 proposta(s) com textos."
+        },
+        {
+          "at": "2026-10-08T12:43:51.820Z",
+          "message": "Dados e textos recebidos. Aguardando gravação no banco local…"
+        },
+        {
+          "at": "2026-10-08T12:43:51.858Z",
+          "message": "Download concluído. Validando e gravando os dados locais."
+        },
+        {
+          "at": "2026-10-08T12:43:51.861Z",
+          "message": "Validando 19 proposta(s) recebida(s)."
+        },
+        {
+          "at": "2026-10-08T12:43:51.890Z",
+          "message": "Gravando propostas, PAD e textos no banco local."
+        },
+        {
+          "at": "2026-10-08T12:44:00.606Z",
+          "message": "Gravação confirmada no banco local."
+        }
+      ],
+      "reconstructed": false,
       "source": "https://api-publica.transferegov.gestao.gov.br/downloads · sincronização completa (com PAD) · 4 arquivo(s)",
       "proposals": 19
     }
