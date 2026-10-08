@@ -1,9 +1,9 @@
-/** Snapshot integral de consulta PROFOR/ONASP 2026. Gerado em 2026-10-08T18:48:01.267Z.
+/** Snapshot integral de consulta PROFOR/ONASP 2026. Gerado em 2026-10-08T19:39:07.679Z.
  * Não editar manualmente. Use tools/build_public_docs.cjs. */
-window.PROFOR_PUBLIC_UPDATED_AT = "2026-10-08T18:48:01.267Z";
+window.PROFOR_PUBLIC_UPDATED_AT = "2026-10-08T19:39:07.679Z";
 window.PROFOR_PUBLIC_DATA = {
   "schemaVersion": 1,
-  "revision": 359,
+  "revision": 361,
   "proposals": [
     {
       "id": "2243618",
@@ -975,8 +975,7 @@ window.PROFOR_PUBLIC_DATA = {
             "evidence": {
               "version": 1,
               "ref": "celebracao:3",
-              "fingerprint": null,
-              "legacy": true
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
             }
           },
           "4": {
@@ -989,8 +988,7 @@ window.PROFOR_PUBLIC_DATA = {
             "evidence": {
               "version": 1,
               "ref": "celebracao:4",
-              "fingerprint": null,
-              "legacy": true
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
             }
           },
           "5": {
@@ -1003,8 +1001,7 @@ window.PROFOR_PUBLIC_DATA = {
             "evidence": {
               "version": 1,
               "ref": "celebracao:5",
-              "fingerprint": null,
-              "legacy": true
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
             }
           },
           "6": {
@@ -1017,8 +1014,7 @@ window.PROFOR_PUBLIC_DATA = {
             "evidence": {
               "version": 1,
               "ref": "celebracao:6",
-              "fingerprint": null,
-              "legacy": true
+              "fingerprint": "fnv64-v1:caec9ef5e192e11b"
             }
           },
           "7": {
@@ -1031,8 +1027,7 @@ window.PROFOR_PUBLIC_DATA = {
             "evidence": {
               "version": 1,
               "ref": "celebracao:7",
-              "fingerprint": null,
-              "legacy": true
+              "fingerprint": "fnv64-v1:39f37164455f257e"
             }
           },
           "8": {
@@ -7453,6 +7448,166 @@ window.PROFOR_PUBLIC_DATA = {
           },
           "after": {
             "at": "2026-10-08T12:43:51.889Z"
+          }
+        },
+        {
+          "at": "2026-10-08T19:02:26.981Z",
+          "event": "Correção de referência interna de avaliação legada — resultado e autoria anteriores preservados",
+          "actor": "Codex — correção técnica autorizada pelo usuário",
+          "before": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-23T18:08:24.413Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:3",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-23T18:08:24.413Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:3",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-08T19:02:26.990Z",
+          "event": "Correção de referência interna de avaliação legada — resultado e autoria anteriores preservados",
+          "actor": "Codex — correção técnica autorizada pelo usuário",
+          "before": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-23T18:10:02.766Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:4",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-23T18:10:02.766Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:4",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-08T19:02:26.990Z",
+          "event": "Correção de referência interna de avaliação legada — resultado e autoria anteriores preservados",
+          "actor": "Codex — correção técnica autorizada pelo usuário",
+          "before": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-23T18:10:49.901Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:5",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-23T18:10:49.901Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:5",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-08T19:02:27.015Z",
+          "event": "Correção de referência interna de avaliação legada — resultado e autoria anteriores preservados",
+          "actor": "Codex — correção técnica autorizada pelo usuário",
+          "before": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-23T18:11:27.796Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:6",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-23T18:11:27.796Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:6",
+              "fingerprint": "fnv64-v1:caec9ef5e192e11b"
+            }
+          }
+        },
+        {
+          "at": "2026-10-08T19:02:27.015Z",
+          "event": "Correção de referência interna de avaliação legada — resultado e autoria anteriores preservados",
+          "actor": "Codex — correção técnica autorizada pelo usuário",
+          "before": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-23T18:14:57.831Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:7",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-23T18:14:57.831Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:7",
+              "fingerprint": "fnv64-v1:39f37164455f257e"
+            }
           }
         }
       ],
@@ -19030,8 +19185,7 @@ window.PROFOR_PUBLIC_DATA = {
             "evidence": {
               "version": 1,
               "ref": "celebracao:3",
-              "fingerprint": null,
-              "legacy": true
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
             }
           },
           "4": {
@@ -19044,8 +19198,7 @@ window.PROFOR_PUBLIC_DATA = {
             "evidence": {
               "version": 1,
               "ref": "celebracao:4",
-              "fingerprint": null,
-              "legacy": true
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
             }
           },
           "5": {
@@ -19058,8 +19211,7 @@ window.PROFOR_PUBLIC_DATA = {
             "evidence": {
               "version": 1,
               "ref": "celebracao:5",
-              "fingerprint": null,
-              "legacy": true
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
             }
           },
           "6": {
@@ -19093,8 +19245,7 @@ window.PROFOR_PUBLIC_DATA = {
             "evidence": {
               "version": 1,
               "ref": "celebracao:7",
-              "fingerprint": null,
-              "legacy": true
+              "fingerprint": "fnv64-v1:a9e75ba13ece4840"
             }
           },
           "8": {
@@ -19149,8 +19300,7 @@ window.PROFOR_PUBLIC_DATA = {
             "evidence": {
               "version": 1,
               "ref": "celebracao:11",
-              "fingerprint": null,
-              "legacy": true
+              "fingerprint": "fnv64-v1:e948683787eebb55"
             }
           },
           "12": {
@@ -19291,8 +19441,7 @@ window.PROFOR_PUBLIC_DATA = {
             "evidence": {
               "version": 1,
               "ref": "pad:17444044",
-              "fingerprint": null,
-              "legacy": true
+              "fingerprint": "fnv64-v1:28e459dfb44eb33b"
             }
           },
           "17444048": {
@@ -19305,8 +19454,7 @@ window.PROFOR_PUBLIC_DATA = {
             "evidence": {
               "version": 1,
               "ref": "pad:17444048",
-              "fingerprint": null,
-              "legacy": true
+              "fingerprint": "fnv64-v1:5f692680ddb12a3d"
             }
           },
           "17444054": {
@@ -19319,8 +19467,7 @@ window.PROFOR_PUBLIC_DATA = {
             "evidence": {
               "version": 1,
               "ref": "pad:17444054",
-              "fingerprint": null,
-              "legacy": true
+              "fingerprint": "fnv64-v1:253b50da17b12694"
             }
           },
           "17444057": {
@@ -19333,8 +19480,7 @@ window.PROFOR_PUBLIC_DATA = {
             "evidence": {
               "version": 1,
               "ref": "pad:17444057",
-              "fingerprint": null,
-              "legacy": true
+              "fingerprint": "fnv64-v1:a5346bee26e6847b"
             }
           },
           "17444083": {
@@ -19347,8 +19493,7 @@ window.PROFOR_PUBLIC_DATA = {
             "evidence": {
               "version": 1,
               "ref": "pad:17444083",
-              "fingerprint": null,
-              "legacy": true
+              "fingerprint": "fnv64-v1:1d4dd205cf1c9cb9"
             }
           },
           "17444101": {
@@ -19361,8 +19506,7 @@ window.PROFOR_PUBLIC_DATA = {
             "evidence": {
               "version": 1,
               "ref": "pad:17444101",
-              "fingerprint": null,
-              "legacy": true
+              "fingerprint": "fnv64-v1:61d7bdfec6f91152"
             }
           },
           "17444102": {
@@ -19375,8 +19519,7 @@ window.PROFOR_PUBLIC_DATA = {
             "evidence": {
               "version": 1,
               "ref": "pad:17444102",
-              "fingerprint": null,
-              "legacy": true
+              "fingerprint": "fnv64-v1:9377ee154379c9cb"
             }
           },
           "17444103": {
@@ -19389,8 +19532,7 @@ window.PROFOR_PUBLIC_DATA = {
             "evidence": {
               "version": 1,
               "ref": "pad:17444103",
-              "fingerprint": null,
-              "legacy": true
+              "fingerprint": "fnv64-v1:105487a0fa97335c"
             }
           },
           "17444126": {
@@ -19403,8 +19545,7 @@ window.PROFOR_PUBLIC_DATA = {
             "evidence": {
               "version": 1,
               "ref": "pad:17444126",
-              "fingerprint": null,
-              "legacy": true
+              "fingerprint": "fnv64-v1:9f95d37546613921"
             }
           },
           "17444131": {
@@ -19438,8 +19579,7 @@ window.PROFOR_PUBLIC_DATA = {
             "evidence": {
               "version": 1,
               "ref": "pad:17444133",
-              "fingerprint": null,
-              "legacy": true
+              "fingerprint": "fnv64-v1:166cf7661ed8e487"
             }
           },
           "17444140": {
@@ -19452,8 +19592,7 @@ window.PROFOR_PUBLIC_DATA = {
             "evidence": {
               "version": 1,
               "ref": "pad:17444140",
-              "fingerprint": null,
-              "legacy": true
+              "fingerprint": "fnv64-v1:4fd511bf0e3894e4"
             }
           },
           "17444145": {
@@ -19466,8 +19605,7 @@ window.PROFOR_PUBLIC_DATA = {
             "evidence": {
               "version": 1,
               "ref": "pad:17444145",
-              "fingerprint": null,
-              "legacy": true
+              "fingerprint": "fnv64-v1:dce9953ee94ad4d5"
             }
           },
           "17444149": {
@@ -19480,8 +19618,7 @@ window.PROFOR_PUBLIC_DATA = {
             "evidence": {
               "version": 1,
               "ref": "pad:17444149",
-              "fingerprint": null,
-              "legacy": true
+              "fingerprint": "fnv64-v1:ff5fa6a99660b215"
             }
           },
           "17444156": {
@@ -19494,8 +19631,7 @@ window.PROFOR_PUBLIC_DATA = {
             "evidence": {
               "version": 1,
               "ref": "pad:17444156",
-              "fingerprint": null,
-              "legacy": true
+              "fingerprint": "fnv64-v1:b44ff1c7dabc95e0"
             }
           },
           "17444159": {
@@ -19508,8 +19644,7 @@ window.PROFOR_PUBLIC_DATA = {
             "evidence": {
               "version": 1,
               "ref": "pad:17444159",
-              "fingerprint": null,
-              "legacy": true
+              "fingerprint": "fnv64-v1:c9041e734f639fe7"
             }
           },
           "17444189": {
@@ -19522,8 +19657,7 @@ window.PROFOR_PUBLIC_DATA = {
             "evidence": {
               "version": 1,
               "ref": "pad:17444189",
-              "fingerprint": null,
-              "legacy": true
+              "fingerprint": "fnv64-v1:766f9df4153f6646"
             }
           },
           "17444193": {
@@ -19536,8 +19670,7 @@ window.PROFOR_PUBLIC_DATA = {
             "evidence": {
               "version": 1,
               "ref": "pad:17444193",
-              "fingerprint": null,
-              "legacy": true
+              "fingerprint": "fnv64-v1:c8ecac2b4d20167e"
             }
           },
           "17444196": {
@@ -19550,8 +19683,7 @@ window.PROFOR_PUBLIC_DATA = {
             "evidence": {
               "version": 1,
               "ref": "pad:17444196",
-              "fingerprint": null,
-              "legacy": true
+              "fingerprint": "fnv64-v1:68555ac0e85fcf24"
             }
           },
           "17444198": {
@@ -19564,8 +19696,7 @@ window.PROFOR_PUBLIC_DATA = {
             "evidence": {
               "version": 1,
               "ref": "pad:17444198",
-              "fingerprint": null,
-              "legacy": true
+              "fingerprint": "fnv64-v1:2dc425a09df73818"
             }
           },
           "17444201": {
@@ -19578,8 +19709,7 @@ window.PROFOR_PUBLIC_DATA = {
             "evidence": {
               "version": 1,
               "ref": "pad:17444201",
-              "fingerprint": null,
-              "legacy": true
+              "fingerprint": "fnv64-v1:82086bba97c4e588"
             }
           },
           "17444204": {
@@ -19592,8 +19722,7 @@ window.PROFOR_PUBLIC_DATA = {
             "evidence": {
               "version": 1,
               "ref": "pad:17444204",
-              "fingerprint": null,
-              "legacy": true
+              "fingerprint": "fnv64-v1:bdd156adcd22fdfc"
             }
           },
           "17444208": {
@@ -19606,8 +19735,7 @@ window.PROFOR_PUBLIC_DATA = {
             "evidence": {
               "version": 1,
               "ref": "pad:17444208",
-              "fingerprint": null,
-              "legacy": true
+              "fingerprint": "fnv64-v1:9621c7276da19f3a"
             }
           },
           "17444210": {
@@ -19620,8 +19748,7 @@ window.PROFOR_PUBLIC_DATA = {
             "evidence": {
               "version": 1,
               "ref": "pad:17444210",
-              "fingerprint": null,
-              "legacy": true
+              "fingerprint": "fnv64-v1:d48b3c6f766121d3"
             }
           },
           "17444212": {
@@ -19634,8 +19761,7 @@ window.PROFOR_PUBLIC_DATA = {
             "evidence": {
               "version": 1,
               "ref": "pad:17444212",
-              "fingerprint": null,
-              "legacy": true
+              "fingerprint": "fnv64-v1:b596f6ef6f45066f"
             }
           },
           "17444215": {
@@ -19648,8 +19774,7 @@ window.PROFOR_PUBLIC_DATA = {
             "evidence": {
               "version": 1,
               "ref": "pad:17444215",
-              "fingerprint": null,
-              "legacy": true
+              "fingerprint": "fnv64-v1:1af49e01c0e3cfea"
             }
           },
           "17444291": {
@@ -19662,8 +19787,7 @@ window.PROFOR_PUBLIC_DATA = {
             "evidence": {
               "version": 1,
               "ref": "pad:17444291",
-              "fingerprint": null,
-              "legacy": true
+              "fingerprint": "fnv64-v1:b840ebc0892e1a73"
             }
           },
           "17444295": {
@@ -19676,8 +19800,7 @@ window.PROFOR_PUBLIC_DATA = {
             "evidence": {
               "version": 1,
               "ref": "pad:17444295",
-              "fingerprint": null,
-              "legacy": true
+              "fingerprint": "fnv64-v1:2887cf42c081d8b9"
             }
           },
           "17444298": {
@@ -25135,6 +25258,1030 @@ window.PROFOR_PUBLIC_DATA = {
           "after": {
             "at": "2026-10-08T12:43:51.889Z"
           }
+        },
+        {
+          "at": "2026-10-08T19:02:27.016Z",
+          "event": "Correção de referência interna de avaliação legada — resultado e autoria anteriores preservados",
+          "actor": "Codex — correção técnica autorizada pelo usuário",
+          "before": {
+            "status": "diligencia",
+            "note": "Anexar ATA SEAPE 0020/2025 indicada como comprobatória do preço indicado para o item.",
+            "document": "",
+            "url": "",
+            "at": "2026-09-30T11:54:21.520Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17444133",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Anexar ATA SEAPE 0020/2025 indicada como comprobatória do preço indicado para o item.",
+            "document": "",
+            "url": "",
+            "at": "2026-09-30T11:54:21.520Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17444133",
+              "fingerprint": "fnv64-v1:166cf7661ed8e487"
+            }
+          }
+        },
+        {
+          "at": "2026-10-08T19:02:27.017Z",
+          "event": "Correção de referência interna de avaliação legada — resultado e autoria anteriores preservados",
+          "actor": "Codex — correção técnica autorizada pelo usuário",
+          "before": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-30T12:10:21.017Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17444145",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-30T12:10:21.017Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17444145",
+              "fingerprint": "fnv64-v1:dce9953ee94ad4d5"
+            }
+          }
+        },
+        {
+          "at": "2026-10-08T19:02:27.017Z",
+          "event": "Correção de referência interna de avaliação legada — resultado e autoria anteriores preservados",
+          "actor": "Codex — correção técnica autorizada pelo usuário",
+          "before": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-30T13:26:13.868Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17444204",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-30T13:26:13.868Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17444204",
+              "fingerprint": "fnv64-v1:bdd156adcd22fdfc"
+            }
+          }
+        },
+        {
+          "at": "2026-10-08T19:02:27.017Z",
+          "event": "Correção de referência interna de avaliação legada — resultado e autoria anteriores preservados",
+          "actor": "Codex — correção técnica autorizada pelo usuário",
+          "before": {
+            "status": "diligencia",
+            "note": "Anexar ATA SGARP - ECONOMIA 0166/2025 indicada como comprobatória do preço indicado para o item.",
+            "document": "",
+            "url": "",
+            "at": "2026-09-30T11:50:56.483Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17444083",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Anexar ATA SGARP - ECONOMIA 0166/2025 indicada como comprobatória do preço indicado para o item.",
+            "document": "",
+            "url": "",
+            "at": "2026-09-30T11:50:56.483Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17444083",
+              "fingerprint": "fnv64-v1:1d4dd205cf1c9cb9"
+            }
+          }
+        },
+        {
+          "at": "2026-10-08T19:02:27.017Z",
+          "event": "Correção de referência interna de avaliação legada — resultado e autoria anteriores preservados",
+          "actor": "Codex — correção técnica autorizada pelo usuário",
+          "before": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-30T13:26:36.469Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17444210",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-30T13:26:36.469Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17444210",
+              "fingerprint": "fnv64-v1:d48b3c6f766121d3"
+            }
+          }
+        },
+        {
+          "at": "2026-10-08T19:02:27.017Z",
+          "event": "Correção de referência interna de avaliação legada — resultado e autoria anteriores preservados",
+          "actor": "Codex — correção técnica autorizada pelo usuário",
+          "before": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-30T13:31:24.524Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17444212",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-30T13:31:24.524Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17444212",
+              "fingerprint": "fnv64-v1:b596f6ef6f45066f"
+            }
+          }
+        },
+        {
+          "at": "2026-10-08T19:02:27.017Z",
+          "event": "Correção de referência interna de avaliação legada — resultado e autoria anteriores preservados",
+          "actor": "Codex — correção técnica autorizada pelo usuário",
+          "before": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-30T13:32:18.339Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17444208",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-30T13:32:18.339Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17444208",
+              "fingerprint": "fnv64-v1:9621c7276da19f3a"
+            }
+          }
+        },
+        {
+          "at": "2026-10-08T19:02:27.017Z",
+          "event": "Correção de referência interna de avaliação legada — resultado e autoria anteriores preservados",
+          "actor": "Codex — correção técnica autorizada pelo usuário",
+          "before": {
+            "status": "obs",
+            "note": "Observação do Proponente:\n\"No que se refere ao item 12 – Divisória com porta e isolamento acústico, não foi localizada, no âmbito da consulta realizada aos sistemas e bancos de preços públicos, referência que contemplasse, de forma integrada e com compatibilidade suficiente, a solução completa pretendida, compreendendo a divisória, o isolamento acústico e a porta de correr. Diante disso, para viabilizar a pesquisa e a composição do valor estimado da solução, procedeu-se à decomposição do objeto em seus principais componentes, os quais foram individualmente pesquisados e incluídos na planilha de preços, correspondendo aos itens 12 – Divisória modular em painel de fibra de madeira, 13 – Manta para isolamento acústico em divisórias e 14 – Porta de correr para divisória.\"",
+            "document": "",
+            "url": "",
+            "at": "2026-09-30T12:05:21.043Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17444140",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "obs",
+            "note": "Observação do Proponente:\n\"No que se refere ao item 12 – Divisória com porta e isolamento acústico, não foi localizada, no âmbito da consulta realizada aos sistemas e bancos de preços públicos, referência que contemplasse, de forma integrada e com compatibilidade suficiente, a solução completa pretendida, compreendendo a divisória, o isolamento acústico e a porta de correr. Diante disso, para viabilizar a pesquisa e a composição do valor estimado da solução, procedeu-se à decomposição do objeto em seus principais componentes, os quais foram individualmente pesquisados e incluídos na planilha de preços, correspondendo aos itens 12 – Divisória modular em painel de fibra de madeira, 13 – Manta para isolamento acústico em divisórias e 14 – Porta de correr para divisória.\"",
+            "document": "",
+            "url": "",
+            "at": "2026-09-30T12:05:21.043Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17444140",
+              "fingerprint": "fnv64-v1:4fd511bf0e3894e4"
+            }
+          }
+        },
+        {
+          "at": "2026-10-08T19:02:27.020Z",
+          "event": "Correção de referência interna de avaliação legada — resultado e autoria anteriores preservados",
+          "actor": "Codex — correção técnica autorizada pelo usuário",
+          "before": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-30T13:30:06.381Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17444101",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-30T13:30:06.381Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17444101",
+              "fingerprint": "fnv64-v1:61d7bdfec6f91152"
+            }
+          }
+        },
+        {
+          "at": "2026-10-08T19:02:27.020Z",
+          "event": "Correção de referência interna de avaliação legada — resultado e autoria anteriores preservados",
+          "actor": "Codex — correção técnica autorizada pelo usuário",
+          "before": {
+            "status": "diligencia",
+            "note": "Anexar ATA SGARP - ECONOMIA 0166/2025 indicada como comprobatória do preço indicado para o item.",
+            "document": "",
+            "url": "",
+            "at": "2026-09-30T11:50:09.905Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17444057",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Anexar ATA SGARP - ECONOMIA 0166/2025 indicada como comprobatória do preço indicado para o item.",
+            "document": "",
+            "url": "",
+            "at": "2026-09-30T11:50:09.905Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17444057",
+              "fingerprint": "fnv64-v1:a5346bee26e6847b"
+            }
+          }
+        },
+        {
+          "at": "2026-10-08T19:02:27.020Z",
+          "event": "Correção de referência interna de avaliação legada — resultado e autoria anteriores preservados",
+          "actor": "Codex — correção técnica autorizada pelo usuário",
+          "before": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-30T13:33:43.761Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17444196",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-30T13:33:43.761Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17444196",
+              "fingerprint": "fnv64-v1:68555ac0e85fcf24"
+            }
+          }
+        },
+        {
+          "at": "2026-10-08T19:02:27.021Z",
+          "event": "Correção de referência interna de avaliação legada — resultado e autoria anteriores preservados",
+          "actor": "Codex — correção técnica autorizada pelo usuário",
+          "before": {
+            "status": "diligencia",
+            "note": "Anexar ATA SGARP - ECONOMIA 0166/2025 indicada como comprobatória do preço indicado para o item.",
+            "document": "",
+            "url": "",
+            "at": "2026-09-30T11:47:21.207Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17444054",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Anexar ATA SGARP - ECONOMIA 0166/2025 indicada como comprobatória do preço indicado para o item.",
+            "document": "",
+            "url": "",
+            "at": "2026-09-30T11:47:21.207Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17444054",
+              "fingerprint": "fnv64-v1:253b50da17b12694"
+            }
+          }
+        },
+        {
+          "at": "2026-10-08T19:02:27.021Z",
+          "event": "Correção de referência interna de avaliação legada — resultado e autoria anteriores preservados",
+          "actor": "Codex — correção técnica autorizada pelo usuário",
+          "before": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-30T12:25:45.539Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17444193",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-30T12:25:45.539Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17444193",
+              "fingerprint": "fnv64-v1:c8ecac2b4d20167e"
+            }
+          }
+        },
+        {
+          "at": "2026-10-08T19:02:27.021Z",
+          "event": "Correção de referência interna de avaliação legada — resultado e autoria anteriores preservados",
+          "actor": "Codex — correção técnica autorizada pelo usuário",
+          "before": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-30T13:31:45.718Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17444291",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-30T13:31:45.718Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17444291",
+              "fingerprint": "fnv64-v1:b840ebc0892e1a73"
+            }
+          }
+        },
+        {
+          "at": "2026-10-08T19:02:27.021Z",
+          "event": "Correção de referência interna de avaliação legada — resultado e autoria anteriores preservados",
+          "actor": "Codex — correção técnica autorizada pelo usuário",
+          "before": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-30T13:33:00.962Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17444159",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-30T13:33:00.962Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17444159",
+              "fingerprint": "fnv64-v1:c9041e734f639fe7"
+            }
+          }
+        },
+        {
+          "at": "2026-10-08T19:02:27.021Z",
+          "event": "Correção de referência interna de avaliação legada — resultado e autoria anteriores preservados",
+          "actor": "Codex — correção técnica autorizada pelo usuário",
+          "before": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-30T13:28:19.505Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17444295",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-30T13:28:19.505Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17444295",
+              "fingerprint": "fnv64-v1:2887cf42c081d8b9"
+            }
+          }
+        },
+        {
+          "at": "2026-10-08T19:02:27.021Z",
+          "event": "Correção de referência interna de avaliação legada — resultado e autoria anteriores preservados",
+          "actor": "Codex — correção técnica autorizada pelo usuário",
+          "before": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-30T13:29:14.738Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17444103",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-30T13:29:14.738Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17444103",
+              "fingerprint": "fnv64-v1:105487a0fa97335c"
+            }
+          }
+        },
+        {
+          "at": "2026-10-08T19:02:27.021Z",
+          "event": "Correção de referência interna de avaliação legada — resultado e autoria anteriores preservados",
+          "actor": "Codex — correção técnica autorizada pelo usuário",
+          "before": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-30T13:30:55.034Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17444215",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-30T13:30:55.034Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17444215",
+              "fingerprint": "fnv64-v1:1af49e01c0e3cfea"
+            }
+          }
+        },
+        {
+          "at": "2026-10-08T19:02:27.021Z",
+          "event": "Correção de referência interna de avaliação legada — resultado e autoria anteriores preservados",
+          "actor": "Codex — correção técnica autorizada pelo usuário",
+          "before": {
+            "status": "diligencia",
+            "note": "Anexar ATA SGARP - ECONOMIA 0166/2025 indicada como comprobatória do preço indicado para o item.",
+            "document": "",
+            "url": "",
+            "at": "2026-09-30T11:36:19.950Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17444048",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Anexar ATA SGARP - ECONOMIA 0166/2025 indicada como comprobatória do preço indicado para o item.",
+            "document": "",
+            "url": "",
+            "at": "2026-09-30T11:36:19.950Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17444048",
+              "fingerprint": "fnv64-v1:5f692680ddb12a3d"
+            }
+          }
+        },
+        {
+          "at": "2026-10-08T19:02:27.021Z",
+          "event": "Correção de referência interna de avaliação legada — resultado e autoria anteriores preservados",
+          "actor": "Codex — correção técnica autorizada pelo usuário",
+          "before": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-30T13:25:33.984Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17444201",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-30T13:25:33.984Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17444201",
+              "fingerprint": "fnv64-v1:82086bba97c4e588"
+            }
+          }
+        },
+        {
+          "at": "2026-10-08T19:02:27.021Z",
+          "event": "Correção de referência interna de avaliação legada — resultado e autoria anteriores preservados",
+          "actor": "Codex — correção técnica autorizada pelo usuário",
+          "before": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-30T12:14:11.555Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17444189",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-30T12:14:11.555Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17444189",
+              "fingerprint": "fnv64-v1:766f9df4153f6646"
+            }
+          }
+        },
+        {
+          "at": "2026-10-08T19:02:27.021Z",
+          "event": "Correção de referência interna de avaliação legada — resultado e autoria anteriores preservados",
+          "actor": "Codex — correção técnica autorizada pelo usuário",
+          "before": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-30T13:29:31.397Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17444102",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-30T13:29:31.397Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17444102",
+              "fingerprint": "fnv64-v1:9377ee154379c9cb"
+            }
+          }
+        },
+        {
+          "at": "2026-10-08T19:02:27.021Z",
+          "event": "Correção de referência interna de avaliação legada — resultado e autoria anteriores preservados",
+          "actor": "Codex — correção técnica autorizada pelo usuário",
+          "before": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-30T13:33:20.615Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17444198",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-30T13:33:20.615Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17444198",
+              "fingerprint": "fnv64-v1:2dc425a09df73818"
+            }
+          }
+        },
+        {
+          "at": "2026-10-08T19:02:27.022Z",
+          "event": "Correção de referência interna de avaliação legada — resultado e autoria anteriores preservados",
+          "actor": "Codex — correção técnica autorizada pelo usuário",
+          "before": {
+            "status": "diligencia",
+            "note": "Anexar ATA SGARP - ECONOMIA 0124/2026 indicada como comprobatória do preço indicado para o item.",
+            "document": "",
+            "url": "",
+            "at": "2026-09-30T11:57:11.361Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17444149",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Anexar ATA SGARP - ECONOMIA 0124/2026 indicada como comprobatória do preço indicado para o item.",
+            "document": "",
+            "url": "",
+            "at": "2026-09-30T11:57:11.361Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17444149",
+              "fingerprint": "fnv64-v1:ff5fa6a99660b215"
+            }
+          }
+        },
+        {
+          "at": "2026-10-08T19:02:27.022Z",
+          "event": "Correção de referência interna de avaliação legada — resultado e autoria anteriores preservados",
+          "actor": "Codex — correção técnica autorizada pelo usuário",
+          "before": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-30T13:32:42.359Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17444044",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-30T13:32:42.359Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17444044",
+              "fingerprint": "fnv64-v1:28e459dfb44eb33b"
+            }
+          }
+        },
+        {
+          "at": "2026-10-08T19:02:27.022Z",
+          "event": "Correção de referência interna de avaliação legada — resultado e autoria anteriores preservados",
+          "actor": "Codex — correção técnica autorizada pelo usuário",
+          "before": {
+            "status": "diligencia",
+            "note": "Anexar ATA SEAPE indicada como comprobatória do preço indicado para o item.",
+            "document": "",
+            "url": "",
+            "at": "2026-09-30T11:57:47.211Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17444156",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Anexar ATA SEAPE indicada como comprobatória do preço indicado para o item.",
+            "document": "",
+            "url": "",
+            "at": "2026-09-30T11:57:47.211Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17444156",
+              "fingerprint": "fnv64-v1:b44ff1c7dabc95e0"
+            }
+          }
+        },
+        {
+          "at": "2026-10-08T19:02:27.022Z",
+          "event": "Correção de referência interna de avaliação legada — resultado e autoria anteriores preservados",
+          "actor": "Codex — correção técnica autorizada pelo usuário",
+          "before": {
+            "status": "diligencia",
+            "note": "Anexar ATA SGARP - ECONOMIA 0166/2025 indicada como comprobatória do preço indicado para o item.",
+            "document": "",
+            "url": "",
+            "at": "2026-09-30T11:52:09.917Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17444126",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Anexar ATA SGARP - ECONOMIA 0166/2025 indicada como comprobatória do preço indicado para o item.",
+            "document": "",
+            "url": "",
+            "at": "2026-09-30T11:52:09.917Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17444126",
+              "fingerprint": "fnv64-v1:9f95d37546613921"
+            }
+          }
+        },
+        {
+          "at": "2026-10-08T19:02:27.022Z",
+          "event": "Correção de referência interna de avaliação legada — resultado e autoria anteriores preservados",
+          "actor": "Codex — correção técnica autorizada pelo usuário",
+          "before": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-28T15:32:18.611Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:3",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-28T15:32:18.611Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:3",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-08T19:02:27.022Z",
+          "event": "Correção de referência interna de avaliação legada — resultado e autoria anteriores preservados",
+          "actor": "Codex — correção técnica autorizada pelo usuário",
+          "before": {
+            "status": "obs",
+            "note": "Deverá ser anexado posteriormente",
+            "document": "",
+            "url": "",
+            "at": "2026-09-28T15:40:33.459Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:4",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "obs",
+            "note": "Deverá ser anexado posteriormente",
+            "document": "",
+            "url": "",
+            "at": "2026-09-28T15:40:33.459Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:4",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-08T19:02:27.022Z",
+          "event": "Correção de referência interna de avaliação legada — resultado e autoria anteriores preservados",
+          "actor": "Codex — correção técnica autorizada pelo usuário",
+          "before": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-28T15:39:51.123Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:5",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-28T15:39:51.123Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:5",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-08T19:02:27.022Z",
+          "event": "Correção de referência interna de avaliação legada — resultado e autoria anteriores preservados",
+          "actor": "Codex — correção técnica autorizada pelo usuário",
+          "before": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-28T15:49:49.451Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:7",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-28T15:49:49.451Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:7",
+              "fingerprint": "fnv64-v1:a9e75ba13ece4840"
+            }
+          }
+        },
+        {
+          "at": "2026-10-08T19:02:27.022Z",
+          "event": "Correção de referência interna de avaliação legada — resultado e autoria anteriores preservados",
+          "actor": "Codex — correção técnica autorizada pelo usuário",
+          "before": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-28T15:52:27.187Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:11",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-28T15:52:27.187Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:11",
+              "fingerprint": "fnv64-v1:e948683787eebb55"
+            }
+          }
         }
       ],
       "textos": {
@@ -25305,8 +26452,7 @@ window.PROFOR_PUBLIC_DATA = {
             "evidence": {
               "version": 1,
               "ref": "merito:destinacao",
-              "fingerprint": null,
-              "legacy": true
+              "fingerprint": "fnv64-v1:02c5a4edacfb1280"
             }
           },
           "capital": {
@@ -25326,8 +26472,7 @@ window.PROFOR_PUBLIC_DATA = {
             "evidence": {
               "version": 1,
               "ref": "merito:objetivos",
-              "fingerprint": null,
-              "legacy": true
+              "fingerprint": "fnv64-v1:3045b234a3238af9"
             }
           },
           "metas": {
@@ -25347,8 +26492,7 @@ window.PROFOR_PUBLIC_DATA = {
             "evidence": {
               "version": 1,
               "ref": "merito:capacidade",
-              "fingerprint": null,
-              "legacy": true
+              "fingerprint": "fnv64-v1:8851afa193c3a88e"
             }
           },
           "conteudo": {
@@ -25368,8 +26512,7 @@ window.PROFOR_PUBLIC_DATA = {
             "evidence": {
               "version": 1,
               "ref": "merito:objeto",
-              "fingerprint": null,
-              "legacy": true
+              "fingerprint": "fnv64-v1:9429bcee1e0bc0c0"
             }
           },
           "justificativa": {
@@ -25382,8 +26525,7 @@ window.PROFOR_PUBLIC_DATA = {
             "evidence": {
               "version": 1,
               "ref": "merito:justificativa",
-              "fingerprint": null,
-              "legacy": true
+              "fingerprint": "fnv64-v1:1ac7aa4721741108"
             }
           },
           "publicoAlvo": {
@@ -25396,8 +26538,7 @@ window.PROFOR_PUBLIC_DATA = {
             "evidence": {
               "version": 1,
               "ref": "merito:publicoAlvo",
-              "fingerprint": null,
-              "legacy": true
+              "fingerprint": "fnv64-v1:df4ff7cad4736a35"
             }
           },
           "problema": {
@@ -25410,8 +26551,7 @@ window.PROFOR_PUBLIC_DATA = {
             "evidence": {
               "version": 1,
               "ref": "merito:problema",
-              "fingerprint": null,
-              "legacy": true
+              "fingerprint": "fnv64-v1:de7c9f6305f32bfe"
             }
           },
           "resultados": {
@@ -25424,8 +26564,7 @@ window.PROFOR_PUBLIC_DATA = {
             "evidence": {
               "version": 1,
               "ref": "merito:resultados",
-              "fingerprint": null,
-              "legacy": true
+              "fingerprint": "fnv64-v1:180219a42e659584"
             }
           },
           "ouvidoriaInstituida": {
@@ -25438,8 +26577,7 @@ window.PROFOR_PUBLIC_DATA = {
             "evidence": {
               "version": 1,
               "ref": "merito:ouvidoriaInstituida",
-              "fingerprint": null,
-              "legacy": true
+              "fingerprint": "fnv64-v1:fe62dc10b4dfb581"
             }
           },
           "ouvidoriaAto": {
@@ -25473,8 +26611,7 @@ window.PROFOR_PUBLIC_DATA = {
             "evidence": {
               "version": 1,
               "ref": "merito:falaBRAdesao",
-              "fingerprint": null,
-              "legacy": true
+              "fingerprint": "fnv64-v1:984cb3a58df8f468"
             }
           }
         },
@@ -25489,8 +26626,7 @@ window.PROFOR_PUBLIC_DATA = {
             "evidence": {
               "version": 1,
               "ref": "celebracao:1",
-              "fingerprint": null,
-              "legacy": true
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
             }
           },
           "2": {
@@ -25511,8 +26647,7 @@ window.PROFOR_PUBLIC_DATA = {
             "evidence": {
               "version": 1,
               "ref": "celebracao:3",
-              "fingerprint": null,
-              "legacy": true
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
             }
           },
           "4": {
@@ -25539,8 +26674,7 @@ window.PROFOR_PUBLIC_DATA = {
             "evidence": {
               "version": 1,
               "ref": "celebracao:5",
-              "fingerprint": null,
-              "legacy": true
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
             }
           },
           "6": {
@@ -25574,8 +26708,7 @@ window.PROFOR_PUBLIC_DATA = {
             "evidence": {
               "version": 1,
               "ref": "celebracao:7",
-              "fingerprint": null,
-              "legacy": true
+              "fingerprint": "fnv64-v1:a9e75ba13ece4840"
             }
           },
           "8": {
@@ -25588,8 +26721,7 @@ window.PROFOR_PUBLIC_DATA = {
             "evidence": {
               "version": 1,
               "ref": "celebracao:8",
-              "fingerprint": null,
-              "legacy": true
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
             }
           },
           "9": {
@@ -25602,8 +26734,7 @@ window.PROFOR_PUBLIC_DATA = {
             "evidence": {
               "version": 1,
               "ref": "celebracao:9",
-              "fingerprint": null,
-              "legacy": true
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
             }
           },
           "10": {
@@ -25616,8 +26747,7 @@ window.PROFOR_PUBLIC_DATA = {
             "evidence": {
               "version": 1,
               "ref": "celebracao:10",
-              "fingerprint": null,
-              "legacy": true
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
             }
           },
           "11": {
@@ -25630,8 +26760,7 @@ window.PROFOR_PUBLIC_DATA = {
             "evidence": {
               "version": 1,
               "ref": "celebracao:11",
-              "fingerprint": null,
-              "legacy": true
+              "fingerprint": "fnv64-v1:8851afa193c3a88e"
             }
           },
           "12": {
@@ -25644,8 +26773,7 @@ window.PROFOR_PUBLIC_DATA = {
             "evidence": {
               "version": 1,
               "ref": "celebracao:12",
-              "fingerprint": null,
-              "legacy": true
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
             }
           },
           "13": {
@@ -25658,8 +26786,7 @@ window.PROFOR_PUBLIC_DATA = {
             "evidence": {
               "version": 1,
               "ref": "celebracao:13",
-              "fingerprint": null,
-              "legacy": true
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
             }
           },
           "14": {
@@ -25672,8 +26799,7 @@ window.PROFOR_PUBLIC_DATA = {
             "evidence": {
               "version": 1,
               "ref": "celebracao:14",
-              "fingerprint": null,
-              "legacy": true
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
             }
           },
           "15": {
@@ -25686,8 +26812,7 @@ window.PROFOR_PUBLIC_DATA = {
             "evidence": {
               "version": 1,
               "ref": "celebracao:15",
-              "fingerprint": null,
-              "legacy": true
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
             }
           },
           "16": {
@@ -25700,8 +26825,7 @@ window.PROFOR_PUBLIC_DATA = {
             "evidence": {
               "version": 1,
               "ref": "celebracao:16",
-              "fingerprint": null,
-              "legacy": true
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
             }
           },
           "17": {
@@ -25714,8 +26838,7 @@ window.PROFOR_PUBLIC_DATA = {
             "evidence": {
               "version": 1,
               "ref": "celebracao:17",
-              "fingerprint": null,
-              "legacy": true
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
             }
           },
           "18": {
@@ -25728,8 +26851,7 @@ window.PROFOR_PUBLIC_DATA = {
             "evidence": {
               "version": 1,
               "ref": "celebracao:18",
-              "fingerprint": null,
-              "legacy": true
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
             }
           },
           "19": {
@@ -25742,8 +26864,7 @@ window.PROFOR_PUBLIC_DATA = {
             "evidence": {
               "version": 1,
               "ref": "celebracao:19",
-              "fingerprint": null,
-              "legacy": true
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
             }
           },
           "1.1": {
@@ -25756,8 +26877,7 @@ window.PROFOR_PUBLIC_DATA = {
             "evidence": {
               "version": 1,
               "ref": "celebracao:1.1",
-              "fingerprint": null,
-              "legacy": true
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
             }
           }
         },
@@ -31671,6 +32791,870 @@ window.PROFOR_PUBLIC_DATA = {
             },
             "actor": "Usuário local"
           }
+        },
+        {
+          "at": "2026-10-08T19:02:27.022Z",
+          "event": "Correção de referência interna de avaliação legada — resultado e autoria anteriores preservados",
+          "actor": "Codex — correção técnica autorizada pelo usuário",
+          "before": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-01T19:31:50.968Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "merito:objeto",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-01T19:31:50.968Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "merito:objeto",
+              "fingerprint": "fnv64-v1:9429bcee1e0bc0c0"
+            }
+          }
+        },
+        {
+          "at": "2026-10-08T19:02:27.023Z",
+          "event": "Correção de referência interna de avaliação legada — resultado e autoria anteriores preservados",
+          "actor": "Codex — correção técnica autorizada pelo usuário",
+          "before": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-01T19:31:54.517Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "merito:justificativa",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-01T19:31:54.517Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "merito:justificativa",
+              "fingerprint": "fnv64-v1:1ac7aa4721741108"
+            }
+          }
+        },
+        {
+          "at": "2026-10-08T19:02:27.023Z",
+          "event": "Correção de referência interna de avaliação legada — resultado e autoria anteriores preservados",
+          "actor": "Codex — correção técnica autorizada pelo usuário",
+          "before": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-01T19:31:57.459Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "merito:publicoAlvo",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-01T19:31:57.459Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "merito:publicoAlvo",
+              "fingerprint": "fnv64-v1:df4ff7cad4736a35"
+            }
+          }
+        },
+        {
+          "at": "2026-10-08T19:02:27.023Z",
+          "event": "Correção de referência interna de avaliação legada — resultado e autoria anteriores preservados",
+          "actor": "Codex — correção técnica autorizada pelo usuário",
+          "before": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-01T19:32:00.284Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "merito:problema",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-01T19:32:00.284Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "merito:problema",
+              "fingerprint": "fnv64-v1:de7c9f6305f32bfe"
+            }
+          }
+        },
+        {
+          "at": "2026-10-08T19:02:27.023Z",
+          "event": "Correção de referência interna de avaliação legada — resultado e autoria anteriores preservados",
+          "actor": "Codex — correção técnica autorizada pelo usuário",
+          "before": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-01T19:32:03.259Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "merito:resultados",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-01T19:32:03.259Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "merito:resultados",
+              "fingerprint": "fnv64-v1:180219a42e659584"
+            }
+          }
+        },
+        {
+          "at": "2026-10-08T19:02:27.023Z",
+          "event": "Correção de referência interna de avaliação legada — resultado e autoria anteriores preservados",
+          "actor": "Codex — correção técnica autorizada pelo usuário",
+          "before": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-01T19:32:06.355Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "merito:destinacao",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-01T19:32:06.355Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "merito:destinacao",
+              "fingerprint": "fnv64-v1:02c5a4edacfb1280"
+            }
+          }
+        },
+        {
+          "at": "2026-10-08T19:02:27.025Z",
+          "event": "Correção de referência interna de avaliação legada — resultado e autoria anteriores preservados",
+          "actor": "Codex — correção técnica autorizada pelo usuário",
+          "before": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-01T19:32:12.621Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "merito:objetivos",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-01T19:32:12.621Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "merito:objetivos",
+              "fingerprint": "fnv64-v1:3045b234a3238af9"
+            }
+          }
+        },
+        {
+          "at": "2026-10-08T19:02:27.025Z",
+          "event": "Correção de referência interna de avaliação legada — resultado e autoria anteriores preservados",
+          "actor": "Codex — correção técnica autorizada pelo usuário",
+          "before": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-01T19:32:15.858Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "merito:capacidade",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-01T19:32:15.858Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "merito:capacidade",
+              "fingerprint": "fnv64-v1:8851afa193c3a88e"
+            }
+          }
+        },
+        {
+          "at": "2026-10-08T19:02:27.026Z",
+          "event": "Correção de referência interna de avaliação legada — resultado e autoria anteriores preservados",
+          "actor": "Codex — correção técnica autorizada pelo usuário",
+          "before": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-01T19:32:23.883Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "merito:ouvidoriaInstituida",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-01T19:32:23.883Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "merito:ouvidoriaInstituida",
+              "fingerprint": "fnv64-v1:fe62dc10b4dfb581"
+            }
+          }
+        },
+        {
+          "at": "2026-10-08T19:02:27.026Z",
+          "event": "Correção de referência interna de avaliação legada — resultado e autoria anteriores preservados",
+          "actor": "Codex — correção técnica autorizada pelo usuário",
+          "before": {
+            "status": "obs",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-01T19:32:36.755Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "merito:falaBRAdesao",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "obs",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-01T19:32:36.755Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "merito:falaBRAdesao",
+              "fingerprint": "fnv64-v1:984cb3a58df8f468"
+            }
+          }
+        },
+        {
+          "at": "2026-10-08T19:02:27.026Z",
+          "event": "Correção de referência interna de avaliação legada — resultado e autoria anteriores preservados",
+          "actor": "Codex — correção técnica autorizada pelo usuário",
+          "before": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-01T19:33:09.034Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:3",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-01T19:33:09.034Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:3",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-08T19:02:27.026Z",
+          "event": "Correção de referência interna de avaliação legada — resultado e autoria anteriores preservados",
+          "actor": "Codex — correção técnica autorizada pelo usuário",
+          "before": {
+            "status": "diligencia",
+            "note": "Anexar Plano de Sustentabilidade",
+            "document": "",
+            "url": "",
+            "at": "2026-10-01T19:34:29.267Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:5",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Anexar Plano de Sustentabilidade",
+            "document": "",
+            "url": "",
+            "at": "2026-10-01T19:34:29.267Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:5",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-08T19:02:27.026Z",
+          "event": "Correção de referência interna de avaliação legada — resultado e autoria anteriores preservados",
+          "actor": "Codex — correção técnica autorizada pelo usuário",
+          "before": {
+            "status": "diligencia",
+            "note": "Anexar QDD",
+            "document": "",
+            "url": "",
+            "at": "2026-10-01T19:35:35.080Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:7",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Anexar QDD",
+            "document": "",
+            "url": "",
+            "at": "2026-10-01T19:35:35.080Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:7",
+              "fingerprint": "fnv64-v1:a9e75ba13ece4840"
+            }
+          }
+        },
+        {
+          "at": "2026-10-08T19:02:27.026Z",
+          "event": "Correção de referência interna de avaliação legada — resultado e autoria anteriores preservados",
+          "actor": "Codex — correção técnica autorizada pelo usuário",
+          "before": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-01T19:35:43.493Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:11",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-01T19:35:43.493Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:11",
+              "fingerprint": "fnv64-v1:8851afa193c3a88e"
+            }
+          }
+        },
+        {
+          "at": "2026-10-08T19:02:27.026Z",
+          "event": "Correção de referência interna de avaliação legada — resultado e autoria anteriores preservados",
+          "actor": "Codex — correção técnica autorizada pelo usuário",
+          "before": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-01T19:35:54.667Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:1",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-01T19:35:54.667Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:1",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-08T19:02:27.026Z",
+          "event": "Correção de referência interna de avaliação legada — resultado e autoria anteriores preservados",
+          "actor": "Codex — correção técnica autorizada pelo usuário",
+          "before": {
+            "status": "diligencia",
+            "note": "Anexar Delegação de Competência",
+            "document": "",
+            "url": "",
+            "at": "2026-10-01T19:37:11.227Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:1.1",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Anexar Delegação de Competência",
+            "document": "",
+            "url": "",
+            "at": "2026-10-01T19:37:11.227Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:1.1",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-08T19:02:27.026Z",
+          "event": "Correção de referência interna de avaliação legada — resultado e autoria anteriores preservados",
+          "actor": "Codex — correção técnica autorizada pelo usuário",
+          "before": {
+            "status": "diligencia",
+            "note": "anexar documento",
+            "document": "",
+            "url": "",
+            "at": "2026-10-01T19:37:56.472Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:8",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "anexar documento",
+            "document": "",
+            "url": "",
+            "at": "2026-10-01T19:37:56.472Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:8",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-08T19:02:27.026Z",
+          "event": "Correção de referência interna de avaliação legada — resultado e autoria anteriores preservados",
+          "actor": "Codex — correção técnica autorizada pelo usuário",
+          "before": {
+            "status": "diligencia",
+            "note": "anexar documento",
+            "document": "",
+            "url": "",
+            "at": "2026-10-01T19:38:39.406Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:9",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "anexar documento",
+            "document": "",
+            "url": "",
+            "at": "2026-10-01T19:38:39.406Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:9",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-08T19:02:27.026Z",
+          "event": "Correção de referência interna de avaliação legada — resultado e autoria anteriores preservados",
+          "actor": "Codex — correção técnica autorizada pelo usuário",
+          "before": {
+            "status": "diligencia",
+            "note": "anexar documento",
+            "document": "",
+            "url": "",
+            "at": "2026-10-01T19:39:00.105Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:10",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "anexar documento",
+            "document": "",
+            "url": "",
+            "at": "2026-10-01T19:39:00.105Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:10",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-08T19:02:27.026Z",
+          "event": "Correção de referência interna de avaliação legada — resultado e autoria anteriores preservados",
+          "actor": "Codex — correção técnica autorizada pelo usuário",
+          "before": {
+            "status": "diligencia",
+            "note": "anexar documento",
+            "document": "",
+            "url": "",
+            "at": "2026-10-01T19:39:13.338Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:12",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "anexar documento",
+            "document": "",
+            "url": "",
+            "at": "2026-10-01T19:39:13.338Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:12",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-08T19:02:27.026Z",
+          "event": "Correção de referência interna de avaliação legada — resultado e autoria anteriores preservados",
+          "actor": "Codex — correção técnica autorizada pelo usuário",
+          "before": {
+            "status": "diligencia",
+            "note": "anexar documento",
+            "document": "",
+            "url": "",
+            "at": "2026-10-01T19:39:29.550Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:13",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "anexar documento",
+            "document": "",
+            "url": "",
+            "at": "2026-10-01T19:39:29.550Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:13",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-08T19:02:27.026Z",
+          "event": "Correção de referência interna de avaliação legada — resultado e autoria anteriores preservados",
+          "actor": "Codex — correção técnica autorizada pelo usuário",
+          "before": {
+            "status": "diligencia",
+            "note": "anexar documento",
+            "document": "",
+            "url": "",
+            "at": "2026-10-01T19:39:53.709Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:14",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "anexar documento",
+            "document": "",
+            "url": "",
+            "at": "2026-10-01T19:39:53.709Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:14",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-08T19:02:27.026Z",
+          "event": "Correção de referência interna de avaliação legada — resultado e autoria anteriores preservados",
+          "actor": "Codex — correção técnica autorizada pelo usuário",
+          "before": {
+            "status": "diligencia",
+            "note": "anexar documento",
+            "document": "",
+            "url": "",
+            "at": "2026-10-01T19:40:40.990Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:15",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "anexar documento",
+            "document": "",
+            "url": "",
+            "at": "2026-10-01T19:40:40.990Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:15",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-08T19:02:27.026Z",
+          "event": "Correção de referência interna de avaliação legada — resultado e autoria anteriores preservados",
+          "actor": "Codex — correção técnica autorizada pelo usuário",
+          "before": {
+            "status": "diligencia",
+            "note": "anexar documento",
+            "document": "",
+            "url": "",
+            "at": "2026-10-01T19:40:56.441Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:16",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "anexar documento",
+            "document": "",
+            "url": "",
+            "at": "2026-10-01T19:40:56.441Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:16",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-08T19:02:27.026Z",
+          "event": "Correção de referência interna de avaliação legada — resultado e autoria anteriores preservados",
+          "actor": "Codex — correção técnica autorizada pelo usuário",
+          "before": {
+            "status": "diligencia",
+            "note": "anexar documento",
+            "document": "",
+            "url": "",
+            "at": "2026-10-01T19:41:14.984Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:17",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "anexar documento",
+            "document": "",
+            "url": "",
+            "at": "2026-10-01T19:41:14.984Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:17",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-08T19:02:27.026Z",
+          "event": "Correção de referência interna de avaliação legada — resultado e autoria anteriores preservados",
+          "actor": "Codex — correção técnica autorizada pelo usuário",
+          "before": {
+            "status": "diligencia",
+            "note": "anexar documento",
+            "document": "",
+            "url": "",
+            "at": "2026-10-01T19:41:34.102Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:18",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "anexar documento",
+            "document": "",
+            "url": "",
+            "at": "2026-10-01T19:41:34.102Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:18",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-08T19:02:27.026Z",
+          "event": "Correção de referência interna de avaliação legada — resultado e autoria anteriores preservados",
+          "actor": "Codex — correção técnica autorizada pelo usuário",
+          "before": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-01T19:41:38.763Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:19",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-01T19:41:38.763Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:19",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
         }
       ],
       "textos": {
@@ -34263,350 +36247,350 @@ window.PROFOR_PUBLIC_DATA = {
             "note": "",
             "document": "",
             "url": "",
-            "at": "2026-09-30T16:50:49.294Z",
+            "at": "2026-10-08T18:57:00.786Z",
             "attachments": [],
             "evidence": {
               "version": 1,
               "ref": "pad:17412521",
-              "fingerprint": null,
-              "legacy": true
-            }
+              "fingerprint": "fnv64-v1:bc484804343d6912"
+            },
+            "actor": "Usuário local"
           },
           "17412525": {
             "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": "2026-09-30T16:50:49.294Z",
+            "at": "2026-10-08T18:57:00.786Z",
             "attachments": [],
             "evidence": {
               "version": 1,
               "ref": "pad:17412525",
-              "fingerprint": null,
-              "legacy": true
-            }
+              "fingerprint": "fnv64-v1:6827cfb8973b7ab9"
+            },
+            "actor": "Usuário local"
           },
           "17412526": {
             "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": "2026-09-30T16:50:49.294Z",
+            "at": "2026-10-08T18:57:00.786Z",
             "attachments": [],
             "evidence": {
               "version": 1,
               "ref": "pad:17412526",
-              "fingerprint": null,
-              "legacy": true
-            }
+              "fingerprint": "fnv64-v1:98e501c3ba9ca8ac"
+            },
+            "actor": "Usuário local"
           },
           "17412527": {
             "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": "2026-09-30T16:50:49.294Z",
+            "at": "2026-10-08T18:57:00.786Z",
             "attachments": [],
             "evidence": {
               "version": 1,
               "ref": "pad:17412527",
-              "fingerprint": null,
-              "legacy": true
-            }
+              "fingerprint": "fnv64-v1:f6dbe026ed829773"
+            },
+            "actor": "Usuário local"
           },
           "17412528": {
             "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": "2026-09-30T16:50:49.294Z",
+            "at": "2026-10-08T18:57:00.787Z",
             "attachments": [],
             "evidence": {
               "version": 1,
               "ref": "pad:17412528",
-              "fingerprint": null,
-              "legacy": true
-            }
+              "fingerprint": "fnv64-v1:1c3d1a07cfff4af0"
+            },
+            "actor": "Usuário local"
           },
           "17412529": {
             "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": "2026-09-30T16:50:49.294Z",
+            "at": "2026-10-08T18:57:00.786Z",
             "attachments": [],
             "evidence": {
               "version": 1,
               "ref": "pad:17412529",
-              "fingerprint": null,
-              "legacy": true
-            }
+              "fingerprint": "fnv64-v1:20afdba4d2ed72b6"
+            },
+            "actor": "Usuário local"
           },
           "17412530": {
             "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": "2026-09-30T16:50:49.294Z",
+            "at": "2026-10-08T18:57:00.786Z",
             "attachments": [],
             "evidence": {
               "version": 1,
               "ref": "pad:17412530",
-              "fingerprint": null,
-              "legacy": true
-            }
+              "fingerprint": "fnv64-v1:97ec02aeeac279c1"
+            },
+            "actor": "Usuário local"
           },
           "17412531": {
             "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": "2026-09-30T16:50:49.294Z",
+            "at": "2026-10-08T18:57:00.787Z",
             "attachments": [],
             "evidence": {
               "version": 1,
               "ref": "pad:17412531",
-              "fingerprint": null,
-              "legacy": true
-            }
+              "fingerprint": "fnv64-v1:7bb4959b02914cb2"
+            },
+            "actor": "Usuário local"
           },
           "17412532": {
             "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": "2026-09-30T16:50:49.294Z",
+            "at": "2026-10-08T18:57:00.786Z",
             "attachments": [],
             "evidence": {
               "version": 1,
               "ref": "pad:17412532",
-              "fingerprint": null,
-              "legacy": true
-            }
+              "fingerprint": "fnv64-v1:f5f31fff2cb65935"
+            },
+            "actor": "Usuário local"
           },
           "17412533": {
             "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": "2026-09-30T16:50:49.294Z",
+            "at": "2026-10-08T18:57:00.786Z",
             "attachments": [],
             "evidence": {
               "version": 1,
               "ref": "pad:17412533",
-              "fingerprint": null,
-              "legacy": true
-            }
+              "fingerprint": "fnv64-v1:70ff89466f053fe4"
+            },
+            "actor": "Usuário local"
           },
           "17412534": {
             "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": "2026-09-30T16:50:49.294Z",
+            "at": "2026-10-08T18:57:00.787Z",
             "attachments": [],
             "evidence": {
               "version": 1,
               "ref": "pad:17412534",
-              "fingerprint": null,
-              "legacy": true
-            }
+              "fingerprint": "fnv64-v1:a717f7b67a5ccec2"
+            },
+            "actor": "Usuário local"
           },
           "17412535": {
             "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": "2026-09-30T16:50:49.294Z",
+            "at": "2026-10-08T18:57:00.787Z",
             "attachments": [],
             "evidence": {
               "version": 1,
               "ref": "pad:17412535",
-              "fingerprint": null,
-              "legacy": true
-            }
+              "fingerprint": "fnv64-v1:062627f982e13aa3"
+            },
+            "actor": "Usuário local"
           },
           "17412536": {
             "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": "2026-09-30T16:50:49.294Z",
+            "at": "2026-10-08T18:57:00.787Z",
             "attachments": [],
             "evidence": {
               "version": 1,
               "ref": "pad:17412536",
-              "fingerprint": null,
-              "legacy": true
-            }
+              "fingerprint": "fnv64-v1:608e67e501b74dd9"
+            },
+            "actor": "Usuário local"
           },
           "17412537": {
             "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": "2026-09-30T16:50:49.294Z",
+            "at": "2026-10-08T18:57:00.787Z",
             "attachments": [],
             "evidence": {
               "version": 1,
               "ref": "pad:17412537",
-              "fingerprint": null,
-              "legacy": true
-            }
+              "fingerprint": "fnv64-v1:fb862a07e24318df"
+            },
+            "actor": "Usuário local"
           },
           "17412539": {
             "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": "2026-09-30T16:50:49.294Z",
+            "at": "2026-10-08T18:57:00.787Z",
             "attachments": [],
             "evidence": {
               "version": 1,
               "ref": "pad:17412539",
-              "fingerprint": null,
-              "legacy": true
-            }
+              "fingerprint": "fnv64-v1:dd8d63128518d041"
+            },
+            "actor": "Usuário local"
           },
           "17412540": {
             "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": "2026-09-30T16:02:07.536Z",
+            "at": "2026-10-08T18:57:00.787Z",
             "attachments": [],
             "evidence": {
               "version": 1,
               "ref": "pad:17412540",
-              "fingerprint": null,
-              "legacy": true
-            }
+              "fingerprint": "fnv64-v1:c5e70efb80ad6642"
+            },
+            "actor": "Usuário local"
           },
           "17412541": {
             "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": "2026-09-30T16:50:49.294Z",
+            "at": "2026-10-08T18:57:00.787Z",
             "attachments": [],
             "evidence": {
               "version": 1,
               "ref": "pad:17412541",
-              "fingerprint": null,
-              "legacy": true
-            }
+              "fingerprint": "fnv64-v1:73f017ed0592744d"
+            },
+            "actor": "Usuário local"
           },
           "17412542": {
             "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": "2026-09-30T16:50:49.294Z",
+            "at": "2026-10-08T18:57:00.787Z",
             "attachments": [],
             "evidence": {
               "version": 1,
               "ref": "pad:17412542",
-              "fingerprint": null,
-              "legacy": true
-            }
+              "fingerprint": "fnv64-v1:8030f13c4acc66e1"
+            },
+            "actor": "Usuário local"
           },
           "17412543": {
             "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": "2026-09-30T16:50:49.294Z",
+            "at": "2026-10-08T18:57:00.787Z",
             "attachments": [],
             "evidence": {
               "version": 1,
               "ref": "pad:17412543",
-              "fingerprint": null,
-              "legacy": true
-            }
+              "fingerprint": "fnv64-v1:431bb77bfb07c2e8"
+            },
+            "actor": "Usuário local"
           },
           "17412544": {
             "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": "2026-09-30T16:50:49.294Z",
+            "at": "2026-10-08T18:57:00.787Z",
             "attachments": [],
             "evidence": {
               "version": 1,
               "ref": "pad:17412544",
-              "fingerprint": null,
-              "legacy": true
-            }
+              "fingerprint": "fnv64-v1:98a461a7d7495e5e"
+            },
+            "actor": "Usuário local"
           },
           "17412545": {
             "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": "2026-09-30T16:50:49.294Z",
+            "at": "2026-10-08T18:57:00.787Z",
             "attachments": [],
             "evidence": {
               "version": 1,
               "ref": "pad:17412545",
-              "fingerprint": null,
-              "legacy": true
-            }
+              "fingerprint": "fnv64-v1:a4110cb41ca828e8"
+            },
+            "actor": "Usuário local"
           },
           "17412546": {
             "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": "2026-09-30T16:50:49.294Z",
+            "at": "2026-10-08T18:57:00.787Z",
             "attachments": [],
             "evidence": {
               "version": 1,
               "ref": "pad:17412546",
-              "fingerprint": null,
-              "legacy": true
-            }
+              "fingerprint": "fnv64-v1:8b315b8ec4801801"
+            },
+            "actor": "Usuário local"
           },
           "17412547": {
             "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": "2026-09-30T16:50:49.294Z",
+            "at": "2026-10-08T18:57:00.787Z",
             "attachments": [],
             "evidence": {
               "version": 1,
               "ref": "pad:17412547",
-              "fingerprint": null,
-              "legacy": true
-            }
+              "fingerprint": "fnv64-v1:19c3e4176c3b48c0"
+            },
+            "actor": "Usuário local"
           },
           "17412548": {
             "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": "2026-09-30T16:50:49.293Z",
+            "at": "2026-10-08T18:57:00.787Z",
             "attachments": [],
             "evidence": {
               "version": 1,
               "ref": "pad:17412548",
-              "fingerprint": null,
-              "legacy": true
-            }
+              "fingerprint": "fnv64-v1:b3e6b87e28f15aff"
+            },
+            "actor": "Usuário local"
           },
           "17412549": {
             "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": "2026-09-30T16:50:49.294Z",
+            "at": "2026-10-08T18:57:00.787Z",
             "attachments": [],
             "evidence": {
               "version": 1,
               "ref": "pad:17412549",
-              "fingerprint": null,
-              "legacy": true
-            }
+              "fingerprint": "fnv64-v1:7f7c0d614163fe6a"
+            },
+            "actor": "Usuário local"
           }
         }
       },
@@ -40770,6 +42754,831 @@ window.PROFOR_PUBLIC_DATA = {
             "automaticDeadline": true,
             "confirmed": false,
             "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-08T18:57:00.786Z",
+          "event": "Avaliação: pad / 17412529",
+          "actor": "Usuário local",
+          "before": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-30T16:50:49.294Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17412529",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-08T18:57:00.786Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17412529",
+              "fingerprint": "fnv64-v1:20afdba4d2ed72b6"
+            },
+            "actor": "Usuário local"
+          }
+        },
+        {
+          "at": "2026-10-08T18:57:00.786Z",
+          "event": "Avaliação: pad / 17412525",
+          "actor": "Usuário local",
+          "before": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-30T16:50:49.294Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17412525",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-08T18:57:00.786Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17412525",
+              "fingerprint": "fnv64-v1:6827cfb8973b7ab9"
+            },
+            "actor": "Usuário local"
+          }
+        },
+        {
+          "at": "2026-10-08T18:57:00.786Z",
+          "event": "Avaliação: pad / 17412533",
+          "actor": "Usuário local",
+          "before": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-30T16:50:49.294Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17412533",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-08T18:57:00.786Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17412533",
+              "fingerprint": "fnv64-v1:70ff89466f053fe4"
+            },
+            "actor": "Usuário local"
+          }
+        },
+        {
+          "at": "2026-10-08T18:57:00.786Z",
+          "event": "Avaliação: pad / 17412530",
+          "actor": "Usuário local",
+          "before": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-30T16:50:49.294Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17412530",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-08T18:57:00.786Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17412530",
+              "fingerprint": "fnv64-v1:97ec02aeeac279c1"
+            },
+            "actor": "Usuário local"
+          }
+        },
+        {
+          "at": "2026-10-08T18:57:00.786Z",
+          "event": "Avaliação: pad / 17412532",
+          "actor": "Usuário local",
+          "before": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-30T16:50:49.294Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17412532",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-08T18:57:00.786Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17412532",
+              "fingerprint": "fnv64-v1:f5f31fff2cb65935"
+            },
+            "actor": "Usuário local"
+          }
+        },
+        {
+          "at": "2026-10-08T18:57:00.786Z",
+          "event": "Avaliação: pad / 17412521",
+          "actor": "Usuário local",
+          "before": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-30T16:50:49.294Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17412521",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-08T18:57:00.786Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17412521",
+              "fingerprint": "fnv64-v1:bc484804343d6912"
+            },
+            "actor": "Usuário local"
+          }
+        },
+        {
+          "at": "2026-10-08T18:57:00.786Z",
+          "event": "Avaliação: pad / 17412527",
+          "actor": "Usuário local",
+          "before": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-30T16:50:49.294Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17412527",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-08T18:57:00.786Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17412527",
+              "fingerprint": "fnv64-v1:f6dbe026ed829773"
+            },
+            "actor": "Usuário local"
+          }
+        },
+        {
+          "at": "2026-10-08T18:57:00.787Z",
+          "event": "Avaliação: pad / 17412526",
+          "actor": "Usuário local",
+          "before": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-30T16:50:49.294Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17412526",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-08T18:57:00.786Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17412526",
+              "fingerprint": "fnv64-v1:98e501c3ba9ca8ac"
+            },
+            "actor": "Usuário local"
+          }
+        },
+        {
+          "at": "2026-10-08T18:57:00.787Z",
+          "event": "Avaliação: pad / 17412528",
+          "actor": "Usuário local",
+          "before": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-30T16:50:49.294Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17412528",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-08T18:57:00.787Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17412528",
+              "fingerprint": "fnv64-v1:1c3d1a07cfff4af0"
+            },
+            "actor": "Usuário local"
+          }
+        },
+        {
+          "at": "2026-10-08T18:57:00.787Z",
+          "event": "Avaliação: pad / 17412531",
+          "actor": "Usuário local",
+          "before": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-30T16:50:49.294Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17412531",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-08T18:57:00.787Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17412531",
+              "fingerprint": "fnv64-v1:7bb4959b02914cb2"
+            },
+            "actor": "Usuário local"
+          }
+        },
+        {
+          "at": "2026-10-08T18:57:00.787Z",
+          "event": "Avaliação: pad / 17412535",
+          "actor": "Usuário local",
+          "before": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-30T16:50:49.294Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17412535",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-08T18:57:00.787Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17412535",
+              "fingerprint": "fnv64-v1:062627f982e13aa3"
+            },
+            "actor": "Usuário local"
+          }
+        },
+        {
+          "at": "2026-10-08T18:57:00.787Z",
+          "event": "Avaliação: pad / 17412545",
+          "actor": "Usuário local",
+          "before": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-30T16:50:49.294Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17412545",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-08T18:57:00.787Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17412545",
+              "fingerprint": "fnv64-v1:a4110cb41ca828e8"
+            },
+            "actor": "Usuário local"
+          }
+        },
+        {
+          "at": "2026-10-08T18:57:00.787Z",
+          "event": "Avaliação: pad / 17412548",
+          "actor": "Usuário local",
+          "before": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-30T16:50:49.293Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17412548",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-08T18:57:00.787Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17412548",
+              "fingerprint": "fnv64-v1:b3e6b87e28f15aff"
+            },
+            "actor": "Usuário local"
+          }
+        },
+        {
+          "at": "2026-10-08T18:57:00.787Z",
+          "event": "Avaliação: pad / 17412544",
+          "actor": "Usuário local",
+          "before": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-30T16:50:49.294Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17412544",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-08T18:57:00.787Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17412544",
+              "fingerprint": "fnv64-v1:98a461a7d7495e5e"
+            },
+            "actor": "Usuário local"
+          }
+        },
+        {
+          "at": "2026-10-08T18:57:00.787Z",
+          "event": "Avaliação: pad / 17412549",
+          "actor": "Usuário local",
+          "before": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-30T16:50:49.294Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17412549",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-08T18:57:00.787Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17412549",
+              "fingerprint": "fnv64-v1:7f7c0d614163fe6a"
+            },
+            "actor": "Usuário local"
+          }
+        },
+        {
+          "at": "2026-10-08T18:57:00.787Z",
+          "event": "Avaliação: pad / 17412547",
+          "actor": "Usuário local",
+          "before": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-30T16:50:49.294Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17412547",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-08T18:57:00.787Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17412547",
+              "fingerprint": "fnv64-v1:19c3e4176c3b48c0"
+            },
+            "actor": "Usuário local"
+          }
+        },
+        {
+          "at": "2026-10-08T18:57:00.787Z",
+          "event": "Avaliação: pad / 17412543",
+          "actor": "Usuário local",
+          "before": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-30T16:50:49.294Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17412543",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-08T18:57:00.787Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17412543",
+              "fingerprint": "fnv64-v1:431bb77bfb07c2e8"
+            },
+            "actor": "Usuário local"
+          }
+        },
+        {
+          "at": "2026-10-08T18:57:00.787Z",
+          "event": "Avaliação: pad / 17412546",
+          "actor": "Usuário local",
+          "before": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-30T16:50:49.294Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17412546",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-08T18:57:00.787Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17412546",
+              "fingerprint": "fnv64-v1:8b315b8ec4801801"
+            },
+            "actor": "Usuário local"
+          }
+        },
+        {
+          "at": "2026-10-08T18:57:00.787Z",
+          "event": "Avaliação: pad / 17412537",
+          "actor": "Usuário local",
+          "before": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-30T16:50:49.294Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17412537",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-08T18:57:00.787Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17412537",
+              "fingerprint": "fnv64-v1:fb862a07e24318df"
+            },
+            "actor": "Usuário local"
+          }
+        },
+        {
+          "at": "2026-10-08T18:57:00.787Z",
+          "event": "Avaliação: pad / 17412534",
+          "actor": "Usuário local",
+          "before": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-30T16:50:49.294Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17412534",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-08T18:57:00.787Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17412534",
+              "fingerprint": "fnv64-v1:a717f7b67a5ccec2"
+            },
+            "actor": "Usuário local"
+          }
+        },
+        {
+          "at": "2026-10-08T18:57:00.787Z",
+          "event": "Avaliação: pad / 17412536",
+          "actor": "Usuário local",
+          "before": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-30T16:50:49.294Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17412536",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-08T18:57:00.787Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17412536",
+              "fingerprint": "fnv64-v1:608e67e501b74dd9"
+            },
+            "actor": "Usuário local"
+          }
+        },
+        {
+          "at": "2026-10-08T18:57:00.787Z",
+          "event": "Avaliação: pad / 17412539",
+          "actor": "Usuário local",
+          "before": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-30T16:50:49.294Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17412539",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-08T18:57:00.787Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17412539",
+              "fingerprint": "fnv64-v1:dd8d63128518d041"
+            },
+            "actor": "Usuário local"
+          }
+        },
+        {
+          "at": "2026-10-08T18:57:00.787Z",
+          "event": "Avaliação: pad / 17412542",
+          "actor": "Usuário local",
+          "before": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-30T16:50:49.294Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17412542",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-08T18:57:00.787Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17412542",
+              "fingerprint": "fnv64-v1:8030f13c4acc66e1"
+            },
+            "actor": "Usuário local"
+          }
+        },
+        {
+          "at": "2026-10-08T18:57:00.787Z",
+          "event": "Avaliação: pad / 17412540",
+          "actor": "Usuário local",
+          "before": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-30T16:02:07.536Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17412540",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-08T18:57:00.787Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17412540",
+              "fingerprint": "fnv64-v1:c5e70efb80ad6642"
+            },
+            "actor": "Usuário local"
+          }
+        },
+        {
+          "at": "2026-10-08T18:57:00.787Z",
+          "event": "Avaliação: pad / 17412541",
+          "actor": "Usuário local",
+          "before": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-30T16:50:49.294Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17412541",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-08T18:57:00.787Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17412541",
+              "fingerprint": "fnv64-v1:73f017ed0592744d"
+            },
+            "actor": "Usuário local"
           }
         }
       ],
