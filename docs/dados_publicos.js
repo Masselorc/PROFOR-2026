@@ -1,9 +1,9 @@
-/** Snapshot integral de consulta PROFOR/ONASP 2026. Gerado em 2026-10-08T18:35:58.601Z.
+/** Snapshot integral de consulta PROFOR/ONASP 2026. Gerado em 2026-10-08T18:48:01.267Z.
  * Não editar manualmente. Use tools/build_public_docs.cjs. */
-window.PROFOR_PUBLIC_UPDATED_AT = "2026-10-08T18:35:58.601Z";
+window.PROFOR_PUBLIC_UPDATED_AT = "2026-10-08T18:48:01.267Z";
 window.PROFOR_PUBLIC_DATA = {
   "schemaVersion": 1,
-  "revision": 356,
+  "revision": 359,
   "proposals": [
     {
       "id": "2243618",
@@ -25516,18 +25516,18 @@ window.PROFOR_PUBLIC_DATA = {
             }
           },
           "4": {
-            "status": "diligencia",
-            "note": "Ausente Termo de Referência",
+            "status": "obs",
+            "note": "Cláusula suspensiva.",
             "document": "",
             "url": "",
-            "at": "2026-10-01T19:33:48.388Z",
+            "at": "2026-10-08T18:43:41.921Z",
             "attachments": [],
             "evidence": {
               "version": 1,
               "ref": "celebracao:4",
-              "fingerprint": null,
-              "legacy": true
-            }
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            },
+            "actor": "Usuário local"
           },
           "5": {
             "status": "diligencia",
@@ -31637,6 +31637,39 @@ window.PROFOR_PUBLIC_DATA = {
           },
           "after": {
             "at": "2026-10-08T12:43:51.889Z"
+          }
+        },
+        {
+          "at": "2026-10-08T18:43:41.921Z",
+          "event": "Avaliação: celebracao / 4",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "Ausente Termo de Referência",
+            "document": "",
+            "url": "",
+            "at": "2026-10-01T19:33:48.388Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:4",
+              "fingerprint": null,
+              "legacy": true
+            }
+          },
+          "after": {
+            "status": "obs",
+            "note": "Cláusula suspensiva.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-08T18:43:41.921Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:4",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            },
+            "actor": "Usuário local"
           }
         }
       ],
@@ -52925,11 +52958,11 @@ window.PROFOR_PUBLIC_DATA = {
             }
           },
           "4": {
-            "status": "diligencia",
-            "note": "Ausente o TR.",
+            "status": "obs",
+            "note": "Cláusula suspensiva.",
             "document": "",
             "url": "",
-            "at": "2026-10-06T14:33:28.543Z",
+            "at": "2026-10-08T18:44:29.616Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
@@ -56260,6 +56293,39 @@ window.PROFOR_PUBLIC_DATA = {
           "after": {
             "at": "2026-10-08T12:43:51.889Z"
           }
+        },
+        {
+          "at": "2026-10-08T18:44:29.616Z",
+          "event": "Avaliação: celebracao / 4",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "Ausente o TR.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-06T14:33:28.543Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:4",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          },
+          "after": {
+            "status": "obs",
+            "note": "Cláusula suspensiva.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-08T18:44:29.616Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:4",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
         }
       ],
       "textos": {
@@ -57151,11 +57217,11 @@ window.PROFOR_PUBLIC_DATA = {
             }
           },
           "4": {
-            "status": "diligencia",
-            "note": "Documento ausente.",
+            "status": "obs",
+            "note": "Clausula suspensiva",
             "document": "",
             "url": "",
-            "at": "2026-10-05T18:32:58.518Z",
+            "at": "2026-10-08T18:41:06.069Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
@@ -59555,6 +59621,39 @@ window.PROFOR_PUBLIC_DATA = {
           },
           "after": {
             "at": "2026-10-08T12:43:51.889Z"
+          }
+        },
+        {
+          "at": "2026-10-08T18:41:06.069Z",
+          "event": "Avaliação: celebracao / 4",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "Documento ausente.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T18:32:58.518Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:4",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          },
+          "after": {
+            "status": "obs",
+            "note": "Clausula suspensiva",
+            "document": "",
+            "url": "",
+            "at": "2026-10-08T18:41:06.069Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:4",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
           }
         }
       ],
