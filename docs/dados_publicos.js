@@ -1,9 +1,9 @@
-/** Snapshot integral de consulta PROFOR/ONASP 2026. Gerado em 2026-10-08T19:39:07.679Z.
+/** Snapshot integral de consulta PROFOR/ONASP 2026. Gerado em 2026-10-09T16:12:46.482Z.
  * Não editar manualmente. Use tools/build_public_docs.cjs. */
-window.PROFOR_PUBLIC_UPDATED_AT = "2026-10-08T19:39:07.679Z";
+window.PROFOR_PUBLIC_UPDATED_AT = "2026-10-09T16:12:46.482Z";
 window.PROFOR_PUBLIC_DATA = {
   "schemaVersion": 1,
-  "revision": 361,
+  "revision": 395,
   "proposals": [
     {
       "id": "2243618",
@@ -33753,12 +33753,18 @@ window.PROFOR_PUBLIC_DATA = {
         },
         "merito": {
           "destinacao": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-09T12:55:40.186Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:destinacao",
+              "fingerprint": "fnv64-v1:73ed9de326373397"
+            }
           },
           "capital": {
             "status": "na",
@@ -33768,12 +33774,18 @@ window.PROFOR_PUBLIC_DATA = {
             "at": null
           },
           "objetivos": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-09T12:56:49.362Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:objetivos",
+              "fingerprint": "fnv64-v1:f608b09c109a36cc"
+            }
           },
           "metas": {
             "status": "na",
@@ -33783,12 +33795,18 @@ window.PROFOR_PUBLIC_DATA = {
             "at": null
           },
           "capacidade": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-09T12:57:03.929Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:capacidade",
+              "fingerprint": "fnv64-v1:d14c403b3c6db50c"
+            }
           },
           "conteudo": {
             "status": "na",
@@ -33798,52 +33816,88 @@ window.PROFOR_PUBLIC_DATA = {
             "at": null
           },
           "objeto": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-09T12:53:22.393Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:objeto",
+              "fingerprint": "fnv64-v1:2f7ce824f33a2e8a"
+            }
           },
           "justificativa": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-09T12:54:23.492Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:justificativa",
+              "fingerprint": "fnv64-v1:40061f02fd210d7f"
+            }
           },
           "publicoAlvo": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-09T12:54:37.441Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:publicoAlvo",
+              "fingerprint": "fnv64-v1:ab3f2f484c896c24"
+            }
           },
           "problema": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-09T12:55:06.762Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:problema",
+              "fingerprint": "fnv64-v1:39e8b5fbe31998b9"
+            }
           },
           "resultados": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-09T12:55:25.951Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:resultados",
+              "fingerprint": "fnv64-v1:08a681686289bcd7"
+            }
           },
           "ouvidoriaInstituida": {
-            "status": "na",
+            "status": "no",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-09T13:05:39.770Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:ouvidoriaInstituida",
+              "fingerprint": "fnv64-v1:a27e8ca67caeb499"
+            }
           },
           "ouvidoriaAto": {
             "status": "na",
@@ -33867,22 +33921,34 @@ window.PROFOR_PUBLIC_DATA = {
             "at": null
           },
           "falaBRAdesao": {
-            "status": "na",
+            "status": "no",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-09T13:06:46.450Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:falaBRAdesao",
+              "fingerprint": "fnv64-v1:20325664b9ae9846"
+            }
           }
         },
         "celebracao": {
           "1": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-09T13:11:40.217Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:1",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
           },
           "2": {
             "status": "na",
@@ -33893,148 +33959,256 @@ window.PROFOR_PUBLIC_DATA = {
             "attachments": []
           },
           "3": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-09T13:08:50.652Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:3",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
           },
           "4": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-09T13:09:05.253Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:4",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
           },
           "5": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-09T13:09:30.164Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:5",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
           },
           "6": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "Falta documento",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-09T16:05:01.013Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:6",
+              "fingerprint": "fnv64-v1:7b35951bd17e260a"
+            }
           },
           "7": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "Falt QDD",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-09T16:05:38.337Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:7",
+              "fingerprint": "fnv64-v1:c9f92318f0662660"
+            }
           },
           "8": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "Falta o documento",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-09T16:06:45.159Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:8",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
           },
           "9": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "Falta o documento",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-09T16:06:45.161Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:9",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
           },
           "10": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "Falta o documento",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-09T16:06:45.161Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:10",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
           },
           "11": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-09T13:11:18.307Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:11",
+              "fingerprint": "fnv64-v1:d14c403b3c6db50c"
+            }
           },
           "12": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "Falta o documento",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-09T16:06:45.162Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:12",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
           },
           "13": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "Falta o documento",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-09T16:06:45.163Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:13",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
           },
           "14": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "Falta o documento",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-09T16:06:45.163Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:14",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
           },
           "15": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "Falta o documento",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-09T16:06:45.164Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:15",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
           },
           "16": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "Falta o documento",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-09T16:06:45.164Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:16",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
           },
           "17": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "Falta o documento",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-09T16:06:45.165Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:17",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
           },
           "18": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "Falta o documento",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-09T16:06:45.165Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:18",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
           },
           "19": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "Falta o documento",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-09T16:06:45.166Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:19",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
           },
           "1.1": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-09T13:11:57.832Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:1.1",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
           }
         },
         "pad": {
@@ -34164,16 +34338,237 @@ window.PROFOR_PUBLIC_DATA = {
           "automaticDeadline": true,
           "confirmed": false,
           "calendarNote": ""
+        },
+        {
+          "id": "d9ba024b-10c4-4d36-be7c-15162d5d67e3",
+          "ref": "celebracao:6",
+          "request": "Falta documento",
+          "science": "",
+          "category": "OUTRO",
+          "communication": "2026-10-09",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-09T16:05:01.013Z",
+          "base": "2026-10-19",
+          "due": "2026-10-19",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "5e158528-e975-4eec-a3b7-67a9eb036e30",
+          "ref": "celebracao:7",
+          "request": "Falt QDD",
+          "science": "",
+          "category": "OUTRO",
+          "communication": "2026-10-09",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-09T16:05:38.337Z",
+          "base": "2026-10-19",
+          "due": "2026-10-19",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "e86e5a42-bfb4-4ddd-88ab-cac714075021",
+          "ref": "celebracao:8",
+          "category": "OUTRO",
+          "request": "Falta o documento",
+          "communication": "2026-10-09",
+          "science": "",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-09T16:06:45.159Z",
+          "base": "2026-10-19",
+          "due": "2026-10-19",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "dfb1344e-55a4-4579-bc71-6bea8b9b780f",
+          "ref": "celebracao:9",
+          "category": "OUTRO",
+          "request": "Falta o documento",
+          "communication": "2026-10-09",
+          "science": "",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-09T16:06:45.161Z",
+          "base": "2026-10-19",
+          "due": "2026-10-19",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "17235814-3081-465a-b015-7b60ddebe5ab",
+          "ref": "celebracao:10",
+          "category": "OUTRO",
+          "request": "Falta o documento",
+          "communication": "2026-10-09",
+          "science": "",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-09T16:06:45.161Z",
+          "base": "2026-10-19",
+          "due": "2026-10-19",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "5b5596de-7b10-4022-a316-1f89c0fb18dc",
+          "ref": "celebracao:12",
+          "category": "OUTRO",
+          "request": "Falta o documento",
+          "communication": "2026-10-09",
+          "science": "",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-09T16:06:45.162Z",
+          "base": "2026-10-19",
+          "due": "2026-10-19",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "a3e877ad-1519-464b-9cd6-93ca0d9aff0e",
+          "ref": "celebracao:13",
+          "category": "OUTRO",
+          "request": "Falta o documento",
+          "communication": "2026-10-09",
+          "science": "",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-09T16:06:45.163Z",
+          "base": "2026-10-19",
+          "due": "2026-10-19",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "89e8f3ec-2f22-43e7-8453-b564c15ffbb8",
+          "ref": "celebracao:14",
+          "category": "OUTRO",
+          "request": "Falta o documento",
+          "communication": "2026-10-09",
+          "science": "",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-09T16:06:45.163Z",
+          "base": "2026-10-19",
+          "due": "2026-10-19",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "cd8f5c74-92d4-442a-a340-63ff92203ce7",
+          "ref": "celebracao:15",
+          "category": "OUTRO",
+          "request": "Falta o documento",
+          "communication": "2026-10-09",
+          "science": "",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-09T16:06:45.164Z",
+          "base": "2026-10-19",
+          "due": "2026-10-19",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "c8edb6db-4fa0-426b-94da-79a9bee62bbb",
+          "ref": "celebracao:16",
+          "category": "OUTRO",
+          "request": "Falta o documento",
+          "communication": "2026-10-09",
+          "science": "",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-09T16:06:45.165Z",
+          "base": "2026-10-19",
+          "due": "2026-10-19",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "4b61da8f-97a3-4b44-a21b-072bb55d59c2",
+          "ref": "celebracao:17",
+          "category": "OUTRO",
+          "request": "Falta o documento",
+          "communication": "2026-10-09",
+          "science": "",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-09T16:06:45.165Z",
+          "base": "2026-10-19",
+          "due": "2026-10-19",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "a4374108-131d-4c49-bc17-e093e670e0aa",
+          "ref": "celebracao:18",
+          "category": "OUTRO",
+          "request": "Falta o documento",
+          "communication": "2026-10-09",
+          "science": "",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-09T16:06:45.165Z",
+          "base": "2026-10-19",
+          "due": "2026-10-19",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
+        },
+        {
+          "id": "f56b3508-a048-4e73-aa96-3e90b0ee2030",
+          "ref": "celebracao:19",
+          "category": "OUTRO",
+          "request": "Falta o documento",
+          "communication": "2026-10-09",
+          "science": "",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-09T16:06:45.166Z",
+          "base": "2026-10-19",
+          "due": "2026-10-19",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": ""
         }
       ],
       "ouvidoria": {
-        "status": "na",
+        "status": "pendente",
         "signature": "",
         "url": "",
         "note": "",
         "clause": false
       },
-      "falaBR": "na",
+      "falaBR": "nao_previsto",
       "conclusion": null,
       "history": [
         {
@@ -35537,6 +35932,1138 @@ window.PROFOR_PUBLIC_DATA = {
           },
           "after": {
             "at": "2026-10-08T12:43:51.889Z"
+          }
+        },
+        {
+          "at": "2026-10-09T12:53:22.393Z",
+          "event": "Avaliação: merito / objeto",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-09T12:53:22.393Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:objeto",
+              "fingerprint": "fnv64-v1:2f7ce824f33a2e8a"
+            }
+          }
+        },
+        {
+          "at": "2026-10-09T12:54:23.492Z",
+          "event": "Avaliação: merito / justificativa",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-09T12:54:23.492Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:justificativa",
+              "fingerprint": "fnv64-v1:40061f02fd210d7f"
+            }
+          }
+        },
+        {
+          "at": "2026-10-09T12:54:37.441Z",
+          "event": "Avaliação: merito / publicoAlvo",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-09T12:54:37.441Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:publicoAlvo",
+              "fingerprint": "fnv64-v1:ab3f2f484c896c24"
+            }
+          }
+        },
+        {
+          "at": "2026-10-09T12:55:06.762Z",
+          "event": "Avaliação: merito / problema",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-09T12:55:06.762Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:problema",
+              "fingerprint": "fnv64-v1:39e8b5fbe31998b9"
+            }
+          }
+        },
+        {
+          "at": "2026-10-09T12:55:25.951Z",
+          "event": "Avaliação: merito / resultados",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-09T12:55:25.951Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:resultados",
+              "fingerprint": "fnv64-v1:08a681686289bcd7"
+            }
+          }
+        },
+        {
+          "at": "2026-10-09T12:55:40.186Z",
+          "event": "Avaliação: merito / destinacao",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-09T12:55:40.186Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:destinacao",
+              "fingerprint": "fnv64-v1:73ed9de326373397"
+            }
+          }
+        },
+        {
+          "at": "2026-10-09T12:56:49.362Z",
+          "event": "Avaliação: merito / objetivos",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-09T12:56:49.362Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:objetivos",
+              "fingerprint": "fnv64-v1:f608b09c109a36cc"
+            }
+          }
+        },
+        {
+          "at": "2026-10-09T12:57:03.930Z",
+          "event": "Avaliação: merito / capacidade",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-09T12:57:03.929Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:capacidade",
+              "fingerprint": "fnv64-v1:d14c403b3c6db50c"
+            }
+          }
+        },
+        {
+          "at": "2026-10-09T13:05:39.771Z",
+          "event": "Informações institucionais atualizadas",
+          "actor": "Usuário local",
+          "before": {
+            "ouvidoria": {
+              "status": "na",
+              "signature": "",
+              "url": "",
+              "note": "",
+              "clause": false
+            },
+            "falaBR": "na"
+          },
+          "after": {
+            "ouvidoria": {
+              "status": "pendente",
+              "signature": "",
+              "url": "",
+              "note": "",
+              "clause": false
+            },
+            "falaBR": "na"
+          }
+        },
+        {
+          "at": "2026-10-09T13:05:39.771Z",
+          "event": "Avaliação: merito / ouvidoriaInstituida",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "no",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-09T13:05:39.770Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:ouvidoriaInstituida",
+              "fingerprint": "fnv64-v1:a27e8ca67caeb499"
+            }
+          }
+        },
+        {
+          "at": "2026-10-09T13:06:46.450Z",
+          "event": "Informações institucionais atualizadas",
+          "actor": "Usuário local",
+          "before": {
+            "ouvidoria": {
+              "status": "pendente",
+              "signature": "",
+              "url": "",
+              "note": "",
+              "clause": false
+            },
+            "falaBR": "na"
+          },
+          "after": {
+            "ouvidoria": {
+              "status": "pendente",
+              "signature": "",
+              "url": "",
+              "note": "",
+              "clause": false
+            },
+            "falaBR": "nao_previsto"
+          }
+        },
+        {
+          "at": "2026-10-09T13:06:46.450Z",
+          "event": "Avaliação: merito / falaBRAdesao",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "no",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-09T13:06:46.450Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:falaBRAdesao",
+              "fingerprint": "fnv64-v1:20325664b9ae9846"
+            }
+          }
+        },
+        {
+          "at": "2026-10-09T13:08:50.652Z",
+          "event": "Avaliação: celebracao / 3",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-09T13:08:50.652Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:3",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-09T13:09:05.253Z",
+          "event": "Avaliação: celebracao / 4",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-09T13:09:05.253Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:4",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-09T13:09:30.164Z",
+          "event": "Avaliação: celebracao / 5",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-09T13:09:30.164Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:5",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-09T13:11:18.307Z",
+          "event": "Avaliação: celebracao / 11",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-09T13:11:18.307Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:11",
+              "fingerprint": "fnv64-v1:d14c403b3c6db50c"
+            }
+          }
+        },
+        {
+          "at": "2026-10-09T13:11:40.217Z",
+          "event": "Avaliação: celebracao / 1",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-09T13:11:40.217Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:1",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-09T13:11:57.832Z",
+          "event": "Avaliação: celebracao / 1.1",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-09T13:11:57.832Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:1.1",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-09T16:05:01.013Z",
+          "event": "Avaliação: celebracao / 6",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Falta documento",
+            "document": "",
+            "url": "",
+            "at": "2026-10-09T16:05:01.013Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:6",
+              "fingerprint": "fnv64-v1:7b35951bd17e260a"
+            }
+          }
+        },
+        {
+          "at": "2026-10-09T16:05:01.015Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "d9ba024b-10c4-4d36-be7c-15162d5d67e3",
+            "ref": "celebracao:6",
+            "request": "Falta documento",
+            "science": "",
+            "category": "OUTRO",
+            "communication": "2026-10-09",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-09T16:05:01.013Z",
+            "base": "2026-10-19",
+            "due": "2026-10-19",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-09T16:05:38.337Z",
+          "event": "Avaliação: celebracao / 7",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Falt QDD",
+            "document": "",
+            "url": "",
+            "at": "2026-10-09T16:05:38.337Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:7",
+              "fingerprint": "fnv64-v1:c9f92318f0662660"
+            }
+          }
+        },
+        {
+          "at": "2026-10-09T16:05:38.338Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "5e158528-e975-4eec-a3b7-67a9eb036e30",
+            "ref": "celebracao:7",
+            "request": "Falt QDD",
+            "science": "",
+            "category": "OUTRO",
+            "communication": "2026-10-09",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-09T16:05:38.337Z",
+            "base": "2026-10-19",
+            "due": "2026-10-19",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-09T16:06:45.159Z",
+          "event": "Avaliação: celebracao / 8",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Falta o documento",
+            "document": "",
+            "url": "",
+            "at": "2026-10-09T16:06:45.159Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:8",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-09T16:06:45.160Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "e86e5a42-bfb4-4ddd-88ab-cac714075021",
+            "ref": "celebracao:8",
+            "category": "OUTRO",
+            "request": "Falta o documento",
+            "communication": "2026-10-09",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-09T16:06:45.159Z",
+            "base": "2026-10-19",
+            "due": "2026-10-19",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-09T16:06:45.161Z",
+          "event": "Avaliação: celebracao / 9",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Falta o documento",
+            "document": "",
+            "url": "",
+            "at": "2026-10-09T16:06:45.161Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:9",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-09T16:06:45.161Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "dfb1344e-55a4-4579-bc71-6bea8b9b780f",
+            "ref": "celebracao:9",
+            "category": "OUTRO",
+            "request": "Falta o documento",
+            "communication": "2026-10-09",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-09T16:06:45.161Z",
+            "base": "2026-10-19",
+            "due": "2026-10-19",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-09T16:06:45.161Z",
+          "event": "Avaliação: celebracao / 10",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Falta o documento",
+            "document": "",
+            "url": "",
+            "at": "2026-10-09T16:06:45.161Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:10",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-09T16:06:45.162Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "17235814-3081-465a-b015-7b60ddebe5ab",
+            "ref": "celebracao:10",
+            "category": "OUTRO",
+            "request": "Falta o documento",
+            "communication": "2026-10-09",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-09T16:06:45.161Z",
+            "base": "2026-10-19",
+            "due": "2026-10-19",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-09T16:06:45.162Z",
+          "event": "Avaliação: celebracao / 12",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Falta o documento",
+            "document": "",
+            "url": "",
+            "at": "2026-10-09T16:06:45.162Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:12",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-09T16:06:45.163Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "5b5596de-7b10-4022-a316-1f89c0fb18dc",
+            "ref": "celebracao:12",
+            "category": "OUTRO",
+            "request": "Falta o documento",
+            "communication": "2026-10-09",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-09T16:06:45.162Z",
+            "base": "2026-10-19",
+            "due": "2026-10-19",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-09T16:06:45.163Z",
+          "event": "Avaliação: celebracao / 13",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Falta o documento",
+            "document": "",
+            "url": "",
+            "at": "2026-10-09T16:06:45.163Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:13",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-09T16:06:45.163Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "a3e877ad-1519-464b-9cd6-93ca0d9aff0e",
+            "ref": "celebracao:13",
+            "category": "OUTRO",
+            "request": "Falta o documento",
+            "communication": "2026-10-09",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-09T16:06:45.163Z",
+            "base": "2026-10-19",
+            "due": "2026-10-19",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-09T16:06:45.163Z",
+          "event": "Avaliação: celebracao / 14",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Falta o documento",
+            "document": "",
+            "url": "",
+            "at": "2026-10-09T16:06:45.163Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:14",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-09T16:06:45.164Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "89e8f3ec-2f22-43e7-8453-b564c15ffbb8",
+            "ref": "celebracao:14",
+            "category": "OUTRO",
+            "request": "Falta o documento",
+            "communication": "2026-10-09",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-09T16:06:45.163Z",
+            "base": "2026-10-19",
+            "due": "2026-10-19",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-09T16:06:45.164Z",
+          "event": "Avaliação: celebracao / 15",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Falta o documento",
+            "document": "",
+            "url": "",
+            "at": "2026-10-09T16:06:45.164Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:15",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-09T16:06:45.164Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "cd8f5c74-92d4-442a-a340-63ff92203ce7",
+            "ref": "celebracao:15",
+            "category": "OUTRO",
+            "request": "Falta o documento",
+            "communication": "2026-10-09",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-09T16:06:45.164Z",
+            "base": "2026-10-19",
+            "due": "2026-10-19",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-09T16:06:45.165Z",
+          "event": "Avaliação: celebracao / 16",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Falta o documento",
+            "document": "",
+            "url": "",
+            "at": "2026-10-09T16:06:45.164Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:16",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-09T16:06:45.165Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "c8edb6db-4fa0-426b-94da-79a9bee62bbb",
+            "ref": "celebracao:16",
+            "category": "OUTRO",
+            "request": "Falta o documento",
+            "communication": "2026-10-09",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-09T16:06:45.165Z",
+            "base": "2026-10-19",
+            "due": "2026-10-19",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-09T16:06:45.165Z",
+          "event": "Avaliação: celebracao / 17",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Falta o documento",
+            "document": "",
+            "url": "",
+            "at": "2026-10-09T16:06:45.165Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:17",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-09T16:06:45.165Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "4b61da8f-97a3-4b44-a21b-072bb55d59c2",
+            "ref": "celebracao:17",
+            "category": "OUTRO",
+            "request": "Falta o documento",
+            "communication": "2026-10-09",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-09T16:06:45.165Z",
+            "base": "2026-10-19",
+            "due": "2026-10-19",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-09T16:06:45.165Z",
+          "event": "Avaliação: celebracao / 18",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Falta o documento",
+            "document": "",
+            "url": "",
+            "at": "2026-10-09T16:06:45.165Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:18",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-09T16:06:45.166Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "a4374108-131d-4c49-bc17-e093e670e0aa",
+            "ref": "celebracao:18",
+            "category": "OUTRO",
+            "request": "Falta o documento",
+            "communication": "2026-10-09",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-09T16:06:45.165Z",
+            "base": "2026-10-19",
+            "due": "2026-10-19",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-09T16:06:45.166Z",
+          "event": "Avaliação: celebracao / 19",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Falta o documento",
+            "document": "",
+            "url": "",
+            "at": "2026-10-09T16:06:45.166Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:19",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-09T16:06:45.166Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "f56b3508-a048-4e73-aa96-3e90b0ee2030",
+            "ref": "celebracao:19",
+            "category": "OUTRO",
+            "request": "Falta o documento",
+            "communication": "2026-10-09",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-09T16:06:45.166Z",
+            "base": "2026-10-19",
+            "due": "2026-10-19",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
           }
         }
       ],
@@ -43664,12 +45191,18 @@ window.PROFOR_PUBLIC_DATA = {
         },
         "merito": {
           "destinacao": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-09T16:07:23.683Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:destinacao",
+              "fingerprint": "fnv64-v1:792a6648092fc220"
+            }
           },
           "capital": {
             "status": "na",
@@ -43679,12 +45212,18 @@ window.PROFOR_PUBLIC_DATA = {
             "at": null
           },
           "objetivos": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-09T16:07:41.500Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:objetivos",
+              "fingerprint": "fnv64-v1:13cee601b97c8694"
+            }
           },
           "metas": {
             "status": "na",
@@ -43694,12 +45233,18 @@ window.PROFOR_PUBLIC_DATA = {
             "at": null
           },
           "capacidade": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-09T16:07:50.524Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:capacidade",
+              "fingerprint": "fnv64-v1:e948683787eebb55"
+            }
           },
           "conteudo": {
             "status": "na",
@@ -43709,52 +45254,88 @@ window.PROFOR_PUBLIC_DATA = {
             "at": null
           },
           "objeto": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-09T14:56:44.626Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:objeto",
+              "fingerprint": "fnv64-v1:e0555f84e710ad66"
+            }
           },
           "justificativa": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-09T14:57:07.689Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:justificativa",
+              "fingerprint": "fnv64-v1:88e59fdd60d4537f"
+            }
           },
           "publicoAlvo": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-09T14:57:47.708Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:publicoAlvo",
+              "fingerprint": "fnv64-v1:f2856b2fb2f23891"
+            }
           },
           "problema": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-09T14:58:11.194Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:problema",
+              "fingerprint": "fnv64-v1:ea9c9c23d0d5d26d"
+            }
           },
           "resultados": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-09T14:58:40.948Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:resultados",
+              "fingerprint": "fnv64-v1:24820529d93c0423"
+            }
           },
           "ouvidoriaInstituida": {
-            "status": "na",
+            "status": "no",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-09T16:09:41.301Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:ouvidoriaInstituida",
+              "fingerprint": "fnv64-v1:a27e8ca67caeb499"
+            }
           },
           "ouvidoriaAto": {
             "status": "na",
@@ -43778,22 +45359,34 @@ window.PROFOR_PUBLIC_DATA = {
             "at": null
           },
           "falaBRAdesao": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-09T16:08:11.366Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:falaBRAdesao",
+              "fingerprint": "fnv64-v1:004c4d5a1ab27921"
+            }
           }
         },
         "celebracao": {
           "1": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-09T16:10:06.518Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:1",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
           },
           "2": {
             "status": "na",
@@ -43804,148 +45397,256 @@ window.PROFOR_PUBLIC_DATA = {
             "attachments": []
           },
           "3": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-09T16:08:36.006Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:3",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
           },
           "4": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-09T16:08:36.007Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:4",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
           },
           "5": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-09T16:08:36.007Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:5",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
           },
           "6": {
-            "status": "na",
-            "note": "",
+            "status": "diligencia",
+            "note": "Colocar na aba dados e anexar QDD",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-09T16:09:28.164Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:6",
+              "fingerprint": "fnv64-v1:210b8f5921a8a449"
+            }
           },
           "7": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-09T16:08:36.007Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:7",
+              "fingerprint": "fnv64-v1:961ad74f30a8ed16"
+            }
           },
           "8": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-09T16:10:06.518Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:8",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
           },
           "9": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-09T16:10:06.518Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:9",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
           },
           "10": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-09T16:10:06.518Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:10",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
           },
           "11": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-09T16:08:36.007Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:11",
+              "fingerprint": "fnv64-v1:e948683787eebb55"
+            }
           },
           "12": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-09T16:10:06.518Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:12",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
           },
           "13": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-09T16:10:06.518Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:13",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
           },
           "14": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-09T16:10:06.518Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:14",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
           },
           "15": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-09T16:10:06.518Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:15",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
           },
           "16": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-09T16:10:06.518Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:16",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
           },
           "17": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-09T16:10:06.518Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:17",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
           },
           "18": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-09T16:10:06.518Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:18",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
           },
           "19": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-09T16:10:06.518Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:19",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
           },
           "1.1": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-09T16:10:06.518Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:1.1",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
           }
         },
         "pad": {
@@ -44013,16 +45714,34 @@ window.PROFOR_PUBLIC_DATA = {
           "automaticDeadline": true,
           "confirmed": false,
           "calendarNote": ""
+        },
+        {
+          "id": "668ef957-9b28-4b73-8d7d-46dd30ed20f2",
+          "ref": "celebracao:6",
+          "request": "Colocar na aba dados e anexar QDD",
+          "science": "",
+          "category": "OUTRO",
+          "communication": "2026-10-09",
+          "response": "",
+          "status": "aberta",
+          "note": "",
+          "at": "2026-10-09T16:09:28.165Z",
+          "base": "2026-10-19",
+          "due": "2026-10-19",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": "",
+          "scope": "review"
         }
       ],
       "ouvidoria": {
-        "status": "na",
+        "status": "pendente",
         "signature": "",
         "url": "",
         "note": "",
         "clause": false
       },
-      "falaBR": "na",
+      "falaBR": "aderido",
       "conclusion": null,
       "history": [
         {
@@ -44399,6 +46118,1066 @@ window.PROFOR_PUBLIC_DATA = {
           },
           "after": {
             "at": "2026-10-08T12:43:51.889Z"
+          }
+        },
+        {
+          "at": "2026-10-09T14:56:44.626Z",
+          "event": "Avaliação: merito / objeto",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-09T14:56:44.626Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:objeto",
+              "fingerprint": "fnv64-v1:e0555f84e710ad66"
+            }
+          }
+        },
+        {
+          "at": "2026-10-09T14:57:07.689Z",
+          "event": "Avaliação: merito / justificativa",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-09T14:57:07.689Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:justificativa",
+              "fingerprint": "fnv64-v1:88e59fdd60d4537f"
+            }
+          }
+        },
+        {
+          "at": "2026-10-09T14:57:47.708Z",
+          "event": "Avaliação: merito / publicoAlvo",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-09T14:57:47.708Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:publicoAlvo",
+              "fingerprint": "fnv64-v1:f2856b2fb2f23891"
+            }
+          }
+        },
+        {
+          "at": "2026-10-09T14:58:11.194Z",
+          "event": "Avaliação: merito / problema",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-09T14:58:11.194Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:problema",
+              "fingerprint": "fnv64-v1:ea9c9c23d0d5d26d"
+            }
+          }
+        },
+        {
+          "at": "2026-10-09T14:58:40.949Z",
+          "event": "Avaliação: merito / resultados",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-09T14:58:40.948Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:resultados",
+              "fingerprint": "fnv64-v1:24820529d93c0423"
+            }
+          }
+        },
+        {
+          "at": "2026-10-09T16:07:23.683Z",
+          "event": "Avaliação: merito / destinacao",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-09T16:07:23.683Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:destinacao",
+              "fingerprint": "fnv64-v1:792a6648092fc220"
+            }
+          }
+        },
+        {
+          "at": "2026-10-09T16:07:41.500Z",
+          "event": "Avaliação: merito / objetivos",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-09T16:07:41.500Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:objetivos",
+              "fingerprint": "fnv64-v1:13cee601b97c8694"
+            }
+          }
+        },
+        {
+          "at": "2026-10-09T16:07:50.524Z",
+          "event": "Avaliação: merito / capacidade",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-09T16:07:50.524Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:capacidade",
+              "fingerprint": "fnv64-v1:e948683787eebb55"
+            }
+          }
+        },
+        {
+          "at": "2026-10-09T16:08:00.467Z",
+          "event": "Informações institucionais atualizadas",
+          "actor": "Usuário local",
+          "before": {
+            "ouvidoria": {
+              "status": "na",
+              "signature": "",
+              "url": "",
+              "note": "",
+              "clause": false
+            },
+            "falaBR": "na"
+          },
+          "after": {
+            "ouvidoria": {
+              "status": "instituida",
+              "signature": "",
+              "url": "",
+              "note": "",
+              "clause": false
+            },
+            "falaBR": "na"
+          }
+        },
+        {
+          "at": "2026-10-09T16:08:00.467Z",
+          "event": "Avaliação: merito / ouvidoriaInstituida",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-09T16:08:00.467Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:ouvidoriaInstituida",
+              "fingerprint": "fnv64-v1:1335379bb2cd68e8"
+            }
+          }
+        },
+        {
+          "at": "2026-10-09T16:08:11.366Z",
+          "event": "Informações institucionais atualizadas",
+          "actor": "Usuário local",
+          "before": {
+            "ouvidoria": {
+              "status": "instituida",
+              "signature": "",
+              "url": "",
+              "note": "",
+              "clause": false
+            },
+            "falaBR": "na"
+          },
+          "after": {
+            "ouvidoria": {
+              "status": "instituida",
+              "signature": "",
+              "url": "",
+              "note": "",
+              "clause": false
+            },
+            "falaBR": "aderido"
+          }
+        },
+        {
+          "at": "2026-10-09T16:08:11.366Z",
+          "event": "Avaliação: merito / falaBRAdesao",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-09T16:08:11.366Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:falaBRAdesao",
+              "fingerprint": "fnv64-v1:004c4d5a1ab27921"
+            }
+          }
+        },
+        {
+          "at": "2026-10-09T16:08:36.006Z",
+          "event": "Avaliação: celebracao / 3",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-09T16:08:36.006Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:3",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-09T16:08:36.007Z",
+          "event": "Avaliação: celebracao / 4",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-09T16:08:36.007Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:4",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-09T16:08:36.007Z",
+          "event": "Avaliação: celebracao / 5",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-09T16:08:36.007Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:5",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-09T16:08:36.007Z",
+          "event": "Avaliação: celebracao / 6",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-09T16:08:36.007Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:6",
+              "fingerprint": "fnv64-v1:210b8f5921a8a449"
+            }
+          }
+        },
+        {
+          "at": "2026-10-09T16:08:36.007Z",
+          "event": "Avaliação: celebracao / 7",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-09T16:08:36.007Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:7",
+              "fingerprint": "fnv64-v1:961ad74f30a8ed16"
+            }
+          }
+        },
+        {
+          "at": "2026-10-09T16:08:36.007Z",
+          "event": "Avaliação: celebracao / 11",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-09T16:08:36.007Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:11",
+              "fingerprint": "fnv64-v1:e948683787eebb55"
+            }
+          }
+        },
+        {
+          "at": "2026-10-09T16:09:07.542Z",
+          "event": "Avaliação: celebracao / 6",
+          "actor": "Usuário local",
+          "before": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-09T16:08:36.007Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:6",
+              "fingerprint": "fnv64-v1:210b8f5921a8a449"
+            }
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Colocar na aba dados",
+            "document": "",
+            "url": "",
+            "at": "2026-10-09T16:09:07.542Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:6",
+              "fingerprint": "fnv64-v1:210b8f5921a8a449"
+            }
+          }
+        },
+        {
+          "at": "2026-10-09T16:09:07.543Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "668ef957-9b28-4b73-8d7d-46dd30ed20f2",
+            "ref": "celebracao:6",
+            "request": "Colocar na aba dados",
+            "science": "",
+            "category": "OUTRO",
+            "communication": "2026-10-09",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-09T16:09:07.542Z",
+            "base": "2026-10-19",
+            "due": "2026-10-19",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-09T16:09:28.164Z",
+          "event": "Avaliação: celebracao / 6",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "Colocar na aba dados",
+            "document": "",
+            "url": "",
+            "at": "2026-10-09T16:09:07.542Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:6",
+              "fingerprint": "fnv64-v1:210b8f5921a8a449"
+            }
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Colocar na aba dados e anexar QDD",
+            "document": "",
+            "url": "",
+            "at": "2026-10-09T16:09:28.164Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:6",
+              "fingerprint": "fnv64-v1:210b8f5921a8a449"
+            }
+          }
+        },
+        {
+          "at": "2026-10-09T16:09:28.165Z",
+          "event": "Diligência atualizada",
+          "actor": "Usuário local",
+          "before": {
+            "id": "668ef957-9b28-4b73-8d7d-46dd30ed20f2",
+            "ref": "celebracao:6",
+            "request": "Colocar na aba dados",
+            "science": "",
+            "category": "OUTRO",
+            "communication": "2026-10-09",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-09T16:09:07.542Z",
+            "base": "2026-10-19",
+            "due": "2026-10-19",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          },
+          "after": {
+            "id": "668ef957-9b28-4b73-8d7d-46dd30ed20f2",
+            "ref": "celebracao:6",
+            "request": "Colocar na aba dados e anexar QDD",
+            "science": "",
+            "category": "OUTRO",
+            "communication": "2026-10-09",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-09T16:09:28.165Z",
+            "base": "2026-10-19",
+            "due": "2026-10-19",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": "",
+            "scope": "review"
+          }
+        },
+        {
+          "at": "2026-10-09T16:09:41.301Z",
+          "event": "Informações institucionais atualizadas",
+          "actor": "Usuário local",
+          "before": {
+            "ouvidoria": {
+              "status": "instituida",
+              "signature": "",
+              "url": "",
+              "note": "",
+              "clause": false
+            },
+            "falaBR": "aderido"
+          },
+          "after": {
+            "ouvidoria": {
+              "status": "pendente",
+              "signature": "",
+              "url": "",
+              "note": "",
+              "clause": false
+            },
+            "falaBR": "aderido"
+          }
+        },
+        {
+          "at": "2026-10-09T16:09:41.301Z",
+          "event": "Reanálise: merito:ouvidoriaInstituida",
+          "actor": "Usuário local",
+          "before": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-09T16:08:00.467Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:ouvidoriaInstituida",
+              "fingerprint": "fnv64-v1:1335379bb2cd68e8"
+            }
+          },
+          "after": {
+            "status": "reanalise",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-09T16:08:00.467Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:ouvidoriaInstituida",
+              "fingerprint": "fnv64-v1:1335379bb2cd68e8"
+            },
+            "reanalysis": {
+              "at": "2026-10-09T16:09:41.301Z",
+              "fields": [
+                "ouvidoria"
+              ],
+              "reason": "Evidência alterada; decisão anterior preservada no histórico."
+            }
+          }
+        },
+        {
+          "at": "2026-10-09T16:09:41.301Z",
+          "event": "Avaliação: merito / ouvidoriaInstituida",
+          "actor": "Usuário local",
+          "before": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-09T16:08:00.467Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:ouvidoriaInstituida",
+              "fingerprint": "fnv64-v1:1335379bb2cd68e8"
+            }
+          },
+          "after": {
+            "status": "no",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-09T16:09:41.301Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:ouvidoriaInstituida",
+              "fingerprint": "fnv64-v1:a27e8ca67caeb499"
+            }
+          }
+        },
+        {
+          "at": "2026-10-09T16:10:06.518Z",
+          "event": "Avaliação: celebracao / 1",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-09T16:10:06.518Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:1",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-09T16:10:06.518Z",
+          "event": "Avaliação: celebracao / 1.1",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-09T16:10:06.518Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:1.1",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-09T16:10:06.518Z",
+          "event": "Avaliação: celebracao / 8",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-09T16:10:06.518Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:8",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-09T16:10:06.518Z",
+          "event": "Avaliação: celebracao / 9",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-09T16:10:06.518Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:9",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-09T16:10:06.518Z",
+          "event": "Avaliação: celebracao / 10",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-09T16:10:06.518Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:10",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-09T16:10:06.518Z",
+          "event": "Avaliação: celebracao / 12",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-09T16:10:06.518Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:12",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-09T16:10:06.518Z",
+          "event": "Avaliação: celebracao / 13",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-09T16:10:06.518Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:13",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-09T16:10:06.518Z",
+          "event": "Avaliação: celebracao / 14",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-09T16:10:06.518Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:14",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-09T16:10:06.518Z",
+          "event": "Avaliação: celebracao / 15",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-09T16:10:06.518Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:15",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-09T16:10:06.518Z",
+          "event": "Avaliação: celebracao / 16",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-09T16:10:06.518Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:16",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-09T16:10:06.518Z",
+          "event": "Avaliação: celebracao / 17",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-09T16:10:06.518Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:17",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-09T16:10:06.518Z",
+          "event": "Avaliação: celebracao / 18",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-09T16:10:06.518Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:18",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-09T16:10:06.518Z",
+          "event": "Avaliação: celebracao / 19",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-09T16:10:06.518Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:19",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
           }
         }
       ],
