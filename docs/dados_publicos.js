@@ -1,9 +1,9 @@
-/** Snapshot integral de consulta PROFOR/ONASP 2026. Gerado em 2026-10-09T16:12:46.482Z.
+/** Snapshot integral de consulta PROFOR/ONASP 2026. Gerado em 2026-10-13T13:17:28.772Z.
  * Não editar manualmente. Use tools/build_public_docs.cjs. */
-window.PROFOR_PUBLIC_UPDATED_AT = "2026-10-09T16:12:46.482Z";
+window.PROFOR_PUBLIC_UPDATED_AT = "2026-10-13T13:17:28.772Z";
 window.PROFOR_PUBLIC_DATA = {
   "schemaVersion": 1,
-  "revision": 395,
+  "revision": 397,
   "proposals": [
     {
       "id": "2243618",
@@ -589,13 +589,35 @@ window.PROFOR_PUBLIC_DATA = {
           "after": {
             "at": "2026-10-08T12:43:51.889Z"
           }
+        },
+        {
+          "at": "2026-10-13T12:40:51.229Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Usuário local",
+          "before": {
+            "at": "2026-10-08T12:43:51.889Z"
+          },
+          "after": {
+            "at": "2026-10-13T12:40:51.229Z"
+          }
+        },
+        {
+          "at": "2026-10-13T13:11:44.459Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Usuário local",
+          "before": {
+            "at": "2026-10-13T12:40:51.229Z"
+          },
+          "after": {
+            "at": "2026-10-13T13:11:44.459Z"
+          }
         }
       ],
       "isDeleted": true,
       "deletedAt": "2026-09-17T10:49:40.018Z",
       "deletedBy": "Usuário local",
       "textos": {
-        "at": "2026-10-08T12:43:51.889Z",
+        "at": "2026-10-13T13:11:44.459Z",
         "caracterizacao": "Integração de esforços entre o Ministério da Justiça/SENAPPEN e a SEAP/PE para estruturar a Ouvidoria de Serviços Penais. A cooperação atende às diretrizes do PROFOR/ONASP e do Plano Pena Justa, fortalecendo a governança penitenciária, a fiscalização institucional, a proteção dos direitos humanos e o acesso à justiça no âmbito da execução penal em Pernambuco.",
         "publicoAlvo": "Pessoas privadas de liberdade, seus familiares, operadores do direito, órgãos de controle, servidores do sistema penitenciário e a sociedade civil usuária dos serviços da Ouvidoria da SEAP/PE",
         "problema": "Déficit de infraestrutura física, mobiliária e tecnológica na Ouvidoria da SEAP/PE, que limita o acolhimento presencial, compromete a celeridade e o sigilo no fluxo de manifestações e restringe a mobilidade técnica para a realização de inspeções nas unidades prisionais.",
@@ -608,7 +630,7 @@ window.PROFOR_PUBLIC_DATA = {
         "version": 1,
         "status": "complete",
         "source": "siconv_plano_aplicacao_detalhado.zip",
-        "at": "2026-10-08T12:40:10.474Z",
+        "at": "2026-10-13T12:37:59.673Z",
         "received": 0,
         "accepted": 0,
         "rejected": 0,
@@ -7609,10 +7631,32 @@ window.PROFOR_PUBLIC_DATA = {
               "fingerprint": "fnv64-v1:39f37164455f257e"
             }
           }
+        },
+        {
+          "at": "2026-10-13T12:40:51.229Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Usuário local",
+          "before": {
+            "at": "2026-10-08T12:43:51.889Z"
+          },
+          "after": {
+            "at": "2026-10-13T12:40:51.229Z"
+          }
+        },
+        {
+          "at": "2026-10-13T13:11:44.459Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Usuário local",
+          "before": {
+            "at": "2026-10-13T12:40:51.229Z"
+          },
+          "after": {
+            "at": "2026-10-13T13:11:44.459Z"
+          }
         }
       ],
       "textos": {
-        "at": "2026-10-08T12:43:51.889Z",
+        "at": "2026-10-13T13:11:44.459Z",
         "caracterizacao": "Aquisição de bens permanentes destinados ao aparelhamento e ao fortalecimento da Ouvidoria de Serviços Penais do Estado do Rio Grande do Sul, a ser formalmente instituída nos termos do Edital nº 37/2026, visando à qualificação de sua capacidade de atendimento, gestão de manifestações e atuação institucional.",
         "publicoAlvo": "Pessoas privadas de liberdade, familiares, servidores do sistema penal e demais cidadãos que utilizam os serviços da Ouvidoria de Serviços Penais.",
         "problema": "Ausência de estrutura material específica e adequada para o funcionamento da Ouvidoria de Serviços Penais do Estado do Rio Grande do Sul, cuja instituição formal será promovida nos termos do Edital nº 37/2026. A insuficiência de equipamentos, mobiliário, recursos tecnológicos e meios de deslocamento limita a implantação da unidade e a capacidade de atendimento, acompanhamento e tratamento das manifestações relacionadas aos serviços penais.",
@@ -7625,7 +7669,7 @@ window.PROFOR_PUBLIC_DATA = {
         "version": 1,
         "status": "complete",
         "source": "siconv_plano_aplicacao_detalhado.zip",
-        "at": "2026-10-08T12:40:10.474Z",
+        "at": "2026-10-13T12:37:59.673Z",
         "received": 14,
         "accepted": 14,
         "rejected": 0,
@@ -7643,7 +7687,7 @@ window.PROFOR_PUBLIC_DATA = {
         "proponente": "SECRETARIA DE ESTADO DA JUSTICA E DE DEFESA DO CONSUMIDOR - SEJUC",
         "orgao": "",
         "objeto": "Fortalecimento e aparelhamento da Ouvidoria de Serviços Penais do Estado de Sergipe, mediante a aquisição de mobiliários, equipamentos tecnológicos e outros bens permanentes de capital necessários à melhoria de sua estrutura física e operacional, com vistas ao aprimoramento da capacidade institucional de atendimento, dos canais de recebimento e tratamento de manifestações, da escuta qualificada, do acompanhamento e da rastreabilidade das demandas, bem como ao fortalecimento da participação social, transparência, controle institucional e proteção de direitos no âmbito dos serviços penais.A execução do objeto compreenderá a aquisição, recebimento, incorporação, disponibilização e utilização dos bens permanentes exclusivamente pela unidade de Ouvidoria de Serviços Penais indicada como beneficiária, observadas as especificações, quantidades, valores, cronograma e demais condições estabelecidas no Plano de Trabalho.Os bens adquiridos serão destinados ao suporte das atividades institucionais da Ouvidoria, contribuindo para a melhoria das condições de atendimento ao público, processamento e gerenciamento das manifestações, armazenamento e proteção das informações, bem como para o fortalecimento da capacidade operacional da unidade.O objeto também deverá contribuir para a consolidação de canais permanentes, acessíveis, seguros e efetivos de recebimento, tratamento e encaminhamento de manifestações, bem como para a adoção de soluções que favoreçam o registro, acompanhamento, rastreabilidade, sigilo e resposta às demandas recebidas.A aquisição dos bens observará integralmente as disposições do Edital, o padrão referencial de itens, a classificação como despesa de capital e a vinculação direta dos bens ao aparelhamento e funcionamento da Ouvidoria beneficiária. Os bens permanecerão vinculados à unidade durante e após a execução do convênio, com observância das regras de guarda, registro patrimonial, utilização e manutenção de sua destinação institucional.",
-        "situacao": "Proposta/Plano de Trabalho Enviado para Análise",
+        "situacao": "Proposta/Plano de Trabalho em Análise",
         "data": "2026-09-08",
         "vigenciaInicio": "2026-11-23",
         "vigenciaFim": "2028-05-19",
@@ -7651,20 +7695,6 @@ window.PROFOR_PUBLIC_DATA = {
         "contrapartida": 20021,
         "global": 20020021,
         "pad": [
-          {
-            "id": "17435371",
-            "descricao": "Telefone Celular",
-            "quantidade": "3",
-            "unitario": 575000,
-            "total": 1725000
-          },
-          {
-            "id": "17435375",
-            "descricao": "Purificador de Água",
-            "quantidade": "1",
-            "unitario": 130000,
-            "total": 130000
-          },
           {
             "id": "17435433",
             "descricao": "Armário Alto 2 Portas com Chave",
@@ -7687,18 +7717,11 @@ window.PROFOR_PUBLIC_DATA = {
             "total": 200000
           },
           {
-            "id": "17435376",
-            "descricao": "Cadeira de Escritório",
-            "quantidade": "3",
-            "unitario": 185000,
-            "total": 555000
-          },
-          {
-            "id": "17435374",
-            "descricao": "Cafeteira Expresso",
+            "id": "17435438",
+            "descricao": "Ar Condicionado 12000 BTUs",
             "quantidade": "1",
-            "unitario": 530000,
-            "total": 530000
+            "unitario": 245000,
+            "total": 245000
           },
           {
             "id": "17439632",
@@ -7708,46 +7731,11 @@ window.PROFOR_PUBLIC_DATA = {
             "total": 597021
           },
           {
-            "id": "17435270",
-            "descricao": "Totem de Autoatendimento",
-            "quantidade": "15",
-            "unitario": 524000,
-            "total": 7860000
-          },
-          {
-            "id": "17435311",
-            "descricao": "Barra de video conferencia",
-            "quantidade": "1",
-            "unitario": 440000,
-            "total": 440000
-          },
-          {
-            "id": "17435310",
-            "descricao": "Fragmentadora de Papel",
-            "quantidade": "1",
-            "unitario": 252000,
-            "total": 252000
-          },
-          {
-            "id": "17435309",
-            "descricao": "Nobreaks",
+            "id": "17435307",
+            "descricao": "Computador",
             "quantidade": "2",
-            "unitario": 110000,
-            "total": 220000
-          },
-          {
-            "id": "17435312",
-            "descricao": "TV 50'",
-            "quantidade": "1",
-            "unitario": 250000,
-            "total": 250000
-          },
-          {
-            "id": "17435314",
-            "descricao": "Telefone de Mesa",
-            "quantidade": "3",
-            "unitario": 48000,
-            "total": 144000
+            "unitario": 556000,
+            "total": 1112000
           },
           {
             "id": "17435308",
@@ -7757,11 +7745,39 @@ window.PROFOR_PUBLIC_DATA = {
             "total": 1740000
           },
           {
+            "id": "17435305",
+            "descricao": "Monitor para Computador",
+            "quantidade": "4",
+            "unitario": 52000,
+            "total": 208000
+          },
+          {
+            "id": "17435309",
+            "descricao": "Nobreaks",
+            "quantidade": "2",
+            "unitario": 110000,
+            "total": 220000
+          },
+          {
             "id": "17435303",
             "descricao": "Notebook",
             "quantidade": "3",
             "unitario": 678000,
             "total": 2034000
+          },
+          {
+            "id": "17435270",
+            "descricao": "Totem de Autoatendimento",
+            "quantidade": "15",
+            "unitario": 524000,
+            "total": 7860000
+          },
+          {
+            "id": "17435310",
+            "descricao": "Fragmentadora de Papel",
+            "quantidade": "1",
+            "unitario": 252000,
+            "total": 252000
           },
           {
             "id": "17435291",
@@ -7771,25 +7787,18 @@ window.PROFOR_PUBLIC_DATA = {
             "total": 475000
           },
           {
-            "id": "17435437",
-            "descricao": "Cadeira Fixa",
-            "quantidade": "4",
-            "unitario": 45000,
-            "total": 180000
+            "id": "17435311",
+            "descricao": "Barra de video conferencia",
+            "quantidade": "1",
+            "unitario": 440000,
+            "total": 440000
           },
           {
-            "id": "17435305",
-            "descricao": "Monitor para Computador",
-            "quantidade": "4",
-            "unitario": 52000,
-            "total": 208000
-          },
-          {
-            "id": "17435307",
-            "descricao": "Computador",
-            "quantidade": "2",
-            "unitario": 556000,
-            "total": 1112000
+            "id": "17435374",
+            "descricao": "Cafeteira Expresso",
+            "quantidade": "1",
+            "unitario": 530000,
+            "total": 530000
           },
           {
             "id": "17435372",
@@ -7799,11 +7808,46 @@ window.PROFOR_PUBLIC_DATA = {
             "total": 113000
           },
           {
-            "id": "17435438",
-            "descricao": "Ar Condicionado 12000 BTUs",
+            "id": "17435375",
+            "descricao": "Purificador de Água",
             "quantidade": "1",
-            "unitario": 245000,
-            "total": 245000
+            "unitario": 130000,
+            "total": 130000
+          },
+          {
+            "id": "17435371",
+            "descricao": "Telefone Celular",
+            "quantidade": "3",
+            "unitario": 575000,
+            "total": 1725000
+          },
+          {
+            "id": "17435312",
+            "descricao": "TV 50'",
+            "quantidade": "1",
+            "unitario": 250000,
+            "total": 250000
+          },
+          {
+            "id": "17435376",
+            "descricao": "Cadeira de Escritório",
+            "quantidade": "3",
+            "unitario": 185000,
+            "total": 555000
+          },
+          {
+            "id": "17435314",
+            "descricao": "Telefone de Mesa",
+            "quantidade": "3",
+            "unitario": 48000,
+            "total": 144000
+          },
+          {
+            "id": "17435437",
+            "descricao": "Cadeira Fixa",
+            "quantidade": "4",
+            "unitario": 45000,
+            "total": 180000
           }
         ]
       },
@@ -13230,10 +13274,383 @@ window.PROFOR_PUBLIC_DATA = {
             "confirmed": false,
             "calendarNote": ""
           }
+        },
+        {
+          "at": "2026-10-13T12:40:51.225Z",
+          "event": "Dados da origem alterados; conferir análise",
+          "actor": "Usuário local",
+          "before": {
+            "id": "2242725",
+            "numero": "35053/2026",
+            "uf": "SE",
+            "programa": "3000020260022",
+            "cnpj": "34841226000137",
+            "proponente": "SECRETARIA DE ESTADO DA JUSTICA E DE DEFESA DO CONSUMIDOR - SEJUC",
+            "orgao": "",
+            "objeto": "Fortalecimento e aparelhamento da Ouvidoria de Serviços Penais do Estado de Sergipe, mediante a aquisição de mobiliários, equipamentos tecnológicos e outros bens permanentes de capital necessários à melhoria de sua estrutura física e operacional, com vistas ao aprimoramento da capacidade institucional de atendimento, dos canais de recebimento e tratamento de manifestações, da escuta qualificada, do acompanhamento e da rastreabilidade das demandas, bem como ao fortalecimento da participação social, transparência, controle institucional e proteção de direitos no âmbito dos serviços penais.A execução do objeto compreenderá a aquisição, recebimento, incorporação, disponibilização e utilização dos bens permanentes exclusivamente pela unidade de Ouvidoria de Serviços Penais indicada como beneficiária, observadas as especificações, quantidades, valores, cronograma e demais condições estabelecidas no Plano de Trabalho.Os bens adquiridos serão destinados ao suporte das atividades institucionais da Ouvidoria, contribuindo para a melhoria das condições de atendimento ao público, processamento e gerenciamento das manifestações, armazenamento e proteção das informações, bem como para o fortalecimento da capacidade operacional da unidade.O objeto também deverá contribuir para a consolidação de canais permanentes, acessíveis, seguros e efetivos de recebimento, tratamento e encaminhamento de manifestações, bem como para a adoção de soluções que favoreçam o registro, acompanhamento, rastreabilidade, sigilo e resposta às demandas recebidas.A aquisição dos bens observará integralmente as disposições do Edital, o padrão referencial de itens, a classificação como despesa de capital e a vinculação direta dos bens ao aparelhamento e funcionamento da Ouvidoria beneficiária. Os bens permanecerão vinculados à unidade durante e após a execução do convênio, com observância das regras de guarda, registro patrimonial, utilização e manutenção de sua destinação institucional.",
+            "situacao": "Proposta/Plano de Trabalho Enviado para Análise",
+            "data": "2026-09-08",
+            "vigenciaInicio": "2026-11-23",
+            "vigenciaFim": "2028-05-19",
+            "repasse": 20000000,
+            "contrapartida": 20021,
+            "global": 20020021,
+            "pad": [
+              {
+                "id": "17435371",
+                "descricao": "Telefone Celular",
+                "quantidade": "3",
+                "unitario": 575000,
+                "total": 1725000
+              },
+              {
+                "id": "17435375",
+                "descricao": "Purificador de Água",
+                "quantidade": "1",
+                "unitario": 130000,
+                "total": 130000
+              },
+              {
+                "id": "17435433",
+                "descricao": "Armário Alto 2 Portas com Chave",
+                "quantidade": "1",
+                "unitario": 110000,
+                "total": 110000
+              },
+              {
+                "id": "17435434",
+                "descricao": "Mesa de Escritório em L",
+                "quantidade": "3",
+                "unitario": 300000,
+                "total": 900000
+              },
+              {
+                "id": "17435432",
+                "descricao": "Longarina 3 Lugares",
+                "quantidade": "1",
+                "unitario": 200000,
+                "total": 200000
+              },
+              {
+                "id": "17435376",
+                "descricao": "Cadeira de Escritório",
+                "quantidade": "3",
+                "unitario": 185000,
+                "total": 555000
+              },
+              {
+                "id": "17435374",
+                "descricao": "Cafeteira Expresso",
+                "quantidade": "1",
+                "unitario": 530000,
+                "total": 530000
+              },
+              {
+                "id": "17439632",
+                "descricao": "Saldo Residual",
+                "quantidade": "1",
+                "unitario": 597021,
+                "total": 597021
+              },
+              {
+                "id": "17435270",
+                "descricao": "Totem de Autoatendimento",
+                "quantidade": "15",
+                "unitario": 524000,
+                "total": 7860000
+              },
+              {
+                "id": "17435311",
+                "descricao": "Barra de video conferencia",
+                "quantidade": "1",
+                "unitario": 440000,
+                "total": 440000
+              },
+              {
+                "id": "17435310",
+                "descricao": "Fragmentadora de Papel",
+                "quantidade": "1",
+                "unitario": 252000,
+                "total": 252000
+              },
+              {
+                "id": "17435309",
+                "descricao": "Nobreaks",
+                "quantidade": "2",
+                "unitario": 110000,
+                "total": 220000
+              },
+              {
+                "id": "17435312",
+                "descricao": "TV 50'",
+                "quantidade": "1",
+                "unitario": 250000,
+                "total": 250000
+              },
+              {
+                "id": "17435314",
+                "descricao": "Telefone de Mesa",
+                "quantidade": "3",
+                "unitario": 48000,
+                "total": 144000
+              },
+              {
+                "id": "17435308",
+                "descricao": "Tablets",
+                "quantidade": "3",
+                "unitario": 580000,
+                "total": 1740000
+              },
+              {
+                "id": "17435303",
+                "descricao": "Notebook",
+                "quantidade": "3",
+                "unitario": 678000,
+                "total": 2034000
+              },
+              {
+                "id": "17435291",
+                "descricao": "Impressora Multifuncional",
+                "quantidade": "1",
+                "unitario": 475000,
+                "total": 475000
+              },
+              {
+                "id": "17435437",
+                "descricao": "Cadeira Fixa",
+                "quantidade": "4",
+                "unitario": 45000,
+                "total": 180000
+              },
+              {
+                "id": "17435305",
+                "descricao": "Monitor para Computador",
+                "quantidade": "4",
+                "unitario": 52000,
+                "total": 208000
+              },
+              {
+                "id": "17435307",
+                "descricao": "Computador",
+                "quantidade": "2",
+                "unitario": 556000,
+                "total": 1112000
+              },
+              {
+                "id": "17435372",
+                "descricao": "Frigobar 120L",
+                "quantidade": "1",
+                "unitario": 113000,
+                "total": 113000
+              },
+              {
+                "id": "17435438",
+                "descricao": "Ar Condicionado 12000 BTUs",
+                "quantidade": "1",
+                "unitario": 245000,
+                "total": 245000
+              }
+            ]
+          },
+          "after": {
+            "id": "2242725",
+            "numero": "35053/2026",
+            "uf": "SE",
+            "programa": "3000020260022",
+            "cnpj": "34841226000137",
+            "proponente": "SECRETARIA DE ESTADO DA JUSTICA E DE DEFESA DO CONSUMIDOR - SEJUC",
+            "orgao": "",
+            "objeto": "Fortalecimento e aparelhamento da Ouvidoria de Serviços Penais do Estado de Sergipe, mediante a aquisição de mobiliários, equipamentos tecnológicos e outros bens permanentes de capital necessários à melhoria de sua estrutura física e operacional, com vistas ao aprimoramento da capacidade institucional de atendimento, dos canais de recebimento e tratamento de manifestações, da escuta qualificada, do acompanhamento e da rastreabilidade das demandas, bem como ao fortalecimento da participação social, transparência, controle institucional e proteção de direitos no âmbito dos serviços penais.A execução do objeto compreenderá a aquisição, recebimento, incorporação, disponibilização e utilização dos bens permanentes exclusivamente pela unidade de Ouvidoria de Serviços Penais indicada como beneficiária, observadas as especificações, quantidades, valores, cronograma e demais condições estabelecidas no Plano de Trabalho.Os bens adquiridos serão destinados ao suporte das atividades institucionais da Ouvidoria, contribuindo para a melhoria das condições de atendimento ao público, processamento e gerenciamento das manifestações, armazenamento e proteção das informações, bem como para o fortalecimento da capacidade operacional da unidade.O objeto também deverá contribuir para a consolidação de canais permanentes, acessíveis, seguros e efetivos de recebimento, tratamento e encaminhamento de manifestações, bem como para a adoção de soluções que favoreçam o registro, acompanhamento, rastreabilidade, sigilo e resposta às demandas recebidas.A aquisição dos bens observará integralmente as disposições do Edital, o padrão referencial de itens, a classificação como despesa de capital e a vinculação direta dos bens ao aparelhamento e funcionamento da Ouvidoria beneficiária. Os bens permanecerão vinculados à unidade durante e após a execução do convênio, com observância das regras de guarda, registro patrimonial, utilização e manutenção de sua destinação institucional.",
+            "situacao": "Proposta/Plano de Trabalho em Análise",
+            "data": "2026-09-08",
+            "vigenciaInicio": "2026-11-23",
+            "vigenciaFim": "2028-05-19",
+            "repasse": 20000000,
+            "contrapartida": 20021,
+            "global": 20020021,
+            "pad": [
+              {
+                "id": "17435433",
+                "descricao": "Armário Alto 2 Portas com Chave",
+                "quantidade": "1",
+                "unitario": 110000,
+                "total": 110000
+              },
+              {
+                "id": "17435434",
+                "descricao": "Mesa de Escritório em L",
+                "quantidade": "3",
+                "unitario": 300000,
+                "total": 900000
+              },
+              {
+                "id": "17435432",
+                "descricao": "Longarina 3 Lugares",
+                "quantidade": "1",
+                "unitario": 200000,
+                "total": 200000
+              },
+              {
+                "id": "17435438",
+                "descricao": "Ar Condicionado 12000 BTUs",
+                "quantidade": "1",
+                "unitario": 245000,
+                "total": 245000
+              },
+              {
+                "id": "17439632",
+                "descricao": "Saldo Residual",
+                "quantidade": "1",
+                "unitario": 597021,
+                "total": 597021
+              },
+              {
+                "id": "17435307",
+                "descricao": "Computador",
+                "quantidade": "2",
+                "unitario": 556000,
+                "total": 1112000
+              },
+              {
+                "id": "17435308",
+                "descricao": "Tablets",
+                "quantidade": "3",
+                "unitario": 580000,
+                "total": 1740000
+              },
+              {
+                "id": "17435305",
+                "descricao": "Monitor para Computador",
+                "quantidade": "4",
+                "unitario": 52000,
+                "total": 208000
+              },
+              {
+                "id": "17435309",
+                "descricao": "Nobreaks",
+                "quantidade": "2",
+                "unitario": 110000,
+                "total": 220000
+              },
+              {
+                "id": "17435303",
+                "descricao": "Notebook",
+                "quantidade": "3",
+                "unitario": 678000,
+                "total": 2034000
+              },
+              {
+                "id": "17435270",
+                "descricao": "Totem de Autoatendimento",
+                "quantidade": "15",
+                "unitario": 524000,
+                "total": 7860000
+              },
+              {
+                "id": "17435310",
+                "descricao": "Fragmentadora de Papel",
+                "quantidade": "1",
+                "unitario": 252000,
+                "total": 252000
+              },
+              {
+                "id": "17435291",
+                "descricao": "Impressora Multifuncional",
+                "quantidade": "1",
+                "unitario": 475000,
+                "total": 475000
+              },
+              {
+                "id": "17435311",
+                "descricao": "Barra de video conferencia",
+                "quantidade": "1",
+                "unitario": 440000,
+                "total": 440000
+              },
+              {
+                "id": "17435374",
+                "descricao": "Cafeteira Expresso",
+                "quantidade": "1",
+                "unitario": 530000,
+                "total": 530000
+              },
+              {
+                "id": "17435372",
+                "descricao": "Frigobar 120L",
+                "quantidade": "1",
+                "unitario": 113000,
+                "total": 113000
+              },
+              {
+                "id": "17435375",
+                "descricao": "Purificador de Água",
+                "quantidade": "1",
+                "unitario": 130000,
+                "total": 130000
+              },
+              {
+                "id": "17435371",
+                "descricao": "Telefone Celular",
+                "quantidade": "3",
+                "unitario": 575000,
+                "total": 1725000
+              },
+              {
+                "id": "17435312",
+                "descricao": "TV 50'",
+                "quantidade": "1",
+                "unitario": 250000,
+                "total": 250000
+              },
+              {
+                "id": "17435376",
+                "descricao": "Cadeira de Escritório",
+                "quantidade": "3",
+                "unitario": 185000,
+                "total": 555000
+              },
+              {
+                "id": "17435314",
+                "descricao": "Telefone de Mesa",
+                "quantidade": "3",
+                "unitario": 48000,
+                "total": 144000
+              },
+              {
+                "id": "17435437",
+                "descricao": "Cadeira Fixa",
+                "quantidade": "4",
+                "unitario": 45000,
+                "total": 180000
+              }
+            ]
+          }
+        },
+        {
+          "at": "2026-10-13T12:40:51.229Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Usuário local",
+          "before": {
+            "at": "2026-10-08T12:43:51.889Z"
+          },
+          "after": {
+            "at": "2026-10-13T12:40:51.229Z"
+          }
+        },
+        {
+          "at": "2026-10-13T13:11:44.459Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Usuário local",
+          "before": {
+            "at": "2026-10-13T12:40:51.229Z"
+          },
+          "after": {
+            "at": "2026-10-13T13:11:44.459Z"
+          }
         }
       ],
       "textos": {
-        "at": "2026-10-08T12:43:51.889Z",
+        "at": "2026-10-13T13:11:44.459Z",
         "caracterizacao": "A proposta atende ao interesse do Estado de Sergipe em fortalecer a estrutura e a capacidade de atuação da Ouvidoria de Serviços Penais, ampliando sua eficiência no recebimento, tratamento e encaminhamento de manifestações. Para a União, a iniciativa contribui para a implementação das diretrizes do PROFOR/ONASP, o fortalecimento da participação social, da transparência, do controle institucional e da proteção de direitos na política penal.",
         "publicoAlvo": "O público-alvo compreende, prioritariamente, as pessoas privadas de liberdade, egressos do sistema prisional, familiares e demais cidadãos que utilizam os canais da Ouvidoria para apresentar denúncias, reclamações, solicitações, sugestões, elogios e outras manifestações relacionadas aos serviços penais. Abrange também os agentes e servidores responsáveis pelo atendimento e tratamento dessas manifestações.",
         "problema": "A proposta busca enfrentar as limitações estruturais e tecnológicas que podem comprometer a capacidade institucional da Ouvidoria de Serviços Penais para receber, registrar, tratar, acompanhar e responder manifestações de forma eficiente, segura e rastreável. O fortalecimento do aparelhamento permitirá melhores condições para a escuta qualificada, proteção de informações sensíveis, participação social, transparência e controle dos serviços penais.",
@@ -13246,7 +13663,7 @@ window.PROFOR_PUBLIC_DATA = {
         "version": 1,
         "status": "complete",
         "source": "siconv_plano_aplicacao_detalhado.zip",
-        "at": "2026-10-08T12:40:10.474Z",
+        "at": "2026-10-13T12:37:59.673Z",
         "received": 22,
         "accepted": 22,
         "rejected": 0,
@@ -17213,10 +17630,32 @@ window.PROFOR_PUBLIC_DATA = {
           "after": {
             "at": "2026-10-08T12:43:51.889Z"
           }
+        },
+        {
+          "at": "2026-10-13T12:40:51.229Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Usuário local",
+          "before": {
+            "at": "2026-10-08T12:43:51.889Z"
+          },
+          "after": {
+            "at": "2026-10-13T12:40:51.229Z"
+          }
+        },
+        {
+          "at": "2026-10-13T13:11:44.459Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Usuário local",
+          "before": {
+            "at": "2026-10-13T12:40:51.229Z"
+          },
+          "after": {
+            "at": "2026-10-13T13:11:44.459Z"
+          }
         }
       ],
       "textos": {
-        "at": "2026-10-08T12:43:51.889Z",
+        "at": "2026-10-13T13:11:44.459Z",
         "caracterizacao": "A Ouvidoria da SAP/CE constitui instrumento estratégico de participação social, controle institucional e proteção de direitos no âmbito da política penal do Estado do Ceará, atuando como canal de comunicação entre a Administração Penitenciária e pessoas privadas de liberdade, familiares, visitantes, servidores, colaboradores e demais usuários dos serviços públicos.",
         "publicoAlvo": "pessoas privadas de liberdade nas unidades prisionais do Estado do Ceará; familiares de pessoas privadas de liberdade; visitantes das unidades prisionais; servidores e policiais penais; colaboradores e prestadores de serviços vinculados à política penal; • egressos e demais usuários dos serviços penais;cidadãos que necessitem utilizar os canais da Ouvidoria; gestores da SAP/CE, de forma indireta, mediante acesso a informações gerenciais produzidas pela escuta institucional,egresso",
         "problema": "Embora a Ouvidoria da SAP/CE disponha atualmente de infraestrutura física e tecnológica adequada em sua sede, decorrente inclusive dos investimentos de modernização e reaparelhamento realizados anteriormente, permanece identificada insuficiência de infraestrutura tecnológica descentralizada para realização contínua, padronizada e territorialmente abrangente da escuta institucional diretamente nos estabelecimentos prisionais e demais pontos estratégicos da Administração Penitenciária.",
@@ -17229,7 +17668,7 @@ window.PROFOR_PUBLIC_DATA = {
         "version": 1,
         "status": "complete",
         "source": "siconv_plano_aplicacao_detalhado.zip",
-        "at": "2026-10-08T12:40:10.474Z",
+        "at": "2026-10-13T12:37:59.673Z",
         "received": 11,
         "accepted": 11,
         "rejected": 0,
@@ -17820,13 +18259,35 @@ window.PROFOR_PUBLIC_DATA = {
           "after": {
             "at": "2026-10-08T12:43:51.889Z"
           }
+        },
+        {
+          "at": "2026-10-13T12:40:51.229Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Usuário local",
+          "before": {
+            "at": "2026-10-08T12:43:51.889Z"
+          },
+          "after": {
+            "at": "2026-10-13T12:40:51.229Z"
+          }
+        },
+        {
+          "at": "2026-10-13T13:11:44.459Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Usuário local",
+          "before": {
+            "at": "2026-10-13T12:40:51.229Z"
+          },
+          "after": {
+            "at": "2026-10-13T13:11:44.459Z"
+          }
         }
       ],
       "isDeleted": true,
       "deletedAt": "2026-09-17T10:49:50.262Z",
       "deletedBy": "Usuário local",
       "textos": {
-        "at": "2026-10-08T12:43:51.889Z",
+        "at": "2026-10-13T13:11:44.459Z",
         "caracterizacao": "A proposta alinha-se estritamente ao PROFOR/ONASP ao prever o aparelhamento físico e tecnológico do setor com bens de capital. As aquisições atendem aos parâmetros mínimos de funcionamento, qualificam o tratamento de manifestações, viabilizam a integração à Plataforma Fala.BR, garantem sigilo de dados sensíveis e subsidiam inspeções prisionais técnicas.",
         "publicoAlvo": "A proposta alinha-se estritamente ao PROFOR/ONASP ao prever o aparelhamento físico e tecnológico do setor com bens de capital. As aquisições atendem aos parâmetros mínimos de funcionamento, qualificam o tratamento de manifestações, viabilizam a integração à Plataforma Fala.BR, garantem sigilo de dados sensíveis e subsidiam inspeções prisionais técnicas.",
         "problema": "Déficit de infraestrutura física, mobiliária e tecnológica na Ouvidoria da SEAP/PE, que limita o acolhimento presencial, compromete a celeridade e o sigilo no fluxo de manifestações e restringe a mobilidade técnica para a realização de inspeções nas unidades prisionais.",
@@ -17839,7 +18300,7 @@ window.PROFOR_PUBLIC_DATA = {
         "version": 1,
         "status": "complete",
         "source": "siconv_plano_aplicacao_detalhado.zip",
-        "at": "2026-10-08T12:40:10.474Z",
+        "at": "2026-10-13T12:37:59.673Z",
         "received": 0,
         "accepted": 0,
         "rejected": 0,
@@ -18694,13 +19155,35 @@ window.PROFOR_PUBLIC_DATA = {
           "after": {
             "at": "2026-10-08T12:43:51.889Z"
           }
+        },
+        {
+          "at": "2026-10-13T12:40:51.229Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Usuário local",
+          "before": {
+            "at": "2026-10-08T12:43:51.889Z"
+          },
+          "after": {
+            "at": "2026-10-13T12:40:51.229Z"
+          }
+        },
+        {
+          "at": "2026-10-13T13:11:44.459Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Usuário local",
+          "before": {
+            "at": "2026-10-13T12:40:51.229Z"
+          },
+          "after": {
+            "at": "2026-10-13T13:11:44.459Z"
+          }
         }
       ],
       "isDeleted": true,
       "deletedAt": "2026-09-17T10:49:52.475Z",
       "deletedBy": "Usuário local",
       "textos": {
-        "at": "2026-10-08T12:43:51.889Z",
+        "at": "2026-10-13T13:11:44.459Z",
         "caracterizacao": "Integração de esforços entre o Ministério da Justiça/SENAPPEN e a SEAP/PE para estruturar a Ouvidoria de Serviços Penais. A cooperação atende às diretrizes do PROFOR/ONASP e do Plano Pena Justa, fortalecendo a governança penitenciária, a fiscalização institucional, a proteção dos direitos humanos e o acesso à justiça no âmbito da execução penal em Pernambuco.",
         "publicoAlvo": "Pessoas privadas de liberdade, seus familiares, operadores do direito, órgãos de controle, servidores do sistema penitenciário e a sociedade civil usuária dos serviços da Ouvidoria da SEAP/PE.",
         "problema": "Déficit de infraestrutura física, mobiliária e tecnológica na Ouvidoria da SEAP/PE, que limita o acolhimento presencial, compromete a celeridade e o sigilo no fluxo de manifestações e restringe a mobilidade técnica para a realização de inspeções nas unidades prisionais.",
@@ -18713,7 +19196,7 @@ window.PROFOR_PUBLIC_DATA = {
         "version": 1,
         "status": "complete",
         "source": "siconv_plano_aplicacao_detalhado.zip",
-        "at": "2026-10-08T12:40:10.474Z",
+        "at": "2026-10-13T12:37:59.673Z",
         "received": 6,
         "accepted": 6,
         "rejected": 0,
@@ -26282,10 +26765,32 @@ window.PROFOR_PUBLIC_DATA = {
               "fingerprint": "fnv64-v1:e948683787eebb55"
             }
           }
+        },
+        {
+          "at": "2026-10-13T12:40:51.229Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Usuário local",
+          "before": {
+            "at": "2026-10-08T12:43:51.889Z"
+          },
+          "after": {
+            "at": "2026-10-13T12:40:51.229Z"
+          }
+        },
+        {
+          "at": "2026-10-13T13:11:44.459Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Usuário local",
+          "before": {
+            "at": "2026-10-13T12:40:51.229Z"
+          },
+          "after": {
+            "at": "2026-10-13T13:11:44.459Z"
+          }
         }
       ],
       "textos": {
-        "at": "2026-10-08T12:43:51.889Z",
+        "at": "2026-10-13T13:11:44.459Z",
         "caracterizacao": "O interesse do Governo Federal consiste em fortalecer as ouvidorias de serviços penais e aprimorar a participação social, a transparência e a proteção de direitos. O interesse do Distrito Federal converge com essas diretrizes, mediante o aparelhamento da Ouvidoria da SEAPE/DF, ampliando sua capacidade de atendimento, tratamento de manifestações e prestação de serviços aos usuários.",
         "publicoAlvo": "Usuários dos serviços penais do Distrito Federal, incluindo pessoas privadas de liberdade, familiares, servidores e demais cidadãos que utilizem os canais da Ouvidoria da SEAPE/DF, bem como os servidores responsáveis pelo atendimento, registro, tratamento e encaminhamento das manifestações.",
         "problema": "A atual estrutura física, mobiliário e equipamentos tecnológicos limita a capacidade da Ouvidoria da SEAPE/DF de prestar atendimento qualificado, realizar atendimentos externos, tratar e analisar manifestações e assegurar privacidade em demandas sensíveis. A proposta busca superar essas limitações e proporcionar melhores condições para o funcionamento e fortalecimento da unidade.",
@@ -26298,7 +26803,7 @@ window.PROFOR_PUBLIC_DATA = {
         "version": 1,
         "status": "complete",
         "source": "siconv_plano_aplicacao_detalhado.zip",
-        "at": "2026-10-08T12:40:10.474Z",
+        "at": "2026-10-13T12:37:59.673Z",
         "received": 29,
         "accepted": 29,
         "rejected": 0,
@@ -26316,7 +26821,7 @@ window.PROFOR_PUBLIC_DATA = {
         "proponente": "SECRETARIA DE ADMINISTRACAO PENITENCIARIA E RESSOCIALIZACAO",
         "orgao": "",
         "objeto": "Aquisição de mobiliários, equipamentos tecnológicos e bens permanentes destinados ao aparelhamento, estruturação e fortalecimento institucional da Ouvidoria de Serviços Penais da Secretaria de Administração Penitenciária e Ressocialização do Estado de Pernambuco (SEAP/PE), no âmbito do Programa de Fortalecimento das Ouvidorias de Serviços Penais – PROFOR/ONASP. A contratação visa à superação dos déficits de infraestrutura identificados no diagnóstico institucional, assegurando a melhoria da capacidade operacional e física de atendimento aos usuários, o aprimoramento e a ampliação dos canais de manifestação, a qualificação da escuta institucional, o incremento da transparência pública, a garantia da rastreabilidade processual, a preservação do sigilo e a salvaguarda de dados sensíveis em conformidade com as normas de proteção de dados, além do suporte e fortalecimento das atividades de fiscalização técnica, vistorias e inspeções in loco nas unidades prisionais do Estado, em estrita observância aos parâmetros mínimos de funcionamento estabelecidos pela Ouvidoria Nacional dos Serviços Penais (ONASP/SENAPPEN) e às diretrizes estratégicas do Plano Pena Justa. O objeto classifica-se exclusivamente como despesa de capital e não se enquadra como bem de luxo, nos termos do art. 8º do Decreto Estadual nº 51.652/2021.",
-        "situacao": "Proposta/Plano de Trabalho em Complementação",
+        "situacao": "Proposta/Plano de Trabalho Complementado Enviado para Análise",
         "data": "2026-09-14",
         "vigenciaInicio": "2027-01-04",
         "vigenciaFim": "2028-01-04",
@@ -26325,11 +26830,46 @@ window.PROFOR_PUBLIC_DATA = {
         "global": 20020021,
         "pad": [
           {
-            "id": "17447619",
-            "descricao": "Notebook parauso institucional e atendimento técnico",
-            "quantidade": "11",
-            "unitario": 614511,
-            "total": 6759621
+            "id": "17448854",
+            "descricao": "Desktop(Computador de mesa com periféricos)",
+            "quantidade": "14",
+            "unitario": 441300,
+            "total": 6178200
+          },
+          {
+            "id": "17448857",
+            "descricao": "Impressora ou equipamento multifuncional destinado às atividades da ouvidoria",
+            "quantidade": "2",
+            "unitario": 385000,
+            "total": 770000
+          },
+          {
+            "id": "17448831",
+            "descricao": "Televisão (TV)para apresentações,monitoramento e capacitação",
+            "quantidade": "2",
+            "unitario": 498296,
+            "total": 996592
+          },
+          {
+            "id": "17448960",
+            "descricao": "Fragmentadora de papel destinada à eliminação segura  e à proteção de informações sensíveis",
+            "quantidade": "3",
+            "unitario": 115737,
+            "total": 347211
+          },
+          {
+            "id": "17448884",
+            "descricao": "Ar-condicionado 12.000 BTUs para climatização do ambiente de atendimento",
+            "quantidade": "3",
+            "unitario": 288233,
+            "total": 864699
+          },
+          {
+            "id": "17449052",
+            "descricao": "Mesa ou estação de trabalho destinada à equipe da Ouvidoria de Serviços Penais",
+            "quantidade": "6",
+            "unitario": 99998,
+            "total": 599988
           },
           {
             "id": "17448988",
@@ -26339,13 +26879,6 @@ window.PROFOR_PUBLIC_DATA = {
             "total": 1075782
           },
           {
-            "id": "17449009",
-            "descricao": "Armário ou arquivo com chave para guarda de documentos e informações sensíveis",
-            "quantidade": "6",
-            "unitario": 86362,
-            "total": 518172
-          },
-          {
             "id": "17449119",
             "descricao": "Saldo remanescente",
             "quantidade": "1",
@@ -26353,11 +26886,11 @@ window.PROFOR_PUBLIC_DATA = {
             "total": 1892
           },
           {
-            "id": "17448984",
-            "descricao": "Tablet destinado ao atendimento, às inspeções, às visitas técnicas ou à coleta institucional de informações",
-            "quantidade": "9",
-            "unitario": 110452,
-            "total": 994068
+            "id": "17449009",
+            "descricao": "Armário ou arquivo com chave para guarda de documentos e informações sensíveis",
+            "quantidade": "6",
+            "unitario": 86362,
+            "total": 518172
           },
           {
             "id": "17449030",
@@ -26374,46 +26907,18 @@ window.PROFOR_PUBLIC_DATA = {
             "total": 217516
           },
           {
-            "id": "17448854",
-            "descricao": "Desktop(Computador de mesa com periféricos)",
-            "quantidade": "14",
-            "unitario": 441300,
-            "total": 6178200
+            "id": "17448984",
+            "descricao": "Tablet destinado ao atendimento, às inspeções, às visitas técnicas ou à coleta institucional de informações",
+            "quantidade": "9",
+            "unitario": 110452,
+            "total": 994068
           },
           {
-            "id": "17448831",
-            "descricao": "Televisão (TV)para apresentações,monitoramento e capacitação",
-            "quantidade": "2",
-            "unitario": 498296,
-            "total": 996592
-          },
-          {
-            "id": "17448857",
-            "descricao": "Impressora ou equipamento multifuncional destinado às atividades da ouvidoria",
-            "quantidade": "2",
-            "unitario": 385000,
-            "total": 770000
-          },
-          {
-            "id": "17448960",
-            "descricao": "Fragmentadora de papel destinada à eliminação segura  e à proteção de informações sensíveis",
-            "quantidade": "3",
-            "unitario": 115737,
-            "total": 347211
-          },
-          {
-            "id": "17449052",
-            "descricao": "Mesa ou estação de trabalho destinada à equipe da Ouvidoria de Serviços Penais",
-            "quantidade": "6",
-            "unitario": 99998,
-            "total": 599988
-          },
-          {
-            "id": "17448884",
-            "descricao": "Ar-condicionado 12.000 BTUs para climatização do ambiente de atendimento",
-            "quantidade": "3",
-            "unitario": 288233,
-            "total": 864699
+            "id": "17447619",
+            "descricao": "Notebook parauso institucional e atendimento técnico",
+            "quantidade": "11",
+            "unitario": 614511,
+            "total": 6759621
           }
         ]
       },
@@ -33655,10 +34160,257 @@ window.PROFOR_PUBLIC_DATA = {
               "fingerprint": "fnv64-v1:bdc02e16ef18e909"
             }
           }
+        },
+        {
+          "at": "2026-10-13T12:40:51.227Z",
+          "event": "Dados da origem alterados; conferir análise",
+          "actor": "Usuário local",
+          "before": {
+            "id": "2243912",
+            "numero": "35405/2026",
+            "uf": "PE",
+            "programa": "3000020260022",
+            "cnpj": "06290858000114",
+            "proponente": "SECRETARIA DE ADMINISTRACAO PENITENCIARIA E RESSOCIALIZACAO",
+            "orgao": "",
+            "objeto": "Aquisição de mobiliários, equipamentos tecnológicos e bens permanentes destinados ao aparelhamento, estruturação e fortalecimento institucional da Ouvidoria de Serviços Penais da Secretaria de Administração Penitenciária e Ressocialização do Estado de Pernambuco (SEAP/PE), no âmbito do Programa de Fortalecimento das Ouvidorias de Serviços Penais – PROFOR/ONASP. A contratação visa à superação dos déficits de infraestrutura identificados no diagnóstico institucional, assegurando a melhoria da capacidade operacional e física de atendimento aos usuários, o aprimoramento e a ampliação dos canais de manifestação, a qualificação da escuta institucional, o incremento da transparência pública, a garantia da rastreabilidade processual, a preservação do sigilo e a salvaguarda de dados sensíveis em conformidade com as normas de proteção de dados, além do suporte e fortalecimento das atividades de fiscalização técnica, vistorias e inspeções in loco nas unidades prisionais do Estado, em estrita observância aos parâmetros mínimos de funcionamento estabelecidos pela Ouvidoria Nacional dos Serviços Penais (ONASP/SENAPPEN) e às diretrizes estratégicas do Plano Pena Justa. O objeto classifica-se exclusivamente como despesa de capital e não se enquadra como bem de luxo, nos termos do art. 8º do Decreto Estadual nº 51.652/2021.",
+            "situacao": "Proposta/Plano de Trabalho em Complementação",
+            "data": "2026-09-14",
+            "vigenciaInicio": "2027-01-04",
+            "vigenciaFim": "2028-01-04",
+            "repasse": 20000000,
+            "contrapartida": 20021,
+            "global": 20020021,
+            "pad": [
+              {
+                "id": "17447619",
+                "descricao": "Notebook parauso institucional e atendimento técnico",
+                "quantidade": "11",
+                "unitario": 614511,
+                "total": 6759621
+              },
+              {
+                "id": "17448988",
+                "descricao": "Câmera fotográfica institucional ou gravador digital destinado ao registro técnico de inspeçõese visitas",
+                "quantidade": "3",
+                "unitario": 358594,
+                "total": 1075782
+              },
+              {
+                "id": "17449009",
+                "descricao": "Armário ou arquivo com chave para guarda de documentos e informações sensíveis",
+                "quantidade": "6",
+                "unitario": 86362,
+                "total": 518172
+              },
+              {
+                "id": "17449119",
+                "descricao": "Saldo remanescente",
+                "quantidade": "1",
+                "unitario": 1892,
+                "total": 1892
+              },
+              {
+                "id": "17448984",
+                "descricao": "Tablet destinado ao atendimento, às inspeções, às visitas técnicas ou à coleta institucional de informações",
+                "quantidade": "9",
+                "unitario": 110452,
+                "total": 994068
+              },
+              {
+                "id": "17449030",
+                "descricao": "Cadeira de escritório destinada à equipe ou ao atendimento dos usuários",
+                "quantidade": "20",
+                "unitario": 34814,
+                "total": 696280
+              },
+              {
+                "id": "17448983",
+                "descricao": "Cadeira longarina para recepção e acomodação do público /usuários",
+                "quantidade": "4",
+                "unitario": 54379,
+                "total": 217516
+              },
+              {
+                "id": "17448854",
+                "descricao": "Desktop(Computador de mesa com periféricos)",
+                "quantidade": "14",
+                "unitario": 441300,
+                "total": 6178200
+              },
+              {
+                "id": "17448831",
+                "descricao": "Televisão (TV)para apresentações,monitoramento e capacitação",
+                "quantidade": "2",
+                "unitario": 498296,
+                "total": 996592
+              },
+              {
+                "id": "17448857",
+                "descricao": "Impressora ou equipamento multifuncional destinado às atividades da ouvidoria",
+                "quantidade": "2",
+                "unitario": 385000,
+                "total": 770000
+              },
+              {
+                "id": "17448960",
+                "descricao": "Fragmentadora de papel destinada à eliminação segura  e à proteção de informações sensíveis",
+                "quantidade": "3",
+                "unitario": 115737,
+                "total": 347211
+              },
+              {
+                "id": "17449052",
+                "descricao": "Mesa ou estação de trabalho destinada à equipe da Ouvidoria de Serviços Penais",
+                "quantidade": "6",
+                "unitario": 99998,
+                "total": 599988
+              },
+              {
+                "id": "17448884",
+                "descricao": "Ar-condicionado 12.000 BTUs para climatização do ambiente de atendimento",
+                "quantidade": "3",
+                "unitario": 288233,
+                "total": 864699
+              }
+            ]
+          },
+          "after": {
+            "id": "2243912",
+            "numero": "35405/2026",
+            "uf": "PE",
+            "programa": "3000020260022",
+            "cnpj": "06290858000114",
+            "proponente": "SECRETARIA DE ADMINISTRACAO PENITENCIARIA E RESSOCIALIZACAO",
+            "orgao": "",
+            "objeto": "Aquisição de mobiliários, equipamentos tecnológicos e bens permanentes destinados ao aparelhamento, estruturação e fortalecimento institucional da Ouvidoria de Serviços Penais da Secretaria de Administração Penitenciária e Ressocialização do Estado de Pernambuco (SEAP/PE), no âmbito do Programa de Fortalecimento das Ouvidorias de Serviços Penais – PROFOR/ONASP. A contratação visa à superação dos déficits de infraestrutura identificados no diagnóstico institucional, assegurando a melhoria da capacidade operacional e física de atendimento aos usuários, o aprimoramento e a ampliação dos canais de manifestação, a qualificação da escuta institucional, o incremento da transparência pública, a garantia da rastreabilidade processual, a preservação do sigilo e a salvaguarda de dados sensíveis em conformidade com as normas de proteção de dados, além do suporte e fortalecimento das atividades de fiscalização técnica, vistorias e inspeções in loco nas unidades prisionais do Estado, em estrita observância aos parâmetros mínimos de funcionamento estabelecidos pela Ouvidoria Nacional dos Serviços Penais (ONASP/SENAPPEN) e às diretrizes estratégicas do Plano Pena Justa. O objeto classifica-se exclusivamente como despesa de capital e não se enquadra como bem de luxo, nos termos do art. 8º do Decreto Estadual nº 51.652/2021.",
+            "situacao": "Proposta/Plano de Trabalho Complementado Enviado para Análise",
+            "data": "2026-09-14",
+            "vigenciaInicio": "2027-01-04",
+            "vigenciaFim": "2028-01-04",
+            "repasse": 20000000,
+            "contrapartida": 20021,
+            "global": 20020021,
+            "pad": [
+              {
+                "id": "17448854",
+                "descricao": "Desktop(Computador de mesa com periféricos)",
+                "quantidade": "14",
+                "unitario": 441300,
+                "total": 6178200
+              },
+              {
+                "id": "17448857",
+                "descricao": "Impressora ou equipamento multifuncional destinado às atividades da ouvidoria",
+                "quantidade": "2",
+                "unitario": 385000,
+                "total": 770000
+              },
+              {
+                "id": "17448831",
+                "descricao": "Televisão (TV)para apresentações,monitoramento e capacitação",
+                "quantidade": "2",
+                "unitario": 498296,
+                "total": 996592
+              },
+              {
+                "id": "17448960",
+                "descricao": "Fragmentadora de papel destinada à eliminação segura  e à proteção de informações sensíveis",
+                "quantidade": "3",
+                "unitario": 115737,
+                "total": 347211
+              },
+              {
+                "id": "17448884",
+                "descricao": "Ar-condicionado 12.000 BTUs para climatização do ambiente de atendimento",
+                "quantidade": "3",
+                "unitario": 288233,
+                "total": 864699
+              },
+              {
+                "id": "17449052",
+                "descricao": "Mesa ou estação de trabalho destinada à equipe da Ouvidoria de Serviços Penais",
+                "quantidade": "6",
+                "unitario": 99998,
+                "total": 599988
+              },
+              {
+                "id": "17448988",
+                "descricao": "Câmera fotográfica institucional ou gravador digital destinado ao registro técnico de inspeçõese visitas",
+                "quantidade": "3",
+                "unitario": 358594,
+                "total": 1075782
+              },
+              {
+                "id": "17449119",
+                "descricao": "Saldo remanescente",
+                "quantidade": "1",
+                "unitario": 1892,
+                "total": 1892
+              },
+              {
+                "id": "17449009",
+                "descricao": "Armário ou arquivo com chave para guarda de documentos e informações sensíveis",
+                "quantidade": "6",
+                "unitario": 86362,
+                "total": 518172
+              },
+              {
+                "id": "17449030",
+                "descricao": "Cadeira de escritório destinada à equipe ou ao atendimento dos usuários",
+                "quantidade": "20",
+                "unitario": 34814,
+                "total": 696280
+              },
+              {
+                "id": "17448983",
+                "descricao": "Cadeira longarina para recepção e acomodação do público /usuários",
+                "quantidade": "4",
+                "unitario": 54379,
+                "total": 217516
+              },
+              {
+                "id": "17448984",
+                "descricao": "Tablet destinado ao atendimento, às inspeções, às visitas técnicas ou à coleta institucional de informações",
+                "quantidade": "9",
+                "unitario": 110452,
+                "total": 994068
+              },
+              {
+                "id": "17447619",
+                "descricao": "Notebook parauso institucional e atendimento técnico",
+                "quantidade": "11",
+                "unitario": 614511,
+                "total": 6759621
+              }
+            ]
+          }
+        },
+        {
+          "at": "2026-10-13T12:40:51.229Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Usuário local",
+          "before": {
+            "at": "2026-10-08T12:43:51.889Z"
+          },
+          "after": {
+            "at": "2026-10-13T12:40:51.229Z"
+          }
+        },
+        {
+          "at": "2026-10-13T13:11:44.459Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Usuário local",
+          "before": {
+            "at": "2026-10-13T12:40:51.229Z"
+          },
+          "after": {
+            "at": "2026-10-13T13:11:44.459Z"
+          }
         }
       ],
       "textos": {
-        "at": "2026-10-08T12:43:51.889Z",
+        "at": "2026-10-13T13:11:44.459Z",
         "caracterizacao": "Integração de esforços entre o Ministério da Justiça/SENAPPEN e a SEAP/PE para estruturar a Ouvidoria de Serviços Penais. A cooperação atende às diretrizes do PROFOR/ONASP e do Plano Pena Justa, fortalecendo a governança penitenciária, a fiscalização institucional, a proteção dos direitos humanos e o acesso à justiça no âmbito da execução penal em Pernambuco.",
         "publicoAlvo": "Pessoas privadas de liberdade, seus familiares, operadores do direito, órgãos de controle, servidores do sistema penitenciário e a sociedade civil usuária dos serviços da Ouvidoria da SEAP/PE.",
         "problema": "Déficit de infraestrutura física, mobiliária e tecnológica na Ouvidoria da SEAP/PE, que limita o acolhimento presencial, compromete a celeridade e o sigilo no fluxo de manifestações e restringe a mobilidade técnica para a realização de inspeções nas unidades prisionais.",
@@ -33671,7 +34423,7 @@ window.PROFOR_PUBLIC_DATA = {
         "version": 1,
         "status": "complete",
         "source": "siconv_plano_aplicacao_detalhado.zip",
-        "at": "2026-10-08T12:40:10.474Z",
+        "at": "2026-10-13T12:37:59.673Z",
         "received": 13,
         "accepted": 13,
         "rejected": 0,
@@ -37065,10 +37817,32 @@ window.PROFOR_PUBLIC_DATA = {
             "confirmed": false,
             "calendarNote": ""
           }
+        },
+        {
+          "at": "2026-10-13T12:40:51.229Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Usuário local",
+          "before": {
+            "at": "2026-10-08T12:43:51.889Z"
+          },
+          "after": {
+            "at": "2026-10-13T12:40:51.229Z"
+          }
+        },
+        {
+          "at": "2026-10-13T13:11:44.459Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Usuário local",
+          "before": {
+            "at": "2026-10-13T12:40:51.229Z"
+          },
+          "after": {
+            "at": "2026-10-13T13:11:44.459Z"
+          }
         }
       ],
       "textos": {
-        "at": "2026-10-08T12:43:51.889Z",
+        "at": "2026-10-13T13:11:44.459Z",
         "caracterizacao": "Há convergência entre as diretrizes do MJSP/SENAPPEN e a missão da OGE-MG. Pelo concedente, busca-se o fortalecimento nacional e a padronização das ouvidorias de serviços penais. Pela OGE-MG, atende à necessidade de modernização tecnológica da Ouvidoria do Sistema Penitenciário e Socioeducativo, ampliando a celeridade e a qualidade no tratamento das manifestações dos cidadãos e na fiscalização dos serviços penais, promovendo a transparência e a garantia dos direitos fundamentais.",
         "publicoAlvo": "Público-Alvo Direto: Servidores e colaboradores da Ouvidoria do Sistema Penitenciário e Socioeducativo da OGE-MG, que operarão os equipamentos no processamento das demandas diárias.Público-Alvo Indireto: pessoas privadas de liberdade (PPL), jovens em cumprimento de medidas socioeducativas, seus familiares, servidores do sistema prisional e socioeducativo, advogados, defensores públicos e a sociedade civil de Minas Gerais que utiliza os canais da OGE-MG.",
         "problema": "A obsolescência, escassez e limitação operacional dos equipamentos de TIC (desktops e notebooks) atualmente em uso na Ouvidoria do Sistema Penitenciário e Socioeducativo. O ecossistema de hardware defasado gera lentidão nos sistemas de atendimento, degradação na segurança da informação, incapacidade de realizar atendimentos ou inspeções externas com suporte computacional móvel (in loco em unidades prisionais e de internação) e consequente gargalo no tempo de resposta ao cidadão.",
@@ -37081,7 +37855,7 @@ window.PROFOR_PUBLIC_DATA = {
         "version": 1,
         "status": "complete",
         "source": "siconv_plano_aplicacao_detalhado.zip",
-        "at": "2026-10-08T12:40:10.474Z",
+        "at": "2026-10-13T12:37:59.673Z",
         "received": 4,
         "accepted": 4,
         "rejected": 0,
@@ -45107,10 +45881,32 @@ window.PROFOR_PUBLIC_DATA = {
             },
             "actor": "Usuário local"
           }
+        },
+        {
+          "at": "2026-10-13T12:40:51.229Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Usuário local",
+          "before": {
+            "at": "2026-10-08T12:43:51.889Z"
+          },
+          "after": {
+            "at": "2026-10-13T12:40:51.229Z"
+          }
+        },
+        {
+          "at": "2026-10-13T13:11:44.459Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Usuário local",
+          "before": {
+            "at": "2026-10-13T12:40:51.229Z"
+          },
+          "after": {
+            "at": "2026-10-13T13:11:44.459Z"
+          }
         }
       ],
       "textos": {
-        "at": "2026-10-08T12:43:51.889Z",
+        "at": "2026-10-13T13:11:44.459Z",
         "caracterizacao": "A União, por meio da SENAPPEN, e o Estado do Rio Grande do Norte, por meio da SEAP/RN, compartilham o interesse de fortalecer a Ouvidoria de Serviços Penais. O repasse federal permitirá adquirir bens permanentes para ampliar sua capacidade operacional, enquanto o Estado aportará a contrapartida financeira e assegurará a execução, a guarda, a destinação e a utilização dos bens na finalidade pactuada.",
         "publicoAlvo": "A Ouvidoria de Serviços Penais vinculada à SEAP/RN é a beneficiária direta. O público-alvo compreende pessoas privadas de liberdade, seus familiares, egressos, servidores dos serviços penais e demais cidadãos que apresentem manifestações relacionadas à política penal do Rio Grande do Norte. Os bens também apoiarão a equipe responsável pelo recebimento, tratamento, encaminhamento e resposta às manifestações.",
         "problema": "A Ouvidoria de Serviços Penais do RN necessita ampliar sua capacidade material e tecnológica para atender às demandas institucionais e tratar manifestações com segurança, sigilo e rastreabilidade. O diagnóstico que fundamenta o PROFOR/ONASP identifica a necessidade de reforço das estruturas existentes, sem recursos disponíveis em convênios vigentes para essa finalidade. A proposta busca suprir as necessidades de aparelhamento identificadas pelo Estado.",
@@ -45123,7 +45919,7 @@ window.PROFOR_PUBLIC_DATA = {
         "version": 1,
         "status": "complete",
         "source": "siconv_plano_aplicacao_detalhado.zip",
-        "at": "2026-10-08T12:40:10.474Z",
+        "at": "2026-10-13T12:37:59.673Z",
         "received": 25,
         "accepted": 25,
         "rejected": 0,
@@ -47179,10 +47975,32 @@ window.PROFOR_PUBLIC_DATA = {
               "fingerprint": "fnv64-v1:bdc02e16ef18e909"
             }
           }
+        },
+        {
+          "at": "2026-10-13T12:40:51.229Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Usuário local",
+          "before": {
+            "at": "2026-10-08T12:43:51.889Z"
+          },
+          "after": {
+            "at": "2026-10-13T12:40:51.229Z"
+          }
+        },
+        {
+          "at": "2026-10-13T13:11:44.459Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Usuário local",
+          "before": {
+            "at": "2026-10-13T12:40:51.229Z"
+          },
+          "after": {
+            "at": "2026-10-13T13:11:44.459Z"
+          }
         }
       ],
       "textos": {
-        "at": "2026-10-08T12:43:51.889Z",
+        "at": "2026-10-13T13:11:44.459Z",
         "caracterizacao": "Integração de esforços entre o Ministério da Justiça/SENAPPEN e a SEJUS/ES para estruturar as Ouvidorias de Serviços Penais. A cooperação atende às diretrizes do PROFOR/ONASP e do Plano Pena Justa, fortalecendo a governança penitenciária, a fiscalização institucional, a proteção dos direitos humanos e o acesso à justiça no âmbito da execução penal no Espírito Santo.",
         "publicoAlvo": "Pessoas privadas de liberdade, seus familiares, operadores do direito, pessoas egressas do sistema prisional, órgãos de controle, servidores do sistema penitenciário, a sociedade civil usuária dos serviços das Ouvidorias dos Serviços Penais SEJUS/ES e a própria Administração Pública estadual, mediante a utilização das informações produzidas pela Ouvidoria para identificação de problemas, monitoramento de demandas recorrentes e aperfeiçoamento das políticas públicas penitenciárias",
         "problema": "A insuficiência ou inadequação de equipamentos tecnológicos e mobiliários pode limitar a capacidade operacional da unidade, dificultar a realização de atendimentos, restringir a mobilidade para atividades técnicas externas e comprometer a eficiência, a rastreabilidade e a segurança no tratamento das informações. Nesse contexto, o aparelhamento da Ouvidoria constitui medida necessária para assegurar condições materiais compatíveis com suas atribuições institucionais.",
@@ -47195,7 +48013,7 @@ window.PROFOR_PUBLIC_DATA = {
         "version": 1,
         "status": "complete",
         "source": "siconv_plano_aplicacao_detalhado.zip",
-        "at": "2026-10-08T12:40:10.474Z",
+        "at": "2026-10-13T12:37:59.673Z",
         "received": 2,
         "accepted": 2,
         "rejected": 0,
@@ -47786,13 +48604,35 @@ window.PROFOR_PUBLIC_DATA = {
           "after": {
             "at": "2026-10-08T12:43:51.889Z"
           }
+        },
+        {
+          "at": "2026-10-13T12:40:51.229Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Usuário local",
+          "before": {
+            "at": "2026-10-08T12:43:51.889Z"
+          },
+          "after": {
+            "at": "2026-10-13T12:40:51.229Z"
+          }
+        },
+        {
+          "at": "2026-10-13T13:11:44.459Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Usuário local",
+          "before": {
+            "at": "2026-10-13T12:40:51.229Z"
+          },
+          "after": {
+            "at": "2026-10-13T13:11:44.459Z"
+          }
         }
       ],
       "isDeleted": true,
       "deletedAt": "2026-09-17T10:49:46.508Z",
       "deletedBy": "Usuário local",
       "textos": {
-        "at": "2026-10-08T12:43:51.889Z",
+        "at": "2026-10-13T13:11:44.459Z",
         "caracterizacao": "Integração de esforços entre o Ministério da Justiça/SENAPPEN e a SEAP/PE para estruturar a Ouvidoria de Serviços Penais. A cooperação atende às diretrizes do PROFOR/ONASP e do Plano Pena Justa, fortalecendo a governança penitenciária, a fiscalização institucional, a proteção dos direitos humanos e o acesso à justiça no âmbito da execução penal em Pernambuco.",
         "publicoAlvo": "Pessoas privadas de liberdade, seus familiares, operadores do direito, órgãos de controle, servidores do sistema penitenciário e a sociedade civil usuária dos serviços da Ouvidoria da SEAP/PE.",
         "problema": "Déficit de infraestrutura física, mobiliária e tecnológica na Ouvidoria da SEAP/PE, que limita o acolhimento presencial, compromete a celeridade e o sigilo no fluxo de manifestações e restringe a mobilidade técnica para a realização de inspeções nas unidades prisionais.",
@@ -47805,7 +48645,7 @@ window.PROFOR_PUBLIC_DATA = {
         "version": 1,
         "status": "complete",
         "source": "siconv_plano_aplicacao_detalhado.zip",
-        "at": "2026-10-08T12:40:10.474Z",
+        "at": "2026-10-13T12:37:59.673Z",
         "received": 0,
         "accepted": 0,
         "rejected": 0,
@@ -48396,13 +49236,35 @@ window.PROFOR_PUBLIC_DATA = {
           "after": {
             "at": "2026-10-08T12:43:51.889Z"
           }
+        },
+        {
+          "at": "2026-10-13T12:40:51.229Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Usuário local",
+          "before": {
+            "at": "2026-10-08T12:43:51.889Z"
+          },
+          "after": {
+            "at": "2026-10-13T12:40:51.229Z"
+          }
+        },
+        {
+          "at": "2026-10-13T13:11:44.459Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Usuário local",
+          "before": {
+            "at": "2026-10-13T12:40:51.229Z"
+          },
+          "after": {
+            "at": "2026-10-13T13:11:44.459Z"
+          }
         }
       ],
       "isDeleted": true,
       "deletedAt": "2026-09-17T10:49:48.668Z",
       "deletedBy": "Usuário local",
       "textos": {
-        "at": "2026-10-08T12:43:51.889Z",
+        "at": "2026-10-13T13:11:44.459Z",
         "caracterizacao": "Integração de esforços entre o Ministério da Justiça/SENAPPEN e a SEAP/PE para estruturar a Ouvidoria de Serviços Penais. A cooperação atende às diretrizes do PROFOR/ONASP e do Plano Pena Justa, fortalecendo a governança penitenciária, a fiscalização institucional, a proteção dos direitos humanos e o acesso à justiça no âmbito da execução penal em Pernambuco.",
         "publicoAlvo": "Pessoas privadas de liberdade, seus familiares, operadores do direito, órgãos de controle, servidores do sistema penitenciário e a sociedade civil usuária dos serviços da Ouvidoria da SEAP/PE.",
         "problema": "Déficit de infraestrutura física, mobiliária e tecnológica na Ouvidoria da SEAP/PE, que limita o acolhimento presencial, compromete a celeridade e o sigilo no fluxo de manifestações e restringe a mobilidade técnica para a realização de inspeções nas unidades prisionais.",
@@ -48415,7 +49277,7 @@ window.PROFOR_PUBLIC_DATA = {
         "version": 1,
         "status": "complete",
         "source": "siconv_plano_aplicacao_detalhado.zip",
-        "at": "2026-10-08T12:40:10.474Z",
+        "at": "2026-10-13T12:37:59.673Z",
         "received": 0,
         "accepted": 0,
         "rejected": 0,
@@ -50183,10 +51045,32 @@ window.PROFOR_PUBLIC_DATA = {
           "after": {
             "at": "2026-10-08T12:43:51.889Z"
           }
+        },
+        {
+          "at": "2026-10-13T12:40:51.229Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Usuário local",
+          "before": {
+            "at": "2026-10-08T12:43:51.889Z"
+          },
+          "after": {
+            "at": "2026-10-13T12:40:51.229Z"
+          }
+        },
+        {
+          "at": "2026-10-13T13:11:44.459Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Usuário local",
+          "before": {
+            "at": "2026-10-13T12:40:51.229Z"
+          },
+          "after": {
+            "at": "2026-10-13T13:11:44.459Z"
+          }
         }
       ],
       "textos": {
-        "at": "2026-10-08T12:43:51.889Z",
+        "at": "2026-10-13T13:11:44.459Z",
         "caracterizacao": "A proposta atende ao interesse comum da União e do Estado do Amazonas no fortalecimento das Ouvidorias de Serviços Penais, mediante o aprimoramento de sua estrutura institucional e de sua capacidade de atendimento. A iniciativa está alinhada à atuação da SENAPPEN de apoio aos entes federativos e às diretrizes do PROFOR/ONASP, que busca fortalecer as ouvidorias, qualificar os canais de manifestação, ampliar a capacidade institucional de atendimento e promover a participação social.",
         "publicoAlvo": "A Ouvidoria de Serviços Penais do Estado do Amazonas, como unidade beneficiária dos bens adquiridos, e, indiretamente, os usuários dos serviços penais e demais cidadãos que utilizam os canais de manifestação, acompanhamento e encaminhamento de demandas relacionadas aos serviços penais.",
         "problema": "Necessidade de fortalecimento e aparelhamento da Ouvidoria de Serviços Penais do Estado do Amazonas, de modo a ampliar sua capacidade institucional de atendimento e aprimorar os canais de recebimento, tratamento, acompanhamento e encaminhamento das manifestações relacionadas aos serviços penais, contribuindo para uma escuta institucional qualificada, maior transparência e fortalecimento da participação e do controle social.",
@@ -50199,7 +51083,7 @@ window.PROFOR_PUBLIC_DATA = {
         "version": 1,
         "status": "complete",
         "source": "siconv_plano_aplicacao_detalhado.zip",
-        "at": "2026-10-08T12:40:10.474Z",
+        "at": "2026-10-13T12:37:59.673Z",
         "received": 16,
         "accepted": 16,
         "rejected": 0,
@@ -57794,10 +58678,32 @@ window.PROFOR_PUBLIC_DATA = {
           "after": {
             "at": "2026-10-08T12:43:51.889Z"
           }
+        },
+        {
+          "at": "2026-10-13T12:40:51.229Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Usuário local",
+          "before": {
+            "at": "2026-10-08T12:43:51.889Z"
+          },
+          "after": {
+            "at": "2026-10-13T12:40:51.229Z"
+          }
+        },
+        {
+          "at": "2026-10-13T13:11:44.459Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Usuário local",
+          "before": {
+            "at": "2026-10-13T12:40:51.229Z"
+          },
+          "after": {
+            "at": "2026-10-13T13:11:44.459Z"
+          }
         }
       ],
       "textos": {
-        "at": "2026-10-08T12:43:51.889Z",
+        "at": "2026-10-13T13:11:44.459Z",
         "caracterizacao": "A Diretoria-Geral de Polícia Penal de Goiás tem interesse em melhorar as condições de trabalho dos servidores da Ouvidoria Adjunta e a estrutura destinada ao atendimento da sociedade. A SENAPPEN, por meio do PROFOR/ONASP, busca fortalecer as ouvidorias de serviços penais. A aquisição dos bens previstos na proposta atende a esses interesses ao qualificar o ambiente em que a Ouvidoria exerce suas atividades.",
         "publicoAlvo": "Ouvidoria Setoria da Polícia Penal do Estado de Goiás.",
         "problema": "Os equipamentos utlizidados pela ouvidoria setorial não atende adequadamente às necessidades físicas e tecnológicas exigidas para o registro das manifestações, além da ausência de itens que ofereçam condições de trabalho para os trabalhadores lotados na ouvidoria.",
@@ -57810,7 +58716,7 @@ window.PROFOR_PUBLIC_DATA = {
         "version": 1,
         "status": "complete",
         "source": "siconv_plano_aplicacao_detalhado.zip",
-        "at": "2026-10-08T12:40:10.474Z",
+        "at": "2026-10-13T12:37:59.673Z",
         "received": 25,
         "accepted": 25,
         "rejected": 0,
@@ -61914,10 +62820,32 @@ window.PROFOR_PUBLIC_DATA = {
               "fingerprint": "fnv64-v1:bdc02e16ef18e909"
             }
           }
+        },
+        {
+          "at": "2026-10-13T12:40:51.229Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Usuário local",
+          "before": {
+            "at": "2026-10-08T12:43:51.889Z"
+          },
+          "after": {
+            "at": "2026-10-13T12:40:51.229Z"
+          }
+        },
+        {
+          "at": "2026-10-13T13:11:44.459Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Usuário local",
+          "before": {
+            "at": "2026-10-13T12:40:51.229Z"
+          },
+          "after": {
+            "at": "2026-10-13T13:11:44.459Z"
+          }
         }
       ],
       "textos": {
-        "at": "2026-10-08T12:43:51.889Z",
+        "at": "2026-10-13T13:11:44.459Z",
         "caracterizacao": "A União, por meio da SENAPPEN, e o Estado de Roraima, por meio da SEJUC/RR, compartilham o interesse de fortalecer a Ouvidoria de Serviços Penais. O repasse federal permitirá adquirir bens permanentes para ampliar sua capacidade operacional, enquanto o Estado aportará a contrapartida financeira e assegurará a execução, a guarda, a destinação e a utilização dos bens na finalidade pactuada.",
         "publicoAlvo": "A Ouvidoria de Serviços Penais vinculada à SEJUC/RR é a beneficiária direta. O público-alvo compreende pessoas privadas de liberdade, seus familiares, egressos, servidores dos serviços penais e demais cidadãos que apresentem manifestações relacionadas à política penal do Estado de Roraima. Os bens também apoiarão a equipe responsável pelo recebimento, tratamento, encaminhamento e resposta às manifestações.",
         "problema": "A Ouvidoria de Serviços Penais de Roraima necessita ampliar sua capacidade material e tecnológica para atender às demandas institucionais e tratar manifestações com segurança, sigilo e rastreabilidade. O diagnóstico que fundamenta o PROFOR/ONASP identifica a necessidade de reforço das estruturas existentes, sem recursos disponíveis em convênios vigentes para essa finalidade. A proposta busca suprir as necessidades de aparelhamento identificadas pelo Estado.",
@@ -61930,7 +62858,7 @@ window.PROFOR_PUBLIC_DATA = {
         "version": 1,
         "status": "complete",
         "source": "siconv_plano_aplicacao_detalhado.zip",
-        "at": "2026-10-08T12:40:10.474Z",
+        "at": "2026-10-13T12:37:59.673Z",
         "received": 25,
         "accepted": 25,
         "rejected": 0,
@@ -62515,10 +63443,32 @@ window.PROFOR_PUBLIC_DATA = {
           "after": {
             "at": "2026-10-08T12:43:51.889Z"
           }
+        },
+        {
+          "at": "2026-10-13T12:40:51.229Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Usuário local",
+          "before": {
+            "at": "2026-10-08T12:43:51.889Z"
+          },
+          "after": {
+            "at": "2026-10-13T12:40:51.229Z"
+          }
+        },
+        {
+          "at": "2026-10-13T13:11:44.459Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Usuário local",
+          "before": {
+            "at": "2026-10-13T12:40:51.229Z"
+          },
+          "after": {
+            "at": "2026-10-13T13:11:44.459Z"
+          }
         }
       ],
       "textos": {
-        "at": "2026-10-08T12:43:51.889Z",
+        "at": "2026-10-13T13:11:44.459Z",
         "caracterizacao": "Fortalecer a Ouvidoria Penitenciária do Estado do Amapá, mediante estruturação física, tecnológica e administrativa, contribuindo para a continuidade dos serviços de escuta, acolhimento, registro, tratamento, encaminhamento e acompanhamento de manifestações, em consonância com as finalidades do PROFOR/ONASP 2026",
         "publicoAlvo": "Usuários dos serviços penais, pessoas que utilizam a Ouvidoria Penitenciária do Estado do Amapá para apresentar manifestações, solicitações, reclamações, denúncias, elogios ou outras demandas, além dos servidores responsáveis pelo atendimento, registro, tratamento, encaminhamento e acompanhamento das manifestações.",
         "problema": "A Ouvidoria Penitenciária necessita de melhores condições físicas, tecnológicas e administrativas para executar suas atividades de forma organizada e contínua. As limitações de infraestrutura, equipamentos, gestão documental, recursos tecnológicos e condições de atendimento dificultam a qualificação da escuta, do registro, do acompanhamento das manifestações e da produção de informações institucionais.",
@@ -62534,7 +63484,7 @@ window.PROFOR_PUBLIC_DATA = {
         "version": 1,
         "status": "complete",
         "source": "siconv_plano_aplicacao_detalhado.zip",
-        "at": "2026-10-08T12:40:10.474Z",
+        "at": "2026-10-13T12:37:59.673Z",
         "received": 5,
         "accepted": 5,
         "rejected": 0,
@@ -65243,10 +66193,32 @@ window.PROFOR_PUBLIC_DATA = {
               "fingerprint": "fnv64-v1:bdc02e16ef18e909"
             }
           }
+        },
+        {
+          "at": "2026-10-13T12:40:51.229Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Usuário local",
+          "before": {
+            "at": "2026-10-08T12:43:51.889Z"
+          },
+          "after": {
+            "at": "2026-10-13T12:40:51.229Z"
+          }
+        },
+        {
+          "at": "2026-10-13T13:11:44.459Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Usuário local",
+          "before": {
+            "at": "2026-10-13T12:40:51.229Z"
+          },
+          "after": {
+            "at": "2026-10-13T13:11:44.459Z"
+          }
         }
       ],
       "textos": {
-        "at": "2026-10-08T12:43:51.889Z",
+        "at": "2026-10-13T13:11:44.459Z",
         "caracterizacao": "Integração de esforços entre o Ministério da Justiça/SENAPPEN e a SEAP/PA para a implantação, estruturação física e aparelhamento inicial da Ouvidoria de Serviços Penais. A cooperação atende às diretrizes do PROFOR/ONASP e do Plano Pena Justa, estabelecendo um canal institucional permanente de governança penitenciária, fiscalização, proteção dos direitos humanos e acesso à justiça na execução penal paraense.",
         "publicoAlvo": "Pessoas privadas de liberdade, seus familiares, operadores do direito, órgãos de controle (MP, Defensoria, Judiciário), servidores penitenciários e a sociedade civil.",
         "problema": "Inexistência de uma Ouvidoria especializada em serviços penais no Estado do Pará, resultando na ausência de infraestrutura física e tecnológica própria para acolhimento presencial, no déficit de canais estruturados para o tratamento sigiloso e célere de manifestações relativas à execução penal e na limitação de meios materiais para realização de vistorias e inspeções técnicas nas unidades prisionais do Estado.",
@@ -65259,7 +66231,7 @@ window.PROFOR_PUBLIC_DATA = {
         "version": 1,
         "status": "complete",
         "source": "siconv_plano_aplicacao_detalhado.zip",
-        "at": "2026-10-08T12:40:10.474Z",
+        "at": "2026-10-13T12:37:59.673Z",
         "received": 10,
         "accepted": 10,
         "rejected": 0,
@@ -66664,10 +67636,32 @@ window.PROFOR_PUBLIC_DATA = {
           "after": {
             "at": "2026-10-08T12:43:51.889Z"
           }
+        },
+        {
+          "at": "2026-10-13T12:40:51.229Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Usuário local",
+          "before": {
+            "at": "2026-10-08T12:43:51.889Z"
+          },
+          "after": {
+            "at": "2026-10-13T12:40:51.229Z"
+          }
+        },
+        {
+          "at": "2026-10-13T13:11:44.459Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Usuário local",
+          "before": {
+            "at": "2026-10-13T12:40:51.229Z"
+          },
+          "after": {
+            "at": "2026-10-13T13:11:44.459Z"
+          }
         }
       ],
       "textos": {
-        "at": "2026-10-08T12:43:51.889Z",
+        "at": "2026-10-13T13:11:44.459Z",
         "caracterizacao": "A celebração do convênio entre a SEAP/BA e a SENAPPEN atende a interesses recíprocos ao fortalecer a Ouvidoria dos Serviços Penais, promovendo sua estruturação física, tecnológica e operacional. A parceria contribuirá para aprimorar o atendimento, a participação social, a transparência e os mecanismos de controle, em consonância com as diretrizes nacionais de aperfeiçoamento da gestão penitenciária.",
         "publicoAlvo": "O público-alvo beneficiado pelo convênio compreende, direta e indiretamente, os usuários dos serviços penitenciários do Estado da Bahia, incluindo pessoas privadas de liberdade, seus familiares, servidores públicos, visitantes, egressos e demais cidadãos que utilizam os canais da Ouvidoria. A iniciativa também beneficiará os servidores da Ouvidoria da SEAP.",
         "problema": "A Ouvidoria da SEAP recebe denúncias, reclamações, solicitações e pedidos de informação sobre serviços e unidades prisionais. A insuficiência de estrutura física, tecnológica e operacional limita o adequado tratamento e acompanhamento das demandas. A aquisição dos bens de capital permitirá melhorar as condições de trabalho, qualificar o atendimento e fortalecer a escuta social, a transparência, o controle e a participação dos usuários dos serviços penais.",
@@ -66680,7 +67674,7 @@ window.PROFOR_PUBLIC_DATA = {
         "version": 1,
         "status": "complete",
         "source": "siconv_plano_aplicacao_detalhado.zip",
-        "at": "2026-10-08T12:40:10.474Z",
+        "at": "2026-10-13T12:37:59.673Z",
         "received": 18,
         "accepted": 18,
         "rejected": 0,
@@ -66689,8 +67683,8 @@ window.PROFOR_PUBLIC_DATA = {
     }
   ],
   "sync": {
-    "at": "2026-10-08T12:43:51.889Z",
-    "source": "https://api-publica.transferegov.gestao.gov.br/downloads · sincronização completa (com PAD) · 4 arquivo(s)",
+    "at": "2026-10-13T13:11:44.459Z",
+    "source": "https://api-publica.transferegov.gestao.gov.br/downloads · sincronização completa (com PAD) · 4 arquivo(s) · extração reaproveitada pelo servidor",
     "count": 19
   },
   "lastBackup": null,
@@ -92240,6 +93234,899 @@ window.PROFOR_PUBLIC_DATA = {
       ],
       "reconstructed": false,
       "source": "https://api-publica.transferegov.gestao.gov.br/downloads · sincronização completa (com PAD) · 4 arquivo(s)",
+      "proposals": 19
+    },
+    {
+      "id": "095dbe75d3c96c1709ffc9792abb61554fd54f7640b51dd1f735d6644e6e1abf",
+      "at": "2026-10-13T12:42:26.956Z",
+      "date": "2026-10-13",
+      "changes": [
+        {
+          "id": "2242725",
+          "numero": "35053/2026",
+          "uf": "SE",
+          "field": "situacao",
+          "before": "Proposta/Plano de Trabalho Enviado para Análise",
+          "after": "Proposta/Plano de Trabalho em Análise"
+        },
+        {
+          "id": "2242725",
+          "numero": "35053/2026",
+          "uf": "SE",
+          "field": "pad",
+          "before": [
+            {
+              "id": "17435371",
+              "descricao": "Telefone Celular",
+              "quantidade": "3",
+              "unitario": 575000,
+              "total": 1725000
+            },
+            {
+              "id": "17435375",
+              "descricao": "Purificador de Água",
+              "quantidade": "1",
+              "unitario": 130000,
+              "total": 130000
+            },
+            {
+              "id": "17435433",
+              "descricao": "Armário Alto 2 Portas com Chave",
+              "quantidade": "1",
+              "unitario": 110000,
+              "total": 110000
+            },
+            {
+              "id": "17435434",
+              "descricao": "Mesa de Escritório em L",
+              "quantidade": "3",
+              "unitario": 300000,
+              "total": 900000
+            },
+            {
+              "id": "17435432",
+              "descricao": "Longarina 3 Lugares",
+              "quantidade": "1",
+              "unitario": 200000,
+              "total": 200000
+            },
+            {
+              "id": "17435376",
+              "descricao": "Cadeira de Escritório",
+              "quantidade": "3",
+              "unitario": 185000,
+              "total": 555000
+            },
+            {
+              "id": "17435374",
+              "descricao": "Cafeteira Expresso",
+              "quantidade": "1",
+              "unitario": 530000,
+              "total": 530000
+            },
+            {
+              "id": "17439632",
+              "descricao": "Saldo Residual",
+              "quantidade": "1",
+              "unitario": 597021,
+              "total": 597021
+            },
+            {
+              "id": "17435270",
+              "descricao": "Totem de Autoatendimento",
+              "quantidade": "15",
+              "unitario": 524000,
+              "total": 7860000
+            },
+            {
+              "id": "17435311",
+              "descricao": "Barra de video conferencia",
+              "quantidade": "1",
+              "unitario": 440000,
+              "total": 440000
+            },
+            {
+              "id": "17435310",
+              "descricao": "Fragmentadora de Papel",
+              "quantidade": "1",
+              "unitario": 252000,
+              "total": 252000
+            },
+            {
+              "id": "17435309",
+              "descricao": "Nobreaks",
+              "quantidade": "2",
+              "unitario": 110000,
+              "total": 220000
+            },
+            {
+              "id": "17435312",
+              "descricao": "TV 50'",
+              "quantidade": "1",
+              "unitario": 250000,
+              "total": 250000
+            },
+            {
+              "id": "17435314",
+              "descricao": "Telefone de Mesa",
+              "quantidade": "3",
+              "unitario": 48000,
+              "total": 144000
+            },
+            {
+              "id": "17435308",
+              "descricao": "Tablets",
+              "quantidade": "3",
+              "unitario": 580000,
+              "total": 1740000
+            },
+            {
+              "id": "17435303",
+              "descricao": "Notebook",
+              "quantidade": "3",
+              "unitario": 678000,
+              "total": 2034000
+            },
+            {
+              "id": "17435291",
+              "descricao": "Impressora Multifuncional",
+              "quantidade": "1",
+              "unitario": 475000,
+              "total": 475000
+            },
+            {
+              "id": "17435437",
+              "descricao": "Cadeira Fixa",
+              "quantidade": "4",
+              "unitario": 45000,
+              "total": 180000
+            },
+            {
+              "id": "17435305",
+              "descricao": "Monitor para Computador",
+              "quantidade": "4",
+              "unitario": 52000,
+              "total": 208000
+            },
+            {
+              "id": "17435307",
+              "descricao": "Computador",
+              "quantidade": "2",
+              "unitario": 556000,
+              "total": 1112000
+            },
+            {
+              "id": "17435372",
+              "descricao": "Frigobar 120L",
+              "quantidade": "1",
+              "unitario": 113000,
+              "total": 113000
+            },
+            {
+              "id": "17435438",
+              "descricao": "Ar Condicionado 12000 BTUs",
+              "quantidade": "1",
+              "unitario": 245000,
+              "total": 245000
+            }
+          ],
+          "after": [
+            {
+              "id": "17435433",
+              "descricao": "Armário Alto 2 Portas com Chave",
+              "quantidade": "1",
+              "unitario": 110000,
+              "total": 110000
+            },
+            {
+              "id": "17435434",
+              "descricao": "Mesa de Escritório em L",
+              "quantidade": "3",
+              "unitario": 300000,
+              "total": 900000
+            },
+            {
+              "id": "17435432",
+              "descricao": "Longarina 3 Lugares",
+              "quantidade": "1",
+              "unitario": 200000,
+              "total": 200000
+            },
+            {
+              "id": "17435438",
+              "descricao": "Ar Condicionado 12000 BTUs",
+              "quantidade": "1",
+              "unitario": 245000,
+              "total": 245000
+            },
+            {
+              "id": "17439632",
+              "descricao": "Saldo Residual",
+              "quantidade": "1",
+              "unitario": 597021,
+              "total": 597021
+            },
+            {
+              "id": "17435307",
+              "descricao": "Computador",
+              "quantidade": "2",
+              "unitario": 556000,
+              "total": 1112000
+            },
+            {
+              "id": "17435308",
+              "descricao": "Tablets",
+              "quantidade": "3",
+              "unitario": 580000,
+              "total": 1740000
+            },
+            {
+              "id": "17435305",
+              "descricao": "Monitor para Computador",
+              "quantidade": "4",
+              "unitario": 52000,
+              "total": 208000
+            },
+            {
+              "id": "17435309",
+              "descricao": "Nobreaks",
+              "quantidade": "2",
+              "unitario": 110000,
+              "total": 220000
+            },
+            {
+              "id": "17435303",
+              "descricao": "Notebook",
+              "quantidade": "3",
+              "unitario": 678000,
+              "total": 2034000
+            },
+            {
+              "id": "17435270",
+              "descricao": "Totem de Autoatendimento",
+              "quantidade": "15",
+              "unitario": 524000,
+              "total": 7860000
+            },
+            {
+              "id": "17435310",
+              "descricao": "Fragmentadora de Papel",
+              "quantidade": "1",
+              "unitario": 252000,
+              "total": 252000
+            },
+            {
+              "id": "17435291",
+              "descricao": "Impressora Multifuncional",
+              "quantidade": "1",
+              "unitario": 475000,
+              "total": 475000
+            },
+            {
+              "id": "17435311",
+              "descricao": "Barra de video conferencia",
+              "quantidade": "1",
+              "unitario": 440000,
+              "total": 440000
+            },
+            {
+              "id": "17435374",
+              "descricao": "Cafeteira Expresso",
+              "quantidade": "1",
+              "unitario": 530000,
+              "total": 530000
+            },
+            {
+              "id": "17435372",
+              "descricao": "Frigobar 120L",
+              "quantidade": "1",
+              "unitario": 113000,
+              "total": 113000
+            },
+            {
+              "id": "17435375",
+              "descricao": "Purificador de Água",
+              "quantidade": "1",
+              "unitario": 130000,
+              "total": 130000
+            },
+            {
+              "id": "17435371",
+              "descricao": "Telefone Celular",
+              "quantidade": "3",
+              "unitario": 575000,
+              "total": 1725000
+            },
+            {
+              "id": "17435312",
+              "descricao": "TV 50'",
+              "quantidade": "1",
+              "unitario": 250000,
+              "total": 250000
+            },
+            {
+              "id": "17435376",
+              "descricao": "Cadeira de Escritório",
+              "quantidade": "3",
+              "unitario": 185000,
+              "total": 555000
+            },
+            {
+              "id": "17435314",
+              "descricao": "Telefone de Mesa",
+              "quantidade": "3",
+              "unitario": 48000,
+              "total": 144000
+            },
+            {
+              "id": "17435437",
+              "descricao": "Cadeira Fixa",
+              "quantidade": "4",
+              "unitario": 45000,
+              "total": 180000
+            }
+          ]
+        },
+        {
+          "id": "2243912",
+          "numero": "35405/2026",
+          "uf": "PE",
+          "field": "situacao",
+          "before": "Proposta/Plano de Trabalho em Complementação",
+          "after": "Proposta/Plano de Trabalho Complementado Enviado para Análise"
+        },
+        {
+          "id": "2243912",
+          "numero": "35405/2026",
+          "uf": "PE",
+          "field": "pad",
+          "before": [
+            {
+              "id": "17447619",
+              "descricao": "Notebook parauso institucional e atendimento técnico",
+              "quantidade": "11",
+              "unitario": 614511,
+              "total": 6759621
+            },
+            {
+              "id": "17448988",
+              "descricao": "Câmera fotográfica institucional ou gravador digital destinado ao registro técnico de inspeçõese visitas",
+              "quantidade": "3",
+              "unitario": 358594,
+              "total": 1075782
+            },
+            {
+              "id": "17449009",
+              "descricao": "Armário ou arquivo com chave para guarda de documentos e informações sensíveis",
+              "quantidade": "6",
+              "unitario": 86362,
+              "total": 518172
+            },
+            {
+              "id": "17449119",
+              "descricao": "Saldo remanescente",
+              "quantidade": "1",
+              "unitario": 1892,
+              "total": 1892
+            },
+            {
+              "id": "17448984",
+              "descricao": "Tablet destinado ao atendimento, às inspeções, às visitas técnicas ou à coleta institucional de informações",
+              "quantidade": "9",
+              "unitario": 110452,
+              "total": 994068
+            },
+            {
+              "id": "17449030",
+              "descricao": "Cadeira de escritório destinada à equipe ou ao atendimento dos usuários",
+              "quantidade": "20",
+              "unitario": 34814,
+              "total": 696280
+            },
+            {
+              "id": "17448983",
+              "descricao": "Cadeira longarina para recepção e acomodação do público /usuários",
+              "quantidade": "4",
+              "unitario": 54379,
+              "total": 217516
+            },
+            {
+              "id": "17448854",
+              "descricao": "Desktop(Computador de mesa com periféricos)",
+              "quantidade": "14",
+              "unitario": 441300,
+              "total": 6178200
+            },
+            {
+              "id": "17448831",
+              "descricao": "Televisão (TV)para apresentações,monitoramento e capacitação",
+              "quantidade": "2",
+              "unitario": 498296,
+              "total": 996592
+            },
+            {
+              "id": "17448857",
+              "descricao": "Impressora ou equipamento multifuncional destinado às atividades da ouvidoria",
+              "quantidade": "2",
+              "unitario": 385000,
+              "total": 770000
+            },
+            {
+              "id": "17448960",
+              "descricao": "Fragmentadora de papel destinada à eliminação segura  e à proteção de informações sensíveis",
+              "quantidade": "3",
+              "unitario": 115737,
+              "total": 347211
+            },
+            {
+              "id": "17449052",
+              "descricao": "Mesa ou estação de trabalho destinada à equipe da Ouvidoria de Serviços Penais",
+              "quantidade": "6",
+              "unitario": 99998,
+              "total": 599988
+            },
+            {
+              "id": "17448884",
+              "descricao": "Ar-condicionado 12.000 BTUs para climatização do ambiente de atendimento",
+              "quantidade": "3",
+              "unitario": 288233,
+              "total": 864699
+            }
+          ],
+          "after": [
+            {
+              "id": "17448854",
+              "descricao": "Desktop(Computador de mesa com periféricos)",
+              "quantidade": "14",
+              "unitario": 441300,
+              "total": 6178200
+            },
+            {
+              "id": "17448857",
+              "descricao": "Impressora ou equipamento multifuncional destinado às atividades da ouvidoria",
+              "quantidade": "2",
+              "unitario": 385000,
+              "total": 770000
+            },
+            {
+              "id": "17448831",
+              "descricao": "Televisão (TV)para apresentações,monitoramento e capacitação",
+              "quantidade": "2",
+              "unitario": 498296,
+              "total": 996592
+            },
+            {
+              "id": "17448960",
+              "descricao": "Fragmentadora de papel destinada à eliminação segura  e à proteção de informações sensíveis",
+              "quantidade": "3",
+              "unitario": 115737,
+              "total": 347211
+            },
+            {
+              "id": "17448884",
+              "descricao": "Ar-condicionado 12.000 BTUs para climatização do ambiente de atendimento",
+              "quantidade": "3",
+              "unitario": 288233,
+              "total": 864699
+            },
+            {
+              "id": "17449052",
+              "descricao": "Mesa ou estação de trabalho destinada à equipe da Ouvidoria de Serviços Penais",
+              "quantidade": "6",
+              "unitario": 99998,
+              "total": 599988
+            },
+            {
+              "id": "17448988",
+              "descricao": "Câmera fotográfica institucional ou gravador digital destinado ao registro técnico de inspeçõese visitas",
+              "quantidade": "3",
+              "unitario": 358594,
+              "total": 1075782
+            },
+            {
+              "id": "17449119",
+              "descricao": "Saldo remanescente",
+              "quantidade": "1",
+              "unitario": 1892,
+              "total": 1892
+            },
+            {
+              "id": "17449009",
+              "descricao": "Armário ou arquivo com chave para guarda de documentos e informações sensíveis",
+              "quantidade": "6",
+              "unitario": 86362,
+              "total": 518172
+            },
+            {
+              "id": "17449030",
+              "descricao": "Cadeira de escritório destinada à equipe ou ao atendimento dos usuários",
+              "quantidade": "20",
+              "unitario": 34814,
+              "total": 696280
+            },
+            {
+              "id": "17448983",
+              "descricao": "Cadeira longarina para recepção e acomodação do público /usuários",
+              "quantidade": "4",
+              "unitario": 54379,
+              "total": 217516
+            },
+            {
+              "id": "17448984",
+              "descricao": "Tablet destinado ao atendimento, às inspeções, às visitas técnicas ou à coleta institucional de informações",
+              "quantidade": "9",
+              "unitario": 110452,
+              "total": 994068
+            },
+            {
+              "id": "17447619",
+              "descricao": "Notebook parauso institucional e atendimento técnico",
+              "quantidade": "11",
+              "unitario": 614511,
+              "total": 6759621
+            }
+          ]
+        }
+      ],
+      "activity": [
+        {
+          "at": "2026-10-13T12:37:45.733Z",
+          "message": "Iniciando atualização de propostas, PAD e textos oficiais."
+        },
+        {
+          "at": "2026-10-13T12:37:59.367Z",
+          "message": "Consultando a lista de arquivos oficiais…"
+        },
+        {
+          "at": "2026-10-13T12:37:59.710Z",
+          "message": "Baixando siconv_programa.zip…"
+        },
+        {
+          "at": "2026-10-13T12:38:01.029Z",
+          "message": "Baixando siconv_programa.zip… 337,6 KB de 10,6 MB (0%)."
+        },
+        {
+          "at": "2026-10-13T12:38:01.899Z",
+          "message": "siconv_programa.zip: download concluído (11142370 bytes)."
+        },
+        {
+          "at": "2026-10-13T12:38:01.899Z",
+          "message": "Baixando siconv_programa_proposta.zip…"
+        },
+        {
+          "at": "2026-10-13T12:38:03.848Z",
+          "message": "siconv_programa_proposta.zip: download concluído (6504991 bytes)."
+        },
+        {
+          "at": "2026-10-13T12:38:03.848Z",
+          "message": "Baixando siconv_proposta.zip…"
+        },
+        {
+          "at": "2026-10-13T12:38:06.023Z",
+          "message": "Baixando siconv_proposta.zip… 3,9 MB de 196,4 MB (0%)."
+        },
+        {
+          "at": "2026-10-13T12:38:08.022Z",
+          "message": "Baixando siconv_proposta.zip… 31,5 MB de 196,4 MB (10%)."
+        },
+        {
+          "at": "2026-10-13T12:38:09.022Z",
+          "message": "Baixando siconv_proposta.zip… 45,3 MB de 196,4 MB (20%)."
+        },
+        {
+          "at": "2026-10-13T12:38:10.026Z",
+          "message": "Baixando siconv_proposta.zip… 61,1 MB de 196,4 MB (30%)."
+        },
+        {
+          "at": "2026-10-13T12:38:12.029Z",
+          "message": "Baixando siconv_proposta.zip… 90,6 MB de 196,4 MB (40%)."
+        },
+        {
+          "at": "2026-10-13T12:38:13.020Z",
+          "message": "Baixando siconv_proposta.zip… 104,4 MB de 196,4 MB (50%)."
+        },
+        {
+          "at": "2026-10-13T12:38:14.021Z",
+          "message": "Baixando siconv_proposta.zip… 118,2 MB de 196,4 MB (60%)."
+        },
+        {
+          "at": "2026-10-13T12:38:16.024Z",
+          "message": "Baixando siconv_proposta.zip… 147,7 MB de 196,4 MB (70%)."
+        },
+        {
+          "at": "2026-10-13T12:38:17.023Z",
+          "message": "Baixando siconv_proposta.zip… 161,5 MB de 196,4 MB (80%)."
+        },
+        {
+          "at": "2026-10-13T12:38:19.032Z",
+          "message": "Baixando siconv_proposta.zip… 187,1 MB de 196,4 MB (90%)."
+        },
+        {
+          "at": "2026-10-13T12:38:19.549Z",
+          "message": "siconv_proposta.zip: download concluído (205902744 bytes)."
+        },
+        {
+          "at": "2026-10-13T12:38:19.549Z",
+          "message": "Baixando siconv_plano_aplicacao_detalhado.zip…"
+        },
+        {
+          "at": "2026-10-13T12:38:22.030Z",
+          "message": "Baixando siconv_plano_aplicacao_detalhado.zip… 11,2 MB de 278,6 MB (0%)."
+        },
+        {
+          "at": "2026-10-13T12:38:24.020Z",
+          "message": "Baixando siconv_plano_aplicacao_detalhado.zip… 39,1 MB de 278,6 MB (10%)."
+        },
+        {
+          "at": "2026-10-13T12:38:26.026Z",
+          "message": "Baixando siconv_plano_aplicacao_detalhado.zip… 67,1 MB de 278,6 MB (20%)."
+        },
+        {
+          "at": "2026-10-13T12:38:28.027Z",
+          "message": "Baixando siconv_plano_aplicacao_detalhado.zip… 95,1 MB de 278,6 MB (30%)."
+        },
+        {
+          "at": "2026-10-13T12:38:29.028Z",
+          "message": "Baixando siconv_plano_aplicacao_detalhado.zip… 111,9 MB de 278,6 MB (40%)."
+        },
+        {
+          "at": "2026-10-13T12:38:31.032Z",
+          "message": "Baixando siconv_plano_aplicacao_detalhado.zip… 139,8 MB de 278,6 MB (50%)."
+        },
+        {
+          "at": "2026-10-13T12:38:33.025Z",
+          "message": "Baixando siconv_plano_aplicacao_detalhado.zip… 167,8 MB de 278,6 MB (60%)."
+        },
+        {
+          "at": "2026-10-13T12:38:36.026Z",
+          "message": "Baixando siconv_plano_aplicacao_detalhado.zip… 207 MB de 278,6 MB (70%)."
+        },
+        {
+          "at": "2026-10-13T12:38:37.017Z",
+          "message": "Baixando siconv_plano_aplicacao_detalhado.zip… 223,7 MB de 278,6 MB (80%)."
+        },
+        {
+          "at": "2026-10-13T12:38:40.037Z",
+          "message": "Baixando siconv_plano_aplicacao_detalhado.zip… 262,9 MB de 278,6 MB (90%)."
+        },
+        {
+          "at": "2026-10-13T12:38:41.041Z",
+          "message": "siconv_plano_aplicacao_detalhado.zip: download concluído (292142009 bytes)."
+        },
+        {
+          "at": "2026-10-13T12:38:41.042Z",
+          "message": "Lendo siconv_programa.zip e localizando o programa…"
+        },
+        {
+          "at": "2026-10-13T12:38:42.036Z",
+          "message": "Lendo siconv_programa.zip e localizando o programa… 37,1 MB de 336,9 MB (10%)."
+        },
+        {
+          "at": "2026-10-13T12:38:43.032Z",
+          "message": "Lendo siconv_programa.zip e localizando o programa… 104,6 MB de 336,9 MB (30%)."
+        },
+        {
+          "at": "2026-10-13T12:38:44.022Z",
+          "message": "Lendo siconv_programa.zip e localizando o programa… 168,8 MB de 336,9 MB (50%)."
+        },
+        {
+          "at": "2026-10-13T12:38:45.027Z",
+          "message": "Lendo siconv_programa.zip e localizando o programa… 232,9 MB de 336,9 MB (60%)."
+        },
+        {
+          "at": "2026-10-13T12:38:46.046Z",
+          "message": "Lendo siconv_programa.zip e localizando o programa… 293,6 MB de 336,9 MB (80%)."
+        },
+        {
+          "at": "2026-10-13T12:38:46.786Z",
+          "message": "siconv_programa.zip: 1257690 linha(s) lida(s)."
+        },
+        {
+          "at": "2026-10-13T12:38:46.786Z",
+          "message": "Lendo siconv_programa_proposta.zip e cruzando vínculos…"
+        },
+        {
+          "at": "2026-10-13T12:38:47.035Z",
+          "message": "Lendo siconv_programa_proposta.zip e cruzando vínculos… 4 MB de 15,8 MB (20%)."
+        },
+        {
+          "at": "2026-10-13T12:38:47.643Z",
+          "message": "siconv_programa_proposta.zip: 1160061 linha(s) lida(s)."
+        },
+        {
+          "at": "2026-10-13T12:38:47.643Z",
+          "message": "Lendo siconv_proposta.zip e selecionando as propostas…"
+        },
+        {
+          "at": "2026-10-13T12:38:48.035Z",
+          "message": "Lendo siconv_proposta.zip e selecionando as propostas… 21,7 MB de 720,7 MB (0%)."
+        },
+        {
+          "at": "2026-10-13T12:38:49.021Z",
+          "message": "Lendo siconv_proposta.zip e selecionando as propostas… 79,4 MB de 720,7 MB (10%)."
+        },
+        {
+          "at": "2026-10-13T12:38:51.021Z",
+          "message": "Lendo siconv_proposta.zip e selecionando as propostas… 187,7 MB de 720,7 MB (20%)."
+        },
+        {
+          "at": "2026-10-13T12:38:52.033Z",
+          "message": "Lendo siconv_proposta.zip e selecionando as propostas… 245,4 MB de 720,7 MB (30%)."
+        },
+        {
+          "at": "2026-10-13T12:38:53.016Z",
+          "message": "Lendo siconv_proposta.zip e selecionando as propostas… 303,2 MB de 720,7 MB (40%)."
+        },
+        {
+          "at": "2026-10-13T12:39:00.149Z",
+          "message": "siconv_proposta.zip: 1158705 linha(s) lida(s)."
+        },
+        {
+          "at": "2026-10-13T12:39:00.149Z",
+          "message": "Lendo siconv_plano_aplicacao_detalhado.zip e selecionando itens do PAD…"
+        },
+        {
+          "at": "2026-10-13T12:39:02.033Z",
+          "message": "Lendo siconv_plano_aplicacao_detalhado.zip e selecionando itens do PAD… 98,9 MB de 1.234,5 MB (0%)."
+        },
+        {
+          "at": "2026-10-13T12:39:23.046Z",
+          "message": "siconv_plano_aplicacao_detalhado.zip: 4904710 linha(s) lida(s)."
+        },
+        {
+          "at": "2026-10-13T12:39:23.046Z",
+          "message": "Validando as propostas e preparando a resposta…"
+        },
+        {
+          "at": "2026-10-13T12:39:23.089Z",
+          "message": "Consultando a lista para os textos oficiais…"
+        },
+        {
+          "at": "2026-10-13T12:39:23.360Z",
+          "message": "Baixando siconv_justificativas_proposta.zip…"
+        },
+        {
+          "at": "2026-10-13T12:40:02.108Z",
+          "message": "Baixando siconv_justificativas_proposta.zip… 516,3 MB de 716,2 MB (70%)."
+        },
+        {
+          "at": "2026-10-13T12:40:15.568Z",
+          "message": "siconv_justificativas_proposta.zip: download concluído (750999088 bytes)."
+        },
+        {
+          "at": "2026-10-13T12:40:15.568Z",
+          "message": "Lendo siconv_justificativas_proposta.zip e selecionando textos das propostas…"
+        },
+        {
+          "at": "2026-10-13T12:40:50.890Z",
+          "message": "siconv_justificativas_proposta.zip: 1158705 linha(s) lida(s); 19 proposta(s) com textos."
+        },
+        {
+          "at": "2026-10-13T12:40:50.891Z",
+          "message": "Dados e textos recebidos. Aguardando gravação no banco local…"
+        },
+        {
+          "at": "2026-10-13T12:40:51.132Z",
+          "message": "Download concluído. Validando e gravando os dados locais."
+        },
+        {
+          "at": "2026-10-13T12:40:51.143Z",
+          "message": "Validando 19 proposta(s) recebida(s)."
+        },
+        {
+          "at": "2026-10-13T12:40:51.229Z",
+          "message": "Gravando propostas, PAD e textos no banco local."
+        },
+        {
+          "at": "2026-10-13T12:42:26.956Z",
+          "message": "Gravação confirmada no banco local."
+        }
+      ],
+      "reconstructed": false,
+      "source": "https://api-publica.transferegov.gestao.gov.br/downloads · sincronização completa (com PAD) · 4 arquivo(s)",
+      "proposals": 19
+    },
+    {
+      "id": "89b89e7c4a93c56ec05a19a28f67770a6b5a10c997eec55e9d5e894ac9677d2b",
+      "at": "2026-10-13T13:11:57.023Z",
+      "date": "2026-10-13",
+      "changes": [],
+      "activity": [
+        {
+          "at": "2026-10-13T13:11:04.774Z",
+          "message": "Iniciando atualização de propostas, PAD e textos oficiais."
+        },
+        {
+          "at": "2026-10-13T13:11:12.050Z",
+          "message": "Consultando a lista de arquivos oficiais…"
+        },
+        {
+          "at": "2026-10-13T13:11:12.412Z",
+          "message": "Extração recente encontrada no cache local; preparando os dados…"
+        },
+        {
+          "at": "2026-10-13T13:11:12.413Z",
+          "message": "Consultando a lista para os textos oficiais…"
+        },
+        {
+          "at": "2026-10-13T13:11:12.457Z",
+          "message": "Baixando siconv_justificativas_proposta.zip…"
+        },
+        {
+          "at": "2026-10-13T13:11:12.483Z",
+          "message": "siconv_justificativas_proposta.zip: cópia local reutilizada (750999088 bytes)."
+        },
+        {
+          "at": "2026-10-13T13:11:12.483Z",
+          "message": "Lendo siconv_justificativas_proposta.zip e selecionando textos das propostas…"
+        },
+        {
+          "at": "2026-10-13T13:11:13.600Z",
+          "message": "Lendo siconv_justificativas_proposta.zip e selecionando textos das propostas… 74,6 MB de 2.485,9 MB (0%)."
+        },
+        {
+          "at": "2026-10-13T13:11:16.795Z",
+          "message": "Lendo siconv_justificativas_proposta.zip e selecionando textos das propostas… 298,3 MB de 2.485,9 MB (10%)."
+        },
+        {
+          "at": "2026-10-13T13:11:19.997Z",
+          "message": "Lendo siconv_justificativas_proposta.zip e selecionando textos das propostas… 522 MB de 2.485,9 MB (20%)."
+        },
+        {
+          "at": "2026-10-13T13:11:23.195Z",
+          "message": "Lendo siconv_justificativas_proposta.zip e selecionando textos das propostas… 795,5 MB de 2.485,9 MB (30%)."
+        },
+        {
+          "at": "2026-10-13T13:11:25.605Z",
+          "message": "Lendo siconv_justificativas_proposta.zip e selecionando textos das propostas… 1.044,1 MB de 2.485,9 MB (40%)."
+        },
+        {
+          "at": "2026-10-13T13:11:28.799Z",
+          "message": "Lendo siconv_justificativas_proposta.zip e selecionando textos das propostas… 1.267,8 MB de 2.485,9 MB (50%)."
+        },
+        {
+          "at": "2026-10-13T13:11:31.991Z",
+          "message": "Lendo siconv_justificativas_proposta.zip e selecionando textos das propostas… 1.516,4 MB de 2.485,9 MB (60%)."
+        },
+        {
+          "at": "2026-10-13T13:11:35.202Z",
+          "message": "Lendo siconv_justificativas_proposta.zip e selecionando textos das propostas… 1.789,9 MB de 2.485,9 MB (70%)."
+        },
+        {
+          "at": "2026-10-13T13:11:38.413Z",
+          "message": "Lendo siconv_justificativas_proposta.zip e selecionando textos das propostas… 2.013,6 MB de 2.485,9 MB (80%)."
+        },
+        {
+          "at": "2026-10-13T13:11:41.600Z",
+          "message": "Lendo siconv_justificativas_proposta.zip e selecionando textos das propostas… 2.262,2 MB de 2.485,9 MB (90%)."
+        },
+        {
+          "at": "2026-10-13T13:11:44.393Z",
+          "message": "siconv_justificativas_proposta.zip: 1158705 linha(s) lida(s); 19 proposta(s) com textos."
+        },
+        {
+          "at": "2026-10-13T13:11:44.394Z",
+          "message": "Dados e textos recebidos. Aguardando gravação no banco local…"
+        },
+        {
+          "at": "2026-10-13T13:11:44.428Z",
+          "message": "Download concluído. Validando e gravando os dados locais."
+        },
+        {
+          "at": "2026-10-13T13:11:44.430Z",
+          "message": "Validando 19 proposta(s) recebida(s)."
+        },
+        {
+          "at": "2026-10-13T13:11:44.460Z",
+          "message": "Gravando propostas, PAD e textos no banco local."
+        },
+        {
+          "at": "2026-10-13T13:11:57.023Z",
+          "message": "Gravação confirmada no banco local."
+        }
+      ],
+      "reconstructed": false,
+      "source": "https://api-publica.transferegov.gestao.gov.br/downloads · sincronização completa (com PAD) · 4 arquivo(s) · extração reaproveitada pelo servidor",
       "proposals": 19
     }
   ]
