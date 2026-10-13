@@ -1,9 +1,9 @@
-/** Snapshot integral de consulta PROFOR/ONASP 2026. Gerado em 2026-10-13T13:17:28.772Z.
+/** Snapshot integral de consulta PROFOR/ONASP 2026. Gerado em 2026-10-13T16:56:25.215Z.
  * Não editar manualmente. Use tools/build_public_docs.cjs. */
-window.PROFOR_PUBLIC_UPDATED_AT = "2026-10-13T13:17:28.772Z";
+window.PROFOR_PUBLIC_UPDATED_AT = "2026-10-13T16:56:25.215Z";
 window.PROFOR_PUBLIC_DATA = {
   "schemaVersion": 1,
-  "revision": 397,
+  "revision": 398,
   "proposals": [
     {
       "id": "2243618",
@@ -63995,11 +63995,11 @@ window.PROFOR_PUBLIC_DATA = {
         },
         "pad": {
           "17455398": {
-            "status": "diligencia",
+            "status": "ok",
             "note": "Anexar pesquisa mercadológica.",
             "document": "",
             "url": "",
-            "at": "2026-10-05T18:31:38.636Z",
+            "at": "2026-10-13T16:52:39.189Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
@@ -64009,11 +64009,11 @@ window.PROFOR_PUBLIC_DATA = {
             }
           },
           "17455418": {
-            "status": "diligencia",
+            "status": "ok",
             "note": "Anexar pesquisa mercadológica.",
             "document": "",
             "url": "",
-            "at": "2026-10-05T18:31:38.634Z",
+            "at": "2026-10-13T16:52:39.188Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
@@ -64023,11 +64023,11 @@ window.PROFOR_PUBLIC_DATA = {
             }
           },
           "17455420": {
-            "status": "diligencia",
+            "status": "ok",
             "note": "Anexar pesquisa mercadológica.",
             "document": "",
             "url": "",
-            "at": "2026-10-05T18:31:38.632Z",
+            "at": "2026-10-13T16:52:39.188Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
@@ -64037,11 +64037,11 @@ window.PROFOR_PUBLIC_DATA = {
             }
           },
           "17455422": {
-            "status": "diligencia",
+            "status": "ok",
             "note": "Anexar pesquisa mercadológica.",
             "document": "",
             "url": "",
-            "at": "2026-10-05T18:31:38.632Z",
+            "at": "2026-10-13T16:52:39.189Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
@@ -64051,11 +64051,11 @@ window.PROFOR_PUBLIC_DATA = {
             }
           },
           "17455423": {
-            "status": "diligencia",
+            "status": "ok",
             "note": "Anexar pesquisa mercadológica.",
             "document": "",
             "url": "",
-            "at": "2026-10-05T18:31:38.637Z",
+            "at": "2026-10-13T16:52:39.189Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
@@ -64065,11 +64065,11 @@ window.PROFOR_PUBLIC_DATA = {
             }
           },
           "17455424": {
-            "status": "diligencia",
+            "status": "ok",
             "note": "Anexar pesquisa mercadológica.",
             "document": "",
             "url": "",
-            "at": "2026-10-05T18:31:38.635Z",
+            "at": "2026-10-13T16:52:39.187Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
@@ -64079,11 +64079,11 @@ window.PROFOR_PUBLIC_DATA = {
             }
           },
           "17455426": {
-            "status": "diligencia",
+            "status": "ok",
             "note": "Anexar pesquisa mercadológica.",
             "document": "",
             "url": "",
-            "at": "2026-10-05T18:31:38.636Z",
+            "at": "2026-10-13T16:52:39.185Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
@@ -64093,11 +64093,11 @@ window.PROFOR_PUBLIC_DATA = {
             }
           },
           "17455427": {
-            "status": "diligencia",
+            "status": "ok",
             "note": "Anexar pesquisa mercadológica.",
             "document": "",
             "url": "",
-            "at": "2026-10-05T18:31:38.633Z",
+            "at": "2026-10-13T16:52:39.188Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
@@ -64107,11 +64107,11 @@ window.PROFOR_PUBLIC_DATA = {
             }
           },
           "17455475": {
-            "status": "diligencia",
+            "status": "ok",
             "note": "Anexar pesquisa mercadológica.",
             "document": "",
             "url": "",
-            "at": "2026-10-05T18:31:38.635Z",
+            "at": "2026-10-13T16:52:39.188Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
@@ -64121,11 +64121,11 @@ window.PROFOR_PUBLIC_DATA = {
             }
           },
           "17455732": {
-            "status": "diligencia",
+            "status": "ok",
             "note": "Anexar pesquisa mercadológica.",
             "document": "",
             "url": "",
-            "at": "2026-10-05T18:31:38.631Z",
+            "at": "2026-10-13T16:52:39.189Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
@@ -64145,14 +64145,24 @@ window.PROFOR_PUBLIC_DATA = {
           "communication": "2026-10-05",
           "science": "",
           "response": "",
-          "status": "aberta",
+          "status": "baixada",
           "note": "",
-          "at": "2026-10-05T18:31:38.631Z",
+          "at": "2026-10-13T16:52:39.189Z",
           "base": "2026-10-15",
           "due": "2026-10-15",
           "automaticDeadline": true,
           "confirmed": false,
-          "calendarNote": ""
+          "calendarNote": "",
+          "closedByReview": {
+            "proposalId": "2247131",
+            "group": "pad",
+            "item": "17455732",
+            "ref": "pad:17455732",
+            "at": "2026-10-13T16:52:39.189Z",
+            "reason": "Encerrada por confirmação de conformidade do requisito",
+            "actor": "Usuário local",
+            "confirmedBy": "Usuário local"
+          }
         },
         {
           "id": "92c08cba-6cdc-4bb0-bf2c-b3342a9661e1",
@@ -64162,14 +64172,24 @@ window.PROFOR_PUBLIC_DATA = {
           "communication": "2026-10-05",
           "science": "",
           "response": "",
-          "status": "aberta",
+          "status": "baixada",
           "note": "",
-          "at": "2026-10-05T18:31:38.632Z",
+          "at": "2026-10-13T16:52:39.188Z",
           "base": "2026-10-15",
           "due": "2026-10-15",
           "automaticDeadline": true,
           "confirmed": false,
-          "calendarNote": ""
+          "calendarNote": "",
+          "closedByReview": {
+            "proposalId": "2247131",
+            "group": "pad",
+            "item": "17455420",
+            "ref": "pad:17455420",
+            "at": "2026-10-13T16:52:39.188Z",
+            "reason": "Encerrada por confirmação de conformidade do requisito",
+            "actor": "Usuário local",
+            "confirmedBy": "Usuário local"
+          }
         },
         {
           "id": "f926237b-361a-4ea0-a4c6-19e9351833eb",
@@ -64179,14 +64199,24 @@ window.PROFOR_PUBLIC_DATA = {
           "communication": "2026-10-05",
           "science": "",
           "response": "",
-          "status": "aberta",
+          "status": "baixada",
           "note": "",
-          "at": "2026-10-05T18:31:38.632Z",
+          "at": "2026-10-13T16:52:39.189Z",
           "base": "2026-10-15",
           "due": "2026-10-15",
           "automaticDeadline": true,
           "confirmed": false,
-          "calendarNote": ""
+          "calendarNote": "",
+          "closedByReview": {
+            "proposalId": "2247131",
+            "group": "pad",
+            "item": "17455422",
+            "ref": "pad:17455422",
+            "at": "2026-10-13T16:52:39.189Z",
+            "reason": "Encerrada por confirmação de conformidade do requisito",
+            "actor": "Usuário local",
+            "confirmedBy": "Usuário local"
+          }
         },
         {
           "id": "e2292979-ec62-4d07-8587-955ac3328e21",
@@ -64196,14 +64226,24 @@ window.PROFOR_PUBLIC_DATA = {
           "communication": "2026-10-05",
           "science": "",
           "response": "",
-          "status": "aberta",
+          "status": "baixada",
           "note": "",
-          "at": "2026-10-05T18:31:38.633Z",
+          "at": "2026-10-13T16:52:39.188Z",
           "base": "2026-10-15",
           "due": "2026-10-15",
           "automaticDeadline": true,
           "confirmed": false,
-          "calendarNote": ""
+          "calendarNote": "",
+          "closedByReview": {
+            "proposalId": "2247131",
+            "group": "pad",
+            "item": "17455427",
+            "ref": "pad:17455427",
+            "at": "2026-10-13T16:52:39.188Z",
+            "reason": "Encerrada por confirmação de conformidade do requisito",
+            "actor": "Usuário local",
+            "confirmedBy": "Usuário local"
+          }
         },
         {
           "id": "3b3c52af-7aca-4c32-93a3-e6ee73543904",
@@ -64213,14 +64253,24 @@ window.PROFOR_PUBLIC_DATA = {
           "communication": "2026-10-05",
           "science": "",
           "response": "",
-          "status": "aberta",
+          "status": "baixada",
           "note": "",
-          "at": "2026-10-05T18:31:38.634Z",
+          "at": "2026-10-13T16:52:39.188Z",
           "base": "2026-10-15",
           "due": "2026-10-15",
           "automaticDeadline": true,
           "confirmed": false,
-          "calendarNote": ""
+          "calendarNote": "",
+          "closedByReview": {
+            "proposalId": "2247131",
+            "group": "pad",
+            "item": "17455418",
+            "ref": "pad:17455418",
+            "at": "2026-10-13T16:52:39.188Z",
+            "reason": "Encerrada por confirmação de conformidade do requisito",
+            "actor": "Usuário local",
+            "confirmedBy": "Usuário local"
+          }
         },
         {
           "id": "93e673e0-3869-4ade-a7e4-0993f4da92e2",
@@ -64230,14 +64280,24 @@ window.PROFOR_PUBLIC_DATA = {
           "communication": "2026-10-05",
           "science": "",
           "response": "",
-          "status": "aberta",
+          "status": "baixada",
           "note": "",
-          "at": "2026-10-05T18:31:38.635Z",
+          "at": "2026-10-13T16:52:39.188Z",
           "base": "2026-10-15",
           "due": "2026-10-15",
           "automaticDeadline": true,
           "confirmed": false,
-          "calendarNote": ""
+          "calendarNote": "",
+          "closedByReview": {
+            "proposalId": "2247131",
+            "group": "pad",
+            "item": "17455424",
+            "ref": "pad:17455424",
+            "at": "2026-10-13T16:52:39.188Z",
+            "reason": "Encerrada por confirmação de conformidade do requisito",
+            "actor": "Usuário local",
+            "confirmedBy": "Usuário local"
+          }
         },
         {
           "id": "2cdd4c4b-d17e-43a5-92c5-a741915c9075",
@@ -64247,14 +64307,24 @@ window.PROFOR_PUBLIC_DATA = {
           "communication": "2026-10-05",
           "science": "",
           "response": "",
-          "status": "aberta",
+          "status": "baixada",
           "note": "",
-          "at": "2026-10-05T18:31:38.636Z",
+          "at": "2026-10-13T16:52:39.188Z",
           "base": "2026-10-15",
           "due": "2026-10-15",
           "automaticDeadline": true,
           "confirmed": false,
-          "calendarNote": ""
+          "calendarNote": "",
+          "closedByReview": {
+            "proposalId": "2247131",
+            "group": "pad",
+            "item": "17455475",
+            "ref": "pad:17455475",
+            "at": "2026-10-13T16:52:39.188Z",
+            "reason": "Encerrada por confirmação de conformidade do requisito",
+            "actor": "Usuário local",
+            "confirmedBy": "Usuário local"
+          }
         },
         {
           "id": "3a703900-ada8-4599-adfb-7749054da426",
@@ -64264,14 +64334,24 @@ window.PROFOR_PUBLIC_DATA = {
           "communication": "2026-10-05",
           "science": "",
           "response": "",
-          "status": "aberta",
+          "status": "baixada",
           "note": "",
-          "at": "2026-10-05T18:31:38.636Z",
+          "at": "2026-10-13T16:52:39.189Z",
           "base": "2026-10-15",
           "due": "2026-10-15",
           "automaticDeadline": true,
           "confirmed": false,
-          "calendarNote": ""
+          "calendarNote": "",
+          "closedByReview": {
+            "proposalId": "2247131",
+            "group": "pad",
+            "item": "17455398",
+            "ref": "pad:17455398",
+            "at": "2026-10-13T16:52:39.189Z",
+            "reason": "Encerrada por confirmação de conformidade do requisito",
+            "actor": "Usuário local",
+            "confirmedBy": "Usuário local"
+          }
         },
         {
           "id": "6494b578-719f-4bda-93f7-93298d04a1f9",
@@ -64281,14 +64361,24 @@ window.PROFOR_PUBLIC_DATA = {
           "communication": "2026-10-05",
           "science": "",
           "response": "",
-          "status": "aberta",
+          "status": "baixada",
           "note": "",
-          "at": "2026-10-05T18:31:38.636Z",
+          "at": "2026-10-13T16:52:39.186Z",
           "base": "2026-10-15",
           "due": "2026-10-15",
           "automaticDeadline": true,
           "confirmed": false,
-          "calendarNote": ""
+          "calendarNote": "",
+          "closedByReview": {
+            "proposalId": "2247131",
+            "group": "pad",
+            "item": "17455426",
+            "ref": "pad:17455426",
+            "at": "2026-10-13T16:52:39.186Z",
+            "reason": "Encerrada por confirmação de conformidade do requisito",
+            "actor": "Usuário local",
+            "confirmedBy": "Usuário local"
+          }
         },
         {
           "id": "074a4fd7-2520-4d04-922c-ee38073ec296",
@@ -64298,14 +64388,24 @@ window.PROFOR_PUBLIC_DATA = {
           "communication": "2026-10-05",
           "science": "",
           "response": "",
-          "status": "aberta",
+          "status": "baixada",
           "note": "",
-          "at": "2026-10-05T18:31:38.637Z",
+          "at": "2026-10-13T16:52:39.189Z",
           "base": "2026-10-15",
           "due": "2026-10-15",
           "automaticDeadline": true,
           "confirmed": false,
-          "calendarNote": ""
+          "calendarNote": "",
+          "closedByReview": {
+            "proposalId": "2247131",
+            "group": "pad",
+            "item": "17455423",
+            "ref": "pad:17455423",
+            "at": "2026-10-13T16:52:39.189Z",
+            "reason": "Encerrada por confirmação de conformidade do requisito",
+            "actor": "Usuário local",
+            "confirmedBy": "Usuário local"
+          }
         },
         {
           "id": "3324199e-4a5b-440a-8264-4f01aef2b32b",
@@ -66214,6 +66314,826 @@ window.PROFOR_PUBLIC_DATA = {
           },
           "after": {
             "at": "2026-10-13T13:11:44.459Z"
+          }
+        },
+        {
+          "at": "2026-10-13T16:52:39.185Z",
+          "event": "Avaliação: pad / 17455426",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "Anexar pesquisa mercadológica.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T18:31:38.636Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455426",
+              "fingerprint": "fnv64-v1:85999276f579c4db"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Anexar pesquisa mercadológica.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-13T16:52:39.185Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455426",
+              "fingerprint": "fnv64-v1:85999276f579c4db"
+            }
+          }
+        },
+        {
+          "at": "2026-10-13T16:52:39.186Z",
+          "event": "Diligência encerrada por atendimento do requisito",
+          "actor": "Usuário local",
+          "before": {
+            "id": "6494b578-719f-4bda-93f7-93298d04a1f9",
+            "ref": "pad:17455426",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Anexar pesquisa mercadológica.",
+            "communication": "2026-10-05",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-05T18:31:38.636Z",
+            "base": "2026-10-15",
+            "due": "2026-10-15",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          },
+          "after": {
+            "id": "6494b578-719f-4bda-93f7-93298d04a1f9",
+            "ref": "pad:17455426",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Anexar pesquisa mercadológica.",
+            "communication": "2026-10-05",
+            "science": "",
+            "response": "",
+            "status": "baixada",
+            "note": "",
+            "at": "2026-10-13T16:52:39.186Z",
+            "base": "2026-10-15",
+            "due": "2026-10-15",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": "",
+            "closedByReview": {
+              "proposalId": "2247131",
+              "group": "pad",
+              "item": "17455426",
+              "ref": "pad:17455426",
+              "at": "2026-10-13T16:52:39.186Z",
+              "reason": "Encerrada por confirmação de conformidade do requisito",
+              "actor": "Usuário local",
+              "confirmedBy": "Usuário local"
+            }
+          }
+        },
+        {
+          "at": "2026-10-13T16:52:39.188Z",
+          "event": "Avaliação: pad / 17455424",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "Anexar pesquisa mercadológica.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T18:31:38.635Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455424",
+              "fingerprint": "fnv64-v1:859fc1172610fcd1"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Anexar pesquisa mercadológica.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-13T16:52:39.187Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455424",
+              "fingerprint": "fnv64-v1:859fc1172610fcd1"
+            }
+          }
+        },
+        {
+          "at": "2026-10-13T16:52:39.188Z",
+          "event": "Diligência encerrada por atendimento do requisito",
+          "actor": "Usuário local",
+          "before": {
+            "id": "93e673e0-3869-4ade-a7e4-0993f4da92e2",
+            "ref": "pad:17455424",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Anexar pesquisa mercadológica.",
+            "communication": "2026-10-05",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-05T18:31:38.635Z",
+            "base": "2026-10-15",
+            "due": "2026-10-15",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          },
+          "after": {
+            "id": "93e673e0-3869-4ade-a7e4-0993f4da92e2",
+            "ref": "pad:17455424",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Anexar pesquisa mercadológica.",
+            "communication": "2026-10-05",
+            "science": "",
+            "response": "",
+            "status": "baixada",
+            "note": "",
+            "at": "2026-10-13T16:52:39.188Z",
+            "base": "2026-10-15",
+            "due": "2026-10-15",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": "",
+            "closedByReview": {
+              "proposalId": "2247131",
+              "group": "pad",
+              "item": "17455424",
+              "ref": "pad:17455424",
+              "at": "2026-10-13T16:52:39.188Z",
+              "reason": "Encerrada por confirmação de conformidade do requisito",
+              "actor": "Usuário local",
+              "confirmedBy": "Usuário local"
+            }
+          }
+        },
+        {
+          "at": "2026-10-13T16:52:39.188Z",
+          "event": "Avaliação: pad / 17455427",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "Anexar pesquisa mercadológica.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T18:31:38.633Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455427",
+              "fingerprint": "fnv64-v1:1e317ffc3c5b62b2"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Anexar pesquisa mercadológica.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-13T16:52:39.188Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455427",
+              "fingerprint": "fnv64-v1:1e317ffc3c5b62b2"
+            }
+          }
+        },
+        {
+          "at": "2026-10-13T16:52:39.188Z",
+          "event": "Diligência encerrada por atendimento do requisito",
+          "actor": "Usuário local",
+          "before": {
+            "id": "e2292979-ec62-4d07-8587-955ac3328e21",
+            "ref": "pad:17455427",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Anexar pesquisa mercadológica.",
+            "communication": "2026-10-05",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-05T18:31:38.633Z",
+            "base": "2026-10-15",
+            "due": "2026-10-15",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          },
+          "after": {
+            "id": "e2292979-ec62-4d07-8587-955ac3328e21",
+            "ref": "pad:17455427",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Anexar pesquisa mercadológica.",
+            "communication": "2026-10-05",
+            "science": "",
+            "response": "",
+            "status": "baixada",
+            "note": "",
+            "at": "2026-10-13T16:52:39.188Z",
+            "base": "2026-10-15",
+            "due": "2026-10-15",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": "",
+            "closedByReview": {
+              "proposalId": "2247131",
+              "group": "pad",
+              "item": "17455427",
+              "ref": "pad:17455427",
+              "at": "2026-10-13T16:52:39.188Z",
+              "reason": "Encerrada por confirmação de conformidade do requisito",
+              "actor": "Usuário local",
+              "confirmedBy": "Usuário local"
+            }
+          }
+        },
+        {
+          "at": "2026-10-13T16:52:39.188Z",
+          "event": "Avaliação: pad / 17455475",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "Anexar pesquisa mercadológica.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T18:31:38.635Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455475",
+              "fingerprint": "fnv64-v1:c29863265651c94a"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Anexar pesquisa mercadológica.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-13T16:52:39.188Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455475",
+              "fingerprint": "fnv64-v1:c29863265651c94a"
+            }
+          }
+        },
+        {
+          "at": "2026-10-13T16:52:39.188Z",
+          "event": "Diligência encerrada por atendimento do requisito",
+          "actor": "Usuário local",
+          "before": {
+            "id": "2cdd4c4b-d17e-43a5-92c5-a741915c9075",
+            "ref": "pad:17455475",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Anexar pesquisa mercadológica.",
+            "communication": "2026-10-05",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-05T18:31:38.636Z",
+            "base": "2026-10-15",
+            "due": "2026-10-15",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          },
+          "after": {
+            "id": "2cdd4c4b-d17e-43a5-92c5-a741915c9075",
+            "ref": "pad:17455475",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Anexar pesquisa mercadológica.",
+            "communication": "2026-10-05",
+            "science": "",
+            "response": "",
+            "status": "baixada",
+            "note": "",
+            "at": "2026-10-13T16:52:39.188Z",
+            "base": "2026-10-15",
+            "due": "2026-10-15",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": "",
+            "closedByReview": {
+              "proposalId": "2247131",
+              "group": "pad",
+              "item": "17455475",
+              "ref": "pad:17455475",
+              "at": "2026-10-13T16:52:39.188Z",
+              "reason": "Encerrada por confirmação de conformidade do requisito",
+              "actor": "Usuário local",
+              "confirmedBy": "Usuário local"
+            }
+          }
+        },
+        {
+          "at": "2026-10-13T16:52:39.188Z",
+          "event": "Avaliação: pad / 17455420",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "Anexar pesquisa mercadológica.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T18:31:38.632Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455420",
+              "fingerprint": "fnv64-v1:23fb61be4d46b3c3"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Anexar pesquisa mercadológica.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-13T16:52:39.188Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455420",
+              "fingerprint": "fnv64-v1:23fb61be4d46b3c3"
+            }
+          }
+        },
+        {
+          "at": "2026-10-13T16:52:39.188Z",
+          "event": "Diligência encerrada por atendimento do requisito",
+          "actor": "Usuário local",
+          "before": {
+            "id": "92c08cba-6cdc-4bb0-bf2c-b3342a9661e1",
+            "ref": "pad:17455420",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Anexar pesquisa mercadológica.",
+            "communication": "2026-10-05",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-05T18:31:38.632Z",
+            "base": "2026-10-15",
+            "due": "2026-10-15",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          },
+          "after": {
+            "id": "92c08cba-6cdc-4bb0-bf2c-b3342a9661e1",
+            "ref": "pad:17455420",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Anexar pesquisa mercadológica.",
+            "communication": "2026-10-05",
+            "science": "",
+            "response": "",
+            "status": "baixada",
+            "note": "",
+            "at": "2026-10-13T16:52:39.188Z",
+            "base": "2026-10-15",
+            "due": "2026-10-15",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": "",
+            "closedByReview": {
+              "proposalId": "2247131",
+              "group": "pad",
+              "item": "17455420",
+              "ref": "pad:17455420",
+              "at": "2026-10-13T16:52:39.188Z",
+              "reason": "Encerrada por confirmação de conformidade do requisito",
+              "actor": "Usuário local",
+              "confirmedBy": "Usuário local"
+            }
+          }
+        },
+        {
+          "at": "2026-10-13T16:52:39.188Z",
+          "event": "Avaliação: pad / 17455418",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "Anexar pesquisa mercadológica.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T18:31:38.634Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455418",
+              "fingerprint": "fnv64-v1:548cf23fa77e13e1"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Anexar pesquisa mercadológica.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-13T16:52:39.188Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455418",
+              "fingerprint": "fnv64-v1:548cf23fa77e13e1"
+            }
+          }
+        },
+        {
+          "at": "2026-10-13T16:52:39.188Z",
+          "event": "Diligência encerrada por atendimento do requisito",
+          "actor": "Usuário local",
+          "before": {
+            "id": "3b3c52af-7aca-4c32-93a3-e6ee73543904",
+            "ref": "pad:17455418",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Anexar pesquisa mercadológica.",
+            "communication": "2026-10-05",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-05T18:31:38.634Z",
+            "base": "2026-10-15",
+            "due": "2026-10-15",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          },
+          "after": {
+            "id": "3b3c52af-7aca-4c32-93a3-e6ee73543904",
+            "ref": "pad:17455418",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Anexar pesquisa mercadológica.",
+            "communication": "2026-10-05",
+            "science": "",
+            "response": "",
+            "status": "baixada",
+            "note": "",
+            "at": "2026-10-13T16:52:39.188Z",
+            "base": "2026-10-15",
+            "due": "2026-10-15",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": "",
+            "closedByReview": {
+              "proposalId": "2247131",
+              "group": "pad",
+              "item": "17455418",
+              "ref": "pad:17455418",
+              "at": "2026-10-13T16:52:39.188Z",
+              "reason": "Encerrada por confirmação de conformidade do requisito",
+              "actor": "Usuário local",
+              "confirmedBy": "Usuário local"
+            }
+          }
+        },
+        {
+          "at": "2026-10-13T16:52:39.189Z",
+          "event": "Avaliação: pad / 17455423",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "Anexar pesquisa mercadológica.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T18:31:38.637Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455423",
+              "fingerprint": "fnv64-v1:afc83ea16ef5c8b6"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Anexar pesquisa mercadológica.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-13T16:52:39.189Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455423",
+              "fingerprint": "fnv64-v1:afc83ea16ef5c8b6"
+            }
+          }
+        },
+        {
+          "at": "2026-10-13T16:52:39.189Z",
+          "event": "Diligência encerrada por atendimento do requisito",
+          "actor": "Usuário local",
+          "before": {
+            "id": "074a4fd7-2520-4d04-922c-ee38073ec296",
+            "ref": "pad:17455423",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Anexar pesquisa mercadológica.",
+            "communication": "2026-10-05",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-05T18:31:38.637Z",
+            "base": "2026-10-15",
+            "due": "2026-10-15",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          },
+          "after": {
+            "id": "074a4fd7-2520-4d04-922c-ee38073ec296",
+            "ref": "pad:17455423",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Anexar pesquisa mercadológica.",
+            "communication": "2026-10-05",
+            "science": "",
+            "response": "",
+            "status": "baixada",
+            "note": "",
+            "at": "2026-10-13T16:52:39.189Z",
+            "base": "2026-10-15",
+            "due": "2026-10-15",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": "",
+            "closedByReview": {
+              "proposalId": "2247131",
+              "group": "pad",
+              "item": "17455423",
+              "ref": "pad:17455423",
+              "at": "2026-10-13T16:52:39.189Z",
+              "reason": "Encerrada por confirmação de conformidade do requisito",
+              "actor": "Usuário local",
+              "confirmedBy": "Usuário local"
+            }
+          }
+        },
+        {
+          "at": "2026-10-13T16:52:39.189Z",
+          "event": "Avaliação: pad / 17455398",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "Anexar pesquisa mercadológica.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T18:31:38.636Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455398",
+              "fingerprint": "fnv64-v1:5a1111dbe0878631"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Anexar pesquisa mercadológica.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-13T16:52:39.189Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455398",
+              "fingerprint": "fnv64-v1:5a1111dbe0878631"
+            }
+          }
+        },
+        {
+          "at": "2026-10-13T16:52:39.189Z",
+          "event": "Diligência encerrada por atendimento do requisito",
+          "actor": "Usuário local",
+          "before": {
+            "id": "3a703900-ada8-4599-adfb-7749054da426",
+            "ref": "pad:17455398",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Anexar pesquisa mercadológica.",
+            "communication": "2026-10-05",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-05T18:31:38.636Z",
+            "base": "2026-10-15",
+            "due": "2026-10-15",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          },
+          "after": {
+            "id": "3a703900-ada8-4599-adfb-7749054da426",
+            "ref": "pad:17455398",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Anexar pesquisa mercadológica.",
+            "communication": "2026-10-05",
+            "science": "",
+            "response": "",
+            "status": "baixada",
+            "note": "",
+            "at": "2026-10-13T16:52:39.189Z",
+            "base": "2026-10-15",
+            "due": "2026-10-15",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": "",
+            "closedByReview": {
+              "proposalId": "2247131",
+              "group": "pad",
+              "item": "17455398",
+              "ref": "pad:17455398",
+              "at": "2026-10-13T16:52:39.189Z",
+              "reason": "Encerrada por confirmação de conformidade do requisito",
+              "actor": "Usuário local",
+              "confirmedBy": "Usuário local"
+            }
+          }
+        },
+        {
+          "at": "2026-10-13T16:52:39.189Z",
+          "event": "Avaliação: pad / 17455732",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "Anexar pesquisa mercadológica.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T18:31:38.631Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455732",
+              "fingerprint": "fnv64-v1:5ba258d643a59a7e"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Anexar pesquisa mercadológica.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-13T16:52:39.189Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455732",
+              "fingerprint": "fnv64-v1:5ba258d643a59a7e"
+            }
+          }
+        },
+        {
+          "at": "2026-10-13T16:52:39.189Z",
+          "event": "Diligência encerrada por atendimento do requisito",
+          "actor": "Usuário local",
+          "before": {
+            "id": "378933c2-749e-4f33-83c7-54c497aa4c26",
+            "ref": "pad:17455732",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Anexar pesquisa mercadológica.",
+            "communication": "2026-10-05",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-05T18:31:38.631Z",
+            "base": "2026-10-15",
+            "due": "2026-10-15",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          },
+          "after": {
+            "id": "378933c2-749e-4f33-83c7-54c497aa4c26",
+            "ref": "pad:17455732",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Anexar pesquisa mercadológica.",
+            "communication": "2026-10-05",
+            "science": "",
+            "response": "",
+            "status": "baixada",
+            "note": "",
+            "at": "2026-10-13T16:52:39.189Z",
+            "base": "2026-10-15",
+            "due": "2026-10-15",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": "",
+            "closedByReview": {
+              "proposalId": "2247131",
+              "group": "pad",
+              "item": "17455732",
+              "ref": "pad:17455732",
+              "at": "2026-10-13T16:52:39.189Z",
+              "reason": "Encerrada por confirmação de conformidade do requisito",
+              "actor": "Usuário local",
+              "confirmedBy": "Usuário local"
+            }
+          }
+        },
+        {
+          "at": "2026-10-13T16:52:39.189Z",
+          "event": "Avaliação: pad / 17455422",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "Anexar pesquisa mercadológica.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T18:31:38.632Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455422",
+              "fingerprint": "fnv64-v1:bea49e52dc182906"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Anexar pesquisa mercadológica.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-13T16:52:39.189Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455422",
+              "fingerprint": "fnv64-v1:bea49e52dc182906"
+            }
+          }
+        },
+        {
+          "at": "2026-10-13T16:52:39.189Z",
+          "event": "Diligência encerrada por atendimento do requisito",
+          "actor": "Usuário local",
+          "before": {
+            "id": "f926237b-361a-4ea0-a4c6-19e9351833eb",
+            "ref": "pad:17455422",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Anexar pesquisa mercadológica.",
+            "communication": "2026-10-05",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-05T18:31:38.632Z",
+            "base": "2026-10-15",
+            "due": "2026-10-15",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          },
+          "after": {
+            "id": "f926237b-361a-4ea0-a4c6-19e9351833eb",
+            "ref": "pad:17455422",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Anexar pesquisa mercadológica.",
+            "communication": "2026-10-05",
+            "science": "",
+            "response": "",
+            "status": "baixada",
+            "note": "",
+            "at": "2026-10-13T16:52:39.189Z",
+            "base": "2026-10-15",
+            "due": "2026-10-15",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": "",
+            "closedByReview": {
+              "proposalId": "2247131",
+              "group": "pad",
+              "item": "17455422",
+              "ref": "pad:17455422",
+              "at": "2026-10-13T16:52:39.189Z",
+              "reason": "Encerrada por confirmação de conformidade do requisito",
+              "actor": "Usuário local",
+              "confirmedBy": "Usuário local"
+            }
           }
         }
       ],
