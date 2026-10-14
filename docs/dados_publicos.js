@@ -1,9 +1,9 @@
-/** Snapshot integral de consulta PROFOR/ONASP 2026. Gerado em 2026-10-14T11:47:22.634Z.
+/** Snapshot integral de consulta PROFOR/ONASP 2026. Gerado em 2026-10-14T12:40:12.681Z.
  * Não editar manualmente. Use tools/build_public_docs.cjs. */
-window.PROFOR_PUBLIC_UPDATED_AT = "2026-10-14T11:47:22.634Z";
+window.PROFOR_PUBLIC_UPDATED_AT = "2026-10-14T12:40:12.681Z";
 window.PROFOR_PUBLIC_DATA = {
   "schemaVersion": 1,
-  "revision": 399,
+  "revision": 408,
   "proposals": [
     {
       "id": "2243618",
@@ -35372,17 +35372,17 @@ window.PROFOR_PUBLIC_DATA = {
             }
           },
           "ouvidoriaInstituida": {
-            "status": "no",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": "2026-10-09T13:05:39.770Z",
+            "at": "2026-10-14T12:00:07.293Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
               "version": 1,
               "ref": "merito:ouvidoriaInstituida",
-              "fingerprint": "fnv64-v1:a27e8ca67caeb499"
+              "fingerprint": "fnv64-v1:1335379bb2cd68e8"
             }
           },
           "ouvidoriaAto": {
@@ -35487,11 +35487,11 @@ window.PROFOR_PUBLIC_DATA = {
             }
           },
           "6": {
-            "status": "diligencia",
+            "status": "ok",
             "note": "Falta documento",
             "document": "",
             "url": "",
-            "at": "2026-10-09T16:05:01.013Z",
+            "at": "2026-10-14T12:05:16.905Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
@@ -35529,11 +35529,11 @@ window.PROFOR_PUBLIC_DATA = {
             }
           },
           "9": {
-            "status": "diligencia",
+            "status": "ok",
             "note": "Falta o documento",
             "document": "",
             "url": "",
-            "at": "2026-10-09T16:06:45.161Z",
+            "at": "2026-10-14T12:08:52.728Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
@@ -35543,11 +35543,11 @@ window.PROFOR_PUBLIC_DATA = {
             }
           },
           "10": {
-            "status": "diligencia",
+            "status": "ok",
             "note": "Falta o documento",
             "document": "",
             "url": "",
-            "at": "2026-10-09T16:06:45.161Z",
+            "at": "2026-10-14T12:11:21.848Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
@@ -35669,11 +35669,11 @@ window.PROFOR_PUBLIC_DATA = {
             }
           },
           "19": {
-            "status": "diligencia",
+            "status": "ok",
             "note": "Falta o documento",
             "document": "",
             "url": "",
-            "at": "2026-10-09T16:06:45.166Z",
+            "at": "2026-10-14T12:13:36.447Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
@@ -35700,10 +35700,10 @@ window.PROFOR_PUBLIC_DATA = {
         "pad": {
           "17425883": {
             "status": "diligencia",
-            "note": "Solicita-se a apresentação de pesquisa mercadológica com três cotações para cada item do Plano de Aplicação Detalhado (PAD), acompanhadas dos respectivos comprovantes de preços e da memória de cálculo.\nAs pesquisas poderão ser realizadas em sítios eletrônicos. Nesse caso, cada captura de tela deverá apresentar o preço unitário pesquisado, a data da consulta, com a barra de tarefas do Windows visível, e o link completo da página acessada, de modo a permitir a conferência posterior das informações.\nPara cada item, o preço unitário de referência deverá corresponder à média aritmética dos três preços obtidos. O cálculo consiste em somar os três preços unitários e dividir o resultado por três. A média resultante deverá ser registrada como valor unitário do item no PAD.\nA memória de cálculo deverá identificar o item do PAD e apresentar os três preços unitários pesquisados, a soma, a divisão por três e a média obtida, com referência aos respectivos comprovantes. Dessa forma, será possível conferir a correspondência entre as cotações, o cálculo da média e o valor unitário registrado no plano.",
+            "note": "MINAS GERAIS:\n \nPRINCIPAL:\nSolicita-se que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética de todos os preços apresentados nas pesquisas anexadas como orçamento.\nApós os ajustes, o valor total dos itens será de R$ 186.747,51. A diferença entre o valor global da proposta e esse total poderá ser alocada como um item denominado “Saldo residual”, com valor correspondente à diferença apurada.\n \nCOMPUTADOR:\nPara o item Computador, alterar o valor unitário de R$ 17.000,00 para R$ 12.849,23, correspondente à média aritmética dos três preços apresentados. Mantida a quantidade de 10 unidades, o valor total do item será de R$ 128.492,30.\n \nSCANNER:\nPara o item Scanner, alterar o valor unitário de R$ 2.000,00 para R$ 2.249,21, correspondente à média aritmética dos três preços apresentados. Considerando uma unidade, o valor total do item será de R$ 2.249,21.\n \nIMPRSSORA:\nPara o item Impressora multifuncional, alterar o valor unitário de R$ 2.700,00 para R$ 2.696,00, correspondente à média aritmética dos três preços apresentados. Considerando uma unidade, o valor total do item será de R$ 2.696,00.\n \nNOTEBOOK:\nPara o item Notebook, alterar o valor unitário de R$ 6.000,00 para R$ 10.662,00, correspondente à média aritmética dos cinco preços apresentados na pesquisa. Mantida a quantidade de cinco unidades, o valor total do item será de R$ 53.310,00.",
             "document": "",
             "url": "",
-            "at": "2026-10-06T14:24:39.295Z",
+            "at": "2026-10-14T12:38:53.115Z",
             "attachments": [],
             "evidence": {
               "version": 1,
@@ -35714,10 +35714,10 @@ window.PROFOR_PUBLIC_DATA = {
           },
           "17425889": {
             "status": "diligencia",
-            "note": "Solicita-se a apresentação de pesquisa mercadológica com três cotações para cada item do Plano de Aplicação Detalhado (PAD), acompanhadas dos respectivos comprovantes de preços e da memória de cálculo.\nAs pesquisas poderão ser realizadas em sítios eletrônicos. Nesse caso, cada captura de tela deverá apresentar o preço unitário pesquisado, a data da consulta, com a barra de tarefas do Windows visível, e o link completo da página acessada, de modo a permitir a conferência posterior das informações.\nPara cada item, o preço unitário de referência deverá corresponder à média aritmética dos três preços obtidos. O cálculo consiste em somar os três preços unitários e dividir o resultado por três. A média resultante deverá ser registrada como valor unitário do item no PAD.\nA memória de cálculo deverá identificar o item do PAD e apresentar os três preços unitários pesquisados, a soma, a divisão por três e a média obtida, com referência aos respectivos comprovantes. Dessa forma, será possível conferir a correspondência entre as cotações, o cálculo da média e o valor unitário registrado no plano.",
+            "note": "MINAS GERAIS:\n \nPRINCIPAL:\nSolicita-se que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética de todos os preços apresentados nas pesquisas anexadas como orçamento.\nApós os ajustes, o valor total dos itens será de R$ 186.747,51. A diferença entre o valor global da proposta e esse total poderá ser alocada como um item denominado “Saldo residual”, com valor correspondente à diferença apurada.\n \nCOMPUTADOR:\nPara o item Computador, alterar o valor unitário de R$ 17.000,00 para R$ 12.849,23, correspondente à média aritmética dos três preços apresentados. Mantida a quantidade de 10 unidades, o valor total do item será de R$ 128.492,30.\n \nSCANNER:\nPara o item Scanner, alterar o valor unitário de R$ 2.000,00 para R$ 2.249,21, correspondente à média aritmética dos três preços apresentados. Considerando uma unidade, o valor total do item será de R$ 2.249,21.\n \nIMPRSSORA:\nPara o item Impressora multifuncional, alterar o valor unitário de R$ 2.700,00 para R$ 2.696,00, correspondente à média aritmética dos três preços apresentados. Considerando uma unidade, o valor total do item será de R$ 2.696,00.\n \nNOTEBOOK:\nPara o item Notebook, alterar o valor unitário de R$ 6.000,00 para R$ 10.662,00, correspondente à média aritmética dos cinco preços apresentados na pesquisa. Mantida a quantidade de cinco unidades, o valor total do item será de R$ 53.310,00.",
             "document": "",
             "url": "",
-            "at": "2026-10-06T14:24:39.293Z",
+            "at": "2026-10-14T12:37:56.854Z",
             "attachments": [],
             "evidence": {
               "version": 1,
@@ -35728,10 +35728,10 @@ window.PROFOR_PUBLIC_DATA = {
           },
           "17425890": {
             "status": "diligencia",
-            "note": "Solicita-se a apresentação de pesquisa mercadológica com três cotações para cada item do Plano de Aplicação Detalhado (PAD), acompanhadas dos respectivos comprovantes de preços e da memória de cálculo.\nAs pesquisas poderão ser realizadas em sítios eletrônicos. Nesse caso, cada captura de tela deverá apresentar o preço unitário pesquisado, a data da consulta, com a barra de tarefas do Windows visível, e o link completo da página acessada, de modo a permitir a conferência posterior das informações.\nPara cada item, o preço unitário de referência deverá corresponder à média aritmética dos três preços obtidos. O cálculo consiste em somar os três preços unitários e dividir o resultado por três. A média resultante deverá ser registrada como valor unitário do item no PAD.\nA memória de cálculo deverá identificar o item do PAD e apresentar os três preços unitários pesquisados, a soma, a divisão por três e a média obtida, com referência aos respectivos comprovantes. Dessa forma, será possível conferir a correspondência entre as cotações, o cálculo da média e o valor unitário registrado no plano.",
+            "note": "MINAS GERAIS:\n \nPRINCIPAL:\nSolicita-se que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética de todos os preços apresentados nas pesquisas anexadas como orçamento.\nApós os ajustes, o valor total dos itens será de R$ 186.747,51. A diferença entre o valor global da proposta e esse total poderá ser alocada como um item denominado “Saldo residual”, com valor correspondente à diferença apurada.\n \nCOMPUTADOR:\nPara o item Computador, alterar o valor unitário de R$ 17.000,00 para R$ 12.849,23, correspondente à média aritmética dos três preços apresentados. Mantida a quantidade de 10 unidades, o valor total do item será de R$ 128.492,30.\n \nSCANNER:\nPara o item Scanner, alterar o valor unitário de R$ 2.000,00 para R$ 2.249,21, correspondente à média aritmética dos três preços apresentados. Considerando uma unidade, o valor total do item será de R$ 2.249,21.\n \nIMPRSSORA:\nPara o item Impressora multifuncional, alterar o valor unitário de R$ 2.700,00 para R$ 2.696,00, correspondente à média aritmética dos três preços apresentados. Considerando uma unidade, o valor total do item será de R$ 2.696,00.\n \nNOTEBOOK:\nPara o item Notebook, alterar o valor unitário de R$ 6.000,00 para R$ 10.662,00, correspondente à média aritmética dos cinco preços apresentados na pesquisa. Mantida a quantidade de cinco unidades, o valor total do item será de R$ 53.310,00.",
             "document": "",
             "url": "",
-            "at": "2026-10-06T14:24:39.298Z",
+            "at": "2026-10-14T12:38:21.523Z",
             "attachments": [],
             "evidence": {
               "version": 1,
@@ -35742,10 +35742,10 @@ window.PROFOR_PUBLIC_DATA = {
           },
           "17425892": {
             "status": "diligencia",
-            "note": "Solicita-se a apresentação de pesquisa mercadológica com três cotações para cada item do Plano de Aplicação Detalhado (PAD), acompanhadas dos respectivos comprovantes de preços e da memória de cálculo.\nAs pesquisas poderão ser realizadas em sítios eletrônicos. Nesse caso, cada captura de tela deverá apresentar o preço unitário pesquisado, a data da consulta, com a barra de tarefas do Windows visível, e o link completo da página acessada, de modo a permitir a conferência posterior das informações.\nPara cada item, o preço unitário de referência deverá corresponder à média aritmética dos três preços obtidos. O cálculo consiste em somar os três preços unitários e dividir o resultado por três. A média resultante deverá ser registrada como valor unitário do item no PAD.\nA memória de cálculo deverá identificar o item do PAD e apresentar os três preços unitários pesquisados, a soma, a divisão por três e a média obtida, com referência aos respectivos comprovantes. Dessa forma, será possível conferir a correspondência entre as cotações, o cálculo da média e o valor unitário registrado no plano.",
+            "note": "MINAS GERAIS:\n \nPRINCIPAL:\nSolicita-se que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética de todos os preços apresentados nas pesquisas anexadas como orçamento.\nApós os ajustes, o valor total dos itens será de R$ 186.747,51. A diferença entre o valor global da proposta e esse total poderá ser alocada como um item denominado “Saldo residual”, com valor correspondente à diferença apurada.\n \nCOMPUTADOR:\nPara o item Computador, alterar o valor unitário de R$ 17.000,00 para R$ 12.849,23, correspondente à média aritmética dos três preços apresentados. Mantida a quantidade de 10 unidades, o valor total do item será de R$ 128.492,30.\n \nSCANNER:\nPara o item Scanner, alterar o valor unitário de R$ 2.000,00 para R$ 2.249,21, correspondente à média aritmética dos três preços apresentados. Considerando uma unidade, o valor total do item será de R$ 2.249,21.\n \nIMPRSSORA:\nPara o item Impressora multifuncional, alterar o valor unitário de R$ 2.700,00 para R$ 2.696,00, correspondente à média aritmética dos três preços apresentados. Considerando uma unidade, o valor total do item será de R$ 2.696,00.\n \nNOTEBOOK:\nPara o item Notebook, alterar o valor unitário de R$ 6.000,00 para R$ 10.662,00, correspondente à média aritmética dos cinco preços apresentados na pesquisa. Mantida a quantidade de cinco unidades, o valor total do item será de R$ 53.310,00.",
             "document": "",
             "url": "",
-            "at": "2026-10-06T14:24:39.289Z",
+            "at": "2026-10-14T12:39:22.873Z",
             "attachments": [],
             "evidence": {
               "version": 1,
@@ -35761,69 +35761,73 @@ window.PROFOR_PUBLIC_DATA = {
           "id": "730701e1-d33f-4332-90b8-bda3f62a7c98",
           "ref": "pad:17425892",
           "category": "PLANO DE APLICAÇÃO DETALHADO",
-          "request": "Solicita-se a apresentação de pesquisa mercadológica com três cotações para cada item do Plano de Aplicação Detalhado (PAD), acompanhadas dos respectivos comprovantes de preços e da memória de cálculo.\nAs pesquisas poderão ser realizadas em sítios eletrônicos. Nesse caso, cada captura de tela deverá apresentar o preço unitário pesquisado, a data da consulta, com a barra de tarefas do Windows visível, e o link completo da página acessada, de modo a permitir a conferência posterior das informações.\nPara cada item, o preço unitário de referência deverá corresponder à média aritmética dos três preços obtidos. O cálculo consiste em somar os três preços unitários e dividir o resultado por três. A média resultante deverá ser registrada como valor unitário do item no PAD.\nA memória de cálculo deverá identificar o item do PAD e apresentar os três preços unitários pesquisados, a soma, a divisão por três e a média obtida, com referência aos respectivos comprovantes. Dessa forma, será possível conferir a correspondência entre as cotações, o cálculo da média e o valor unitário registrado no plano.",
-          "communication": "2026-10-06",
+          "request": "MINAS GERAIS:\n \nPRINCIPAL:\nSolicita-se que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética de todos os preços apresentados nas pesquisas anexadas como orçamento.\nApós os ajustes, o valor total dos itens será de R$ 186.747,51. A diferença entre o valor global da proposta e esse total poderá ser alocada como um item denominado “Saldo residual”, com valor correspondente à diferença apurada.\n \nCOMPUTADOR:\nPara o item Computador, alterar o valor unitário de R$ 17.000,00 para R$ 12.849,23, correspondente à média aritmética dos três preços apresentados. Mantida a quantidade de 10 unidades, o valor total do item será de R$ 128.492,30.\n \nSCANNER:\nPara o item Scanner, alterar o valor unitário de R$ 2.000,00 para R$ 2.249,21, correspondente à média aritmética dos três preços apresentados. Considerando uma unidade, o valor total do item será de R$ 2.249,21.\n \nIMPRSSORA:\nPara o item Impressora multifuncional, alterar o valor unitário de R$ 2.700,00 para R$ 2.696,00, correspondente à média aritmética dos três preços apresentados. Considerando uma unidade, o valor total do item será de R$ 2.696,00.\n \nNOTEBOOK:\nPara o item Notebook, alterar o valor unitário de R$ 6.000,00 para R$ 10.662,00, correspondente à média aritmética dos cinco preços apresentados na pesquisa. Mantida a quantidade de cinco unidades, o valor total do item será de R$ 53.310,00.",
+          "communication": "2026-10-14",
           "science": "",
           "response": "",
           "status": "aberta",
           "note": "",
-          "at": "2026-10-06T14:24:39.290Z",
-          "base": "2026-10-16",
-          "due": "2026-10-16",
+          "at": "2026-10-14T12:39:22.873Z",
+          "base": "2026-10-24",
+          "due": "2026-10-26",
           "automaticDeadline": true,
           "confirmed": false,
-          "calendarNote": ""
+          "calendarNote": "",
+          "scope": "review"
         },
         {
           "id": "ac3cd9c4-dfc7-452a-a920-72783a8c4aa6",
           "ref": "pad:17425889",
           "category": "PLANO DE APLICAÇÃO DETALHADO",
-          "request": "Solicita-se a apresentação de pesquisa mercadológica com três cotações para cada item do Plano de Aplicação Detalhado (PAD), acompanhadas dos respectivos comprovantes de preços e da memória de cálculo.\nAs pesquisas poderão ser realizadas em sítios eletrônicos. Nesse caso, cada captura de tela deverá apresentar o preço unitário pesquisado, a data da consulta, com a barra de tarefas do Windows visível, e o link completo da página acessada, de modo a permitir a conferência posterior das informações.\nPara cada item, o preço unitário de referência deverá corresponder à média aritmética dos três preços obtidos. O cálculo consiste em somar os três preços unitários e dividir o resultado por três. A média resultante deverá ser registrada como valor unitário do item no PAD.\nA memória de cálculo deverá identificar o item do PAD e apresentar os três preços unitários pesquisados, a soma, a divisão por três e a média obtida, com referência aos respectivos comprovantes. Dessa forma, será possível conferir a correspondência entre as cotações, o cálculo da média e o valor unitário registrado no plano.",
-          "communication": "2026-10-06",
+          "request": "MINAS GERAIS:\n \nPRINCIPAL:\nSolicita-se que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética de todos os preços apresentados nas pesquisas anexadas como orçamento.\nApós os ajustes, o valor total dos itens será de R$ 186.747,51. A diferença entre o valor global da proposta e esse total poderá ser alocada como um item denominado “Saldo residual”, com valor correspondente à diferença apurada.\n \nCOMPUTADOR:\nPara o item Computador, alterar o valor unitário de R$ 17.000,00 para R$ 12.849,23, correspondente à média aritmética dos três preços apresentados. Mantida a quantidade de 10 unidades, o valor total do item será de R$ 128.492,30.\n \nSCANNER:\nPara o item Scanner, alterar o valor unitário de R$ 2.000,00 para R$ 2.249,21, correspondente à média aritmética dos três preços apresentados. Considerando uma unidade, o valor total do item será de R$ 2.249,21.\n \nIMPRSSORA:\nPara o item Impressora multifuncional, alterar o valor unitário de R$ 2.700,00 para R$ 2.696,00, correspondente à média aritmética dos três preços apresentados. Considerando uma unidade, o valor total do item será de R$ 2.696,00.\n \nNOTEBOOK:\nPara o item Notebook, alterar o valor unitário de R$ 6.000,00 para R$ 10.662,00, correspondente à média aritmética dos cinco preços apresentados na pesquisa. Mantida a quantidade de cinco unidades, o valor total do item será de R$ 53.310,00.",
+          "communication": "2026-10-14",
           "science": "",
           "response": "",
           "status": "aberta",
           "note": "",
-          "at": "2026-10-06T14:24:39.293Z",
-          "base": "2026-10-16",
-          "due": "2026-10-16",
+          "at": "2026-10-14T12:37:56.855Z",
+          "base": "2026-10-24",
+          "due": "2026-10-26",
           "automaticDeadline": true,
           "confirmed": false,
-          "calendarNote": ""
+          "calendarNote": "",
+          "scope": "review"
         },
         {
           "id": "6d42675c-26c9-4a02-850a-af7898b4413e",
           "ref": "pad:17425883",
           "category": "PLANO DE APLICAÇÃO DETALHADO",
-          "request": "Solicita-se a apresentação de pesquisa mercadológica com três cotações para cada item do Plano de Aplicação Detalhado (PAD), acompanhadas dos respectivos comprovantes de preços e da memória de cálculo.\nAs pesquisas poderão ser realizadas em sítios eletrônicos. Nesse caso, cada captura de tela deverá apresentar o preço unitário pesquisado, a data da consulta, com a barra de tarefas do Windows visível, e o link completo da página acessada, de modo a permitir a conferência posterior das informações.\nPara cada item, o preço unitário de referência deverá corresponder à média aritmética dos três preços obtidos. O cálculo consiste em somar os três preços unitários e dividir o resultado por três. A média resultante deverá ser registrada como valor unitário do item no PAD.\nA memória de cálculo deverá identificar o item do PAD e apresentar os três preços unitários pesquisados, a soma, a divisão por três e a média obtida, com referência aos respectivos comprovantes. Dessa forma, será possível conferir a correspondência entre as cotações, o cálculo da média e o valor unitário registrado no plano.",
-          "communication": "2026-10-06",
+          "request": "MINAS GERAIS:\n \nPRINCIPAL:\nSolicita-se que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética de todos os preços apresentados nas pesquisas anexadas como orçamento.\nApós os ajustes, o valor total dos itens será de R$ 186.747,51. A diferença entre o valor global da proposta e esse total poderá ser alocada como um item denominado “Saldo residual”, com valor correspondente à diferença apurada.\n \nCOMPUTADOR:\nPara o item Computador, alterar o valor unitário de R$ 17.000,00 para R$ 12.849,23, correspondente à média aritmética dos três preços apresentados. Mantida a quantidade de 10 unidades, o valor total do item será de R$ 128.492,30.\n \nSCANNER:\nPara o item Scanner, alterar o valor unitário de R$ 2.000,00 para R$ 2.249,21, correspondente à média aritmética dos três preços apresentados. Considerando uma unidade, o valor total do item será de R$ 2.249,21.\n \nIMPRSSORA:\nPara o item Impressora multifuncional, alterar o valor unitário de R$ 2.700,00 para R$ 2.696,00, correspondente à média aritmética dos três preços apresentados. Considerando uma unidade, o valor total do item será de R$ 2.696,00.\n \nNOTEBOOK:\nPara o item Notebook, alterar o valor unitário de R$ 6.000,00 para R$ 10.662,00, correspondente à média aritmética dos cinco preços apresentados na pesquisa. Mantida a quantidade de cinco unidades, o valor total do item será de R$ 53.310,00.",
+          "communication": "2026-10-14",
           "science": "",
           "response": "",
           "status": "aberta",
           "note": "",
-          "at": "2026-10-06T14:24:39.295Z",
-          "base": "2026-10-16",
-          "due": "2026-10-16",
+          "at": "2026-10-14T12:38:53.115Z",
+          "base": "2026-10-24",
+          "due": "2026-10-26",
           "automaticDeadline": true,
           "confirmed": false,
-          "calendarNote": ""
+          "calendarNote": "",
+          "scope": "review"
         },
         {
           "id": "ba0bd5b6-3cdf-4745-a77c-57a8ca77b84e",
           "ref": "pad:17425890",
           "category": "PLANO DE APLICAÇÃO DETALHADO",
-          "request": "Solicita-se a apresentação de pesquisa mercadológica com três cotações para cada item do Plano de Aplicação Detalhado (PAD), acompanhadas dos respectivos comprovantes de preços e da memória de cálculo.\nAs pesquisas poderão ser realizadas em sítios eletrônicos. Nesse caso, cada captura de tela deverá apresentar o preço unitário pesquisado, a data da consulta, com a barra de tarefas do Windows visível, e o link completo da página acessada, de modo a permitir a conferência posterior das informações.\nPara cada item, o preço unitário de referência deverá corresponder à média aritmética dos três preços obtidos. O cálculo consiste em somar os três preços unitários e dividir o resultado por três. A média resultante deverá ser registrada como valor unitário do item no PAD.\nA memória de cálculo deverá identificar o item do PAD e apresentar os três preços unitários pesquisados, a soma, a divisão por três e a média obtida, com referência aos respectivos comprovantes. Dessa forma, será possível conferir a correspondência entre as cotações, o cálculo da média e o valor unitário registrado no plano.",
+          "request": "MINAS GERAIS:\n \nPRINCIPAL:\nSolicita-se que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética de todos os preços apresentados nas pesquisas anexadas como orçamento.\nApós os ajustes, o valor total dos itens será de R$ 186.747,51. A diferença entre o valor global da proposta e esse total poderá ser alocada como um item denominado “Saldo residual”, com valor correspondente à diferença apurada.\n \nCOMPUTADOR:\nPara o item Computador, alterar o valor unitário de R$ 17.000,00 para R$ 12.849,23, correspondente à média aritmética dos três preços apresentados. Mantida a quantidade de 10 unidades, o valor total do item será de R$ 128.492,30.\n \nSCANNER:\nPara o item Scanner, alterar o valor unitário de R$ 2.000,00 para R$ 2.249,21, correspondente à média aritmética dos três preços apresentados. Considerando uma unidade, o valor total do item será de R$ 2.249,21.\n \nIMPRSSORA:\nPara o item Impressora multifuncional, alterar o valor unitário de R$ 2.700,00 para R$ 2.696,00, correspondente à média aritmética dos três preços apresentados. Considerando uma unidade, o valor total do item será de R$ 2.696,00.\n \nNOTEBOOK:\nPara o item Notebook, alterar o valor unitário de R$ 6.000,00 para R$ 10.662,00, correspondente à média aritmética dos cinco preços apresentados na pesquisa. Mantida a quantidade de cinco unidades, o valor total do item será de R$ 53.310,00.",
           "communication": "2026-10-06",
           "science": "",
           "response": "",
           "status": "aberta",
           "note": "",
-          "at": "2026-10-06T14:24:39.298Z",
+          "at": "2026-10-14T12:38:21.523Z",
           "base": "2026-10-16",
           "due": "2026-10-16",
           "automaticDeadline": true,
           "confirmed": false,
-          "calendarNote": ""
+          "calendarNote": "",
+          "scope": "review"
         },
         {
           "id": "d9ba024b-10c4-4d36-be7c-15162d5d67e3",
@@ -35833,14 +35837,24 @@ window.PROFOR_PUBLIC_DATA = {
           "category": "OUTRO",
           "communication": "2026-10-09",
           "response": "",
-          "status": "aberta",
+          "status": "baixada",
           "note": "",
-          "at": "2026-10-09T16:05:01.013Z",
+          "at": "2026-10-14T12:05:16.905Z",
           "base": "2026-10-19",
           "due": "2026-10-19",
           "automaticDeadline": true,
           "confirmed": false,
-          "calendarNote": ""
+          "calendarNote": "",
+          "closedByReview": {
+            "proposalId": "2243987",
+            "group": "celebracao",
+            "item": "6",
+            "ref": "celebracao:6",
+            "at": "2026-10-14T12:05:16.905Z",
+            "reason": "Encerrada por confirmação de conformidade do requisito",
+            "actor": "Usuário local",
+            "confirmedBy": "Usuário local"
+          }
         },
         {
           "id": "5e158528-e975-4eec-a3b7-67a9eb036e30",
@@ -35884,14 +35898,24 @@ window.PROFOR_PUBLIC_DATA = {
           "communication": "2026-10-09",
           "science": "",
           "response": "",
-          "status": "aberta",
+          "status": "baixada",
           "note": "",
-          "at": "2026-10-09T16:06:45.161Z",
+          "at": "2026-10-14T12:08:52.728Z",
           "base": "2026-10-19",
           "due": "2026-10-19",
           "automaticDeadline": true,
           "confirmed": false,
-          "calendarNote": ""
+          "calendarNote": "",
+          "closedByReview": {
+            "proposalId": "2243987",
+            "group": "celebracao",
+            "item": "9",
+            "ref": "celebracao:9",
+            "at": "2026-10-14T12:08:52.728Z",
+            "reason": "Encerrada por confirmação de conformidade do requisito",
+            "actor": "Usuário local",
+            "confirmedBy": "Usuário local"
+          }
         },
         {
           "id": "17235814-3081-465a-b015-7b60ddebe5ab",
@@ -35901,14 +35925,24 @@ window.PROFOR_PUBLIC_DATA = {
           "communication": "2026-10-09",
           "science": "",
           "response": "",
-          "status": "aberta",
+          "status": "baixada",
           "note": "",
-          "at": "2026-10-09T16:06:45.161Z",
+          "at": "2026-10-14T12:11:21.848Z",
           "base": "2026-10-19",
           "due": "2026-10-19",
           "automaticDeadline": true,
           "confirmed": false,
-          "calendarNote": ""
+          "calendarNote": "",
+          "closedByReview": {
+            "proposalId": "2243987",
+            "group": "celebracao",
+            "item": "10",
+            "ref": "celebracao:10",
+            "at": "2026-10-14T12:11:21.848Z",
+            "reason": "Encerrada por confirmação de conformidade do requisito",
+            "actor": "Usuário local",
+            "confirmedBy": "Usuário local"
+          }
         },
         {
           "id": "5b5596de-7b10-4022-a316-1f89c0fb18dc",
@@ -36037,18 +36071,28 @@ window.PROFOR_PUBLIC_DATA = {
           "communication": "2026-10-09",
           "science": "",
           "response": "",
-          "status": "aberta",
+          "status": "baixada",
           "note": "",
-          "at": "2026-10-09T16:06:45.166Z",
+          "at": "2026-10-14T12:13:36.448Z",
           "base": "2026-10-19",
           "due": "2026-10-19",
           "automaticDeadline": true,
           "confirmed": false,
-          "calendarNote": ""
+          "calendarNote": "",
+          "closedByReview": {
+            "proposalId": "2243987",
+            "group": "celebracao",
+            "item": "19",
+            "ref": "celebracao:19",
+            "at": "2026-10-14T12:13:36.448Z",
+            "reason": "Encerrada por confirmação de conformidade do requisito",
+            "actor": "Usuário local",
+            "confirmedBy": "Usuário local"
+          }
         }
       ],
       "ouvidoria": {
-        "status": "pendente",
+        "status": "instituida",
         "signature": "",
         "url": "",
         "note": "",
@@ -38682,6 +38726,724 @@ window.PROFOR_PUBLIC_DATA = {
           },
           "after": {
             "at": "2026-10-14T11:45:08.568Z"
+          }
+        },
+        {
+          "at": "2026-10-14T12:00:07.293Z",
+          "event": "Informações institucionais atualizadas",
+          "actor": "Usuário local",
+          "before": {
+            "ouvidoria": {
+              "status": "pendente",
+              "signature": "",
+              "url": "",
+              "note": "",
+              "clause": false
+            },
+            "falaBR": "nao_previsto"
+          },
+          "after": {
+            "ouvidoria": {
+              "status": "instituida",
+              "signature": "",
+              "url": "",
+              "note": "",
+              "clause": false
+            },
+            "falaBR": "nao_previsto"
+          }
+        },
+        {
+          "at": "2026-10-14T12:00:07.293Z",
+          "event": "Reanálise: merito:ouvidoriaInstituida",
+          "actor": "Usuário local",
+          "before": {
+            "status": "no",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-09T13:05:39.770Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:ouvidoriaInstituida",
+              "fingerprint": "fnv64-v1:a27e8ca67caeb499"
+            }
+          },
+          "after": {
+            "status": "reanalise",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-09T13:05:39.770Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:ouvidoriaInstituida",
+              "fingerprint": "fnv64-v1:a27e8ca67caeb499"
+            },
+            "reanalysis": {
+              "at": "2026-10-14T12:00:07.293Z",
+              "fields": [
+                "ouvidoria"
+              ],
+              "reason": "Evidência alterada; decisão anterior preservada no histórico."
+            }
+          }
+        },
+        {
+          "at": "2026-10-14T12:00:07.293Z",
+          "event": "Avaliação: merito / ouvidoriaInstituida",
+          "actor": "Usuário local",
+          "before": {
+            "status": "no",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-09T13:05:39.770Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:ouvidoriaInstituida",
+              "fingerprint": "fnv64-v1:a27e8ca67caeb499"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-14T12:00:07.293Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:ouvidoriaInstituida",
+              "fingerprint": "fnv64-v1:1335379bb2cd68e8"
+            }
+          }
+        },
+        {
+          "at": "2026-10-14T12:05:16.905Z",
+          "event": "Avaliação: celebracao / 6",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "Falta documento",
+            "document": "",
+            "url": "",
+            "at": "2026-10-09T16:05:01.013Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:6",
+              "fingerprint": "fnv64-v1:7b35951bd17e260a"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Falta documento",
+            "document": "",
+            "url": "",
+            "at": "2026-10-14T12:05:16.905Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:6",
+              "fingerprint": "fnv64-v1:7b35951bd17e260a"
+            }
+          }
+        },
+        {
+          "at": "2026-10-14T12:05:16.905Z",
+          "event": "Diligência encerrada por atendimento do requisito",
+          "actor": "Usuário local",
+          "before": {
+            "id": "d9ba024b-10c4-4d36-be7c-15162d5d67e3",
+            "ref": "celebracao:6",
+            "request": "Falta documento",
+            "science": "",
+            "category": "OUTRO",
+            "communication": "2026-10-09",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-09T16:05:01.013Z",
+            "base": "2026-10-19",
+            "due": "2026-10-19",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          },
+          "after": {
+            "id": "d9ba024b-10c4-4d36-be7c-15162d5d67e3",
+            "ref": "celebracao:6",
+            "request": "Falta documento",
+            "science": "",
+            "category": "OUTRO",
+            "communication": "2026-10-09",
+            "response": "",
+            "status": "baixada",
+            "note": "",
+            "at": "2026-10-14T12:05:16.905Z",
+            "base": "2026-10-19",
+            "due": "2026-10-19",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": "",
+            "closedByReview": {
+              "proposalId": "2243987",
+              "group": "celebracao",
+              "item": "6",
+              "ref": "celebracao:6",
+              "at": "2026-10-14T12:05:16.905Z",
+              "reason": "Encerrada por confirmação de conformidade do requisito",
+              "actor": "Usuário local",
+              "confirmedBy": "Usuário local"
+            }
+          }
+        },
+        {
+          "at": "2026-10-14T12:08:52.728Z",
+          "event": "Avaliação: celebracao / 9",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "Falta o documento",
+            "document": "",
+            "url": "",
+            "at": "2026-10-09T16:06:45.161Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:9",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Falta o documento",
+            "document": "",
+            "url": "",
+            "at": "2026-10-14T12:08:52.728Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:9",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-14T12:08:52.728Z",
+          "event": "Diligência encerrada por atendimento do requisito",
+          "actor": "Usuário local",
+          "before": {
+            "id": "dfb1344e-55a4-4579-bc71-6bea8b9b780f",
+            "ref": "celebracao:9",
+            "category": "OUTRO",
+            "request": "Falta o documento",
+            "communication": "2026-10-09",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-09T16:06:45.161Z",
+            "base": "2026-10-19",
+            "due": "2026-10-19",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          },
+          "after": {
+            "id": "dfb1344e-55a4-4579-bc71-6bea8b9b780f",
+            "ref": "celebracao:9",
+            "category": "OUTRO",
+            "request": "Falta o documento",
+            "communication": "2026-10-09",
+            "science": "",
+            "response": "",
+            "status": "baixada",
+            "note": "",
+            "at": "2026-10-14T12:08:52.728Z",
+            "base": "2026-10-19",
+            "due": "2026-10-19",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": "",
+            "closedByReview": {
+              "proposalId": "2243987",
+              "group": "celebracao",
+              "item": "9",
+              "ref": "celebracao:9",
+              "at": "2026-10-14T12:08:52.728Z",
+              "reason": "Encerrada por confirmação de conformidade do requisito",
+              "actor": "Usuário local",
+              "confirmedBy": "Usuário local"
+            }
+          }
+        },
+        {
+          "at": "2026-10-14T12:11:21.848Z",
+          "event": "Avaliação: celebracao / 10",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "Falta o documento",
+            "document": "",
+            "url": "",
+            "at": "2026-10-09T16:06:45.161Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:10",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Falta o documento",
+            "document": "",
+            "url": "",
+            "at": "2026-10-14T12:11:21.848Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:10",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-14T12:11:21.848Z",
+          "event": "Diligência encerrada por atendimento do requisito",
+          "actor": "Usuário local",
+          "before": {
+            "id": "17235814-3081-465a-b015-7b60ddebe5ab",
+            "ref": "celebracao:10",
+            "category": "OUTRO",
+            "request": "Falta o documento",
+            "communication": "2026-10-09",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-09T16:06:45.161Z",
+            "base": "2026-10-19",
+            "due": "2026-10-19",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          },
+          "after": {
+            "id": "17235814-3081-465a-b015-7b60ddebe5ab",
+            "ref": "celebracao:10",
+            "category": "OUTRO",
+            "request": "Falta o documento",
+            "communication": "2026-10-09",
+            "science": "",
+            "response": "",
+            "status": "baixada",
+            "note": "",
+            "at": "2026-10-14T12:11:21.848Z",
+            "base": "2026-10-19",
+            "due": "2026-10-19",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": "",
+            "closedByReview": {
+              "proposalId": "2243987",
+              "group": "celebracao",
+              "item": "10",
+              "ref": "celebracao:10",
+              "at": "2026-10-14T12:11:21.848Z",
+              "reason": "Encerrada por confirmação de conformidade do requisito",
+              "actor": "Usuário local",
+              "confirmedBy": "Usuário local"
+            }
+          }
+        },
+        {
+          "at": "2026-10-14T12:13:36.447Z",
+          "event": "Avaliação: celebracao / 19",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "Falta o documento",
+            "document": "",
+            "url": "",
+            "at": "2026-10-09T16:06:45.166Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:19",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Falta o documento",
+            "document": "",
+            "url": "",
+            "at": "2026-10-14T12:13:36.447Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:19",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-14T12:13:36.448Z",
+          "event": "Diligência encerrada por atendimento do requisito",
+          "actor": "Usuário local",
+          "before": {
+            "id": "f56b3508-a048-4e73-aa96-3e90b0ee2030",
+            "ref": "celebracao:19",
+            "category": "OUTRO",
+            "request": "Falta o documento",
+            "communication": "2026-10-09",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-09T16:06:45.166Z",
+            "base": "2026-10-19",
+            "due": "2026-10-19",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          },
+          "after": {
+            "id": "f56b3508-a048-4e73-aa96-3e90b0ee2030",
+            "ref": "celebracao:19",
+            "category": "OUTRO",
+            "request": "Falta o documento",
+            "communication": "2026-10-09",
+            "science": "",
+            "response": "",
+            "status": "baixada",
+            "note": "",
+            "at": "2026-10-14T12:13:36.448Z",
+            "base": "2026-10-19",
+            "due": "2026-10-19",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": "",
+            "closedByReview": {
+              "proposalId": "2243987",
+              "group": "celebracao",
+              "item": "19",
+              "ref": "celebracao:19",
+              "at": "2026-10-14T12:13:36.448Z",
+              "reason": "Encerrada por confirmação de conformidade do requisito",
+              "actor": "Usuário local",
+              "confirmedBy": "Usuário local"
+            }
+          }
+        },
+        {
+          "at": "2026-10-14T12:37:56.854Z",
+          "event": "Avaliação: pad / 17425889",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "Solicita-se a apresentação de pesquisa mercadológica com três cotações para cada item do Plano de Aplicação Detalhado (PAD), acompanhadas dos respectivos comprovantes de preços e da memória de cálculo.\nAs pesquisas poderão ser realizadas em sítios eletrônicos. Nesse caso, cada captura de tela deverá apresentar o preço unitário pesquisado, a data da consulta, com a barra de tarefas do Windows visível, e o link completo da página acessada, de modo a permitir a conferência posterior das informações.\nPara cada item, o preço unitário de referência deverá corresponder à média aritmética dos três preços obtidos. O cálculo consiste em somar os três preços unitários e dividir o resultado por três. A média resultante deverá ser registrada como valor unitário do item no PAD.\nA memória de cálculo deverá identificar o item do PAD e apresentar os três preços unitários pesquisados, a soma, a divisão por três e a média obtida, com referência aos respectivos comprovantes. Dessa forma, será possível conferir a correspondência entre as cotações, o cálculo da média e o valor unitário registrado no plano.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-06T14:24:39.293Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17425889",
+              "fingerprint": "fnv64-v1:800847a5271131bc"
+            },
+            "actor": "Usuário local"
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "MINAS GERAIS:\n \nPRINCIPAL:\nSolicita-se que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética de todos os preços apresentados nas pesquisas anexadas como orçamento.\nApós os ajustes, o valor total dos itens será de R$ 186.747,51. A diferença entre o valor global da proposta e esse total poderá ser alocada como um item denominado “Saldo residual”, com valor correspondente à diferença apurada.\n \nCOMPUTADOR:\nPara o item Computador, alterar o valor unitário de R$ 17.000,00 para R$ 12.849,23, correspondente à média aritmética dos três preços apresentados. Mantida a quantidade de 10 unidades, o valor total do item será de R$ 128.492,30.\n \nSCANNER:\nPara o item Scanner, alterar o valor unitário de R$ 2.000,00 para R$ 2.249,21, correspondente à média aritmética dos três preços apresentados. Considerando uma unidade, o valor total do item será de R$ 2.249,21.\n \nIMPRSSORA:\nPara o item Impressora multifuncional, alterar o valor unitário de R$ 2.700,00 para R$ 2.696,00, correspondente à média aritmética dos três preços apresentados. Considerando uma unidade, o valor total do item será de R$ 2.696,00.\n \nNOTEBOOK:\nPara o item Notebook, alterar o valor unitário de R$ 6.000,00 para R$ 10.662,00, correspondente à média aritmética dos cinco preços apresentados na pesquisa. Mantida a quantidade de cinco unidades, o valor total do item será de R$ 53.310,00.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-14T12:37:56.854Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17425889",
+              "fingerprint": "fnv64-v1:800847a5271131bc"
+            },
+            "actor": "Usuário local"
+          }
+        },
+        {
+          "at": "2026-10-14T12:37:56.857Z",
+          "event": "Diligência atualizada",
+          "actor": "Usuário local",
+          "before": {
+            "id": "ac3cd9c4-dfc7-452a-a920-72783a8c4aa6",
+            "ref": "pad:17425889",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Solicita-se a apresentação de pesquisa mercadológica com três cotações para cada item do Plano de Aplicação Detalhado (PAD), acompanhadas dos respectivos comprovantes de preços e da memória de cálculo.\nAs pesquisas poderão ser realizadas em sítios eletrônicos. Nesse caso, cada captura de tela deverá apresentar o preço unitário pesquisado, a data da consulta, com a barra de tarefas do Windows visível, e o link completo da página acessada, de modo a permitir a conferência posterior das informações.\nPara cada item, o preço unitário de referência deverá corresponder à média aritmética dos três preços obtidos. O cálculo consiste em somar os três preços unitários e dividir o resultado por três. A média resultante deverá ser registrada como valor unitário do item no PAD.\nA memória de cálculo deverá identificar o item do PAD e apresentar os três preços unitários pesquisados, a soma, a divisão por três e a média obtida, com referência aos respectivos comprovantes. Dessa forma, será possível conferir a correspondência entre as cotações, o cálculo da média e o valor unitário registrado no plano.",
+            "communication": "2026-10-06",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-06T14:24:39.293Z",
+            "base": "2026-10-16",
+            "due": "2026-10-16",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          },
+          "after": {
+            "id": "ac3cd9c4-dfc7-452a-a920-72783a8c4aa6",
+            "ref": "pad:17425889",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "MINAS GERAIS:\n \nPRINCIPAL:\nSolicita-se que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética de todos os preços apresentados nas pesquisas anexadas como orçamento.\nApós os ajustes, o valor total dos itens será de R$ 186.747,51. A diferença entre o valor global da proposta e esse total poderá ser alocada como um item denominado “Saldo residual”, com valor correspondente à diferença apurada.\n \nCOMPUTADOR:\nPara o item Computador, alterar o valor unitário de R$ 17.000,00 para R$ 12.849,23, correspondente à média aritmética dos três preços apresentados. Mantida a quantidade de 10 unidades, o valor total do item será de R$ 128.492,30.\n \nSCANNER:\nPara o item Scanner, alterar o valor unitário de R$ 2.000,00 para R$ 2.249,21, correspondente à média aritmética dos três preços apresentados. Considerando uma unidade, o valor total do item será de R$ 2.249,21.\n \nIMPRSSORA:\nPara o item Impressora multifuncional, alterar o valor unitário de R$ 2.700,00 para R$ 2.696,00, correspondente à média aritmética dos três preços apresentados. Considerando uma unidade, o valor total do item será de R$ 2.696,00.\n \nNOTEBOOK:\nPara o item Notebook, alterar o valor unitário de R$ 6.000,00 para R$ 10.662,00, correspondente à média aritmética dos cinco preços apresentados na pesquisa. Mantida a quantidade de cinco unidades, o valor total do item será de R$ 53.310,00.",
+            "communication": "2026-10-14",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-14T12:37:56.855Z",
+            "base": "2026-10-24",
+            "due": "2026-10-26",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": "",
+            "scope": "review"
+          }
+        },
+        {
+          "at": "2026-10-14T12:38:21.523Z",
+          "event": "Avaliação: pad / 17425890",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "Solicita-se a apresentação de pesquisa mercadológica com três cotações para cada item do Plano de Aplicação Detalhado (PAD), acompanhadas dos respectivos comprovantes de preços e da memória de cálculo.\nAs pesquisas poderão ser realizadas em sítios eletrônicos. Nesse caso, cada captura de tela deverá apresentar o preço unitário pesquisado, a data da consulta, com a barra de tarefas do Windows visível, e o link completo da página acessada, de modo a permitir a conferência posterior das informações.\nPara cada item, o preço unitário de referência deverá corresponder à média aritmética dos três preços obtidos. O cálculo consiste em somar os três preços unitários e dividir o resultado por três. A média resultante deverá ser registrada como valor unitário do item no PAD.\nA memória de cálculo deverá identificar o item do PAD e apresentar os três preços unitários pesquisados, a soma, a divisão por três e a média obtida, com referência aos respectivos comprovantes. Dessa forma, será possível conferir a correspondência entre as cotações, o cálculo da média e o valor unitário registrado no plano.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-06T14:24:39.298Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17425890",
+              "fingerprint": "fnv64-v1:e176ee0b17534e00"
+            },
+            "actor": "Usuário local"
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "MINAS GERAIS:\n \nPRINCIPAL:\nSolicita-se que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética de todos os preços apresentados nas pesquisas anexadas como orçamento.\nApós os ajustes, o valor total dos itens será de R$ 186.747,51. A diferença entre o valor global da proposta e esse total poderá ser alocada como um item denominado “Saldo residual”, com valor correspondente à diferença apurada.\n \nCOMPUTADOR:\nPara o item Computador, alterar o valor unitário de R$ 17.000,00 para R$ 12.849,23, correspondente à média aritmética dos três preços apresentados. Mantida a quantidade de 10 unidades, o valor total do item será de R$ 128.492,30.\n \nSCANNER:\nPara o item Scanner, alterar o valor unitário de R$ 2.000,00 para R$ 2.249,21, correspondente à média aritmética dos três preços apresentados. Considerando uma unidade, o valor total do item será de R$ 2.249,21.\n \nIMPRSSORA:\nPara o item Impressora multifuncional, alterar o valor unitário de R$ 2.700,00 para R$ 2.696,00, correspondente à média aritmética dos três preços apresentados. Considerando uma unidade, o valor total do item será de R$ 2.696,00.\n \nNOTEBOOK:\nPara o item Notebook, alterar o valor unitário de R$ 6.000,00 para R$ 10.662,00, correspondente à média aritmética dos cinco preços apresentados na pesquisa. Mantida a quantidade de cinco unidades, o valor total do item será de R$ 53.310,00.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-14T12:38:21.523Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17425890",
+              "fingerprint": "fnv64-v1:e176ee0b17534e00"
+            },
+            "actor": "Usuário local"
+          }
+        },
+        {
+          "at": "2026-10-14T12:38:21.524Z",
+          "event": "Diligência atualizada",
+          "actor": "Usuário local",
+          "before": {
+            "id": "ba0bd5b6-3cdf-4745-a77c-57a8ca77b84e",
+            "ref": "pad:17425890",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Solicita-se a apresentação de pesquisa mercadológica com três cotações para cada item do Plano de Aplicação Detalhado (PAD), acompanhadas dos respectivos comprovantes de preços e da memória de cálculo.\nAs pesquisas poderão ser realizadas em sítios eletrônicos. Nesse caso, cada captura de tela deverá apresentar o preço unitário pesquisado, a data da consulta, com a barra de tarefas do Windows visível, e o link completo da página acessada, de modo a permitir a conferência posterior das informações.\nPara cada item, o preço unitário de referência deverá corresponder à média aritmética dos três preços obtidos. O cálculo consiste em somar os três preços unitários e dividir o resultado por três. A média resultante deverá ser registrada como valor unitário do item no PAD.\nA memória de cálculo deverá identificar o item do PAD e apresentar os três preços unitários pesquisados, a soma, a divisão por três e a média obtida, com referência aos respectivos comprovantes. Dessa forma, será possível conferir a correspondência entre as cotações, o cálculo da média e o valor unitário registrado no plano.",
+            "communication": "2026-10-06",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-06T14:24:39.298Z",
+            "base": "2026-10-16",
+            "due": "2026-10-16",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          },
+          "after": {
+            "id": "ba0bd5b6-3cdf-4745-a77c-57a8ca77b84e",
+            "ref": "pad:17425890",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "MINAS GERAIS:\n \nPRINCIPAL:\nSolicita-se que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética de todos os preços apresentados nas pesquisas anexadas como orçamento.\nApós os ajustes, o valor total dos itens será de R$ 186.747,51. A diferença entre o valor global da proposta e esse total poderá ser alocada como um item denominado “Saldo residual”, com valor correspondente à diferença apurada.\n \nCOMPUTADOR:\nPara o item Computador, alterar o valor unitário de R$ 17.000,00 para R$ 12.849,23, correspondente à média aritmética dos três preços apresentados. Mantida a quantidade de 10 unidades, o valor total do item será de R$ 128.492,30.\n \nSCANNER:\nPara o item Scanner, alterar o valor unitário de R$ 2.000,00 para R$ 2.249,21, correspondente à média aritmética dos três preços apresentados. Considerando uma unidade, o valor total do item será de R$ 2.249,21.\n \nIMPRSSORA:\nPara o item Impressora multifuncional, alterar o valor unitário de R$ 2.700,00 para R$ 2.696,00, correspondente à média aritmética dos três preços apresentados. Considerando uma unidade, o valor total do item será de R$ 2.696,00.\n \nNOTEBOOK:\nPara o item Notebook, alterar o valor unitário de R$ 6.000,00 para R$ 10.662,00, correspondente à média aritmética dos cinco preços apresentados na pesquisa. Mantida a quantidade de cinco unidades, o valor total do item será de R$ 53.310,00.",
+            "communication": "2026-10-06",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-14T12:38:21.523Z",
+            "base": "2026-10-16",
+            "due": "2026-10-16",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": "",
+            "scope": "review"
+          }
+        },
+        {
+          "at": "2026-10-14T12:38:53.115Z",
+          "event": "Avaliação: pad / 17425883",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "Solicita-se a apresentação de pesquisa mercadológica com três cotações para cada item do Plano de Aplicação Detalhado (PAD), acompanhadas dos respectivos comprovantes de preços e da memória de cálculo.\nAs pesquisas poderão ser realizadas em sítios eletrônicos. Nesse caso, cada captura de tela deverá apresentar o preço unitário pesquisado, a data da consulta, com a barra de tarefas do Windows visível, e o link completo da página acessada, de modo a permitir a conferência posterior das informações.\nPara cada item, o preço unitário de referência deverá corresponder à média aritmética dos três preços obtidos. O cálculo consiste em somar os três preços unitários e dividir o resultado por três. A média resultante deverá ser registrada como valor unitário do item no PAD.\nA memória de cálculo deverá identificar o item do PAD e apresentar os três preços unitários pesquisados, a soma, a divisão por três e a média obtida, com referência aos respectivos comprovantes. Dessa forma, será possível conferir a correspondência entre as cotações, o cálculo da média e o valor unitário registrado no plano.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-06T14:24:39.295Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17425883",
+              "fingerprint": "fnv64-v1:1c7aa7966772bde7"
+            },
+            "actor": "Usuário local"
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "MINAS GERAIS:\n \nPRINCIPAL:\nSolicita-se que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética de todos os preços apresentados nas pesquisas anexadas como orçamento.\nApós os ajustes, o valor total dos itens será de R$ 186.747,51. A diferença entre o valor global da proposta e esse total poderá ser alocada como um item denominado “Saldo residual”, com valor correspondente à diferença apurada.\n \nCOMPUTADOR:\nPara o item Computador, alterar o valor unitário de R$ 17.000,00 para R$ 12.849,23, correspondente à média aritmética dos três preços apresentados. Mantida a quantidade de 10 unidades, o valor total do item será de R$ 128.492,30.\n \nSCANNER:\nPara o item Scanner, alterar o valor unitário de R$ 2.000,00 para R$ 2.249,21, correspondente à média aritmética dos três preços apresentados. Considerando uma unidade, o valor total do item será de R$ 2.249,21.\n \nIMPRSSORA:\nPara o item Impressora multifuncional, alterar o valor unitário de R$ 2.700,00 para R$ 2.696,00, correspondente à média aritmética dos três preços apresentados. Considerando uma unidade, o valor total do item será de R$ 2.696,00.\n \nNOTEBOOK:\nPara o item Notebook, alterar o valor unitário de R$ 6.000,00 para R$ 10.662,00, correspondente à média aritmética dos cinco preços apresentados na pesquisa. Mantida a quantidade de cinco unidades, o valor total do item será de R$ 53.310,00.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-14T12:38:53.115Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17425883",
+              "fingerprint": "fnv64-v1:1c7aa7966772bde7"
+            },
+            "actor": "Usuário local"
+          }
+        },
+        {
+          "at": "2026-10-14T12:38:53.116Z",
+          "event": "Diligência atualizada",
+          "actor": "Usuário local",
+          "before": {
+            "id": "6d42675c-26c9-4a02-850a-af7898b4413e",
+            "ref": "pad:17425883",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Solicita-se a apresentação de pesquisa mercadológica com três cotações para cada item do Plano de Aplicação Detalhado (PAD), acompanhadas dos respectivos comprovantes de preços e da memória de cálculo.\nAs pesquisas poderão ser realizadas em sítios eletrônicos. Nesse caso, cada captura de tela deverá apresentar o preço unitário pesquisado, a data da consulta, com a barra de tarefas do Windows visível, e o link completo da página acessada, de modo a permitir a conferência posterior das informações.\nPara cada item, o preço unitário de referência deverá corresponder à média aritmética dos três preços obtidos. O cálculo consiste em somar os três preços unitários e dividir o resultado por três. A média resultante deverá ser registrada como valor unitário do item no PAD.\nA memória de cálculo deverá identificar o item do PAD e apresentar os três preços unitários pesquisados, a soma, a divisão por três e a média obtida, com referência aos respectivos comprovantes. Dessa forma, será possível conferir a correspondência entre as cotações, o cálculo da média e o valor unitário registrado no plano.",
+            "communication": "2026-10-06",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-06T14:24:39.295Z",
+            "base": "2026-10-16",
+            "due": "2026-10-16",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          },
+          "after": {
+            "id": "6d42675c-26c9-4a02-850a-af7898b4413e",
+            "ref": "pad:17425883",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "MINAS GERAIS:\n \nPRINCIPAL:\nSolicita-se que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética de todos os preços apresentados nas pesquisas anexadas como orçamento.\nApós os ajustes, o valor total dos itens será de R$ 186.747,51. A diferença entre o valor global da proposta e esse total poderá ser alocada como um item denominado “Saldo residual”, com valor correspondente à diferença apurada.\n \nCOMPUTADOR:\nPara o item Computador, alterar o valor unitário de R$ 17.000,00 para R$ 12.849,23, correspondente à média aritmética dos três preços apresentados. Mantida a quantidade de 10 unidades, o valor total do item será de R$ 128.492,30.\n \nSCANNER:\nPara o item Scanner, alterar o valor unitário de R$ 2.000,00 para R$ 2.249,21, correspondente à média aritmética dos três preços apresentados. Considerando uma unidade, o valor total do item será de R$ 2.249,21.\n \nIMPRSSORA:\nPara o item Impressora multifuncional, alterar o valor unitário de R$ 2.700,00 para R$ 2.696,00, correspondente à média aritmética dos três preços apresentados. Considerando uma unidade, o valor total do item será de R$ 2.696,00.\n \nNOTEBOOK:\nPara o item Notebook, alterar o valor unitário de R$ 6.000,00 para R$ 10.662,00, correspondente à média aritmética dos cinco preços apresentados na pesquisa. Mantida a quantidade de cinco unidades, o valor total do item será de R$ 53.310,00.",
+            "communication": "2026-10-14",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-14T12:38:53.115Z",
+            "base": "2026-10-24",
+            "due": "2026-10-26",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": "",
+            "scope": "review"
+          }
+        },
+        {
+          "at": "2026-10-14T12:39:22.873Z",
+          "event": "Avaliação: pad / 17425892",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "Solicita-se a apresentação de pesquisa mercadológica com três cotações para cada item do Plano de Aplicação Detalhado (PAD), acompanhadas dos respectivos comprovantes de preços e da memória de cálculo.\nAs pesquisas poderão ser realizadas em sítios eletrônicos. Nesse caso, cada captura de tela deverá apresentar o preço unitário pesquisado, a data da consulta, com a barra de tarefas do Windows visível, e o link completo da página acessada, de modo a permitir a conferência posterior das informações.\nPara cada item, o preço unitário de referência deverá corresponder à média aritmética dos três preços obtidos. O cálculo consiste em somar os três preços unitários e dividir o resultado por três. A média resultante deverá ser registrada como valor unitário do item no PAD.\nA memória de cálculo deverá identificar o item do PAD e apresentar os três preços unitários pesquisados, a soma, a divisão por três e a média obtida, com referência aos respectivos comprovantes. Dessa forma, será possível conferir a correspondência entre as cotações, o cálculo da média e o valor unitário registrado no plano.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-06T14:24:39.289Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17425892",
+              "fingerprint": "fnv64-v1:994107777e8b9574"
+            },
+            "actor": "Usuário local"
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "MINAS GERAIS:\n \nPRINCIPAL:\nSolicita-se que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética de todos os preços apresentados nas pesquisas anexadas como orçamento.\nApós os ajustes, o valor total dos itens será de R$ 186.747,51. A diferença entre o valor global da proposta e esse total poderá ser alocada como um item denominado “Saldo residual”, com valor correspondente à diferença apurada.\n \nCOMPUTADOR:\nPara o item Computador, alterar o valor unitário de R$ 17.000,00 para R$ 12.849,23, correspondente à média aritmética dos três preços apresentados. Mantida a quantidade de 10 unidades, o valor total do item será de R$ 128.492,30.\n \nSCANNER:\nPara o item Scanner, alterar o valor unitário de R$ 2.000,00 para R$ 2.249,21, correspondente à média aritmética dos três preços apresentados. Considerando uma unidade, o valor total do item será de R$ 2.249,21.\n \nIMPRSSORA:\nPara o item Impressora multifuncional, alterar o valor unitário de R$ 2.700,00 para R$ 2.696,00, correspondente à média aritmética dos três preços apresentados. Considerando uma unidade, o valor total do item será de R$ 2.696,00.\n \nNOTEBOOK:\nPara o item Notebook, alterar o valor unitário de R$ 6.000,00 para R$ 10.662,00, correspondente à média aritmética dos cinco preços apresentados na pesquisa. Mantida a quantidade de cinco unidades, o valor total do item será de R$ 53.310,00.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-14T12:39:22.873Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17425892",
+              "fingerprint": "fnv64-v1:994107777e8b9574"
+            },
+            "actor": "Usuário local"
+          }
+        },
+        {
+          "at": "2026-10-14T12:39:22.874Z",
+          "event": "Diligência atualizada",
+          "actor": "Usuário local",
+          "before": {
+            "id": "730701e1-d33f-4332-90b8-bda3f62a7c98",
+            "ref": "pad:17425892",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Solicita-se a apresentação de pesquisa mercadológica com três cotações para cada item do Plano de Aplicação Detalhado (PAD), acompanhadas dos respectivos comprovantes de preços e da memória de cálculo.\nAs pesquisas poderão ser realizadas em sítios eletrônicos. Nesse caso, cada captura de tela deverá apresentar o preço unitário pesquisado, a data da consulta, com a barra de tarefas do Windows visível, e o link completo da página acessada, de modo a permitir a conferência posterior das informações.\nPara cada item, o preço unitário de referência deverá corresponder à média aritmética dos três preços obtidos. O cálculo consiste em somar os três preços unitários e dividir o resultado por três. A média resultante deverá ser registrada como valor unitário do item no PAD.\nA memória de cálculo deverá identificar o item do PAD e apresentar os três preços unitários pesquisados, a soma, a divisão por três e a média obtida, com referência aos respectivos comprovantes. Dessa forma, será possível conferir a correspondência entre as cotações, o cálculo da média e o valor unitário registrado no plano.",
+            "communication": "2026-10-06",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-06T14:24:39.290Z",
+            "base": "2026-10-16",
+            "due": "2026-10-16",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          },
+          "after": {
+            "id": "730701e1-d33f-4332-90b8-bda3f62a7c98",
+            "ref": "pad:17425892",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "MINAS GERAIS:\n \nPRINCIPAL:\nSolicita-se que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética de todos os preços apresentados nas pesquisas anexadas como orçamento.\nApós os ajustes, o valor total dos itens será de R$ 186.747,51. A diferença entre o valor global da proposta e esse total poderá ser alocada como um item denominado “Saldo residual”, com valor correspondente à diferença apurada.\n \nCOMPUTADOR:\nPara o item Computador, alterar o valor unitário de R$ 17.000,00 para R$ 12.849,23, correspondente à média aritmética dos três preços apresentados. Mantida a quantidade de 10 unidades, o valor total do item será de R$ 128.492,30.\n \nSCANNER:\nPara o item Scanner, alterar o valor unitário de R$ 2.000,00 para R$ 2.249,21, correspondente à média aritmética dos três preços apresentados. Considerando uma unidade, o valor total do item será de R$ 2.249,21.\n \nIMPRSSORA:\nPara o item Impressora multifuncional, alterar o valor unitário de R$ 2.700,00 para R$ 2.696,00, correspondente à média aritmética dos três preços apresentados. Considerando uma unidade, o valor total do item será de R$ 2.696,00.\n \nNOTEBOOK:\nPara o item Notebook, alterar o valor unitário de R$ 6.000,00 para R$ 10.662,00, correspondente à média aritmética dos cinco preços apresentados na pesquisa. Mantida a quantidade de cinco unidades, o valor total do item será de R$ 53.310,00.",
+            "communication": "2026-10-14",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-14T12:39:22.873Z",
+            "base": "2026-10-24",
+            "due": "2026-10-26",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": "",
+            "scope": "review"
           }
         }
       ],
