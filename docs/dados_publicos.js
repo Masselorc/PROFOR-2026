@@ -1,9 +1,9 @@
-/** Snapshot integral de consulta PROFOR/ONASP 2026. Gerado em 2026-10-14T12:40:12.681Z.
+/** Snapshot integral de consulta PROFOR/ONASP 2026. Gerado em 2026-10-14T12:52:56.103Z.
  * Não editar manualmente. Use tools/build_public_docs.cjs. */
-window.PROFOR_PUBLIC_UPDATED_AT = "2026-10-14T12:40:12.681Z";
+window.PROFOR_PUBLIC_UPDATED_AT = "2026-10-14T12:52:56.103Z";
 window.PROFOR_PUBLIC_DATA = {
   "schemaVersion": 1,
-  "revision": 408,
+  "revision": 419,
   "proposals": [
     {
       "id": "2243618",
@@ -19884,16 +19884,16 @@ window.PROFOR_PUBLIC_DATA = {
             "at": null
           },
           "falaBRAdesao": {
-            "status": "no",
+            "status": "obs",
             "note": "",
             "document": "",
             "url": "",
-            "at": "2026-10-02T15:52:24.366Z",
+            "at": "2026-10-14T12:41:28.099Z",
             "attachments": [],
             "evidence": {
               "version": 1,
               "ref": "merito:falaBRAdesao",
-              "fingerprint": "fnv64-v1:20325664b9ae9846"
+              "fingerprint": "fnv64-v1:21d99edf76c0ac39"
             },
             "actor": "Usuário local"
           }
@@ -20191,56 +20191,60 @@ window.PROFOR_PUBLIC_DATA = {
             }
           },
           "17444048": {
-            "status": "diligencia",
+            "status": "ok",
             "note": "Anexar ATA SGARP - ECONOMIA 0166/2025 indicada como comprobatória do preço indicado para o item.",
             "document": "",
             "url": "",
-            "at": "2026-09-30T11:36:19.950Z",
+            "at": "2026-10-14T12:49:57.431Z",
             "attachments": [],
             "evidence": {
               "version": 1,
               "ref": "pad:17444048",
               "fingerprint": "fnv64-v1:5f692680ddb12a3d"
-            }
+            },
+            "actor": "Usuário local"
           },
           "17444054": {
-            "status": "diligencia",
+            "status": "ok",
             "note": "Anexar ATA SGARP - ECONOMIA 0166/2025 indicada como comprobatória do preço indicado para o item.",
             "document": "",
             "url": "",
-            "at": "2026-09-30T11:47:21.207Z",
+            "at": "2026-10-14T12:51:11.751Z",
             "attachments": [],
             "evidence": {
               "version": 1,
               "ref": "pad:17444054",
               "fingerprint": "fnv64-v1:253b50da17b12694"
-            }
+            },
+            "actor": "Usuário local"
           },
           "17444057": {
-            "status": "diligencia",
+            "status": "ok",
             "note": "Anexar ATA SGARP - ECONOMIA 0166/2025 indicada como comprobatória do preço indicado para o item.",
             "document": "",
             "url": "",
-            "at": "2026-09-30T11:50:09.905Z",
+            "at": "2026-10-14T12:49:36.665Z",
             "attachments": [],
             "evidence": {
               "version": 1,
               "ref": "pad:17444057",
               "fingerprint": "fnv64-v1:a5346bee26e6847b"
-            }
+            },
+            "actor": "Usuário local"
           },
           "17444083": {
-            "status": "diligencia",
+            "status": "ok",
             "note": "Anexar ATA SGARP - ECONOMIA 0166/2025 indicada como comprobatória do preço indicado para o item.",
             "document": "",
             "url": "",
-            "at": "2026-09-30T11:50:56.483Z",
+            "at": "2026-10-14T12:50:19.760Z",
             "attachments": [],
             "evidence": {
               "version": 1,
               "ref": "pad:17444083",
               "fingerprint": "fnv64-v1:1d4dd205cf1c9cb9"
-            }
+            },
+            "actor": "Usuário local"
           },
           "17444101": {
             "status": "ok",
@@ -20282,51 +20286,46 @@ window.PROFOR_PUBLIC_DATA = {
             }
           },
           "17444126": {
-            "status": "diligencia",
+            "status": "ok",
             "note": "Anexar ATA SGARP - ECONOMIA 0166/2025 indicada como comprobatória do preço indicado para o item.",
             "document": "",
             "url": "",
-            "at": "2026-09-30T11:52:09.917Z",
+            "at": "2026-10-14T12:47:52.144Z",
             "attachments": [],
             "evidence": {
               "version": 1,
               "ref": "pad:17444126",
               "fingerprint": "fnv64-v1:9f95d37546613921"
-            }
+            },
+            "actor": "Usuário local"
           },
           "17444131": {
-            "status": "reanalise",
+            "status": "ok",
             "note": "Anexar ATA SGARP - ECONOMIA 0166/2025 indicada como comprobatória do preço indicado para o item.",
             "document": "",
             "url": "",
-            "at": "2026-09-30T11:52:46.842Z",
+            "at": "2026-10-14T12:48:35.162Z",
             "attachments": [],
             "evidence": {
               "version": 1,
               "ref": "pad:17444131",
-              "fingerprint": null,
-              "legacy": true
+              "fingerprint": "fnv64-v1:2a0fa6724a983ccd"
             },
-            "reanalysis": {
-              "at": "2026-10-06T12:41:57.864Z",
-              "fields": [
-                "imported.pad:17444131"
-              ],
-              "reason": "Evidência alterada; decisão anterior preservada no histórico."
-            }
+            "actor": "Usuário local"
           },
           "17444133": {
-            "status": "diligencia",
+            "status": "ok",
             "note": "Anexar ATA SEAPE 0020/2025 indicada como comprobatória do preço indicado para o item.",
             "document": "",
             "url": "",
-            "at": "2026-09-30T11:54:21.520Z",
+            "at": "2026-10-14T12:43:50.415Z",
             "attachments": [],
             "evidence": {
               "version": 1,
               "ref": "pad:17444133",
               "fingerprint": "fnv64-v1:166cf7661ed8e487"
-            }
+            },
+            "actor": "Usuário local"
           },
           "17444140": {
             "status": "obs",
@@ -20355,30 +20354,32 @@ window.PROFOR_PUBLIC_DATA = {
             }
           },
           "17444149": {
-            "status": "diligencia",
+            "status": "ok",
             "note": "Anexar ATA SGARP - ECONOMIA 0124/2026 indicada como comprobatória do preço indicado para o item.",
             "document": "",
             "url": "",
-            "at": "2026-09-30T11:57:11.361Z",
+            "at": "2026-10-14T12:49:06.051Z",
             "attachments": [],
             "evidence": {
               "version": 1,
               "ref": "pad:17444149",
               "fingerprint": "fnv64-v1:ff5fa6a99660b215"
-            }
+            },
+            "actor": "Usuário local"
           },
           "17444156": {
-            "status": "diligencia",
+            "status": "ok",
             "note": "Anexar ATA SEAPE indicada como comprobatória do preço indicado para o item.",
             "document": "",
             "url": "",
-            "at": "2026-09-30T11:57:47.211Z",
+            "at": "2026-10-14T12:51:39.493Z",
             "attachments": [],
             "evidence": {
               "version": 1,
               "ref": "pad:17444156",
               "fingerprint": "fnv64-v1:b44ff1c7dabc95e0"
-            }
+            },
+            "actor": "Usuário local"
           },
           "17444159": {
             "status": "ok",
@@ -20550,12 +20551,18 @@ window.PROFOR_PUBLIC_DATA = {
             }
           },
           "17444298": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-14T12:52:04.159Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17444298",
+              "fingerprint": "fnv64-v1:72f788b8be52c597"
+            }
           }
         }
       },
@@ -20568,14 +20575,24 @@ window.PROFOR_PUBLIC_DATA = {
           "category": "PLANO DE APLICAÇÃO DETALHADO",
           "communication": "2026-09-30",
           "response": "",
-          "status": "aberta",
+          "status": "baixada",
           "note": "",
-          "at": "2026-09-30T11:36:19.950Z",
+          "at": "2026-10-14T12:49:57.431Z",
           "base": "2026-10-10",
           "due": "2026-10-12",
           "automaticDeadline": true,
           "confirmed": false,
-          "calendarNote": ""
+          "calendarNote": "",
+          "closedByReview": {
+            "proposalId": "2244186",
+            "group": "pad",
+            "item": "17444048",
+            "ref": "pad:17444048",
+            "at": "2026-10-14T12:49:57.431Z",
+            "reason": "Encerrada por confirmação de conformidade do requisito",
+            "actor": "Usuário local",
+            "confirmedBy": "Usuário local"
+          }
         },
         {
           "ref": "pad:17444054",
@@ -20583,16 +20600,26 @@ window.PROFOR_PUBLIC_DATA = {
           "request": "Anexar ATA SGARP - ECONOMIA 0167/2025 indicada como comprobatória do preço indicado para o item.",
           "communication": "2026-09-30",
           "response": "",
-          "status": "aberta",
+          "status": "baixada",
           "note": "",
           "id": "53dfeb79-a5e9-4b01-943d-e9cb05da899f",
           "science": "",
-          "at": "2026-09-30T11:56:11.720Z",
+          "at": "2026-10-14T12:51:11.751Z",
           "base": "2026-10-10",
           "due": "2026-10-12",
           "automaticDeadline": true,
           "confirmed": false,
-          "calendarNote": ""
+          "calendarNote": "",
+          "closedByReview": {
+            "proposalId": "2244186",
+            "group": "pad",
+            "item": "17444054",
+            "ref": "pad:17444054",
+            "at": "2026-10-14T12:51:11.751Z",
+            "reason": "Encerrada por confirmação de conformidade do requisito",
+            "actor": "Usuário local",
+            "confirmedBy": "Usuário local"
+          }
         },
         {
           "id": "5489812c-0b93-474c-9ca1-a3560e0f33d3",
@@ -20602,14 +20629,24 @@ window.PROFOR_PUBLIC_DATA = {
           "category": "PLANO DE APLICAÇÃO DETALHADO",
           "communication": "2026-09-30",
           "response": "",
-          "status": "aberta",
+          "status": "baixada",
           "note": "",
-          "at": "2026-09-30T11:50:09.905Z",
+          "at": "2026-10-14T12:49:36.665Z",
           "base": "2026-10-10",
           "due": "2026-10-12",
           "automaticDeadline": true,
           "confirmed": false,
-          "calendarNote": ""
+          "calendarNote": "",
+          "closedByReview": {
+            "proposalId": "2244186",
+            "group": "pad",
+            "item": "17444057",
+            "ref": "pad:17444057",
+            "at": "2026-10-14T12:49:36.665Z",
+            "reason": "Encerrada por confirmação de conformidade do requisito",
+            "actor": "Usuário local",
+            "confirmedBy": "Usuário local"
+          }
         },
         {
           "ref": "pad:17444083",
@@ -20617,16 +20654,26 @@ window.PROFOR_PUBLIC_DATA = {
           "request": "Anexar ATA SGARP - ECONOMIA 0050/2026 indicada como comprobatória do preço indicado para o item.",
           "communication": "2026-09-30",
           "response": "",
-          "status": "aberta",
+          "status": "baixada",
           "note": "",
           "id": "6ddf9628-ad37-470b-b9a2-8ffc577b3d02",
           "science": "",
-          "at": "2026-09-30T11:55:52.427Z",
+          "at": "2026-10-14T12:50:19.760Z",
           "base": "2026-10-10",
           "due": "2026-10-12",
           "automaticDeadline": true,
           "confirmed": false,
-          "calendarNote": ""
+          "calendarNote": "",
+          "closedByReview": {
+            "proposalId": "2244186",
+            "group": "pad",
+            "item": "17444083",
+            "ref": "pad:17444083",
+            "at": "2026-10-14T12:50:19.760Z",
+            "reason": "Encerrada por confirmação de conformidade do requisito",
+            "actor": "Usuário local",
+            "confirmedBy": "Usuário local"
+          }
         },
         {
           "ref": "pad:17444126",
@@ -20634,16 +20681,26 @@ window.PROFOR_PUBLIC_DATA = {
           "request": "Anexar ATA SEAPE 0020/2025 indicada como comprobatória do preço indicado para o item.",
           "communication": "2026-09-30",
           "response": "",
-          "status": "aberta",
+          "status": "baixada",
           "note": "",
           "id": "84f1d674-3490-4640-976f-1c268bcc03f1",
           "science": "",
-          "at": "2026-09-30T11:55:05.542Z",
+          "at": "2026-10-14T12:47:52.145Z",
           "base": "2026-10-10",
           "due": "2026-10-12",
           "automaticDeadline": true,
           "confirmed": false,
-          "calendarNote": ""
+          "calendarNote": "",
+          "closedByReview": {
+            "proposalId": "2244186",
+            "group": "pad",
+            "item": "17444126",
+            "ref": "pad:17444126",
+            "at": "2026-10-14T12:47:52.145Z",
+            "reason": "Encerrada por confirmação de conformidade do requisito",
+            "actor": "Usuário local",
+            "confirmedBy": "Usuário local"
+          }
         },
         {
           "ref": "pad:17444131",
@@ -20651,16 +20708,26 @@ window.PROFOR_PUBLIC_DATA = {
           "request": "Anexar ATA SEAPE 0020/2025 indicada como comprobatória do preço indicado para o item.",
           "communication": "2026-09-30",
           "response": "",
-          "status": "aberta",
+          "status": "baixada",
           "note": "",
           "id": "c14420c6-57c0-4b7f-90bb-aa74839bc930",
           "science": "",
-          "at": "2026-09-30T11:54:42.844Z",
+          "at": "2026-10-14T12:48:35.162Z",
           "base": "2026-10-10",
           "due": "2026-10-12",
           "automaticDeadline": true,
           "confirmed": false,
-          "calendarNote": ""
+          "calendarNote": "",
+          "closedByReview": {
+            "proposalId": "2244186",
+            "group": "pad",
+            "item": "17444131",
+            "ref": "pad:17444131",
+            "at": "2026-10-14T12:48:35.162Z",
+            "reason": "Encerrada por confirmação de conformidade do requisito",
+            "actor": "Usuário local",
+            "confirmedBy": "Usuário local"
+          }
         },
         {
           "id": "8550058c-07ad-4296-ad71-43516947984c",
@@ -20670,14 +20737,24 @@ window.PROFOR_PUBLIC_DATA = {
           "category": "PLANO DE APLICAÇÃO DETALHADO",
           "communication": "2026-09-30",
           "response": "",
-          "status": "aberta",
+          "status": "baixada",
           "note": "",
-          "at": "2026-09-30T11:54:21.520Z",
+          "at": "2026-10-14T12:43:50.415Z",
           "base": "2026-10-10",
           "due": "2026-10-12",
           "automaticDeadline": true,
           "confirmed": false,
-          "calendarNote": ""
+          "calendarNote": "",
+          "closedByReview": {
+            "proposalId": "2244186",
+            "group": "pad",
+            "item": "17444133",
+            "ref": "pad:17444133",
+            "at": "2026-10-14T12:43:50.415Z",
+            "reason": "Encerrada por confirmação de conformidade do requisito",
+            "actor": "Usuário local",
+            "confirmedBy": "Usuário local"
+          }
         },
         {
           "id": "1a7a5464-c869-47cb-9547-95e130c9d2b3",
@@ -20687,14 +20764,24 @@ window.PROFOR_PUBLIC_DATA = {
           "category": "PLANO DE APLICAÇÃO DETALHADO",
           "communication": "2026-09-30",
           "response": "",
-          "status": "aberta",
+          "status": "baixada",
           "note": "",
-          "at": "2026-09-30T11:57:11.361Z",
+          "at": "2026-10-14T12:49:06.051Z",
           "base": "2026-10-10",
           "due": "2026-10-12",
           "automaticDeadline": true,
           "confirmed": false,
-          "calendarNote": ""
+          "calendarNote": "",
+          "closedByReview": {
+            "proposalId": "2244186",
+            "group": "pad",
+            "item": "17444149",
+            "ref": "pad:17444149",
+            "at": "2026-10-14T12:49:06.051Z",
+            "reason": "Encerrada por confirmação de conformidade do requisito",
+            "actor": "Usuário local",
+            "confirmedBy": "Usuário local"
+          }
         },
         {
           "id": "d5fe589f-f9b8-45ca-b3b0-b1e4355d0ee4",
@@ -20704,14 +20791,24 @@ window.PROFOR_PUBLIC_DATA = {
           "category": "PLANO DE APLICAÇÃO DETALHADO",
           "communication": "2026-09-30",
           "response": "",
-          "status": "aberta",
+          "status": "baixada",
           "note": "",
-          "at": "2026-09-30T11:57:47.212Z",
+          "at": "2026-10-14T12:51:39.493Z",
           "base": "2026-10-10",
           "due": "2026-10-12",
           "automaticDeadline": true,
           "confirmed": false,
-          "calendarNote": ""
+          "calendarNote": "",
+          "closedByReview": {
+            "proposalId": "2244186",
+            "group": "pad",
+            "item": "17444156",
+            "ref": "pad:17444156",
+            "at": "2026-10-14T12:51:39.493Z",
+            "reason": "Encerrada por confirmação de conformidade do requisito",
+            "actor": "Usuário local",
+            "confirmedBy": "Usuário local"
+          }
         }
       ],
       "ouvidoria": {
@@ -20721,7 +20818,7 @@ window.PROFOR_PUBLIC_DATA = {
         "note": "",
         "clause": false
       },
-      "falaBR": "nao_previsto",
+      "falaBR": "previsto",
       "conclusion": null,
       "history": [
         {
@@ -27509,6 +27606,868 @@ window.PROFOR_PUBLIC_DATA = {
           },
           "after": {
             "at": "2026-10-14T11:45:08.568Z"
+          }
+        },
+        {
+          "at": "2026-10-14T12:41:28.099Z",
+          "event": "Informações institucionais atualizadas",
+          "actor": "Usuário local",
+          "before": {
+            "ouvidoria": {
+              "status": "instituida",
+              "signature": "",
+              "url": "",
+              "note": "",
+              "clause": false
+            },
+            "falaBR": "nao_previsto"
+          },
+          "after": {
+            "ouvidoria": {
+              "status": "instituida",
+              "signature": "",
+              "url": "",
+              "note": "",
+              "clause": false
+            },
+            "falaBR": "previsto"
+          }
+        },
+        {
+          "at": "2026-10-14T12:41:28.099Z",
+          "event": "Reanálise: merito:falaBRAdesao",
+          "actor": "Usuário local",
+          "before": {
+            "status": "no",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-02T15:52:24.366Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "merito:falaBRAdesao",
+              "fingerprint": "fnv64-v1:20325664b9ae9846"
+            },
+            "actor": "Usuário local"
+          },
+          "after": {
+            "status": "reanalise",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-02T15:52:24.366Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "merito:falaBRAdesao",
+              "fingerprint": "fnv64-v1:20325664b9ae9846"
+            },
+            "actor": "Usuário local",
+            "reanalysis": {
+              "at": "2026-10-14T12:41:28.099Z",
+              "fields": [
+                "falaBR"
+              ],
+              "reason": "Evidência alterada; decisão anterior preservada no histórico."
+            }
+          }
+        },
+        {
+          "at": "2026-10-14T12:41:28.099Z",
+          "event": "Avaliação: merito / falaBRAdesao",
+          "actor": "Usuário local",
+          "before": {
+            "status": "no",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-02T15:52:24.366Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "merito:falaBRAdesao",
+              "fingerprint": "fnv64-v1:20325664b9ae9846"
+            },
+            "actor": "Usuário local"
+          },
+          "after": {
+            "status": "obs",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-14T12:41:28.099Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "merito:falaBRAdesao",
+              "fingerprint": "fnv64-v1:21d99edf76c0ac39"
+            },
+            "actor": "Usuário local"
+          }
+        },
+        {
+          "at": "2026-10-14T12:43:50.415Z",
+          "event": "Avaliação: pad / 17444133",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "Anexar ATA SEAPE 0020/2025 indicada como comprobatória do preço indicado para o item.",
+            "document": "",
+            "url": "",
+            "at": "2026-09-30T11:54:21.520Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17444133",
+              "fingerprint": "fnv64-v1:166cf7661ed8e487"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Anexar ATA SEAPE 0020/2025 indicada como comprobatória do preço indicado para o item.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-14T12:43:50.415Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17444133",
+              "fingerprint": "fnv64-v1:166cf7661ed8e487"
+            },
+            "actor": "Usuário local"
+          }
+        },
+        {
+          "at": "2026-10-14T12:43:50.415Z",
+          "event": "Diligência encerrada por atendimento do requisito",
+          "actor": "Usuário local",
+          "before": {
+            "id": "8550058c-07ad-4296-ad71-43516947984c",
+            "ref": "pad:17444133",
+            "request": "Anexar ATA SEAPE 0020/2025 indicada como comprobatória do preço indicado para o item.",
+            "science": "",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "communication": "2026-09-30",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-09-30T11:54:21.520Z",
+            "base": "2026-10-10",
+            "due": "2026-10-12",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          },
+          "after": {
+            "id": "8550058c-07ad-4296-ad71-43516947984c",
+            "ref": "pad:17444133",
+            "request": "Anexar ATA SEAPE 0020/2025 indicada como comprobatória do preço indicado para o item.",
+            "science": "",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "communication": "2026-09-30",
+            "response": "",
+            "status": "baixada",
+            "note": "",
+            "at": "2026-10-14T12:43:50.415Z",
+            "base": "2026-10-10",
+            "due": "2026-10-12",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": "",
+            "closedByReview": {
+              "proposalId": "2244186",
+              "group": "pad",
+              "item": "17444133",
+              "ref": "pad:17444133",
+              "at": "2026-10-14T12:43:50.415Z",
+              "reason": "Encerrada por confirmação de conformidade do requisito",
+              "actor": "Usuário local",
+              "confirmedBy": "Usuário local"
+            }
+          }
+        },
+        {
+          "at": "2026-10-14T12:47:52.145Z",
+          "event": "Avaliação: pad / 17444126",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "Anexar ATA SGARP - ECONOMIA 0166/2025 indicada como comprobatória do preço indicado para o item.",
+            "document": "",
+            "url": "",
+            "at": "2026-09-30T11:52:09.917Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17444126",
+              "fingerprint": "fnv64-v1:9f95d37546613921"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Anexar ATA SGARP - ECONOMIA 0166/2025 indicada como comprobatória do preço indicado para o item.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-14T12:47:52.144Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17444126",
+              "fingerprint": "fnv64-v1:9f95d37546613921"
+            },
+            "actor": "Usuário local"
+          }
+        },
+        {
+          "at": "2026-10-14T12:47:52.145Z",
+          "event": "Diligência encerrada por atendimento do requisito",
+          "actor": "Usuário local",
+          "before": {
+            "ref": "pad:17444126",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Anexar ATA SEAPE 0020/2025 indicada como comprobatória do preço indicado para o item.",
+            "communication": "2026-09-30",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "id": "84f1d674-3490-4640-976f-1c268bcc03f1",
+            "science": "",
+            "at": "2026-09-30T11:55:05.542Z",
+            "base": "2026-10-10",
+            "due": "2026-10-12",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          },
+          "after": {
+            "ref": "pad:17444126",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Anexar ATA SEAPE 0020/2025 indicada como comprobatória do preço indicado para o item.",
+            "communication": "2026-09-30",
+            "response": "",
+            "status": "baixada",
+            "note": "",
+            "id": "84f1d674-3490-4640-976f-1c268bcc03f1",
+            "science": "",
+            "at": "2026-10-14T12:47:52.145Z",
+            "base": "2026-10-10",
+            "due": "2026-10-12",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": "",
+            "closedByReview": {
+              "proposalId": "2244186",
+              "group": "pad",
+              "item": "17444126",
+              "ref": "pad:17444126",
+              "at": "2026-10-14T12:47:52.145Z",
+              "reason": "Encerrada por confirmação de conformidade do requisito",
+              "actor": "Usuário local",
+              "confirmedBy": "Usuário local"
+            }
+          }
+        },
+        {
+          "at": "2026-10-14T12:48:35.162Z",
+          "event": "Avaliação: pad / 17444131",
+          "actor": "Usuário local",
+          "before": {
+            "status": "reanalise",
+            "note": "Anexar ATA SGARP - ECONOMIA 0166/2025 indicada como comprobatória do preço indicado para o item.",
+            "document": "",
+            "url": "",
+            "at": "2026-09-30T11:52:46.842Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17444131",
+              "fingerprint": null,
+              "legacy": true
+            },
+            "reanalysis": {
+              "at": "2026-10-06T12:41:57.864Z",
+              "fields": [
+                "imported.pad:17444131"
+              ],
+              "reason": "Evidência alterada; decisão anterior preservada no histórico."
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Anexar ATA SGARP - ECONOMIA 0166/2025 indicada como comprobatória do preço indicado para o item.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-14T12:48:35.162Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17444131",
+              "fingerprint": "fnv64-v1:2a0fa6724a983ccd"
+            },
+            "actor": "Usuário local"
+          }
+        },
+        {
+          "at": "2026-10-14T12:48:35.162Z",
+          "event": "Diligência encerrada por atendimento do requisito",
+          "actor": "Usuário local",
+          "before": {
+            "ref": "pad:17444131",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Anexar ATA SEAPE 0020/2025 indicada como comprobatória do preço indicado para o item.",
+            "communication": "2026-09-30",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "id": "c14420c6-57c0-4b7f-90bb-aa74839bc930",
+            "science": "",
+            "at": "2026-09-30T11:54:42.844Z",
+            "base": "2026-10-10",
+            "due": "2026-10-12",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          },
+          "after": {
+            "ref": "pad:17444131",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Anexar ATA SEAPE 0020/2025 indicada como comprobatória do preço indicado para o item.",
+            "communication": "2026-09-30",
+            "response": "",
+            "status": "baixada",
+            "note": "",
+            "id": "c14420c6-57c0-4b7f-90bb-aa74839bc930",
+            "science": "",
+            "at": "2026-10-14T12:48:35.162Z",
+            "base": "2026-10-10",
+            "due": "2026-10-12",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": "",
+            "closedByReview": {
+              "proposalId": "2244186",
+              "group": "pad",
+              "item": "17444131",
+              "ref": "pad:17444131",
+              "at": "2026-10-14T12:48:35.162Z",
+              "reason": "Encerrada por confirmação de conformidade do requisito",
+              "actor": "Usuário local",
+              "confirmedBy": "Usuário local"
+            }
+          }
+        },
+        {
+          "at": "2026-10-14T12:49:06.051Z",
+          "event": "Avaliação: pad / 17444149",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "Anexar ATA SGARP - ECONOMIA 0124/2026 indicada como comprobatória do preço indicado para o item.",
+            "document": "",
+            "url": "",
+            "at": "2026-09-30T11:57:11.361Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17444149",
+              "fingerprint": "fnv64-v1:ff5fa6a99660b215"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Anexar ATA SGARP - ECONOMIA 0124/2026 indicada como comprobatória do preço indicado para o item.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-14T12:49:06.051Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17444149",
+              "fingerprint": "fnv64-v1:ff5fa6a99660b215"
+            },
+            "actor": "Usuário local"
+          }
+        },
+        {
+          "at": "2026-10-14T12:49:06.051Z",
+          "event": "Diligência encerrada por atendimento do requisito",
+          "actor": "Usuário local",
+          "before": {
+            "id": "1a7a5464-c869-47cb-9547-95e130c9d2b3",
+            "ref": "pad:17444149",
+            "request": "Anexar ATA SGARP - ECONOMIA 0124/2026 indicada como comprobatória do preço indicado para o item.",
+            "science": "",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "communication": "2026-09-30",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-09-30T11:57:11.361Z",
+            "base": "2026-10-10",
+            "due": "2026-10-12",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          },
+          "after": {
+            "id": "1a7a5464-c869-47cb-9547-95e130c9d2b3",
+            "ref": "pad:17444149",
+            "request": "Anexar ATA SGARP - ECONOMIA 0124/2026 indicada como comprobatória do preço indicado para o item.",
+            "science": "",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "communication": "2026-09-30",
+            "response": "",
+            "status": "baixada",
+            "note": "",
+            "at": "2026-10-14T12:49:06.051Z",
+            "base": "2026-10-10",
+            "due": "2026-10-12",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": "",
+            "closedByReview": {
+              "proposalId": "2244186",
+              "group": "pad",
+              "item": "17444149",
+              "ref": "pad:17444149",
+              "at": "2026-10-14T12:49:06.051Z",
+              "reason": "Encerrada por confirmação de conformidade do requisito",
+              "actor": "Usuário local",
+              "confirmedBy": "Usuário local"
+            }
+          }
+        },
+        {
+          "at": "2026-10-14T12:49:36.665Z",
+          "event": "Avaliação: pad / 17444057",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "Anexar ATA SGARP - ECONOMIA 0166/2025 indicada como comprobatória do preço indicado para o item.",
+            "document": "",
+            "url": "",
+            "at": "2026-09-30T11:50:09.905Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17444057",
+              "fingerprint": "fnv64-v1:a5346bee26e6847b"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Anexar ATA SGARP - ECONOMIA 0166/2025 indicada como comprobatória do preço indicado para o item.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-14T12:49:36.665Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17444057",
+              "fingerprint": "fnv64-v1:a5346bee26e6847b"
+            },
+            "actor": "Usuário local"
+          }
+        },
+        {
+          "at": "2026-10-14T12:49:36.665Z",
+          "event": "Diligência encerrada por atendimento do requisito",
+          "actor": "Usuário local",
+          "before": {
+            "id": "5489812c-0b93-474c-9ca1-a3560e0f33d3",
+            "ref": "pad:17444057",
+            "request": "Anexar ATA SGARP - ECONOMIA 0166/2025 indicada como comprobatória do preço indicado para o item.",
+            "science": "",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "communication": "2026-09-30",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-09-30T11:50:09.905Z",
+            "base": "2026-10-10",
+            "due": "2026-10-12",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          },
+          "after": {
+            "id": "5489812c-0b93-474c-9ca1-a3560e0f33d3",
+            "ref": "pad:17444057",
+            "request": "Anexar ATA SGARP - ECONOMIA 0166/2025 indicada como comprobatória do preço indicado para o item.",
+            "science": "",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "communication": "2026-09-30",
+            "response": "",
+            "status": "baixada",
+            "note": "",
+            "at": "2026-10-14T12:49:36.665Z",
+            "base": "2026-10-10",
+            "due": "2026-10-12",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": "",
+            "closedByReview": {
+              "proposalId": "2244186",
+              "group": "pad",
+              "item": "17444057",
+              "ref": "pad:17444057",
+              "at": "2026-10-14T12:49:36.665Z",
+              "reason": "Encerrada por confirmação de conformidade do requisito",
+              "actor": "Usuário local",
+              "confirmedBy": "Usuário local"
+            }
+          }
+        },
+        {
+          "at": "2026-10-14T12:49:57.431Z",
+          "event": "Avaliação: pad / 17444048",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "Anexar ATA SGARP - ECONOMIA 0166/2025 indicada como comprobatória do preço indicado para o item.",
+            "document": "",
+            "url": "",
+            "at": "2026-09-30T11:36:19.950Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17444048",
+              "fingerprint": "fnv64-v1:5f692680ddb12a3d"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Anexar ATA SGARP - ECONOMIA 0166/2025 indicada como comprobatória do preço indicado para o item.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-14T12:49:57.431Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17444048",
+              "fingerprint": "fnv64-v1:5f692680ddb12a3d"
+            },
+            "actor": "Usuário local"
+          }
+        },
+        {
+          "at": "2026-10-14T12:49:57.431Z",
+          "event": "Diligência encerrada por atendimento do requisito",
+          "actor": "Usuário local",
+          "before": {
+            "id": "a935bb86-2fed-43ee-9975-8ddd8fb07b7e",
+            "ref": "pad:17444048",
+            "request": "Anexar ATA SGARP - ECONOMIA 0166/2025 indicada como comprobatória do preço indicado para o item.",
+            "science": "",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "communication": "2026-09-30",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-09-30T11:36:19.950Z",
+            "base": "2026-10-10",
+            "due": "2026-10-12",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          },
+          "after": {
+            "id": "a935bb86-2fed-43ee-9975-8ddd8fb07b7e",
+            "ref": "pad:17444048",
+            "request": "Anexar ATA SGARP - ECONOMIA 0166/2025 indicada como comprobatória do preço indicado para o item.",
+            "science": "",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "communication": "2026-09-30",
+            "response": "",
+            "status": "baixada",
+            "note": "",
+            "at": "2026-10-14T12:49:57.431Z",
+            "base": "2026-10-10",
+            "due": "2026-10-12",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": "",
+            "closedByReview": {
+              "proposalId": "2244186",
+              "group": "pad",
+              "item": "17444048",
+              "ref": "pad:17444048",
+              "at": "2026-10-14T12:49:57.431Z",
+              "reason": "Encerrada por confirmação de conformidade do requisito",
+              "actor": "Usuário local",
+              "confirmedBy": "Usuário local"
+            }
+          }
+        },
+        {
+          "at": "2026-10-14T12:50:19.760Z",
+          "event": "Avaliação: pad / 17444083",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "Anexar ATA SGARP - ECONOMIA 0166/2025 indicada como comprobatória do preço indicado para o item.",
+            "document": "",
+            "url": "",
+            "at": "2026-09-30T11:50:56.483Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17444083",
+              "fingerprint": "fnv64-v1:1d4dd205cf1c9cb9"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Anexar ATA SGARP - ECONOMIA 0166/2025 indicada como comprobatória do preço indicado para o item.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-14T12:50:19.760Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17444083",
+              "fingerprint": "fnv64-v1:1d4dd205cf1c9cb9"
+            },
+            "actor": "Usuário local"
+          }
+        },
+        {
+          "at": "2026-10-14T12:50:19.760Z",
+          "event": "Diligência encerrada por atendimento do requisito",
+          "actor": "Usuário local",
+          "before": {
+            "ref": "pad:17444083",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Anexar ATA SGARP - ECONOMIA 0050/2026 indicada como comprobatória do preço indicado para o item.",
+            "communication": "2026-09-30",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "id": "6ddf9628-ad37-470b-b9a2-8ffc577b3d02",
+            "science": "",
+            "at": "2026-09-30T11:55:52.427Z",
+            "base": "2026-10-10",
+            "due": "2026-10-12",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          },
+          "after": {
+            "ref": "pad:17444083",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Anexar ATA SGARP - ECONOMIA 0050/2026 indicada como comprobatória do preço indicado para o item.",
+            "communication": "2026-09-30",
+            "response": "",
+            "status": "baixada",
+            "note": "",
+            "id": "6ddf9628-ad37-470b-b9a2-8ffc577b3d02",
+            "science": "",
+            "at": "2026-10-14T12:50:19.760Z",
+            "base": "2026-10-10",
+            "due": "2026-10-12",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": "",
+            "closedByReview": {
+              "proposalId": "2244186",
+              "group": "pad",
+              "item": "17444083",
+              "ref": "pad:17444083",
+              "at": "2026-10-14T12:50:19.760Z",
+              "reason": "Encerrada por confirmação de conformidade do requisito",
+              "actor": "Usuário local",
+              "confirmedBy": "Usuário local"
+            }
+          }
+        },
+        {
+          "at": "2026-10-14T12:51:11.751Z",
+          "event": "Avaliação: pad / 17444054",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "Anexar ATA SGARP - ECONOMIA 0166/2025 indicada como comprobatória do preço indicado para o item.",
+            "document": "",
+            "url": "",
+            "at": "2026-09-30T11:47:21.207Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17444054",
+              "fingerprint": "fnv64-v1:253b50da17b12694"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Anexar ATA SGARP - ECONOMIA 0166/2025 indicada como comprobatória do preço indicado para o item.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-14T12:51:11.751Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17444054",
+              "fingerprint": "fnv64-v1:253b50da17b12694"
+            },
+            "actor": "Usuário local"
+          }
+        },
+        {
+          "at": "2026-10-14T12:51:11.751Z",
+          "event": "Diligência encerrada por atendimento do requisito",
+          "actor": "Usuário local",
+          "before": {
+            "ref": "pad:17444054",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Anexar ATA SGARP - ECONOMIA 0167/2025 indicada como comprobatória do preço indicado para o item.",
+            "communication": "2026-09-30",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "id": "53dfeb79-a5e9-4b01-943d-e9cb05da899f",
+            "science": "",
+            "at": "2026-09-30T11:56:11.720Z",
+            "base": "2026-10-10",
+            "due": "2026-10-12",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          },
+          "after": {
+            "ref": "pad:17444054",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Anexar ATA SGARP - ECONOMIA 0167/2025 indicada como comprobatória do preço indicado para o item.",
+            "communication": "2026-09-30",
+            "response": "",
+            "status": "baixada",
+            "note": "",
+            "id": "53dfeb79-a5e9-4b01-943d-e9cb05da899f",
+            "science": "",
+            "at": "2026-10-14T12:51:11.751Z",
+            "base": "2026-10-10",
+            "due": "2026-10-12",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": "",
+            "closedByReview": {
+              "proposalId": "2244186",
+              "group": "pad",
+              "item": "17444054",
+              "ref": "pad:17444054",
+              "at": "2026-10-14T12:51:11.751Z",
+              "reason": "Encerrada por confirmação de conformidade do requisito",
+              "actor": "Usuário local",
+              "confirmedBy": "Usuário local"
+            }
+          }
+        },
+        {
+          "at": "2026-10-14T12:51:39.493Z",
+          "event": "Avaliação: pad / 17444156",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "Anexar ATA SEAPE indicada como comprobatória do preço indicado para o item.",
+            "document": "",
+            "url": "",
+            "at": "2026-09-30T11:57:47.211Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17444156",
+              "fingerprint": "fnv64-v1:b44ff1c7dabc95e0"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Anexar ATA SEAPE indicada como comprobatória do preço indicado para o item.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-14T12:51:39.493Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17444156",
+              "fingerprint": "fnv64-v1:b44ff1c7dabc95e0"
+            },
+            "actor": "Usuário local"
+          }
+        },
+        {
+          "at": "2026-10-14T12:51:39.493Z",
+          "event": "Diligência encerrada por atendimento do requisito",
+          "actor": "Usuário local",
+          "before": {
+            "id": "d5fe589f-f9b8-45ca-b3b0-b1e4355d0ee4",
+            "ref": "pad:17444156",
+            "request": "Anexar ATA SEAPE indicada como comprobatória do preço indicado para o item.",
+            "science": "",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "communication": "2026-09-30",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-09-30T11:57:47.212Z",
+            "base": "2026-10-10",
+            "due": "2026-10-12",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          },
+          "after": {
+            "id": "d5fe589f-f9b8-45ca-b3b0-b1e4355d0ee4",
+            "ref": "pad:17444156",
+            "request": "Anexar ATA SEAPE indicada como comprobatória do preço indicado para o item.",
+            "science": "",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "communication": "2026-09-30",
+            "response": "",
+            "status": "baixada",
+            "note": "",
+            "at": "2026-10-14T12:51:39.493Z",
+            "base": "2026-10-10",
+            "due": "2026-10-12",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": "",
+            "closedByReview": {
+              "proposalId": "2244186",
+              "group": "pad",
+              "item": "17444156",
+              "ref": "pad:17444156",
+              "at": "2026-10-14T12:51:39.493Z",
+              "reason": "Encerrada por confirmação de conformidade do requisito",
+              "actor": "Usuário local",
+              "confirmedBy": "Usuário local"
+            }
+          }
+        },
+        {
+          "at": "2026-10-14T12:52:04.159Z",
+          "event": "Avaliação: pad / 17444298",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-14T12:52:04.159Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17444298",
+              "fingerprint": "fnv64-v1:72f788b8be52c597"
+            }
           }
         }
       ],
