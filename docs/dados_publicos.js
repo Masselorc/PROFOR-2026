@@ -1,9 +1,9 @@
-/** Snapshot integral de consulta PROFOR/ONASP 2026. Gerado em 2026-10-14T12:52:56.103Z.
+/** Snapshot integral de consulta PROFOR/ONASP 2026. Gerado em 2026-10-14T12:54:01.142Z.
  * Não editar manualmente. Use tools/build_public_docs.cjs. */
-window.PROFOR_PUBLIC_UPDATED_AT = "2026-10-14T12:52:56.103Z";
+window.PROFOR_PUBLIC_UPDATED_AT = "2026-10-14T12:54:01.142Z";
 window.PROFOR_PUBLIC_DATA = {
   "schemaVersion": 1,
-  "revision": 419,
+  "revision": 420,
   "proposals": [
     {
       "id": "2243618",
@@ -19961,25 +19961,18 @@ window.PROFOR_PUBLIC_DATA = {
             }
           },
           "6": {
-            "status": "reanalise",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": "2026-09-28T15:44:31.211Z",
+            "at": "2026-10-14T12:53:17.523Z",
             "attachments": [],
             "evidence": {
               "version": 1,
               "ref": "celebracao:6",
-              "fingerprint": null,
-              "legacy": true
+              "fingerprint": "fnv64-v1:978b28d4b79b58ed"
             },
-            "reanalysis": {
-              "at": "2026-10-06T12:41:57.864Z",
-              "fields": [
-                "imported.pad"
-              ],
-              "reason": "Evidência alterada; decisão anterior preservada no histórico."
-            }
+            "actor": "Usuário local"
           },
           "7": {
             "status": "ok",
@@ -28468,6 +28461,46 @@ window.PROFOR_PUBLIC_DATA = {
               "ref": "pad:17444298",
               "fingerprint": "fnv64-v1:72f788b8be52c597"
             }
+          }
+        },
+        {
+          "at": "2026-10-14T12:53:17.524Z",
+          "event": "Avaliação: celebracao / 6",
+          "actor": "Usuário local",
+          "before": {
+            "status": "reanalise",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-09-28T15:44:31.211Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:6",
+              "fingerprint": null,
+              "legacy": true
+            },
+            "reanalysis": {
+              "at": "2026-10-06T12:41:57.864Z",
+              "fields": [
+                "imported.pad"
+              ],
+              "reason": "Evidência alterada; decisão anterior preservada no histórico."
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-14T12:53:17.523Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:6",
+              "fingerprint": "fnv64-v1:978b28d4b79b58ed"
+            },
+            "actor": "Usuário local"
           }
         }
       ],
