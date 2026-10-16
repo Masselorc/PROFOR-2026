@@ -1,9 +1,9 @@
-/** Snapshot integral de consulta PROFOR/ONASP 2026. Gerado em 2026-10-15T16:41:02.593Z.
+/** Snapshot integral de consulta PROFOR/ONASP 2026. Gerado em 2026-10-16T18:33:13.977Z.
  * Não editar manualmente. Use tools/build_public_docs.cjs. */
-window.PROFOR_PUBLIC_UPDATED_AT = "2026-10-15T16:41:02.593Z";
+window.PROFOR_PUBLIC_UPDATED_AT = "2026-10-16T18:33:13.977Z";
 window.PROFOR_PUBLIC_DATA = {
   "schemaVersion": 1,
-  "revision": 427,
+  "revision": 444,
   "proposals": [
     {
       "id": "2243618",
@@ -9375,7 +9375,18 @@ window.PROFOR_PUBLIC_DATA = {
         "clause": false
       },
       "falaBR": "previsto",
-      "conclusion": null,
+      "conclusion": {
+        "result": "favoravel",
+        "note": "Concluída a análise técnica da proposta, verificou-se o atendimento dos requisitos de mérito e a compatibilidade dos itens e preços do Plano de Aplicação Detalhado, conforme avaliações e evidências registradas na aplicação. Manifesta-se conclusão técnica favorável ao prosseguimento da proposta, permanecendo a verificação dos requisitos de celebração na etapa própria.",
+        "reference": "Proposta submetida no Transferegov e documentos anexados nas abas “Requisitos” e “Anexos” da proposta.",
+        "actor": "Usuário local",
+        "at": "2026-10-15T16:48:46.713Z",
+        "evidence": {
+          "version": 1,
+          "fingerprint": "fnv64-v1:b55d35f9ff8d5b0b"
+        },
+        "operationId": "bb83c467-9d7b-4e8b-beb6-ea10f618dda9"
+      },
       "history": [
         {
           "at": "2026-09-16T17:01:42.376Z",
@@ -16208,6 +16219,24 @@ window.PROFOR_PUBLIC_DATA = {
               "actor": "Usuário local",
               "confirmedBy": "Usuário local"
             }
+          }
+        },
+        {
+          "at": "2026-10-15T16:48:46.713Z",
+          "event": "Conclusão da análise técnica registrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "result": "favoravel",
+            "note": "Concluída a análise técnica da proposta, verificou-se o atendimento dos requisitos de mérito e a compatibilidade dos itens e preços do Plano de Aplicação Detalhado, conforme avaliações e evidências registradas na aplicação. Manifesta-se conclusão técnica favorável ao prosseguimento da proposta, permanecendo a verificação dos requisitos de celebração na etapa própria.",
+            "reference": "Proposta submetida no Transferegov e documentos anexados nas abas “Requisitos” e “Anexos” da proposta.",
+            "actor": "Usuário local",
+            "at": "2026-10-15T16:48:46.713Z",
+            "evidence": {
+              "version": 1,
+              "fingerprint": "fnv64-v1:b55d35f9ff8d5b0b"
+            },
+            "operationId": "bb83c467-9d7b-4e8b-beb6-ea10f618dda9"
           }
         }
       ],
@@ -23374,7 +23403,18 @@ window.PROFOR_PUBLIC_DATA = {
         "clause": false
       },
       "falaBR": "previsto",
-      "conclusion": null,
+      "conclusion": {
+        "result": "favoravel",
+        "note": "Concluída a análise técnica da proposta, verificou-se o atendimento dos requisitos de mérito e a compatibilidade dos itens e preços do Plano de Aplicação Detalhado, conforme avaliações e evidências registradas na aplicação. Manifesta-se conclusão técnica favorável ao prosseguimento da proposta, permanecendo a verificação dos requisitos de celebração na etapa própria.",
+        "reference": "Proposta submetida no Transferegov e documentos anexados nas abas “Requisitos” e “Anexos” da proposta.",
+        "actor": "Usuário local",
+        "at": "2026-10-15T16:57:04.879Z",
+        "evidence": {
+          "version": 1,
+          "fingerprint": "fnv64-v1:e38e2bdef17fd0c9"
+        },
+        "operationId": "6021f2a7-9c47-4a8d-a486-1f21a8a0658c"
+      },
       "history": [
         {
           "at": "2026-09-16T17:01:42.376Z",
@@ -31075,6 +31115,24 @@ window.PROFOR_PUBLIC_DATA = {
           "after": {
             "at": "2026-10-15T13:01:18.726Z"
           }
+        },
+        {
+          "at": "2026-10-15T16:57:04.879Z",
+          "event": "Conclusão da análise técnica registrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "result": "favoravel",
+            "note": "Concluída a análise técnica da proposta, verificou-se o atendimento dos requisitos de mérito e a compatibilidade dos itens e preços do Plano de Aplicação Detalhado, conforme avaliações e evidências registradas na aplicação. Manifesta-se conclusão técnica favorável ao prosseguimento da proposta, permanecendo a verificação dos requisitos de celebração na etapa própria.",
+            "reference": "Proposta submetida no Transferegov e documentos anexados nas abas “Requisitos” e “Anexos” da proposta.",
+            "actor": "Usuário local",
+            "at": "2026-10-15T16:57:04.879Z",
+            "evidence": {
+              "version": 1,
+              "fingerprint": "fnv64-v1:e38e2bdef17fd0c9"
+            },
+            "operationId": "6021f2a7-9c47-4a8d-a486-1f21a8a0658c"
+          }
         }
       ],
       "textos": {
@@ -31458,38 +31516,32 @@ window.PROFOR_PUBLIC_DATA = {
             "actor": "Usuário local"
           },
           "5": {
-            "status": "diligencia",
+            "status": "ok",
             "note": "Anexar Plano de Sustentabilidade",
             "document": "",
             "url": "",
-            "at": "2026-10-01T19:34:29.267Z",
+            "at": "2026-10-15T17:01:10.346Z",
             "attachments": [],
             "evidence": {
               "version": 1,
               "ref": "celebracao:5",
               "fingerprint": "fnv64-v1:bdc02e16ef18e909"
-            }
+            },
+            "actor": "Usuário local"
           },
           "6": {
-            "status": "reanalise",
+            "status": "ok",
             "note": "Anexar Declaração de Compatibilidade de Preços",
             "document": "",
             "url": "",
-            "at": "2026-10-01T19:35:13.280Z",
+            "at": "2026-10-15T17:01:34.527Z",
             "attachments": [],
             "evidence": {
               "version": 1,
               "ref": "celebracao:6",
-              "fingerprint": null,
-              "legacy": true
+              "fingerprint": "fnv64-v1:dd567ee3bb2d0bc4"
             },
-            "reanalysis": {
-              "at": "2026-10-06T12:41:57.862Z",
-              "fields": [
-                "imported.pad"
-              ],
-              "reason": "Evidência alterada; decisão anterior preservada no histórico."
-            }
+            "actor": "Usuário local"
           },
           "7": {
             "status": "diligencia",
@@ -31505,43 +31557,46 @@ window.PROFOR_PUBLIC_DATA = {
             }
           },
           "8": {
-            "status": "diligencia",
+            "status": "ok",
             "note": "anexar documento",
             "document": "",
             "url": "",
-            "at": "2026-10-01T19:37:56.472Z",
+            "at": "2026-10-15T17:04:18.688Z",
             "attachments": [],
             "evidence": {
               "version": 1,
               "ref": "celebracao:8",
               "fingerprint": "fnv64-v1:bdc02e16ef18e909"
-            }
+            },
+            "actor": "Usuário local"
           },
           "9": {
-            "status": "diligencia",
+            "status": "ok",
             "note": "anexar documento",
             "document": "",
             "url": "",
-            "at": "2026-10-01T19:38:39.406Z",
+            "at": "2026-10-15T17:04:39.689Z",
             "attachments": [],
             "evidence": {
               "version": 1,
               "ref": "celebracao:9",
               "fingerprint": "fnv64-v1:bdc02e16ef18e909"
-            }
+            },
+            "actor": "Usuário local"
           },
           "10": {
-            "status": "diligencia",
+            "status": "ok",
             "note": "anexar documento",
             "document": "",
             "url": "",
-            "at": "2026-10-01T19:39:00.105Z",
+            "at": "2026-10-15T17:05:17.004Z",
             "attachments": [],
             "evidence": {
               "version": 1,
               "ref": "celebracao:10",
               "fingerprint": "fnv64-v1:bdc02e16ef18e909"
-            }
+            },
+            "actor": "Usuário local"
           },
           "11": {
             "status": "ok",
@@ -31583,17 +31638,18 @@ window.PROFOR_PUBLIC_DATA = {
             }
           },
           "14": {
-            "status": "diligencia",
+            "status": "ok",
             "note": "anexar documento",
             "document": "",
             "url": "",
-            "at": "2026-10-01T19:39:53.709Z",
+            "at": "2026-10-15T17:15:44.564Z",
             "attachments": [],
             "evidence": {
               "version": 1,
               "ref": "celebracao:14",
               "fingerprint": "fnv64-v1:bdc02e16ef18e909"
-            }
+            },
+            "actor": "Usuário local"
           },
           "15": {
             "status": "diligencia",
@@ -31661,17 +31717,18 @@ window.PROFOR_PUBLIC_DATA = {
             }
           },
           "1.1": {
-            "status": "diligencia",
+            "status": "ok",
             "note": "Anexar Delegação de Competência",
             "document": "",
             "url": "",
-            "at": "2026-10-01T19:37:11.227Z",
+            "at": "2026-10-15T17:03:45.543Z",
             "attachments": [],
             "evidence": {
               "version": 1,
               "ref": "celebracao:1.1",
               "fingerprint": "fnv64-v1:bdc02e16ef18e909"
-            }
+            },
+            "actor": "Usuário local"
           }
         },
         "pad": {
@@ -31946,24 +32003,17 @@ window.PROFOR_PUBLIC_DATA = {
             }
           },
           "17448960": {
-            "status": "reanalise",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": "2026-10-02T19:10:41.327Z",
+            "at": "2026-10-15T17:22:09.299Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
               "version": 1,
               "ref": "pad:17448960",
-              "fingerprint": "fnv64-v1:aad0160a6d3554d1"
-            },
-            "reanalysis": {
-              "at": "2026-10-06T12:41:57.862Z",
-              "fields": [
-                "imported.pad:17448960"
-              ],
-              "reason": "Evidência alterada; decisão anterior preservada no histórico."
+              "fingerprint": "fnv64-v1:c9a4a7721f8bad87"
             }
           },
           "17448983": {
@@ -32205,14 +32255,24 @@ window.PROFOR_PUBLIC_DATA = {
           "category": "ANEXO / DOCUMENTO",
           "communication": "2026-10-01",
           "response": "",
-          "status": "aberta",
+          "status": "baixada",
           "note": "",
-          "at": "2026-10-01T19:34:29.267Z",
+          "at": "2026-10-15T17:01:10.346Z",
           "base": "2026-10-11",
           "due": "2026-10-12",
           "automaticDeadline": true,
           "confirmed": false,
-          "calendarNote": ""
+          "calendarNote": "",
+          "closedByReview": {
+            "proposalId": "2243912",
+            "group": "celebracao",
+            "item": "5",
+            "ref": "celebracao:5",
+            "at": "2026-10-15T17:01:10.346Z",
+            "reason": "Encerrada por confirmação de conformidade do requisito",
+            "actor": "Usuário local",
+            "confirmedBy": "Usuário local"
+          }
         },
         {
           "id": "f6ddadac-b3dd-4464-88e7-348c96899ae5",
@@ -32222,14 +32282,24 @@ window.PROFOR_PUBLIC_DATA = {
           "category": "ANEXO / DOCUMENTO",
           "communication": "2026-10-01",
           "response": "",
-          "status": "aberta",
+          "status": "baixada",
           "note": "",
-          "at": "2026-10-01T19:35:13.280Z",
+          "at": "2026-10-15T17:01:34.529Z",
           "base": "2026-10-11",
           "due": "2026-10-12",
           "automaticDeadline": true,
           "confirmed": false,
-          "calendarNote": ""
+          "calendarNote": "",
+          "closedByReview": {
+            "proposalId": "2243912",
+            "group": "celebracao",
+            "item": "6",
+            "ref": "celebracao:6",
+            "at": "2026-10-15T17:01:34.529Z",
+            "reason": "Encerrada por confirmação de conformidade do requisito",
+            "actor": "Usuário local",
+            "confirmedBy": "Usuário local"
+          }
         },
         {
           "id": "0a732336-1b3f-4ad9-9853-944936e0c9ce",
@@ -32256,14 +32326,24 @@ window.PROFOR_PUBLIC_DATA = {
           "category": "ANEXO / DOCUMENTO",
           "communication": "2026-10-01",
           "response": "",
-          "status": "aberta",
+          "status": "baixada",
           "note": "",
-          "at": "2026-10-01T19:37:11.227Z",
+          "at": "2026-10-15T17:03:45.543Z",
           "base": "2026-10-11",
           "due": "2026-10-12",
           "automaticDeadline": true,
           "confirmed": false,
-          "calendarNote": ""
+          "calendarNote": "",
+          "closedByReview": {
+            "proposalId": "2243912",
+            "group": "celebracao",
+            "item": "1.1",
+            "ref": "celebracao:1.1",
+            "at": "2026-10-15T17:03:45.543Z",
+            "reason": "Encerrada por confirmação de conformidade do requisito",
+            "actor": "Usuário local",
+            "confirmedBy": "Usuário local"
+          }
         },
         {
           "id": "1936d362-ea74-419d-908c-3911b7517d29",
@@ -32273,14 +32353,24 @@ window.PROFOR_PUBLIC_DATA = {
           "category": "ANEXO / DOCUMENTO",
           "communication": "2026-10-01",
           "response": "",
-          "status": "aberta",
+          "status": "baixada",
           "note": "",
-          "at": "2026-10-01T19:37:56.472Z",
+          "at": "2026-10-15T17:04:18.688Z",
           "base": "2026-10-11",
           "due": "2026-10-12",
           "automaticDeadline": true,
           "confirmed": false,
-          "calendarNote": ""
+          "calendarNote": "",
+          "closedByReview": {
+            "proposalId": "2243912",
+            "group": "celebracao",
+            "item": "8",
+            "ref": "celebracao:8",
+            "at": "2026-10-15T17:04:18.688Z",
+            "reason": "Encerrada por confirmação de conformidade do requisito",
+            "actor": "Usuário local",
+            "confirmedBy": "Usuário local"
+          }
         },
         {
           "id": "26a73c7f-5db7-419b-9aa9-400c397c18d9",
@@ -32290,14 +32380,24 @@ window.PROFOR_PUBLIC_DATA = {
           "category": "ANEXO / DOCUMENTO",
           "communication": "2026-10-01",
           "response": "",
-          "status": "aberta",
+          "status": "baixada",
           "note": "",
-          "at": "2026-10-01T19:38:39.407Z",
+          "at": "2026-10-15T17:04:39.689Z",
           "base": "2026-10-11",
           "due": "2026-10-12",
           "automaticDeadline": true,
           "confirmed": false,
-          "calendarNote": ""
+          "calendarNote": "",
+          "closedByReview": {
+            "proposalId": "2243912",
+            "group": "celebracao",
+            "item": "9",
+            "ref": "celebracao:9",
+            "at": "2026-10-15T17:04:39.689Z",
+            "reason": "Encerrada por confirmação de conformidade do requisito",
+            "actor": "Usuário local",
+            "confirmedBy": "Usuário local"
+          }
         },
         {
           "id": "f8883c1c-7d41-4cd8-a6cb-016cf6612a27",
@@ -32307,14 +32407,24 @@ window.PROFOR_PUBLIC_DATA = {
           "category": "ANEXO / DOCUMENTO",
           "communication": "2026-10-01",
           "response": "",
-          "status": "aberta",
+          "status": "baixada",
           "note": "",
-          "at": "2026-10-01T19:39:00.105Z",
+          "at": "2026-10-15T17:05:17.004Z",
           "base": "2026-10-11",
           "due": "2026-10-12",
           "automaticDeadline": true,
           "confirmed": false,
-          "calendarNote": ""
+          "calendarNote": "",
+          "closedByReview": {
+            "proposalId": "2243912",
+            "group": "celebracao",
+            "item": "10",
+            "ref": "celebracao:10",
+            "at": "2026-10-15T17:05:17.004Z",
+            "reason": "Encerrada por confirmação de conformidade do requisito",
+            "actor": "Usuário local",
+            "confirmedBy": "Usuário local"
+          }
         },
         {
           "id": "0c014fda-0bad-4fa1-be34-dbbe8d9b6a17",
@@ -32358,14 +32468,24 @@ window.PROFOR_PUBLIC_DATA = {
           "category": "ANEXO / DOCUMENTO",
           "communication": "2026-10-01",
           "response": "",
-          "status": "aberta",
+          "status": "baixada",
           "note": "",
-          "at": "2026-10-01T19:39:53.710Z",
+          "at": "2026-10-15T17:15:44.564Z",
           "base": "2026-10-11",
           "due": "2026-10-12",
           "automaticDeadline": true,
           "confirmed": false,
-          "calendarNote": ""
+          "calendarNote": "",
+          "closedByReview": {
+            "proposalId": "2243912",
+            "group": "celebracao",
+            "item": "14",
+            "ref": "celebracao:14",
+            "at": "2026-10-15T17:15:44.564Z",
+            "reason": "Encerrada por confirmação de conformidade do requisito",
+            "actor": "Usuário local",
+            "confirmedBy": "Usuário local"
+          }
         },
         {
           "id": "15491794-0e07-4645-b183-4e317e745fee",
@@ -38716,6 +38836,621 @@ window.PROFOR_PUBLIC_DATA = {
           },
           "after": {
             "at": "2026-10-15T13:01:18.726Z"
+          }
+        },
+        {
+          "at": "2026-10-15T17:01:10.346Z",
+          "event": "Avaliação: celebracao / 5",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "Anexar Plano de Sustentabilidade",
+            "document": "",
+            "url": "",
+            "at": "2026-10-01T19:34:29.267Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:5",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Anexar Plano de Sustentabilidade",
+            "document": "",
+            "url": "",
+            "at": "2026-10-15T17:01:10.346Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:5",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            },
+            "actor": "Usuário local"
+          }
+        },
+        {
+          "at": "2026-10-15T17:01:10.346Z",
+          "event": "Diligência encerrada por atendimento do requisito",
+          "actor": "Usuário local",
+          "before": {
+            "id": "867ea35a-b0ff-4a97-8eb3-eae7e272f332",
+            "ref": "celebracao:5",
+            "request": "Anexar Plano de Sustentabilidade",
+            "science": "",
+            "category": "ANEXO / DOCUMENTO",
+            "communication": "2026-10-01",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-01T19:34:29.267Z",
+            "base": "2026-10-11",
+            "due": "2026-10-12",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          },
+          "after": {
+            "id": "867ea35a-b0ff-4a97-8eb3-eae7e272f332",
+            "ref": "celebracao:5",
+            "request": "Anexar Plano de Sustentabilidade",
+            "science": "",
+            "category": "ANEXO / DOCUMENTO",
+            "communication": "2026-10-01",
+            "response": "",
+            "status": "baixada",
+            "note": "",
+            "at": "2026-10-15T17:01:10.346Z",
+            "base": "2026-10-11",
+            "due": "2026-10-12",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": "",
+            "closedByReview": {
+              "proposalId": "2243912",
+              "group": "celebracao",
+              "item": "5",
+              "ref": "celebracao:5",
+              "at": "2026-10-15T17:01:10.346Z",
+              "reason": "Encerrada por confirmação de conformidade do requisito",
+              "actor": "Usuário local",
+              "confirmedBy": "Usuário local"
+            }
+          }
+        },
+        {
+          "at": "2026-10-15T17:01:34.528Z",
+          "event": "Avaliação: celebracao / 6",
+          "actor": "Usuário local",
+          "before": {
+            "status": "reanalise",
+            "note": "Anexar Declaração de Compatibilidade de Preços",
+            "document": "",
+            "url": "",
+            "at": "2026-10-01T19:35:13.280Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:6",
+              "fingerprint": null,
+              "legacy": true
+            },
+            "reanalysis": {
+              "at": "2026-10-06T12:41:57.862Z",
+              "fields": [
+                "imported.pad"
+              ],
+              "reason": "Evidência alterada; decisão anterior preservada no histórico."
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Anexar Declaração de Compatibilidade de Preços",
+            "document": "",
+            "url": "",
+            "at": "2026-10-15T17:01:34.527Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:6",
+              "fingerprint": "fnv64-v1:dd567ee3bb2d0bc4"
+            },
+            "actor": "Usuário local"
+          }
+        },
+        {
+          "at": "2026-10-15T17:01:34.529Z",
+          "event": "Diligência encerrada por atendimento do requisito",
+          "actor": "Usuário local",
+          "before": {
+            "id": "f6ddadac-b3dd-4464-88e7-348c96899ae5",
+            "ref": "celebracao:6",
+            "request": "Anexar Declaração de Compatibilidade de Preços",
+            "science": "",
+            "category": "ANEXO / DOCUMENTO",
+            "communication": "2026-10-01",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-01T19:35:13.280Z",
+            "base": "2026-10-11",
+            "due": "2026-10-12",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          },
+          "after": {
+            "id": "f6ddadac-b3dd-4464-88e7-348c96899ae5",
+            "ref": "celebracao:6",
+            "request": "Anexar Declaração de Compatibilidade de Preços",
+            "science": "",
+            "category": "ANEXO / DOCUMENTO",
+            "communication": "2026-10-01",
+            "response": "",
+            "status": "baixada",
+            "note": "",
+            "at": "2026-10-15T17:01:34.529Z",
+            "base": "2026-10-11",
+            "due": "2026-10-12",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": "",
+            "closedByReview": {
+              "proposalId": "2243912",
+              "group": "celebracao",
+              "item": "6",
+              "ref": "celebracao:6",
+              "at": "2026-10-15T17:01:34.529Z",
+              "reason": "Encerrada por confirmação de conformidade do requisito",
+              "actor": "Usuário local",
+              "confirmedBy": "Usuário local"
+            }
+          }
+        },
+        {
+          "at": "2026-10-15T17:03:45.543Z",
+          "event": "Avaliação: celebracao / 1.1",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "Anexar Delegação de Competência",
+            "document": "",
+            "url": "",
+            "at": "2026-10-01T19:37:11.227Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:1.1",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Anexar Delegação de Competência",
+            "document": "",
+            "url": "",
+            "at": "2026-10-15T17:03:45.543Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:1.1",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            },
+            "actor": "Usuário local"
+          }
+        },
+        {
+          "at": "2026-10-15T17:03:45.543Z",
+          "event": "Diligência encerrada por atendimento do requisito",
+          "actor": "Usuário local",
+          "before": {
+            "id": "e372d697-d238-496f-aed0-593c660a58e5",
+            "ref": "celebracao:1.1",
+            "request": "Anexar Delegação de Competência",
+            "science": "",
+            "category": "ANEXO / DOCUMENTO",
+            "communication": "2026-10-01",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-01T19:37:11.227Z",
+            "base": "2026-10-11",
+            "due": "2026-10-12",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          },
+          "after": {
+            "id": "e372d697-d238-496f-aed0-593c660a58e5",
+            "ref": "celebracao:1.1",
+            "request": "Anexar Delegação de Competência",
+            "science": "",
+            "category": "ANEXO / DOCUMENTO",
+            "communication": "2026-10-01",
+            "response": "",
+            "status": "baixada",
+            "note": "",
+            "at": "2026-10-15T17:03:45.543Z",
+            "base": "2026-10-11",
+            "due": "2026-10-12",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": "",
+            "closedByReview": {
+              "proposalId": "2243912",
+              "group": "celebracao",
+              "item": "1.1",
+              "ref": "celebracao:1.1",
+              "at": "2026-10-15T17:03:45.543Z",
+              "reason": "Encerrada por confirmação de conformidade do requisito",
+              "actor": "Usuário local",
+              "confirmedBy": "Usuário local"
+            }
+          }
+        },
+        {
+          "at": "2026-10-15T17:04:18.688Z",
+          "event": "Avaliação: celebracao / 8",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "anexar documento",
+            "document": "",
+            "url": "",
+            "at": "2026-10-01T19:37:56.472Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:8",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "anexar documento",
+            "document": "",
+            "url": "",
+            "at": "2026-10-15T17:04:18.688Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:8",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            },
+            "actor": "Usuário local"
+          }
+        },
+        {
+          "at": "2026-10-15T17:04:18.688Z",
+          "event": "Diligência encerrada por atendimento do requisito",
+          "actor": "Usuário local",
+          "before": {
+            "id": "1936d362-ea74-419d-908c-3911b7517d29",
+            "ref": "celebracao:8",
+            "request": "anexar documento",
+            "science": "",
+            "category": "ANEXO / DOCUMENTO",
+            "communication": "2026-10-01",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-01T19:37:56.472Z",
+            "base": "2026-10-11",
+            "due": "2026-10-12",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          },
+          "after": {
+            "id": "1936d362-ea74-419d-908c-3911b7517d29",
+            "ref": "celebracao:8",
+            "request": "anexar documento",
+            "science": "",
+            "category": "ANEXO / DOCUMENTO",
+            "communication": "2026-10-01",
+            "response": "",
+            "status": "baixada",
+            "note": "",
+            "at": "2026-10-15T17:04:18.688Z",
+            "base": "2026-10-11",
+            "due": "2026-10-12",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": "",
+            "closedByReview": {
+              "proposalId": "2243912",
+              "group": "celebracao",
+              "item": "8",
+              "ref": "celebracao:8",
+              "at": "2026-10-15T17:04:18.688Z",
+              "reason": "Encerrada por confirmação de conformidade do requisito",
+              "actor": "Usuário local",
+              "confirmedBy": "Usuário local"
+            }
+          }
+        },
+        {
+          "at": "2026-10-15T17:04:39.689Z",
+          "event": "Avaliação: celebracao / 9",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "anexar documento",
+            "document": "",
+            "url": "",
+            "at": "2026-10-01T19:38:39.406Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:9",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "anexar documento",
+            "document": "",
+            "url": "",
+            "at": "2026-10-15T17:04:39.689Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:9",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            },
+            "actor": "Usuário local"
+          }
+        },
+        {
+          "at": "2026-10-15T17:04:39.689Z",
+          "event": "Diligência encerrada por atendimento do requisito",
+          "actor": "Usuário local",
+          "before": {
+            "id": "26a73c7f-5db7-419b-9aa9-400c397c18d9",
+            "ref": "celebracao:9",
+            "request": "anexar documento",
+            "science": "",
+            "category": "ANEXO / DOCUMENTO",
+            "communication": "2026-10-01",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-01T19:38:39.407Z",
+            "base": "2026-10-11",
+            "due": "2026-10-12",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          },
+          "after": {
+            "id": "26a73c7f-5db7-419b-9aa9-400c397c18d9",
+            "ref": "celebracao:9",
+            "request": "anexar documento",
+            "science": "",
+            "category": "ANEXO / DOCUMENTO",
+            "communication": "2026-10-01",
+            "response": "",
+            "status": "baixada",
+            "note": "",
+            "at": "2026-10-15T17:04:39.689Z",
+            "base": "2026-10-11",
+            "due": "2026-10-12",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": "",
+            "closedByReview": {
+              "proposalId": "2243912",
+              "group": "celebracao",
+              "item": "9",
+              "ref": "celebracao:9",
+              "at": "2026-10-15T17:04:39.689Z",
+              "reason": "Encerrada por confirmação de conformidade do requisito",
+              "actor": "Usuário local",
+              "confirmedBy": "Usuário local"
+            }
+          }
+        },
+        {
+          "at": "2026-10-15T17:05:17.004Z",
+          "event": "Avaliação: celebracao / 10",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "anexar documento",
+            "document": "",
+            "url": "",
+            "at": "2026-10-01T19:39:00.105Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:10",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "anexar documento",
+            "document": "",
+            "url": "",
+            "at": "2026-10-15T17:05:17.004Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:10",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            },
+            "actor": "Usuário local"
+          }
+        },
+        {
+          "at": "2026-10-15T17:05:17.004Z",
+          "event": "Diligência encerrada por atendimento do requisito",
+          "actor": "Usuário local",
+          "before": {
+            "id": "f8883c1c-7d41-4cd8-a6cb-016cf6612a27",
+            "ref": "celebracao:10",
+            "request": "anexar documento",
+            "science": "",
+            "category": "ANEXO / DOCUMENTO",
+            "communication": "2026-10-01",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-01T19:39:00.105Z",
+            "base": "2026-10-11",
+            "due": "2026-10-12",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          },
+          "after": {
+            "id": "f8883c1c-7d41-4cd8-a6cb-016cf6612a27",
+            "ref": "celebracao:10",
+            "request": "anexar documento",
+            "science": "",
+            "category": "ANEXO / DOCUMENTO",
+            "communication": "2026-10-01",
+            "response": "",
+            "status": "baixada",
+            "note": "",
+            "at": "2026-10-15T17:05:17.004Z",
+            "base": "2026-10-11",
+            "due": "2026-10-12",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": "",
+            "closedByReview": {
+              "proposalId": "2243912",
+              "group": "celebracao",
+              "item": "10",
+              "ref": "celebracao:10",
+              "at": "2026-10-15T17:05:17.004Z",
+              "reason": "Encerrada por confirmação de conformidade do requisito",
+              "actor": "Usuário local",
+              "confirmedBy": "Usuário local"
+            }
+          }
+        },
+        {
+          "at": "2026-10-15T17:15:44.564Z",
+          "event": "Avaliação: celebracao / 14",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "anexar documento",
+            "document": "",
+            "url": "",
+            "at": "2026-10-01T19:39:53.709Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:14",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "anexar documento",
+            "document": "",
+            "url": "",
+            "at": "2026-10-15T17:15:44.564Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:14",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            },
+            "actor": "Usuário local"
+          }
+        },
+        {
+          "at": "2026-10-15T17:15:44.564Z",
+          "event": "Diligência encerrada por atendimento do requisito",
+          "actor": "Usuário local",
+          "before": {
+            "id": "1555d4a7-5d1a-41a2-a42f-36a612170fbf",
+            "ref": "celebracao:14",
+            "request": "anexar documento",
+            "science": "",
+            "category": "ANEXO / DOCUMENTO",
+            "communication": "2026-10-01",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-01T19:39:53.710Z",
+            "base": "2026-10-11",
+            "due": "2026-10-12",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          },
+          "after": {
+            "id": "1555d4a7-5d1a-41a2-a42f-36a612170fbf",
+            "ref": "celebracao:14",
+            "request": "anexar documento",
+            "science": "",
+            "category": "ANEXO / DOCUMENTO",
+            "communication": "2026-10-01",
+            "response": "",
+            "status": "baixada",
+            "note": "",
+            "at": "2026-10-15T17:15:44.564Z",
+            "base": "2026-10-11",
+            "due": "2026-10-12",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": "",
+            "closedByReview": {
+              "proposalId": "2243912",
+              "group": "celebracao",
+              "item": "14",
+              "ref": "celebracao:14",
+              "at": "2026-10-15T17:15:44.564Z",
+              "reason": "Encerrada por confirmação de conformidade do requisito",
+              "actor": "Usuário local",
+              "confirmedBy": "Usuário local"
+            }
+          }
+        },
+        {
+          "at": "2026-10-15T17:22:09.300Z",
+          "event": "Avaliação: pad / 17448960",
+          "actor": "Usuário local",
+          "before": {
+            "status": "reanalise",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-02T19:10:41.327Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17448960",
+              "fingerprint": "fnv64-v1:aad0160a6d3554d1"
+            },
+            "reanalysis": {
+              "at": "2026-10-06T12:41:57.862Z",
+              "fields": [
+                "imported.pad:17448960"
+              ],
+              "reason": "Evidência alterada; decisão anterior preservada no histórico."
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-15T17:22:09.299Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17448960",
+              "fingerprint": "fnv64-v1:c9a4a7721f8bad87"
+            }
           }
         }
       ],
@@ -64678,11 +65413,11 @@ window.PROFOR_PUBLIC_DATA = {
       "reviews": {
         "merito": {
           "objeto": {
-            "status": "diligencia",
+            "status": "ok",
             "note": "Falta documento normativo.",
             "document": "",
             "url": "",
-            "at": "2026-10-06T14:32:33.985Z",
+            "at": "2026-10-15T17:27:37.637Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
@@ -64904,11 +65639,11 @@ window.PROFOR_PUBLIC_DATA = {
             }
           },
           "8": {
-            "status": "diligencia",
+            "status": "ok",
             "note": "Anexar documento.",
             "document": "",
             "url": "",
-            "at": "2026-10-06T14:35:03.306Z",
+            "at": "2026-10-15T17:29:10.340Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
@@ -64918,11 +65653,11 @@ window.PROFOR_PUBLIC_DATA = {
             }
           },
           "9": {
-            "status": "diligencia",
+            "status": "ok",
             "note": "Anexar documento.",
             "document": "",
             "url": "",
-            "at": "2026-10-06T14:35:03.307Z",
+            "at": "2026-10-15T17:29:32.242Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
@@ -64932,11 +65667,11 @@ window.PROFOR_PUBLIC_DATA = {
             }
           },
           "10": {
-            "status": "diligencia",
+            "status": "ok",
             "note": "Anexar documento.",
             "document": "",
             "url": "",
-            "at": "2026-10-06T14:35:03.308Z",
+            "at": "2026-10-15T17:29:49.364Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
@@ -64988,11 +65723,11 @@ window.PROFOR_PUBLIC_DATA = {
             }
           },
           "14": {
-            "status": "diligencia",
+            "status": "ok",
             "note": "Anexar documento.",
             "document": "",
             "url": "",
-            "at": "2026-10-06T14:35:03.310Z",
+            "at": "2026-10-15T17:32:04.687Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
@@ -65058,11 +65793,11 @@ window.PROFOR_PUBLIC_DATA = {
             }
           },
           "19": {
-            "status": "diligencia",
+            "status": "ok",
             "note": "Anexar documento.",
             "document": "",
             "url": "",
-            "at": "2026-10-06T14:35:03.314Z",
+            "at": "2026-10-15T17:28:47.617Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
@@ -65448,14 +66183,24 @@ window.PROFOR_PUBLIC_DATA = {
           "category": "OUTRO",
           "communication": "2026-10-06",
           "response": "",
-          "status": "aberta",
+          "status": "baixada",
           "note": "",
-          "at": "2026-10-06T14:32:33.986Z",
+          "at": "2026-10-15T17:27:37.637Z",
           "base": "2026-10-16",
           "due": "2026-10-16",
           "automaticDeadline": true,
           "confirmed": false,
-          "calendarNote": ""
+          "calendarNote": "",
+          "closedByReview": {
+            "proposalId": "2246762",
+            "group": "merito",
+            "item": "objeto",
+            "ref": "merito:objeto",
+            "at": "2026-10-15T17:27:37.637Z",
+            "reason": "Encerrada por confirmação de conformidade do requisito",
+            "actor": "Usuário local",
+            "confirmedBy": "Usuário local"
+          }
         },
         {
           "id": "bd89f8d6-abcf-423f-ad8c-8a6a4c10cd80",
@@ -65482,14 +66227,24 @@ window.PROFOR_PUBLIC_DATA = {
           "communication": "2026-10-06",
           "science": "",
           "response": "",
-          "status": "aberta",
+          "status": "baixada",
           "note": "",
-          "at": "2026-10-06T14:35:03.306Z",
+          "at": "2026-10-15T17:29:10.341Z",
           "base": "2026-10-16",
           "due": "2026-10-16",
           "automaticDeadline": true,
           "confirmed": false,
-          "calendarNote": ""
+          "calendarNote": "",
+          "closedByReview": {
+            "proposalId": "2246762",
+            "group": "celebracao",
+            "item": "8",
+            "ref": "celebracao:8",
+            "at": "2026-10-15T17:29:10.341Z",
+            "reason": "Encerrada por confirmação de conformidade do requisito",
+            "actor": "Usuário local",
+            "confirmedBy": "Usuário local"
+          }
         },
         {
           "id": "173e350a-b96f-4b56-a676-a89350f65547",
@@ -65499,14 +66254,24 @@ window.PROFOR_PUBLIC_DATA = {
           "communication": "2026-10-06",
           "science": "",
           "response": "",
-          "status": "aberta",
+          "status": "baixada",
           "note": "",
-          "at": "2026-10-06T14:35:03.307Z",
+          "at": "2026-10-15T17:29:32.242Z",
           "base": "2026-10-16",
           "due": "2026-10-16",
           "automaticDeadline": true,
           "confirmed": false,
-          "calendarNote": ""
+          "calendarNote": "",
+          "closedByReview": {
+            "proposalId": "2246762",
+            "group": "celebracao",
+            "item": "9",
+            "ref": "celebracao:9",
+            "at": "2026-10-15T17:29:32.242Z",
+            "reason": "Encerrada por confirmação de conformidade do requisito",
+            "actor": "Usuário local",
+            "confirmedBy": "Usuário local"
+          }
         },
         {
           "id": "6d5c73cf-7713-44ad-ac6a-3f052958fd66",
@@ -65516,14 +66281,24 @@ window.PROFOR_PUBLIC_DATA = {
           "communication": "2026-10-06",
           "science": "",
           "response": "",
-          "status": "aberta",
+          "status": "baixada",
           "note": "",
-          "at": "2026-10-06T14:35:03.308Z",
+          "at": "2026-10-15T17:29:49.364Z",
           "base": "2026-10-16",
           "due": "2026-10-16",
           "automaticDeadline": true,
           "confirmed": false,
-          "calendarNote": ""
+          "calendarNote": "",
+          "closedByReview": {
+            "proposalId": "2246762",
+            "group": "celebracao",
+            "item": "10",
+            "ref": "celebracao:10",
+            "at": "2026-10-15T17:29:49.364Z",
+            "reason": "Encerrada por confirmação de conformidade do requisito",
+            "actor": "Usuário local",
+            "confirmedBy": "Usuário local"
+          }
         },
         {
           "id": "e9c12e3b-ccbe-4b4b-ba1b-f3d7a60ed043",
@@ -65567,14 +66342,24 @@ window.PROFOR_PUBLIC_DATA = {
           "communication": "2026-10-06",
           "science": "",
           "response": "",
-          "status": "aberta",
+          "status": "baixada",
           "note": "",
-          "at": "2026-10-06T14:35:03.311Z",
+          "at": "2026-10-15T17:32:04.687Z",
           "base": "2026-10-16",
           "due": "2026-10-16",
           "automaticDeadline": true,
           "confirmed": false,
-          "calendarNote": ""
+          "calendarNote": "",
+          "closedByReview": {
+            "proposalId": "2246762",
+            "group": "celebracao",
+            "item": "14",
+            "ref": "celebracao:14",
+            "at": "2026-10-15T17:32:04.687Z",
+            "reason": "Encerrada por confirmação de conformidade do requisito",
+            "actor": "Usuário local",
+            "confirmedBy": "Usuário local"
+          }
         },
         {
           "id": "6571ed5b-4055-4638-92c3-d2bb9128feb9",
@@ -65652,14 +66437,24 @@ window.PROFOR_PUBLIC_DATA = {
           "communication": "2026-10-06",
           "science": "",
           "response": "",
-          "status": "aberta",
+          "status": "baixada",
           "note": "",
-          "at": "2026-10-06T14:35:03.314Z",
+          "at": "2026-10-15T17:28:47.617Z",
           "base": "2026-10-16",
           "due": "2026-10-16",
           "automaticDeadline": true,
           "confirmed": false,
-          "calendarNote": ""
+          "calendarNote": "",
+          "closedByReview": {
+            "proposalId": "2246762",
+            "group": "celebracao",
+            "item": "19",
+            "ref": "celebracao:19",
+            "at": "2026-10-15T17:28:47.617Z",
+            "reason": "Encerrada por confirmação de conformidade do requisito",
+            "actor": "Usuário local",
+            "confirmedBy": "Usuário local"
+          }
         }
       ],
       "ouvidoria": {
@@ -68653,6 +69448,498 @@ window.PROFOR_PUBLIC_DATA = {
           "after": {
             "at": "2026-10-15T13:01:18.726Z"
           }
+        },
+        {
+          "at": "2026-10-15T17:27:37.637Z",
+          "event": "Avaliação: merito / objeto",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "Falta documento normativo.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-06T14:32:33.985Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:objeto",
+              "fingerprint": "fnv64-v1:921ab7c35a5a6844"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Falta documento normativo.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-15T17:27:37.637Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:objeto",
+              "fingerprint": "fnv64-v1:921ab7c35a5a6844"
+            }
+          }
+        },
+        {
+          "at": "2026-10-15T17:27:37.637Z",
+          "event": "Diligência encerrada por atendimento do requisito",
+          "actor": "Usuário local",
+          "before": {
+            "id": "10a7a91a-7117-4af5-98ac-7e76950c847d",
+            "ref": "merito:objeto",
+            "request": "Falta documento normativo.",
+            "science": "",
+            "category": "OUTRO",
+            "communication": "2026-10-06",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-06T14:32:33.986Z",
+            "base": "2026-10-16",
+            "due": "2026-10-16",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          },
+          "after": {
+            "id": "10a7a91a-7117-4af5-98ac-7e76950c847d",
+            "ref": "merito:objeto",
+            "request": "Falta documento normativo.",
+            "science": "",
+            "category": "OUTRO",
+            "communication": "2026-10-06",
+            "response": "",
+            "status": "baixada",
+            "note": "",
+            "at": "2026-10-15T17:27:37.637Z",
+            "base": "2026-10-16",
+            "due": "2026-10-16",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": "",
+            "closedByReview": {
+              "proposalId": "2246762",
+              "group": "merito",
+              "item": "objeto",
+              "ref": "merito:objeto",
+              "at": "2026-10-15T17:27:37.637Z",
+              "reason": "Encerrada por confirmação de conformidade do requisito",
+              "actor": "Usuário local",
+              "confirmedBy": "Usuário local"
+            }
+          }
+        },
+        {
+          "at": "2026-10-15T17:28:47.617Z",
+          "event": "Avaliação: celebracao / 19",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "Anexar documento.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-06T14:35:03.314Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:19",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Anexar documento.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-15T17:28:47.617Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:19",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-15T17:28:47.617Z",
+          "event": "Diligência encerrada por atendimento do requisito",
+          "actor": "Usuário local",
+          "before": {
+            "id": "f8bb334d-9773-4bfb-bd99-8bfecc5035d8",
+            "ref": "celebracao:19",
+            "category": "OUTRO",
+            "request": "Anexar documento.",
+            "communication": "2026-10-06",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-06T14:35:03.314Z",
+            "base": "2026-10-16",
+            "due": "2026-10-16",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          },
+          "after": {
+            "id": "f8bb334d-9773-4bfb-bd99-8bfecc5035d8",
+            "ref": "celebracao:19",
+            "category": "OUTRO",
+            "request": "Anexar documento.",
+            "communication": "2026-10-06",
+            "science": "",
+            "response": "",
+            "status": "baixada",
+            "note": "",
+            "at": "2026-10-15T17:28:47.617Z",
+            "base": "2026-10-16",
+            "due": "2026-10-16",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": "",
+            "closedByReview": {
+              "proposalId": "2246762",
+              "group": "celebracao",
+              "item": "19",
+              "ref": "celebracao:19",
+              "at": "2026-10-15T17:28:47.617Z",
+              "reason": "Encerrada por confirmação de conformidade do requisito",
+              "actor": "Usuário local",
+              "confirmedBy": "Usuário local"
+            }
+          }
+        },
+        {
+          "at": "2026-10-15T17:29:10.340Z",
+          "event": "Avaliação: celebracao / 8",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "Anexar documento.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-06T14:35:03.306Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:8",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Anexar documento.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-15T17:29:10.340Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:8",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-15T17:29:10.341Z",
+          "event": "Diligência encerrada por atendimento do requisito",
+          "actor": "Usuário local",
+          "before": {
+            "id": "dc6b36ff-ab35-4794-ac67-00cc70f6b9b7",
+            "ref": "celebracao:8",
+            "category": "OUTRO",
+            "request": "Anexar documento.",
+            "communication": "2026-10-06",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-06T14:35:03.306Z",
+            "base": "2026-10-16",
+            "due": "2026-10-16",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          },
+          "after": {
+            "id": "dc6b36ff-ab35-4794-ac67-00cc70f6b9b7",
+            "ref": "celebracao:8",
+            "category": "OUTRO",
+            "request": "Anexar documento.",
+            "communication": "2026-10-06",
+            "science": "",
+            "response": "",
+            "status": "baixada",
+            "note": "",
+            "at": "2026-10-15T17:29:10.341Z",
+            "base": "2026-10-16",
+            "due": "2026-10-16",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": "",
+            "closedByReview": {
+              "proposalId": "2246762",
+              "group": "celebracao",
+              "item": "8",
+              "ref": "celebracao:8",
+              "at": "2026-10-15T17:29:10.341Z",
+              "reason": "Encerrada por confirmação de conformidade do requisito",
+              "actor": "Usuário local",
+              "confirmedBy": "Usuário local"
+            }
+          }
+        },
+        {
+          "at": "2026-10-15T17:29:32.242Z",
+          "event": "Avaliação: celebracao / 9",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "Anexar documento.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-06T14:35:03.307Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:9",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Anexar documento.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-15T17:29:32.242Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:9",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-15T17:29:32.242Z",
+          "event": "Diligência encerrada por atendimento do requisito",
+          "actor": "Usuário local",
+          "before": {
+            "id": "173e350a-b96f-4b56-a676-a89350f65547",
+            "ref": "celebracao:9",
+            "category": "OUTRO",
+            "request": "Anexar documento.",
+            "communication": "2026-10-06",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-06T14:35:03.307Z",
+            "base": "2026-10-16",
+            "due": "2026-10-16",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          },
+          "after": {
+            "id": "173e350a-b96f-4b56-a676-a89350f65547",
+            "ref": "celebracao:9",
+            "category": "OUTRO",
+            "request": "Anexar documento.",
+            "communication": "2026-10-06",
+            "science": "",
+            "response": "",
+            "status": "baixada",
+            "note": "",
+            "at": "2026-10-15T17:29:32.242Z",
+            "base": "2026-10-16",
+            "due": "2026-10-16",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": "",
+            "closedByReview": {
+              "proposalId": "2246762",
+              "group": "celebracao",
+              "item": "9",
+              "ref": "celebracao:9",
+              "at": "2026-10-15T17:29:32.242Z",
+              "reason": "Encerrada por confirmação de conformidade do requisito",
+              "actor": "Usuário local",
+              "confirmedBy": "Usuário local"
+            }
+          }
+        },
+        {
+          "at": "2026-10-15T17:29:49.364Z",
+          "event": "Avaliação: celebracao / 10",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "Anexar documento.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-06T14:35:03.308Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:10",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Anexar documento.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-15T17:29:49.364Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:10",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-15T17:29:49.364Z",
+          "event": "Diligência encerrada por atendimento do requisito",
+          "actor": "Usuário local",
+          "before": {
+            "id": "6d5c73cf-7713-44ad-ac6a-3f052958fd66",
+            "ref": "celebracao:10",
+            "category": "OUTRO",
+            "request": "Anexar documento.",
+            "communication": "2026-10-06",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-06T14:35:03.308Z",
+            "base": "2026-10-16",
+            "due": "2026-10-16",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          },
+          "after": {
+            "id": "6d5c73cf-7713-44ad-ac6a-3f052958fd66",
+            "ref": "celebracao:10",
+            "category": "OUTRO",
+            "request": "Anexar documento.",
+            "communication": "2026-10-06",
+            "science": "",
+            "response": "",
+            "status": "baixada",
+            "note": "",
+            "at": "2026-10-15T17:29:49.364Z",
+            "base": "2026-10-16",
+            "due": "2026-10-16",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": "",
+            "closedByReview": {
+              "proposalId": "2246762",
+              "group": "celebracao",
+              "item": "10",
+              "ref": "celebracao:10",
+              "at": "2026-10-15T17:29:49.364Z",
+              "reason": "Encerrada por confirmação de conformidade do requisito",
+              "actor": "Usuário local",
+              "confirmedBy": "Usuário local"
+            }
+          }
+        },
+        {
+          "at": "2026-10-15T17:32:04.687Z",
+          "event": "Avaliação: celebracao / 14",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "Anexar documento.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-06T14:35:03.310Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:14",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Anexar documento.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-15T17:32:04.687Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:14",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-15T17:32:04.687Z",
+          "event": "Diligência encerrada por atendimento do requisito",
+          "actor": "Usuário local",
+          "before": {
+            "id": "2466cb01-f6dc-4739-a38c-e405fc54bdb2",
+            "ref": "celebracao:14",
+            "category": "OUTRO",
+            "request": "Anexar documento.",
+            "communication": "2026-10-06",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-06T14:35:03.311Z",
+            "base": "2026-10-16",
+            "due": "2026-10-16",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          },
+          "after": {
+            "id": "2466cb01-f6dc-4739-a38c-e405fc54bdb2",
+            "ref": "celebracao:14",
+            "category": "OUTRO",
+            "request": "Anexar documento.",
+            "communication": "2026-10-06",
+            "science": "",
+            "response": "",
+            "status": "baixada",
+            "note": "",
+            "at": "2026-10-15T17:32:04.687Z",
+            "base": "2026-10-16",
+            "due": "2026-10-16",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": "",
+            "closedByReview": {
+              "proposalId": "2246762",
+              "group": "celebracao",
+              "item": "14",
+              "ref": "celebracao:14",
+              "at": "2026-10-15T17:32:04.687Z",
+              "reason": "Encerrada por confirmação de conformidade do requisito",
+              "actor": "Usuário local",
+              "confirmedBy": "Usuário local"
+            }
+          }
         }
       ],
       "textos": {
@@ -69686,11 +70973,11 @@ window.PROFOR_PUBLIC_DATA = {
             }
           },
           "11": {
-            "status": "diligencia",
+            "status": "ok",
             "note": "Documento ausente.",
             "document": "",
             "url": "",
-            "at": "2026-10-05T18:32:58.519Z",
+            "at": "2026-10-16T18:30:47.252Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
@@ -70282,14 +71569,24 @@ window.PROFOR_PUBLIC_DATA = {
           "communication": "2026-10-05",
           "science": "",
           "response": "",
-          "status": "aberta",
+          "status": "baixada",
           "note": "",
-          "at": "2026-10-05T18:32:58.520Z",
+          "at": "2026-10-16T18:30:47.253Z",
           "base": "2026-10-15",
           "due": "2026-10-15",
           "automaticDeadline": true,
           "confirmed": false,
-          "calendarNote": ""
+          "calendarNote": "",
+          "closedByReview": {
+            "proposalId": "2247131",
+            "group": "celebracao",
+            "item": "11",
+            "ref": "celebracao:11",
+            "at": "2026-10-16T18:30:47.253Z",
+            "reason": "Encerrada por confirmação de conformidade do requisito",
+            "actor": "Usuário local",
+            "confirmedBy": "Usuário local"
+          }
         }
       ],
       "ouvidoria": {
@@ -72989,6 +74286,88 @@ window.PROFOR_PUBLIC_DATA = {
           },
           "after": {
             "at": "2026-10-15T13:01:18.726Z"
+          }
+        },
+        {
+          "at": "2026-10-16T18:30:47.253Z",
+          "event": "Avaliação: celebracao / 11",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "Documento ausente.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T18:32:58.519Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:11",
+              "fingerprint": "fnv64-v1:5bd2f2311c3cb340"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Documento ausente.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-16T18:30:47.252Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:11",
+              "fingerprint": "fnv64-v1:5bd2f2311c3cb340"
+            }
+          }
+        },
+        {
+          "at": "2026-10-16T18:30:47.253Z",
+          "event": "Diligência encerrada por atendimento do requisito",
+          "actor": "Usuário local",
+          "before": {
+            "id": "d1617c8c-ce81-4676-ae05-84bcf48abd4d",
+            "ref": "celebracao:11",
+            "category": "OUTRO",
+            "request": "Documento ausente.",
+            "communication": "2026-10-05",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-05T18:32:58.520Z",
+            "base": "2026-10-15",
+            "due": "2026-10-15",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          },
+          "after": {
+            "id": "d1617c8c-ce81-4676-ae05-84bcf48abd4d",
+            "ref": "celebracao:11",
+            "category": "OUTRO",
+            "request": "Documento ausente.",
+            "communication": "2026-10-05",
+            "science": "",
+            "response": "",
+            "status": "baixada",
+            "note": "",
+            "at": "2026-10-16T18:30:47.253Z",
+            "base": "2026-10-15",
+            "due": "2026-10-15",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": "",
+            "closedByReview": {
+              "proposalId": "2247131",
+              "group": "celebracao",
+              "item": "11",
+              "ref": "celebracao:11",
+              "at": "2026-10-16T18:30:47.253Z",
+              "reason": "Encerrada por confirmação de conformidade do requisito",
+              "actor": "Usuário local",
+              "confirmedBy": "Usuário local"
+            }
           }
         }
       ],
