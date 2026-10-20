@@ -1,9 +1,9 @@
-/** Snapshot integral de consulta PROFOR/ONASP 2026. Gerado em 2026-10-20T11:30:51.761Z.
+/** Snapshot integral de consulta PROFOR/ONASP 2026. Gerado em 2026-10-20T14:14:43.187Z.
  * Não editar manualmente. Use tools/build_public_docs.cjs. */
-window.PROFOR_PUBLIC_UPDATED_AT = "2026-10-20T11:30:51.761Z";
+window.PROFOR_PUBLIC_UPDATED_AT = "2026-10-20T14:14:43.187Z";
 window.PROFOR_PUBLIC_DATA = {
   "schemaVersion": 1,
-  "revision": 472,
+  "revision": 473,
   "proposals": [
     {
       "id": "2243618",
@@ -58574,11 +58574,11 @@ window.PROFOR_PUBLIC_DATA = {
             }
           },
           "7": {
-            "status": "diligencia",
+            "status": "ok",
             "note": "Falta QDD",
             "document": "",
             "url": "",
-            "at": "2026-10-19T16:20:07.761Z",
+            "at": "2026-10-20T14:05:01.535Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
@@ -59014,14 +59014,24 @@ window.PROFOR_PUBLIC_DATA = {
           "category": "OUTRO",
           "communication": "",
           "response": "",
-          "status": "aberta",
+          "status": "baixada",
           "note": "",
-          "at": "2026-10-19T16:20:07.762Z",
+          "at": "2026-10-20T14:05:01.535Z",
           "base": "",
           "due": "",
           "automaticDeadline": true,
           "confirmed": false,
-          "calendarNote": ""
+          "calendarNote": "",
+          "closedByReview": {
+            "proposalId": "2246231",
+            "group": "celebracao",
+            "item": "7",
+            "ref": "celebracao:7",
+            "at": "2026-10-20T14:05:01.535Z",
+            "reason": "Encerrada por confirmação de conformidade do requisito",
+            "actor": "Usuário local",
+            "confirmedBy": "Usuário local"
+          }
         },
         {
           "id": "6ced0c46-6499-45f4-b5c8-3becf2f28fc3",
@@ -61716,6 +61726,88 @@ window.PROFOR_PUBLIC_DATA = {
           },
           "after": {
             "at": "2026-10-20T11:28:42.847Z"
+          }
+        },
+        {
+          "at": "2026-10-20T14:05:01.535Z",
+          "event": "Avaliação: celebracao / 7",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "Falta QDD",
+            "document": "",
+            "url": "",
+            "at": "2026-10-19T16:20:07.761Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:7",
+              "fingerprint": "fnv64-v1:60d363cb71c63f36"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Falta QDD",
+            "document": "",
+            "url": "",
+            "at": "2026-10-20T14:05:01.535Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:7",
+              "fingerprint": "fnv64-v1:60d363cb71c63f36"
+            }
+          }
+        },
+        {
+          "at": "2026-10-20T14:05:01.535Z",
+          "event": "Diligência encerrada por atendimento do requisito",
+          "actor": "Usuário local",
+          "before": {
+            "id": "f4685fa3-b4b3-41a4-8833-787f3228aad0",
+            "ref": "celebracao:7",
+            "request": "Falta QDD",
+            "science": "",
+            "category": "OUTRO",
+            "communication": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-19T16:20:07.762Z",
+            "base": "",
+            "due": "",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          },
+          "after": {
+            "id": "f4685fa3-b4b3-41a4-8833-787f3228aad0",
+            "ref": "celebracao:7",
+            "request": "Falta QDD",
+            "science": "",
+            "category": "OUTRO",
+            "communication": "",
+            "response": "",
+            "status": "baixada",
+            "note": "",
+            "at": "2026-10-20T14:05:01.535Z",
+            "base": "",
+            "due": "",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": "",
+            "closedByReview": {
+              "proposalId": "2246231",
+              "group": "celebracao",
+              "item": "7",
+              "ref": "celebracao:7",
+              "at": "2026-10-20T14:05:01.535Z",
+              "reason": "Encerrada por confirmação de conformidade do requisito",
+              "actor": "Usuário local",
+              "confirmedBy": "Usuário local"
+            }
           }
         }
       ],
