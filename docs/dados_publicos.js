@@ -1,9 +1,9 @@
-/** Snapshot integral de consulta PROFOR/ONASP 2026. Gerado em 2026-10-21T18:37:53.458Z.
+/** Snapshot integral de consulta PROFOR/ONASP 2026. Gerado em 2026-10-22T18:09:41.384Z.
  * Não editar manualmente. Use tools/build_public_docs.cjs. */
-window.PROFOR_PUBLIC_UPDATED_AT = "2026-10-21T18:37:53.458Z";
+window.PROFOR_PUBLIC_UPDATED_AT = "2026-10-22T18:09:41.384Z";
 window.PROFOR_PUBLIC_DATA = {
   "schemaVersion": 1,
-  "revision": 477,
+  "revision": 485,
   "proposals": [
     {
       "id": "2243618",
@@ -666,13 +666,24 @@ window.PROFOR_PUBLIC_DATA = {
           "after": {
             "at": "2026-10-20T11:28:42.847Z"
           }
+        },
+        {
+          "at": "2026-10-22T14:38:40.048Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Usuário local",
+          "before": {
+            "at": "2026-10-20T11:28:42.847Z"
+          },
+          "after": {
+            "at": "2026-10-22T14:38:40.048Z"
+          }
         }
       ],
       "isDeleted": true,
       "deletedAt": "2026-09-17T10:49:40.018Z",
       "deletedBy": "Usuário local",
       "textos": {
-        "at": "2026-10-20T11:28:42.847Z",
+        "at": "2026-10-22T14:38:40.048Z",
         "caracterizacao": "Integração de esforços entre o Ministério da Justiça/SENAPPEN e a SEAP/PE para estruturar a Ouvidoria de Serviços Penais. A cooperação atende às diretrizes do PROFOR/ONASP e do Plano Pena Justa, fortalecendo a governança penitenciária, a fiscalização institucional, a proteção dos direitos humanos e o acesso à justiça no âmbito da execução penal em Pernambuco.",
         "publicoAlvo": "Pessoas privadas de liberdade, seus familiares, operadores do direito, órgãos de controle, servidores do sistema penitenciário e a sociedade civil usuária dos serviços da Ouvidoria da SEAP/PE",
         "problema": "Déficit de infraestrutura física, mobiliária e tecnológica na Ouvidoria da SEAP/PE, que limita o acolhimento presencial, compromete a celeridade e o sigilo no fluxo de manifestações e restringe a mobilidade técnica para a realização de inspeções nas unidades prisionais.",
@@ -685,7 +696,7 @@ window.PROFOR_PUBLIC_DATA = {
         "version": 1,
         "status": "complete",
         "source": "siconv_plano_aplicacao_detalhado.zip",
-        "at": "2026-10-20T11:25:51.067Z",
+        "at": "2026-10-22T14:35:54.806Z",
         "received": 0,
         "accepted": 0,
         "rejected": 0,
@@ -7763,10 +7774,21 @@ window.PROFOR_PUBLIC_DATA = {
           "after": {
             "at": "2026-10-20T11:28:42.847Z"
           }
+        },
+        {
+          "at": "2026-10-22T14:38:40.048Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Usuário local",
+          "before": {
+            "at": "2026-10-20T11:28:42.847Z"
+          },
+          "after": {
+            "at": "2026-10-22T14:38:40.048Z"
+          }
         }
       ],
       "textos": {
-        "at": "2026-10-20T11:28:42.847Z",
+        "at": "2026-10-22T14:38:40.048Z",
         "caracterizacao": "Aquisição de bens permanentes destinados ao aparelhamento e ao fortalecimento da Ouvidoria de Serviços Penais do Estado do Rio Grande do Sul, a ser formalmente instituída nos termos do Edital nº 37/2026, visando à qualificação de sua capacidade de atendimento, gestão de manifestações e atuação institucional.",
         "publicoAlvo": "Pessoas privadas de liberdade, familiares, servidores do sistema penal e demais cidadãos que utilizam os serviços da Ouvidoria de Serviços Penais.",
         "problema": "Ausência de estrutura material específica e adequada para o funcionamento da Ouvidoria de Serviços Penais do Estado do Rio Grande do Sul, cuja instituição formal será promovida nos termos do Edital nº 37/2026. A insuficiência de equipamentos, mobiliário, recursos tecnológicos e meios de deslocamento limita a implantação da unidade e a capacidade de atendimento, acompanhamento e tratamento das manifestações relacionadas aos serviços penais.",
@@ -7779,7 +7801,7 @@ window.PROFOR_PUBLIC_DATA = {
         "version": 1,
         "status": "complete",
         "source": "siconv_plano_aplicacao_detalhado.zip",
-        "at": "2026-10-20T11:25:51.067Z",
+        "at": "2026-10-22T14:35:54.806Z",
         "received": 14,
         "accepted": 14,
         "rejected": 0,
@@ -19324,10 +19346,21 @@ window.PROFOR_PUBLIC_DATA = {
             },
             "operationId": "8ab8f444-20ff-44ab-8cb6-8b86f1e3320e"
           }
+        },
+        {
+          "at": "2026-10-22T14:38:40.048Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Usuário local",
+          "before": {
+            "at": "2026-10-20T11:28:42.847Z"
+          },
+          "after": {
+            "at": "2026-10-22T14:38:40.048Z"
+          }
         }
       ],
       "textos": {
-        "at": "2026-10-20T11:28:42.847Z",
+        "at": "2026-10-22T14:38:40.048Z",
         "caracterizacao": "A proposta atende ao interesse do Estado de Sergipe em fortalecer a estrutura e a capacidade de atuação da Ouvidoria de Serviços Penais, ampliando sua eficiência no recebimento, tratamento e encaminhamento de manifestações. Para a União, a iniciativa contribui para a implementação das diretrizes do PROFOR/ONASP, o fortalecimento da participação social, da transparência, do controle institucional e da proteção de direitos na política penal.",
         "publicoAlvo": "O público-alvo compreende, prioritariamente, as pessoas privadas de liberdade, egressos do sistema prisional, familiares e demais cidadãos que utilizam os canais da Ouvidoria para apresentar denúncias, reclamações, solicitações, sugestões, elogios e outras manifestações relacionadas aos serviços penais. Abrange também os agentes e servidores responsáveis pelo atendimento e tratamento dessas manifestações.",
         "problema": "A proposta busca enfrentar as limitações estruturais e tecnológicas que podem comprometer a capacidade institucional da Ouvidoria de Serviços Penais para receber, registrar, tratar, acompanhar e responder manifestações de forma eficiente, segura e rastreável. O fortalecimento do aparelhamento permitirá melhores condições para a escuta qualificada, proteção de informações sensíveis, participação social, transparência e controle dos serviços penais.",
@@ -19340,7 +19373,7 @@ window.PROFOR_PUBLIC_DATA = {
         "version": 1,
         "status": "complete",
         "source": "siconv_plano_aplicacao_detalhado.zip",
-        "at": "2026-10-20T11:25:51.067Z",
+        "at": "2026-10-22T14:35:54.806Z",
         "received": 22,
         "accepted": 22,
         "rejected": 0,
@@ -19471,12 +19504,18 @@ window.PROFOR_PUBLIC_DATA = {
         },
         "merito": {
           "destinacao": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-22T15:56:39.958Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:destinacao",
+              "fingerprint": "fnv64-v1:dd4d5ef5cdc22353"
+            }
           },
           "capital": {
             "status": "na",
@@ -19486,12 +19525,18 @@ window.PROFOR_PUBLIC_DATA = {
             "at": null
           },
           "objetivos": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-22T15:56:39.958Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:objetivos",
+              "fingerprint": "fnv64-v1:07954b2f151157bf"
+            }
           },
           "metas": {
             "status": "na",
@@ -19501,12 +19546,18 @@ window.PROFOR_PUBLIC_DATA = {
             "at": null
           },
           "capacidade": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-22T15:56:39.958Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:capacidade",
+              "fingerprint": "fnv64-v1:e948683787eebb55"
+            }
           },
           "conteudo": {
             "status": "na",
@@ -19516,52 +19567,88 @@ window.PROFOR_PUBLIC_DATA = {
             "at": null
           },
           "objeto": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-22T15:56:39.956Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:objeto",
+              "fingerprint": "fnv64-v1:6908412cf4c08074"
+            }
           },
           "justificativa": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-22T15:56:39.957Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:justificativa",
+              "fingerprint": "fnv64-v1:be07da3e412eed26"
+            }
           },
           "publicoAlvo": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-22T15:56:39.957Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:publicoAlvo",
+              "fingerprint": "fnv64-v1:5ada4878c57e264f"
+            }
           },
           "problema": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-22T15:56:39.957Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:problema",
+              "fingerprint": "fnv64-v1:8506bf4078b9cae4"
+            }
           },
           "resultados": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-22T15:56:39.958Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:resultados",
+              "fingerprint": "fnv64-v1:c9242c851cb6ade5"
+            }
           },
           "ouvidoriaInstituida": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-22T15:57:23.658Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:ouvidoriaInstituida",
+              "fingerprint": "fnv64-v1:1335379bb2cd68e8"
+            }
           },
           "ouvidoriaAto": {
             "status": "na",
@@ -19585,22 +19672,34 @@ window.PROFOR_PUBLIC_DATA = {
             "at": null
           },
           "falaBRAdesao": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-22T16:04:31.743Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:falaBRAdesao",
+              "fingerprint": "fnv64-v1:004c4d5a1ab27921"
+            }
           }
         },
         "celebracao": {
           "1": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-22T18:04:06.810Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:1",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
           },
           "2": {
             "status": "na",
@@ -19611,157 +19710,265 @@ window.PROFOR_PUBLIC_DATA = {
             "attachments": []
           },
           "3": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-22T17:56:23.999Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:3",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
           },
           "4": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-22T17:56:23.999Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:4",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
           },
           "5": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-22T17:56:24.000Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:5",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
           },
           "6": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-22T17:56:24.000Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:6",
+              "fingerprint": "fnv64-v1:f7a44ec91bf3caa0"
+            }
           },
           "7": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-22T17:56:24.001Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:7",
+              "fingerprint": "fnv64-v1:a9e75ba13ece4840"
+            }
           },
           "8": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-22T18:04:06.810Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:8",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
           },
           "9": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-22T18:04:06.810Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:9",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
           },
           "10": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-22T18:04:06.810Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:10",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
           },
           "11": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-22T17:56:24.001Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:11",
+              "fingerprint": "fnv64-v1:e948683787eebb55"
+            }
           },
           "12": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-22T18:04:06.810Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:12",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
           },
           "13": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-22T18:04:06.810Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:13",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
           },
           "14": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-22T18:04:06.810Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:14",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
           },
           "15": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-22T18:04:06.810Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:15",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
           },
           "16": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-22T18:04:06.810Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:16",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
           },
           "17": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-22T18:04:06.810Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:17",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
           },
           "18": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-22T18:04:06.810Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:18",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
           },
           "19": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-22T18:04:06.810Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:19",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
           },
           "1.1": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-22T18:04:06.810Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:1.1",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
           }
         },
         "pad": {
           "17408693": {
-            "status": "diligencia",
+            "status": "ok",
             "note": "Solicita-se anexar nova versão legível da pesquisa mercadológica, com melhor qualidade de imagem, tendo em vista que o documento apresentado está majoritariamente ilegível e dificulta a conferência dos produtos, preços, condições de pagamento, datas das consultas e links completos. Solicita-se, ainda, anexar planilha com a memória de cálculo de cada item, identificando as três cotações utilizadas, a soma dos preços, a divisão por três e a média aritmética resultante, com referência aos respectivos comprovantes. A média apurada deve corresponder ao valor unitário registrado no Plano de Aplicação Detalhado.",
             "document": "",
             "url": "",
-            "at": "2026-10-06T16:07:40.797Z",
+            "at": "2026-10-22T17:52:14.968Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
@@ -19771,11 +19978,11 @@ window.PROFOR_PUBLIC_DATA = {
             }
           },
           "17408695": {
-            "status": "diligencia",
+            "status": "ok",
             "note": "Solicita-se anexar nova versão legível da pesquisa mercadológica, com melhor qualidade de imagem, tendo em vista que o documento apresentado está majoritariamente ilegível e dificulta a conferência dos produtos, preços, condições de pagamento, datas das consultas e links completos. Solicita-se, ainda, anexar planilha com a memória de cálculo de cada item, identificando as três cotações utilizadas, a soma dos preços, a divisão por três e a média aritmética resultante, com referência aos respectivos comprovantes. A média apurada deve corresponder ao valor unitário registrado no Plano de Aplicação Detalhado.",
             "document": "",
             "url": "",
-            "at": "2026-10-06T16:07:40.795Z",
+            "at": "2026-10-22T17:52:14.969Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
@@ -19785,11 +19992,11 @@ window.PROFOR_PUBLIC_DATA = {
             }
           },
           "17408698": {
-            "status": "diligencia",
+            "status": "ok",
             "note": "Solicita-se anexar nova versão legível da pesquisa mercadológica, com melhor qualidade de imagem, tendo em vista que o documento apresentado está majoritariamente ilegível e dificulta a conferência dos produtos, preços, condições de pagamento, datas das consultas e links completos. Solicita-se, ainda, anexar planilha com a memória de cálculo de cada item, identificando as três cotações utilizadas, a soma dos preços, a divisão por três e a média aritmética resultante, com referência aos respectivos comprovantes. A média apurada deve corresponder ao valor unitário registrado no Plano de Aplicação Detalhado.",
             "document": "",
             "url": "",
-            "at": "2026-10-06T16:07:40.799Z",
+            "at": "2026-10-22T17:52:14.968Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
@@ -19799,11 +20006,11 @@ window.PROFOR_PUBLIC_DATA = {
             }
           },
           "17408701": {
-            "status": "diligencia",
+            "status": "ok",
             "note": "Solicita-se anexar nova versão legível da pesquisa mercadológica, com melhor qualidade de imagem, tendo em vista que o documento apresentado está majoritariamente ilegível e dificulta a conferência dos produtos, preços, condições de pagamento, datas das consultas e links completos. Solicita-se, ainda, anexar planilha com a memória de cálculo de cada item, identificando as três cotações utilizadas, a soma dos preços, a divisão por três e a média aritmética resultante, com referência aos respectivos comprovantes. A média apurada deve corresponder ao valor unitário registrado no Plano de Aplicação Detalhado.",
             "document": "",
             "url": "",
-            "at": "2026-10-06T16:07:40.804Z",
+            "at": "2026-10-22T17:52:14.969Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
@@ -19813,11 +20020,11 @@ window.PROFOR_PUBLIC_DATA = {
             }
           },
           "17408704": {
-            "status": "diligencia",
+            "status": "ok",
             "note": "Solicita-se anexar nova versão legível da pesquisa mercadológica, com melhor qualidade de imagem, tendo em vista que o documento apresentado está majoritariamente ilegível e dificulta a conferência dos produtos, preços, condições de pagamento, datas das consultas e links completos. Solicita-se, ainda, anexar planilha com a memória de cálculo de cada item, identificando as três cotações utilizadas, a soma dos preços, a divisão por três e a média aritmética resultante, com referência aos respectivos comprovantes. A média apurada deve corresponder ao valor unitário registrado no Plano de Aplicação Detalhado.",
             "document": "",
             "url": "",
-            "at": "2026-10-06T16:07:40.806Z",
+            "at": "2026-10-22T17:52:14.969Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
@@ -19827,11 +20034,11 @@ window.PROFOR_PUBLIC_DATA = {
             }
           },
           "17408708": {
-            "status": "diligencia",
+            "status": "ok",
             "note": "Solicita-se anexar nova versão legível da pesquisa mercadológica, com melhor qualidade de imagem, tendo em vista que o documento apresentado está majoritariamente ilegível e dificulta a conferência dos produtos, preços, condições de pagamento, datas das consultas e links completos. Solicita-se, ainda, anexar planilha com a memória de cálculo de cada item, identificando as três cotações utilizadas, a soma dos preços, a divisão por três e a média aritmética resultante, com referência aos respectivos comprovantes. A média apurada deve corresponder ao valor unitário registrado no Plano de Aplicação Detalhado.",
             "document": "",
             "url": "",
-            "at": "2026-10-06T16:07:40.808Z",
+            "at": "2026-10-22T17:52:14.968Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
@@ -19841,11 +20048,11 @@ window.PROFOR_PUBLIC_DATA = {
             }
           },
           "17408710": {
-            "status": "diligencia",
+            "status": "ok",
             "note": "Solicita-se anexar nova versão legível da pesquisa mercadológica, com melhor qualidade de imagem, tendo em vista que o documento apresentado está majoritariamente ilegível e dificulta a conferência dos produtos, preços, condições de pagamento, datas das consultas e links completos. Solicita-se, ainda, anexar planilha com a memória de cálculo de cada item, identificando as três cotações utilizadas, a soma dos preços, a divisão por três e a média aritmética resultante, com referência aos respectivos comprovantes. A média apurada deve corresponder ao valor unitário registrado no Plano de Aplicação Detalhado.",
             "document": "",
             "url": "",
-            "at": "2026-10-06T16:07:40.801Z",
+            "at": "2026-10-22T17:52:14.969Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
@@ -19855,11 +20062,11 @@ window.PROFOR_PUBLIC_DATA = {
             }
           },
           "17408711": {
-            "status": "diligencia",
+            "status": "ok",
             "note": "Solicita-se anexar nova versão legível da pesquisa mercadológica, com melhor qualidade de imagem, tendo em vista que o documento apresentado está majoritariamente ilegível e dificulta a conferência dos produtos, preços, condições de pagamento, datas das consultas e links completos. Solicita-se, ainda, anexar planilha com a memória de cálculo de cada item, identificando as três cotações utilizadas, a soma dos preços, a divisão por três e a média aritmética resultante, com referência aos respectivos comprovantes. A média apurada deve corresponder ao valor unitário registrado no Plano de Aplicação Detalhado.",
             "document": "",
             "url": "",
-            "at": "2026-10-06T16:07:40.802Z",
+            "at": "2026-10-22T17:52:14.969Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
@@ -19869,11 +20076,11 @@ window.PROFOR_PUBLIC_DATA = {
             }
           },
           "17408758": {
-            "status": "diligencia",
+            "status": "ok",
             "note": "Solicita-se anexar nova versão legível da pesquisa mercadológica, com melhor qualidade de imagem, tendo em vista que o documento apresentado está majoritariamente ilegível e dificulta a conferência dos produtos, preços, condições de pagamento, datas das consultas e links completos. Solicita-se, ainda, anexar planilha com a memória de cálculo de cada item, identificando as três cotações utilizadas, a soma dos preços, a divisão por três e a média aritmética resultante, com referência aos respectivos comprovantes. A média apurada deve corresponder ao valor unitário registrado no Plano de Aplicação Detalhado.",
             "document": "",
             "url": "",
-            "at": "2026-10-06T16:07:40.809Z",
+            "at": "2026-10-22T17:52:14.967Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
@@ -19883,11 +20090,11 @@ window.PROFOR_PUBLIC_DATA = {
             }
           },
           "17408761": {
-            "status": "diligencia",
+            "status": "ok",
             "note": "Solicita-se anexar nova versão legível da pesquisa mercadológica, com melhor qualidade de imagem, tendo em vista que o documento apresentado está majoritariamente ilegível e dificulta a conferência dos produtos, preços, condições de pagamento, datas das consultas e links completos. Solicita-se, ainda, anexar planilha com a memória de cálculo de cada item, identificando as três cotações utilizadas, a soma dos preços, a divisão por três e a média aritmética resultante, com referência aos respectivos comprovantes. A média apurada deve corresponder ao valor unitário registrado no Plano de Aplicação Detalhado.",
             "document": "",
             "url": "",
-            "at": "2026-10-06T16:07:40.798Z",
+            "at": "2026-10-22T17:52:14.968Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
@@ -19897,11 +20104,11 @@ window.PROFOR_PUBLIC_DATA = {
             }
           },
           "17408779": {
-            "status": "diligencia",
+            "status": "ok",
             "note": "Solicita-se anexar nova versão legível da pesquisa mercadológica, com melhor qualidade de imagem, tendo em vista que o documento apresentado está majoritariamente ilegível e dificulta a conferência dos produtos, preços, condições de pagamento, datas das consultas e links completos. Solicita-se, ainda, anexar planilha com a memória de cálculo de cada item, identificando as três cotações utilizadas, a soma dos preços, a divisão por três e a média aritmética resultante, com referência aos respectivos comprovantes. A média apurada deve corresponder ao valor unitário registrado no Plano de Aplicação Detalhado.",
             "document": "",
             "url": "",
-            "at": "2026-10-06T16:07:40.792Z",
+            "at": "2026-10-22T17:52:14.968Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
@@ -19921,14 +20128,24 @@ window.PROFOR_PUBLIC_DATA = {
           "communication": "2026-10-06",
           "science": "",
           "response": "",
-          "status": "aberta",
+          "status": "baixada",
           "note": "",
-          "at": "2026-10-06T16:07:40.793Z",
+          "at": "2026-10-22T17:52:14.968Z",
           "base": "2026-10-16",
           "due": "2026-10-16",
           "automaticDeadline": true,
           "confirmed": false,
-          "calendarNote": ""
+          "calendarNote": "",
+          "closedByReview": {
+            "proposalId": "2243920",
+            "group": "pad",
+            "item": "17408779",
+            "ref": "pad:17408779",
+            "at": "2026-10-22T17:52:14.968Z",
+            "reason": "Encerrada por confirmação de conformidade do requisito",
+            "actor": "Usuário local",
+            "confirmedBy": "Usuário local"
+          }
         },
         {
           "id": "af182ea0-9311-4071-a7fa-1591015192d6",
@@ -19938,14 +20155,24 @@ window.PROFOR_PUBLIC_DATA = {
           "communication": "2026-10-06",
           "science": "",
           "response": "",
-          "status": "aberta",
+          "status": "baixada",
           "note": "",
-          "at": "2026-10-06T16:07:40.795Z",
+          "at": "2026-10-22T17:52:14.969Z",
           "base": "2026-10-16",
           "due": "2026-10-16",
           "automaticDeadline": true,
           "confirmed": false,
-          "calendarNote": ""
+          "calendarNote": "",
+          "closedByReview": {
+            "proposalId": "2243920",
+            "group": "pad",
+            "item": "17408695",
+            "ref": "pad:17408695",
+            "at": "2026-10-22T17:52:14.969Z",
+            "reason": "Encerrada por confirmação de conformidade do requisito",
+            "actor": "Usuário local",
+            "confirmedBy": "Usuário local"
+          }
         },
         {
           "id": "7ba549c4-7101-4d49-bca6-0bcd4ba804a6",
@@ -19955,14 +20182,24 @@ window.PROFOR_PUBLIC_DATA = {
           "communication": "2026-10-06",
           "science": "",
           "response": "",
-          "status": "aberta",
+          "status": "baixada",
           "note": "",
-          "at": "2026-10-06T16:07:40.797Z",
+          "at": "2026-10-22T17:52:14.968Z",
           "base": "2026-10-16",
           "due": "2026-10-16",
           "automaticDeadline": true,
           "confirmed": false,
-          "calendarNote": ""
+          "calendarNote": "",
+          "closedByReview": {
+            "proposalId": "2243920",
+            "group": "pad",
+            "item": "17408693",
+            "ref": "pad:17408693",
+            "at": "2026-10-22T17:52:14.968Z",
+            "reason": "Encerrada por confirmação de conformidade do requisito",
+            "actor": "Usuário local",
+            "confirmedBy": "Usuário local"
+          }
         },
         {
           "id": "f8668634-30c9-4a73-886f-69c71c319836",
@@ -19972,14 +20209,24 @@ window.PROFOR_PUBLIC_DATA = {
           "communication": "2026-10-06",
           "science": "",
           "response": "",
-          "status": "aberta",
+          "status": "baixada",
           "note": "",
-          "at": "2026-10-06T16:07:40.798Z",
+          "at": "2026-10-22T17:52:14.968Z",
           "base": "2026-10-16",
           "due": "2026-10-16",
           "automaticDeadline": true,
           "confirmed": false,
-          "calendarNote": ""
+          "calendarNote": "",
+          "closedByReview": {
+            "proposalId": "2243920",
+            "group": "pad",
+            "item": "17408761",
+            "ref": "pad:17408761",
+            "at": "2026-10-22T17:52:14.968Z",
+            "reason": "Encerrada por confirmação de conformidade do requisito",
+            "actor": "Usuário local",
+            "confirmedBy": "Usuário local"
+          }
         },
         {
           "id": "94f686e9-f26b-48b8-afd9-27a5dc6d76e8",
@@ -19989,14 +20236,24 @@ window.PROFOR_PUBLIC_DATA = {
           "communication": "2026-10-06",
           "science": "",
           "response": "",
-          "status": "aberta",
+          "status": "baixada",
           "note": "",
-          "at": "2026-10-06T16:07:40.799Z",
+          "at": "2026-10-22T17:52:14.969Z",
           "base": "2026-10-16",
           "due": "2026-10-16",
           "automaticDeadline": true,
           "confirmed": false,
-          "calendarNote": ""
+          "calendarNote": "",
+          "closedByReview": {
+            "proposalId": "2243920",
+            "group": "pad",
+            "item": "17408698",
+            "ref": "pad:17408698",
+            "at": "2026-10-22T17:52:14.969Z",
+            "reason": "Encerrada por confirmação de conformidade do requisito",
+            "actor": "Usuário local",
+            "confirmedBy": "Usuário local"
+          }
         },
         {
           "id": "829b5a21-efbd-4109-abd9-fc3a10c0cd68",
@@ -20006,14 +20263,24 @@ window.PROFOR_PUBLIC_DATA = {
           "communication": "2026-10-06",
           "science": "",
           "response": "",
-          "status": "aberta",
+          "status": "baixada",
           "note": "",
-          "at": "2026-10-06T16:07:40.801Z",
+          "at": "2026-10-22T17:52:14.969Z",
           "base": "2026-10-16",
           "due": "2026-10-16",
           "automaticDeadline": true,
           "confirmed": false,
-          "calendarNote": ""
+          "calendarNote": "",
+          "closedByReview": {
+            "proposalId": "2243920",
+            "group": "pad",
+            "item": "17408710",
+            "ref": "pad:17408710",
+            "at": "2026-10-22T17:52:14.969Z",
+            "reason": "Encerrada por confirmação de conformidade do requisito",
+            "actor": "Usuário local",
+            "confirmedBy": "Usuário local"
+          }
         },
         {
           "id": "6fe203a1-0477-4746-95cb-5bc9ef490597",
@@ -20023,14 +20290,24 @@ window.PROFOR_PUBLIC_DATA = {
           "communication": "2026-10-06",
           "science": "",
           "response": "",
-          "status": "aberta",
+          "status": "baixada",
           "note": "",
-          "at": "2026-10-06T16:07:40.802Z",
+          "at": "2026-10-22T17:52:14.969Z",
           "base": "2026-10-16",
           "due": "2026-10-16",
           "automaticDeadline": true,
           "confirmed": false,
-          "calendarNote": ""
+          "calendarNote": "",
+          "closedByReview": {
+            "proposalId": "2243920",
+            "group": "pad",
+            "item": "17408711",
+            "ref": "pad:17408711",
+            "at": "2026-10-22T17:52:14.969Z",
+            "reason": "Encerrada por confirmação de conformidade do requisito",
+            "actor": "Usuário local",
+            "confirmedBy": "Usuário local"
+          }
         },
         {
           "id": "77858d2f-3518-4d87-b3f4-5e56619bfc0f",
@@ -20040,14 +20317,24 @@ window.PROFOR_PUBLIC_DATA = {
           "communication": "2026-10-06",
           "science": "",
           "response": "",
-          "status": "aberta",
+          "status": "baixada",
           "note": "",
-          "at": "2026-10-06T16:07:40.804Z",
+          "at": "2026-10-22T17:52:14.969Z",
           "base": "2026-10-16",
           "due": "2026-10-16",
           "automaticDeadline": true,
           "confirmed": false,
-          "calendarNote": ""
+          "calendarNote": "",
+          "closedByReview": {
+            "proposalId": "2243920",
+            "group": "pad",
+            "item": "17408701",
+            "ref": "pad:17408701",
+            "at": "2026-10-22T17:52:14.969Z",
+            "reason": "Encerrada por confirmação de conformidade do requisito",
+            "actor": "Usuário local",
+            "confirmedBy": "Usuário local"
+          }
         },
         {
           "id": "0b1332c6-5bfd-47fc-88c4-229df0295de3",
@@ -20057,14 +20344,24 @@ window.PROFOR_PUBLIC_DATA = {
           "communication": "2026-10-06",
           "science": "",
           "response": "",
-          "status": "aberta",
+          "status": "baixada",
           "note": "",
-          "at": "2026-10-06T16:07:40.806Z",
+          "at": "2026-10-22T17:52:14.969Z",
           "base": "2026-10-16",
           "due": "2026-10-16",
           "automaticDeadline": true,
           "confirmed": false,
-          "calendarNote": ""
+          "calendarNote": "",
+          "closedByReview": {
+            "proposalId": "2243920",
+            "group": "pad",
+            "item": "17408704",
+            "ref": "pad:17408704",
+            "at": "2026-10-22T17:52:14.969Z",
+            "reason": "Encerrada por confirmação de conformidade do requisito",
+            "actor": "Usuário local",
+            "confirmedBy": "Usuário local"
+          }
         },
         {
           "id": "2232474c-a63b-4007-94a5-30d0217247a0",
@@ -20074,14 +20371,24 @@ window.PROFOR_PUBLIC_DATA = {
           "communication": "2026-10-06",
           "science": "",
           "response": "",
-          "status": "aberta",
+          "status": "baixada",
           "note": "",
-          "at": "2026-10-06T16:07:40.808Z",
+          "at": "2026-10-22T17:52:14.968Z",
           "base": "2026-10-16",
           "due": "2026-10-16",
           "automaticDeadline": true,
           "confirmed": false,
-          "calendarNote": ""
+          "calendarNote": "",
+          "closedByReview": {
+            "proposalId": "2243920",
+            "group": "pad",
+            "item": "17408708",
+            "ref": "pad:17408708",
+            "at": "2026-10-22T17:52:14.968Z",
+            "reason": "Encerrada por confirmação de conformidade do requisito",
+            "actor": "Usuário local",
+            "confirmedBy": "Usuário local"
+          }
         },
         {
           "id": "e28347a6-f735-4db5-af3f-9b9de8138628",
@@ -20091,25 +20398,46 @@ window.PROFOR_PUBLIC_DATA = {
           "communication": "2026-10-06",
           "science": "",
           "response": "",
-          "status": "aberta",
+          "status": "baixada",
           "note": "",
-          "at": "2026-10-06T16:07:40.809Z",
+          "at": "2026-10-22T17:52:14.968Z",
           "base": "2026-10-16",
           "due": "2026-10-16",
           "automaticDeadline": true,
           "confirmed": false,
-          "calendarNote": ""
+          "calendarNote": "",
+          "closedByReview": {
+            "proposalId": "2243920",
+            "group": "pad",
+            "item": "17408758",
+            "ref": "pad:17408758",
+            "at": "2026-10-22T17:52:14.968Z",
+            "reason": "Encerrada por confirmação de conformidade do requisito",
+            "actor": "Usuário local",
+            "confirmedBy": "Usuário local"
+          }
         }
       ],
       "ouvidoria": {
-        "status": "na",
+        "status": "instituida",
         "signature": "",
         "url": "",
         "note": "",
         "clause": false
       },
-      "falaBR": "na",
-      "conclusion": null,
+      "falaBR": "aderido",
+      "conclusion": {
+        "result": "favoravel",
+        "note": "aprovado",
+        "reference": "aprovado",
+        "actor": "Usuário local",
+        "at": "2026-10-22T18:05:19.134Z",
+        "evidence": {
+          "version": 1,
+          "fingerprint": "fnv64-v1:092a7c45bc9a7063"
+        },
+        "operationId": "7cfceb14-90bb-41d1-a47e-cc374b6d65ae"
+      },
       "history": [
         {
           "at": "2026-09-16T17:01:42.376Z",
@@ -23581,10 +23909,1774 @@ window.PROFOR_PUBLIC_DATA = {
           "after": {
             "at": "2026-10-20T11:28:42.847Z"
           }
+        },
+        {
+          "at": "2026-10-22T14:38:40.048Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Usuário local",
+          "before": {
+            "at": "2026-10-20T11:28:42.847Z"
+          },
+          "after": {
+            "at": "2026-10-22T14:38:40.048Z"
+          }
+        },
+        {
+          "at": "2026-10-22T15:56:39.957Z",
+          "event": "Avaliação: merito / objeto",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T15:56:39.956Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:objeto",
+              "fingerprint": "fnv64-v1:6908412cf4c08074"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T15:56:39.957Z",
+          "event": "Avaliação: merito / justificativa",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T15:56:39.957Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:justificativa",
+              "fingerprint": "fnv64-v1:be07da3e412eed26"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T15:56:39.957Z",
+          "event": "Avaliação: merito / publicoAlvo",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T15:56:39.957Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:publicoAlvo",
+              "fingerprint": "fnv64-v1:5ada4878c57e264f"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T15:56:39.958Z",
+          "event": "Avaliação: merito / problema",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T15:56:39.957Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:problema",
+              "fingerprint": "fnv64-v1:8506bf4078b9cae4"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T15:56:39.958Z",
+          "event": "Avaliação: merito / resultados",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T15:56:39.958Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:resultados",
+              "fingerprint": "fnv64-v1:c9242c851cb6ade5"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T15:56:39.958Z",
+          "event": "Avaliação: merito / destinacao",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T15:56:39.958Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:destinacao",
+              "fingerprint": "fnv64-v1:dd4d5ef5cdc22353"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T15:56:39.958Z",
+          "event": "Avaliação: merito / objetivos",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T15:56:39.958Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:objetivos",
+              "fingerprint": "fnv64-v1:07954b2f151157bf"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T15:56:39.958Z",
+          "event": "Avaliação: merito / capacidade",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T15:56:39.958Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:capacidade",
+              "fingerprint": "fnv64-v1:e948683787eebb55"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T15:57:23.658Z",
+          "event": "Informações institucionais atualizadas",
+          "actor": "Usuário local",
+          "before": {
+            "ouvidoria": {
+              "status": "na",
+              "signature": "",
+              "url": "",
+              "note": "",
+              "clause": false
+            },
+            "falaBR": "na"
+          },
+          "after": {
+            "ouvidoria": {
+              "status": "instituida",
+              "signature": "",
+              "url": "",
+              "note": "",
+              "clause": false
+            },
+            "falaBR": "na"
+          }
+        },
+        {
+          "at": "2026-10-22T15:57:23.659Z",
+          "event": "Avaliação: merito / ouvidoriaInstituida",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T15:57:23.658Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:ouvidoriaInstituida",
+              "fingerprint": "fnv64-v1:1335379bb2cd68e8"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T16:04:31.743Z",
+          "event": "Informações institucionais atualizadas",
+          "actor": "Usuário local",
+          "before": {
+            "ouvidoria": {
+              "status": "instituida",
+              "signature": "",
+              "url": "",
+              "note": "",
+              "clause": false
+            },
+            "falaBR": "na"
+          },
+          "after": {
+            "ouvidoria": {
+              "status": "instituida",
+              "signature": "",
+              "url": "",
+              "note": "",
+              "clause": false
+            },
+            "falaBR": "aderido"
+          }
+        },
+        {
+          "at": "2026-10-22T16:04:31.743Z",
+          "event": "Avaliação: merito / falaBRAdesao",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T16:04:31.743Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:falaBRAdesao",
+              "fingerprint": "fnv64-v1:004c4d5a1ab27921"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T17:52:14.967Z",
+          "event": "Avaliação: pad / 17408758",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "Solicita-se anexar nova versão legível da pesquisa mercadológica, com melhor qualidade de imagem, tendo em vista que o documento apresentado está majoritariamente ilegível e dificulta a conferência dos produtos, preços, condições de pagamento, datas das consultas e links completos. Solicita-se, ainda, anexar planilha com a memória de cálculo de cada item, identificando as três cotações utilizadas, a soma dos preços, a divisão por três e a média aritmética resultante, com referência aos respectivos comprovantes. A média apurada deve corresponder ao valor unitário registrado no Plano de Aplicação Detalhado.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-06T16:07:40.809Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17408758",
+              "fingerprint": "fnv64-v1:4098632a73c82901"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Solicita-se anexar nova versão legível da pesquisa mercadológica, com melhor qualidade de imagem, tendo em vista que o documento apresentado está majoritariamente ilegível e dificulta a conferência dos produtos, preços, condições de pagamento, datas das consultas e links completos. Solicita-se, ainda, anexar planilha com a memória de cálculo de cada item, identificando as três cotações utilizadas, a soma dos preços, a divisão por três e a média aritmética resultante, com referência aos respectivos comprovantes. A média apurada deve corresponder ao valor unitário registrado no Plano de Aplicação Detalhado.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T17:52:14.967Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17408758",
+              "fingerprint": "fnv64-v1:4098632a73c82901"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T17:52:14.968Z",
+          "event": "Diligência encerrada por atendimento do requisito",
+          "actor": "Usuário local",
+          "before": {
+            "id": "e28347a6-f735-4db5-af3f-9b9de8138628",
+            "ref": "pad:17408758",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Solicita-se anexar nova versão legível da pesquisa mercadológica, com melhor qualidade de imagem, tendo em vista que o documento apresentado está majoritariamente ilegível e dificulta a conferência dos produtos, preços, condições de pagamento, datas das consultas e links completos. Solicita-se, ainda, anexar planilha com a memória de cálculo de cada item, identificando as três cotações utilizadas, a soma dos preços, a divisão por três e a média aritmética resultante, com referência aos respectivos comprovantes. A média apurada deve corresponder ao valor unitário registrado no Plano de Aplicação Detalhado.",
+            "communication": "2026-10-06",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-06T16:07:40.809Z",
+            "base": "2026-10-16",
+            "due": "2026-10-16",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          },
+          "after": {
+            "id": "e28347a6-f735-4db5-af3f-9b9de8138628",
+            "ref": "pad:17408758",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Solicita-se anexar nova versão legível da pesquisa mercadológica, com melhor qualidade de imagem, tendo em vista que o documento apresentado está majoritariamente ilegível e dificulta a conferência dos produtos, preços, condições de pagamento, datas das consultas e links completos. Solicita-se, ainda, anexar planilha com a memória de cálculo de cada item, identificando as três cotações utilizadas, a soma dos preços, a divisão por três e a média aritmética resultante, com referência aos respectivos comprovantes. A média apurada deve corresponder ao valor unitário registrado no Plano de Aplicação Detalhado.",
+            "communication": "2026-10-06",
+            "science": "",
+            "response": "",
+            "status": "baixada",
+            "note": "",
+            "at": "2026-10-22T17:52:14.968Z",
+            "base": "2026-10-16",
+            "due": "2026-10-16",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": "",
+            "closedByReview": {
+              "proposalId": "2243920",
+              "group": "pad",
+              "item": "17408758",
+              "ref": "pad:17408758",
+              "at": "2026-10-22T17:52:14.968Z",
+              "reason": "Encerrada por confirmação de conformidade do requisito",
+              "actor": "Usuário local",
+              "confirmedBy": "Usuário local"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T17:52:14.968Z",
+          "event": "Avaliação: pad / 17408761",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "Solicita-se anexar nova versão legível da pesquisa mercadológica, com melhor qualidade de imagem, tendo em vista que o documento apresentado está majoritariamente ilegível e dificulta a conferência dos produtos, preços, condições de pagamento, datas das consultas e links completos. Solicita-se, ainda, anexar planilha com a memória de cálculo de cada item, identificando as três cotações utilizadas, a soma dos preços, a divisão por três e a média aritmética resultante, com referência aos respectivos comprovantes. A média apurada deve corresponder ao valor unitário registrado no Plano de Aplicação Detalhado.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-06T16:07:40.798Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17408761",
+              "fingerprint": "fnv64-v1:fa85f4adc9eea67b"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Solicita-se anexar nova versão legível da pesquisa mercadológica, com melhor qualidade de imagem, tendo em vista que o documento apresentado está majoritariamente ilegível e dificulta a conferência dos produtos, preços, condições de pagamento, datas das consultas e links completos. Solicita-se, ainda, anexar planilha com a memória de cálculo de cada item, identificando as três cotações utilizadas, a soma dos preços, a divisão por três e a média aritmética resultante, com referência aos respectivos comprovantes. A média apurada deve corresponder ao valor unitário registrado no Plano de Aplicação Detalhado.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T17:52:14.968Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17408761",
+              "fingerprint": "fnv64-v1:fa85f4adc9eea67b"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T17:52:14.968Z",
+          "event": "Diligência encerrada por atendimento do requisito",
+          "actor": "Usuário local",
+          "before": {
+            "id": "f8668634-30c9-4a73-886f-69c71c319836",
+            "ref": "pad:17408761",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Solicita-se anexar nova versão legível da pesquisa mercadológica, com melhor qualidade de imagem, tendo em vista que o documento apresentado está majoritariamente ilegível e dificulta a conferência dos produtos, preços, condições de pagamento, datas das consultas e links completos. Solicita-se, ainda, anexar planilha com a memória de cálculo de cada item, identificando as três cotações utilizadas, a soma dos preços, a divisão por três e a média aritmética resultante, com referência aos respectivos comprovantes. A média apurada deve corresponder ao valor unitário registrado no Plano de Aplicação Detalhado.",
+            "communication": "2026-10-06",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-06T16:07:40.798Z",
+            "base": "2026-10-16",
+            "due": "2026-10-16",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          },
+          "after": {
+            "id": "f8668634-30c9-4a73-886f-69c71c319836",
+            "ref": "pad:17408761",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Solicita-se anexar nova versão legível da pesquisa mercadológica, com melhor qualidade de imagem, tendo em vista que o documento apresentado está majoritariamente ilegível e dificulta a conferência dos produtos, preços, condições de pagamento, datas das consultas e links completos. Solicita-se, ainda, anexar planilha com a memória de cálculo de cada item, identificando as três cotações utilizadas, a soma dos preços, a divisão por três e a média aritmética resultante, com referência aos respectivos comprovantes. A média apurada deve corresponder ao valor unitário registrado no Plano de Aplicação Detalhado.",
+            "communication": "2026-10-06",
+            "science": "",
+            "response": "",
+            "status": "baixada",
+            "note": "",
+            "at": "2026-10-22T17:52:14.968Z",
+            "base": "2026-10-16",
+            "due": "2026-10-16",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": "",
+            "closedByReview": {
+              "proposalId": "2243920",
+              "group": "pad",
+              "item": "17408761",
+              "ref": "pad:17408761",
+              "at": "2026-10-22T17:52:14.968Z",
+              "reason": "Encerrada por confirmação de conformidade do requisito",
+              "actor": "Usuário local",
+              "confirmedBy": "Usuário local"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T17:52:14.968Z",
+          "event": "Avaliação: pad / 17408693",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "Solicita-se anexar nova versão legível da pesquisa mercadológica, com melhor qualidade de imagem, tendo em vista que o documento apresentado está majoritariamente ilegível e dificulta a conferência dos produtos, preços, condições de pagamento, datas das consultas e links completos. Solicita-se, ainda, anexar planilha com a memória de cálculo de cada item, identificando as três cotações utilizadas, a soma dos preços, a divisão por três e a média aritmética resultante, com referência aos respectivos comprovantes. A média apurada deve corresponder ao valor unitário registrado no Plano de Aplicação Detalhado.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-06T16:07:40.797Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17408693",
+              "fingerprint": "fnv64-v1:8f4a838cc83ad89d"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Solicita-se anexar nova versão legível da pesquisa mercadológica, com melhor qualidade de imagem, tendo em vista que o documento apresentado está majoritariamente ilegível e dificulta a conferência dos produtos, preços, condições de pagamento, datas das consultas e links completos. Solicita-se, ainda, anexar planilha com a memória de cálculo de cada item, identificando as três cotações utilizadas, a soma dos preços, a divisão por três e a média aritmética resultante, com referência aos respectivos comprovantes. A média apurada deve corresponder ao valor unitário registrado no Plano de Aplicação Detalhado.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T17:52:14.968Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17408693",
+              "fingerprint": "fnv64-v1:8f4a838cc83ad89d"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T17:52:14.968Z",
+          "event": "Diligência encerrada por atendimento do requisito",
+          "actor": "Usuário local",
+          "before": {
+            "id": "7ba549c4-7101-4d49-bca6-0bcd4ba804a6",
+            "ref": "pad:17408693",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Solicita-se anexar nova versão legível da pesquisa mercadológica, com melhor qualidade de imagem, tendo em vista que o documento apresentado está majoritariamente ilegível e dificulta a conferência dos produtos, preços, condições de pagamento, datas das consultas e links completos. Solicita-se, ainda, anexar planilha com a memória de cálculo de cada item, identificando as três cotações utilizadas, a soma dos preços, a divisão por três e a média aritmética resultante, com referência aos respectivos comprovantes. A média apurada deve corresponder ao valor unitário registrado no Plano de Aplicação Detalhado.",
+            "communication": "2026-10-06",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-06T16:07:40.797Z",
+            "base": "2026-10-16",
+            "due": "2026-10-16",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          },
+          "after": {
+            "id": "7ba549c4-7101-4d49-bca6-0bcd4ba804a6",
+            "ref": "pad:17408693",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Solicita-se anexar nova versão legível da pesquisa mercadológica, com melhor qualidade de imagem, tendo em vista que o documento apresentado está majoritariamente ilegível e dificulta a conferência dos produtos, preços, condições de pagamento, datas das consultas e links completos. Solicita-se, ainda, anexar planilha com a memória de cálculo de cada item, identificando as três cotações utilizadas, a soma dos preços, a divisão por três e a média aritmética resultante, com referência aos respectivos comprovantes. A média apurada deve corresponder ao valor unitário registrado no Plano de Aplicação Detalhado.",
+            "communication": "2026-10-06",
+            "science": "",
+            "response": "",
+            "status": "baixada",
+            "note": "",
+            "at": "2026-10-22T17:52:14.968Z",
+            "base": "2026-10-16",
+            "due": "2026-10-16",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": "",
+            "closedByReview": {
+              "proposalId": "2243920",
+              "group": "pad",
+              "item": "17408693",
+              "ref": "pad:17408693",
+              "at": "2026-10-22T17:52:14.968Z",
+              "reason": "Encerrada por confirmação de conformidade do requisito",
+              "actor": "Usuário local",
+              "confirmedBy": "Usuário local"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T17:52:14.968Z",
+          "event": "Avaliação: pad / 17408779",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "Solicita-se anexar nova versão legível da pesquisa mercadológica, com melhor qualidade de imagem, tendo em vista que o documento apresentado está majoritariamente ilegível e dificulta a conferência dos produtos, preços, condições de pagamento, datas das consultas e links completos. Solicita-se, ainda, anexar planilha com a memória de cálculo de cada item, identificando as três cotações utilizadas, a soma dos preços, a divisão por três e a média aritmética resultante, com referência aos respectivos comprovantes. A média apurada deve corresponder ao valor unitário registrado no Plano de Aplicação Detalhado.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-06T16:07:40.792Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17408779",
+              "fingerprint": "fnv64-v1:a785517572a33868"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Solicita-se anexar nova versão legível da pesquisa mercadológica, com melhor qualidade de imagem, tendo em vista que o documento apresentado está majoritariamente ilegível e dificulta a conferência dos produtos, preços, condições de pagamento, datas das consultas e links completos. Solicita-se, ainda, anexar planilha com a memória de cálculo de cada item, identificando as três cotações utilizadas, a soma dos preços, a divisão por três e a média aritmética resultante, com referência aos respectivos comprovantes. A média apurada deve corresponder ao valor unitário registrado no Plano de Aplicação Detalhado.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T17:52:14.968Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17408779",
+              "fingerprint": "fnv64-v1:a785517572a33868"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T17:52:14.968Z",
+          "event": "Diligência encerrada por atendimento do requisito",
+          "actor": "Usuário local",
+          "before": {
+            "id": "ccc65011-9ac0-44bc-8442-2b24d7535a18",
+            "ref": "pad:17408779",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Solicita-se anexar nova versão legível da pesquisa mercadológica, com melhor qualidade de imagem, tendo em vista que o documento apresentado está majoritariamente ilegível e dificulta a conferência dos produtos, preços, condições de pagamento, datas das consultas e links completos. Solicita-se, ainda, anexar planilha com a memória de cálculo de cada item, identificando as três cotações utilizadas, a soma dos preços, a divisão por três e a média aritmética resultante, com referência aos respectivos comprovantes. A média apurada deve corresponder ao valor unitário registrado no Plano de Aplicação Detalhado.",
+            "communication": "2026-10-06",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-06T16:07:40.793Z",
+            "base": "2026-10-16",
+            "due": "2026-10-16",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          },
+          "after": {
+            "id": "ccc65011-9ac0-44bc-8442-2b24d7535a18",
+            "ref": "pad:17408779",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Solicita-se anexar nova versão legível da pesquisa mercadológica, com melhor qualidade de imagem, tendo em vista que o documento apresentado está majoritariamente ilegível e dificulta a conferência dos produtos, preços, condições de pagamento, datas das consultas e links completos. Solicita-se, ainda, anexar planilha com a memória de cálculo de cada item, identificando as três cotações utilizadas, a soma dos preços, a divisão por três e a média aritmética resultante, com referência aos respectivos comprovantes. A média apurada deve corresponder ao valor unitário registrado no Plano de Aplicação Detalhado.",
+            "communication": "2026-10-06",
+            "science": "",
+            "response": "",
+            "status": "baixada",
+            "note": "",
+            "at": "2026-10-22T17:52:14.968Z",
+            "base": "2026-10-16",
+            "due": "2026-10-16",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": "",
+            "closedByReview": {
+              "proposalId": "2243920",
+              "group": "pad",
+              "item": "17408779",
+              "ref": "pad:17408779",
+              "at": "2026-10-22T17:52:14.968Z",
+              "reason": "Encerrada por confirmação de conformidade do requisito",
+              "actor": "Usuário local",
+              "confirmedBy": "Usuário local"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T17:52:14.968Z",
+          "event": "Avaliação: pad / 17408708",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "Solicita-se anexar nova versão legível da pesquisa mercadológica, com melhor qualidade de imagem, tendo em vista que o documento apresentado está majoritariamente ilegível e dificulta a conferência dos produtos, preços, condições de pagamento, datas das consultas e links completos. Solicita-se, ainda, anexar planilha com a memória de cálculo de cada item, identificando as três cotações utilizadas, a soma dos preços, a divisão por três e a média aritmética resultante, com referência aos respectivos comprovantes. A média apurada deve corresponder ao valor unitário registrado no Plano de Aplicação Detalhado.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-06T16:07:40.808Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17408708",
+              "fingerprint": "fnv64-v1:644a73aa829cfce7"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Solicita-se anexar nova versão legível da pesquisa mercadológica, com melhor qualidade de imagem, tendo em vista que o documento apresentado está majoritariamente ilegível e dificulta a conferência dos produtos, preços, condições de pagamento, datas das consultas e links completos. Solicita-se, ainda, anexar planilha com a memória de cálculo de cada item, identificando as três cotações utilizadas, a soma dos preços, a divisão por três e a média aritmética resultante, com referência aos respectivos comprovantes. A média apurada deve corresponder ao valor unitário registrado no Plano de Aplicação Detalhado.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T17:52:14.968Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17408708",
+              "fingerprint": "fnv64-v1:644a73aa829cfce7"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T17:52:14.968Z",
+          "event": "Diligência encerrada por atendimento do requisito",
+          "actor": "Usuário local",
+          "before": {
+            "id": "2232474c-a63b-4007-94a5-30d0217247a0",
+            "ref": "pad:17408708",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Solicita-se anexar nova versão legível da pesquisa mercadológica, com melhor qualidade de imagem, tendo em vista que o documento apresentado está majoritariamente ilegível e dificulta a conferência dos produtos, preços, condições de pagamento, datas das consultas e links completos. Solicita-se, ainda, anexar planilha com a memória de cálculo de cada item, identificando as três cotações utilizadas, a soma dos preços, a divisão por três e a média aritmética resultante, com referência aos respectivos comprovantes. A média apurada deve corresponder ao valor unitário registrado no Plano de Aplicação Detalhado.",
+            "communication": "2026-10-06",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-06T16:07:40.808Z",
+            "base": "2026-10-16",
+            "due": "2026-10-16",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          },
+          "after": {
+            "id": "2232474c-a63b-4007-94a5-30d0217247a0",
+            "ref": "pad:17408708",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Solicita-se anexar nova versão legível da pesquisa mercadológica, com melhor qualidade de imagem, tendo em vista que o documento apresentado está majoritariamente ilegível e dificulta a conferência dos produtos, preços, condições de pagamento, datas das consultas e links completos. Solicita-se, ainda, anexar planilha com a memória de cálculo de cada item, identificando as três cotações utilizadas, a soma dos preços, a divisão por três e a média aritmética resultante, com referência aos respectivos comprovantes. A média apurada deve corresponder ao valor unitário registrado no Plano de Aplicação Detalhado.",
+            "communication": "2026-10-06",
+            "science": "",
+            "response": "",
+            "status": "baixada",
+            "note": "",
+            "at": "2026-10-22T17:52:14.968Z",
+            "base": "2026-10-16",
+            "due": "2026-10-16",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": "",
+            "closedByReview": {
+              "proposalId": "2243920",
+              "group": "pad",
+              "item": "17408708",
+              "ref": "pad:17408708",
+              "at": "2026-10-22T17:52:14.968Z",
+              "reason": "Encerrada por confirmação de conformidade do requisito",
+              "actor": "Usuário local",
+              "confirmedBy": "Usuário local"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T17:52:14.968Z",
+          "event": "Avaliação: pad / 17408698",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "Solicita-se anexar nova versão legível da pesquisa mercadológica, com melhor qualidade de imagem, tendo em vista que o documento apresentado está majoritariamente ilegível e dificulta a conferência dos produtos, preços, condições de pagamento, datas das consultas e links completos. Solicita-se, ainda, anexar planilha com a memória de cálculo de cada item, identificando as três cotações utilizadas, a soma dos preços, a divisão por três e a média aritmética resultante, com referência aos respectivos comprovantes. A média apurada deve corresponder ao valor unitário registrado no Plano de Aplicação Detalhado.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-06T16:07:40.799Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17408698",
+              "fingerprint": "fnv64-v1:5b420784e5ba8b2a"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Solicita-se anexar nova versão legível da pesquisa mercadológica, com melhor qualidade de imagem, tendo em vista que o documento apresentado está majoritariamente ilegível e dificulta a conferência dos produtos, preços, condições de pagamento, datas das consultas e links completos. Solicita-se, ainda, anexar planilha com a memória de cálculo de cada item, identificando as três cotações utilizadas, a soma dos preços, a divisão por três e a média aritmética resultante, com referência aos respectivos comprovantes. A média apurada deve corresponder ao valor unitário registrado no Plano de Aplicação Detalhado.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T17:52:14.968Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17408698",
+              "fingerprint": "fnv64-v1:5b420784e5ba8b2a"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T17:52:14.969Z",
+          "event": "Diligência encerrada por atendimento do requisito",
+          "actor": "Usuário local",
+          "before": {
+            "id": "94f686e9-f26b-48b8-afd9-27a5dc6d76e8",
+            "ref": "pad:17408698",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Solicita-se anexar nova versão legível da pesquisa mercadológica, com melhor qualidade de imagem, tendo em vista que o documento apresentado está majoritariamente ilegível e dificulta a conferência dos produtos, preços, condições de pagamento, datas das consultas e links completos. Solicita-se, ainda, anexar planilha com a memória de cálculo de cada item, identificando as três cotações utilizadas, a soma dos preços, a divisão por três e a média aritmética resultante, com referência aos respectivos comprovantes. A média apurada deve corresponder ao valor unitário registrado no Plano de Aplicação Detalhado.",
+            "communication": "2026-10-06",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-06T16:07:40.799Z",
+            "base": "2026-10-16",
+            "due": "2026-10-16",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          },
+          "after": {
+            "id": "94f686e9-f26b-48b8-afd9-27a5dc6d76e8",
+            "ref": "pad:17408698",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Solicita-se anexar nova versão legível da pesquisa mercadológica, com melhor qualidade de imagem, tendo em vista que o documento apresentado está majoritariamente ilegível e dificulta a conferência dos produtos, preços, condições de pagamento, datas das consultas e links completos. Solicita-se, ainda, anexar planilha com a memória de cálculo de cada item, identificando as três cotações utilizadas, a soma dos preços, a divisão por três e a média aritmética resultante, com referência aos respectivos comprovantes. A média apurada deve corresponder ao valor unitário registrado no Plano de Aplicação Detalhado.",
+            "communication": "2026-10-06",
+            "science": "",
+            "response": "",
+            "status": "baixada",
+            "note": "",
+            "at": "2026-10-22T17:52:14.969Z",
+            "base": "2026-10-16",
+            "due": "2026-10-16",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": "",
+            "closedByReview": {
+              "proposalId": "2243920",
+              "group": "pad",
+              "item": "17408698",
+              "ref": "pad:17408698",
+              "at": "2026-10-22T17:52:14.969Z",
+              "reason": "Encerrada por confirmação de conformidade do requisito",
+              "actor": "Usuário local",
+              "confirmedBy": "Usuário local"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T17:52:14.969Z",
+          "event": "Avaliação: pad / 17408695",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "Solicita-se anexar nova versão legível da pesquisa mercadológica, com melhor qualidade de imagem, tendo em vista que o documento apresentado está majoritariamente ilegível e dificulta a conferência dos produtos, preços, condições de pagamento, datas das consultas e links completos. Solicita-se, ainda, anexar planilha com a memória de cálculo de cada item, identificando as três cotações utilizadas, a soma dos preços, a divisão por três e a média aritmética resultante, com referência aos respectivos comprovantes. A média apurada deve corresponder ao valor unitário registrado no Plano de Aplicação Detalhado.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-06T16:07:40.795Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17408695",
+              "fingerprint": "fnv64-v1:f09e6e65f765526f"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Solicita-se anexar nova versão legível da pesquisa mercadológica, com melhor qualidade de imagem, tendo em vista que o documento apresentado está majoritariamente ilegível e dificulta a conferência dos produtos, preços, condições de pagamento, datas das consultas e links completos. Solicita-se, ainda, anexar planilha com a memória de cálculo de cada item, identificando as três cotações utilizadas, a soma dos preços, a divisão por três e a média aritmética resultante, com referência aos respectivos comprovantes. A média apurada deve corresponder ao valor unitário registrado no Plano de Aplicação Detalhado.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T17:52:14.969Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17408695",
+              "fingerprint": "fnv64-v1:f09e6e65f765526f"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T17:52:14.969Z",
+          "event": "Diligência encerrada por atendimento do requisito",
+          "actor": "Usuário local",
+          "before": {
+            "id": "af182ea0-9311-4071-a7fa-1591015192d6",
+            "ref": "pad:17408695",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Solicita-se anexar nova versão legível da pesquisa mercadológica, com melhor qualidade de imagem, tendo em vista que o documento apresentado está majoritariamente ilegível e dificulta a conferência dos produtos, preços, condições de pagamento, datas das consultas e links completos. Solicita-se, ainda, anexar planilha com a memória de cálculo de cada item, identificando as três cotações utilizadas, a soma dos preços, a divisão por três e a média aritmética resultante, com referência aos respectivos comprovantes. A média apurada deve corresponder ao valor unitário registrado no Plano de Aplicação Detalhado.",
+            "communication": "2026-10-06",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-06T16:07:40.795Z",
+            "base": "2026-10-16",
+            "due": "2026-10-16",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          },
+          "after": {
+            "id": "af182ea0-9311-4071-a7fa-1591015192d6",
+            "ref": "pad:17408695",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Solicita-se anexar nova versão legível da pesquisa mercadológica, com melhor qualidade de imagem, tendo em vista que o documento apresentado está majoritariamente ilegível e dificulta a conferência dos produtos, preços, condições de pagamento, datas das consultas e links completos. Solicita-se, ainda, anexar planilha com a memória de cálculo de cada item, identificando as três cotações utilizadas, a soma dos preços, a divisão por três e a média aritmética resultante, com referência aos respectivos comprovantes. A média apurada deve corresponder ao valor unitário registrado no Plano de Aplicação Detalhado.",
+            "communication": "2026-10-06",
+            "science": "",
+            "response": "",
+            "status": "baixada",
+            "note": "",
+            "at": "2026-10-22T17:52:14.969Z",
+            "base": "2026-10-16",
+            "due": "2026-10-16",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": "",
+            "closedByReview": {
+              "proposalId": "2243920",
+              "group": "pad",
+              "item": "17408695",
+              "ref": "pad:17408695",
+              "at": "2026-10-22T17:52:14.969Z",
+              "reason": "Encerrada por confirmação de conformidade do requisito",
+              "actor": "Usuário local",
+              "confirmedBy": "Usuário local"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T17:52:14.969Z",
+          "event": "Avaliação: pad / 17408710",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "Solicita-se anexar nova versão legível da pesquisa mercadológica, com melhor qualidade de imagem, tendo em vista que o documento apresentado está majoritariamente ilegível e dificulta a conferência dos produtos, preços, condições de pagamento, datas das consultas e links completos. Solicita-se, ainda, anexar planilha com a memória de cálculo de cada item, identificando as três cotações utilizadas, a soma dos preços, a divisão por três e a média aritmética resultante, com referência aos respectivos comprovantes. A média apurada deve corresponder ao valor unitário registrado no Plano de Aplicação Detalhado.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-06T16:07:40.801Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17408710",
+              "fingerprint": "fnv64-v1:1791b4a3bf87c791"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Solicita-se anexar nova versão legível da pesquisa mercadológica, com melhor qualidade de imagem, tendo em vista que o documento apresentado está majoritariamente ilegível e dificulta a conferência dos produtos, preços, condições de pagamento, datas das consultas e links completos. Solicita-se, ainda, anexar planilha com a memória de cálculo de cada item, identificando as três cotações utilizadas, a soma dos preços, a divisão por três e a média aritmética resultante, com referência aos respectivos comprovantes. A média apurada deve corresponder ao valor unitário registrado no Plano de Aplicação Detalhado.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T17:52:14.969Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17408710",
+              "fingerprint": "fnv64-v1:1791b4a3bf87c791"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T17:52:14.969Z",
+          "event": "Diligência encerrada por atendimento do requisito",
+          "actor": "Usuário local",
+          "before": {
+            "id": "829b5a21-efbd-4109-abd9-fc3a10c0cd68",
+            "ref": "pad:17408710",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Solicita-se anexar nova versão legível da pesquisa mercadológica, com melhor qualidade de imagem, tendo em vista que o documento apresentado está majoritariamente ilegível e dificulta a conferência dos produtos, preços, condições de pagamento, datas das consultas e links completos. Solicita-se, ainda, anexar planilha com a memória de cálculo de cada item, identificando as três cotações utilizadas, a soma dos preços, a divisão por três e a média aritmética resultante, com referência aos respectivos comprovantes. A média apurada deve corresponder ao valor unitário registrado no Plano de Aplicação Detalhado.",
+            "communication": "2026-10-06",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-06T16:07:40.801Z",
+            "base": "2026-10-16",
+            "due": "2026-10-16",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          },
+          "after": {
+            "id": "829b5a21-efbd-4109-abd9-fc3a10c0cd68",
+            "ref": "pad:17408710",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Solicita-se anexar nova versão legível da pesquisa mercadológica, com melhor qualidade de imagem, tendo em vista que o documento apresentado está majoritariamente ilegível e dificulta a conferência dos produtos, preços, condições de pagamento, datas das consultas e links completos. Solicita-se, ainda, anexar planilha com a memória de cálculo de cada item, identificando as três cotações utilizadas, a soma dos preços, a divisão por três e a média aritmética resultante, com referência aos respectivos comprovantes. A média apurada deve corresponder ao valor unitário registrado no Plano de Aplicação Detalhado.",
+            "communication": "2026-10-06",
+            "science": "",
+            "response": "",
+            "status": "baixada",
+            "note": "",
+            "at": "2026-10-22T17:52:14.969Z",
+            "base": "2026-10-16",
+            "due": "2026-10-16",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": "",
+            "closedByReview": {
+              "proposalId": "2243920",
+              "group": "pad",
+              "item": "17408710",
+              "ref": "pad:17408710",
+              "at": "2026-10-22T17:52:14.969Z",
+              "reason": "Encerrada por confirmação de conformidade do requisito",
+              "actor": "Usuário local",
+              "confirmedBy": "Usuário local"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T17:52:14.969Z",
+          "event": "Avaliação: pad / 17408701",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "Solicita-se anexar nova versão legível da pesquisa mercadológica, com melhor qualidade de imagem, tendo em vista que o documento apresentado está majoritariamente ilegível e dificulta a conferência dos produtos, preços, condições de pagamento, datas das consultas e links completos. Solicita-se, ainda, anexar planilha com a memória de cálculo de cada item, identificando as três cotações utilizadas, a soma dos preços, a divisão por três e a média aritmética resultante, com referência aos respectivos comprovantes. A média apurada deve corresponder ao valor unitário registrado no Plano de Aplicação Detalhado.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-06T16:07:40.804Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17408701",
+              "fingerprint": "fnv64-v1:294f3183e22d5d76"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Solicita-se anexar nova versão legível da pesquisa mercadológica, com melhor qualidade de imagem, tendo em vista que o documento apresentado está majoritariamente ilegível e dificulta a conferência dos produtos, preços, condições de pagamento, datas das consultas e links completos. Solicita-se, ainda, anexar planilha com a memória de cálculo de cada item, identificando as três cotações utilizadas, a soma dos preços, a divisão por três e a média aritmética resultante, com referência aos respectivos comprovantes. A média apurada deve corresponder ao valor unitário registrado no Plano de Aplicação Detalhado.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T17:52:14.969Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17408701",
+              "fingerprint": "fnv64-v1:294f3183e22d5d76"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T17:52:14.969Z",
+          "event": "Diligência encerrada por atendimento do requisito",
+          "actor": "Usuário local",
+          "before": {
+            "id": "77858d2f-3518-4d87-b3f4-5e56619bfc0f",
+            "ref": "pad:17408701",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Solicita-se anexar nova versão legível da pesquisa mercadológica, com melhor qualidade de imagem, tendo em vista que o documento apresentado está majoritariamente ilegível e dificulta a conferência dos produtos, preços, condições de pagamento, datas das consultas e links completos. Solicita-se, ainda, anexar planilha com a memória de cálculo de cada item, identificando as três cotações utilizadas, a soma dos preços, a divisão por três e a média aritmética resultante, com referência aos respectivos comprovantes. A média apurada deve corresponder ao valor unitário registrado no Plano de Aplicação Detalhado.",
+            "communication": "2026-10-06",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-06T16:07:40.804Z",
+            "base": "2026-10-16",
+            "due": "2026-10-16",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          },
+          "after": {
+            "id": "77858d2f-3518-4d87-b3f4-5e56619bfc0f",
+            "ref": "pad:17408701",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Solicita-se anexar nova versão legível da pesquisa mercadológica, com melhor qualidade de imagem, tendo em vista que o documento apresentado está majoritariamente ilegível e dificulta a conferência dos produtos, preços, condições de pagamento, datas das consultas e links completos. Solicita-se, ainda, anexar planilha com a memória de cálculo de cada item, identificando as três cotações utilizadas, a soma dos preços, a divisão por três e a média aritmética resultante, com referência aos respectivos comprovantes. A média apurada deve corresponder ao valor unitário registrado no Plano de Aplicação Detalhado.",
+            "communication": "2026-10-06",
+            "science": "",
+            "response": "",
+            "status": "baixada",
+            "note": "",
+            "at": "2026-10-22T17:52:14.969Z",
+            "base": "2026-10-16",
+            "due": "2026-10-16",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": "",
+            "closedByReview": {
+              "proposalId": "2243920",
+              "group": "pad",
+              "item": "17408701",
+              "ref": "pad:17408701",
+              "at": "2026-10-22T17:52:14.969Z",
+              "reason": "Encerrada por confirmação de conformidade do requisito",
+              "actor": "Usuário local",
+              "confirmedBy": "Usuário local"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T17:52:14.969Z",
+          "event": "Avaliação: pad / 17408704",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "Solicita-se anexar nova versão legível da pesquisa mercadológica, com melhor qualidade de imagem, tendo em vista que o documento apresentado está majoritariamente ilegível e dificulta a conferência dos produtos, preços, condições de pagamento, datas das consultas e links completos. Solicita-se, ainda, anexar planilha com a memória de cálculo de cada item, identificando as três cotações utilizadas, a soma dos preços, a divisão por três e a média aritmética resultante, com referência aos respectivos comprovantes. A média apurada deve corresponder ao valor unitário registrado no Plano de Aplicação Detalhado.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-06T16:07:40.806Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17408704",
+              "fingerprint": "fnv64-v1:8b1cd5613212842e"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Solicita-se anexar nova versão legível da pesquisa mercadológica, com melhor qualidade de imagem, tendo em vista que o documento apresentado está majoritariamente ilegível e dificulta a conferência dos produtos, preços, condições de pagamento, datas das consultas e links completos. Solicita-se, ainda, anexar planilha com a memória de cálculo de cada item, identificando as três cotações utilizadas, a soma dos preços, a divisão por três e a média aritmética resultante, com referência aos respectivos comprovantes. A média apurada deve corresponder ao valor unitário registrado no Plano de Aplicação Detalhado.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T17:52:14.969Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17408704",
+              "fingerprint": "fnv64-v1:8b1cd5613212842e"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T17:52:14.969Z",
+          "event": "Diligência encerrada por atendimento do requisito",
+          "actor": "Usuário local",
+          "before": {
+            "id": "0b1332c6-5bfd-47fc-88c4-229df0295de3",
+            "ref": "pad:17408704",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Solicita-se anexar nova versão legível da pesquisa mercadológica, com melhor qualidade de imagem, tendo em vista que o documento apresentado está majoritariamente ilegível e dificulta a conferência dos produtos, preços, condições de pagamento, datas das consultas e links completos. Solicita-se, ainda, anexar planilha com a memória de cálculo de cada item, identificando as três cotações utilizadas, a soma dos preços, a divisão por três e a média aritmética resultante, com referência aos respectivos comprovantes. A média apurada deve corresponder ao valor unitário registrado no Plano de Aplicação Detalhado.",
+            "communication": "2026-10-06",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-06T16:07:40.806Z",
+            "base": "2026-10-16",
+            "due": "2026-10-16",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          },
+          "after": {
+            "id": "0b1332c6-5bfd-47fc-88c4-229df0295de3",
+            "ref": "pad:17408704",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Solicita-se anexar nova versão legível da pesquisa mercadológica, com melhor qualidade de imagem, tendo em vista que o documento apresentado está majoritariamente ilegível e dificulta a conferência dos produtos, preços, condições de pagamento, datas das consultas e links completos. Solicita-se, ainda, anexar planilha com a memória de cálculo de cada item, identificando as três cotações utilizadas, a soma dos preços, a divisão por três e a média aritmética resultante, com referência aos respectivos comprovantes. A média apurada deve corresponder ao valor unitário registrado no Plano de Aplicação Detalhado.",
+            "communication": "2026-10-06",
+            "science": "",
+            "response": "",
+            "status": "baixada",
+            "note": "",
+            "at": "2026-10-22T17:52:14.969Z",
+            "base": "2026-10-16",
+            "due": "2026-10-16",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": "",
+            "closedByReview": {
+              "proposalId": "2243920",
+              "group": "pad",
+              "item": "17408704",
+              "ref": "pad:17408704",
+              "at": "2026-10-22T17:52:14.969Z",
+              "reason": "Encerrada por confirmação de conformidade do requisito",
+              "actor": "Usuário local",
+              "confirmedBy": "Usuário local"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T17:52:14.969Z",
+          "event": "Avaliação: pad / 17408711",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "Solicita-se anexar nova versão legível da pesquisa mercadológica, com melhor qualidade de imagem, tendo em vista que o documento apresentado está majoritariamente ilegível e dificulta a conferência dos produtos, preços, condições de pagamento, datas das consultas e links completos. Solicita-se, ainda, anexar planilha com a memória de cálculo de cada item, identificando as três cotações utilizadas, a soma dos preços, a divisão por três e a média aritmética resultante, com referência aos respectivos comprovantes. A média apurada deve corresponder ao valor unitário registrado no Plano de Aplicação Detalhado.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-06T16:07:40.802Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17408711",
+              "fingerprint": "fnv64-v1:34ab6fcf10c1386d"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Solicita-se anexar nova versão legível da pesquisa mercadológica, com melhor qualidade de imagem, tendo em vista que o documento apresentado está majoritariamente ilegível e dificulta a conferência dos produtos, preços, condições de pagamento, datas das consultas e links completos. Solicita-se, ainda, anexar planilha com a memória de cálculo de cada item, identificando as três cotações utilizadas, a soma dos preços, a divisão por três e a média aritmética resultante, com referência aos respectivos comprovantes. A média apurada deve corresponder ao valor unitário registrado no Plano de Aplicação Detalhado.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T17:52:14.969Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17408711",
+              "fingerprint": "fnv64-v1:34ab6fcf10c1386d"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T17:52:14.969Z",
+          "event": "Diligência encerrada por atendimento do requisito",
+          "actor": "Usuário local",
+          "before": {
+            "id": "6fe203a1-0477-4746-95cb-5bc9ef490597",
+            "ref": "pad:17408711",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Solicita-se anexar nova versão legível da pesquisa mercadológica, com melhor qualidade de imagem, tendo em vista que o documento apresentado está majoritariamente ilegível e dificulta a conferência dos produtos, preços, condições de pagamento, datas das consultas e links completos. Solicita-se, ainda, anexar planilha com a memória de cálculo de cada item, identificando as três cotações utilizadas, a soma dos preços, a divisão por três e a média aritmética resultante, com referência aos respectivos comprovantes. A média apurada deve corresponder ao valor unitário registrado no Plano de Aplicação Detalhado.",
+            "communication": "2026-10-06",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-06T16:07:40.802Z",
+            "base": "2026-10-16",
+            "due": "2026-10-16",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          },
+          "after": {
+            "id": "6fe203a1-0477-4746-95cb-5bc9ef490597",
+            "ref": "pad:17408711",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Solicita-se anexar nova versão legível da pesquisa mercadológica, com melhor qualidade de imagem, tendo em vista que o documento apresentado está majoritariamente ilegível e dificulta a conferência dos produtos, preços, condições de pagamento, datas das consultas e links completos. Solicita-se, ainda, anexar planilha com a memória de cálculo de cada item, identificando as três cotações utilizadas, a soma dos preços, a divisão por três e a média aritmética resultante, com referência aos respectivos comprovantes. A média apurada deve corresponder ao valor unitário registrado no Plano de Aplicação Detalhado.",
+            "communication": "2026-10-06",
+            "science": "",
+            "response": "",
+            "status": "baixada",
+            "note": "",
+            "at": "2026-10-22T17:52:14.969Z",
+            "base": "2026-10-16",
+            "due": "2026-10-16",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": "",
+            "closedByReview": {
+              "proposalId": "2243920",
+              "group": "pad",
+              "item": "17408711",
+              "ref": "pad:17408711",
+              "at": "2026-10-22T17:52:14.969Z",
+              "reason": "Encerrada por confirmação de conformidade do requisito",
+              "actor": "Usuário local",
+              "confirmedBy": "Usuário local"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T17:56:23.999Z",
+          "event": "Avaliação: celebracao / 3",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T17:56:23.999Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:3",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T17:56:23.999Z",
+          "event": "Avaliação: celebracao / 4",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T17:56:23.999Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:4",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T17:56:24.000Z",
+          "event": "Avaliação: celebracao / 5",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T17:56:24.000Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:5",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T17:56:24.001Z",
+          "event": "Avaliação: celebracao / 6",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T17:56:24.000Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:6",
+              "fingerprint": "fnv64-v1:f7a44ec91bf3caa0"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T17:56:24.001Z",
+          "event": "Avaliação: celebracao / 7",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T17:56:24.001Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:7",
+              "fingerprint": "fnv64-v1:a9e75ba13ece4840"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T17:56:24.001Z",
+          "event": "Avaliação: celebracao / 11",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T17:56:24.001Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:11",
+              "fingerprint": "fnv64-v1:e948683787eebb55"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T18:04:06.810Z",
+          "event": "Avaliação: celebracao / 1",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T18:04:06.810Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:1",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T18:04:06.810Z",
+          "event": "Avaliação: celebracao / 1.1",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T18:04:06.810Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:1.1",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T18:04:06.810Z",
+          "event": "Avaliação: celebracao / 8",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T18:04:06.810Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:8",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T18:04:06.810Z",
+          "event": "Avaliação: celebracao / 9",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T18:04:06.810Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:9",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T18:04:06.810Z",
+          "event": "Avaliação: celebracao / 10",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T18:04:06.810Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:10",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T18:04:06.810Z",
+          "event": "Avaliação: celebracao / 12",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T18:04:06.810Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:12",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T18:04:06.810Z",
+          "event": "Avaliação: celebracao / 13",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T18:04:06.810Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:13",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T18:04:06.810Z",
+          "event": "Avaliação: celebracao / 14",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T18:04:06.810Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:14",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T18:04:06.810Z",
+          "event": "Avaliação: celebracao / 15",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T18:04:06.810Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:15",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T18:04:06.810Z",
+          "event": "Avaliação: celebracao / 16",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T18:04:06.810Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:16",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T18:04:06.810Z",
+          "event": "Avaliação: celebracao / 17",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T18:04:06.810Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:17",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T18:04:06.810Z",
+          "event": "Avaliação: celebracao / 18",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T18:04:06.810Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:18",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T18:04:06.810Z",
+          "event": "Avaliação: celebracao / 19",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T18:04:06.810Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:19",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T18:05:19.134Z",
+          "event": "Conclusão da análise técnica registrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "result": "favoravel",
+            "note": "aprovado",
+            "reference": "aprovado",
+            "actor": "Usuário local",
+            "at": "2026-10-22T18:05:19.134Z",
+            "evidence": {
+              "version": 1,
+              "fingerprint": "fnv64-v1:092a7c45bc9a7063"
+            },
+            "operationId": "7cfceb14-90bb-41d1-a47e-cc374b6d65ae"
+          }
         }
       ],
       "textos": {
-        "at": "2026-10-20T11:28:42.847Z",
+        "at": "2026-10-22T14:38:40.048Z",
         "caracterizacao": "A Ouvidoria da SAP/CE constitui instrumento estratégico de participação social, controle institucional e proteção de direitos no âmbito da política penal do Estado do Ceará, atuando como canal de comunicação entre a Administração Penitenciária e pessoas privadas de liberdade, familiares, visitantes, servidores, colaboradores e demais usuários dos serviços públicos.",
         "publicoAlvo": "pessoas privadas de liberdade nas unidades prisionais do Estado do Ceará; familiares de pessoas privadas de liberdade; visitantes das unidades prisionais; servidores e policiais penais; colaboradores e prestadores de serviços vinculados à política penal; • egressos e demais usuários dos serviços penais;cidadãos que necessitem utilizar os canais da Ouvidoria; gestores da SAP/CE, de forma indireta, mediante acesso a informações gerenciais produzidas pela escuta institucional,egresso",
         "problema": "Embora a Ouvidoria da SAP/CE disponha atualmente de infraestrutura física e tecnológica adequada em sua sede, decorrente inclusive dos investimentos de modernização e reaparelhamento realizados anteriormente, permanece identificada insuficiência de infraestrutura tecnológica descentralizada para realização contínua, padronizada e territorialmente abrangente da escuta institucional diretamente nos estabelecimentos prisionais e demais pontos estratégicos da Administração Penitenciária.",
@@ -23597,7 +25689,7 @@ window.PROFOR_PUBLIC_DATA = {
         "version": 1,
         "status": "complete",
         "source": "siconv_plano_aplicacao_detalhado.zip",
-        "at": "2026-10-20T11:25:51.067Z",
+        "at": "2026-10-22T14:35:54.806Z",
         "received": 11,
         "accepted": 11,
         "rejected": 0,
@@ -24265,13 +26357,24 @@ window.PROFOR_PUBLIC_DATA = {
           "after": {
             "at": "2026-10-20T11:28:42.847Z"
           }
+        },
+        {
+          "at": "2026-10-22T14:38:40.048Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Usuário local",
+          "before": {
+            "at": "2026-10-20T11:28:42.847Z"
+          },
+          "after": {
+            "at": "2026-10-22T14:38:40.048Z"
+          }
         }
       ],
       "isDeleted": true,
       "deletedAt": "2026-09-17T10:49:50.262Z",
       "deletedBy": "Usuário local",
       "textos": {
-        "at": "2026-10-20T11:28:42.847Z",
+        "at": "2026-10-22T14:38:40.048Z",
         "caracterizacao": "A proposta alinha-se estritamente ao PROFOR/ONASP ao prever o aparelhamento físico e tecnológico do setor com bens de capital. As aquisições atendem aos parâmetros mínimos de funcionamento, qualificam o tratamento de manifestações, viabilizam a integração à Plataforma Fala.BR, garantem sigilo de dados sensíveis e subsidiam inspeções prisionais técnicas.",
         "publicoAlvo": "A proposta alinha-se estritamente ao PROFOR/ONASP ao prever o aparelhamento físico e tecnológico do setor com bens de capital. As aquisições atendem aos parâmetros mínimos de funcionamento, qualificam o tratamento de manifestações, viabilizam a integração à Plataforma Fala.BR, garantem sigilo de dados sensíveis e subsidiam inspeções prisionais técnicas.",
         "problema": "Déficit de infraestrutura física, mobiliária e tecnológica na Ouvidoria da SEAP/PE, que limita o acolhimento presencial, compromete a celeridade e o sigilo no fluxo de manifestações e restringe a mobilidade técnica para a realização de inspeções nas unidades prisionais.",
@@ -24284,7 +26387,7 @@ window.PROFOR_PUBLIC_DATA = {
         "version": 1,
         "status": "complete",
         "source": "siconv_plano_aplicacao_detalhado.zip",
-        "at": "2026-10-20T11:25:51.067Z",
+        "at": "2026-10-22T14:35:54.806Z",
         "received": 0,
         "accepted": 0,
         "rejected": 0,
@@ -25216,13 +27319,24 @@ window.PROFOR_PUBLIC_DATA = {
           "after": {
             "at": "2026-10-20T11:28:42.847Z"
           }
+        },
+        {
+          "at": "2026-10-22T14:38:40.048Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Usuário local",
+          "before": {
+            "at": "2026-10-20T11:28:42.847Z"
+          },
+          "after": {
+            "at": "2026-10-22T14:38:40.048Z"
+          }
         }
       ],
       "isDeleted": true,
       "deletedAt": "2026-09-17T10:49:52.475Z",
       "deletedBy": "Usuário local",
       "textos": {
-        "at": "2026-10-20T11:28:42.847Z",
+        "at": "2026-10-22T14:38:40.048Z",
         "caracterizacao": "Integração de esforços entre o Ministério da Justiça/SENAPPEN e a SEAP/PE para estruturar a Ouvidoria de Serviços Penais. A cooperação atende às diretrizes do PROFOR/ONASP e do Plano Pena Justa, fortalecendo a governança penitenciária, a fiscalização institucional, a proteção dos direitos humanos e o acesso à justiça no âmbito da execução penal em Pernambuco.",
         "publicoAlvo": "Pessoas privadas de liberdade, seus familiares, operadores do direito, órgãos de controle, servidores do sistema penitenciário e a sociedade civil usuária dos serviços da Ouvidoria da SEAP/PE.",
         "problema": "Déficit de infraestrutura física, mobiliária e tecnológica na Ouvidoria da SEAP/PE, que limita o acolhimento presencial, compromete a celeridade e o sigilo no fluxo de manifestações e restringe a mobilidade técnica para a realização de inspeções nas unidades prisionais.",
@@ -25235,7 +27349,7 @@ window.PROFOR_PUBLIC_DATA = {
         "version": 1,
         "status": "complete",
         "source": "siconv_plano_aplicacao_detalhado.zip",
-        "at": "2026-10-20T11:25:51.067Z",
+        "at": "2026-10-22T14:35:54.806Z",
         "received": 6,
         "accepted": 6,
         "rejected": 0,
@@ -34351,10 +36465,21 @@ window.PROFOR_PUBLIC_DATA = {
           "after": {
             "at": "2026-10-20T11:28:42.847Z"
           }
+        },
+        {
+          "at": "2026-10-22T14:38:40.048Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Usuário local",
+          "before": {
+            "at": "2026-10-20T11:28:42.847Z"
+          },
+          "after": {
+            "at": "2026-10-22T14:38:40.048Z"
+          }
         }
       ],
       "textos": {
-        "at": "2026-10-20T11:28:42.847Z",
+        "at": "2026-10-22T14:38:40.048Z",
         "caracterizacao": "O interesse do Governo Federal consiste em fortalecer as ouvidorias de serviços penais e aprimorar a participação social, a transparência e a proteção de direitos. O interesse do Distrito Federal converge com essas diretrizes, mediante o aparelhamento da Ouvidoria da SEAPE/DF, ampliando sua capacidade de atendimento, tratamento de manifestações e prestação de serviços aos usuários.",
         "publicoAlvo": "Usuários dos serviços penais do Distrito Federal, incluindo pessoas privadas de liberdade, familiares, servidores e demais cidadãos que utilizem os canais da Ouvidoria da SEAPE/DF, bem como os servidores responsáveis pelo atendimento, registro, tratamento e encaminhamento das manifestações.",
         "problema": "A atual estrutura física, mobiliário e equipamentos tecnológicos limita a capacidade da Ouvidoria da SEAPE/DF de prestar atendimento qualificado, realizar atendimentos externos, tratar e analisar manifestações e assegurar privacidade em demandas sensíveis. A proposta busca superar essas limitações e proporcionar melhores condições para o funcionamento e fortalecimento da unidade.",
@@ -34367,7 +36492,7 @@ window.PROFOR_PUBLIC_DATA = {
         "version": 1,
         "status": "complete",
         "source": "siconv_plano_aplicacao_detalhado.zip",
-        "at": "2026-10-20T11:25:51.067Z",
+        "at": "2026-10-22T14:35:54.806Z",
         "received": 29,
         "accepted": 29,
         "rejected": 0,
@@ -42703,10 +44828,21 @@ window.PROFOR_PUBLIC_DATA = {
           "after": {
             "at": "2026-10-20T11:28:42.847Z"
           }
+        },
+        {
+          "at": "2026-10-22T14:38:40.048Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Usuário local",
+          "before": {
+            "at": "2026-10-20T11:28:42.847Z"
+          },
+          "after": {
+            "at": "2026-10-22T14:38:40.048Z"
+          }
         }
       ],
       "textos": {
-        "at": "2026-10-20T11:28:42.847Z",
+        "at": "2026-10-22T14:38:40.048Z",
         "caracterizacao": "Integração de esforços entre o Ministério da Justiça/SENAPPEN e a SEAP/PE para estruturar a Ouvidoria de Serviços Penais. A cooperação atende às diretrizes do PROFOR/ONASP e do Plano Pena Justa, fortalecendo a governança penitenciária, a fiscalização institucional, a proteção dos direitos humanos e o acesso à justiça no âmbito da execução penal em Pernambuco.",
         "publicoAlvo": "Pessoas privadas de liberdade, seus familiares, operadores do direito, órgãos de controle, servidores do sistema penitenciário e a sociedade civil usuária dos serviços da Ouvidoria da SEAP/PE.",
         "problema": "Déficit de infraestrutura física, mobiliária e tecnológica na Ouvidoria da SEAP/PE, que limita o acolhimento presencial, compromete a celeridade e o sigilo no fluxo de manifestações e restringe a mobilidade técnica para a realização de inspeções nas unidades prisionais.",
@@ -42719,7 +44855,7 @@ window.PROFOR_PUBLIC_DATA = {
         "version": 1,
         "status": "complete",
         "source": "siconv_plano_aplicacao_detalhado.zip",
-        "at": "2026-10-20T11:25:51.067Z",
+        "at": "2026-10-22T14:35:54.806Z",
         "received": 13,
         "accepted": 13,
         "rejected": 0,
@@ -42746,39 +44882,39 @@ window.PROFOR_PUBLIC_DATA = {
         "global": 20470000,
         "pad": [
           {
-            "id": "17492542",
+            "id": "17503246",
             "descricao": "SALDO RESIDUAL",
             "quantidade": "1",
-            "unitario": 40326,
-            "total": 40326
+            "unitario": 156472,
+            "total": 156472
           },
           {
-            "id": "17425892",
+            "id": "17503141",
+            "descricao": "COMPUTADOR - MODELO: AVANCADO; SISTEMA OPERACIONAL: WINDOWS 11 PROF. 64 BITS (PT-BR); MEMORIA: 64GB; PROCESSADOR: ARQUITETURA X86 CORPORATIVA; ARMAZENAMENTO: SSD 1TB; MONITOR: 27 POLEGADAS",
+            "quantidade": "10",
+            "unitario": 1722201,
+            "total": 17222010
+          },
+          {
+            "id": "17503175",
+            "descricao": "NOTEBOOK,NETBOOK E/OU ULTRAFINO - IDENTIFICACAO: PADRAO; SISTEMA OPERACIONAL: WINDOWS 11 PROF. 64 BITS (PT-BR); PROCESSADOR: ARQUITETURA X86 CORPORATIVA; ARMAZENAMENTO: SSD 1TB; MEMORIA: 16GB; TELA: 14 POLEGADAS; DISPOSITIVO: WEBCAM 1080P; ACESSORIOS: MOUSE OPTICO, MALETA, CABO COM TRAVA DE SEGURANCA",
+            "quantidade": "5",
+            "unitario": 521193,
+            "total": 2605965
+          },
+          {
+            "id": "17503186",
+            "descricao": "SCANNER - TIPO: MESA; AREA DE DIGITALIZACAO: ATE 210X297MM (A4 TIPO I); RESOLUCAO: MINIMO 600 DPI / 48 BITS; INTERFACE: USB 3.0 COMPATIVEL COM 2.0; ACESSORIOS: SOFTWARE DE CAPTURA OCR PARA ODT OU DOC E PDF",
+            "quantidade": "1",
+            "unitario": 215953,
+            "total": 215953
+          },
+          {
+            "id": "17503209",
             "descricao": "IMPRESSORA MULTIFUNCIONAL - SISTEMA DE IMPRESSAO: LASER OU LED MONOCROMATICA; RESOLUCAO IMPRESSAO: MINIMA 1200 X 600 DPI; VELOCIDADE IMPRESSAO: 30 PPM",
             "quantidade": "1",
             "unitario": 269600,
             "total": 269600
-          },
-          {
-            "id": "17425890",
-            "descricao": "SCANNER - TIPO: MESA; AREA DE DIGITALIZACAO: ATE 210X297MM (A4 TIPO I); RESOLUCAO: MINIMO 600 DPI / 48 BITS; INTERFACE: USB 3.0 COMPATIVEL COM 2.0; ACESSORIOS: SOFTWARE DE CAPTURA OCR PARA ODT OU DOC E PDF",
-            "quantidade": "1",
-            "unitario": 224921,
-            "total": 224921
-          },
-          {
-            "id": "17425883",
-            "descricao": "COMPUTADOR - MODELO: AVANCADO; SISTEMA OPERACIONAL: WINDOWS 11 PROF. 64 BITS (PT-BR); MEMORIA: 64GB; PROCESSADOR: ARQUITETURA X86 CORPORATIVA; ARMAZENAMENTO: SSD 1TB; MONITOR: 27 POLEGADAS",
-            "quantidade": "11",
-            "unitario": 1284923,
-            "total": 14134153
-          },
-          {
-            "id": "17425889",
-            "descricao": "NOTEBOOK,NETBOOK E/OU ULTRAFINO - IDENTIFICACAO: PADRAO; SISTEMA OPERACIONAL: WINDOWS 11 PROF. 64 BITS (PT-BR); PROCESSADOR: ARQUITETURA X86 CORPORATIVA; ARMAZENAMENTO: SSD 1TB; MEMORIA: 16GB; TELA: 14 POLEGADAS; DISPOSITIVO: WEBCAM 1080P; ACESSORIOS: MOUSE OPTICO, MALETA, CABO COM TRAVA DE SEGURANCA",
-            "quantidade": "5",
-            "unitario": 1066200,
-            "total": 5331000
           }
         ]
       },
@@ -43069,10 +45205,9 @@ window.PROFOR_PUBLIC_DATA = {
               "fingerprint": "fnv64-v1:7b35951bd17e260a"
             },
             "reanalysis": {
-              "at": "2026-10-20T11:28:42.846Z",
+              "at": "2026-10-22T14:38:40.046Z",
               "fields": [
-                "imported.repasse",
-                "imported.global"
+                "imported.pad"
               ],
               "reason": "Evidência alterada; decisão anterior preservada no histórico."
             }
@@ -43297,7 +45432,7 @@ window.PROFOR_PUBLIC_DATA = {
             },
             "actor": "Usuário local",
             "reanalysis": {
-              "at": "2026-10-19T13:29:17.686Z",
+              "at": "2026-10-22T14:38:40.046Z",
               "fields": [
                 "imported.pad:17425883"
               ],
@@ -43318,7 +45453,7 @@ window.PROFOR_PUBLIC_DATA = {
             },
             "actor": "Usuário local",
             "reanalysis": {
-              "at": "2026-10-19T13:29:17.686Z",
+              "at": "2026-10-22T14:38:40.046Z",
               "fields": [
                 "imported.pad:17425889"
               ],
@@ -43339,7 +45474,7 @@ window.PROFOR_PUBLIC_DATA = {
             },
             "actor": "Usuário local",
             "reanalysis": {
-              "at": "2026-10-19T13:29:17.686Z",
+              "at": "2026-10-22T14:38:40.046Z",
               "fields": [
                 "imported.pad:17425890"
               ],
@@ -43360,7 +45495,7 @@ window.PROFOR_PUBLIC_DATA = {
             },
             "actor": "Usuário local",
             "reanalysis": {
-              "at": "2026-10-19T13:29:17.686Z",
+              "at": "2026-10-22T14:38:40.045Z",
               "fields": [
                 "imported.pad:17425892"
               ],
@@ -43368,6 +45503,46 @@ window.PROFOR_PUBLIC_DATA = {
             }
           },
           "17492542": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "17503141": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "17503175": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "17503186": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "17503209": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "17503246": {
             "status": "na",
             "note": "",
             "document": "",
@@ -47677,10 +49852,370 @@ window.PROFOR_PUBLIC_DATA = {
           "after": {
             "at": "2026-10-20T11:28:42.847Z"
           }
+        },
+        {
+          "at": "2026-10-22T14:38:40.045Z",
+          "event": "Reanálise: pad:17425892",
+          "actor": "Usuário local",
+          "before": {
+            "status": "reanalise",
+            "note": "MINAS GERAIS:\n \nPRINCIPAL:\nSolicita-se que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética de todos os preços apresentados nas pesquisas anexadas como orçamento.\nApós os ajustes, o valor total dos itens será de R$ 186.747,51. A diferença entre o valor global da proposta e esse total poderá ser alocada como um item denominado “Saldo residual”, com valor correspondente à diferença apurada.\n \nCOMPUTADOR:\nPara o item Computador, alterar o valor unitário de R$ 17.000,00 para R$ 12.849,23, correspondente à média aritmética dos três preços apresentados. Mantida a quantidade de 10 unidades, o valor total do item será de R$ 128.492,30.\n \nSCANNER:\nPara o item Scanner, alterar o valor unitário de R$ 2.000,00 para R$ 2.249,21, correspondente à média aritmética dos três preços apresentados. Considerando uma unidade, o valor total do item será de R$ 2.249,21.\n \nIMPRSSORA:\nPara o item Impressora multifuncional, alterar o valor unitário de R$ 2.700,00 para R$ 2.696,00, correspondente à média aritmética dos três preços apresentados. Considerando uma unidade, o valor total do item será de R$ 2.696,00.\n \nNOTEBOOK:\nPara o item Notebook, alterar o valor unitário de R$ 6.000,00 para R$ 10.662,00, correspondente à média aritmética dos cinco preços apresentados na pesquisa. Mantida a quantidade de cinco unidades, o valor total do item será de R$ 53.310,00.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-14T12:39:22.873Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17425892",
+              "fingerprint": "fnv64-v1:994107777e8b9574"
+            },
+            "actor": "Usuário local",
+            "reanalysis": {
+              "at": "2026-10-19T13:29:17.686Z",
+              "fields": [
+                "imported.pad:17425892"
+              ],
+              "reason": "Evidência alterada; decisão anterior preservada no histórico."
+            }
+          },
+          "after": {
+            "status": "reanalise",
+            "note": "MINAS GERAIS:\n \nPRINCIPAL:\nSolicita-se que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética de todos os preços apresentados nas pesquisas anexadas como orçamento.\nApós os ajustes, o valor total dos itens será de R$ 186.747,51. A diferença entre o valor global da proposta e esse total poderá ser alocada como um item denominado “Saldo residual”, com valor correspondente à diferença apurada.\n \nCOMPUTADOR:\nPara o item Computador, alterar o valor unitário de R$ 17.000,00 para R$ 12.849,23, correspondente à média aritmética dos três preços apresentados. Mantida a quantidade de 10 unidades, o valor total do item será de R$ 128.492,30.\n \nSCANNER:\nPara o item Scanner, alterar o valor unitário de R$ 2.000,00 para R$ 2.249,21, correspondente à média aritmética dos três preços apresentados. Considerando uma unidade, o valor total do item será de R$ 2.249,21.\n \nIMPRSSORA:\nPara o item Impressora multifuncional, alterar o valor unitário de R$ 2.700,00 para R$ 2.696,00, correspondente à média aritmética dos três preços apresentados. Considerando uma unidade, o valor total do item será de R$ 2.696,00.\n \nNOTEBOOK:\nPara o item Notebook, alterar o valor unitário de R$ 6.000,00 para R$ 10.662,00, correspondente à média aritmética dos cinco preços apresentados na pesquisa. Mantida a quantidade de cinco unidades, o valor total do item será de R$ 53.310,00.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-14T12:39:22.873Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17425892",
+              "fingerprint": "fnv64-v1:994107777e8b9574"
+            },
+            "actor": "Usuário local",
+            "reanalysis": {
+              "at": "2026-10-22T14:38:40.045Z",
+              "fields": [
+                "imported.pad:17425892"
+              ],
+              "reason": "Evidência alterada; decisão anterior preservada no histórico."
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T14:38:40.046Z",
+          "event": "Reanálise: pad:17425890",
+          "actor": "Usuário local",
+          "before": {
+            "status": "reanalise",
+            "note": "MINAS GERAIS:\n \nPRINCIPAL:\nSolicita-se que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética de todos os preços apresentados nas pesquisas anexadas como orçamento.\nApós os ajustes, o valor total dos itens será de R$ 186.747,51. A diferença entre o valor global da proposta e esse total poderá ser alocada como um item denominado “Saldo residual”, com valor correspondente à diferença apurada.\n \nCOMPUTADOR:\nPara o item Computador, alterar o valor unitário de R$ 17.000,00 para R$ 12.849,23, correspondente à média aritmética dos três preços apresentados. Mantida a quantidade de 10 unidades, o valor total do item será de R$ 128.492,30.\n \nSCANNER:\nPara o item Scanner, alterar o valor unitário de R$ 2.000,00 para R$ 2.249,21, correspondente à média aritmética dos três preços apresentados. Considerando uma unidade, o valor total do item será de R$ 2.249,21.\n \nIMPRSSORA:\nPara o item Impressora multifuncional, alterar o valor unitário de R$ 2.700,00 para R$ 2.696,00, correspondente à média aritmética dos três preços apresentados. Considerando uma unidade, o valor total do item será de R$ 2.696,00.\n \nNOTEBOOK:\nPara o item Notebook, alterar o valor unitário de R$ 6.000,00 para R$ 10.662,00, correspondente à média aritmética dos cinco preços apresentados na pesquisa. Mantida a quantidade de cinco unidades, o valor total do item será de R$ 53.310,00.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-14T12:38:21.523Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17425890",
+              "fingerprint": "fnv64-v1:e176ee0b17534e00"
+            },
+            "actor": "Usuário local",
+            "reanalysis": {
+              "at": "2026-10-19T13:29:17.686Z",
+              "fields": [
+                "imported.pad:17425890"
+              ],
+              "reason": "Evidência alterada; decisão anterior preservada no histórico."
+            }
+          },
+          "after": {
+            "status": "reanalise",
+            "note": "MINAS GERAIS:\n \nPRINCIPAL:\nSolicita-se que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética de todos os preços apresentados nas pesquisas anexadas como orçamento.\nApós os ajustes, o valor total dos itens será de R$ 186.747,51. A diferença entre o valor global da proposta e esse total poderá ser alocada como um item denominado “Saldo residual”, com valor correspondente à diferença apurada.\n \nCOMPUTADOR:\nPara o item Computador, alterar o valor unitário de R$ 17.000,00 para R$ 12.849,23, correspondente à média aritmética dos três preços apresentados. Mantida a quantidade de 10 unidades, o valor total do item será de R$ 128.492,30.\n \nSCANNER:\nPara o item Scanner, alterar o valor unitário de R$ 2.000,00 para R$ 2.249,21, correspondente à média aritmética dos três preços apresentados. Considerando uma unidade, o valor total do item será de R$ 2.249,21.\n \nIMPRSSORA:\nPara o item Impressora multifuncional, alterar o valor unitário de R$ 2.700,00 para R$ 2.696,00, correspondente à média aritmética dos três preços apresentados. Considerando uma unidade, o valor total do item será de R$ 2.696,00.\n \nNOTEBOOK:\nPara o item Notebook, alterar o valor unitário de R$ 6.000,00 para R$ 10.662,00, correspondente à média aritmética dos cinco preços apresentados na pesquisa. Mantida a quantidade de cinco unidades, o valor total do item será de R$ 53.310,00.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-14T12:38:21.523Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17425890",
+              "fingerprint": "fnv64-v1:e176ee0b17534e00"
+            },
+            "actor": "Usuário local",
+            "reanalysis": {
+              "at": "2026-10-22T14:38:40.046Z",
+              "fields": [
+                "imported.pad:17425890"
+              ],
+              "reason": "Evidência alterada; decisão anterior preservada no histórico."
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T14:38:40.046Z",
+          "event": "Reanálise: pad:17425883",
+          "actor": "Usuário local",
+          "before": {
+            "status": "reanalise",
+            "note": "MINAS GERAIS:\n \nPRINCIPAL:\nSolicita-se que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética de todos os preços apresentados nas pesquisas anexadas como orçamento.\nApós os ajustes, o valor total dos itens será de R$ 186.747,51. A diferença entre o valor global da proposta e esse total poderá ser alocada como um item denominado “Saldo residual”, com valor correspondente à diferença apurada.\n \nCOMPUTADOR:\nPara o item Computador, alterar o valor unitário de R$ 17.000,00 para R$ 12.849,23, correspondente à média aritmética dos três preços apresentados. Mantida a quantidade de 10 unidades, o valor total do item será de R$ 128.492,30.\n \nSCANNER:\nPara o item Scanner, alterar o valor unitário de R$ 2.000,00 para R$ 2.249,21, correspondente à média aritmética dos três preços apresentados. Considerando uma unidade, o valor total do item será de R$ 2.249,21.\n \nIMPRSSORA:\nPara o item Impressora multifuncional, alterar o valor unitário de R$ 2.700,00 para R$ 2.696,00, correspondente à média aritmética dos três preços apresentados. Considerando uma unidade, o valor total do item será de R$ 2.696,00.\n \nNOTEBOOK:\nPara o item Notebook, alterar o valor unitário de R$ 6.000,00 para R$ 10.662,00, correspondente à média aritmética dos cinco preços apresentados na pesquisa. Mantida a quantidade de cinco unidades, o valor total do item será de R$ 53.310,00.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-14T12:38:53.115Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17425883",
+              "fingerprint": "fnv64-v1:1c7aa7966772bde7"
+            },
+            "actor": "Usuário local",
+            "reanalysis": {
+              "at": "2026-10-19T13:29:17.686Z",
+              "fields": [
+                "imported.pad:17425883"
+              ],
+              "reason": "Evidência alterada; decisão anterior preservada no histórico."
+            }
+          },
+          "after": {
+            "status": "reanalise",
+            "note": "MINAS GERAIS:\n \nPRINCIPAL:\nSolicita-se que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética de todos os preços apresentados nas pesquisas anexadas como orçamento.\nApós os ajustes, o valor total dos itens será de R$ 186.747,51. A diferença entre o valor global da proposta e esse total poderá ser alocada como um item denominado “Saldo residual”, com valor correspondente à diferença apurada.\n \nCOMPUTADOR:\nPara o item Computador, alterar o valor unitário de R$ 17.000,00 para R$ 12.849,23, correspondente à média aritmética dos três preços apresentados. Mantida a quantidade de 10 unidades, o valor total do item será de R$ 128.492,30.\n \nSCANNER:\nPara o item Scanner, alterar o valor unitário de R$ 2.000,00 para R$ 2.249,21, correspondente à média aritmética dos três preços apresentados. Considerando uma unidade, o valor total do item será de R$ 2.249,21.\n \nIMPRSSORA:\nPara o item Impressora multifuncional, alterar o valor unitário de R$ 2.700,00 para R$ 2.696,00, correspondente à média aritmética dos três preços apresentados. Considerando uma unidade, o valor total do item será de R$ 2.696,00.\n \nNOTEBOOK:\nPara o item Notebook, alterar o valor unitário de R$ 6.000,00 para R$ 10.662,00, correspondente à média aritmética dos cinco preços apresentados na pesquisa. Mantida a quantidade de cinco unidades, o valor total do item será de R$ 53.310,00.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-14T12:38:53.115Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17425883",
+              "fingerprint": "fnv64-v1:1c7aa7966772bde7"
+            },
+            "actor": "Usuário local",
+            "reanalysis": {
+              "at": "2026-10-22T14:38:40.046Z",
+              "fields": [
+                "imported.pad:17425883"
+              ],
+              "reason": "Evidência alterada; decisão anterior preservada no histórico."
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T14:38:40.046Z",
+          "event": "Reanálise: pad:17425889",
+          "actor": "Usuário local",
+          "before": {
+            "status": "reanalise",
+            "note": "MINAS GERAIS:\n \nPRINCIPAL:\nSolicita-se que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética de todos os preços apresentados nas pesquisas anexadas como orçamento.\nApós os ajustes, o valor total dos itens será de R$ 186.747,51. A diferença entre o valor global da proposta e esse total poderá ser alocada como um item denominado “Saldo residual”, com valor correspondente à diferença apurada.\n \nCOMPUTADOR:\nPara o item Computador, alterar o valor unitário de R$ 17.000,00 para R$ 12.849,23, correspondente à média aritmética dos três preços apresentados. Mantida a quantidade de 10 unidades, o valor total do item será de R$ 128.492,30.\n \nSCANNER:\nPara o item Scanner, alterar o valor unitário de R$ 2.000,00 para R$ 2.249,21, correspondente à média aritmética dos três preços apresentados. Considerando uma unidade, o valor total do item será de R$ 2.249,21.\n \nIMPRSSORA:\nPara o item Impressora multifuncional, alterar o valor unitário de R$ 2.700,00 para R$ 2.696,00, correspondente à média aritmética dos três preços apresentados. Considerando uma unidade, o valor total do item será de R$ 2.696,00.\n \nNOTEBOOK:\nPara o item Notebook, alterar o valor unitário de R$ 6.000,00 para R$ 10.662,00, correspondente à média aritmética dos cinco preços apresentados na pesquisa. Mantida a quantidade de cinco unidades, o valor total do item será de R$ 53.310,00.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-14T12:37:56.854Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17425889",
+              "fingerprint": "fnv64-v1:800847a5271131bc"
+            },
+            "actor": "Usuário local",
+            "reanalysis": {
+              "at": "2026-10-19T13:29:17.686Z",
+              "fields": [
+                "imported.pad:17425889"
+              ],
+              "reason": "Evidência alterada; decisão anterior preservada no histórico."
+            }
+          },
+          "after": {
+            "status": "reanalise",
+            "note": "MINAS GERAIS:\n \nPRINCIPAL:\nSolicita-se que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética de todos os preços apresentados nas pesquisas anexadas como orçamento.\nApós os ajustes, o valor total dos itens será de R$ 186.747,51. A diferença entre o valor global da proposta e esse total poderá ser alocada como um item denominado “Saldo residual”, com valor correspondente à diferença apurada.\n \nCOMPUTADOR:\nPara o item Computador, alterar o valor unitário de R$ 17.000,00 para R$ 12.849,23, correspondente à média aritmética dos três preços apresentados. Mantida a quantidade de 10 unidades, o valor total do item será de R$ 128.492,30.\n \nSCANNER:\nPara o item Scanner, alterar o valor unitário de R$ 2.000,00 para R$ 2.249,21, correspondente à média aritmética dos três preços apresentados. Considerando uma unidade, o valor total do item será de R$ 2.249,21.\n \nIMPRSSORA:\nPara o item Impressora multifuncional, alterar o valor unitário de R$ 2.700,00 para R$ 2.696,00, correspondente à média aritmética dos três preços apresentados. Considerando uma unidade, o valor total do item será de R$ 2.696,00.\n \nNOTEBOOK:\nPara o item Notebook, alterar o valor unitário de R$ 6.000,00 para R$ 10.662,00, correspondente à média aritmética dos cinco preços apresentados na pesquisa. Mantida a quantidade de cinco unidades, o valor total do item será de R$ 53.310,00.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-14T12:37:56.854Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17425889",
+              "fingerprint": "fnv64-v1:800847a5271131bc"
+            },
+            "actor": "Usuário local",
+            "reanalysis": {
+              "at": "2026-10-22T14:38:40.046Z",
+              "fields": [
+                "imported.pad:17425889"
+              ],
+              "reason": "Evidência alterada; decisão anterior preservada no histórico."
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T14:38:40.046Z",
+          "event": "Dados da origem alterados; conferir análise",
+          "actor": "Usuário local",
+          "before": {
+            "id": "2243987",
+            "numero": "35450/2026",
+            "uf": "MG",
+            "programa": "3000020260022",
+            "cnpj": "07256298000144",
+            "proponente": "OUVIDORIA GERAL DO ESTADO DE MINAS GERAIS",
+            "orgao": "",
+            "objeto": "Aquisição de equipamentos de tecnologia da informação e comunicação (TIC) para a modernização da infraestrutura tecnológica da Ouvidoria do Sistema Penitenciário e Socioeducativo da Ouvidoria-Geral do Estado de Minas Gerais (OGE-MG).",
+            "situacao": "Proposta/Plano de Trabalho em Complementação",
+            "data": "2026-09-14",
+            "vigenciaInicio": "2026-10-14",
+            "vigenciaFim": "2027-10-15",
+            "repasse": 20000000,
+            "contrapartida": 470000,
+            "global": 20470000,
+            "pad": [
+              {
+                "id": "17492542",
+                "descricao": "SALDO RESIDUAL",
+                "quantidade": "1",
+                "unitario": 40326,
+                "total": 40326
+              },
+              {
+                "id": "17425892",
+                "descricao": "IMPRESSORA MULTIFUNCIONAL - SISTEMA DE IMPRESSAO: LASER OU LED MONOCROMATICA; RESOLUCAO IMPRESSAO: MINIMA 1200 X 600 DPI; VELOCIDADE IMPRESSAO: 30 PPM",
+                "quantidade": "1",
+                "unitario": 269600,
+                "total": 269600
+              },
+              {
+                "id": "17425890",
+                "descricao": "SCANNER - TIPO: MESA; AREA DE DIGITALIZACAO: ATE 210X297MM (A4 TIPO I); RESOLUCAO: MINIMO 600 DPI / 48 BITS; INTERFACE: USB 3.0 COMPATIVEL COM 2.0; ACESSORIOS: SOFTWARE DE CAPTURA OCR PARA ODT OU DOC E PDF",
+                "quantidade": "1",
+                "unitario": 224921,
+                "total": 224921
+              },
+              {
+                "id": "17425883",
+                "descricao": "COMPUTADOR - MODELO: AVANCADO; SISTEMA OPERACIONAL: WINDOWS 11 PROF. 64 BITS (PT-BR); MEMORIA: 64GB; PROCESSADOR: ARQUITETURA X86 CORPORATIVA; ARMAZENAMENTO: SSD 1TB; MONITOR: 27 POLEGADAS",
+                "quantidade": "11",
+                "unitario": 1284923,
+                "total": 14134153
+              },
+              {
+                "id": "17425889",
+                "descricao": "NOTEBOOK,NETBOOK E/OU ULTRAFINO - IDENTIFICACAO: PADRAO; SISTEMA OPERACIONAL: WINDOWS 11 PROF. 64 BITS (PT-BR); PROCESSADOR: ARQUITETURA X86 CORPORATIVA; ARMAZENAMENTO: SSD 1TB; MEMORIA: 16GB; TELA: 14 POLEGADAS; DISPOSITIVO: WEBCAM 1080P; ACESSORIOS: MOUSE OPTICO, MALETA, CABO COM TRAVA DE SEGURANCA",
+                "quantidade": "5",
+                "unitario": 1066200,
+                "total": 5331000
+              }
+            ]
+          },
+          "after": {
+            "id": "2243987",
+            "numero": "35450/2026",
+            "uf": "MG",
+            "programa": "3000020260022",
+            "cnpj": "07256298000144",
+            "proponente": "OUVIDORIA GERAL DO ESTADO DE MINAS GERAIS",
+            "orgao": "",
+            "objeto": "Aquisição de equipamentos de tecnologia da informação e comunicação (TIC) para a modernização da infraestrutura tecnológica da Ouvidoria do Sistema Penitenciário e Socioeducativo da Ouvidoria-Geral do Estado de Minas Gerais (OGE-MG).",
+            "situacao": "Proposta/Plano de Trabalho em Complementação",
+            "data": "2026-09-14",
+            "vigenciaInicio": "2026-10-14",
+            "vigenciaFim": "2027-10-15",
+            "repasse": 20000000,
+            "contrapartida": 470000,
+            "global": 20470000,
+            "pad": [
+              {
+                "id": "17503246",
+                "descricao": "SALDO RESIDUAL",
+                "quantidade": "1",
+                "unitario": 156472,
+                "total": 156472
+              },
+              {
+                "id": "17503141",
+                "descricao": "COMPUTADOR - MODELO: AVANCADO; SISTEMA OPERACIONAL: WINDOWS 11 PROF. 64 BITS (PT-BR); MEMORIA: 64GB; PROCESSADOR: ARQUITETURA X86 CORPORATIVA; ARMAZENAMENTO: SSD 1TB; MONITOR: 27 POLEGADAS",
+                "quantidade": "10",
+                "unitario": 1722201,
+                "total": 17222010
+              },
+              {
+                "id": "17503175",
+                "descricao": "NOTEBOOK,NETBOOK E/OU ULTRAFINO - IDENTIFICACAO: PADRAO; SISTEMA OPERACIONAL: WINDOWS 11 PROF. 64 BITS (PT-BR); PROCESSADOR: ARQUITETURA X86 CORPORATIVA; ARMAZENAMENTO: SSD 1TB; MEMORIA: 16GB; TELA: 14 POLEGADAS; DISPOSITIVO: WEBCAM 1080P; ACESSORIOS: MOUSE OPTICO, MALETA, CABO COM TRAVA DE SEGURANCA",
+                "quantidade": "5",
+                "unitario": 521193,
+                "total": 2605965
+              },
+              {
+                "id": "17503186",
+                "descricao": "SCANNER - TIPO: MESA; AREA DE DIGITALIZACAO: ATE 210X297MM (A4 TIPO I); RESOLUCAO: MINIMO 600 DPI / 48 BITS; INTERFACE: USB 3.0 COMPATIVEL COM 2.0; ACESSORIOS: SOFTWARE DE CAPTURA OCR PARA ODT OU DOC E PDF",
+                "quantidade": "1",
+                "unitario": 215953,
+                "total": 215953
+              },
+              {
+                "id": "17503209",
+                "descricao": "IMPRESSORA MULTIFUNCIONAL - SISTEMA DE IMPRESSAO: LASER OU LED MONOCROMATICA; RESOLUCAO IMPRESSAO: MINIMA 1200 X 600 DPI; VELOCIDADE IMPRESSAO: 30 PPM",
+                "quantidade": "1",
+                "unitario": 269600,
+                "total": 269600
+              }
+            ]
+          }
+        },
+        {
+          "at": "2026-10-22T14:38:40.046Z",
+          "event": "Reanálise: celebracao:6",
+          "actor": "Usuário local",
+          "before": {
+            "status": "reanalise",
+            "note": "Falta documento",
+            "document": "",
+            "url": "",
+            "at": "2026-10-14T12:05:16.905Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:6",
+              "fingerprint": "fnv64-v1:7b35951bd17e260a"
+            },
+            "reanalysis": {
+              "at": "2026-10-20T11:28:42.846Z",
+              "fields": [
+                "imported.repasse",
+                "imported.global"
+              ],
+              "reason": "Evidência alterada; decisão anterior preservada no histórico."
+            }
+          },
+          "after": {
+            "status": "reanalise",
+            "note": "Falta documento",
+            "document": "",
+            "url": "",
+            "at": "2026-10-14T12:05:16.905Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:6",
+              "fingerprint": "fnv64-v1:7b35951bd17e260a"
+            },
+            "reanalysis": {
+              "at": "2026-10-22T14:38:40.046Z",
+              "fields": [
+                "imported.pad"
+              ],
+              "reason": "Evidência alterada; decisão anterior preservada no histórico."
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T14:38:40.048Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Usuário local",
+          "before": {
+            "at": "2026-10-20T11:28:42.847Z"
+          },
+          "after": {
+            "at": "2026-10-22T14:38:40.048Z"
+          }
         }
       ],
       "textos": {
-        "at": "2026-10-20T11:28:42.847Z",
+        "at": "2026-10-22T14:38:40.048Z",
         "caracterizacao": "Há convergência entre as diretrizes do MJSP/SENAPPEN e a missão da OGE-MG. Pelo concedente, busca-se o fortalecimento nacional e a padronização das ouvidorias de serviços penais. Pela OGE-MG, atende à necessidade de modernização tecnológica da Ouvidoria do Sistema Penitenciário e Socioeducativo, ampliando a celeridade e a qualidade no tratamento das manifestações dos cidadãos e na fiscalização dos serviços penais, promovendo a transparência e a garantia dos direitos fundamentais.",
         "publicoAlvo": "Público-Alvo Direto: Servidores e colaboradores da Ouvidoria do Sistema Penitenciário e Socioeducativo da OGE-MG, que operarão os equipamentos no processamento das demandas diárias.Público-Alvo Indireto: pessoas privadas de liberdade (PPL), jovens em cumprimento de medidas socioeducativas, seus familiares, servidores do sistema prisional e socioeducativo, advogados, defensores públicos e a sociedade civil de Minas Gerais que utiliza os canais da OGE-MG.",
         "problema": "A obsolescência, escassez e limitação operacional dos equipamentos de TIC (desktops e notebooks) atualmente em uso na Ouvidoria do Sistema Penitenciário e Socioeducativo. O ecossistema de hardware defasado gera lentidão nos sistemas de atendimento, degradação na segurança da informação, incapacidade de realizar atendimentos ou inspeções externas com suporte computacional móvel (in loco em unidades prisionais e de internação) e consequente gargalo no tempo de resposta ao cidadão.",
@@ -47693,7 +50228,7 @@ window.PROFOR_PUBLIC_DATA = {
         "version": 1,
         "status": "complete",
         "source": "siconv_plano_aplicacao_detalhado.zip",
-        "at": "2026-10-20T11:25:51.067Z",
+        "at": "2026-10-22T14:35:54.806Z",
         "received": 5,
         "accepted": 5,
         "rejected": 0,
@@ -55796,10 +58331,21 @@ window.PROFOR_PUBLIC_DATA = {
           "after": {
             "at": "2026-10-20T11:28:42.847Z"
           }
+        },
+        {
+          "at": "2026-10-22T14:38:40.048Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Usuário local",
+          "before": {
+            "at": "2026-10-20T11:28:42.847Z"
+          },
+          "after": {
+            "at": "2026-10-22T14:38:40.048Z"
+          }
         }
       ],
       "textos": {
-        "at": "2026-10-20T11:28:42.847Z",
+        "at": "2026-10-22T14:38:40.048Z",
         "caracterizacao": "A União, por meio da SENAPPEN, e o Estado do Rio Grande do Norte, por meio da SEAP/RN, compartilham o interesse de fortalecer a Ouvidoria de Serviços Penais. O repasse federal permitirá adquirir bens permanentes para ampliar sua capacidade operacional, enquanto o Estado aportará a contrapartida financeira e assegurará a execução, a guarda, a destinação e a utilização dos bens na finalidade pactuada.",
         "publicoAlvo": "A Ouvidoria de Serviços Penais vinculada à SEAP/RN é a beneficiária direta. O público-alvo compreende pessoas privadas de liberdade, seus familiares, egressos, servidores dos serviços penais e demais cidadãos que apresentem manifestações relacionadas à política penal do Rio Grande do Norte. Os bens também apoiarão a equipe responsável pelo recebimento, tratamento, encaminhamento e resposta às manifestações.",
         "problema": "A Ouvidoria de Serviços Penais do RN necessita ampliar sua capacidade material e tecnológica para atender às demandas institucionais e tratar manifestações com segurança, sigilo e rastreabilidade. O diagnóstico que fundamenta o PROFOR/ONASP identifica a necessidade de reforço das estruturas existentes, sem recursos disponíveis em convênios vigentes para essa finalidade. A proposta busca suprir as necessidades de aparelhamento identificadas pelo Estado.",
@@ -55812,7 +58358,7 @@ window.PROFOR_PUBLIC_DATA = {
         "version": 1,
         "status": "complete",
         "source": "siconv_plano_aplicacao_detalhado.zip",
-        "at": "2026-10-20T11:25:51.067Z",
+        "at": "2026-10-22T14:35:54.806Z",
         "received": 25,
         "accepted": 25,
         "rejected": 0,
@@ -58335,10 +60881,21 @@ window.PROFOR_PUBLIC_DATA = {
           "after": {
             "at": "2026-10-20T11:28:42.847Z"
           }
+        },
+        {
+          "at": "2026-10-22T14:38:40.048Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Usuário local",
+          "before": {
+            "at": "2026-10-20T11:28:42.847Z"
+          },
+          "after": {
+            "at": "2026-10-22T14:38:40.048Z"
+          }
         }
       ],
       "textos": {
-        "at": "2026-10-20T11:28:42.847Z",
+        "at": "2026-10-22T14:38:40.048Z",
         "caracterizacao": "Integração de esforços entre o Ministério da Justiça/SENAPPEN e a SEJUS/ES para estruturar as Ouvidorias de Serviços Penais. A cooperação atende às diretrizes do PROFOR/ONASP e do Plano Pena Justa, fortalecendo a governança penitenciária, a fiscalização institucional, a proteção dos direitos humanos e o acesso à justiça no âmbito da execução penal no Espírito Santo.",
         "publicoAlvo": "Pessoas privadas de liberdade, seus familiares, operadores do direito, pessoas egressas do sistema prisional, órgãos de controle, servidores do sistema penitenciário, a sociedade civil usuária dos serviços das Ouvidorias dos Serviços Penais SEJUS/ES e a própria Administração Pública estadual, mediante a utilização das informações produzidas pela Ouvidoria para identificação de problemas, monitoramento de demandas recorrentes e aperfeiçoamento das políticas públicas penitenciárias",
         "problema": "A insuficiência ou inadequação de equipamentos tecnológicos e mobiliários pode limitar a capacidade operacional da unidade, dificultar a realização de atendimentos, restringir a mobilidade para atividades técnicas externas e comprometer a eficiência, a rastreabilidade e a segurança no tratamento das informações. Nesse contexto, o aparelhamento da Ouvidoria constitui medida necessária para assegurar condições materiais compatíveis com suas atribuições institucionais.",
@@ -58351,7 +60908,7 @@ window.PROFOR_PUBLIC_DATA = {
         "version": 1,
         "status": "complete",
         "source": "siconv_plano_aplicacao_detalhado.zip",
-        "at": "2026-10-20T11:25:51.067Z",
+        "at": "2026-10-22T14:35:54.806Z",
         "received": 3,
         "accepted": 3,
         "rejected": 0,
@@ -59019,13 +61576,24 @@ window.PROFOR_PUBLIC_DATA = {
           "after": {
             "at": "2026-10-20T11:28:42.847Z"
           }
+        },
+        {
+          "at": "2026-10-22T14:38:40.048Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Usuário local",
+          "before": {
+            "at": "2026-10-20T11:28:42.847Z"
+          },
+          "after": {
+            "at": "2026-10-22T14:38:40.048Z"
+          }
         }
       ],
       "isDeleted": true,
       "deletedAt": "2026-09-17T10:49:46.508Z",
       "deletedBy": "Usuário local",
       "textos": {
-        "at": "2026-10-20T11:28:42.847Z",
+        "at": "2026-10-22T14:38:40.048Z",
         "caracterizacao": "Integração de esforços entre o Ministério da Justiça/SENAPPEN e a SEAP/PE para estruturar a Ouvidoria de Serviços Penais. A cooperação atende às diretrizes do PROFOR/ONASP e do Plano Pena Justa, fortalecendo a governança penitenciária, a fiscalização institucional, a proteção dos direitos humanos e o acesso à justiça no âmbito da execução penal em Pernambuco.",
         "publicoAlvo": "Pessoas privadas de liberdade, seus familiares, operadores do direito, órgãos de controle, servidores do sistema penitenciário e a sociedade civil usuária dos serviços da Ouvidoria da SEAP/PE.",
         "problema": "Déficit de infraestrutura física, mobiliária e tecnológica na Ouvidoria da SEAP/PE, que limita o acolhimento presencial, compromete a celeridade e o sigilo no fluxo de manifestações e restringe a mobilidade técnica para a realização de inspeções nas unidades prisionais.",
@@ -59038,7 +61606,7 @@ window.PROFOR_PUBLIC_DATA = {
         "version": 1,
         "status": "complete",
         "source": "siconv_plano_aplicacao_detalhado.zip",
-        "at": "2026-10-20T11:25:51.067Z",
+        "at": "2026-10-22T14:35:54.806Z",
         "received": 0,
         "accepted": 0,
         "rejected": 0,
@@ -59706,13 +62274,24 @@ window.PROFOR_PUBLIC_DATA = {
           "after": {
             "at": "2026-10-20T11:28:42.847Z"
           }
+        },
+        {
+          "at": "2026-10-22T14:38:40.048Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Usuário local",
+          "before": {
+            "at": "2026-10-20T11:28:42.847Z"
+          },
+          "after": {
+            "at": "2026-10-22T14:38:40.048Z"
+          }
         }
       ],
       "isDeleted": true,
       "deletedAt": "2026-09-17T10:49:48.668Z",
       "deletedBy": "Usuário local",
       "textos": {
-        "at": "2026-10-20T11:28:42.847Z",
+        "at": "2026-10-22T14:38:40.048Z",
         "caracterizacao": "Integração de esforços entre o Ministério da Justiça/SENAPPEN e a SEAP/PE para estruturar a Ouvidoria de Serviços Penais. A cooperação atende às diretrizes do PROFOR/ONASP e do Plano Pena Justa, fortalecendo a governança penitenciária, a fiscalização institucional, a proteção dos direitos humanos e o acesso à justiça no âmbito da execução penal em Pernambuco.",
         "publicoAlvo": "Pessoas privadas de liberdade, seus familiares, operadores do direito, órgãos de controle, servidores do sistema penitenciário e a sociedade civil usuária dos serviços da Ouvidoria da SEAP/PE.",
         "problema": "Déficit de infraestrutura física, mobiliária e tecnológica na Ouvidoria da SEAP/PE, que limita o acolhimento presencial, compromete a celeridade e o sigilo no fluxo de manifestações e restringe a mobilidade técnica para a realização de inspeções nas unidades prisionais.",
@@ -59725,7 +62304,7 @@ window.PROFOR_PUBLIC_DATA = {
         "version": 1,
         "status": "complete",
         "source": "siconv_plano_aplicacao_detalhado.zip",
-        "at": "2026-10-20T11:25:51.067Z",
+        "at": "2026-10-22T14:35:54.806Z",
         "received": 0,
         "accepted": 0,
         "rejected": 0,
@@ -63323,10 +65902,21 @@ window.PROFOR_PUBLIC_DATA = {
               "confirmedBy": "Usuário local"
             }
           }
+        },
+        {
+          "at": "2026-10-22T14:38:40.048Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Usuário local",
+          "before": {
+            "at": "2026-10-20T11:28:42.847Z"
+          },
+          "after": {
+            "at": "2026-10-22T14:38:40.048Z"
+          }
         }
       ],
       "textos": {
-        "at": "2026-10-20T11:28:42.847Z",
+        "at": "2026-10-22T14:38:40.048Z",
         "caracterizacao": "A proposta atende ao interesse comum da União e do Estado do Amazonas no fortalecimento das Ouvidorias de Serviços Penais, mediante o aprimoramento de sua estrutura institucional e de sua capacidade de atendimento. A iniciativa está alinhada à atuação da SENAPPEN de apoio aos entes federativos e às diretrizes do PROFOR/ONASP, que busca fortalecer as ouvidorias, qualificar os canais de manifestação, ampliar a capacidade institucional de atendimento e promover a participação social.",
         "publicoAlvo": "A Ouvidoria de Serviços Penais do Estado do Amazonas, como unidade beneficiária dos bens adquiridos, e, indiretamente, os usuários dos serviços penais e demais cidadãos que utilizam os canais de manifestação, acompanhamento e encaminhamento de demandas relacionadas aos serviços penais.",
         "problema": "Necessidade de fortalecimento e aparelhamento da Ouvidoria de Serviços Penais do Estado do Amazonas, de modo a ampliar sua capacidade institucional de atendimento e aprimorar os canais de recebimento, tratamento, acompanhamento e encaminhamento das manifestações relacionadas aos serviços penais, contribuindo para uma escuta institucional qualificada, maior transparência e fortalecimento da participação e do controle social.",
@@ -63339,7 +65929,7 @@ window.PROFOR_PUBLIC_DATA = {
         "version": 1,
         "status": "complete",
         "source": "siconv_plano_aplicacao_detalhado.zip",
-        "at": "2026-10-20T11:25:51.067Z",
+        "at": "2026-10-22T14:35:54.806Z",
         "received": 16,
         "accepted": 16,
         "rejected": 0,
@@ -72749,10 +75339,21 @@ window.PROFOR_PUBLIC_DATA = {
           "after": {
             "at": "2026-10-20T11:28:42.847Z"
           }
+        },
+        {
+          "at": "2026-10-22T14:38:40.048Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Usuário local",
+          "before": {
+            "at": "2026-10-20T11:28:42.847Z"
+          },
+          "after": {
+            "at": "2026-10-22T14:38:40.048Z"
+          }
         }
       ],
       "textos": {
-        "at": "2026-10-20T11:28:42.847Z",
+        "at": "2026-10-22T14:38:40.048Z",
         "caracterizacao": "A Diretoria-Geral de Polícia Penal de Goiás tem interesse em melhorar as condições de trabalho dos servidores da Ouvidoria Adjunta e a estrutura destinada ao atendimento da sociedade. A SENAPPEN, por meio do PROFOR/ONASP, busca fortalecer as ouvidorias de serviços penais. A aquisição dos bens previstos na proposta atende a esses interesses ao qualificar o ambiente em que a Ouvidoria exerce suas atividades.",
         "publicoAlvo": "Ouvidoria Setoria da Polícia Penal do Estado de Goiás.",
         "problema": "Os equipamentos utlizidados pela ouvidoria setorial não atende adequadamente às necessidades físicas e tecnológicas exigidas para o registro das manifestações, além da ausência de itens que ofereçam condições de trabalho para os trabalhadores lotados na ouvidoria.",
@@ -72765,7 +75366,7 @@ window.PROFOR_PUBLIC_DATA = {
         "version": 1,
         "status": "complete",
         "source": "siconv_plano_aplicacao_detalhado.zip",
-        "at": "2026-10-20T11:25:51.067Z",
+        "at": "2026-10-22T14:35:54.806Z",
         "received": 25,
         "accepted": 25,
         "rejected": 0,
@@ -77891,10 +80492,21 @@ window.PROFOR_PUBLIC_DATA = {
           "after": {
             "at": "2026-10-20T11:28:42.847Z"
           }
+        },
+        {
+          "at": "2026-10-22T14:38:40.048Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Usuário local",
+          "before": {
+            "at": "2026-10-20T11:28:42.847Z"
+          },
+          "after": {
+            "at": "2026-10-22T14:38:40.048Z"
+          }
         }
       ],
       "textos": {
-        "at": "2026-10-20T11:28:42.847Z",
+        "at": "2026-10-22T14:38:40.048Z",
         "caracterizacao": "A União, por meio da SENAPPEN, e o Estado de Roraima, por meio da SEJUC/RR, compartilham o interesse de fortalecer a Ouvidoria de Serviços Penais. O repasse federal permitirá adquirir bens permanentes para ampliar sua capacidade operacional, enquanto o Estado aportará a contrapartida financeira e assegurará a execução, a guarda, a destinação e a utilização dos bens na finalidade pactuada.",
         "publicoAlvo": "A Ouvidoria de Serviços Penais vinculada à SEJUC/RR é a beneficiária direta. O público-alvo compreende pessoas privadas de liberdade, seus familiares, egressos, servidores dos serviços penais e demais cidadãos que apresentem manifestações relacionadas à política penal do Estado de Roraima. Os bens também apoiarão a equipe responsável pelo recebimento, tratamento, encaminhamento e resposta às manifestações.",
         "problema": "A Ouvidoria de Serviços Penais de Roraima necessita ampliar sua capacidade material e tecnológica para atender às demandas institucionais e tratar manifestações com segurança, sigilo e rastreabilidade. O diagnóstico que fundamenta o PROFOR/ONASP identifica a necessidade de reforço das estruturas existentes, sem recursos disponíveis em convênios vigentes para essa finalidade. A proposta busca suprir as necessidades de aparelhamento identificadas pelo Estado.",
@@ -77907,7 +80519,7 @@ window.PROFOR_PUBLIC_DATA = {
         "version": 1,
         "status": "complete",
         "source": "siconv_plano_aplicacao_detalhado.zip",
-        "at": "2026-10-20T11:25:51.067Z",
+        "at": "2026-10-22T14:35:54.806Z",
         "received": 25,
         "accepted": 25,
         "rejected": 0,
@@ -78569,10 +81181,21 @@ window.PROFOR_PUBLIC_DATA = {
           "after": {
             "at": "2026-10-20T11:28:42.847Z"
           }
+        },
+        {
+          "at": "2026-10-22T14:38:40.048Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Usuário local",
+          "before": {
+            "at": "2026-10-20T11:28:42.847Z"
+          },
+          "after": {
+            "at": "2026-10-22T14:38:40.048Z"
+          }
         }
       ],
       "textos": {
-        "at": "2026-10-20T11:28:42.847Z",
+        "at": "2026-10-22T14:38:40.048Z",
         "caracterizacao": "Fortalecer a Ouvidoria Penitenciária do Estado do Amapá, mediante estruturação física, tecnológica e administrativa, contribuindo para a continuidade dos serviços de escuta, acolhimento, registro, tratamento, encaminhamento e acompanhamento de manifestações, em consonância com as finalidades do PROFOR/ONASP 2026",
         "publicoAlvo": "Usuários dos serviços penais, pessoas que utilizam a Ouvidoria Penitenciária do Estado do Amapá para apresentar manifestações, solicitações, reclamações, denúncias, elogios ou outras demandas, além dos servidores responsáveis pelo atendimento, registro, tratamento, encaminhamento e acompanhamento das manifestações.",
         "problema": "A Ouvidoria Penitenciária necessita de melhores condições físicas, tecnológicas e administrativas para executar suas atividades de forma organizada e contínua. As limitações de infraestrutura, equipamentos, gestão documental, recursos tecnológicos e condições de atendimento dificultam a qualificação da escuta, do registro, do acompanhamento das manifestações e da produção de informações institucionais.",
@@ -78588,7 +81211,7 @@ window.PROFOR_PUBLIC_DATA = {
         "version": 1,
         "status": "complete",
         "source": "siconv_plano_aplicacao_detalhado.zip",
-        "at": "2026-10-20T11:25:51.067Z",
+        "at": "2026-10-22T14:35:54.806Z",
         "received": 5,
         "accepted": 5,
         "rejected": 0,
@@ -82386,10 +85009,21 @@ window.PROFOR_PUBLIC_DATA = {
           "after": {
             "at": "2026-10-20T11:28:42.847Z"
           }
+        },
+        {
+          "at": "2026-10-22T14:38:40.048Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Usuário local",
+          "before": {
+            "at": "2026-10-20T11:28:42.847Z"
+          },
+          "after": {
+            "at": "2026-10-22T14:38:40.048Z"
+          }
         }
       ],
       "textos": {
-        "at": "2026-10-20T11:28:42.847Z",
+        "at": "2026-10-22T14:38:40.048Z",
         "caracterizacao": "Integração de esforços entre o Ministério da Justiça/SENAPPEN e a SEAP/PA para a implantação, estruturação física e aparelhamento inicial da Ouvidoria de Serviços Penais. A cooperação atende às diretrizes do PROFOR/ONASP e do Plano Pena Justa, estabelecendo um canal institucional permanente de governança penitenciária, fiscalização, proteção dos direitos humanos e acesso à justiça na execução penal paraense.",
         "publicoAlvo": "Pessoas privadas de liberdade, seus familiares, operadores do direito, órgãos de controle (MP, Defensoria, Judiciário), servidores penitenciários e a sociedade civil.",
         "problema": "Inexistência de uma Ouvidoria especializada em serviços penais no Estado do Pará, resultando na ausência de infraestrutura física e tecnológica própria para acolhimento presencial, no déficit de canais estruturados para o tratamento sigiloso e célere de manifestações relativas à execução penal e na limitação de meios materiais para realização de vistorias e inspeções técnicas nas unidades prisionais do Estado.",
@@ -82402,7 +85036,7 @@ window.PROFOR_PUBLIC_DATA = {
         "version": 1,
         "status": "complete",
         "source": "siconv_plano_aplicacao_detalhado.zip",
-        "at": "2026-10-20T11:25:51.067Z",
+        "at": "2026-10-22T14:35:54.806Z",
         "received": 10,
         "accepted": 10,
         "rejected": 0,
@@ -84179,10 +86813,21 @@ window.PROFOR_PUBLIC_DATA = {
           "after": {
             "at": "2026-10-20T11:28:42.847Z"
           }
+        },
+        {
+          "at": "2026-10-22T14:38:40.048Z",
+          "event": "Textos oficiais conferidos sem alteração",
+          "actor": "Usuário local",
+          "before": {
+            "at": "2026-10-20T11:28:42.847Z"
+          },
+          "after": {
+            "at": "2026-10-22T14:38:40.048Z"
+          }
         }
       ],
       "textos": {
-        "at": "2026-10-20T11:28:42.847Z",
+        "at": "2026-10-22T14:38:40.048Z",
         "caracterizacao": "A celebração do convênio entre a SEAP/BA e a SENAPPEN atende a interesses recíprocos ao fortalecer a Ouvidoria dos Serviços Penais, promovendo sua estruturação física, tecnológica e operacional. A parceria contribuirá para aprimorar o atendimento, a participação social, a transparência e os mecanismos de controle, em consonância com as diretrizes nacionais de aperfeiçoamento da gestão penitenciária.",
         "publicoAlvo": "O público-alvo beneficiado pelo convênio compreende, direta e indiretamente, os usuários dos serviços penitenciários do Estado da Bahia, incluindo pessoas privadas de liberdade, seus familiares, servidores públicos, visitantes, egressos e demais cidadãos que utilizam os canais da Ouvidoria. A iniciativa também beneficiará os servidores da Ouvidoria da SEAP.",
         "problema": "A Ouvidoria da SEAP recebe denúncias, reclamações, solicitações e pedidos de informação sobre serviços e unidades prisionais. A insuficiência de estrutura física, tecnológica e operacional limita o adequado tratamento e acompanhamento das demandas. A aquisição dos bens de capital permitirá melhorar as condições de trabalho, qualificar o atendimento e fortalecer a escuta social, a transparência, o controle e a participação dos usuários dos serviços penais.",
@@ -84195,7 +86840,7 @@ window.PROFOR_PUBLIC_DATA = {
         "version": 1,
         "status": "complete",
         "source": "siconv_plano_aplicacao_detalhado.zip",
-        "at": "2026-10-20T11:25:51.067Z",
+        "at": "2026-10-22T14:35:54.806Z",
         "received": 18,
         "accepted": 18,
         "rejected": 0,
@@ -84204,7 +86849,7 @@ window.PROFOR_PUBLIC_DATA = {
     }
   ],
   "sync": {
-    "at": "2026-10-20T11:28:42.846Z",
+    "at": "2026-10-22T14:38:40.047Z",
     "source": "https://api-publica.transferegov.gestao.gov.br/downloads · sincronização completa (com PAD) · 4 arquivo(s)",
     "count": 19
   },
@@ -115162,6 +117807,494 @@ window.PROFOR_PUBLIC_DATA = {
         },
         {
           "at": "2026-10-20T11:29:00.861Z",
+          "message": "Gravação confirmada no banco local."
+        }
+      ],
+      "reconstructed": false,
+      "source": "https://api-publica.transferegov.gestao.gov.br/downloads · sincronização completa (com PAD) · 4 arquivo(s)",
+      "proposals": 19
+    },
+    {
+      "id": "c35164d3f1fac0c6a95f0712391398f174adc3a3e49a0b1c01ec4adcdf140e64",
+      "at": "2026-10-22T14:39:05.754Z",
+      "date": "2026-10-22",
+      "changes": [
+        {
+          "id": "2243987",
+          "numero": "35450/2026",
+          "uf": "MG",
+          "field": "pad",
+          "before": [
+            {
+              "id": "17492542",
+              "descricao": "SALDO RESIDUAL",
+              "quantidade": "1",
+              "unitario": 40326,
+              "total": 40326
+            },
+            {
+              "id": "17425892",
+              "descricao": "IMPRESSORA MULTIFUNCIONAL - SISTEMA DE IMPRESSAO: LASER OU LED MONOCROMATICA; RESOLUCAO IMPRESSAO: MINIMA 1200 X 600 DPI; VELOCIDADE IMPRESSAO: 30 PPM",
+              "quantidade": "1",
+              "unitario": 269600,
+              "total": 269600
+            },
+            {
+              "id": "17425890",
+              "descricao": "SCANNER - TIPO: MESA; AREA DE DIGITALIZACAO: ATE 210X297MM (A4 TIPO I); RESOLUCAO: MINIMO 600 DPI / 48 BITS; INTERFACE: USB 3.0 COMPATIVEL COM 2.0; ACESSORIOS: SOFTWARE DE CAPTURA OCR PARA ODT OU DOC E PDF",
+              "quantidade": "1",
+              "unitario": 224921,
+              "total": 224921
+            },
+            {
+              "id": "17425883",
+              "descricao": "COMPUTADOR - MODELO: AVANCADO; SISTEMA OPERACIONAL: WINDOWS 11 PROF. 64 BITS (PT-BR); MEMORIA: 64GB; PROCESSADOR: ARQUITETURA X86 CORPORATIVA; ARMAZENAMENTO: SSD 1TB; MONITOR: 27 POLEGADAS",
+              "quantidade": "11",
+              "unitario": 1284923,
+              "total": 14134153
+            },
+            {
+              "id": "17425889",
+              "descricao": "NOTEBOOK,NETBOOK E/OU ULTRAFINO - IDENTIFICACAO: PADRAO; SISTEMA OPERACIONAL: WINDOWS 11 PROF. 64 BITS (PT-BR); PROCESSADOR: ARQUITETURA X86 CORPORATIVA; ARMAZENAMENTO: SSD 1TB; MEMORIA: 16GB; TELA: 14 POLEGADAS; DISPOSITIVO: WEBCAM 1080P; ACESSORIOS: MOUSE OPTICO, MALETA, CABO COM TRAVA DE SEGURANCA",
+              "quantidade": "5",
+              "unitario": 1066200,
+              "total": 5331000
+            }
+          ],
+          "after": [
+            {
+              "id": "17503246",
+              "descricao": "SALDO RESIDUAL",
+              "quantidade": "1",
+              "unitario": 156472,
+              "total": 156472
+            },
+            {
+              "id": "17503141",
+              "descricao": "COMPUTADOR - MODELO: AVANCADO; SISTEMA OPERACIONAL: WINDOWS 11 PROF. 64 BITS (PT-BR); MEMORIA: 64GB; PROCESSADOR: ARQUITETURA X86 CORPORATIVA; ARMAZENAMENTO: SSD 1TB; MONITOR: 27 POLEGADAS",
+              "quantidade": "10",
+              "unitario": 1722201,
+              "total": 17222010
+            },
+            {
+              "id": "17503175",
+              "descricao": "NOTEBOOK,NETBOOK E/OU ULTRAFINO - IDENTIFICACAO: PADRAO; SISTEMA OPERACIONAL: WINDOWS 11 PROF. 64 BITS (PT-BR); PROCESSADOR: ARQUITETURA X86 CORPORATIVA; ARMAZENAMENTO: SSD 1TB; MEMORIA: 16GB; TELA: 14 POLEGADAS; DISPOSITIVO: WEBCAM 1080P; ACESSORIOS: MOUSE OPTICO, MALETA, CABO COM TRAVA DE SEGURANCA",
+              "quantidade": "5",
+              "unitario": 521193,
+              "total": 2605965
+            },
+            {
+              "id": "17503186",
+              "descricao": "SCANNER - TIPO: MESA; AREA DE DIGITALIZACAO: ATE 210X297MM (A4 TIPO I); RESOLUCAO: MINIMO 600 DPI / 48 BITS; INTERFACE: USB 3.0 COMPATIVEL COM 2.0; ACESSORIOS: SOFTWARE DE CAPTURA OCR PARA ODT OU DOC E PDF",
+              "quantidade": "1",
+              "unitario": 215953,
+              "total": 215953
+            },
+            {
+              "id": "17503209",
+              "descricao": "IMPRESSORA MULTIFUNCIONAL - SISTEMA DE IMPRESSAO: LASER OU LED MONOCROMATICA; RESOLUCAO IMPRESSAO: MINIMA 1200 X 600 DPI; VELOCIDADE IMPRESSAO: 30 PPM",
+              "quantidade": "1",
+              "unitario": 269600,
+              "total": 269600
+            }
+          ]
+        }
+      ],
+      "activity": [
+        {
+          "at": "2026-10-22T14:35:37.578Z",
+          "message": "Iniciando atualização de propostas, PAD e textos oficiais."
+        },
+        {
+          "at": "2026-10-22T14:35:54.560Z",
+          "message": "Consultando a lista de arquivos oficiais…"
+        },
+        {
+          "at": "2026-10-22T14:35:54.825Z",
+          "message": "Baixando siconv_programa.zip…"
+        },
+        {
+          "at": "2026-10-22T14:35:57.602Z",
+          "message": "Baixando siconv_programa.zip… 3,8 MB de 10,6 MB (30%)."
+        },
+        {
+          "at": "2026-10-22T14:35:57.812Z",
+          "message": "siconv_programa.zip: download concluído (11151174 bytes)."
+        },
+        {
+          "at": "2026-10-22T14:35:57.812Z",
+          "message": "Baixando siconv_programa_proposta.zip…"
+        },
+        {
+          "at": "2026-10-22T14:35:59.197Z",
+          "message": "Baixando siconv_programa_proposta.zip… 199,6 KB de 6,2 MB (0%)."
+        },
+        {
+          "at": "2026-10-22T14:35:59.774Z",
+          "message": "siconv_programa_proposta.zip: download concluído (6509613 bytes)."
+        },
+        {
+          "at": "2026-10-22T14:35:59.774Z",
+          "message": "Baixando siconv_proposta.zip…"
+        },
+        {
+          "at": "2026-10-22T14:36:02.396Z",
+          "message": "Baixando siconv_proposta.zip… 5,9 MB de 196,5 MB (0%)."
+        },
+        {
+          "at": "2026-10-22T14:36:03.204Z",
+          "message": "Baixando siconv_proposta.zip… 33,5 MB de 196,5 MB (10%)."
+        },
+        {
+          "at": "2026-10-22T14:36:04.002Z",
+          "message": "Baixando siconv_proposta.zip… 70,9 MB de 196,5 MB (30%)."
+        },
+        {
+          "at": "2026-10-22T14:36:04.801Z",
+          "message": "Baixando siconv_proposta.zip… 106,3 MB de 196,5 MB (50%)."
+        },
+        {
+          "at": "2026-10-22T14:36:05.605Z",
+          "message": "Baixando siconv_proposta.zip… 118,1 MB de 196,5 MB (60%)."
+        },
+        {
+          "at": "2026-10-22T14:36:06.402Z",
+          "message": "Baixando siconv_proposta.zip… 143,7 MB de 196,5 MB (70%)."
+        },
+        {
+          "at": "2026-10-22T14:36:07.199Z",
+          "message": "Baixando siconv_proposta.zip… 167,4 MB de 196,5 MB (80%)."
+        },
+        {
+          "at": "2026-10-22T14:36:08.001Z",
+          "message": "Baixando siconv_proposta.zip… 193 MB de 196,5 MB (90%)."
+        },
+        {
+          "at": "2026-10-22T14:36:08.030Z",
+          "message": "siconv_proposta.zip: download concluído (206038429 bytes)."
+        },
+        {
+          "at": "2026-10-22T14:36:08.030Z",
+          "message": "Baixando siconv_plano_aplicacao_detalhado.zip…"
+        },
+        {
+          "at": "2026-10-22T14:36:10.398Z",
+          "message": "Baixando siconv_plano_aplicacao_detalhado.zip… 8,4 MB de 279,2 MB (0%)."
+        },
+        {
+          "at": "2026-10-22T14:36:11.194Z",
+          "message": "Baixando siconv_plano_aplicacao_detalhado.zip… 33,6 MB de 279,2 MB (10%)."
+        },
+        {
+          "at": "2026-10-22T14:36:12.003Z",
+          "message": "Baixando siconv_plano_aplicacao_detalhado.zip… 61,5 MB de 279,2 MB (20%)."
+        },
+        {
+          "at": "2026-10-22T14:36:12.796Z",
+          "message": "Baixando siconv_plano_aplicacao_detalhado.zip… 89,5 MB de 279,2 MB (30%)."
+        },
+        {
+          "at": "2026-10-22T14:36:13.597Z",
+          "message": "Baixando siconv_plano_aplicacao_detalhado.zip… 123,1 MB de 279,2 MB (40%)."
+        },
+        {
+          "at": "2026-10-22T14:36:14.405Z",
+          "message": "Baixando siconv_plano_aplicacao_detalhado.zip… 142,7 MB de 279,2 MB (50%)."
+        },
+        {
+          "at": "2026-10-22T14:36:15.196Z",
+          "message": "Baixando siconv_plano_aplicacao_detalhado.zip… 176,2 MB de 279,2 MB (60%)."
+        },
+        {
+          "at": "2026-10-22T14:36:16.010Z",
+          "message": "Baixando siconv_plano_aplicacao_detalhado.zip… 215,4 MB de 279,2 MB (70%)."
+        },
+        {
+          "at": "2026-10-22T14:36:16.798Z",
+          "message": "Baixando siconv_plano_aplicacao_detalhado.zip… 240,6 MB de 279,2 MB (80%)."
+        },
+        {
+          "at": "2026-10-22T14:36:17.592Z",
+          "message": "Baixando siconv_plano_aplicacao_detalhado.zip… 268,6 MB de 279,2 MB (90%)."
+        },
+        {
+          "at": "2026-10-22T14:36:17.745Z",
+          "message": "siconv_plano_aplicacao_detalhado.zip: download concluído (292761063 bytes)."
+        },
+        {
+          "at": "2026-10-22T14:36:17.745Z",
+          "message": "Lendo siconv_programa.zip e localizando o programa…"
+        },
+        {
+          "at": "2026-10-22T14:36:18.397Z",
+          "message": "Lendo siconv_programa.zip e localizando o programa… 30,4 MB de 337 MB (0%)."
+        },
+        {
+          "at": "2026-10-22T14:36:19.204Z",
+          "message": "Lendo siconv_programa.zip e localizando o programa… 67,5 MB de 337 MB (20%)."
+        },
+        {
+          "at": "2026-10-22T14:36:20.005Z",
+          "message": "Lendo siconv_programa.zip e localizando o programa… 104,6 MB de 337 MB (30%)."
+        },
+        {
+          "at": "2026-10-22T14:36:20.805Z",
+          "message": "Lendo siconv_programa.zip e localizando o programa… 141,8 MB de 337 MB (40%)."
+        },
+        {
+          "at": "2026-10-22T14:36:21.604Z",
+          "message": "Lendo siconv_programa.zip e localizando o programa… 182,3 MB de 337 MB (50%)."
+        },
+        {
+          "at": "2026-10-22T14:36:22.404Z",
+          "message": "Lendo siconv_programa.zip e localizando o programa… 219,4 MB de 337 MB (60%)."
+        },
+        {
+          "at": "2026-10-22T14:36:23.202Z",
+          "message": "Lendo siconv_programa.zip e localizando o programa… 259,9 MB de 337 MB (70%)."
+        },
+        {
+          "at": "2026-10-22T14:36:24.002Z",
+          "message": "Lendo siconv_programa.zip e localizando o programa… 303,8 MB de 337 MB (90%)."
+        },
+        {
+          "at": "2026-10-22T14:36:24.724Z",
+          "message": "siconv_programa.zip: 1258260 linha(s) lida(s)."
+        },
+        {
+          "at": "2026-10-22T14:36:24.725Z",
+          "message": "Lendo siconv_programa_proposta.zip e cruzando vínculos…"
+        },
+        {
+          "at": "2026-10-22T14:36:24.807Z",
+          "message": "Lendo siconv_programa_proposta.zip e cruzando vínculos… 880 KB de 15,8 MB (0%)."
+        },
+        {
+          "at": "2026-10-22T14:36:25.598Z",
+          "message": "Lendo siconv_programa_proposta.zip e cruzando vínculos… 8,6 MB de 15,8 MB (50%)."
+        },
+        {
+          "at": "2026-10-22T14:36:26.180Z",
+          "message": "siconv_programa_proposta.zip: 1160787 linha(s) lida(s)."
+        },
+        {
+          "at": "2026-10-22T14:36:26.180Z",
+          "message": "Lendo siconv_proposta.zip e selecionando as propostas…"
+        },
+        {
+          "at": "2026-10-22T14:36:26.400Z",
+          "message": "Lendo siconv_proposta.zip e selecionando as propostas… 7,2 MB de 721,1 MB (0%)."
+        },
+        {
+          "at": "2026-10-22T14:36:28.006Z",
+          "message": "Lendo siconv_proposta.zip e selecionando as propostas… 79,4 MB de 721,1 MB (10%)."
+        },
+        {
+          "at": "2026-10-22T14:36:29.603Z",
+          "message": "Lendo siconv_proposta.zip e selecionando as propostas… 151,6 MB de 721,1 MB (20%)."
+        },
+        {
+          "at": "2026-10-22T14:36:31.193Z",
+          "message": "Lendo siconv_proposta.zip e selecionando as propostas… 223,8 MB de 721,1 MB (30%)."
+        },
+        {
+          "at": "2026-10-22T14:36:32.805Z",
+          "message": "Lendo siconv_proposta.zip e selecionando as propostas… 288,8 MB de 721,1 MB (40%)."
+        },
+        {
+          "at": "2026-10-22T14:36:35.209Z",
+          "message": "Lendo siconv_proposta.zip e selecionando as propostas… 389,8 MB de 721,1 MB (50%)."
+        },
+        {
+          "at": "2026-10-22T14:36:36.007Z",
+          "message": "Lendo siconv_proposta.zip e selecionando as propostas… 433,1 MB de 721,1 MB (60%)."
+        },
+        {
+          "at": "2026-10-22T14:36:37.606Z",
+          "message": "Lendo siconv_proposta.zip e selecionando as propostas… 505,3 MB de 721,1 MB (70%)."
+        },
+        {
+          "at": "2026-10-22T14:36:39.212Z",
+          "message": "Lendo siconv_proposta.zip e selecionando as propostas… 577,5 MB de 721,1 MB (80%)."
+        },
+        {
+          "at": "2026-10-22T14:36:41.601Z",
+          "message": "Lendo siconv_proposta.zip e selecionando as propostas… 678,6 MB de 721,1 MB (90%)."
+        },
+        {
+          "at": "2026-10-22T14:36:42.544Z",
+          "message": "siconv_proposta.zip: 1159431 linha(s) lida(s)."
+        },
+        {
+          "at": "2026-10-22T14:36:42.545Z",
+          "message": "Lendo siconv_plano_aplicacao_detalhado.zip e selecionando itens do PAD…"
+        },
+        {
+          "at": "2026-10-22T14:36:43.208Z",
+          "message": "Lendo siconv_plano_aplicacao_detalhado.zip e selecionando itens do PAD… 12,4 MB de 1.236,6 MB (0%)."
+        },
+        {
+          "at": "2026-10-22T14:36:47.205Z",
+          "message": "Lendo siconv_plano_aplicacao_detalhado.zip e selecionando itens do PAD… 123,8 MB de 1.236,6 MB (10%)."
+        },
+        {
+          "at": "2026-10-22T14:36:51.194Z",
+          "message": "Lendo siconv_plano_aplicacao_detalhado.zip e selecionando itens do PAD… 247,5 MB de 1.236,6 MB (20%)."
+        },
+        {
+          "at": "2026-10-22T14:36:55.197Z",
+          "message": "Lendo siconv_plano_aplicacao_detalhado.zip e selecionando itens do PAD… 371,3 MB de 1.236,6 MB (30%)."
+        },
+        {
+          "at": "2026-10-22T14:36:59.203Z",
+          "message": "Lendo siconv_plano_aplicacao_detalhado.zip e selecionando itens do PAD… 507,4 MB de 1.236,6 MB (40%)."
+        },
+        {
+          "at": "2026-10-22T14:37:03.199Z",
+          "message": "Lendo siconv_plano_aplicacao_detalhado.zip e selecionando itens do PAD… 631,1 MB de 1.236,6 MB (50%)."
+        },
+        {
+          "at": "2026-10-22T14:37:07.202Z",
+          "message": "Lendo siconv_plano_aplicacao_detalhado.zip e selecionando itens do PAD… 742,5 MB de 1.236,6 MB (60%)."
+        },
+        {
+          "at": "2026-10-22T14:37:12.804Z",
+          "message": "Lendo siconv_plano_aplicacao_detalhado.zip e selecionando itens do PAD… 878,6 MB de 1.236,6 MB (70%)."
+        },
+        {
+          "at": "2026-10-22T14:37:16.801Z",
+          "message": "Lendo siconv_plano_aplicacao_detalhado.zip e selecionando itens do PAD… 990 MB de 1.236,6 MB (80%)."
+        },
+        {
+          "at": "2026-10-22T14:37:21.603Z",
+          "message": "Lendo siconv_plano_aplicacao_detalhado.zip e selecionando itens do PAD… 1.138,5 MB de 1.236,6 MB (90%)."
+        },
+        {
+          "at": "2026-10-22T14:37:25.376Z",
+          "message": "siconv_plano_aplicacao_detalhado.zip: 4909723 linha(s) lida(s)."
+        },
+        {
+          "at": "2026-10-22T14:37:25.376Z",
+          "message": "Validando as propostas e preparando a resposta…"
+        },
+        {
+          "at": "2026-10-22T14:37:25.381Z",
+          "message": "Consultando a lista para os textos oficiais…"
+        },
+        {
+          "at": "2026-10-22T14:37:25.582Z",
+          "message": "Baixando siconv_justificativas_proposta.zip…"
+        },
+        {
+          "at": "2026-10-22T14:37:28.008Z",
+          "message": "Baixando siconv_justificativas_proposta.zip… 14,4 MB de 716,5 MB (0%)."
+        },
+        {
+          "at": "2026-10-22T14:37:30.401Z",
+          "message": "Baixando siconv_justificativas_proposta.zip… 78,9 MB de 716,5 MB (10%)."
+        },
+        {
+          "at": "2026-10-22T14:37:32.805Z",
+          "message": "Baixando siconv_justificativas_proposta.zip… 150,6 MB de 716,5 MB (20%)."
+        },
+        {
+          "at": "2026-10-22T14:37:35.212Z",
+          "message": "Baixando siconv_justificativas_proposta.zip… 222,3 MB de 716,5 MB (30%)."
+        },
+        {
+          "at": "2026-10-22T14:37:37.603Z",
+          "message": "Baixando siconv_justificativas_proposta.zip… 294,1 MB de 716,5 MB (40%)."
+        },
+        {
+          "at": "2026-10-22T14:37:40.007Z",
+          "message": "Baixando siconv_justificativas_proposta.zip… 380,1 MB de 716,5 MB (50%)."
+        },
+        {
+          "at": "2026-10-22T14:37:41.694Z",
+          "message": "Baixando siconv_justificativas_proposta.zip… 437,5 MB de 716,5 MB (60%)."
+        },
+        {
+          "at": "2026-10-22T14:37:43.994Z",
+          "message": "Baixando siconv_justificativas_proposta.zip… 502,1 MB de 716,5 MB (70%)."
+        },
+        {
+          "at": "2026-10-22T14:37:46.404Z",
+          "message": "Baixando siconv_justificativas_proposta.zip… 595,3 MB de 716,5 MB (80%)."
+        },
+        {
+          "at": "2026-10-22T14:37:48.802Z",
+          "message": "Baixando siconv_justificativas_proposta.zip… 674,2 MB de 716,5 MB (90%)."
+        },
+        {
+          "at": "2026-10-22T14:37:49.966Z",
+          "message": "siconv_justificativas_proposta.zip: download concluído (751344031 bytes)."
+        },
+        {
+          "at": "2026-10-22T14:37:49.966Z",
+          "message": "Lendo siconv_justificativas_proposta.zip e selecionando textos das propostas…"
+        },
+        {
+          "at": "2026-10-22T14:37:51.201Z",
+          "message": "Lendo siconv_justificativas_proposta.zip e selecionando textos das propostas… 49,8 MB de 2.487,4 MB (0%)."
+        },
+        {
+          "at": "2026-10-22T14:37:55.999Z",
+          "message": "Lendo siconv_justificativas_proposta.zip e selecionando textos das propostas… 273,6 MB de 2.487,4 MB (10%)."
+        },
+        {
+          "at": "2026-10-22T14:38:00.008Z",
+          "message": "Lendo siconv_justificativas_proposta.zip e selecionando textos das propostas… 497,5 MB de 2.487,4 MB (20%)."
+        },
+        {
+          "at": "2026-10-22T14:38:05.605Z",
+          "message": "Lendo siconv_justificativas_proposta.zip e selecionando textos das propostas… 746,3 MB de 2.487,4 MB (30%)."
+        },
+        {
+          "at": "2026-10-22T14:38:10.399Z",
+          "message": "Lendo siconv_justificativas_proposta.zip e selecionando textos das propostas… 995 MB de 2.487,4 MB (40%)."
+        },
+        {
+          "at": "2026-10-22T14:38:15.901Z",
+          "message": "Lendo siconv_justificativas_proposta.zip e selecionando textos das propostas… 1.293,5 MB de 2.487,4 MB (50%)."
+        },
+        {
+          "at": "2026-10-22T14:38:19.208Z",
+          "message": "Lendo siconv_justificativas_proposta.zip e selecionando textos das propostas… 1.492,5 MB de 2.487,4 MB (60%)."
+        },
+        {
+          "at": "2026-10-22T14:38:24.017Z",
+          "message": "Lendo siconv_justificativas_proposta.zip e selecionando textos das propostas… 1.741,3 MB de 2.487,4 MB (70%)."
+        },
+        {
+          "at": "2026-10-22T14:38:28.796Z",
+          "message": "Lendo siconv_justificativas_proposta.zip e selecionando textos das propostas… 1.990 MB de 2.487,4 MB (80%)."
+        },
+        {
+          "at": "2026-10-22T14:38:32.800Z",
+          "message": "Lendo siconv_justificativas_proposta.zip e selecionando textos das propostas… 2.238,8 MB de 2.487,4 MB (90%)."
+        },
+        {
+          "at": "2026-10-22T14:38:39.969Z",
+          "message": "siconv_justificativas_proposta.zip: 1159431 linha(s) lida(s); 19 proposta(s) com textos."
+        },
+        {
+          "at": "2026-10-22T14:38:39.970Z",
+          "message": "Dados e textos recebidos. Aguardando gravação no banco local…"
+        },
+        {
+          "at": "2026-10-22T14:38:39.996Z",
+          "message": "Download concluído. Validando e gravando os dados locais."
+        },
+        {
+          "at": "2026-10-22T14:38:39.998Z",
+          "message": "Validando 19 proposta(s) recebida(s)."
+        },
+        {
+          "at": "2026-10-22T14:38:40.048Z",
+          "message": "Gravando propostas, PAD e textos no banco local."
+        },
+        {
+          "at": "2026-10-22T14:39:05.754Z",
           "message": "Gravação confirmada no banco local."
         }
       ],
