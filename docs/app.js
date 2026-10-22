@@ -361,7 +361,7 @@
      "[object Object]" na célula e no resumo. */
   function nomeUf(uf){return D.UFS[uf] || uf;}
   function ufTone(sit){
-    if(['Apta à celebração'].includes(sit))return 'tom-ok';
+    if(['Aprovada','Apta à celebração'].includes(sit))return 'tom-ok';
     if(['Em diligência','Em elaboração na origem','Requer nova análise','Formalização com cláusula suspensiva'].includes(sit))return 'tom-aviso';
     if(['Apagada do painel','Análise técnica desfavorável'].includes(sit))return 'tom-no';
     return 'tom-neutro';
@@ -465,8 +465,8 @@
   const SOURCE_ROTULO=Object.fromEntries(SOURCE_CHAVES.map(k=>[k,D.sourceState({situacao:SOURCE_SITUACAO[k]}).label]));
   /* Vocabulário do "Status Proposta" — as mesmas saídas de D.situation(), na
      ordem de precedência do domínio. */
-  const STATUS_PROPOSTA=['Em elaboração na origem','Em análise','Em diligência','Requer nova análise','Análise técnica desfavorável','Apta à celebração','Pendente de celebração','Formalização com cláusula suspensiva'];
-  const SIT_CLASSES={'Apta à celebração':'good','Em análise':'work','Análise técnica desfavorável':'bad','Em diligência':'warn','Em elaboração na origem':'warn','Requer nova análise':'warn','Formalização com cláusula suspensiva':'warn','Pendente de celebração':'','Sem proposta importada':'','Apagada do painel':'bad'};
+  const STATUS_PROPOSTA=['Aprovada','Em elaboração na origem','Em análise','Em diligência','Requer nova análise','Análise técnica desfavorável','Apta à celebração','Pendente de celebração','Formalização com cláusula suspensiva'];
+  const SIT_CLASSES={'Aprovada':'good','Apta à celebração':'good','Em análise':'work','Análise técnica desfavorável':'bad','Em diligência':'warn','Em elaboração na origem':'warn','Requer nova análise':'warn','Formalização com cláusula suspensiva':'warn','Pendente de celebração':'','Sem proposta importada':'','Apagada do painel':'bad'};
   function sitBadge(rotulo){return badge(rotulo,SIT_CLASSES[rotulo]!==undefined?SIT_CLASSES[rotulo]:'');}
   /* ---- Molde da linha ----
      As colunas de cada modo, na MESMA ordem do <thead>. O molde monta um <td>
@@ -561,7 +561,7 @@
     const totalDone=all.done,totalReqs=all.total,pct=all.percent;
     const abertas=p.diligences.filter(d=>!D.diligenceTerminal(d)).length;
     const semReg=D.pending(p).length;
-    const allPass=sit==='Apta à celebração';
+    const allPass=['Aprovada','Apta à celebração'].includes(sit);
     const isWarn=['Em diligência','Requer nova análise','Formalização com cláusula suspensiva','Pendente de celebração','Em elaboração na origem'].includes(sit);
     const pillTom=allPass?'status-pass':isWarn?'status-fail':'status-neutral';
 
