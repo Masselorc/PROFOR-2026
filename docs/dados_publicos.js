@@ -1,9 +1,9 @@
-/** Snapshot integral de consulta PROFOR/ONASP 2026. Gerado em 2026-10-22T18:09:41.384Z.
+/** Snapshot integral de consulta PROFOR/ONASP 2026. Gerado em 2026-10-22T18:26:21.745Z.
  * Não editar manualmente. Use tools/build_public_docs.cjs. */
-window.PROFOR_PUBLIC_UPDATED_AT = "2026-10-22T18:09:41.384Z";
+window.PROFOR_PUBLIC_UPDATED_AT = "2026-10-22T18:26:21.745Z";
 window.PROFOR_PUBLIC_DATA = {
   "schemaVersion": 1,
-  "revision": 485,
+  "revision": 493,
   "proposals": [
     {
       "id": "2243618",
@@ -58566,17 +58566,17 @@ window.PROFOR_PUBLIC_DATA = {
             }
           },
           "ouvidoriaInstituida": {
-            "status": "no",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": "2026-10-09T16:09:41.301Z",
+            "at": "2026-10-22T18:19:32.830Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
               "version": 1,
               "ref": "merito:ouvidoriaInstituida",
-              "fingerprint": "fnv64-v1:a27e8ca67caeb499"
+              "fingerprint": "fnv64-v1:1335379bb2cd68e8"
             }
           },
           "ouvidoriaAto": {
@@ -58900,54 +58900,46 @@ window.PROFOR_PUBLIC_DATA = {
         },
         "pad": {
           "17450621": {
-            "status": "reanalise",
+            "status": "ok",
             "note": "Solicita-se corrigir os valores unitários dos notebooks e das TVs de 55 polegadas no Plano de Aplicação Detalhado, pois os valores atualmente registrados não correspondem à média aritmética das três pesquisas de preços apresentadas para cada item.\nPara os notebooks, o PAD registra R$ 4.654,00 por unidade. Nas pesquisas apresentadas, os preços normais identificados são R$ 4.899,90 (Amazon), R$ 6.000,00 (Lenovo) e R$ 5.899,00 (Dell). A soma desses valores é de R$ 16.798,90, que, dividida por três e arredondada ao final para duas casas decimais, resulta em R$ 5.599,63. Assim, o valor unitário do item deve ser corrigido para refletir essa média.\nPara as TVs de 55 polegadas, o PAD registra R$ 2.637,26 por unidade. Os preços normais identificados nas três pesquisas são R$ 2.899,00 (Carrefour), R$ 2.999,00 (Mercado Livre) e R$ 2.807,70 (Leroy Merlin). A soma é de R$ 8.705,70 e a divisão por três resulta na média de R$ 2.901,90. O valor unitário do item deve ser corrigido para essa média.\nSolicita-se apresentar a memória de cálculo de cada item, identificando os três preços utilizados, a soma, a divisão por três e a média resultante, com referência aos respectivos comprovantes.",
             "document": "",
             "url": "",
-            "at": "2026-10-06T15:34:08.420Z",
+            "at": "2026-10-22T18:23:33.740Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
               "version": 1,
               "ref": "pad:17450621",
-              "fingerprint": "fnv64-v1:e7c4899e66ebeaba"
-            },
-            "reanalysis": {
-              "at": "2026-10-19T13:29:17.689Z",
-              "fields": [
-                "imported.pad:17450621"
-              ],
-              "reason": "Evidência alterada; decisão anterior preservada no histórico."
+              "fingerprint": "fnv64-v1:7c1d84b971bd7f71"
             }
           },
           "17450808": {
-            "status": "reanalise",
+            "status": "ok",
             "note": "Solicita-se corrigir os valores unitários dos notebooks e das TVs de 55 polegadas no Plano de Aplicação Detalhado, pois os valores atualmente registrados não correspondem à média aritmética das três pesquisas de preços apresentadas para cada item.\nPara os notebooks, o PAD registra R$ 4.654,00 por unidade. Nas pesquisas apresentadas, os preços normais identificados são R$ 4.899,90 (Amazon), R$ 6.000,00 (Lenovo) e R$ 5.899,00 (Dell). A soma desses valores é de R$ 16.798,90, que, dividida por três e arredondada ao final para duas casas decimais, resulta em R$ 5.599,63. Assim, o valor unitário do item deve ser corrigido para refletir essa média.\nPara as TVs de 55 polegadas, o PAD registra R$ 2.637,26 por unidade. Os preços normais identificados nas três pesquisas são R$ 2.899,00 (Carrefour), R$ 2.999,00 (Mercado Livre) e R$ 2.807,70 (Leroy Merlin). A soma é de R$ 8.705,70 e a divisão por três resulta na média de R$ 2.901,90. O valor unitário do item deve ser corrigido para essa média.\nSolicita-se apresentar a memória de cálculo de cada item, identificando os três preços utilizados, a soma, a divisão por três e a média resultante, com referência aos respectivos comprovantes.",
             "document": "",
             "url": "",
-            "at": "2026-10-06T15:34:08.423Z",
+            "at": "2026-10-22T18:23:33.740Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
               "version": 1,
               "ref": "pad:17450808",
-              "fingerprint": "fnv64-v1:56af64d915935be5"
-            },
-            "reanalysis": {
-              "at": "2026-10-19T13:29:17.689Z",
-              "fields": [
-                "imported.pad:17450808"
-              ],
-              "reason": "Evidência alterada; decisão anterior preservada no histórico."
+              "fingerprint": "fnv64-v1:8b16b34df4c72b77"
             }
           },
           "17496477": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-22T18:23:33.740Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17496477",
+              "fingerprint": "fnv64-v1:15673668c49b9548"
+            }
           }
         }
       },
@@ -58960,14 +58952,24 @@ window.PROFOR_PUBLIC_DATA = {
           "communication": "2026-10-06",
           "science": "",
           "response": "",
-          "status": "aberta",
+          "status": "baixada",
           "note": "",
-          "at": "2026-10-06T15:34:08.421Z",
+          "at": "2026-10-22T18:23:33.740Z",
           "base": "2026-10-16",
           "due": "2026-10-16",
           "automaticDeadline": true,
           "confirmed": false,
-          "calendarNote": ""
+          "calendarNote": "",
+          "closedByReview": {
+            "proposalId": "2243822",
+            "group": "pad",
+            "item": "17450621",
+            "ref": "pad:17450621",
+            "at": "2026-10-22T18:23:33.740Z",
+            "reason": "Encerrada por confirmação de conformidade do requisito",
+            "actor": "Usuário local",
+            "confirmedBy": "Usuário local"
+          }
         },
         {
           "id": "64588d9d-af48-4eb1-825a-035239a73480",
@@ -58977,14 +58979,24 @@ window.PROFOR_PUBLIC_DATA = {
           "communication": "2026-10-06",
           "science": "",
           "response": "",
-          "status": "aberta",
+          "status": "baixada",
           "note": "",
-          "at": "2026-10-06T15:34:08.423Z",
+          "at": "2026-10-22T18:23:33.740Z",
           "base": "2026-10-16",
           "due": "2026-10-16",
           "automaticDeadline": true,
           "confirmed": false,
-          "calendarNote": ""
+          "calendarNote": "",
+          "closedByReview": {
+            "proposalId": "2243822",
+            "group": "pad",
+            "item": "17450808",
+            "ref": "pad:17450808",
+            "at": "2026-10-22T18:23:33.740Z",
+            "reason": "Encerrada por confirmação de conformidade do requisito",
+            "actor": "Usuário local",
+            "confirmedBy": "Usuário local"
+          }
         },
         {
           "id": "668ef957-9b28-4b73-8d7d-46dd30ed20f2",
@@ -59006,7 +59018,7 @@ window.PROFOR_PUBLIC_DATA = {
         }
       ],
       "ouvidoria": {
-        "status": "pendente",
+        "status": "instituida",
         "signature": "",
         "url": "",
         "note": "",
@@ -60891,6 +60903,309 @@ window.PROFOR_PUBLIC_DATA = {
           },
           "after": {
             "at": "2026-10-22T14:38:40.048Z"
+          }
+        },
+        {
+          "at": "2026-10-22T18:19:32.831Z",
+          "event": "Informações institucionais atualizadas",
+          "actor": "Usuário local",
+          "before": {
+            "ouvidoria": {
+              "status": "pendente",
+              "signature": "",
+              "url": "",
+              "note": "",
+              "clause": false
+            },
+            "falaBR": "aderido"
+          },
+          "after": {
+            "ouvidoria": {
+              "status": "instituida",
+              "signature": "",
+              "url": "",
+              "note": "",
+              "clause": false
+            },
+            "falaBR": "aderido"
+          }
+        },
+        {
+          "at": "2026-10-22T18:19:32.831Z",
+          "event": "Reanálise: merito:ouvidoriaInstituida",
+          "actor": "Usuário local",
+          "before": {
+            "status": "no",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-09T16:09:41.301Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:ouvidoriaInstituida",
+              "fingerprint": "fnv64-v1:a27e8ca67caeb499"
+            }
+          },
+          "after": {
+            "status": "reanalise",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-09T16:09:41.301Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:ouvidoriaInstituida",
+              "fingerprint": "fnv64-v1:a27e8ca67caeb499"
+            },
+            "reanalysis": {
+              "at": "2026-10-22T18:19:32.831Z",
+              "fields": [
+                "ouvidoria"
+              ],
+              "reason": "Evidência alterada; decisão anterior preservada no histórico."
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T18:19:32.831Z",
+          "event": "Avaliação: merito / ouvidoriaInstituida",
+          "actor": "Usuário local",
+          "before": {
+            "status": "no",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-09T16:09:41.301Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:ouvidoriaInstituida",
+              "fingerprint": "fnv64-v1:a27e8ca67caeb499"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T18:19:32.830Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:ouvidoriaInstituida",
+              "fingerprint": "fnv64-v1:1335379bb2cd68e8"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T18:23:33.740Z",
+          "event": "Avaliação: pad / 17450621",
+          "actor": "Usuário local",
+          "before": {
+            "status": "reanalise",
+            "note": "Solicita-se corrigir os valores unitários dos notebooks e das TVs de 55 polegadas no Plano de Aplicação Detalhado, pois os valores atualmente registrados não correspondem à média aritmética das três pesquisas de preços apresentadas para cada item.\nPara os notebooks, o PAD registra R$ 4.654,00 por unidade. Nas pesquisas apresentadas, os preços normais identificados são R$ 4.899,90 (Amazon), R$ 6.000,00 (Lenovo) e R$ 5.899,00 (Dell). A soma desses valores é de R$ 16.798,90, que, dividida por três e arredondada ao final para duas casas decimais, resulta em R$ 5.599,63. Assim, o valor unitário do item deve ser corrigido para refletir essa média.\nPara as TVs de 55 polegadas, o PAD registra R$ 2.637,26 por unidade. Os preços normais identificados nas três pesquisas são R$ 2.899,00 (Carrefour), R$ 2.999,00 (Mercado Livre) e R$ 2.807,70 (Leroy Merlin). A soma é de R$ 8.705,70 e a divisão por três resulta na média de R$ 2.901,90. O valor unitário do item deve ser corrigido para essa média.\nSolicita-se apresentar a memória de cálculo de cada item, identificando os três preços utilizados, a soma, a divisão por três e a média resultante, com referência aos respectivos comprovantes.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-06T15:34:08.420Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17450621",
+              "fingerprint": "fnv64-v1:e7c4899e66ebeaba"
+            },
+            "reanalysis": {
+              "at": "2026-10-19T13:29:17.689Z",
+              "fields": [
+                "imported.pad:17450621"
+              ],
+              "reason": "Evidência alterada; decisão anterior preservada no histórico."
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Solicita-se corrigir os valores unitários dos notebooks e das TVs de 55 polegadas no Plano de Aplicação Detalhado, pois os valores atualmente registrados não correspondem à média aritmética das três pesquisas de preços apresentadas para cada item.\nPara os notebooks, o PAD registra R$ 4.654,00 por unidade. Nas pesquisas apresentadas, os preços normais identificados são R$ 4.899,90 (Amazon), R$ 6.000,00 (Lenovo) e R$ 5.899,00 (Dell). A soma desses valores é de R$ 16.798,90, que, dividida por três e arredondada ao final para duas casas decimais, resulta em R$ 5.599,63. Assim, o valor unitário do item deve ser corrigido para refletir essa média.\nPara as TVs de 55 polegadas, o PAD registra R$ 2.637,26 por unidade. Os preços normais identificados nas três pesquisas são R$ 2.899,00 (Carrefour), R$ 2.999,00 (Mercado Livre) e R$ 2.807,70 (Leroy Merlin). A soma é de R$ 8.705,70 e a divisão por três resulta na média de R$ 2.901,90. O valor unitário do item deve ser corrigido para essa média.\nSolicita-se apresentar a memória de cálculo de cada item, identificando os três preços utilizados, a soma, a divisão por três e a média resultante, com referência aos respectivos comprovantes.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T18:23:33.740Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17450621",
+              "fingerprint": "fnv64-v1:7c1d84b971bd7f71"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T18:23:33.740Z",
+          "event": "Diligência encerrada por atendimento do requisito",
+          "actor": "Usuário local",
+          "before": {
+            "id": "0a662b25-3542-4d58-90bf-936c998d18fb",
+            "ref": "pad:17450621",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Solicita-se corrigir os valores unitários dos notebooks e das TVs de 55 polegadas no Plano de Aplicação Detalhado, pois os valores atualmente registrados não correspondem à média aritmética das três pesquisas de preços apresentadas para cada item.\nPara os notebooks, o PAD registra R$ 4.654,00 por unidade. Nas pesquisas apresentadas, os preços normais identificados são R$ 4.899,90 (Amazon), R$ 6.000,00 (Lenovo) e R$ 5.899,00 (Dell). A soma desses valores é de R$ 16.798,90, que, dividida por três e arredondada ao final para duas casas decimais, resulta em R$ 5.599,63. Assim, o valor unitário do item deve ser corrigido para refletir essa média.\nPara as TVs de 55 polegadas, o PAD registra R$ 2.637,26 por unidade. Os preços normais identificados nas três pesquisas são R$ 2.899,00 (Carrefour), R$ 2.999,00 (Mercado Livre) e R$ 2.807,70 (Leroy Merlin). A soma é de R$ 8.705,70 e a divisão por três resulta na média de R$ 2.901,90. O valor unitário do item deve ser corrigido para essa média.\nSolicita-se apresentar a memória de cálculo de cada item, identificando os três preços utilizados, a soma, a divisão por três e a média resultante, com referência aos respectivos comprovantes.",
+            "communication": "2026-10-06",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-06T15:34:08.421Z",
+            "base": "2026-10-16",
+            "due": "2026-10-16",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          },
+          "after": {
+            "id": "0a662b25-3542-4d58-90bf-936c998d18fb",
+            "ref": "pad:17450621",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Solicita-se corrigir os valores unitários dos notebooks e das TVs de 55 polegadas no Plano de Aplicação Detalhado, pois os valores atualmente registrados não correspondem à média aritmética das três pesquisas de preços apresentadas para cada item.\nPara os notebooks, o PAD registra R$ 4.654,00 por unidade. Nas pesquisas apresentadas, os preços normais identificados são R$ 4.899,90 (Amazon), R$ 6.000,00 (Lenovo) e R$ 5.899,00 (Dell). A soma desses valores é de R$ 16.798,90, que, dividida por três e arredondada ao final para duas casas decimais, resulta em R$ 5.599,63. Assim, o valor unitário do item deve ser corrigido para refletir essa média.\nPara as TVs de 55 polegadas, o PAD registra R$ 2.637,26 por unidade. Os preços normais identificados nas três pesquisas são R$ 2.899,00 (Carrefour), R$ 2.999,00 (Mercado Livre) e R$ 2.807,70 (Leroy Merlin). A soma é de R$ 8.705,70 e a divisão por três resulta na média de R$ 2.901,90. O valor unitário do item deve ser corrigido para essa média.\nSolicita-se apresentar a memória de cálculo de cada item, identificando os três preços utilizados, a soma, a divisão por três e a média resultante, com referência aos respectivos comprovantes.",
+            "communication": "2026-10-06",
+            "science": "",
+            "response": "",
+            "status": "baixada",
+            "note": "",
+            "at": "2026-10-22T18:23:33.740Z",
+            "base": "2026-10-16",
+            "due": "2026-10-16",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": "",
+            "closedByReview": {
+              "proposalId": "2243822",
+              "group": "pad",
+              "item": "17450621",
+              "ref": "pad:17450621",
+              "at": "2026-10-22T18:23:33.740Z",
+              "reason": "Encerrada por confirmação de conformidade do requisito",
+              "actor": "Usuário local",
+              "confirmedBy": "Usuário local"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T18:23:33.740Z",
+          "event": "Avaliação: pad / 17496477",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T18:23:33.740Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17496477",
+              "fingerprint": "fnv64-v1:15673668c49b9548"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T18:23:33.740Z",
+          "event": "Avaliação: pad / 17450808",
+          "actor": "Usuário local",
+          "before": {
+            "status": "reanalise",
+            "note": "Solicita-se corrigir os valores unitários dos notebooks e das TVs de 55 polegadas no Plano de Aplicação Detalhado, pois os valores atualmente registrados não correspondem à média aritmética das três pesquisas de preços apresentadas para cada item.\nPara os notebooks, o PAD registra R$ 4.654,00 por unidade. Nas pesquisas apresentadas, os preços normais identificados são R$ 4.899,90 (Amazon), R$ 6.000,00 (Lenovo) e R$ 5.899,00 (Dell). A soma desses valores é de R$ 16.798,90, que, dividida por três e arredondada ao final para duas casas decimais, resulta em R$ 5.599,63. Assim, o valor unitário do item deve ser corrigido para refletir essa média.\nPara as TVs de 55 polegadas, o PAD registra R$ 2.637,26 por unidade. Os preços normais identificados nas três pesquisas são R$ 2.899,00 (Carrefour), R$ 2.999,00 (Mercado Livre) e R$ 2.807,70 (Leroy Merlin). A soma é de R$ 8.705,70 e a divisão por três resulta na média de R$ 2.901,90. O valor unitário do item deve ser corrigido para essa média.\nSolicita-se apresentar a memória de cálculo de cada item, identificando os três preços utilizados, a soma, a divisão por três e a média resultante, com referência aos respectivos comprovantes.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-06T15:34:08.423Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17450808",
+              "fingerprint": "fnv64-v1:56af64d915935be5"
+            },
+            "reanalysis": {
+              "at": "2026-10-19T13:29:17.689Z",
+              "fields": [
+                "imported.pad:17450808"
+              ],
+              "reason": "Evidência alterada; decisão anterior preservada no histórico."
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Solicita-se corrigir os valores unitários dos notebooks e das TVs de 55 polegadas no Plano de Aplicação Detalhado, pois os valores atualmente registrados não correspondem à média aritmética das três pesquisas de preços apresentadas para cada item.\nPara os notebooks, o PAD registra R$ 4.654,00 por unidade. Nas pesquisas apresentadas, os preços normais identificados são R$ 4.899,90 (Amazon), R$ 6.000,00 (Lenovo) e R$ 5.899,00 (Dell). A soma desses valores é de R$ 16.798,90, que, dividida por três e arredondada ao final para duas casas decimais, resulta em R$ 5.599,63. Assim, o valor unitário do item deve ser corrigido para refletir essa média.\nPara as TVs de 55 polegadas, o PAD registra R$ 2.637,26 por unidade. Os preços normais identificados nas três pesquisas são R$ 2.899,00 (Carrefour), R$ 2.999,00 (Mercado Livre) e R$ 2.807,70 (Leroy Merlin). A soma é de R$ 8.705,70 e a divisão por três resulta na média de R$ 2.901,90. O valor unitário do item deve ser corrigido para essa média.\nSolicita-se apresentar a memória de cálculo de cada item, identificando os três preços utilizados, a soma, a divisão por três e a média resultante, com referência aos respectivos comprovantes.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T18:23:33.740Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17450808",
+              "fingerprint": "fnv64-v1:8b16b34df4c72b77"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T18:23:33.740Z",
+          "event": "Diligência encerrada por atendimento do requisito",
+          "actor": "Usuário local",
+          "before": {
+            "id": "64588d9d-af48-4eb1-825a-035239a73480",
+            "ref": "pad:17450808",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Solicita-se corrigir os valores unitários dos notebooks e das TVs de 55 polegadas no Plano de Aplicação Detalhado, pois os valores atualmente registrados não correspondem à média aritmética das três pesquisas de preços apresentadas para cada item.\nPara os notebooks, o PAD registra R$ 4.654,00 por unidade. Nas pesquisas apresentadas, os preços normais identificados são R$ 4.899,90 (Amazon), R$ 6.000,00 (Lenovo) e R$ 5.899,00 (Dell). A soma desses valores é de R$ 16.798,90, que, dividida por três e arredondada ao final para duas casas decimais, resulta em R$ 5.599,63. Assim, o valor unitário do item deve ser corrigido para refletir essa média.\nPara as TVs de 55 polegadas, o PAD registra R$ 2.637,26 por unidade. Os preços normais identificados nas três pesquisas são R$ 2.899,00 (Carrefour), R$ 2.999,00 (Mercado Livre) e R$ 2.807,70 (Leroy Merlin). A soma é de R$ 8.705,70 e a divisão por três resulta na média de R$ 2.901,90. O valor unitário do item deve ser corrigido para essa média.\nSolicita-se apresentar a memória de cálculo de cada item, identificando os três preços utilizados, a soma, a divisão por três e a média resultante, com referência aos respectivos comprovantes.",
+            "communication": "2026-10-06",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-06T15:34:08.423Z",
+            "base": "2026-10-16",
+            "due": "2026-10-16",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          },
+          "after": {
+            "id": "64588d9d-af48-4eb1-825a-035239a73480",
+            "ref": "pad:17450808",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Solicita-se corrigir os valores unitários dos notebooks e das TVs de 55 polegadas no Plano de Aplicação Detalhado, pois os valores atualmente registrados não correspondem à média aritmética das três pesquisas de preços apresentadas para cada item.\nPara os notebooks, o PAD registra R$ 4.654,00 por unidade. Nas pesquisas apresentadas, os preços normais identificados são R$ 4.899,90 (Amazon), R$ 6.000,00 (Lenovo) e R$ 5.899,00 (Dell). A soma desses valores é de R$ 16.798,90, que, dividida por três e arredondada ao final para duas casas decimais, resulta em R$ 5.599,63. Assim, o valor unitário do item deve ser corrigido para refletir essa média.\nPara as TVs de 55 polegadas, o PAD registra R$ 2.637,26 por unidade. Os preços normais identificados nas três pesquisas são R$ 2.899,00 (Carrefour), R$ 2.999,00 (Mercado Livre) e R$ 2.807,70 (Leroy Merlin). A soma é de R$ 8.705,70 e a divisão por três resulta na média de R$ 2.901,90. O valor unitário do item deve ser corrigido para essa média.\nSolicita-se apresentar a memória de cálculo de cada item, identificando os três preços utilizados, a soma, a divisão por três e a média resultante, com referência aos respectivos comprovantes.",
+            "communication": "2026-10-06",
+            "science": "",
+            "response": "",
+            "status": "baixada",
+            "note": "",
+            "at": "2026-10-22T18:23:33.740Z",
+            "base": "2026-10-16",
+            "due": "2026-10-16",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": "",
+            "closedByReview": {
+              "proposalId": "2243822",
+              "group": "pad",
+              "item": "17450808",
+              "ref": "pad:17450808",
+              "at": "2026-10-22T18:23:33.740Z",
+              "reason": "Encerrada por confirmação de conformidade do requisito",
+              "actor": "Usuário local",
+              "confirmedBy": "Usuário local"
+            }
           }
         }
       ],
@@ -81424,31 +81739,31 @@ window.PROFOR_PUBLIC_DATA = {
             }
           },
           "ouvidoriaInstituida": {
-            "status": "no",
-            "note": "",
+            "status": "ok",
+            "note": "Ouvidoria ainda não instituída. O convênio servirá para fomentar a sua criação.",
             "document": "",
             "url": "",
-            "at": "2026-10-05T18:30:06.903Z",
+            "at": "2026-10-22T18:14:39.208Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
               "version": 1,
               "ref": "merito:ouvidoriaInstituida",
-              "fingerprint": "fnv64-v1:a27e8ca67caeb499"
+              "fingerprint": "fnv64-v1:1335379bb2cd68e8"
             }
           },
           "falaBRAdesao": {
-            "status": "no",
+            "status": "obs",
             "note": "",
             "document": "",
             "url": "",
-            "at": "2026-10-05T18:30:32.442Z",
+            "at": "2026-10-22T18:15:13.756Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
               "version": 1,
               "ref": "merito:falaBRAdesao",
-              "fingerprint": "fnv64-v1:20325664b9ae9846"
+              "fingerprint": "fnv64-v1:21d99edf76c0ac39"
             }
           }
         },
@@ -81524,11 +81839,11 @@ window.PROFOR_PUBLIC_DATA = {
             }
           },
           "7": {
-            "status": "diligencia",
+            "status": "ok",
             "note": "QDD faltando.",
             "document": "",
             "url": "",
-            "at": "2026-10-05T18:32:24.831Z",
+            "at": "2026-10-22T18:16:24.895Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
@@ -82142,14 +82457,24 @@ window.PROFOR_PUBLIC_DATA = {
           "category": "OUTRO",
           "communication": "",
           "response": "",
-          "status": "aberta",
+          "status": "baixada",
           "note": "",
-          "at": "2026-10-05T18:32:24.831Z",
+          "at": "2026-10-22T18:16:24.895Z",
           "base": "",
           "due": "",
           "automaticDeadline": true,
           "confirmed": false,
-          "calendarNote": ""
+          "calendarNote": "",
+          "closedByReview": {
+            "proposalId": "2247131",
+            "group": "celebracao",
+            "item": "7",
+            "ref": "celebracao:7",
+            "at": "2026-10-22T18:16:24.895Z",
+            "reason": "Encerrada por confirmação de conformidade do requisito",
+            "actor": "Usuário local",
+            "confirmedBy": "Usuário local"
+          }
         },
         {
           "id": "5aa03328-0d84-48b5-9d16-aec58d6b9ac0",
@@ -82197,14 +82522,25 @@ window.PROFOR_PUBLIC_DATA = {
         }
       ],
       "ouvidoria": {
-        "status": "pendente",
+        "status": "instituida",
         "signature": "",
         "url": "",
         "note": "",
         "clause": false
       },
-      "falaBR": "nao_previsto",
-      "conclusion": null,
+      "falaBR": "previsto",
+      "conclusion": {
+        "result": "favoravel",
+        "note": "aprovado",
+        "reference": "aprovado",
+        "actor": "Usuário local",
+        "at": "2026-10-22T18:17:39.402Z",
+        "evidence": {
+          "version": 1,
+          "fingerprint": "fnv64-v1:9e254f6c796501ec"
+        },
+        "operationId": "c9b92443-7ee4-4ca2-b407-6f02d8d30b73"
+      },
       "history": [
         {
           "at": "2026-10-01T13:55:12.637Z",
@@ -85019,6 +85355,433 @@ window.PROFOR_PUBLIC_DATA = {
           },
           "after": {
             "at": "2026-10-22T14:38:40.048Z"
+          }
+        },
+        {
+          "at": "2026-10-22T18:12:49.941Z",
+          "event": "Informações institucionais atualizadas",
+          "actor": "Usuário local",
+          "before": {
+            "ouvidoria": {
+              "status": "pendente",
+              "signature": "",
+              "url": "",
+              "note": "",
+              "clause": false
+            },
+            "falaBR": "nao_previsto"
+          },
+          "after": {
+            "ouvidoria": {
+              "status": "pendente",
+              "signature": "",
+              "url": "",
+              "note": "",
+              "clause": false
+            },
+            "falaBR": "aderido"
+          }
+        },
+        {
+          "at": "2026-10-22T18:12:49.942Z",
+          "event": "Reanálise: merito:falaBRAdesao",
+          "actor": "Usuário local",
+          "before": {
+            "status": "no",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T18:30:32.442Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:falaBRAdesao",
+              "fingerprint": "fnv64-v1:20325664b9ae9846"
+            }
+          },
+          "after": {
+            "status": "reanalise",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T18:30:32.442Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:falaBRAdesao",
+              "fingerprint": "fnv64-v1:20325664b9ae9846"
+            },
+            "reanalysis": {
+              "at": "2026-10-22T18:12:49.942Z",
+              "fields": [
+                "falaBR"
+              ],
+              "reason": "Evidência alterada; decisão anterior preservada no histórico."
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T18:12:49.942Z",
+          "event": "Avaliação: merito / falaBRAdesao",
+          "actor": "Usuário local",
+          "before": {
+            "status": "no",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T18:30:32.442Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:falaBRAdesao",
+              "fingerprint": "fnv64-v1:20325664b9ae9846"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T18:12:49.941Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:falaBRAdesao",
+              "fingerprint": "fnv64-v1:004c4d5a1ab27921"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T18:13:41.786Z",
+          "event": "Informações institucionais atualizadas",
+          "actor": "Usuário local",
+          "before": {
+            "ouvidoria": {
+              "status": "pendente",
+              "signature": "",
+              "url": "",
+              "note": "",
+              "clause": false
+            },
+            "falaBR": "aderido"
+          },
+          "after": {
+            "ouvidoria": {
+              "status": "instituida",
+              "signature": "",
+              "url": "",
+              "note": "",
+              "clause": false
+            },
+            "falaBR": "aderido"
+          }
+        },
+        {
+          "at": "2026-10-22T18:13:41.786Z",
+          "event": "Reanálise: merito:ouvidoriaInstituida",
+          "actor": "Usuário local",
+          "before": {
+            "status": "no",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T18:30:06.903Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:ouvidoriaInstituida",
+              "fingerprint": "fnv64-v1:a27e8ca67caeb499"
+            }
+          },
+          "after": {
+            "status": "reanalise",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T18:30:06.903Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:ouvidoriaInstituida",
+              "fingerprint": "fnv64-v1:a27e8ca67caeb499"
+            },
+            "reanalysis": {
+              "at": "2026-10-22T18:13:41.786Z",
+              "fields": [
+                "ouvidoria"
+              ],
+              "reason": "Evidência alterada; decisão anterior preservada no histórico."
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T18:13:41.786Z",
+          "event": "Avaliação: merito / ouvidoriaInstituida",
+          "actor": "Usuário local",
+          "before": {
+            "status": "no",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T18:30:06.903Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:ouvidoriaInstituida",
+              "fingerprint": "fnv64-v1:a27e8ca67caeb499"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T18:13:41.786Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:ouvidoriaInstituida",
+              "fingerprint": "fnv64-v1:1335379bb2cd68e8"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T18:14:39.208Z",
+          "event": "Avaliação: merito / ouvidoriaInstituida",
+          "actor": "Usuário local",
+          "before": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T18:13:41.786Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:ouvidoriaInstituida",
+              "fingerprint": "fnv64-v1:1335379bb2cd68e8"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Ouvidoria ainda não instituída. O convênio servirá para fomentar a sua criação.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T18:14:39.208Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:ouvidoriaInstituida",
+              "fingerprint": "fnv64-v1:1335379bb2cd68e8"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T18:15:13.756Z",
+          "event": "Informações institucionais atualizadas",
+          "actor": "Usuário local",
+          "before": {
+            "ouvidoria": {
+              "status": "instituida",
+              "signature": "",
+              "url": "",
+              "note": "",
+              "clause": false
+            },
+            "falaBR": "aderido"
+          },
+          "after": {
+            "ouvidoria": {
+              "status": "instituida",
+              "signature": "",
+              "url": "",
+              "note": "",
+              "clause": false
+            },
+            "falaBR": "previsto"
+          }
+        },
+        {
+          "at": "2026-10-22T18:15:13.756Z",
+          "event": "Reanálise: merito:falaBRAdesao",
+          "actor": "Usuário local",
+          "before": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T18:12:49.941Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:falaBRAdesao",
+              "fingerprint": "fnv64-v1:004c4d5a1ab27921"
+            }
+          },
+          "after": {
+            "status": "reanalise",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T18:12:49.941Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:falaBRAdesao",
+              "fingerprint": "fnv64-v1:004c4d5a1ab27921"
+            },
+            "reanalysis": {
+              "at": "2026-10-22T18:15:13.756Z",
+              "fields": [
+                "falaBR"
+              ],
+              "reason": "Evidência alterada; decisão anterior preservada no histórico."
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T18:15:13.756Z",
+          "event": "Avaliação: merito / falaBRAdesao",
+          "actor": "Usuário local",
+          "before": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T18:12:49.941Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:falaBRAdesao",
+              "fingerprint": "fnv64-v1:004c4d5a1ab27921"
+            }
+          },
+          "after": {
+            "status": "obs",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T18:15:13.756Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:falaBRAdesao",
+              "fingerprint": "fnv64-v1:21d99edf76c0ac39"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T18:16:24.895Z",
+          "event": "Avaliação: celebracao / 7",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "QDD faltando.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T18:32:24.831Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:7",
+              "fingerprint": "fnv64-v1:ea6fac0201f4f8e2"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "QDD faltando.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T18:16:24.895Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:7",
+              "fingerprint": "fnv64-v1:ea6fac0201f4f8e2"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T18:16:24.895Z",
+          "event": "Diligência encerrada por atendimento do requisito",
+          "actor": "Usuário local",
+          "before": {
+            "id": "3324199e-4a5b-440a-8264-4f01aef2b32b",
+            "ref": "celebracao:7",
+            "request": "QDD faltando.",
+            "science": "",
+            "category": "OUTRO",
+            "communication": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-05T18:32:24.831Z",
+            "base": "",
+            "due": "",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          },
+          "after": {
+            "id": "3324199e-4a5b-440a-8264-4f01aef2b32b",
+            "ref": "celebracao:7",
+            "request": "QDD faltando.",
+            "science": "",
+            "category": "OUTRO",
+            "communication": "",
+            "response": "",
+            "status": "baixada",
+            "note": "",
+            "at": "2026-10-22T18:16:24.895Z",
+            "base": "",
+            "due": "",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": "",
+            "closedByReview": {
+              "proposalId": "2247131",
+              "group": "celebracao",
+              "item": "7",
+              "ref": "celebracao:7",
+              "at": "2026-10-22T18:16:24.895Z",
+              "reason": "Encerrada por confirmação de conformidade do requisito",
+              "actor": "Usuário local",
+              "confirmedBy": "Usuário local"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T18:17:39.402Z",
+          "event": "Conclusão da análise técnica registrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "result": "favoravel",
+            "note": "aprovado",
+            "reference": "aprovado",
+            "actor": "Usuário local",
+            "at": "2026-10-22T18:17:39.402Z",
+            "evidence": {
+              "version": 1,
+              "fingerprint": "fnv64-v1:9e254f6c796501ec"
+            },
+            "operationId": "c9b92443-7ee4-4ca2-b407-6f02d8d30b73"
           }
         }
       ],
