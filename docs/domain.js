@@ -676,12 +676,13 @@
   }
   function situation(p) {
     if(p.conclusion && !conclusionCurrent(p))return 'Requer nova análise';
+    // O painel reflete a conclusão técnica vigente. Pendências posteriores
+    // continuam nos controles de celebração, sem substituir o resultado salvo.
+    if(conclusionCurrent(p) && p.conclusion.result==='favoravel')return 'Aprovada';
     if(p?.imported && sourceState(p.imported).key==='cadastrada')return 'Em elaboração na origem';
     if(pending(p).length || p.diligences.some(d=>!diligenceTerminal(d)))return 'Em diligência';
     if(referenceRows(p).some(r=>r.review.status==='reanalise'))return 'Requer nova análise';
     if(conclusionCurrent(p) && p.conclusion.result==='desfavoravel')return 'Análise técnica desfavorável';
-    if(aptForCelebration(p))return p.ouvidoria.status==='pendente'?'Formalização com cláusula suspensiva':'Apta à celebração';
-    if(p.conclusion)return 'Pendente de celebração';
     return 'Em análise';
   }
   function diligenceEvidence(d){const {at,...material}=d;return material;}

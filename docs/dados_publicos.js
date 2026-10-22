@@ -1,9 +1,9 @@
-/** Snapshot integral de consulta PROFOR/ONASP 2026. Gerado em 2026-10-22T18:35:01.170Z.
+/** Snapshot integral de consulta PROFOR/ONASP 2026. Gerado em 2026-10-22T19:46:32.955Z.
  * Não editar manualmente. Use tools/build_public_docs.cjs. */
-window.PROFOR_PUBLIC_UPDATED_AT = "2026-10-22T18:35:01.170Z";
+window.PROFOR_PUBLIC_UPDATED_AT = "2026-10-22T19:46:32.955Z";
 window.PROFOR_PUBLIC_DATA = {
   "schemaVersion": 1,
-  "revision": 495,
+  "revision": 509,
   "proposals": [
     {
       "id": "2243618",
@@ -66747,7 +66747,7 @@ window.PROFOR_PUBLIC_DATA = {
             "note": "",
             "document": "",
             "url": "",
-            "at": "2026-10-05T18:19:26.618Z",
+            "at": "2026-10-22T18:38:38.903Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
@@ -66773,11 +66773,11 @@ window.PROFOR_PUBLIC_DATA = {
             }
           },
           "3": {
-            "status": "diligencia",
+            "status": "ok",
             "note": "Fala.BR - incluir manifestação a respeito da plataforma Fala.br no Plano de trabalho.\nSolicita-se corrigir os valores do Plano de Trabalho para que constem: repasse de R$ 200.000,00, contrapartida de R$ 200,21 e valor total de R$ 200.200,21.",
             "document": "",
             "url": "",
-            "at": "2026-10-06T13:36:13.416Z",
+            "at": "2026-10-22T18:39:20.294Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
@@ -66815,51 +66815,31 @@ window.PROFOR_PUBLIC_DATA = {
             }
           },
           "6": {
-            "status": "reanalise",
+            "status": "ok",
             "note": "Falta o documento",
             "document": "",
             "url": "",
-            "at": "2026-10-06T12:48:06.951Z",
+            "at": "2026-10-22T18:39:20.295Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
               "version": 1,
               "ref": "celebracao:6",
-              "fingerprint": "fnv64-v1:44eb105b99d965cf"
-            },
-            "reanalysis": {
-              "at": "2026-10-19T13:29:17.680Z",
-              "fields": [
-                "imported.repasse",
-                "imported.contrapartida",
-                "imported.global",
-                "imported.pad"
-              ],
-              "reason": "Evidência alterada; decisão anterior preservada no histórico."
+              "fingerprint": "fnv64-v1:09ef29ca63d018fb"
             }
           },
           "7": {
-            "status": "reanalise",
+            "status": "ok",
             "note": "Falta: Declaração de contrapartida corrigida para R$ 200,21",
             "document": "",
             "url": "",
-            "at": "2026-10-06T13:38:23.839Z",
+            "at": "2026-10-22T18:39:20.296Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
               "version": 1,
               "ref": "celebracao:7",
-              "fingerprint": "fnv64-v1:ebe42b5fecc77703"
-            },
-            "reanalysis": {
-              "at": "2026-10-19T13:29:17.681Z",
-              "fields": [
-                "imported.repasse",
-                "imported.contrapartida",
-                "imported.global",
-                "imported.pad"
-              ],
-              "reason": "Evidência alterada; decisão anterior preservada no histórico."
+              "fingerprint": "fnv64-v1:a9e75ba13ece4840"
             }
           },
           "8": {
@@ -66947,11 +66927,11 @@ window.PROFOR_PUBLIC_DATA = {
             }
           },
           "14": {
-            "status": "diligencia",
+            "status": "ok",
             "note": "Falta: Declaração de regularidade na contratação de operação de crédito.",
             "document": "",
             "url": "",
-            "at": "2026-10-05T18:23:19.276Z",
+            "at": "2026-10-22T18:40:50.146Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
@@ -67061,24 +67041,17 @@ window.PROFOR_PUBLIC_DATA = {
             }
           },
           "17455011": {
-            "status": "reanalise",
+            "status": "ok",
             "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
             "document": "",
             "url": "",
-            "at": "2026-10-05T17:27:17.318Z",
+            "at": "2026-10-22T18:50:04.746Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
               "version": 1,
               "ref": "pad:17455011",
-              "fingerprint": "fnv64-v1:c05551ec9783afa4"
-            },
-            "reanalysis": {
-              "at": "2026-10-19T13:29:17.679Z",
-              "fields": [
-                "imported.pad:17455011"
-              ],
-              "reason": "Evidência alterada; decisão anterior preservada no histórico."
+              "fingerprint": "fnv64-v1:03645946527a69b6"
             }
           },
           "17455013": {
@@ -67096,24 +67069,17 @@ window.PROFOR_PUBLIC_DATA = {
             }
           },
           "17455015": {
-            "status": "reanalise",
+            "status": "ok",
             "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
             "document": "",
             "url": "",
-            "at": "2026-10-05T17:27:17.318Z",
+            "at": "2026-10-22T18:50:04.745Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
               "version": 1,
               "ref": "pad:17455015",
-              "fingerprint": "fnv64-v1:357428fc6a940f53"
-            },
-            "reanalysis": {
-              "at": "2026-10-19T13:29:17.678Z",
-              "fields": [
-                "imported.pad:17455015"
-              ],
-              "reason": "Evidência alterada; decisão anterior preservada no histórico."
+              "fingerprint": "fnv64-v1:caba36a75d04f017"
             }
           },
           "17455016": {
@@ -67131,108 +67097,73 @@ window.PROFOR_PUBLIC_DATA = {
             }
           },
           "17455017": {
-            "status": "reanalise",
+            "status": "ok",
             "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
             "document": "",
             "url": "",
-            "at": "2026-10-05T17:27:17.318Z",
+            "at": "2026-10-22T18:50:04.746Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
               "version": 1,
               "ref": "pad:17455017",
-              "fingerprint": "fnv64-v1:a96979d7b8653a40"
-            },
-            "reanalysis": {
-              "at": "2026-10-19T13:29:17.679Z",
-              "fields": [
-                "imported.pad:17455017"
-              ],
-              "reason": "Evidência alterada; decisão anterior preservada no histórico."
+              "fingerprint": "fnv64-v1:1dd9ec311ac3d8ef"
             }
           },
           "17455019": {
-            "status": "reanalise",
+            "status": "ok",
             "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
             "document": "",
             "url": "",
-            "at": "2026-10-05T17:26:32.071Z",
+            "at": "2026-10-22T18:50:04.746Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
               "version": 1,
               "ref": "pad:17455019",
-              "fingerprint": "fnv64-v1:2ffdbbba8d1affeb"
-            },
-            "reanalysis": {
-              "at": "2026-10-19T13:29:17.679Z",
-              "fields": [
-                "imported.pad:17455019"
-              ],
-              "reason": "Evidência alterada; decisão anterior preservada no histórico."
+              "fingerprint": "fnv64-v1:afefd35fbd002951"
             }
           },
           "17455022": {
-            "status": "reanalise",
+            "status": "ok",
             "note": "No item “Cabo de rede”, os preços comprovados nas imagens divergem dos valores utilizados na memória de cálculo da pesquisa mercadológica e, consequentemente, do valor médio unitário registrado no Plano de Aplicação Detalhado. Conferir e corrigir a memória de cálculo com base nos três preços efetivamente comprovados, incluindo os fretes considerados, recalcular a média e atualizar o valor correspondente no PAD.",
             "document": "",
             "url": "",
-            "at": "2026-10-05T17:22:28.241Z",
+            "at": "2026-10-22T19:05:04.163Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
               "version": 1,
               "ref": "pad:17455022",
-              "fingerprint": "fnv64-v1:64d40dda438fd654"
-            },
-            "reanalysis": {
-              "at": "2026-10-19T13:29:17.680Z",
-              "fields": [
-                "imported.pad:17455022"
-              ],
-              "reason": "Evidência alterada; decisão anterior preservada no histórico."
+              "fingerprint": "fnv64-v1:9d23061b15856f2d"
             }
           },
           "17455024": {
-            "status": "reanalise",
+            "status": "ok",
             "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
             "document": "",
             "url": "",
-            "at": "2026-10-05T17:27:17.318Z",
+            "at": "2026-10-22T18:50:04.746Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
               "version": 1,
               "ref": "pad:17455024",
-              "fingerprint": "fnv64-v1:6a0ae8991cccec42"
-            },
-            "reanalysis": {
-              "at": "2026-10-19T13:29:17.680Z",
-              "fields": [
-                "imported.pad:17455024"
-              ],
-              "reason": "Evidência alterada; decisão anterior preservada no histórico."
+              "fingerprint": "fnv64-v1:147f6df49ee81978"
             }
           },
           "17455025": {
-            "status": "reanalise",
+            "status": "ok",
             "note": "No item “Ar-condicionado”, o preço de R$ 1.689,67 utilizado na memória de cálculo não foi identificado nos comprovantes da pesquisa mercadológica apresentada. Apresentar o comprovante desse valor ou corrigir a memória de cálculo com base nos preços efetivamente comprovados, incluindo os fretes considerados. Após a correção, recalcular a média dos três preços e atualizar o valor médio unitário no Plano de Aplicação Detalhado.",
             "document": "",
             "url": "",
-            "at": "2026-10-05T17:24:56.732Z",
+            "at": "2026-10-22T18:59:34.012Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
               "version": 1,
               "ref": "pad:17455025",
-              "fingerprint": "fnv64-v1:3a556d43fa354fb6"
-            },
-            "reanalysis": {
-              "at": "2026-10-19T13:29:17.679Z",
-              "fields": [
-                "imported.pad:17455025"
-              ],
-              "reason": "Evidência alterada; decisão anterior preservada no histórico."
+              "fingerprint": "fnv64-v1:472a62effb63813a"
             }
           },
           "17455026": {
@@ -67264,11 +67195,11 @@ window.PROFOR_PUBLIC_DATA = {
             }
           },
           "17455030": {
-            "status": "diligencia",
+            "status": "ok",
             "note": "No item “Fogão por indução”, os preços de R$ 1.775,80 (R$ 1.683,90 mais R$ 91,90 de frete) e de R$ 949,00 estão comprovados na pesquisa apresentada. Entretanto, o preço de R$ 907,09 utilizado na composição não foi identificado no respectivo comprovante, que apresenta R$ 874,90 à vista ou R$ 930,74 a prazo. Apresentar o comprovante do valor de R$ 907,09 ou corrigir esse preço na composição, utilizando o valor efetivamente comprovado. Após a correção, recalcular a média dos três preços e atualizar o valor médio unitário no Plano de Aplicação Detalhado.",
             "document": "",
             "url": "",
-            "at": "2026-10-05T17:06:22.132Z",
+            "at": "2026-10-22T18:51:49.358Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
@@ -67278,45 +67209,31 @@ window.PROFOR_PUBLIC_DATA = {
             }
           },
           "17455031": {
-            "status": "reanalise",
+            "status": "ok",
             "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
             "document": "",
             "url": "",
-            "at": "2026-10-05T17:27:17.318Z",
+            "at": "2026-10-22T18:50:04.746Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
               "version": 1,
               "ref": "pad:17455031",
-              "fingerprint": "fnv64-v1:8801ac3ef976ac28"
-            },
-            "reanalysis": {
-              "at": "2026-10-19T13:29:17.679Z",
-              "fields": [
-                "imported.pad:17455031"
-              ],
-              "reason": "Evidência alterada; decisão anterior preservada no histórico."
+              "fingerprint": "fnv64-v1:6a7a11a3c5c937ba"
             }
           },
           "17455032": {
-            "status": "reanalise",
+            "status": "ok",
             "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
             "document": "",
             "url": "",
-            "at": "2026-10-05T17:27:17.318Z",
+            "at": "2026-10-22T18:50:04.746Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
               "version": 1,
               "ref": "pad:17455032",
-              "fingerprint": "fnv64-v1:2173db87db0c0561"
-            },
-            "reanalysis": {
-              "at": "2026-10-19T13:29:17.679Z",
-              "fields": [
-                "imported.pad:17455032"
-              ],
-              "reason": "Evidência alterada; decisão anterior preservada no histórico."
+              "fingerprint": "fnv64-v1:af41274d52d91420"
             }
           },
           "17455036": {
@@ -67334,192 +67251,129 @@ window.PROFOR_PUBLIC_DATA = {
             }
           },
           "17455038": {
-            "status": "reanalise",
+            "status": "ok",
             "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
             "document": "",
             "url": "",
-            "at": "2026-10-05T16:43:53.320Z",
+            "at": "2026-10-22T18:50:04.746Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
               "version": 1,
               "ref": "pad:17455038",
-              "fingerprint": "fnv64-v1:48f26938b5a42867"
-            },
-            "reanalysis": {
-              "at": "2026-10-19T13:29:17.678Z",
-              "fields": [
-                "imported.pad:17455038"
-              ],
-              "reason": "Evidência alterada; decisão anterior preservada no histórico."
+              "fingerprint": "fnv64-v1:d87ae3d2cae9e84d"
             }
           },
           "17455039": {
-            "status": "reanalise",
+            "status": "ok",
             "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
             "document": "",
             "url": "",
-            "at": "2026-10-05T17:27:17.318Z",
+            "at": "2026-10-22T18:50:04.746Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
               "version": 1,
               "ref": "pad:17455039",
-              "fingerprint": "fnv64-v1:11d6b7b01d211ca1"
-            },
-            "reanalysis": {
-              "at": "2026-10-19T13:29:17.680Z",
-              "fields": [
-                "imported.pad:17455039"
-              ],
-              "reason": "Evidência alterada; decisão anterior preservada no histórico."
+              "fingerprint": "fnv64-v1:e0e65c6d6953116d"
             }
           },
           "17455041": {
-            "status": "reanalise",
+            "status": "ok",
             "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
             "document": "",
             "url": "",
-            "at": "2026-10-05T17:27:17.318Z",
+            "at": "2026-10-22T18:50:04.745Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
               "version": 1,
               "ref": "pad:17455041",
-              "fingerprint": "fnv64-v1:e2dcf1995bd4388c"
-            },
-            "reanalysis": {
-              "at": "2026-10-19T13:29:17.680Z",
-              "fields": [
-                "imported.pad:17455041"
-              ],
-              "reason": "Evidência alterada; decisão anterior preservada no histórico."
+              "fingerprint": "fnv64-v1:5b84f74ea68a7e8f"
             }
           },
           "17455048": {
-            "status": "reanalise",
+            "status": "ok",
             "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
             "document": "",
             "url": "",
-            "at": "2026-10-05T17:27:17.318Z",
+            "at": "2026-10-22T18:47:33.316Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
               "version": 1,
               "ref": "pad:17455048",
-              "fingerprint": "fnv64-v1:7de13bc81a8c0a5c"
-            },
-            "reanalysis": {
-              "at": "2026-10-19T13:29:17.680Z",
-              "fields": [
-                "imported.pad:17455048"
-              ],
-              "reason": "Evidência alterada; decisão anterior preservada no histórico."
+              "fingerprint": "fnv64-v1:d406b0223465f0ed"
             }
           },
           "17455049": {
-            "status": "reanalise",
+            "status": "ok",
             "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
             "document": "",
             "url": "",
-            "at": "2026-10-05T17:27:17.318Z",
+            "at": "2026-10-22T18:48:04.794Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
               "version": 1,
               "ref": "pad:17455049",
-              "fingerprint": "fnv64-v1:a5f61ac90a872bdb"
-            },
-            "reanalysis": {
-              "at": "2026-10-19T13:29:17.680Z",
-              "fields": [
-                "imported.pad:17455049"
-              ],
-              "reason": "Evidência alterada; decisão anterior preservada no histórico."
+              "fingerprint": "fnv64-v1:ad02877d4704a61d"
             }
           },
           "17455070": {
-            "status": "reanalise",
+            "status": "ok",
             "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
             "document": "",
             "url": "",
-            "at": "2026-10-05T17:18:25.844Z",
+            "at": "2026-10-22T18:50:04.745Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
               "version": 1,
               "ref": "pad:17455070",
-              "fingerprint": "fnv64-v1:f7c90f8d24b900ad"
-            },
-            "reanalysis": {
-              "at": "2026-10-19T13:29:17.680Z",
-              "fields": [
-                "imported.pad:17455070"
-              ],
-              "reason": "Evidência alterada; decisão anterior preservada no histórico."
+              "fingerprint": "fnv64-v1:eeb50238d34e1e4e"
             }
           },
           "17455103": {
-            "status": "reanalise",
+            "status": "ok",
             "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
             "document": "",
             "url": "",
-            "at": "2026-10-05T17:27:17.318Z",
+            "at": "2026-10-22T18:50:04.746Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
               "version": 1,
               "ref": "pad:17455103",
-              "fingerprint": "fnv64-v1:99eac077ab673393"
-            },
-            "reanalysis": {
-              "at": "2026-10-19T13:29:17.680Z",
-              "fields": [
-                "imported.pad:17455103"
-              ],
-              "reason": "Evidência alterada; decisão anterior preservada no histórico."
+              "fingerprint": "fnv64-v1:882509c0c049bc4a"
             }
           },
           "17455104": {
-            "status": "reanalise",
+            "status": "ok",
             "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
             "document": "",
             "url": "",
-            "at": "2026-10-05T17:27:17.318Z",
+            "at": "2026-10-22T18:50:04.746Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
               "version": 1,
               "ref": "pad:17455104",
-              "fingerprint": "fnv64-v1:8507a389718e6d6a"
-            },
-            "reanalysis": {
-              "at": "2026-10-19T13:29:17.680Z",
-              "fields": [
-                "imported.pad:17455104"
-              ],
-              "reason": "Evidência alterada; decisão anterior preservada no histórico."
+              "fingerprint": "fnv64-v1:11a32ce55ba3d913"
             }
           },
           "17455748": {
-            "status": "reanalise",
+            "status": "ok",
             "note": "Remover o item “Sanduicheira” da última linha do Plano de Aplicação Detalhado, com valor unitário de R$ 199,98, por duplicidade. Já consta no plano o mesmo item com valor unitário de R$ 194,11, compatível com a pesquisa de preços apresentada, que deverá permanecer.",
             "document": "",
             "url": "",
-            "at": "2026-10-05T16:44:26.460Z",
+            "at": "2026-10-22T18:50:04.745Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
               "version": 1,
               "ref": "pad:17455748",
-              "fingerprint": "fnv64-v1:5786c6f55ec44c45"
-            },
-            "reanalysis": {
-              "at": "2026-10-19T13:29:17.679Z",
-              "fields": [
-                "imported.pad:17455748"
-              ],
-              "reason": "Evidência alterada; decisão anterior preservada no histórico."
+              "fingerprint": "fnv64-v1:4151f8ee07013903"
             }
           }
         }
@@ -67587,14 +67441,24 @@ window.PROFOR_PUBLIC_DATA = {
           "communication": "2026-10-02",
           "science": "",
           "response": "",
-          "status": "aberta",
+          "status": "baixada",
           "note": "",
-          "at": "2026-10-05T17:06:22.132Z",
+          "at": "2026-10-22T18:51:49.358Z",
           "base": "2026-10-12",
           "due": "2026-10-12",
           "automaticDeadline": true,
           "confirmed": false,
-          "calendarNote": ""
+          "calendarNote": "",
+          "closedByReview": {
+            "proposalId": "2246634",
+            "group": "pad",
+            "item": "17455030",
+            "ref": "pad:17455030",
+            "at": "2026-10-22T18:51:49.358Z",
+            "reason": "Encerrada por confirmação de conformidade do requisito",
+            "actor": "Usuário local",
+            "confirmedBy": "Usuário local"
+          }
         },
         {
           "id": "dd5de536-c01b-460a-ba5d-0d068aa0e152",
@@ -67901,14 +67765,24 @@ window.PROFOR_PUBLIC_DATA = {
           "communication": "2026-10-02",
           "science": "",
           "response": "",
-          "status": "aberta",
+          "status": "baixada",
           "note": "",
-          "at": "2026-10-05T17:22:28.242Z",
+          "at": "2026-10-22T19:05:04.163Z",
           "base": "2026-10-12",
           "due": "2026-10-12",
           "automaticDeadline": true,
           "confirmed": false,
-          "calendarNote": ""
+          "calendarNote": "",
+          "closedByReview": {
+            "proposalId": "2246634",
+            "group": "pad",
+            "item": "17455022",
+            "ref": "pad:17455022",
+            "at": "2026-10-22T19:05:04.163Z",
+            "reason": "Encerrada por confirmação de conformidade do requisito",
+            "actor": "Usuário local",
+            "confirmedBy": "Usuário local"
+          }
         },
         {
           "id": "d17c7e7e-64dd-4cd2-b286-6584425be35e",
@@ -67972,14 +67846,24 @@ window.PROFOR_PUBLIC_DATA = {
           "communication": "2026-10-02",
           "science": "",
           "response": "",
-          "status": "aberta",
+          "status": "baixada",
           "note": "",
-          "at": "2026-10-05T17:24:56.732Z",
+          "at": "2026-10-22T18:59:34.012Z",
           "base": "2026-10-12",
           "due": "2026-10-12",
           "automaticDeadline": true,
           "confirmed": false,
-          "calendarNote": ""
+          "calendarNote": "",
+          "closedByReview": {
+            "proposalId": "2246634",
+            "group": "pad",
+            "item": "17455025",
+            "ref": "pad:17455025",
+            "at": "2026-10-22T18:59:34.012Z",
+            "reason": "Encerrada por confirmação de conformidade do requisito",
+            "actor": "Usuário local",
+            "confirmedBy": "Usuário local"
+          }
         },
         {
           "id": "d0f3efa3-1ece-4211-9434-4d638a73fa85",
@@ -68151,14 +68035,24 @@ window.PROFOR_PUBLIC_DATA = {
           "communication": "2026-10-05",
           "science": "",
           "response": "",
-          "status": "aberta",
+          "status": "baixada",
           "note": "",
-          "at": "2026-10-05T16:44:26.461Z",
+          "at": "2026-10-22T18:50:04.745Z",
           "base": "2026-10-15",
           "due": "2026-10-15",
           "automaticDeadline": true,
           "confirmed": false,
-          "calendarNote": ""
+          "calendarNote": "",
+          "closedByReview": {
+            "proposalId": "2246634",
+            "group": "pad",
+            "item": "17455748",
+            "ref": "pad:17455748",
+            "at": "2026-10-22T18:50:04.745Z",
+            "reason": "Encerrada por confirmação de conformidade do requisito",
+            "actor": "Usuário local",
+            "confirmedBy": "Usuário local"
+          }
         },
         {
           "id": "492261b4-1760-4707-8959-f4381dda05fc",
@@ -68168,14 +68062,24 @@ window.PROFOR_PUBLIC_DATA = {
           "category": "OUTRO",
           "communication": "2026-10-05",
           "response": "",
-          "status": "aberta",
+          "status": "baixada",
           "note": "",
-          "at": "2026-10-06T13:36:13.418Z",
+          "at": "2026-10-22T18:39:20.294Z",
           "base": "2026-10-15",
           "due": "2026-10-15",
           "automaticDeadline": true,
           "confirmed": false,
-          "calendarNote": ""
+          "calendarNote": "",
+          "closedByReview": {
+            "proposalId": "2246634",
+            "group": "celebracao",
+            "item": "3",
+            "ref": "celebracao:3",
+            "at": "2026-10-22T18:39:20.294Z",
+            "reason": "Encerrada por confirmação de conformidade do requisito",
+            "actor": "Usuário local",
+            "confirmedBy": "Usuário local"
+          }
         },
         {
           "id": "d06557f3-487b-4041-8774-25bf101addec",
@@ -68185,14 +68089,24 @@ window.PROFOR_PUBLIC_DATA = {
           "category": "OUTRO",
           "communication": "2026-10-05",
           "response": "",
-          "status": "aberta",
+          "status": "baixada",
           "note": "",
-          "at": "2026-10-06T13:38:23.840Z",
+          "at": "2026-10-22T18:39:20.296Z",
           "base": "2026-10-15",
           "due": "2026-10-15",
           "automaticDeadline": true,
           "confirmed": false,
-          "calendarNote": ""
+          "calendarNote": "",
+          "closedByReview": {
+            "proposalId": "2246634",
+            "group": "celebracao",
+            "item": "7",
+            "ref": "celebracao:7",
+            "at": "2026-10-22T18:39:20.296Z",
+            "reason": "Encerrada por confirmação de conformidade do requisito",
+            "actor": "Usuário local",
+            "confirmedBy": "Usuário local"
+          }
         },
         {
           "id": "b097a904-81fd-4109-83da-ecd232b81756",
@@ -68202,14 +68116,24 @@ window.PROFOR_PUBLIC_DATA = {
           "category": "OUTRO",
           "communication": "",
           "response": "",
-          "status": "aberta",
+          "status": "baixada",
           "note": "",
-          "at": "2026-10-05T18:23:19.276Z",
+          "at": "2026-10-22T18:40:50.146Z",
           "base": "",
           "due": "",
           "automaticDeadline": true,
           "confirmed": false,
-          "calendarNote": ""
+          "calendarNote": "",
+          "closedByReview": {
+            "proposalId": "2246634",
+            "group": "celebracao",
+            "item": "14",
+            "ref": "celebracao:14",
+            "at": "2026-10-22T18:40:50.146Z",
+            "reason": "Encerrada por confirmação de conformidade do requisito",
+            "actor": "Usuário local",
+            "confirmedBy": "Usuário local"
+          }
         },
         {
           "id": "bea48fed-de40-40ec-adb9-2cd477ff689d",
@@ -68219,14 +68143,24 @@ window.PROFOR_PUBLIC_DATA = {
           "category": "OUTRO",
           "communication": "2026-10-05",
           "response": "",
-          "status": "aberta",
+          "status": "baixada",
           "note": "",
-          "at": "2026-10-06T12:48:06.952Z",
+          "at": "2026-10-22T18:39:20.296Z",
           "base": "2026-10-15",
           "due": "2026-10-15",
           "automaticDeadline": true,
           "confirmed": false,
-          "calendarNote": ""
+          "calendarNote": "",
+          "closedByReview": {
+            "proposalId": "2246634",
+            "group": "celebracao",
+            "item": "6",
+            "ref": "celebracao:6",
+            "at": "2026-10-22T18:39:20.296Z",
+            "reason": "Encerrada por confirmação de conformidade do requisito",
+            "actor": "Usuário local",
+            "confirmedBy": "Usuário local"
+          }
         }
       ],
       "ouvidoria": {
@@ -68237,7 +68171,18 @@ window.PROFOR_PUBLIC_DATA = {
         "clause": false
       },
       "falaBR": "nao_previsto",
-      "conclusion": null,
+      "conclusion": {
+        "result": "favoravel",
+        "note": "aprovado",
+        "reference": "aprovado",
+        "actor": "Usuário local",
+        "at": "2026-10-22T19:05:51.303Z",
+        "evidence": {
+          "version": 1,
+          "fingerprint": "fnv64-v1:7dca947608cf2366"
+        },
+        "operationId": "fe5f2e06-6fc8-4648-ad50-65abb3fabbce"
+      },
       "history": [
         {
           "at": "2026-09-30T12:43:12.045Z",
@@ -75832,6 +75777,1550 @@ window.PROFOR_PUBLIC_DATA = {
           "after": {
             "at": "2026-10-22T14:38:40.048Z"
           }
+        },
+        {
+          "at": "2026-10-22T18:37:46.970Z",
+          "event": "Informações institucionais atualizadas",
+          "actor": "Usuário local",
+          "before": {
+            "ouvidoria": {
+              "status": "instituida",
+              "signature": "",
+              "url": "",
+              "note": "",
+              "clause": false
+            },
+            "falaBR": "nao_previsto"
+          },
+          "after": {
+            "ouvidoria": {
+              "status": "instituida",
+              "signature": "",
+              "url": "",
+              "note": "",
+              "clause": false
+            },
+            "falaBR": "previsto"
+          }
+        },
+        {
+          "at": "2026-10-22T18:37:46.970Z",
+          "event": "Reanálise: merito:falaBRAdesao",
+          "actor": "Usuário local",
+          "before": {
+            "status": "no",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T18:19:26.618Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:falaBRAdesao",
+              "fingerprint": "fnv64-v1:20325664b9ae9846"
+            }
+          },
+          "after": {
+            "status": "reanalise",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T18:19:26.618Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:falaBRAdesao",
+              "fingerprint": "fnv64-v1:20325664b9ae9846"
+            },
+            "reanalysis": {
+              "at": "2026-10-22T18:37:46.970Z",
+              "fields": [
+                "falaBR"
+              ],
+              "reason": "Evidência alterada; decisão anterior preservada no histórico."
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T18:37:46.970Z",
+          "event": "Avaliação: merito / falaBRAdesao",
+          "actor": "Usuário local",
+          "before": {
+            "status": "no",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T18:19:26.618Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:falaBRAdesao",
+              "fingerprint": "fnv64-v1:20325664b9ae9846"
+            }
+          },
+          "after": {
+            "status": "obs",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T18:37:46.970Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:falaBRAdesao",
+              "fingerprint": "fnv64-v1:21d99edf76c0ac39"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T18:38:38.903Z",
+          "event": "Informações institucionais atualizadas",
+          "actor": "Usuário local",
+          "before": {
+            "ouvidoria": {
+              "status": "instituida",
+              "signature": "",
+              "url": "",
+              "note": "",
+              "clause": false
+            },
+            "falaBR": "previsto"
+          },
+          "after": {
+            "ouvidoria": {
+              "status": "instituida",
+              "signature": "",
+              "url": "",
+              "note": "",
+              "clause": false
+            },
+            "falaBR": "nao_previsto"
+          }
+        },
+        {
+          "at": "2026-10-22T18:38:38.903Z",
+          "event": "Reanálise: merito:falaBRAdesao",
+          "actor": "Usuário local",
+          "before": {
+            "status": "obs",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T18:37:46.970Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:falaBRAdesao",
+              "fingerprint": "fnv64-v1:21d99edf76c0ac39"
+            }
+          },
+          "after": {
+            "status": "reanalise",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T18:37:46.970Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:falaBRAdesao",
+              "fingerprint": "fnv64-v1:21d99edf76c0ac39"
+            },
+            "reanalysis": {
+              "at": "2026-10-22T18:38:38.903Z",
+              "fields": [
+                "falaBR"
+              ],
+              "reason": "Evidência alterada; decisão anterior preservada no histórico."
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T18:38:38.903Z",
+          "event": "Avaliação: merito / falaBRAdesao",
+          "actor": "Usuário local",
+          "before": {
+            "status": "obs",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T18:37:46.970Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:falaBRAdesao",
+              "fingerprint": "fnv64-v1:21d99edf76c0ac39"
+            }
+          },
+          "after": {
+            "status": "no",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T18:38:38.903Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:falaBRAdesao",
+              "fingerprint": "fnv64-v1:20325664b9ae9846"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T18:39:20.294Z",
+          "event": "Avaliação: celebracao / 3",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "Fala.BR - incluir manifestação a respeito da plataforma Fala.br no Plano de trabalho.\nSolicita-se corrigir os valores do Plano de Trabalho para que constem: repasse de R$ 200.000,00, contrapartida de R$ 200,21 e valor total de R$ 200.200,21.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-06T13:36:13.416Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:3",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Fala.BR - incluir manifestação a respeito da plataforma Fala.br no Plano de trabalho.\nSolicita-se corrigir os valores do Plano de Trabalho para que constem: repasse de R$ 200.000,00, contrapartida de R$ 200,21 e valor total de R$ 200.200,21.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T18:39:20.294Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:3",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T18:39:20.294Z",
+          "event": "Diligência encerrada por atendimento do requisito",
+          "actor": "Usuário local",
+          "before": {
+            "id": "492261b4-1760-4707-8959-f4381dda05fc",
+            "ref": "celebracao:3",
+            "request": "Fala.BR - incluir manifestação a respeito da plataforma Fala.br no Plano de trabalho.\nSolicita-se corrigir os valores do Plano de Trabalho para que constem: repasse de R$ 200.000,00, contrapartida de R$ 200,21 e valor total de R$ 200.200,21.",
+            "science": "",
+            "category": "OUTRO",
+            "communication": "2026-10-05",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-06T13:36:13.418Z",
+            "base": "2026-10-15",
+            "due": "2026-10-15",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          },
+          "after": {
+            "id": "492261b4-1760-4707-8959-f4381dda05fc",
+            "ref": "celebracao:3",
+            "request": "Fala.BR - incluir manifestação a respeito da plataforma Fala.br no Plano de trabalho.\nSolicita-se corrigir os valores do Plano de Trabalho para que constem: repasse de R$ 200.000,00, contrapartida de R$ 200,21 e valor total de R$ 200.200,21.",
+            "science": "",
+            "category": "OUTRO",
+            "communication": "2026-10-05",
+            "response": "",
+            "status": "baixada",
+            "note": "",
+            "at": "2026-10-22T18:39:20.294Z",
+            "base": "2026-10-15",
+            "due": "2026-10-15",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": "",
+            "closedByReview": {
+              "proposalId": "2246634",
+              "group": "celebracao",
+              "item": "3",
+              "ref": "celebracao:3",
+              "at": "2026-10-22T18:39:20.294Z",
+              "reason": "Encerrada por confirmação de conformidade do requisito",
+              "actor": "Usuário local",
+              "confirmedBy": "Usuário local"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T18:39:20.296Z",
+          "event": "Avaliação: celebracao / 6",
+          "actor": "Usuário local",
+          "before": {
+            "status": "reanalise",
+            "note": "Falta o documento",
+            "document": "",
+            "url": "",
+            "at": "2026-10-06T12:48:06.951Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:6",
+              "fingerprint": "fnv64-v1:44eb105b99d965cf"
+            },
+            "reanalysis": {
+              "at": "2026-10-19T13:29:17.680Z",
+              "fields": [
+                "imported.repasse",
+                "imported.contrapartida",
+                "imported.global",
+                "imported.pad"
+              ],
+              "reason": "Evidência alterada; decisão anterior preservada no histórico."
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Falta o documento",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T18:39:20.295Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:6",
+              "fingerprint": "fnv64-v1:09ef29ca63d018fb"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T18:39:20.296Z",
+          "event": "Diligência encerrada por atendimento do requisito",
+          "actor": "Usuário local",
+          "before": {
+            "id": "bea48fed-de40-40ec-adb9-2cd477ff689d",
+            "ref": "celebracao:6",
+            "request": "Falta o documento",
+            "science": "",
+            "category": "OUTRO",
+            "communication": "2026-10-05",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-06T12:48:06.952Z",
+            "base": "2026-10-15",
+            "due": "2026-10-15",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          },
+          "after": {
+            "id": "bea48fed-de40-40ec-adb9-2cd477ff689d",
+            "ref": "celebracao:6",
+            "request": "Falta o documento",
+            "science": "",
+            "category": "OUTRO",
+            "communication": "2026-10-05",
+            "response": "",
+            "status": "baixada",
+            "note": "",
+            "at": "2026-10-22T18:39:20.296Z",
+            "base": "2026-10-15",
+            "due": "2026-10-15",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": "",
+            "closedByReview": {
+              "proposalId": "2246634",
+              "group": "celebracao",
+              "item": "6",
+              "ref": "celebracao:6",
+              "at": "2026-10-22T18:39:20.296Z",
+              "reason": "Encerrada por confirmação de conformidade do requisito",
+              "actor": "Usuário local",
+              "confirmedBy": "Usuário local"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T18:39:20.296Z",
+          "event": "Avaliação: celebracao / 7",
+          "actor": "Usuário local",
+          "before": {
+            "status": "reanalise",
+            "note": "Falta: Declaração de contrapartida corrigida para R$ 200,21",
+            "document": "",
+            "url": "",
+            "at": "2026-10-06T13:38:23.839Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:7",
+              "fingerprint": "fnv64-v1:ebe42b5fecc77703"
+            },
+            "reanalysis": {
+              "at": "2026-10-19T13:29:17.681Z",
+              "fields": [
+                "imported.repasse",
+                "imported.contrapartida",
+                "imported.global",
+                "imported.pad"
+              ],
+              "reason": "Evidência alterada; decisão anterior preservada no histórico."
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Falta: Declaração de contrapartida corrigida para R$ 200,21",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T18:39:20.296Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:7",
+              "fingerprint": "fnv64-v1:a9e75ba13ece4840"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T18:39:20.296Z",
+          "event": "Diligência encerrada por atendimento do requisito",
+          "actor": "Usuário local",
+          "before": {
+            "id": "d06557f3-487b-4041-8774-25bf101addec",
+            "ref": "celebracao:7",
+            "request": "Falta: Declaração de contrapartida corrigida para R$ 200,21",
+            "science": "",
+            "category": "OUTRO",
+            "communication": "2026-10-05",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-06T13:38:23.840Z",
+            "base": "2026-10-15",
+            "due": "2026-10-15",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          },
+          "after": {
+            "id": "d06557f3-487b-4041-8774-25bf101addec",
+            "ref": "celebracao:7",
+            "request": "Falta: Declaração de contrapartida corrigida para R$ 200,21",
+            "science": "",
+            "category": "OUTRO",
+            "communication": "2026-10-05",
+            "response": "",
+            "status": "baixada",
+            "note": "",
+            "at": "2026-10-22T18:39:20.296Z",
+            "base": "2026-10-15",
+            "due": "2026-10-15",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": "",
+            "closedByReview": {
+              "proposalId": "2246634",
+              "group": "celebracao",
+              "item": "7",
+              "ref": "celebracao:7",
+              "at": "2026-10-22T18:39:20.296Z",
+              "reason": "Encerrada por confirmação de conformidade do requisito",
+              "actor": "Usuário local",
+              "confirmedBy": "Usuário local"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T18:40:50.146Z",
+          "event": "Avaliação: celebracao / 14",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "Falta: Declaração de regularidade na contratação de operação de crédito.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T18:23:19.276Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:14",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Falta: Declaração de regularidade na contratação de operação de crédito.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T18:40:50.146Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:14",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T18:40:50.146Z",
+          "event": "Diligência encerrada por atendimento do requisito",
+          "actor": "Usuário local",
+          "before": {
+            "id": "b097a904-81fd-4109-83da-ecd232b81756",
+            "ref": "celebracao:14",
+            "request": "Falta: Declaração de regularidade na contratação de operação de crédito.",
+            "science": "",
+            "category": "OUTRO",
+            "communication": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-05T18:23:19.276Z",
+            "base": "",
+            "due": "",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          },
+          "after": {
+            "id": "b097a904-81fd-4109-83da-ecd232b81756",
+            "ref": "celebracao:14",
+            "request": "Falta: Declaração de regularidade na contratação de operação de crédito.",
+            "science": "",
+            "category": "OUTRO",
+            "communication": "",
+            "response": "",
+            "status": "baixada",
+            "note": "",
+            "at": "2026-10-22T18:40:50.146Z",
+            "base": "",
+            "due": "",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": "",
+            "closedByReview": {
+              "proposalId": "2246634",
+              "group": "celebracao",
+              "item": "14",
+              "ref": "celebracao:14",
+              "at": "2026-10-22T18:40:50.146Z",
+              "reason": "Encerrada por confirmação de conformidade do requisito",
+              "actor": "Usuário local",
+              "confirmedBy": "Usuário local"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T18:44:15.201Z",
+          "event": "Avaliação: pad / 17455022",
+          "actor": "Usuário local",
+          "before": {
+            "status": "reanalise",
+            "note": "No item “Cabo de rede”, os preços comprovados nas imagens divergem dos valores utilizados na memória de cálculo da pesquisa mercadológica e, consequentemente, do valor médio unitário registrado no Plano de Aplicação Detalhado. Conferir e corrigir a memória de cálculo com base nos três preços efetivamente comprovados, incluindo os fretes considerados, recalcular a média e atualizar o valor correspondente no PAD.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T17:22:28.241Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455022",
+              "fingerprint": "fnv64-v1:64d40dda438fd654"
+            },
+            "reanalysis": {
+              "at": "2026-10-19T13:29:17.680Z",
+              "fields": [
+                "imported.pad:17455022"
+              ],
+              "reason": "Evidência alterada; decisão anterior preservada no histórico."
+            }
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "No item “Cabo de rede”, os preços comprovados nas imagens divergem dos valores utilizados na memória de cálculo da pesquisa mercadológica e, consequentemente, do valor médio unitário registrado no Plano de Aplicação Detalhado. Conferir e corrigir a memória de cálculo com base nos três preços efetivamente comprovados, incluindo os fretes considerados, recalcular a média e atualizar o valor correspondente no PAD.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T18:44:15.201Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455022",
+              "fingerprint": "fnv64-v1:9d23061b15856f2d"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T18:47:33.316Z",
+          "event": "Avaliação: pad / 17455048",
+          "actor": "Usuário local",
+          "before": {
+            "status": "reanalise",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T17:27:17.318Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455048",
+              "fingerprint": "fnv64-v1:7de13bc81a8c0a5c"
+            },
+            "reanalysis": {
+              "at": "2026-10-19T13:29:17.680Z",
+              "fields": [
+                "imported.pad:17455048"
+              ],
+              "reason": "Evidência alterada; decisão anterior preservada no histórico."
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T18:47:33.316Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455048",
+              "fingerprint": "fnv64-v1:d406b0223465f0ed"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T18:48:04.795Z",
+          "event": "Avaliação: pad / 17455049",
+          "actor": "Usuário local",
+          "before": {
+            "status": "reanalise",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T17:27:17.318Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455049",
+              "fingerprint": "fnv64-v1:a5f61ac90a872bdb"
+            },
+            "reanalysis": {
+              "at": "2026-10-19T13:29:17.680Z",
+              "fields": [
+                "imported.pad:17455049"
+              ],
+              "reason": "Evidência alterada; decisão anterior preservada no histórico."
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T18:48:04.794Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455049",
+              "fingerprint": "fnv64-v1:ad02877d4704a61d"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T18:50:04.745Z",
+          "event": "Avaliação: pad / 17455015",
+          "actor": "Usuário local",
+          "before": {
+            "status": "reanalise",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T17:27:17.318Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455015",
+              "fingerprint": "fnv64-v1:357428fc6a940f53"
+            },
+            "reanalysis": {
+              "at": "2026-10-19T13:29:17.678Z",
+              "fields": [
+                "imported.pad:17455015"
+              ],
+              "reason": "Evidência alterada; decisão anterior preservada no histórico."
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T18:50:04.745Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455015",
+              "fingerprint": "fnv64-v1:caba36a75d04f017"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T18:50:04.745Z",
+          "event": "Avaliação: pad / 17455070",
+          "actor": "Usuário local",
+          "before": {
+            "status": "reanalise",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T17:18:25.844Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455070",
+              "fingerprint": "fnv64-v1:f7c90f8d24b900ad"
+            },
+            "reanalysis": {
+              "at": "2026-10-19T13:29:17.680Z",
+              "fields": [
+                "imported.pad:17455070"
+              ],
+              "reason": "Evidência alterada; decisão anterior preservada no histórico."
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T18:50:04.745Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455070",
+              "fingerprint": "fnv64-v1:eeb50238d34e1e4e"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T18:50:04.745Z",
+          "event": "Avaliação: pad / 17455748",
+          "actor": "Usuário local",
+          "before": {
+            "status": "reanalise",
+            "note": "Remover o item “Sanduicheira” da última linha do Plano de Aplicação Detalhado, com valor unitário de R$ 199,98, por duplicidade. Já consta no plano o mesmo item com valor unitário de R$ 194,11, compatível com a pesquisa de preços apresentada, que deverá permanecer.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T16:44:26.460Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455748",
+              "fingerprint": "fnv64-v1:5786c6f55ec44c45"
+            },
+            "reanalysis": {
+              "at": "2026-10-19T13:29:17.679Z",
+              "fields": [
+                "imported.pad:17455748"
+              ],
+              "reason": "Evidência alterada; decisão anterior preservada no histórico."
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Remover o item “Sanduicheira” da última linha do Plano de Aplicação Detalhado, com valor unitário de R$ 199,98, por duplicidade. Já consta no plano o mesmo item com valor unitário de R$ 194,11, compatível com a pesquisa de preços apresentada, que deverá permanecer.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T18:50:04.745Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455748",
+              "fingerprint": "fnv64-v1:4151f8ee07013903"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T18:50:04.745Z",
+          "event": "Diligência encerrada por atendimento do requisito",
+          "actor": "Usuário local",
+          "before": {
+            "id": "9f36fb24-b026-4ef6-b02b-ebd029c1a5af",
+            "ref": "pad:17455748",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Remover o item “Sanduicheira” da última linha do Plano de Aplicação Detalhado, com valor unitário de R$ 199,98, por duplicidade. Já consta no plano o mesmo item com valor unitário de R$ 194,11, compatível com a pesquisa de preços apresentada, que deverá permanecer.",
+            "communication": "2026-10-05",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-05T16:44:26.461Z",
+            "base": "2026-10-15",
+            "due": "2026-10-15",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          },
+          "after": {
+            "id": "9f36fb24-b026-4ef6-b02b-ebd029c1a5af",
+            "ref": "pad:17455748",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "Remover o item “Sanduicheira” da última linha do Plano de Aplicação Detalhado, com valor unitário de R$ 199,98, por duplicidade. Já consta no plano o mesmo item com valor unitário de R$ 194,11, compatível com a pesquisa de preços apresentada, que deverá permanecer.",
+            "communication": "2026-10-05",
+            "science": "",
+            "response": "",
+            "status": "baixada",
+            "note": "",
+            "at": "2026-10-22T18:50:04.745Z",
+            "base": "2026-10-15",
+            "due": "2026-10-15",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": "",
+            "closedByReview": {
+              "proposalId": "2246634",
+              "group": "pad",
+              "item": "17455748",
+              "ref": "pad:17455748",
+              "at": "2026-10-22T18:50:04.745Z",
+              "reason": "Encerrada por confirmação de conformidade do requisito",
+              "actor": "Usuário local",
+              "confirmedBy": "Usuário local"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T18:50:04.745Z",
+          "event": "Avaliação: pad / 17455041",
+          "actor": "Usuário local",
+          "before": {
+            "status": "reanalise",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T17:27:17.318Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455041",
+              "fingerprint": "fnv64-v1:e2dcf1995bd4388c"
+            },
+            "reanalysis": {
+              "at": "2026-10-19T13:29:17.680Z",
+              "fields": [
+                "imported.pad:17455041"
+              ],
+              "reason": "Evidência alterada; decisão anterior preservada no histórico."
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T18:50:04.745Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455041",
+              "fingerprint": "fnv64-v1:5b84f74ea68a7e8f"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T18:50:04.746Z",
+          "event": "Avaliação: pad / 17455104",
+          "actor": "Usuário local",
+          "before": {
+            "status": "reanalise",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T17:27:17.318Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455104",
+              "fingerprint": "fnv64-v1:8507a389718e6d6a"
+            },
+            "reanalysis": {
+              "at": "2026-10-19T13:29:17.680Z",
+              "fields": [
+                "imported.pad:17455104"
+              ],
+              "reason": "Evidência alterada; decisão anterior preservada no histórico."
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T18:50:04.746Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455104",
+              "fingerprint": "fnv64-v1:11a32ce55ba3d913"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T18:50:04.746Z",
+          "event": "Avaliação: pad / 17455038",
+          "actor": "Usuário local",
+          "before": {
+            "status": "reanalise",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T16:43:53.320Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455038",
+              "fingerprint": "fnv64-v1:48f26938b5a42867"
+            },
+            "reanalysis": {
+              "at": "2026-10-19T13:29:17.678Z",
+              "fields": [
+                "imported.pad:17455038"
+              ],
+              "reason": "Evidência alterada; decisão anterior preservada no histórico."
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T18:50:04.746Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455038",
+              "fingerprint": "fnv64-v1:d87ae3d2cae9e84d"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T18:50:04.746Z",
+          "event": "Avaliação: pad / 17455039",
+          "actor": "Usuário local",
+          "before": {
+            "status": "reanalise",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T17:27:17.318Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455039",
+              "fingerprint": "fnv64-v1:11d6b7b01d211ca1"
+            },
+            "reanalysis": {
+              "at": "2026-10-19T13:29:17.680Z",
+              "fields": [
+                "imported.pad:17455039"
+              ],
+              "reason": "Evidência alterada; decisão anterior preservada no histórico."
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T18:50:04.746Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455039",
+              "fingerprint": "fnv64-v1:e0e65c6d6953116d"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T18:50:04.746Z",
+          "event": "Avaliação: pad / 17455011",
+          "actor": "Usuário local",
+          "before": {
+            "status": "reanalise",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T17:27:17.318Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455011",
+              "fingerprint": "fnv64-v1:c05551ec9783afa4"
+            },
+            "reanalysis": {
+              "at": "2026-10-19T13:29:17.679Z",
+              "fields": [
+                "imported.pad:17455011"
+              ],
+              "reason": "Evidência alterada; decisão anterior preservada no histórico."
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T18:50:04.746Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455011",
+              "fingerprint": "fnv64-v1:03645946527a69b6"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T18:50:04.746Z",
+          "event": "Avaliação: pad / 17455032",
+          "actor": "Usuário local",
+          "before": {
+            "status": "reanalise",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T17:27:17.318Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455032",
+              "fingerprint": "fnv64-v1:2173db87db0c0561"
+            },
+            "reanalysis": {
+              "at": "2026-10-19T13:29:17.679Z",
+              "fields": [
+                "imported.pad:17455032"
+              ],
+              "reason": "Evidência alterada; decisão anterior preservada no histórico."
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T18:50:04.746Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455032",
+              "fingerprint": "fnv64-v1:af41274d52d91420"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T18:50:04.746Z",
+          "event": "Avaliação: pad / 17455017",
+          "actor": "Usuário local",
+          "before": {
+            "status": "reanalise",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T17:27:17.318Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455017",
+              "fingerprint": "fnv64-v1:a96979d7b8653a40"
+            },
+            "reanalysis": {
+              "at": "2026-10-19T13:29:17.679Z",
+              "fields": [
+                "imported.pad:17455017"
+              ],
+              "reason": "Evidência alterada; decisão anterior preservada no histórico."
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T18:50:04.746Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455017",
+              "fingerprint": "fnv64-v1:1dd9ec311ac3d8ef"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T18:50:04.746Z",
+          "event": "Avaliação: pad / 17455019",
+          "actor": "Usuário local",
+          "before": {
+            "status": "reanalise",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T17:26:32.071Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455019",
+              "fingerprint": "fnv64-v1:2ffdbbba8d1affeb"
+            },
+            "reanalysis": {
+              "at": "2026-10-19T13:29:17.679Z",
+              "fields": [
+                "imported.pad:17455019"
+              ],
+              "reason": "Evidência alterada; decisão anterior preservada no histórico."
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T18:50:04.746Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455019",
+              "fingerprint": "fnv64-v1:afefd35fbd002951"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T18:50:04.746Z",
+          "event": "Avaliação: pad / 17455103",
+          "actor": "Usuário local",
+          "before": {
+            "status": "reanalise",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T17:27:17.318Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455103",
+              "fingerprint": "fnv64-v1:99eac077ab673393"
+            },
+            "reanalysis": {
+              "at": "2026-10-19T13:29:17.680Z",
+              "fields": [
+                "imported.pad:17455103"
+              ],
+              "reason": "Evidência alterada; decisão anterior preservada no histórico."
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T18:50:04.746Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455103",
+              "fingerprint": "fnv64-v1:882509c0c049bc4a"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T18:50:04.746Z",
+          "event": "Avaliação: pad / 17455031",
+          "actor": "Usuário local",
+          "before": {
+            "status": "reanalise",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T17:27:17.318Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455031",
+              "fingerprint": "fnv64-v1:8801ac3ef976ac28"
+            },
+            "reanalysis": {
+              "at": "2026-10-19T13:29:17.679Z",
+              "fields": [
+                "imported.pad:17455031"
+              ],
+              "reason": "Evidência alterada; decisão anterior preservada no histórico."
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T18:50:04.746Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455031",
+              "fingerprint": "fnv64-v1:6a7a11a3c5c937ba"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T18:50:04.746Z",
+          "event": "Avaliação: pad / 17455024",
+          "actor": "Usuário local",
+          "before": {
+            "status": "reanalise",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T17:27:17.318Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455024",
+              "fingerprint": "fnv64-v1:6a0ae8991cccec42"
+            },
+            "reanalysis": {
+              "at": "2026-10-19T13:29:17.680Z",
+              "fields": [
+                "imported.pad:17455024"
+              ],
+              "reason": "Evidência alterada; decisão anterior preservada no histórico."
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Anexar Pesquisa mercadológica com 03 preços para cada item. Inserir na aba de anexos da proposta.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T18:50:04.746Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455024",
+              "fingerprint": "fnv64-v1:147f6df49ee81978"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T18:51:49.358Z",
+          "event": "Avaliação: pad / 17455030",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "No item “Fogão por indução”, os preços de R$ 1.775,80 (R$ 1.683,90 mais R$ 91,90 de frete) e de R$ 949,00 estão comprovados na pesquisa apresentada. Entretanto, o preço de R$ 907,09 utilizado na composição não foi identificado no respectivo comprovante, que apresenta R$ 874,90 à vista ou R$ 930,74 a prazo. Apresentar o comprovante do valor de R$ 907,09 ou corrigir esse preço na composição, utilizando o valor efetivamente comprovado. Após a correção, recalcular a média dos três preços e atualizar o valor médio unitário no Plano de Aplicação Detalhado.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T17:06:22.132Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455030",
+              "fingerprint": "fnv64-v1:00d6d88301edc28b"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "No item “Fogão por indução”, os preços de R$ 1.775,80 (R$ 1.683,90 mais R$ 91,90 de frete) e de R$ 949,00 estão comprovados na pesquisa apresentada. Entretanto, o preço de R$ 907,09 utilizado na composição não foi identificado no respectivo comprovante, que apresenta R$ 874,90 à vista ou R$ 930,74 a prazo. Apresentar o comprovante do valor de R$ 907,09 ou corrigir esse preço na composição, utilizando o valor efetivamente comprovado. Após a correção, recalcular a média dos três preços e atualizar o valor médio unitário no Plano de Aplicação Detalhado.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T18:51:49.358Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455030",
+              "fingerprint": "fnv64-v1:00d6d88301edc28b"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T18:51:49.358Z",
+          "event": "Diligência encerrada por atendimento do requisito",
+          "actor": "Usuário local",
+          "before": {
+            "id": "4c921844-5a2b-450e-88db-768d940e2feb",
+            "ref": "pad:17455030",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "No item “Fogão por indução”, os preços de R$ 1.775,80 (R$ 1.683,90 mais R$ 91,90 de frete) e de R$ 949,00 estão comprovados na pesquisa apresentada. Entretanto, o preço de R$ 907,09 utilizado na composição não foi identificado no respectivo comprovante, que apresenta R$ 874,90 à vista ou R$ 930,74 a prazo. Apresentar o comprovante do valor de R$ 907,09 ou corrigir esse preço na composição, utilizando o valor efetivamente comprovado. Após a correção, recalcular a média dos três preços e atualizar o valor médio unitário no Plano de Aplicação Detalhado.",
+            "communication": "2026-10-02",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-05T17:06:22.132Z",
+            "base": "2026-10-12",
+            "due": "2026-10-12",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          },
+          "after": {
+            "id": "4c921844-5a2b-450e-88db-768d940e2feb",
+            "ref": "pad:17455030",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "No item “Fogão por indução”, os preços de R$ 1.775,80 (R$ 1.683,90 mais R$ 91,90 de frete) e de R$ 949,00 estão comprovados na pesquisa apresentada. Entretanto, o preço de R$ 907,09 utilizado na composição não foi identificado no respectivo comprovante, que apresenta R$ 874,90 à vista ou R$ 930,74 a prazo. Apresentar o comprovante do valor de R$ 907,09 ou corrigir esse preço na composição, utilizando o valor efetivamente comprovado. Após a correção, recalcular a média dos três preços e atualizar o valor médio unitário no Plano de Aplicação Detalhado.",
+            "communication": "2026-10-02",
+            "science": "",
+            "response": "",
+            "status": "baixada",
+            "note": "",
+            "at": "2026-10-22T18:51:49.358Z",
+            "base": "2026-10-12",
+            "due": "2026-10-12",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": "",
+            "closedByReview": {
+              "proposalId": "2246634",
+              "group": "pad",
+              "item": "17455030",
+              "ref": "pad:17455030",
+              "at": "2026-10-22T18:51:49.358Z",
+              "reason": "Encerrada por confirmação de conformidade do requisito",
+              "actor": "Usuário local",
+              "confirmedBy": "Usuário local"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T18:59:34.012Z",
+          "event": "Avaliação: pad / 17455025",
+          "actor": "Usuário local",
+          "before": {
+            "status": "reanalise",
+            "note": "No item “Ar-condicionado”, o preço de R$ 1.689,67 utilizado na memória de cálculo não foi identificado nos comprovantes da pesquisa mercadológica apresentada. Apresentar o comprovante desse valor ou corrigir a memória de cálculo com base nos preços efetivamente comprovados, incluindo os fretes considerados. Após a correção, recalcular a média dos três preços e atualizar o valor médio unitário no Plano de Aplicação Detalhado.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T17:24:56.732Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455025",
+              "fingerprint": "fnv64-v1:3a556d43fa354fb6"
+            },
+            "reanalysis": {
+              "at": "2026-10-19T13:29:17.679Z",
+              "fields": [
+                "imported.pad:17455025"
+              ],
+              "reason": "Evidência alterada; decisão anterior preservada no histórico."
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "No item “Ar-condicionado”, o preço de R$ 1.689,67 utilizado na memória de cálculo não foi identificado nos comprovantes da pesquisa mercadológica apresentada. Apresentar o comprovante desse valor ou corrigir a memória de cálculo com base nos preços efetivamente comprovados, incluindo os fretes considerados. Após a correção, recalcular a média dos três preços e atualizar o valor médio unitário no Plano de Aplicação Detalhado.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T18:59:34.012Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455025",
+              "fingerprint": "fnv64-v1:472a62effb63813a"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T18:59:34.012Z",
+          "event": "Diligência encerrada por atendimento do requisito",
+          "actor": "Usuário local",
+          "before": {
+            "id": "1eb0a778-dbf5-40f0-b6d9-4f36330ab514",
+            "ref": "pad:17455025",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "No item “Ar-condicionado”, o preço de R$ 1.689,67 utilizado na memória de cálculo não foi identificado nos comprovantes da pesquisa mercadológica apresentada. Apresentar o comprovante desse valor ou corrigir a memória de cálculo com base nos preços efetivamente comprovados, incluindo os fretes considerados. Após a correção, recalcular a média dos três preços e atualizar o valor médio unitário no Plano de Aplicação Detalhado.",
+            "communication": "2026-10-02",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-05T17:24:56.732Z",
+            "base": "2026-10-12",
+            "due": "2026-10-12",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          },
+          "after": {
+            "id": "1eb0a778-dbf5-40f0-b6d9-4f36330ab514",
+            "ref": "pad:17455025",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "No item “Ar-condicionado”, o preço de R$ 1.689,67 utilizado na memória de cálculo não foi identificado nos comprovantes da pesquisa mercadológica apresentada. Apresentar o comprovante desse valor ou corrigir a memória de cálculo com base nos preços efetivamente comprovados, incluindo os fretes considerados. Após a correção, recalcular a média dos três preços e atualizar o valor médio unitário no Plano de Aplicação Detalhado.",
+            "communication": "2026-10-02",
+            "science": "",
+            "response": "",
+            "status": "baixada",
+            "note": "",
+            "at": "2026-10-22T18:59:34.012Z",
+            "base": "2026-10-12",
+            "due": "2026-10-12",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": "",
+            "closedByReview": {
+              "proposalId": "2246634",
+              "group": "pad",
+              "item": "17455025",
+              "ref": "pad:17455025",
+              "at": "2026-10-22T18:59:34.012Z",
+              "reason": "Encerrada por confirmação de conformidade do requisito",
+              "actor": "Usuário local",
+              "confirmedBy": "Usuário local"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T19:05:04.163Z",
+          "event": "Avaliação: pad / 17455022",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "No item “Cabo de rede”, os preços comprovados nas imagens divergem dos valores utilizados na memória de cálculo da pesquisa mercadológica e, consequentemente, do valor médio unitário registrado no Plano de Aplicação Detalhado. Conferir e corrigir a memória de cálculo com base nos três preços efetivamente comprovados, incluindo os fretes considerados, recalcular a média e atualizar o valor correspondente no PAD.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T18:44:15.201Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455022",
+              "fingerprint": "fnv64-v1:9d23061b15856f2d"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "No item “Cabo de rede”, os preços comprovados nas imagens divergem dos valores utilizados na memória de cálculo da pesquisa mercadológica e, consequentemente, do valor médio unitário registrado no Plano de Aplicação Detalhado. Conferir e corrigir a memória de cálculo com base nos três preços efetivamente comprovados, incluindo os fretes considerados, recalcular a média e atualizar o valor correspondente no PAD.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T19:05:04.163Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17455022",
+              "fingerprint": "fnv64-v1:9d23061b15856f2d"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T19:05:04.163Z",
+          "event": "Diligência encerrada por atendimento do requisito",
+          "actor": "Usuário local",
+          "before": {
+            "id": "e4a915f5-660c-45a1-9151-dbef76cbf9fa",
+            "ref": "pad:17455022",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "No item “Cabo de rede”, os preços comprovados nas imagens divergem dos valores utilizados na memória de cálculo da pesquisa mercadológica e, consequentemente, do valor médio unitário registrado no Plano de Aplicação Detalhado. Conferir e corrigir a memória de cálculo com base nos três preços efetivamente comprovados, incluindo os fretes considerados, recalcular a média e atualizar o valor correspondente no PAD.",
+            "communication": "2026-10-02",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-05T17:22:28.242Z",
+            "base": "2026-10-12",
+            "due": "2026-10-12",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          },
+          "after": {
+            "id": "e4a915f5-660c-45a1-9151-dbef76cbf9fa",
+            "ref": "pad:17455022",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "No item “Cabo de rede”, os preços comprovados nas imagens divergem dos valores utilizados na memória de cálculo da pesquisa mercadológica e, consequentemente, do valor médio unitário registrado no Plano de Aplicação Detalhado. Conferir e corrigir a memória de cálculo com base nos três preços efetivamente comprovados, incluindo os fretes considerados, recalcular a média e atualizar o valor correspondente no PAD.",
+            "communication": "2026-10-02",
+            "science": "",
+            "response": "",
+            "status": "baixada",
+            "note": "",
+            "at": "2026-10-22T19:05:04.163Z",
+            "base": "2026-10-12",
+            "due": "2026-10-12",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": "",
+            "closedByReview": {
+              "proposalId": "2246634",
+              "group": "pad",
+              "item": "17455022",
+              "ref": "pad:17455022",
+              "at": "2026-10-22T19:05:04.163Z",
+              "reason": "Encerrada por confirmação de conformidade do requisito",
+              "actor": "Usuário local",
+              "confirmedBy": "Usuário local"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T19:05:51.303Z",
+          "event": "Conclusão da análise técnica registrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "result": "favoravel",
+            "note": "aprovado",
+            "reference": "aprovado",
+            "actor": "Usuário local",
+            "at": "2026-10-22T19:05:51.303Z",
+            "evidence": {
+              "version": 1,
+              "fingerprint": "fnv64-v1:7dca947608cf2366"
+            },
+            "operationId": "fe5f2e06-6fc8-4648-ad50-65abb3fabbce"
+          }
         }
       ],
       "textos": {
@@ -76696,11 +78185,11 @@ window.PROFOR_PUBLIC_DATA = {
             }
           },
           "12": {
-            "status": "diligencia",
+            "status": "ok",
             "note": "Anexar documento.",
             "document": "",
             "url": "",
-            "at": "2026-10-06T14:35:03.309Z",
+            "at": "2026-10-22T19:08:27.446Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
@@ -76710,11 +78199,11 @@ window.PROFOR_PUBLIC_DATA = {
             }
           },
           "13": {
-            "status": "diligencia",
+            "status": "ok",
             "note": "Anexar documento.",
             "document": "",
             "url": "",
-            "at": "2026-10-06T14:35:03.310Z",
+            "at": "2026-10-22T19:08:27.446Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
@@ -76738,11 +78227,11 @@ window.PROFOR_PUBLIC_DATA = {
             }
           },
           "15": {
-            "status": "diligencia",
+            "status": "ok",
             "note": "Anexar documento.",
             "document": "",
             "url": "",
-            "at": "2026-10-06T14:35:03.311Z",
+            "at": "2026-10-22T19:08:27.446Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
@@ -76752,11 +78241,11 @@ window.PROFOR_PUBLIC_DATA = {
             }
           },
           "16": {
-            "status": "diligencia",
+            "status": "ok",
             "note": "Anexar documento.",
             "document": "",
             "url": "",
-            "at": "2026-10-06T14:35:03.312Z",
+            "at": "2026-10-22T19:08:27.447Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
@@ -76766,11 +78255,11 @@ window.PROFOR_PUBLIC_DATA = {
             }
           },
           "17": {
-            "status": "diligencia",
+            "status": "ok",
             "note": "Anexar documento.",
             "document": "",
             "url": "",
-            "at": "2026-10-06T14:35:03.313Z",
+            "at": "2026-10-22T19:08:27.447Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
@@ -76780,11 +78269,11 @@ window.PROFOR_PUBLIC_DATA = {
             }
           },
           "18": {
-            "status": "diligencia",
+            "status": "ok",
             "note": "Anexar documento.",
             "document": "",
             "url": "",
-            "at": "2026-10-06T14:35:03.314Z",
+            "at": "2026-10-22T19:08:27.447Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
@@ -77309,14 +78798,24 @@ window.PROFOR_PUBLIC_DATA = {
           "communication": "2026-10-06",
           "science": "",
           "response": "",
-          "status": "aberta",
+          "status": "baixada",
           "note": "",
-          "at": "2026-10-06T14:35:03.309Z",
+          "at": "2026-10-22T19:08:27.446Z",
           "base": "2026-10-16",
           "due": "2026-10-16",
           "automaticDeadline": true,
           "confirmed": false,
-          "calendarNote": ""
+          "calendarNote": "",
+          "closedByReview": {
+            "proposalId": "2246762",
+            "group": "celebracao",
+            "item": "12",
+            "ref": "celebracao:12",
+            "at": "2026-10-22T19:08:27.446Z",
+            "reason": "Encerrada por confirmação de conformidade do requisito",
+            "actor": "Usuário local",
+            "confirmedBy": "Usuário local"
+          }
         },
         {
           "id": "448a2bdf-a370-4638-9ee3-4130011eee79",
@@ -77326,14 +78825,24 @@ window.PROFOR_PUBLIC_DATA = {
           "communication": "2026-10-06",
           "science": "",
           "response": "",
-          "status": "aberta",
+          "status": "baixada",
           "note": "",
-          "at": "2026-10-06T14:35:03.310Z",
+          "at": "2026-10-22T19:08:27.446Z",
           "base": "2026-10-16",
           "due": "2026-10-16",
           "automaticDeadline": true,
           "confirmed": false,
-          "calendarNote": ""
+          "calendarNote": "",
+          "closedByReview": {
+            "proposalId": "2246762",
+            "group": "celebracao",
+            "item": "13",
+            "ref": "celebracao:13",
+            "at": "2026-10-22T19:08:27.446Z",
+            "reason": "Encerrada por confirmação de conformidade do requisito",
+            "actor": "Usuário local",
+            "confirmedBy": "Usuário local"
+          }
         },
         {
           "id": "2466cb01-f6dc-4739-a38c-e405fc54bdb2",
@@ -77370,14 +78879,24 @@ window.PROFOR_PUBLIC_DATA = {
           "communication": "2026-10-06",
           "science": "",
           "response": "",
-          "status": "aberta",
+          "status": "baixada",
           "note": "",
-          "at": "2026-10-06T14:35:03.311Z",
+          "at": "2026-10-22T19:08:27.447Z",
           "base": "2026-10-16",
           "due": "2026-10-16",
           "automaticDeadline": true,
           "confirmed": false,
-          "calendarNote": ""
+          "calendarNote": "",
+          "closedByReview": {
+            "proposalId": "2246762",
+            "group": "celebracao",
+            "item": "15",
+            "ref": "celebracao:15",
+            "at": "2026-10-22T19:08:27.447Z",
+            "reason": "Encerrada por confirmação de conformidade do requisito",
+            "actor": "Usuário local",
+            "confirmedBy": "Usuário local"
+          }
         },
         {
           "id": "0d34e2fa-3539-425a-a904-a3c95f21cb31",
@@ -77387,14 +78906,24 @@ window.PROFOR_PUBLIC_DATA = {
           "communication": "2026-10-06",
           "science": "",
           "response": "",
-          "status": "aberta",
+          "status": "baixada",
           "note": "",
-          "at": "2026-10-06T14:35:03.312Z",
+          "at": "2026-10-22T19:08:27.447Z",
           "base": "2026-10-16",
           "due": "2026-10-16",
           "automaticDeadline": true,
           "confirmed": false,
-          "calendarNote": ""
+          "calendarNote": "",
+          "closedByReview": {
+            "proposalId": "2246762",
+            "group": "celebracao",
+            "item": "16",
+            "ref": "celebracao:16",
+            "at": "2026-10-22T19:08:27.447Z",
+            "reason": "Encerrada por confirmação de conformidade do requisito",
+            "actor": "Usuário local",
+            "confirmedBy": "Usuário local"
+          }
         },
         {
           "id": "4bdceba2-d77a-47f1-a874-398db8cc0e86",
@@ -77404,14 +78933,24 @@ window.PROFOR_PUBLIC_DATA = {
           "communication": "2026-10-06",
           "science": "",
           "response": "",
-          "status": "aberta",
+          "status": "baixada",
           "note": "",
-          "at": "2026-10-06T14:35:03.313Z",
+          "at": "2026-10-22T19:08:27.447Z",
           "base": "2026-10-16",
           "due": "2026-10-16",
           "automaticDeadline": true,
           "confirmed": false,
-          "calendarNote": ""
+          "calendarNote": "",
+          "closedByReview": {
+            "proposalId": "2246762",
+            "group": "celebracao",
+            "item": "17",
+            "ref": "celebracao:17",
+            "at": "2026-10-22T19:08:27.447Z",
+            "reason": "Encerrada por confirmação de conformidade do requisito",
+            "actor": "Usuário local",
+            "confirmedBy": "Usuário local"
+          }
         },
         {
           "id": "7350be18-81f6-48b7-ada9-45e5d04f524c",
@@ -77421,14 +78960,24 @@ window.PROFOR_PUBLIC_DATA = {
           "communication": "2026-10-06",
           "science": "",
           "response": "",
-          "status": "aberta",
+          "status": "baixada",
           "note": "",
-          "at": "2026-10-06T14:35:03.314Z",
+          "at": "2026-10-22T19:08:27.447Z",
           "base": "2026-10-16",
           "due": "2026-10-16",
           "automaticDeadline": true,
           "confirmed": false,
-          "calendarNote": ""
+          "calendarNote": "",
+          "closedByReview": {
+            "proposalId": "2246762",
+            "group": "celebracao",
+            "item": "18",
+            "ref": "celebracao:18",
+            "at": "2026-10-22T19:08:27.447Z",
+            "reason": "Encerrada por confirmação de conformidade do requisito",
+            "actor": "Usuário local",
+            "confirmedBy": "Usuário local"
+          }
         },
         {
           "id": "f8bb334d-9773-4bfb-bd99-8bfecc5035d8",
@@ -77466,7 +79015,18 @@ window.PROFOR_PUBLIC_DATA = {
         "clause": false
       },
       "falaBR": "aderido",
-      "conclusion": null,
+      "conclusion": {
+        "result": "favoravel",
+        "note": "Aprovado",
+        "reference": "Aprovado",
+        "actor": "Usuário local",
+        "at": "2026-10-22T19:18:07.054Z",
+        "evidence": {
+          "version": 1,
+          "fingerprint": "fnv64-v1:f7ed0a2673652ea5"
+        },
+        "operationId": "b2646bfe-698f-4b19-a423-4d7cf3322cd5"
+      },
       "history": [
         {
           "at": "2026-10-01T13:55:12.636Z",
@@ -80984,6 +82544,516 @@ window.PROFOR_PUBLIC_DATA = {
           },
           "after": {
             "at": "2026-10-22T14:38:40.048Z"
+          }
+        },
+        {
+          "at": "2026-10-22T19:08:27.446Z",
+          "event": "Avaliação: celebracao / 12",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "Anexar documento.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-06T14:35:03.309Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:12",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Anexar documento.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T19:08:27.446Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:12",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T19:08:27.446Z",
+          "event": "Diligência encerrada por atendimento do requisito",
+          "actor": "Usuário local",
+          "before": {
+            "id": "e9c12e3b-ccbe-4b4b-ba1b-f3d7a60ed043",
+            "ref": "celebracao:12",
+            "category": "OUTRO",
+            "request": "Anexar documento.",
+            "communication": "2026-10-06",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-06T14:35:03.309Z",
+            "base": "2026-10-16",
+            "due": "2026-10-16",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          },
+          "after": {
+            "id": "e9c12e3b-ccbe-4b4b-ba1b-f3d7a60ed043",
+            "ref": "celebracao:12",
+            "category": "OUTRO",
+            "request": "Anexar documento.",
+            "communication": "2026-10-06",
+            "science": "",
+            "response": "",
+            "status": "baixada",
+            "note": "",
+            "at": "2026-10-22T19:08:27.446Z",
+            "base": "2026-10-16",
+            "due": "2026-10-16",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": "",
+            "closedByReview": {
+              "proposalId": "2246762",
+              "group": "celebracao",
+              "item": "12",
+              "ref": "celebracao:12",
+              "at": "2026-10-22T19:08:27.446Z",
+              "reason": "Encerrada por confirmação de conformidade do requisito",
+              "actor": "Usuário local",
+              "confirmedBy": "Usuário local"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T19:08:27.446Z",
+          "event": "Avaliação: celebracao / 13",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "Anexar documento.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-06T14:35:03.310Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:13",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Anexar documento.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T19:08:27.446Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:13",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T19:08:27.446Z",
+          "event": "Diligência encerrada por atendimento do requisito",
+          "actor": "Usuário local",
+          "before": {
+            "id": "448a2bdf-a370-4638-9ee3-4130011eee79",
+            "ref": "celebracao:13",
+            "category": "OUTRO",
+            "request": "Anexar documento.",
+            "communication": "2026-10-06",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-06T14:35:03.310Z",
+            "base": "2026-10-16",
+            "due": "2026-10-16",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          },
+          "after": {
+            "id": "448a2bdf-a370-4638-9ee3-4130011eee79",
+            "ref": "celebracao:13",
+            "category": "OUTRO",
+            "request": "Anexar documento.",
+            "communication": "2026-10-06",
+            "science": "",
+            "response": "",
+            "status": "baixada",
+            "note": "",
+            "at": "2026-10-22T19:08:27.446Z",
+            "base": "2026-10-16",
+            "due": "2026-10-16",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": "",
+            "closedByReview": {
+              "proposalId": "2246762",
+              "group": "celebracao",
+              "item": "13",
+              "ref": "celebracao:13",
+              "at": "2026-10-22T19:08:27.446Z",
+              "reason": "Encerrada por confirmação de conformidade do requisito",
+              "actor": "Usuário local",
+              "confirmedBy": "Usuário local"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T19:08:27.446Z",
+          "event": "Avaliação: celebracao / 15",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "Anexar documento.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-06T14:35:03.311Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:15",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Anexar documento.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T19:08:27.446Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:15",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T19:08:27.447Z",
+          "event": "Diligência encerrada por atendimento do requisito",
+          "actor": "Usuário local",
+          "before": {
+            "id": "6571ed5b-4055-4638-92c3-d2bb9128feb9",
+            "ref": "celebracao:15",
+            "category": "OUTRO",
+            "request": "Anexar documento.",
+            "communication": "2026-10-06",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-06T14:35:03.311Z",
+            "base": "2026-10-16",
+            "due": "2026-10-16",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          },
+          "after": {
+            "id": "6571ed5b-4055-4638-92c3-d2bb9128feb9",
+            "ref": "celebracao:15",
+            "category": "OUTRO",
+            "request": "Anexar documento.",
+            "communication": "2026-10-06",
+            "science": "",
+            "response": "",
+            "status": "baixada",
+            "note": "",
+            "at": "2026-10-22T19:08:27.447Z",
+            "base": "2026-10-16",
+            "due": "2026-10-16",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": "",
+            "closedByReview": {
+              "proposalId": "2246762",
+              "group": "celebracao",
+              "item": "15",
+              "ref": "celebracao:15",
+              "at": "2026-10-22T19:08:27.447Z",
+              "reason": "Encerrada por confirmação de conformidade do requisito",
+              "actor": "Usuário local",
+              "confirmedBy": "Usuário local"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T19:08:27.447Z",
+          "event": "Avaliação: celebracao / 16",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "Anexar documento.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-06T14:35:03.312Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:16",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Anexar documento.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T19:08:27.447Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:16",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T19:08:27.447Z",
+          "event": "Diligência encerrada por atendimento do requisito",
+          "actor": "Usuário local",
+          "before": {
+            "id": "0d34e2fa-3539-425a-a904-a3c95f21cb31",
+            "ref": "celebracao:16",
+            "category": "OUTRO",
+            "request": "Anexar documento.",
+            "communication": "2026-10-06",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-06T14:35:03.312Z",
+            "base": "2026-10-16",
+            "due": "2026-10-16",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          },
+          "after": {
+            "id": "0d34e2fa-3539-425a-a904-a3c95f21cb31",
+            "ref": "celebracao:16",
+            "category": "OUTRO",
+            "request": "Anexar documento.",
+            "communication": "2026-10-06",
+            "science": "",
+            "response": "",
+            "status": "baixada",
+            "note": "",
+            "at": "2026-10-22T19:08:27.447Z",
+            "base": "2026-10-16",
+            "due": "2026-10-16",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": "",
+            "closedByReview": {
+              "proposalId": "2246762",
+              "group": "celebracao",
+              "item": "16",
+              "ref": "celebracao:16",
+              "at": "2026-10-22T19:08:27.447Z",
+              "reason": "Encerrada por confirmação de conformidade do requisito",
+              "actor": "Usuário local",
+              "confirmedBy": "Usuário local"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T19:08:27.447Z",
+          "event": "Avaliação: celebracao / 17",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "Anexar documento.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-06T14:35:03.313Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:17",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Anexar documento.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T19:08:27.447Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:17",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T19:08:27.447Z",
+          "event": "Diligência encerrada por atendimento do requisito",
+          "actor": "Usuário local",
+          "before": {
+            "id": "4bdceba2-d77a-47f1-a874-398db8cc0e86",
+            "ref": "celebracao:17",
+            "category": "OUTRO",
+            "request": "Anexar documento.",
+            "communication": "2026-10-06",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-06T14:35:03.313Z",
+            "base": "2026-10-16",
+            "due": "2026-10-16",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          },
+          "after": {
+            "id": "4bdceba2-d77a-47f1-a874-398db8cc0e86",
+            "ref": "celebracao:17",
+            "category": "OUTRO",
+            "request": "Anexar documento.",
+            "communication": "2026-10-06",
+            "science": "",
+            "response": "",
+            "status": "baixada",
+            "note": "",
+            "at": "2026-10-22T19:08:27.447Z",
+            "base": "2026-10-16",
+            "due": "2026-10-16",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": "",
+            "closedByReview": {
+              "proposalId": "2246762",
+              "group": "celebracao",
+              "item": "17",
+              "ref": "celebracao:17",
+              "at": "2026-10-22T19:08:27.447Z",
+              "reason": "Encerrada por confirmação de conformidade do requisito",
+              "actor": "Usuário local",
+              "confirmedBy": "Usuário local"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T19:08:27.447Z",
+          "event": "Avaliação: celebracao / 18",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "Anexar documento.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-06T14:35:03.314Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:18",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Anexar documento.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T19:08:27.447Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:18",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T19:08:27.447Z",
+          "event": "Diligência encerrada por atendimento do requisito",
+          "actor": "Usuário local",
+          "before": {
+            "id": "7350be18-81f6-48b7-ada9-45e5d04f524c",
+            "ref": "celebracao:18",
+            "category": "OUTRO",
+            "request": "Anexar documento.",
+            "communication": "2026-10-06",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-06T14:35:03.314Z",
+            "base": "2026-10-16",
+            "due": "2026-10-16",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          },
+          "after": {
+            "id": "7350be18-81f6-48b7-ada9-45e5d04f524c",
+            "ref": "celebracao:18",
+            "category": "OUTRO",
+            "request": "Anexar documento.",
+            "communication": "2026-10-06",
+            "science": "",
+            "response": "",
+            "status": "baixada",
+            "note": "",
+            "at": "2026-10-22T19:08:27.447Z",
+            "base": "2026-10-16",
+            "due": "2026-10-16",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": "",
+            "closedByReview": {
+              "proposalId": "2246762",
+              "group": "celebracao",
+              "item": "18",
+              "ref": "celebracao:18",
+              "at": "2026-10-22T19:08:27.447Z",
+              "reason": "Encerrada por confirmação de conformidade do requisito",
+              "actor": "Usuário local",
+              "confirmedBy": "Usuário local"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T19:18:07.054Z",
+          "event": "Conclusão da análise técnica registrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "result": "favoravel",
+            "note": "Aprovado",
+            "reference": "Aprovado",
+            "actor": "Usuário local",
+            "at": "2026-10-22T19:18:07.054Z",
+            "evidence": {
+              "version": 1,
+              "fingerprint": "fnv64-v1:f7ed0a2673652ea5"
+            },
+            "operationId": "b2646bfe-698f-4b19-a423-4d7cf3322cd5"
           }
         }
       ],
