@@ -1,9 +1,9 @@
-/** Snapshot integral de consulta PROFOR/ONASP 2026. Gerado em 2026-10-22T19:46:32.955Z.
+/** Snapshot integral de consulta PROFOR/ONASP 2026. Gerado em 2026-10-22T23:53:26.653Z.
  * Não editar manualmente. Use tools/build_public_docs.cjs. */
-window.PROFOR_PUBLIC_UPDATED_AT = "2026-10-22T19:46:32.955Z";
+window.PROFOR_PUBLIC_UPDATED_AT = "2026-10-22T23:53:26.653Z";
 window.PROFOR_PUBLIC_DATA = {
   "schemaVersion": 1,
-  "revision": 509,
+  "revision": 526,
   "proposals": [
     {
       "id": "2243618",
@@ -981,16 +981,16 @@ window.PROFOR_PUBLIC_DATA = {
             "actor": "Usuário local"
           },
           "ouvidoriaInstituida": {
-            "status": "no",
+            "status": "ok",
             "note": "Ausencia de instrumento normativo que comprove a institucionalização da Ouvidoria Específica.",
             "document": "",
             "url": "",
-            "at": "2026-10-05T18:00:06.014Z",
+            "at": "2026-10-22T23:44:07.797Z",
             "attachments": [],
             "evidence": {
               "version": 1,
               "ref": "merito:ouvidoriaInstituida",
-              "fingerprint": "fnv64-v1:a27e8ca67caeb499"
+              "fingerprint": "fnv64-v1:1335379bb2cd68e8"
             },
             "actor": "Usuário local"
           },
@@ -1175,11 +1175,11 @@ window.PROFOR_PUBLIC_DATA = {
             "actor": "Usuário local"
           },
           "12": {
-            "status": "diligencia",
+            "status": "ok",
             "note": "Documento ausente.",
             "document": "",
             "url": "",
-            "at": "2026-10-05T18:28:35.184Z",
+            "at": "2026-10-22T23:49:18.550Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
@@ -1189,11 +1189,11 @@ window.PROFOR_PUBLIC_DATA = {
             }
           },
           "13": {
-            "status": "diligencia",
+            "status": "ok",
             "note": "Documento ausente.",
             "document": "",
             "url": "",
-            "at": "2026-10-05T18:28:35.185Z",
+            "at": "2026-10-22T23:49:18.550Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
@@ -1203,11 +1203,11 @@ window.PROFOR_PUBLIC_DATA = {
             }
           },
           "14": {
-            "status": "diligencia",
+            "status": "ok",
             "note": "Documento ausente.",
             "document": "",
             "url": "",
-            "at": "2026-10-05T18:28:35.186Z",
+            "at": "2026-10-22T23:49:18.550Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
@@ -1217,11 +1217,11 @@ window.PROFOR_PUBLIC_DATA = {
             }
           },
           "15": {
-            "status": "diligencia",
+            "status": "ok",
             "note": "Documento ausente.",
             "document": "",
             "url": "",
-            "at": "2026-10-06T13:28:03.012Z",
+            "at": "2026-10-22T23:49:18.550Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
@@ -1231,11 +1231,11 @@ window.PROFOR_PUBLIC_DATA = {
             }
           },
           "16": {
-            "status": "diligencia",
+            "status": "ok",
             "note": "Documento ausente.",
             "document": "",
             "url": "",
-            "at": "2026-10-06T13:28:03.018Z",
+            "at": "2026-10-22T23:49:18.550Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
@@ -1245,11 +1245,11 @@ window.PROFOR_PUBLIC_DATA = {
             }
           },
           "17": {
-            "status": "diligencia",
+            "status": "ok",
             "note": "Documento ausente.",
             "document": "",
             "url": "",
-            "at": "2026-10-06T13:28:03.019Z",
+            "at": "2026-10-22T23:49:18.550Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
@@ -1259,11 +1259,11 @@ window.PROFOR_PUBLIC_DATA = {
             }
           },
           "18": {
-            "status": "diligencia",
+            "status": "ok",
             "note": "Documento ausente.",
             "document": "",
             "url": "",
-            "at": "2026-10-06T13:28:03.020Z",
+            "at": "2026-10-22T23:49:18.550Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
@@ -1287,11 +1287,11 @@ window.PROFOR_PUBLIC_DATA = {
             }
           },
           "1.1": {
-            "status": "diligencia",
+            "status": "ok",
             "note": "Documento ausente.",
             "document": "",
             "url": "",
-            "at": "2026-10-05T18:28:35.181Z",
+            "at": "2026-10-22T23:49:18.549Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
@@ -1774,14 +1774,24 @@ window.PROFOR_PUBLIC_DATA = {
           "communication": "2026-10-05",
           "science": "",
           "response": "",
-          "status": "aberta",
+          "status": "baixada",
           "note": "",
-          "at": "2026-10-05T18:28:35.182Z",
+          "at": "2026-10-22T23:49:18.550Z",
           "base": "2026-10-15",
           "due": "2026-10-15",
           "automaticDeadline": true,
           "confirmed": false,
-          "calendarNote": ""
+          "calendarNote": "",
+          "closedByReview": {
+            "proposalId": "2243576",
+            "group": "celebracao",
+            "item": "1.1",
+            "ref": "celebracao:1.1",
+            "at": "2026-10-22T23:49:18.550Z",
+            "reason": "Encerrada por confirmação de conformidade do requisito",
+            "actor": "Usuário local",
+            "confirmedBy": "Usuário local"
+          }
         },
         {
           "id": "1f68a999-f1b1-4af7-b2e9-a262cdf8c577",
@@ -1791,14 +1801,24 @@ window.PROFOR_PUBLIC_DATA = {
           "communication": "2026-10-05",
           "science": "",
           "response": "",
-          "status": "aberta",
+          "status": "baixada",
           "note": "",
-          "at": "2026-10-05T18:28:35.184Z",
+          "at": "2026-10-22T23:49:18.550Z",
           "base": "2026-10-15",
           "due": "2026-10-15",
           "automaticDeadline": true,
           "confirmed": false,
-          "calendarNote": ""
+          "calendarNote": "",
+          "closedByReview": {
+            "proposalId": "2243576",
+            "group": "celebracao",
+            "item": "12",
+            "ref": "celebracao:12",
+            "at": "2026-10-22T23:49:18.550Z",
+            "reason": "Encerrada por confirmação de conformidade do requisito",
+            "actor": "Usuário local",
+            "confirmedBy": "Usuário local"
+          }
         },
         {
           "id": "78b174c3-0e6c-45ea-aee0-4196deabb910",
@@ -1808,14 +1828,24 @@ window.PROFOR_PUBLIC_DATA = {
           "communication": "2026-10-05",
           "science": "",
           "response": "",
-          "status": "aberta",
+          "status": "baixada",
           "note": "",
-          "at": "2026-10-05T18:28:35.185Z",
+          "at": "2026-10-22T23:49:18.550Z",
           "base": "2026-10-15",
           "due": "2026-10-15",
           "automaticDeadline": true,
           "confirmed": false,
-          "calendarNote": ""
+          "calendarNote": "",
+          "closedByReview": {
+            "proposalId": "2243576",
+            "group": "celebracao",
+            "item": "13",
+            "ref": "celebracao:13",
+            "at": "2026-10-22T23:49:18.550Z",
+            "reason": "Encerrada por confirmação de conformidade do requisito",
+            "actor": "Usuário local",
+            "confirmedBy": "Usuário local"
+          }
         },
         {
           "id": "140f13a1-f509-471a-9957-d4ac71def9fc",
@@ -1825,14 +1855,24 @@ window.PROFOR_PUBLIC_DATA = {
           "communication": "2026-10-05",
           "science": "",
           "response": "",
-          "status": "aberta",
+          "status": "baixada",
           "note": "",
-          "at": "2026-10-05T18:28:35.186Z",
+          "at": "2026-10-22T23:49:18.550Z",
           "base": "2026-10-15",
           "due": "2026-10-15",
           "automaticDeadline": true,
           "confirmed": false,
-          "calendarNote": ""
+          "calendarNote": "",
+          "closedByReview": {
+            "proposalId": "2243576",
+            "group": "celebracao",
+            "item": "14",
+            "ref": "celebracao:14",
+            "at": "2026-10-22T23:49:18.550Z",
+            "reason": "Encerrada por confirmação de conformidade do requisito",
+            "actor": "Usuário local",
+            "confirmedBy": "Usuário local"
+          }
         },
         {
           "id": "725d07ce-acdf-484c-ab30-0887e0411a9a",
@@ -1842,14 +1882,24 @@ window.PROFOR_PUBLIC_DATA = {
           "communication": "2026-10-05",
           "science": "",
           "response": "",
-          "status": "aberta",
+          "status": "baixada",
           "note": "",
-          "at": "2026-10-06T13:28:03.012Z",
+          "at": "2026-10-22T23:49:18.550Z",
           "base": "2026-10-15",
           "due": "2026-10-15",
           "automaticDeadline": true,
           "confirmed": false,
-          "calendarNote": ""
+          "calendarNote": "",
+          "closedByReview": {
+            "proposalId": "2243576",
+            "group": "celebracao",
+            "item": "15",
+            "ref": "celebracao:15",
+            "at": "2026-10-22T23:49:18.550Z",
+            "reason": "Encerrada por confirmação de conformidade do requisito",
+            "actor": "Usuário local",
+            "confirmedBy": "Usuário local"
+          }
         },
         {
           "id": "dc102d12-6ed9-4393-ab58-74ac06be3dcd",
@@ -1859,14 +1909,24 @@ window.PROFOR_PUBLIC_DATA = {
           "communication": "2026-10-05",
           "science": "",
           "response": "",
-          "status": "aberta",
+          "status": "baixada",
           "note": "",
-          "at": "2026-10-06T13:28:03.018Z",
+          "at": "2026-10-22T23:49:18.550Z",
           "base": "2026-10-15",
           "due": "2026-10-15",
           "automaticDeadline": true,
           "confirmed": false,
-          "calendarNote": ""
+          "calendarNote": "",
+          "closedByReview": {
+            "proposalId": "2243576",
+            "group": "celebracao",
+            "item": "16",
+            "ref": "celebracao:16",
+            "at": "2026-10-22T23:49:18.550Z",
+            "reason": "Encerrada por confirmação de conformidade do requisito",
+            "actor": "Usuário local",
+            "confirmedBy": "Usuário local"
+          }
         },
         {
           "id": "fc2966c5-a96d-4067-b192-0a5c324a9e1a",
@@ -1876,14 +1936,24 @@ window.PROFOR_PUBLIC_DATA = {
           "communication": "2026-10-05",
           "science": "",
           "response": "",
-          "status": "aberta",
+          "status": "baixada",
           "note": "",
-          "at": "2026-10-06T13:28:03.019Z",
+          "at": "2026-10-22T23:49:18.550Z",
           "base": "2026-10-15",
           "due": "2026-10-15",
           "automaticDeadline": true,
           "confirmed": false,
-          "calendarNote": ""
+          "calendarNote": "",
+          "closedByReview": {
+            "proposalId": "2243576",
+            "group": "celebracao",
+            "item": "17",
+            "ref": "celebracao:17",
+            "at": "2026-10-22T23:49:18.550Z",
+            "reason": "Encerrada por confirmação de conformidade do requisito",
+            "actor": "Usuário local",
+            "confirmedBy": "Usuário local"
+          }
         },
         {
           "id": "d3ae3e52-672e-4f97-b9fa-b7727f657ba9",
@@ -1893,18 +1963,28 @@ window.PROFOR_PUBLIC_DATA = {
           "communication": "2026-10-05",
           "science": "",
           "response": "",
-          "status": "aberta",
+          "status": "baixada",
           "note": "",
-          "at": "2026-10-06T13:28:03.020Z",
+          "at": "2026-10-22T23:49:18.551Z",
           "base": "2026-10-15",
           "due": "2026-10-15",
           "automaticDeadline": true,
           "confirmed": false,
-          "calendarNote": ""
+          "calendarNote": "",
+          "closedByReview": {
+            "proposalId": "2243576",
+            "group": "celebracao",
+            "item": "18",
+            "ref": "celebracao:18",
+            "at": "2026-10-22T23:49:18.551Z",
+            "reason": "Encerrada por confirmação de conformidade do requisito",
+            "actor": "Usuário local",
+            "confirmedBy": "Usuário local"
+          }
         }
       ],
       "ouvidoria": {
-        "status": "pendente",
+        "status": "instituida",
         "signature": "",
         "url": "",
         "note": "",
@@ -7784,6 +7864,760 @@ window.PROFOR_PUBLIC_DATA = {
           },
           "after": {
             "at": "2026-10-22T14:38:40.048Z"
+          }
+        },
+        {
+          "at": "2026-10-22T23:44:07.797Z",
+          "event": "Informações institucionais atualizadas",
+          "actor": "Usuário local",
+          "before": {
+            "ouvidoria": {
+              "status": "pendente",
+              "signature": "",
+              "url": "",
+              "note": "",
+              "clause": false
+            },
+            "falaBR": "nao_previsto"
+          },
+          "after": {
+            "ouvidoria": {
+              "status": "instituida",
+              "signature": "",
+              "url": "",
+              "note": "",
+              "clause": false
+            },
+            "falaBR": "nao_previsto"
+          }
+        },
+        {
+          "at": "2026-10-22T23:44:07.797Z",
+          "event": "Reanálise: merito:ouvidoriaInstituida",
+          "actor": "Usuário local",
+          "before": {
+            "status": "no",
+            "note": "Ausencia de instrumento normativo que comprove a institucionalização da Ouvidoria Específica.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T18:00:06.014Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "merito:ouvidoriaInstituida",
+              "fingerprint": "fnv64-v1:a27e8ca67caeb499"
+            },
+            "actor": "Usuário local"
+          },
+          "after": {
+            "status": "reanalise",
+            "note": "Ausencia de instrumento normativo que comprove a institucionalização da Ouvidoria Específica.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T18:00:06.014Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "merito:ouvidoriaInstituida",
+              "fingerprint": "fnv64-v1:a27e8ca67caeb499"
+            },
+            "actor": "Usuário local",
+            "reanalysis": {
+              "at": "2026-10-22T23:44:07.797Z",
+              "fields": [
+                "ouvidoria"
+              ],
+              "reason": "Evidência alterada; decisão anterior preservada no histórico."
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T23:44:07.798Z",
+          "event": "Avaliação: merito / ouvidoriaInstituida",
+          "actor": "Usuário local",
+          "before": {
+            "status": "no",
+            "note": "Ausencia de instrumento normativo que comprove a institucionalização da Ouvidoria Específica.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T18:00:06.014Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "merito:ouvidoriaInstituida",
+              "fingerprint": "fnv64-v1:a27e8ca67caeb499"
+            },
+            "actor": "Usuário local"
+          },
+          "after": {
+            "status": "ok",
+            "note": "Ausencia de instrumento normativo que comprove a institucionalização da Ouvidoria Específica.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T23:44:07.797Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "merito:ouvidoriaInstituida",
+              "fingerprint": "fnv64-v1:1335379bb2cd68e8"
+            },
+            "actor": "Usuário local"
+          }
+        },
+        {
+          "at": "2026-10-22T23:49:18.550Z",
+          "event": "Avaliação: celebracao / 1.1",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "Documento ausente.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T18:28:35.181Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:1.1",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Documento ausente.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T23:49:18.549Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:1.1",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T23:49:18.550Z",
+          "event": "Diligência encerrada por atendimento do requisito",
+          "actor": "Usuário local",
+          "before": {
+            "id": "64945d09-3195-49d7-9678-51d049556f42",
+            "ref": "celebracao:1.1",
+            "category": "OUTRO",
+            "request": "Documento ausente.",
+            "communication": "2026-10-05",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-05T18:28:35.182Z",
+            "base": "2026-10-15",
+            "due": "2026-10-15",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          },
+          "after": {
+            "id": "64945d09-3195-49d7-9678-51d049556f42",
+            "ref": "celebracao:1.1",
+            "category": "OUTRO",
+            "request": "Documento ausente.",
+            "communication": "2026-10-05",
+            "science": "",
+            "response": "",
+            "status": "baixada",
+            "note": "",
+            "at": "2026-10-22T23:49:18.550Z",
+            "base": "2026-10-15",
+            "due": "2026-10-15",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": "",
+            "closedByReview": {
+              "proposalId": "2243576",
+              "group": "celebracao",
+              "item": "1.1",
+              "ref": "celebracao:1.1",
+              "at": "2026-10-22T23:49:18.550Z",
+              "reason": "Encerrada por confirmação de conformidade do requisito",
+              "actor": "Usuário local",
+              "confirmedBy": "Usuário local"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T23:49:18.550Z",
+          "event": "Avaliação: celebracao / 12",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "Documento ausente.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T18:28:35.184Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:12",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Documento ausente.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T23:49:18.550Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:12",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T23:49:18.550Z",
+          "event": "Diligência encerrada por atendimento do requisito",
+          "actor": "Usuário local",
+          "before": {
+            "id": "1f68a999-f1b1-4af7-b2e9-a262cdf8c577",
+            "ref": "celebracao:12",
+            "category": "OUTRO",
+            "request": "Documento ausente.",
+            "communication": "2026-10-05",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-05T18:28:35.184Z",
+            "base": "2026-10-15",
+            "due": "2026-10-15",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          },
+          "after": {
+            "id": "1f68a999-f1b1-4af7-b2e9-a262cdf8c577",
+            "ref": "celebracao:12",
+            "category": "OUTRO",
+            "request": "Documento ausente.",
+            "communication": "2026-10-05",
+            "science": "",
+            "response": "",
+            "status": "baixada",
+            "note": "",
+            "at": "2026-10-22T23:49:18.550Z",
+            "base": "2026-10-15",
+            "due": "2026-10-15",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": "",
+            "closedByReview": {
+              "proposalId": "2243576",
+              "group": "celebracao",
+              "item": "12",
+              "ref": "celebracao:12",
+              "at": "2026-10-22T23:49:18.550Z",
+              "reason": "Encerrada por confirmação de conformidade do requisito",
+              "actor": "Usuário local",
+              "confirmedBy": "Usuário local"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T23:49:18.550Z",
+          "event": "Avaliação: celebracao / 13",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "Documento ausente.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T18:28:35.185Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:13",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Documento ausente.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T23:49:18.550Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:13",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T23:49:18.550Z",
+          "event": "Diligência encerrada por atendimento do requisito",
+          "actor": "Usuário local",
+          "before": {
+            "id": "78b174c3-0e6c-45ea-aee0-4196deabb910",
+            "ref": "celebracao:13",
+            "category": "OUTRO",
+            "request": "Documento ausente.",
+            "communication": "2026-10-05",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-05T18:28:35.185Z",
+            "base": "2026-10-15",
+            "due": "2026-10-15",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          },
+          "after": {
+            "id": "78b174c3-0e6c-45ea-aee0-4196deabb910",
+            "ref": "celebracao:13",
+            "category": "OUTRO",
+            "request": "Documento ausente.",
+            "communication": "2026-10-05",
+            "science": "",
+            "response": "",
+            "status": "baixada",
+            "note": "",
+            "at": "2026-10-22T23:49:18.550Z",
+            "base": "2026-10-15",
+            "due": "2026-10-15",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": "",
+            "closedByReview": {
+              "proposalId": "2243576",
+              "group": "celebracao",
+              "item": "13",
+              "ref": "celebracao:13",
+              "at": "2026-10-22T23:49:18.550Z",
+              "reason": "Encerrada por confirmação de conformidade do requisito",
+              "actor": "Usuário local",
+              "confirmedBy": "Usuário local"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T23:49:18.550Z",
+          "event": "Avaliação: celebracao / 14",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "Documento ausente.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-05T18:28:35.186Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:14",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Documento ausente.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T23:49:18.550Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:14",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T23:49:18.550Z",
+          "event": "Diligência encerrada por atendimento do requisito",
+          "actor": "Usuário local",
+          "before": {
+            "id": "140f13a1-f509-471a-9957-d4ac71def9fc",
+            "ref": "celebracao:14",
+            "category": "OUTRO",
+            "request": "Documento ausente.",
+            "communication": "2026-10-05",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-05T18:28:35.186Z",
+            "base": "2026-10-15",
+            "due": "2026-10-15",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          },
+          "after": {
+            "id": "140f13a1-f509-471a-9957-d4ac71def9fc",
+            "ref": "celebracao:14",
+            "category": "OUTRO",
+            "request": "Documento ausente.",
+            "communication": "2026-10-05",
+            "science": "",
+            "response": "",
+            "status": "baixada",
+            "note": "",
+            "at": "2026-10-22T23:49:18.550Z",
+            "base": "2026-10-15",
+            "due": "2026-10-15",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": "",
+            "closedByReview": {
+              "proposalId": "2243576",
+              "group": "celebracao",
+              "item": "14",
+              "ref": "celebracao:14",
+              "at": "2026-10-22T23:49:18.550Z",
+              "reason": "Encerrada por confirmação de conformidade do requisito",
+              "actor": "Usuário local",
+              "confirmedBy": "Usuário local"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T23:49:18.550Z",
+          "event": "Avaliação: celebracao / 15",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "Documento ausente.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-06T13:28:03.012Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:15",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Documento ausente.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T23:49:18.550Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:15",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T23:49:18.550Z",
+          "event": "Diligência encerrada por atendimento do requisito",
+          "actor": "Usuário local",
+          "before": {
+            "id": "725d07ce-acdf-484c-ab30-0887e0411a9a",
+            "ref": "celebracao:15",
+            "category": "OUTRO",
+            "request": "Documento ausente.",
+            "communication": "2026-10-05",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-06T13:28:03.012Z",
+            "base": "2026-10-15",
+            "due": "2026-10-15",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          },
+          "after": {
+            "id": "725d07ce-acdf-484c-ab30-0887e0411a9a",
+            "ref": "celebracao:15",
+            "category": "OUTRO",
+            "request": "Documento ausente.",
+            "communication": "2026-10-05",
+            "science": "",
+            "response": "",
+            "status": "baixada",
+            "note": "",
+            "at": "2026-10-22T23:49:18.550Z",
+            "base": "2026-10-15",
+            "due": "2026-10-15",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": "",
+            "closedByReview": {
+              "proposalId": "2243576",
+              "group": "celebracao",
+              "item": "15",
+              "ref": "celebracao:15",
+              "at": "2026-10-22T23:49:18.550Z",
+              "reason": "Encerrada por confirmação de conformidade do requisito",
+              "actor": "Usuário local",
+              "confirmedBy": "Usuário local"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T23:49:18.550Z",
+          "event": "Avaliação: celebracao / 16",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "Documento ausente.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-06T13:28:03.018Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:16",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Documento ausente.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T23:49:18.550Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:16",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T23:49:18.550Z",
+          "event": "Diligência encerrada por atendimento do requisito",
+          "actor": "Usuário local",
+          "before": {
+            "id": "dc102d12-6ed9-4393-ab58-74ac06be3dcd",
+            "ref": "celebracao:16",
+            "category": "OUTRO",
+            "request": "Documento ausente.",
+            "communication": "2026-10-05",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-06T13:28:03.018Z",
+            "base": "2026-10-15",
+            "due": "2026-10-15",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          },
+          "after": {
+            "id": "dc102d12-6ed9-4393-ab58-74ac06be3dcd",
+            "ref": "celebracao:16",
+            "category": "OUTRO",
+            "request": "Documento ausente.",
+            "communication": "2026-10-05",
+            "science": "",
+            "response": "",
+            "status": "baixada",
+            "note": "",
+            "at": "2026-10-22T23:49:18.550Z",
+            "base": "2026-10-15",
+            "due": "2026-10-15",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": "",
+            "closedByReview": {
+              "proposalId": "2243576",
+              "group": "celebracao",
+              "item": "16",
+              "ref": "celebracao:16",
+              "at": "2026-10-22T23:49:18.550Z",
+              "reason": "Encerrada por confirmação de conformidade do requisito",
+              "actor": "Usuário local",
+              "confirmedBy": "Usuário local"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T23:49:18.550Z",
+          "event": "Avaliação: celebracao / 17",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "Documento ausente.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-06T13:28:03.019Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:17",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Documento ausente.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T23:49:18.550Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:17",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T23:49:18.550Z",
+          "event": "Diligência encerrada por atendimento do requisito",
+          "actor": "Usuário local",
+          "before": {
+            "id": "fc2966c5-a96d-4067-b192-0a5c324a9e1a",
+            "ref": "celebracao:17",
+            "category": "OUTRO",
+            "request": "Documento ausente.",
+            "communication": "2026-10-05",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-06T13:28:03.019Z",
+            "base": "2026-10-15",
+            "due": "2026-10-15",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          },
+          "after": {
+            "id": "fc2966c5-a96d-4067-b192-0a5c324a9e1a",
+            "ref": "celebracao:17",
+            "category": "OUTRO",
+            "request": "Documento ausente.",
+            "communication": "2026-10-05",
+            "science": "",
+            "response": "",
+            "status": "baixada",
+            "note": "",
+            "at": "2026-10-22T23:49:18.550Z",
+            "base": "2026-10-15",
+            "due": "2026-10-15",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": "",
+            "closedByReview": {
+              "proposalId": "2243576",
+              "group": "celebracao",
+              "item": "17",
+              "ref": "celebracao:17",
+              "at": "2026-10-22T23:49:18.550Z",
+              "reason": "Encerrada por confirmação de conformidade do requisito",
+              "actor": "Usuário local",
+              "confirmedBy": "Usuário local"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T23:49:18.550Z",
+          "event": "Avaliação: celebracao / 18",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "Documento ausente.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-06T13:28:03.020Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:18",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Documento ausente.",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T23:49:18.550Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:18",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T23:49:18.551Z",
+          "event": "Diligência encerrada por atendimento do requisito",
+          "actor": "Usuário local",
+          "before": {
+            "id": "d3ae3e52-672e-4f97-b9fa-b7727f657ba9",
+            "ref": "celebracao:18",
+            "category": "OUTRO",
+            "request": "Documento ausente.",
+            "communication": "2026-10-05",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-06T13:28:03.020Z",
+            "base": "2026-10-15",
+            "due": "2026-10-15",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          },
+          "after": {
+            "id": "d3ae3e52-672e-4f97-b9fa-b7727f657ba9",
+            "ref": "celebracao:18",
+            "category": "OUTRO",
+            "request": "Documento ausente.",
+            "communication": "2026-10-05",
+            "science": "",
+            "response": "",
+            "status": "baixada",
+            "note": "",
+            "at": "2026-10-22T23:49:18.551Z",
+            "base": "2026-10-15",
+            "due": "2026-10-15",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": "",
+            "closedByReview": {
+              "proposalId": "2243576",
+              "group": "celebracao",
+              "item": "18",
+              "ref": "celebracao:18",
+              "at": "2026-10-22T23:49:18.551Z",
+              "reason": "Encerrada por confirmação de conformidade do requisito",
+              "actor": "Usuário local",
+              "confirmedBy": "Usuário local"
+            }
           }
         }
       ],
@@ -45192,54 +46026,39 @@ window.PROFOR_PUBLIC_DATA = {
             }
           },
           "6": {
-            "status": "reanalise",
+            "status": "ok",
             "note": "Falta documento",
             "document": "",
             "url": "",
-            "at": "2026-10-14T12:05:16.905Z",
+            "at": "2026-10-22T23:30:46.343Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
               "version": 1,
               "ref": "celebracao:6",
-              "fingerprint": "fnv64-v1:7b35951bd17e260a"
-            },
-            "reanalysis": {
-              "at": "2026-10-22T14:38:40.046Z",
-              "fields": [
-                "imported.pad"
-              ],
-              "reason": "Evidência alterada; decisão anterior preservada no histórico."
+              "fingerprint": "fnv64-v1:ebac793f3da75c4a"
             }
           },
           "7": {
-            "status": "reanalise",
+            "status": "ok",
             "note": "Falt QDD",
             "document": "",
             "url": "",
-            "at": "2026-10-09T16:05:38.337Z",
+            "at": "2026-10-22T23:30:46.344Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
               "version": 1,
               "ref": "celebracao:7",
               "fingerprint": "fnv64-v1:c9f92318f0662660"
-            },
-            "reanalysis": {
-              "at": "2026-10-20T11:28:42.846Z",
-              "fields": [
-                "imported.repasse",
-                "imported.global"
-              ],
-              "reason": "Evidência alterada; decisão anterior preservada no histórico."
             }
           },
           "8": {
-            "status": "diligencia",
+            "status": "ok",
             "note": "Falta o documento",
             "document": "",
             "url": "",
-            "at": "2026-10-09T16:06:45.159Z",
+            "at": "2026-10-22T23:32:39.755Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
@@ -45291,11 +46110,11 @@ window.PROFOR_PUBLIC_DATA = {
             }
           },
           "12": {
-            "status": "diligencia",
+            "status": "ok",
             "note": "Falta o documento",
             "document": "",
             "url": "",
-            "at": "2026-10-09T16:06:45.162Z",
+            "at": "2026-10-22T23:32:39.755Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
@@ -45305,11 +46124,11 @@ window.PROFOR_PUBLIC_DATA = {
             }
           },
           "13": {
-            "status": "diligencia",
+            "status": "ok",
             "note": "Falta o documento",
             "document": "",
             "url": "",
-            "at": "2026-10-09T16:06:45.163Z",
+            "at": "2026-10-22T23:32:39.755Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
@@ -45319,11 +46138,11 @@ window.PROFOR_PUBLIC_DATA = {
             }
           },
           "14": {
-            "status": "diligencia",
+            "status": "ok",
             "note": "Falta o documento",
             "document": "",
             "url": "",
-            "at": "2026-10-09T16:06:45.163Z",
+            "at": "2026-10-22T23:32:39.755Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
@@ -45333,11 +46152,11 @@ window.PROFOR_PUBLIC_DATA = {
             }
           },
           "15": {
-            "status": "diligencia",
+            "status": "ok",
             "note": "Falta o documento",
             "document": "",
             "url": "",
-            "at": "2026-10-09T16:06:45.164Z",
+            "at": "2026-10-22T23:32:39.755Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
@@ -45347,11 +46166,11 @@ window.PROFOR_PUBLIC_DATA = {
             }
           },
           "16": {
-            "status": "diligencia",
+            "status": "ok",
             "note": "Falta o documento",
             "document": "",
             "url": "",
-            "at": "2026-10-09T16:06:45.164Z",
+            "at": "2026-10-22T23:32:39.756Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
@@ -45361,11 +46180,11 @@ window.PROFOR_PUBLIC_DATA = {
             }
           },
           "17": {
-            "status": "diligencia",
+            "status": "ok",
             "note": "Falta o documento",
             "document": "",
             "url": "",
-            "at": "2026-10-09T16:06:45.165Z",
+            "at": "2026-10-22T23:32:39.756Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
@@ -45375,11 +46194,11 @@ window.PROFOR_PUBLIC_DATA = {
             }
           },
           "18": {
-            "status": "diligencia",
+            "status": "ok",
             "note": "Falta o documento",
             "document": "",
             "url": "",
-            "at": "2026-10-09T16:06:45.165Z",
+            "at": "2026-10-22T23:32:39.756Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
@@ -45511,59 +46330,89 @@ window.PROFOR_PUBLIC_DATA = {
             "attachments": []
           },
           "17503141": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-22T23:29:46.189Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17503141",
+              "fingerprint": "fnv64-v1:2a09b21e458c3c5b"
+            }
           },
           "17503175": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-22T23:29:46.189Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17503175",
+              "fingerprint": "fnv64-v1:11ac917a82426ac4"
+            }
           },
           "17503186": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-22T23:29:46.189Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17503186",
+              "fingerprint": "fnv64-v1:0ad3ca6a334988bf"
+            }
           },
           "17503209": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-22T23:29:46.189Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17503209",
+              "fingerprint": "fnv64-v1:e66d599325140fa9"
+            }
           },
           "17503246": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-22T23:29:46.189Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17503246",
+              "fingerprint": "fnv64-v1:f600a94dee128b58"
+            }
           }
         }
       },
       "diligences": [
         {
           "id": "730701e1-d33f-4332-90b8-bda3f62a7c98",
-          "ref": "pad:17425892",
+          "ref": "",
           "category": "PLANO DE APLICAÇÃO DETALHADO",
           "request": "MINAS GERAIS:\n \nPRINCIPAL:\nSolicita-se que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética de todos os preços apresentados nas pesquisas anexadas como orçamento.\nApós os ajustes, o valor total dos itens será de R$ 186.747,51. A diferença entre o valor global da proposta e esse total poderá ser alocada como um item denominado “Saldo residual”, com valor correspondente à diferença apurada.\n \nCOMPUTADOR:\nPara o item Computador, alterar o valor unitário de R$ 17.000,00 para R$ 12.849,23, correspondente à média aritmética dos três preços apresentados. Mantida a quantidade de 10 unidades, o valor total do item será de R$ 128.492,30.\n \nSCANNER:\nPara o item Scanner, alterar o valor unitário de R$ 2.000,00 para R$ 2.249,21, correspondente à média aritmética dos três preços apresentados. Considerando uma unidade, o valor total do item será de R$ 2.249,21.\n \nIMPRSSORA:\nPara o item Impressora multifuncional, alterar o valor unitário de R$ 2.700,00 para R$ 2.696,00, correspondente à média aritmética dos três preços apresentados. Considerando uma unidade, o valor total do item será de R$ 2.696,00.\n \nNOTEBOOK:\nPara o item Notebook, alterar o valor unitário de R$ 6.000,00 para R$ 10.662,00, correspondente à média aritmética dos cinco preços apresentados na pesquisa. Mantida a quantidade de cinco unidades, o valor total do item será de R$ 53.310,00.",
           "communication": "2026-10-14",
           "science": "",
-          "response": "",
-          "status": "aberta",
-          "note": "",
-          "at": "2026-10-14T12:39:22.873Z",
+          "response": "2026-10-22",
+          "status": "saneada",
+          "note": "atendida",
+          "at": "2026-10-22T23:36:31.960Z",
           "base": "2026-10-24",
           "due": "2026-10-26",
           "automaticDeadline": true,
@@ -45573,15 +46422,15 @@ window.PROFOR_PUBLIC_DATA = {
         },
         {
           "id": "ac3cd9c4-dfc7-452a-a920-72783a8c4aa6",
-          "ref": "pad:17425889",
+          "ref": "",
           "category": "PLANO DE APLICAÇÃO DETALHADO",
           "request": "MINAS GERAIS:\n \nPRINCIPAL:\nSolicita-se que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética de todos os preços apresentados nas pesquisas anexadas como orçamento.\nApós os ajustes, o valor total dos itens será de R$ 186.747,51. A diferença entre o valor global da proposta e esse total poderá ser alocada como um item denominado “Saldo residual”, com valor correspondente à diferença apurada.\n \nCOMPUTADOR:\nPara o item Computador, alterar o valor unitário de R$ 17.000,00 para R$ 12.849,23, correspondente à média aritmética dos três preços apresentados. Mantida a quantidade de 10 unidades, o valor total do item será de R$ 128.492,30.\n \nSCANNER:\nPara o item Scanner, alterar o valor unitário de R$ 2.000,00 para R$ 2.249,21, correspondente à média aritmética dos três preços apresentados. Considerando uma unidade, o valor total do item será de R$ 2.249,21.\n \nIMPRSSORA:\nPara o item Impressora multifuncional, alterar o valor unitário de R$ 2.700,00 para R$ 2.696,00, correspondente à média aritmética dos três preços apresentados. Considerando uma unidade, o valor total do item será de R$ 2.696,00.\n \nNOTEBOOK:\nPara o item Notebook, alterar o valor unitário de R$ 6.000,00 para R$ 10.662,00, correspondente à média aritmética dos cinco preços apresentados na pesquisa. Mantida a quantidade de cinco unidades, o valor total do item será de R$ 53.310,00.",
           "communication": "2026-10-14",
           "science": "",
-          "response": "",
-          "status": "aberta",
-          "note": "",
-          "at": "2026-10-14T12:37:56.855Z",
+          "response": "2026-10-22",
+          "status": "saneada",
+          "note": "atendida",
+          "at": "2026-10-22T23:38:13.012Z",
           "base": "2026-10-24",
           "due": "2026-10-26",
           "automaticDeadline": true,
@@ -45591,15 +46440,15 @@ window.PROFOR_PUBLIC_DATA = {
         },
         {
           "id": "6d42675c-26c9-4a02-850a-af7898b4413e",
-          "ref": "pad:17425883",
+          "ref": "",
           "category": "PLANO DE APLICAÇÃO DETALHADO",
           "request": "MINAS GERAIS:\n \nPRINCIPAL:\nSolicita-se que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética de todos os preços apresentados nas pesquisas anexadas como orçamento.\nApós os ajustes, o valor total dos itens será de R$ 186.747,51. A diferença entre o valor global da proposta e esse total poderá ser alocada como um item denominado “Saldo residual”, com valor correspondente à diferença apurada.\n \nCOMPUTADOR:\nPara o item Computador, alterar o valor unitário de R$ 17.000,00 para R$ 12.849,23, correspondente à média aritmética dos três preços apresentados. Mantida a quantidade de 10 unidades, o valor total do item será de R$ 128.492,30.\n \nSCANNER:\nPara o item Scanner, alterar o valor unitário de R$ 2.000,00 para R$ 2.249,21, correspondente à média aritmética dos três preços apresentados. Considerando uma unidade, o valor total do item será de R$ 2.249,21.\n \nIMPRSSORA:\nPara o item Impressora multifuncional, alterar o valor unitário de R$ 2.700,00 para R$ 2.696,00, correspondente à média aritmética dos três preços apresentados. Considerando uma unidade, o valor total do item será de R$ 2.696,00.\n \nNOTEBOOK:\nPara o item Notebook, alterar o valor unitário de R$ 6.000,00 para R$ 10.662,00, correspondente à média aritmética dos cinco preços apresentados na pesquisa. Mantida a quantidade de cinco unidades, o valor total do item será de R$ 53.310,00.",
           "communication": "2026-10-14",
           "science": "",
-          "response": "",
-          "status": "aberta",
-          "note": "",
-          "at": "2026-10-14T12:38:53.115Z",
+          "response": "2026-10-22",
+          "status": "saneada",
+          "note": "Atendida",
+          "at": "2026-10-22T23:39:08.142Z",
           "base": "2026-10-24",
           "due": "2026-10-26",
           "automaticDeadline": true,
@@ -45609,15 +46458,15 @@ window.PROFOR_PUBLIC_DATA = {
         },
         {
           "id": "ba0bd5b6-3cdf-4745-a77c-57a8ca77b84e",
-          "ref": "pad:17425890",
+          "ref": "",
           "category": "PLANO DE APLICAÇÃO DETALHADO",
           "request": "MINAS GERAIS:\n \nPRINCIPAL:\nSolicita-se que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética de todos os preços apresentados nas pesquisas anexadas como orçamento.\nApós os ajustes, o valor total dos itens será de R$ 186.747,51. A diferença entre o valor global da proposta e esse total poderá ser alocada como um item denominado “Saldo residual”, com valor correspondente à diferença apurada.\n \nCOMPUTADOR:\nPara o item Computador, alterar o valor unitário de R$ 17.000,00 para R$ 12.849,23, correspondente à média aritmética dos três preços apresentados. Mantida a quantidade de 10 unidades, o valor total do item será de R$ 128.492,30.\n \nSCANNER:\nPara o item Scanner, alterar o valor unitário de R$ 2.000,00 para R$ 2.249,21, correspondente à média aritmética dos três preços apresentados. Considerando uma unidade, o valor total do item será de R$ 2.249,21.\n \nIMPRSSORA:\nPara o item Impressora multifuncional, alterar o valor unitário de R$ 2.700,00 para R$ 2.696,00, correspondente à média aritmética dos três preços apresentados. Considerando uma unidade, o valor total do item será de R$ 2.696,00.\n \nNOTEBOOK:\nPara o item Notebook, alterar o valor unitário de R$ 6.000,00 para R$ 10.662,00, correspondente à média aritmética dos cinco preços apresentados na pesquisa. Mantida a quantidade de cinco unidades, o valor total do item será de R$ 53.310,00.",
           "communication": "2026-10-06",
           "science": "",
-          "response": "",
-          "status": "aberta",
-          "note": "",
-          "at": "2026-10-14T12:38:21.523Z",
+          "response": "2026-10-22",
+          "status": "saneada",
+          "note": "Atendida",
+          "at": "2026-10-22T23:40:06.310Z",
           "base": "2026-10-16",
           "due": "2026-10-16",
           "automaticDeadline": true,
@@ -45660,14 +46509,24 @@ window.PROFOR_PUBLIC_DATA = {
           "category": "OUTRO",
           "communication": "2026-10-09",
           "response": "",
-          "status": "aberta",
+          "status": "baixada",
           "note": "",
-          "at": "2026-10-09T16:05:38.337Z",
+          "at": "2026-10-22T23:30:46.344Z",
           "base": "2026-10-19",
           "due": "2026-10-19",
           "automaticDeadline": true,
           "confirmed": false,
-          "calendarNote": ""
+          "calendarNote": "",
+          "closedByReview": {
+            "proposalId": "2243987",
+            "group": "celebracao",
+            "item": "7",
+            "ref": "celebracao:7",
+            "at": "2026-10-22T23:30:46.344Z",
+            "reason": "Encerrada por confirmação de conformidade do requisito",
+            "actor": "Usuário local",
+            "confirmedBy": "Usuário local"
+          }
         },
         {
           "id": "e86e5a42-bfb4-4ddd-88ab-cac714075021",
@@ -45677,14 +46536,24 @@ window.PROFOR_PUBLIC_DATA = {
           "communication": "2026-10-09",
           "science": "",
           "response": "",
-          "status": "aberta",
+          "status": "baixada",
           "note": "",
-          "at": "2026-10-09T16:06:45.159Z",
+          "at": "2026-10-22T23:32:39.755Z",
           "base": "2026-10-19",
           "due": "2026-10-19",
           "automaticDeadline": true,
           "confirmed": false,
-          "calendarNote": ""
+          "calendarNote": "",
+          "closedByReview": {
+            "proposalId": "2243987",
+            "group": "celebracao",
+            "item": "8",
+            "ref": "celebracao:8",
+            "at": "2026-10-22T23:32:39.755Z",
+            "reason": "Encerrada por confirmação de conformidade do requisito",
+            "actor": "Usuário local",
+            "confirmedBy": "Usuário local"
+          }
         },
         {
           "id": "dfb1344e-55a4-4579-bc71-6bea8b9b780f",
@@ -45748,14 +46617,24 @@ window.PROFOR_PUBLIC_DATA = {
           "communication": "2026-10-09",
           "science": "",
           "response": "",
-          "status": "aberta",
+          "status": "baixada",
           "note": "",
-          "at": "2026-10-09T16:06:45.162Z",
+          "at": "2026-10-22T23:32:39.755Z",
           "base": "2026-10-19",
           "due": "2026-10-19",
           "automaticDeadline": true,
           "confirmed": false,
-          "calendarNote": ""
+          "calendarNote": "",
+          "closedByReview": {
+            "proposalId": "2243987",
+            "group": "celebracao",
+            "item": "12",
+            "ref": "celebracao:12",
+            "at": "2026-10-22T23:32:39.755Z",
+            "reason": "Encerrada por confirmação de conformidade do requisito",
+            "actor": "Usuário local",
+            "confirmedBy": "Usuário local"
+          }
         },
         {
           "id": "a3e877ad-1519-464b-9cd6-93ca0d9aff0e",
@@ -45765,14 +46644,24 @@ window.PROFOR_PUBLIC_DATA = {
           "communication": "2026-10-09",
           "science": "",
           "response": "",
-          "status": "aberta",
+          "status": "baixada",
           "note": "",
-          "at": "2026-10-09T16:06:45.163Z",
+          "at": "2026-10-22T23:32:39.755Z",
           "base": "2026-10-19",
           "due": "2026-10-19",
           "automaticDeadline": true,
           "confirmed": false,
-          "calendarNote": ""
+          "calendarNote": "",
+          "closedByReview": {
+            "proposalId": "2243987",
+            "group": "celebracao",
+            "item": "13",
+            "ref": "celebracao:13",
+            "at": "2026-10-22T23:32:39.755Z",
+            "reason": "Encerrada por confirmação de conformidade do requisito",
+            "actor": "Usuário local",
+            "confirmedBy": "Usuário local"
+          }
         },
         {
           "id": "89e8f3ec-2f22-43e7-8453-b564c15ffbb8",
@@ -45782,14 +46671,24 @@ window.PROFOR_PUBLIC_DATA = {
           "communication": "2026-10-09",
           "science": "",
           "response": "",
-          "status": "aberta",
+          "status": "baixada",
           "note": "",
-          "at": "2026-10-09T16:06:45.163Z",
+          "at": "2026-10-22T23:32:39.755Z",
           "base": "2026-10-19",
           "due": "2026-10-19",
           "automaticDeadline": true,
           "confirmed": false,
-          "calendarNote": ""
+          "calendarNote": "",
+          "closedByReview": {
+            "proposalId": "2243987",
+            "group": "celebracao",
+            "item": "14",
+            "ref": "celebracao:14",
+            "at": "2026-10-22T23:32:39.755Z",
+            "reason": "Encerrada por confirmação de conformidade do requisito",
+            "actor": "Usuário local",
+            "confirmedBy": "Usuário local"
+          }
         },
         {
           "id": "cd8f5c74-92d4-442a-a340-63ff92203ce7",
@@ -45799,14 +46698,24 @@ window.PROFOR_PUBLIC_DATA = {
           "communication": "2026-10-09",
           "science": "",
           "response": "",
-          "status": "aberta",
+          "status": "baixada",
           "note": "",
-          "at": "2026-10-09T16:06:45.164Z",
+          "at": "2026-10-22T23:32:39.756Z",
           "base": "2026-10-19",
           "due": "2026-10-19",
           "automaticDeadline": true,
           "confirmed": false,
-          "calendarNote": ""
+          "calendarNote": "",
+          "closedByReview": {
+            "proposalId": "2243987",
+            "group": "celebracao",
+            "item": "15",
+            "ref": "celebracao:15",
+            "at": "2026-10-22T23:32:39.756Z",
+            "reason": "Encerrada por confirmação de conformidade do requisito",
+            "actor": "Usuário local",
+            "confirmedBy": "Usuário local"
+          }
         },
         {
           "id": "c8edb6db-4fa0-426b-94da-79a9bee62bbb",
@@ -45816,14 +46725,24 @@ window.PROFOR_PUBLIC_DATA = {
           "communication": "2026-10-09",
           "science": "",
           "response": "",
-          "status": "aberta",
+          "status": "baixada",
           "note": "",
-          "at": "2026-10-09T16:06:45.165Z",
+          "at": "2026-10-22T23:32:39.756Z",
           "base": "2026-10-19",
           "due": "2026-10-19",
           "automaticDeadline": true,
           "confirmed": false,
-          "calendarNote": ""
+          "calendarNote": "",
+          "closedByReview": {
+            "proposalId": "2243987",
+            "group": "celebracao",
+            "item": "16",
+            "ref": "celebracao:16",
+            "at": "2026-10-22T23:32:39.756Z",
+            "reason": "Encerrada por confirmação de conformidade do requisito",
+            "actor": "Usuário local",
+            "confirmedBy": "Usuário local"
+          }
         },
         {
           "id": "4b61da8f-97a3-4b44-a21b-072bb55d59c2",
@@ -45833,14 +46752,24 @@ window.PROFOR_PUBLIC_DATA = {
           "communication": "2026-10-09",
           "science": "",
           "response": "",
-          "status": "aberta",
+          "status": "baixada",
           "note": "",
-          "at": "2026-10-09T16:06:45.165Z",
+          "at": "2026-10-22T23:32:39.756Z",
           "base": "2026-10-19",
           "due": "2026-10-19",
           "automaticDeadline": true,
           "confirmed": false,
-          "calendarNote": ""
+          "calendarNote": "",
+          "closedByReview": {
+            "proposalId": "2243987",
+            "group": "celebracao",
+            "item": "17",
+            "ref": "celebracao:17",
+            "at": "2026-10-22T23:32:39.756Z",
+            "reason": "Encerrada por confirmação de conformidade do requisito",
+            "actor": "Usuário local",
+            "confirmedBy": "Usuário local"
+          }
         },
         {
           "id": "a4374108-131d-4c49-bc17-e093e670e0aa",
@@ -45850,14 +46779,24 @@ window.PROFOR_PUBLIC_DATA = {
           "communication": "2026-10-09",
           "science": "",
           "response": "",
-          "status": "aberta",
+          "status": "baixada",
           "note": "",
-          "at": "2026-10-09T16:06:45.165Z",
+          "at": "2026-10-22T23:32:39.756Z",
           "base": "2026-10-19",
           "due": "2026-10-19",
           "automaticDeadline": true,
           "confirmed": false,
-          "calendarNote": ""
+          "calendarNote": "",
+          "closedByReview": {
+            "proposalId": "2243987",
+            "group": "celebracao",
+            "item": "18",
+            "ref": "celebracao:18",
+            "at": "2026-10-22T23:32:39.756Z",
+            "reason": "Encerrada por confirmação de conformidade do requisito",
+            "actor": "Usuário local",
+            "confirmedBy": "Usuário local"
+          }
         },
         {
           "id": "f56b3508-a048-4e73-aa96-3e90b0ee2030",
@@ -45895,7 +46834,18 @@ window.PROFOR_PUBLIC_DATA = {
         "clause": false
       },
       "falaBR": "nao_previsto",
-      "conclusion": null,
+      "conclusion": {
+        "result": "favoravel",
+        "note": "Aprovado",
+        "reference": "Aprovado",
+        "actor": "Usuário local",
+        "at": "2026-10-22T23:41:51.091Z",
+        "evidence": {
+          "version": 1,
+          "fingerprint": "fnv64-v1:a47e8203c1acc603"
+        },
+        "operationId": "7b7d20e0-c98f-46c8-83d2-df14fc41f620"
+      },
       "history": [
         {
           "at": "2026-09-16T17:01:42.376Z",
@@ -50211,6 +51161,1109 @@ window.PROFOR_PUBLIC_DATA = {
           },
           "after": {
             "at": "2026-10-22T14:38:40.048Z"
+          }
+        },
+        {
+          "at": "2026-10-22T23:29:46.189Z",
+          "event": "Avaliação: pad / 17503246",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T23:29:46.189Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17503246",
+              "fingerprint": "fnv64-v1:f600a94dee128b58"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T23:29:46.189Z",
+          "event": "Avaliação: pad / 17503141",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T23:29:46.189Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17503141",
+              "fingerprint": "fnv64-v1:2a09b21e458c3c5b"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T23:29:46.189Z",
+          "event": "Avaliação: pad / 17503175",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T23:29:46.189Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17503175",
+              "fingerprint": "fnv64-v1:11ac917a82426ac4"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T23:29:46.189Z",
+          "event": "Avaliação: pad / 17503186",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T23:29:46.189Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17503186",
+              "fingerprint": "fnv64-v1:0ad3ca6a334988bf"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T23:29:46.189Z",
+          "event": "Avaliação: pad / 17503209",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T23:29:46.189Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17503209",
+              "fingerprint": "fnv64-v1:e66d599325140fa9"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T23:30:46.344Z",
+          "event": "Avaliação: celebracao / 6",
+          "actor": "Usuário local",
+          "before": {
+            "status": "reanalise",
+            "note": "Falta documento",
+            "document": "",
+            "url": "",
+            "at": "2026-10-14T12:05:16.905Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:6",
+              "fingerprint": "fnv64-v1:7b35951bd17e260a"
+            },
+            "reanalysis": {
+              "at": "2026-10-22T14:38:40.046Z",
+              "fields": [
+                "imported.pad"
+              ],
+              "reason": "Evidência alterada; decisão anterior preservada no histórico."
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Falta documento",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T23:30:46.343Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:6",
+              "fingerprint": "fnv64-v1:ebac793f3da75c4a"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T23:30:46.344Z",
+          "event": "Avaliação: celebracao / 7",
+          "actor": "Usuário local",
+          "before": {
+            "status": "reanalise",
+            "note": "Falt QDD",
+            "document": "",
+            "url": "",
+            "at": "2026-10-09T16:05:38.337Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:7",
+              "fingerprint": "fnv64-v1:c9f92318f0662660"
+            },
+            "reanalysis": {
+              "at": "2026-10-20T11:28:42.846Z",
+              "fields": [
+                "imported.repasse",
+                "imported.global"
+              ],
+              "reason": "Evidência alterada; decisão anterior preservada no histórico."
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Falt QDD",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T23:30:46.344Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:7",
+              "fingerprint": "fnv64-v1:c9f92318f0662660"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T23:30:46.344Z",
+          "event": "Diligência encerrada por atendimento do requisito",
+          "actor": "Usuário local",
+          "before": {
+            "id": "5e158528-e975-4eec-a3b7-67a9eb036e30",
+            "ref": "celebracao:7",
+            "request": "Falt QDD",
+            "science": "",
+            "category": "OUTRO",
+            "communication": "2026-10-09",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-09T16:05:38.337Z",
+            "base": "2026-10-19",
+            "due": "2026-10-19",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          },
+          "after": {
+            "id": "5e158528-e975-4eec-a3b7-67a9eb036e30",
+            "ref": "celebracao:7",
+            "request": "Falt QDD",
+            "science": "",
+            "category": "OUTRO",
+            "communication": "2026-10-09",
+            "response": "",
+            "status": "baixada",
+            "note": "",
+            "at": "2026-10-22T23:30:46.344Z",
+            "base": "2026-10-19",
+            "due": "2026-10-19",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": "",
+            "closedByReview": {
+              "proposalId": "2243987",
+              "group": "celebracao",
+              "item": "7",
+              "ref": "celebracao:7",
+              "at": "2026-10-22T23:30:46.344Z",
+              "reason": "Encerrada por confirmação de conformidade do requisito",
+              "actor": "Usuário local",
+              "confirmedBy": "Usuário local"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T23:32:39.755Z",
+          "event": "Avaliação: celebracao / 8",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "Falta o documento",
+            "document": "",
+            "url": "",
+            "at": "2026-10-09T16:06:45.159Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:8",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Falta o documento",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T23:32:39.755Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:8",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T23:32:39.755Z",
+          "event": "Diligência encerrada por atendimento do requisito",
+          "actor": "Usuário local",
+          "before": {
+            "id": "e86e5a42-bfb4-4ddd-88ab-cac714075021",
+            "ref": "celebracao:8",
+            "category": "OUTRO",
+            "request": "Falta o documento",
+            "communication": "2026-10-09",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-09T16:06:45.159Z",
+            "base": "2026-10-19",
+            "due": "2026-10-19",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          },
+          "after": {
+            "id": "e86e5a42-bfb4-4ddd-88ab-cac714075021",
+            "ref": "celebracao:8",
+            "category": "OUTRO",
+            "request": "Falta o documento",
+            "communication": "2026-10-09",
+            "science": "",
+            "response": "",
+            "status": "baixada",
+            "note": "",
+            "at": "2026-10-22T23:32:39.755Z",
+            "base": "2026-10-19",
+            "due": "2026-10-19",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": "",
+            "closedByReview": {
+              "proposalId": "2243987",
+              "group": "celebracao",
+              "item": "8",
+              "ref": "celebracao:8",
+              "at": "2026-10-22T23:32:39.755Z",
+              "reason": "Encerrada por confirmação de conformidade do requisito",
+              "actor": "Usuário local",
+              "confirmedBy": "Usuário local"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T23:32:39.755Z",
+          "event": "Avaliação: celebracao / 12",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "Falta o documento",
+            "document": "",
+            "url": "",
+            "at": "2026-10-09T16:06:45.162Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:12",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Falta o documento",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T23:32:39.755Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:12",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T23:32:39.755Z",
+          "event": "Diligência encerrada por atendimento do requisito",
+          "actor": "Usuário local",
+          "before": {
+            "id": "5b5596de-7b10-4022-a316-1f89c0fb18dc",
+            "ref": "celebracao:12",
+            "category": "OUTRO",
+            "request": "Falta o documento",
+            "communication": "2026-10-09",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-09T16:06:45.162Z",
+            "base": "2026-10-19",
+            "due": "2026-10-19",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          },
+          "after": {
+            "id": "5b5596de-7b10-4022-a316-1f89c0fb18dc",
+            "ref": "celebracao:12",
+            "category": "OUTRO",
+            "request": "Falta o documento",
+            "communication": "2026-10-09",
+            "science": "",
+            "response": "",
+            "status": "baixada",
+            "note": "",
+            "at": "2026-10-22T23:32:39.755Z",
+            "base": "2026-10-19",
+            "due": "2026-10-19",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": "",
+            "closedByReview": {
+              "proposalId": "2243987",
+              "group": "celebracao",
+              "item": "12",
+              "ref": "celebracao:12",
+              "at": "2026-10-22T23:32:39.755Z",
+              "reason": "Encerrada por confirmação de conformidade do requisito",
+              "actor": "Usuário local",
+              "confirmedBy": "Usuário local"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T23:32:39.755Z",
+          "event": "Avaliação: celebracao / 13",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "Falta o documento",
+            "document": "",
+            "url": "",
+            "at": "2026-10-09T16:06:45.163Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:13",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Falta o documento",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T23:32:39.755Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:13",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T23:32:39.755Z",
+          "event": "Diligência encerrada por atendimento do requisito",
+          "actor": "Usuário local",
+          "before": {
+            "id": "a3e877ad-1519-464b-9cd6-93ca0d9aff0e",
+            "ref": "celebracao:13",
+            "category": "OUTRO",
+            "request": "Falta o documento",
+            "communication": "2026-10-09",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-09T16:06:45.163Z",
+            "base": "2026-10-19",
+            "due": "2026-10-19",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          },
+          "after": {
+            "id": "a3e877ad-1519-464b-9cd6-93ca0d9aff0e",
+            "ref": "celebracao:13",
+            "category": "OUTRO",
+            "request": "Falta o documento",
+            "communication": "2026-10-09",
+            "science": "",
+            "response": "",
+            "status": "baixada",
+            "note": "",
+            "at": "2026-10-22T23:32:39.755Z",
+            "base": "2026-10-19",
+            "due": "2026-10-19",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": "",
+            "closedByReview": {
+              "proposalId": "2243987",
+              "group": "celebracao",
+              "item": "13",
+              "ref": "celebracao:13",
+              "at": "2026-10-22T23:32:39.755Z",
+              "reason": "Encerrada por confirmação de conformidade do requisito",
+              "actor": "Usuário local",
+              "confirmedBy": "Usuário local"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T23:32:39.755Z",
+          "event": "Avaliação: celebracao / 14",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "Falta o documento",
+            "document": "",
+            "url": "",
+            "at": "2026-10-09T16:06:45.163Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:14",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Falta o documento",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T23:32:39.755Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:14",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T23:32:39.755Z",
+          "event": "Diligência encerrada por atendimento do requisito",
+          "actor": "Usuário local",
+          "before": {
+            "id": "89e8f3ec-2f22-43e7-8453-b564c15ffbb8",
+            "ref": "celebracao:14",
+            "category": "OUTRO",
+            "request": "Falta o documento",
+            "communication": "2026-10-09",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-09T16:06:45.163Z",
+            "base": "2026-10-19",
+            "due": "2026-10-19",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          },
+          "after": {
+            "id": "89e8f3ec-2f22-43e7-8453-b564c15ffbb8",
+            "ref": "celebracao:14",
+            "category": "OUTRO",
+            "request": "Falta o documento",
+            "communication": "2026-10-09",
+            "science": "",
+            "response": "",
+            "status": "baixada",
+            "note": "",
+            "at": "2026-10-22T23:32:39.755Z",
+            "base": "2026-10-19",
+            "due": "2026-10-19",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": "",
+            "closedByReview": {
+              "proposalId": "2243987",
+              "group": "celebracao",
+              "item": "14",
+              "ref": "celebracao:14",
+              "at": "2026-10-22T23:32:39.755Z",
+              "reason": "Encerrada por confirmação de conformidade do requisito",
+              "actor": "Usuário local",
+              "confirmedBy": "Usuário local"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T23:32:39.756Z",
+          "event": "Avaliação: celebracao / 15",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "Falta o documento",
+            "document": "",
+            "url": "",
+            "at": "2026-10-09T16:06:45.164Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:15",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Falta o documento",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T23:32:39.755Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:15",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T23:32:39.756Z",
+          "event": "Diligência encerrada por atendimento do requisito",
+          "actor": "Usuário local",
+          "before": {
+            "id": "cd8f5c74-92d4-442a-a340-63ff92203ce7",
+            "ref": "celebracao:15",
+            "category": "OUTRO",
+            "request": "Falta o documento",
+            "communication": "2026-10-09",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-09T16:06:45.164Z",
+            "base": "2026-10-19",
+            "due": "2026-10-19",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          },
+          "after": {
+            "id": "cd8f5c74-92d4-442a-a340-63ff92203ce7",
+            "ref": "celebracao:15",
+            "category": "OUTRO",
+            "request": "Falta o documento",
+            "communication": "2026-10-09",
+            "science": "",
+            "response": "",
+            "status": "baixada",
+            "note": "",
+            "at": "2026-10-22T23:32:39.756Z",
+            "base": "2026-10-19",
+            "due": "2026-10-19",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": "",
+            "closedByReview": {
+              "proposalId": "2243987",
+              "group": "celebracao",
+              "item": "15",
+              "ref": "celebracao:15",
+              "at": "2026-10-22T23:32:39.756Z",
+              "reason": "Encerrada por confirmação de conformidade do requisito",
+              "actor": "Usuário local",
+              "confirmedBy": "Usuário local"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T23:32:39.756Z",
+          "event": "Avaliação: celebracao / 16",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "Falta o documento",
+            "document": "",
+            "url": "",
+            "at": "2026-10-09T16:06:45.164Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:16",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Falta o documento",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T23:32:39.756Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:16",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T23:32:39.756Z",
+          "event": "Diligência encerrada por atendimento do requisito",
+          "actor": "Usuário local",
+          "before": {
+            "id": "c8edb6db-4fa0-426b-94da-79a9bee62bbb",
+            "ref": "celebracao:16",
+            "category": "OUTRO",
+            "request": "Falta o documento",
+            "communication": "2026-10-09",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-09T16:06:45.165Z",
+            "base": "2026-10-19",
+            "due": "2026-10-19",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          },
+          "after": {
+            "id": "c8edb6db-4fa0-426b-94da-79a9bee62bbb",
+            "ref": "celebracao:16",
+            "category": "OUTRO",
+            "request": "Falta o documento",
+            "communication": "2026-10-09",
+            "science": "",
+            "response": "",
+            "status": "baixada",
+            "note": "",
+            "at": "2026-10-22T23:32:39.756Z",
+            "base": "2026-10-19",
+            "due": "2026-10-19",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": "",
+            "closedByReview": {
+              "proposalId": "2243987",
+              "group": "celebracao",
+              "item": "16",
+              "ref": "celebracao:16",
+              "at": "2026-10-22T23:32:39.756Z",
+              "reason": "Encerrada por confirmação de conformidade do requisito",
+              "actor": "Usuário local",
+              "confirmedBy": "Usuário local"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T23:32:39.756Z",
+          "event": "Avaliação: celebracao / 17",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "Falta o documento",
+            "document": "",
+            "url": "",
+            "at": "2026-10-09T16:06:45.165Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:17",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Falta o documento",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T23:32:39.756Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:17",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T23:32:39.756Z",
+          "event": "Diligência encerrada por atendimento do requisito",
+          "actor": "Usuário local",
+          "before": {
+            "id": "4b61da8f-97a3-4b44-a21b-072bb55d59c2",
+            "ref": "celebracao:17",
+            "category": "OUTRO",
+            "request": "Falta o documento",
+            "communication": "2026-10-09",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-09T16:06:45.165Z",
+            "base": "2026-10-19",
+            "due": "2026-10-19",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          },
+          "after": {
+            "id": "4b61da8f-97a3-4b44-a21b-072bb55d59c2",
+            "ref": "celebracao:17",
+            "category": "OUTRO",
+            "request": "Falta o documento",
+            "communication": "2026-10-09",
+            "science": "",
+            "response": "",
+            "status": "baixada",
+            "note": "",
+            "at": "2026-10-22T23:32:39.756Z",
+            "base": "2026-10-19",
+            "due": "2026-10-19",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": "",
+            "closedByReview": {
+              "proposalId": "2243987",
+              "group": "celebracao",
+              "item": "17",
+              "ref": "celebracao:17",
+              "at": "2026-10-22T23:32:39.756Z",
+              "reason": "Encerrada por confirmação de conformidade do requisito",
+              "actor": "Usuário local",
+              "confirmedBy": "Usuário local"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T23:32:39.756Z",
+          "event": "Avaliação: celebracao / 18",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "Falta o documento",
+            "document": "",
+            "url": "",
+            "at": "2026-10-09T16:06:45.165Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:18",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Falta o documento",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T23:32:39.756Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:18",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T23:32:39.756Z",
+          "event": "Diligência encerrada por atendimento do requisito",
+          "actor": "Usuário local",
+          "before": {
+            "id": "a4374108-131d-4c49-bc17-e093e670e0aa",
+            "ref": "celebracao:18",
+            "category": "OUTRO",
+            "request": "Falta o documento",
+            "communication": "2026-10-09",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-09T16:06:45.165Z",
+            "base": "2026-10-19",
+            "due": "2026-10-19",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          },
+          "after": {
+            "id": "a4374108-131d-4c49-bc17-e093e670e0aa",
+            "ref": "celebracao:18",
+            "category": "OUTRO",
+            "request": "Falta o documento",
+            "communication": "2026-10-09",
+            "science": "",
+            "response": "",
+            "status": "baixada",
+            "note": "",
+            "at": "2026-10-22T23:32:39.756Z",
+            "base": "2026-10-19",
+            "due": "2026-10-19",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": "",
+            "closedByReview": {
+              "proposalId": "2243987",
+              "group": "celebracao",
+              "item": "18",
+              "ref": "celebracao:18",
+              "at": "2026-10-22T23:32:39.756Z",
+              "reason": "Encerrada por confirmação de conformidade do requisito",
+              "actor": "Usuário local",
+              "confirmedBy": "Usuário local"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T23:36:31.962Z",
+          "event": "Diligência atualizada",
+          "actor": "Usuário local",
+          "before": {
+            "id": "730701e1-d33f-4332-90b8-bda3f62a7c98",
+            "ref": "pad:17425892",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "MINAS GERAIS:\n \nPRINCIPAL:\nSolicita-se que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética de todos os preços apresentados nas pesquisas anexadas como orçamento.\nApós os ajustes, o valor total dos itens será de R$ 186.747,51. A diferença entre o valor global da proposta e esse total poderá ser alocada como um item denominado “Saldo residual”, com valor correspondente à diferença apurada.\n \nCOMPUTADOR:\nPara o item Computador, alterar o valor unitário de R$ 17.000,00 para R$ 12.849,23, correspondente à média aritmética dos três preços apresentados. Mantida a quantidade de 10 unidades, o valor total do item será de R$ 128.492,30.\n \nSCANNER:\nPara o item Scanner, alterar o valor unitário de R$ 2.000,00 para R$ 2.249,21, correspondente à média aritmética dos três preços apresentados. Considerando uma unidade, o valor total do item será de R$ 2.249,21.\n \nIMPRSSORA:\nPara o item Impressora multifuncional, alterar o valor unitário de R$ 2.700,00 para R$ 2.696,00, correspondente à média aritmética dos três preços apresentados. Considerando uma unidade, o valor total do item será de R$ 2.696,00.\n \nNOTEBOOK:\nPara o item Notebook, alterar o valor unitário de R$ 6.000,00 para R$ 10.662,00, correspondente à média aritmética dos cinco preços apresentados na pesquisa. Mantida a quantidade de cinco unidades, o valor total do item será de R$ 53.310,00.",
+            "communication": "2026-10-14",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-14T12:39:22.873Z",
+            "base": "2026-10-24",
+            "due": "2026-10-26",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": "",
+            "scope": "review"
+          },
+          "after": {
+            "id": "730701e1-d33f-4332-90b8-bda3f62a7c98",
+            "ref": "",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "MINAS GERAIS:\n \nPRINCIPAL:\nSolicita-se que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética de todos os preços apresentados nas pesquisas anexadas como orçamento.\nApós os ajustes, o valor total dos itens será de R$ 186.747,51. A diferença entre o valor global da proposta e esse total poderá ser alocada como um item denominado “Saldo residual”, com valor correspondente à diferença apurada.\n \nCOMPUTADOR:\nPara o item Computador, alterar o valor unitário de R$ 17.000,00 para R$ 12.849,23, correspondente à média aritmética dos três preços apresentados. Mantida a quantidade de 10 unidades, o valor total do item será de R$ 128.492,30.\n \nSCANNER:\nPara o item Scanner, alterar o valor unitário de R$ 2.000,00 para R$ 2.249,21, correspondente à média aritmética dos três preços apresentados. Considerando uma unidade, o valor total do item será de R$ 2.249,21.\n \nIMPRSSORA:\nPara o item Impressora multifuncional, alterar o valor unitário de R$ 2.700,00 para R$ 2.696,00, correspondente à média aritmética dos três preços apresentados. Considerando uma unidade, o valor total do item será de R$ 2.696,00.\n \nNOTEBOOK:\nPara o item Notebook, alterar o valor unitário de R$ 6.000,00 para R$ 10.662,00, correspondente à média aritmética dos cinco preços apresentados na pesquisa. Mantida a quantidade de cinco unidades, o valor total do item será de R$ 53.310,00.",
+            "communication": "2026-10-14",
+            "science": "",
+            "response": "2026-10-22",
+            "status": "saneada",
+            "note": "atendida",
+            "at": "2026-10-22T23:36:31.960Z",
+            "base": "2026-10-24",
+            "due": "2026-10-26",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": "",
+            "scope": "review"
+          }
+        },
+        {
+          "at": "2026-10-22T23:38:13.013Z",
+          "event": "Diligência atualizada",
+          "actor": "Usuário local",
+          "before": {
+            "id": "ac3cd9c4-dfc7-452a-a920-72783a8c4aa6",
+            "ref": "pad:17425889",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "MINAS GERAIS:\n \nPRINCIPAL:\nSolicita-se que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética de todos os preços apresentados nas pesquisas anexadas como orçamento.\nApós os ajustes, o valor total dos itens será de R$ 186.747,51. A diferença entre o valor global da proposta e esse total poderá ser alocada como um item denominado “Saldo residual”, com valor correspondente à diferença apurada.\n \nCOMPUTADOR:\nPara o item Computador, alterar o valor unitário de R$ 17.000,00 para R$ 12.849,23, correspondente à média aritmética dos três preços apresentados. Mantida a quantidade de 10 unidades, o valor total do item será de R$ 128.492,30.\n \nSCANNER:\nPara o item Scanner, alterar o valor unitário de R$ 2.000,00 para R$ 2.249,21, correspondente à média aritmética dos três preços apresentados. Considerando uma unidade, o valor total do item será de R$ 2.249,21.\n \nIMPRSSORA:\nPara o item Impressora multifuncional, alterar o valor unitário de R$ 2.700,00 para R$ 2.696,00, correspondente à média aritmética dos três preços apresentados. Considerando uma unidade, o valor total do item será de R$ 2.696,00.\n \nNOTEBOOK:\nPara o item Notebook, alterar o valor unitário de R$ 6.000,00 para R$ 10.662,00, correspondente à média aritmética dos cinco preços apresentados na pesquisa. Mantida a quantidade de cinco unidades, o valor total do item será de R$ 53.310,00.",
+            "communication": "2026-10-14",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-14T12:37:56.855Z",
+            "base": "2026-10-24",
+            "due": "2026-10-26",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": "",
+            "scope": "review"
+          },
+          "after": {
+            "id": "ac3cd9c4-dfc7-452a-a920-72783a8c4aa6",
+            "ref": "",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "MINAS GERAIS:\n \nPRINCIPAL:\nSolicita-se que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética de todos os preços apresentados nas pesquisas anexadas como orçamento.\nApós os ajustes, o valor total dos itens será de R$ 186.747,51. A diferença entre o valor global da proposta e esse total poderá ser alocada como um item denominado “Saldo residual”, com valor correspondente à diferença apurada.\n \nCOMPUTADOR:\nPara o item Computador, alterar o valor unitário de R$ 17.000,00 para R$ 12.849,23, correspondente à média aritmética dos três preços apresentados. Mantida a quantidade de 10 unidades, o valor total do item será de R$ 128.492,30.\n \nSCANNER:\nPara o item Scanner, alterar o valor unitário de R$ 2.000,00 para R$ 2.249,21, correspondente à média aritmética dos três preços apresentados. Considerando uma unidade, o valor total do item será de R$ 2.249,21.\n \nIMPRSSORA:\nPara o item Impressora multifuncional, alterar o valor unitário de R$ 2.700,00 para R$ 2.696,00, correspondente à média aritmética dos três preços apresentados. Considerando uma unidade, o valor total do item será de R$ 2.696,00.\n \nNOTEBOOK:\nPara o item Notebook, alterar o valor unitário de R$ 6.000,00 para R$ 10.662,00, correspondente à média aritmética dos cinco preços apresentados na pesquisa. Mantida a quantidade de cinco unidades, o valor total do item será de R$ 53.310,00.",
+            "communication": "2026-10-14",
+            "science": "",
+            "response": "2026-10-22",
+            "status": "saneada",
+            "note": "atendida",
+            "at": "2026-10-22T23:38:13.012Z",
+            "base": "2026-10-24",
+            "due": "2026-10-26",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": "",
+            "scope": "review"
+          }
+        },
+        {
+          "at": "2026-10-22T23:39:08.142Z",
+          "event": "Diligência atualizada",
+          "actor": "Usuário local",
+          "before": {
+            "id": "6d42675c-26c9-4a02-850a-af7898b4413e",
+            "ref": "pad:17425883",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "MINAS GERAIS:\n \nPRINCIPAL:\nSolicita-se que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética de todos os preços apresentados nas pesquisas anexadas como orçamento.\nApós os ajustes, o valor total dos itens será de R$ 186.747,51. A diferença entre o valor global da proposta e esse total poderá ser alocada como um item denominado “Saldo residual”, com valor correspondente à diferença apurada.\n \nCOMPUTADOR:\nPara o item Computador, alterar o valor unitário de R$ 17.000,00 para R$ 12.849,23, correspondente à média aritmética dos três preços apresentados. Mantida a quantidade de 10 unidades, o valor total do item será de R$ 128.492,30.\n \nSCANNER:\nPara o item Scanner, alterar o valor unitário de R$ 2.000,00 para R$ 2.249,21, correspondente à média aritmética dos três preços apresentados. Considerando uma unidade, o valor total do item será de R$ 2.249,21.\n \nIMPRSSORA:\nPara o item Impressora multifuncional, alterar o valor unitário de R$ 2.700,00 para R$ 2.696,00, correspondente à média aritmética dos três preços apresentados. Considerando uma unidade, o valor total do item será de R$ 2.696,00.\n \nNOTEBOOK:\nPara o item Notebook, alterar o valor unitário de R$ 6.000,00 para R$ 10.662,00, correspondente à média aritmética dos cinco preços apresentados na pesquisa. Mantida a quantidade de cinco unidades, o valor total do item será de R$ 53.310,00.",
+            "communication": "2026-10-14",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-14T12:38:53.115Z",
+            "base": "2026-10-24",
+            "due": "2026-10-26",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": "",
+            "scope": "review"
+          },
+          "after": {
+            "id": "6d42675c-26c9-4a02-850a-af7898b4413e",
+            "ref": "",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "MINAS GERAIS:\n \nPRINCIPAL:\nSolicita-se que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética de todos os preços apresentados nas pesquisas anexadas como orçamento.\nApós os ajustes, o valor total dos itens será de R$ 186.747,51. A diferença entre o valor global da proposta e esse total poderá ser alocada como um item denominado “Saldo residual”, com valor correspondente à diferença apurada.\n \nCOMPUTADOR:\nPara o item Computador, alterar o valor unitário de R$ 17.000,00 para R$ 12.849,23, correspondente à média aritmética dos três preços apresentados. Mantida a quantidade de 10 unidades, o valor total do item será de R$ 128.492,30.\n \nSCANNER:\nPara o item Scanner, alterar o valor unitário de R$ 2.000,00 para R$ 2.249,21, correspondente à média aritmética dos três preços apresentados. Considerando uma unidade, o valor total do item será de R$ 2.249,21.\n \nIMPRSSORA:\nPara o item Impressora multifuncional, alterar o valor unitário de R$ 2.700,00 para R$ 2.696,00, correspondente à média aritmética dos três preços apresentados. Considerando uma unidade, o valor total do item será de R$ 2.696,00.\n \nNOTEBOOK:\nPara o item Notebook, alterar o valor unitário de R$ 6.000,00 para R$ 10.662,00, correspondente à média aritmética dos cinco preços apresentados na pesquisa. Mantida a quantidade de cinco unidades, o valor total do item será de R$ 53.310,00.",
+            "communication": "2026-10-14",
+            "science": "",
+            "response": "2026-10-22",
+            "status": "saneada",
+            "note": "Atendida",
+            "at": "2026-10-22T23:39:08.142Z",
+            "base": "2026-10-24",
+            "due": "2026-10-26",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": "",
+            "scope": "review"
+          }
+        },
+        {
+          "at": "2026-10-22T23:40:06.311Z",
+          "event": "Diligência atualizada",
+          "actor": "Usuário local",
+          "before": {
+            "id": "ba0bd5b6-3cdf-4745-a77c-57a8ca77b84e",
+            "ref": "pad:17425890",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "MINAS GERAIS:\n \nPRINCIPAL:\nSolicita-se que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética de todos os preços apresentados nas pesquisas anexadas como orçamento.\nApós os ajustes, o valor total dos itens será de R$ 186.747,51. A diferença entre o valor global da proposta e esse total poderá ser alocada como um item denominado “Saldo residual”, com valor correspondente à diferença apurada.\n \nCOMPUTADOR:\nPara o item Computador, alterar o valor unitário de R$ 17.000,00 para R$ 12.849,23, correspondente à média aritmética dos três preços apresentados. Mantida a quantidade de 10 unidades, o valor total do item será de R$ 128.492,30.\n \nSCANNER:\nPara o item Scanner, alterar o valor unitário de R$ 2.000,00 para R$ 2.249,21, correspondente à média aritmética dos três preços apresentados. Considerando uma unidade, o valor total do item será de R$ 2.249,21.\n \nIMPRSSORA:\nPara o item Impressora multifuncional, alterar o valor unitário de R$ 2.700,00 para R$ 2.696,00, correspondente à média aritmética dos três preços apresentados. Considerando uma unidade, o valor total do item será de R$ 2.696,00.\n \nNOTEBOOK:\nPara o item Notebook, alterar o valor unitário de R$ 6.000,00 para R$ 10.662,00, correspondente à média aritmética dos cinco preços apresentados na pesquisa. Mantida a quantidade de cinco unidades, o valor total do item será de R$ 53.310,00.",
+            "communication": "2026-10-06",
+            "science": "",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-14T12:38:21.523Z",
+            "base": "2026-10-16",
+            "due": "2026-10-16",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": "",
+            "scope": "review"
+          },
+          "after": {
+            "id": "ba0bd5b6-3cdf-4745-a77c-57a8ca77b84e",
+            "ref": "",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "request": "MINAS GERAIS:\n \nPRINCIPAL:\nSolicita-se que altere o Plano de Aplicação Detalhado no Transferegov, de modo que o valor unitário de cada item corresponda à média aritmética de todos os preços apresentados nas pesquisas anexadas como orçamento.\nApós os ajustes, o valor total dos itens será de R$ 186.747,51. A diferença entre o valor global da proposta e esse total poderá ser alocada como um item denominado “Saldo residual”, com valor correspondente à diferença apurada.\n \nCOMPUTADOR:\nPara o item Computador, alterar o valor unitário de R$ 17.000,00 para R$ 12.849,23, correspondente à média aritmética dos três preços apresentados. Mantida a quantidade de 10 unidades, o valor total do item será de R$ 128.492,30.\n \nSCANNER:\nPara o item Scanner, alterar o valor unitário de R$ 2.000,00 para R$ 2.249,21, correspondente à média aritmética dos três preços apresentados. Considerando uma unidade, o valor total do item será de R$ 2.249,21.\n \nIMPRSSORA:\nPara o item Impressora multifuncional, alterar o valor unitário de R$ 2.700,00 para R$ 2.696,00, correspondente à média aritmética dos três preços apresentados. Considerando uma unidade, o valor total do item será de R$ 2.696,00.\n \nNOTEBOOK:\nPara o item Notebook, alterar o valor unitário de R$ 6.000,00 para R$ 10.662,00, correspondente à média aritmética dos cinco preços apresentados na pesquisa. Mantida a quantidade de cinco unidades, o valor total do item será de R$ 53.310,00.",
+            "communication": "2026-10-06",
+            "science": "",
+            "response": "2026-10-22",
+            "status": "saneada",
+            "note": "Atendida",
+            "at": "2026-10-22T23:40:06.310Z",
+            "base": "2026-10-16",
+            "due": "2026-10-16",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": "",
+            "scope": "review"
+          }
+        },
+        {
+          "at": "2026-10-22T23:41:51.091Z",
+          "event": "Conclusão da análise técnica registrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "result": "favoravel",
+            "note": "Aprovado",
+            "reference": "Aprovado",
+            "actor": "Usuário local",
+            "at": "2026-10-22T23:41:51.091Z",
+            "evidence": {
+              "version": 1,
+              "fingerprint": "fnv64-v1:a47e8203c1acc603"
+            },
+            "operationId": "7b7d20e0-c98f-46c8-83d2-df14fc41f620"
           }
         }
       ],
@@ -88193,238 +90246,412 @@ window.PROFOR_PUBLIC_DATA = {
       "reviews": {
         "merito": {
           "objeto": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-22T23:06:08.008Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:objeto",
+              "fingerprint": "fnv64-v1:c000e9856131ae41"
+            }
           },
           "justificativa": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-22T23:06:08.008Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:justificativa",
+              "fingerprint": "fnv64-v1:77fd93c94b838762"
+            }
           },
           "publicoAlvo": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-22T23:06:08.008Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:publicoAlvo",
+              "fingerprint": "fnv64-v1:8c686d8f3f62e768"
+            }
           },
           "problema": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-22T23:06:08.008Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:problema",
+              "fingerprint": "fnv64-v1:beb39fc6ec5c8253"
+            }
           },
           "resultados": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-22T23:06:08.008Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:resultados",
+              "fingerprint": "fnv64-v1:78a080d5e8e928ee"
+            }
           },
           "destinacao": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-22T23:06:08.008Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:destinacao",
+              "fingerprint": "fnv64-v1:82434bece9905fab"
+            }
           },
           "objetivos": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-22T23:06:08.008Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:objetivos",
+              "fingerprint": "fnv64-v1:c10c6008a02fb834"
+            }
           },
           "capacidade": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-22T23:06:08.008Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:capacidade",
+              "fingerprint": "fnv64-v1:88f82ec3438c4998"
+            }
           },
           "ouvidoriaInstituida": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-22T23:06:51.077Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:ouvidoriaInstituida",
+              "fingerprint": "fnv64-v1:1335379bb2cd68e8"
+            }
           },
           "falaBRAdesao": {
-            "status": "na",
+            "status": "no",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-22T23:08:09.568Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:falaBRAdesao",
+              "fingerprint": "fnv64-v1:20325664b9ae9846"
+            }
           }
         },
         "celebracao": {
           "1": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-22T23:11:42.357Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:1",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
           },
           "3": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-22T23:10:10.321Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:3",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
           },
           "4": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-22T23:10:10.321Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:4",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
           },
           "5": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-22T23:10:10.321Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:5",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
           },
           "6": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-22T23:10:10.321Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:6",
+              "fingerprint": "fnv64-v1:983726ed313b275e"
+            }
           },
           "7": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-22T23:10:10.321Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:7",
+              "fingerprint": "fnv64-v1:f07aab4637882c6a"
+            }
           },
           "8": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-22T23:11:42.357Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:8",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
           },
           "9": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-22T23:11:42.357Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:9",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
           },
           "10": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-22T23:11:42.357Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:10",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
           },
           "11": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-22T23:10:10.321Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:11",
+              "fingerprint": "fnv64-v1:88f82ec3438c4998"
+            }
           },
           "12": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-22T23:11:42.357Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:12",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
           },
           "13": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-22T23:11:42.357Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:13",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
           },
           "14": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-22T23:11:42.357Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:14",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
           },
           "15": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-22T23:11:42.357Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:15",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
           },
           "16": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-22T23:11:42.357Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:16",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
           },
           "17": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-22T23:11:42.357Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:17",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
           },
           "18": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-22T23:11:42.357Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:18",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
           },
           "19": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-22T23:11:42.357Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:19",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
           },
           "1.1": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-22T23:11:42.357Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:1.1",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
           }
         },
         "pad": {
@@ -88684,14 +90911,25 @@ window.PROFOR_PUBLIC_DATA = {
       },
       "diligences": [],
       "ouvidoria": {
-        "status": "na",
+        "status": "instituida",
         "signature": "",
         "url": "",
         "note": "",
         "clause": false
       },
-      "falaBR": "na",
-      "conclusion": null,
+      "falaBR": "nao_previsto",
+      "conclusion": {
+        "result": "favoravel",
+        "note": "Aprovado",
+        "reference": "Aprovado",
+        "actor": "Usuário local",
+        "at": "2026-10-22T23:12:58.631Z",
+        "evidence": {
+          "version": 1,
+          "fingerprint": "fnv64-v1:0d59493fc9b79f7a"
+        },
+        "operationId": "f11fdfa5-b085-4d08-a3f8-ae60d167a0cd"
+      },
       "history": [
         {
           "at": "2026-10-01T13:55:12.638Z",
@@ -89823,6 +92061,1286 @@ window.PROFOR_PUBLIC_DATA = {
           },
           "after": {
             "at": "2026-10-22T14:38:40.048Z"
+          }
+        },
+        {
+          "at": "2026-10-22T23:06:08.008Z",
+          "event": "Avaliação: merito / objeto",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T23:06:08.008Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:objeto",
+              "fingerprint": "fnv64-v1:c000e9856131ae41"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T23:06:08.008Z",
+          "event": "Avaliação: merito / justificativa",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T23:06:08.008Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:justificativa",
+              "fingerprint": "fnv64-v1:77fd93c94b838762"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T23:06:08.008Z",
+          "event": "Avaliação: merito / publicoAlvo",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T23:06:08.008Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:publicoAlvo",
+              "fingerprint": "fnv64-v1:8c686d8f3f62e768"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T23:06:08.008Z",
+          "event": "Avaliação: merito / problema",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T23:06:08.008Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:problema",
+              "fingerprint": "fnv64-v1:beb39fc6ec5c8253"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T23:06:08.008Z",
+          "event": "Avaliação: merito / resultados",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T23:06:08.008Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:resultados",
+              "fingerprint": "fnv64-v1:78a080d5e8e928ee"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T23:06:08.008Z",
+          "event": "Avaliação: merito / destinacao",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T23:06:08.008Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:destinacao",
+              "fingerprint": "fnv64-v1:82434bece9905fab"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T23:06:08.008Z",
+          "event": "Avaliação: merito / objetivos",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T23:06:08.008Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:objetivos",
+              "fingerprint": "fnv64-v1:c10c6008a02fb834"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T23:06:08.008Z",
+          "event": "Avaliação: merito / capacidade",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T23:06:08.008Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:capacidade",
+              "fingerprint": "fnv64-v1:88f82ec3438c4998"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T23:06:51.077Z",
+          "event": "Informações institucionais atualizadas",
+          "actor": "Usuário local",
+          "before": {
+            "ouvidoria": {
+              "status": "na",
+              "signature": "",
+              "url": "",
+              "note": "",
+              "clause": false
+            },
+            "falaBR": "na"
+          },
+          "after": {
+            "ouvidoria": {
+              "status": "instituida",
+              "signature": "",
+              "url": "",
+              "note": "",
+              "clause": false
+            },
+            "falaBR": "na"
+          }
+        },
+        {
+          "at": "2026-10-22T23:06:51.077Z",
+          "event": "Avaliação: merito / ouvidoriaInstituida",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T23:06:51.077Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:ouvidoriaInstituida",
+              "fingerprint": "fnv64-v1:1335379bb2cd68e8"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T23:08:09.568Z",
+          "event": "Informações institucionais atualizadas",
+          "actor": "Usuário local",
+          "before": {
+            "ouvidoria": {
+              "status": "instituida",
+              "signature": "",
+              "url": "",
+              "note": "",
+              "clause": false
+            },
+            "falaBR": "na"
+          },
+          "after": {
+            "ouvidoria": {
+              "status": "instituida",
+              "signature": "",
+              "url": "",
+              "note": "",
+              "clause": false
+            },
+            "falaBR": "nao_previsto"
+          }
+        },
+        {
+          "at": "2026-10-22T23:08:09.568Z",
+          "event": "Avaliação: merito / falaBRAdesao",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "no",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T23:08:09.568Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "merito:falaBRAdesao",
+              "fingerprint": "fnv64-v1:20325664b9ae9846"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T23:10:10.321Z",
+          "event": "Avaliação: celebracao / 3",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T23:10:10.321Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:3",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T23:10:10.321Z",
+          "event": "Avaliação: celebracao / 4",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T23:10:10.321Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:4",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T23:10:10.321Z",
+          "event": "Avaliação: celebracao / 5",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T23:10:10.321Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:5",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T23:10:10.321Z",
+          "event": "Avaliação: celebracao / 6",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T23:10:10.321Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:6",
+              "fingerprint": "fnv64-v1:983726ed313b275e"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T23:10:10.321Z",
+          "event": "Avaliação: celebracao / 7",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T23:10:10.321Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:7",
+              "fingerprint": "fnv64-v1:f07aab4637882c6a"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T23:10:10.321Z",
+          "event": "Avaliação: celebracao / 11",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T23:10:10.321Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:11",
+              "fingerprint": "fnv64-v1:88f82ec3438c4998"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T23:10:54.607Z",
+          "event": "Avaliação: celebracao / 1",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T23:10:54.607Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:1",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T23:10:54.607Z",
+          "event": "Avaliação: celebracao / 1.1",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T23:10:54.607Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:1.1",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T23:10:54.607Z",
+          "event": "Avaliação: celebracao / 8",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T23:10:54.607Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:8",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T23:10:54.607Z",
+          "event": "Avaliação: celebracao / 9",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T23:10:54.607Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:9",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T23:10:54.607Z",
+          "event": "Avaliação: celebracao / 10",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T23:10:54.607Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:10",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T23:10:54.607Z",
+          "event": "Avaliação: celebracao / 12",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T23:10:54.607Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:12",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T23:10:54.607Z",
+          "event": "Avaliação: celebracao / 13",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T23:10:54.607Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:13",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T23:10:54.607Z",
+          "event": "Avaliação: celebracao / 14",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T23:10:54.607Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:14",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T23:10:54.607Z",
+          "event": "Avaliação: celebracao / 15",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T23:10:54.607Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:15",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T23:10:54.607Z",
+          "event": "Avaliação: celebracao / 16",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T23:10:54.607Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:16",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T23:10:54.607Z",
+          "event": "Avaliação: celebracao / 17",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T23:10:54.607Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:17",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T23:10:54.607Z",
+          "event": "Avaliação: celebracao / 18",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T23:10:54.607Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:18",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T23:10:54.607Z",
+          "event": "Avaliação: celebracao / 19",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T23:10:54.607Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:19",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T23:11:42.357Z",
+          "event": "Avaliação: celebracao / 1",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T23:10:54.607Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:1",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T23:11:42.357Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:1",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T23:11:42.357Z",
+          "event": "Avaliação: celebracao / 1.1",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T23:10:54.607Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:1.1",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T23:11:42.357Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:1.1",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T23:11:42.357Z",
+          "event": "Avaliação: celebracao / 8",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T23:10:54.607Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:8",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T23:11:42.357Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:8",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T23:11:42.357Z",
+          "event": "Avaliação: celebracao / 9",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T23:10:54.607Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:9",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T23:11:42.357Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:9",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T23:11:42.357Z",
+          "event": "Avaliação: celebracao / 10",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T23:10:54.607Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:10",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T23:11:42.357Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:10",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T23:11:42.357Z",
+          "event": "Avaliação: celebracao / 12",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T23:10:54.607Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:12",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T23:11:42.357Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:12",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T23:11:42.357Z",
+          "event": "Avaliação: celebracao / 13",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T23:10:54.607Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:13",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T23:11:42.357Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:13",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T23:11:42.357Z",
+          "event": "Avaliação: celebracao / 14",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T23:10:54.607Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:14",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T23:11:42.357Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:14",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T23:11:42.357Z",
+          "event": "Avaliação: celebracao / 15",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T23:10:54.607Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:15",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T23:11:42.357Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:15",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T23:11:42.357Z",
+          "event": "Avaliação: celebracao / 16",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T23:10:54.607Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:16",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T23:11:42.357Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:16",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T23:11:42.357Z",
+          "event": "Avaliação: celebracao / 17",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T23:10:54.607Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:17",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T23:11:42.357Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:17",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T23:11:42.357Z",
+          "event": "Avaliação: celebracao / 18",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T23:10:54.607Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:18",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T23:11:42.357Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:18",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T23:11:42.357Z",
+          "event": "Avaliação: celebracao / 19",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T23:10:54.607Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:19",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T23:11:42.357Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:19",
+              "fingerprint": "fnv64-v1:bdc02e16ef18e909"
+            }
+          }
+        },
+        {
+          "at": "2026-10-22T23:12:58.631Z",
+          "event": "Conclusão da análise técnica registrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "result": "favoravel",
+            "note": "Aprovado",
+            "reference": "Aprovado",
+            "actor": "Usuário local",
+            "at": "2026-10-22T23:12:58.631Z",
+            "evidence": {
+              "version": 1,
+              "fingerprint": "fnv64-v1:0d59493fc9b79f7a"
+            },
+            "operationId": "f11fdfa5-b085-4d08-a3f8-ae60d167a0cd"
           }
         }
       ],
