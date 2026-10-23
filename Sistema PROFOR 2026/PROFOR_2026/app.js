@@ -311,20 +311,19 @@
     /* Só propostas ativas: as apagadas saem do painel e das demais telas de
        gestão e acompanhamento. Novas evidências continuam invalidando avaliações antes de eventual restauração. */
     const ps=D.activeProposals(state),apagadas=D.deletedProposals(state);
-    const received=new Set(ps.map(p=>p.imported.uf)).size;
+    const summary=D.panelSummary(state);
     const pendingCount=ps.reduce((n,p)=>n+D.pending(p).length,0);
-    const apt=ps.filter(D.aptForCelebration).length;
-    const enviadas=new Set(ps.filter(p=>D.sourceState(p.imported).key==='enviada').map(p=>p.imported.uf)).size;
+
+
     const acoesPainel=button('⇩ Exportação','export')+button('↻ Sincronização','sync','','primary');
     const subPainel='Acompanhe a análise, as diligências e a preparação para celebração.';
     const fontePainel=`Última sincronização: ${state.sync?e(new Date(state.sync.at).toLocaleString('pt-BR')):'ainda não realizada'}${state.sync?.source?` · origem: ${e(String(state.sync.source))}`:''}. Dados locais são uma fotografia da extração e não comprovam recebimento ou situação atual no Transferegov.`;
     $('#main').innerHTML=`<div class="page-head"><div><div class="eyebrow">PROFOR / ONASP 2026</div><h1>Visão geral das propostas</h1><p class="muted">${subPainel}</p></div><div class="page-actions">${acoesPainel}</div></div>
       <div class="stats dashboard-stats" aria-label="Resumo de todas as propostas ativas, antes dos filtros">
-        <div class="stat stat-eligible"><div class="stat-header"><span class="stat-label">UFs elegíveis</span><span class="stat-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg></span></div><strong class="stat-value">14</strong><span class="stat-note">UFs do edital</span></div>
-        <div class="stat stat-received"><div class="stat-header"><span class="stat-label">UFs com proposta importada</span><span class="stat-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h8l4 4v14H7z"/><path d="M15 3v5h4M10 13h6M10 17h6"/></svg></span></div><strong class="stat-value">${received}</strong><span class="stat-note">De 14 elegíveis</span></div>
-        <div class="stat stat-sent"><div class="stat-header"><span class="stat-label">UFs com envio para análise</span><span class="stat-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 11 18-8-8 18-2-8-8-2Z"/><path d="m11 13 6-6"/></svg></span></div><strong class="stat-value">${enviadas}</strong><span class="stat-note">Envio registrado</span></div>
-        <div class="stat stat-active"><div class="stat-header"><span class="stat-label">Propostas ativas</span><span class="stat-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M8 9h8M8 13h8M8 17h5"/></svg></span></div><strong class="stat-value">${ps.length}</strong><span class="stat-note">${apagadas.length?`${apagadas.length} apagada(s) fora do painel`:'No painel'}</span></div>
-        <div class="stat stat-ready"><div class="stat-header"><span class="stat-label">Aptas pelos controles locais</span><span class="stat-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg></span></div><strong class="stat-value">${apt}</strong><span class="stat-note">Controles locais</span></div>
+        <div class="stat stat-eligible"><div class="stat-header"><span class="stat-label">UFs elegíveis</span><span class="stat-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg></span></div><strong class="stat-value">${summary.eligible}</strong><span class="stat-note">UFs do edital</span></div>
+        <div class="stat stat-received"><div class="stat-header"><span class="stat-label">UFs com proposta registrada</span><span class="stat-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h8l4 4v14H7z"/><path d="M15 3v5h4M10 13h6M10 17h6"/></svg></span></div><strong class="stat-value">${summary.registered}</strong><span class="stat-note">De ${summary.eligible} elegíveis</span></div>
+        <div class="stat stat-sent"><div class="stat-header"><span class="stat-label">UFs com proposta em análise</span><span class="stat-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 11 18-8-8 18-2-8-8-2Z"/><path d="m11 13 6-6"/></svg></span></div><strong class="stat-value">${summary.inAnalysis}</strong><span class="stat-note">Sem conclusão técnica atual</span></div>
+        <div class="stat stat-ready"><div class="stat-header"><span class="stat-label">UFs com propostas aprovadas</span><span class="stat-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg></span></div><strong class="stat-value">${summary.approved}</strong><span class="stat-note">Conclusão técnica favorável</span></div>
       </div>
       <section class="section" aria-label="Acompanhamento por UF"><h2 class="sr-only">Acompanhamento por UF</h2>
       <div class="filters panel-filters"><label class="search">Buscar proposta ou proponente<input id="search" type="search" value="${e(filters.search)}" placeholder="Número, nome ou UF"></label><label>UF<select id="filter-uf">${options({'':'Todas as UFs',...Object.fromEntries(activeUfs().map(([uf])=>[uf,nomeUf(uf)]))},filters.uf)}</select></label><label>Status no Transferegov<select id="filter-source">${options({'':'Todos os status',...Object.fromEntries(SOURCE_CHAVES.map(k=>[k,SOURCE_ROTULO[k]]))},filters.source)}</select></label><label>Status<select id="filter-status">${options(Object.fromEntries(['',...STATUS_PROPOSTA].map(x=>[x,x || 'Todos os status'])),filters.status)}</select></label><label>Controle<select id="filter-control">${options({'':'Todos os controles',financial:'Inconsistência financeira',unlinked:'Diligência sem registro',ouvidoria:'Ouvidoria pendente',merito:'Mérito pendente',proposta:'Requisitos da Proposta pendentes',formalizacao:'Requisitos para Formalização pendentes'},filters.control)}</select></label></div>
@@ -361,7 +360,7 @@
      "[object Object]" na célula e no resumo. */
   function nomeUf(uf){return D.UFS[uf] || uf;}
   function ufTone(sit){
-    if(['Apta à celebração'].includes(sit))return 'tom-ok';
+    if(['Aprovada','Apta à celebração'].includes(sit))return 'tom-ok';
     if(['Em diligência','Em elaboração na origem','Requer nova análise','Formalização com cláusula suspensiva'].includes(sit))return 'tom-aviso';
     if(['Apagada do painel','Análise técnica desfavorável'].includes(sit))return 'tom-no';
     return 'tom-neutro';
@@ -465,8 +464,8 @@
   const SOURCE_ROTULO=Object.fromEntries(SOURCE_CHAVES.map(k=>[k,D.sourceState({situacao:SOURCE_SITUACAO[k]}).label]));
   /* Vocabulário do "Status Proposta" — as mesmas saídas de D.situation(), na
      ordem de precedência do domínio. */
-  const STATUS_PROPOSTA=['Em elaboração na origem','Em análise','Em diligência','Requer nova análise','Análise técnica desfavorável','Apta à celebração','Pendente de celebração','Formalização com cláusula suspensiva'];
-  const SIT_CLASSES={'Apta à celebração':'good','Em análise':'work','Análise técnica desfavorável':'bad','Em diligência':'warn','Em elaboração na origem':'warn','Requer nova análise':'warn','Formalização com cláusula suspensiva':'warn','Pendente de celebração':'','Sem proposta importada':'','Apagada do painel':'bad'};
+  const STATUS_PROPOSTA=['Aprovada','Em elaboração na origem','Em análise','Em diligência','Requer nova análise','Análise técnica desfavorável','Apta à celebração','Pendente de celebração','Formalização com cláusula suspensiva'];
+  const SIT_CLASSES={'Aprovada':'good','Apta à celebração':'good','Em análise':'work','Análise técnica desfavorável':'bad','Em diligência':'warn','Em elaboração na origem':'warn','Requer nova análise':'warn','Formalização com cláusula suspensiva':'warn','Pendente de celebração':'','Sem proposta importada':'','Apagada do painel':'bad'};
   function sitBadge(rotulo){return badge(rotulo,SIT_CLASSES[rotulo]!==undefined?SIT_CLASSES[rotulo]:'');}
   /* ---- Molde da linha ----
      As colunas de cada modo, na MESMA ordem do <thead>. O molde monta um <td>
@@ -561,7 +560,7 @@
     const totalDone=all.done,totalReqs=all.total,pct=all.percent;
     const abertas=p.diligences.filter(d=>!D.diligenceTerminal(d)).length;
     const semReg=D.pending(p).length;
-    const allPass=sit==='Apta à celebração';
+    const allPass=['Aprovada','Apta à celebração'].includes(sit);
     const isWarn=['Em diligência','Requer nova análise','Formalização com cláusula suspensiva','Pendente de celebração','Em elaboração na origem'].includes(sit);
     const pillTom=allPass?'status-pass':isWarn?'status-fail':'status-neutral';
 
@@ -1590,7 +1589,7 @@
   function conclusion(){
     D.assert(!isReadOnly(),'Consulta pública: conclusão indisponível.');
     const p=current();conclusionContext={proposalId:p.id,revision:state.revision,evidence:D.technicalEvidence(p),operationId:D.uid()};
-    modal('Conclusão da análise técnica',`<p>Registre o resultado técnico. Os requisitos posteriores de celebração continuam em suas próprias abas.</p><form class="form-stack" id="conclusion-form"><label>Resultado<select name="result">${options({favoravel:'Favorável',desfavoravel:'Desfavorável'},p.conclusion?.result||'favoravel')}</select></label><label>Justificativa<textarea name="note">${e(p.conclusion?.note||'')}</textarea></label><label>Referência das evidências consideradas<textarea name="reference" required>${e(p.conclusion?.reference||'')}</textarea></label><div id="conclusion-blocks" class="info warning"></div><p id="form-error" class="error-message" role="alert" tabindex="-1"></p><div class="dialog-actions">${button('Cancelar','close')}${button('Registrar conclusão técnica','confirm-conclusion','','primary')}</div></form>`);
+    modal('Conclusão da análise técnica',`<p>Registre o resultado técnico. Justificativa e referência das evidências são opcionais. Diligências abertas permanecem pendentes após a conclusão. Os requisitos posteriores de celebração continuam em suas próprias abas.</p><form class="form-stack" id="conclusion-form"><label>Resultado<select name="result">${options({favoravel:'Favorável',desfavoravel:'Desfavorável'},p.conclusion?.result||'favoravel')}</select></label><label>Justificativa (opcional)<textarea name="note">${e(p.conclusion?.note||'')}</textarea></label><label>Referência das evidências consideradas (opcional)<textarea name="reference">${e(p.conclusion?.reference||'')}</textarea></label><div id="conclusion-blocks" class="info warning"></div><p id="form-error" class="error-message" role="alert" tabindex="-1"></p><div class="dialog-actions">${button('Cancelar','close')}${button('Registrar conclusão técnica','confirm-conclusion','','primary')}</div></form>`);
     const form=$('#conclusion-form');
     const update=()=>{const b=D.conclusionBlocks(current(),form.elements.result.value);$('#conclusion-blocks').textContent=b.length?b.join(' · '):'Controles atuais permitem registrar este resultado.';};
     form.addEventListener('input',()=>modalDirty=true);form.elements.result.addEventListener('change',update);form.addEventListener('submit',ev=>{ev.preventDefault();confirmConclusionNow().catch(formError);});update();

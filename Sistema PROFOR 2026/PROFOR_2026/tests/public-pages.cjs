@@ -51,7 +51,7 @@ async function run() {
 
     // 5 Cards de estatísticas
     const statCards = await page.locator('.dashboard-stats .stat').count();
-    assert.equal(statCards, 5, 'Painel deve exibir os 5 cards de estatísticas');
+    assert.equal(statCards, 4, 'Painel deve exibir os 4 cards de UFs');
 
     // 5 Filtros do painel
     assert.ok(await page.locator('#search').isVisible(), 'Filtro de busca visível');

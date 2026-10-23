@@ -582,11 +582,16 @@
   }
   function groupProgress(p,g) { const rs=rows(p,g); return {done:rs.filter(([id])=>reviewed(p,g,id)).length,accepted:rs.filter(([id])=>reviewCurrent(p,g,id) && accepted(reviewOf(p,g,id),storage(g)==='merito'?id:'') && (storage(g)!=='merito' || !INSTITUTION_RESULTS[id] || institutionalAssessment(p,id).accepted)).length,total:rs.length}; }
   function reviewProgress(p){const groups=['merito','pad','celebracao'].map(g=>groupProgress(p,g));const done=groups.reduce((n,g)=>n+g.done,0),total=groups.reduce((n,g)=>n+g.total,0);return {done,total,percent:total?Math.round(done/total*100):0,pad:groupProgress(p,'pad')};}
-  function blockers(p,celebration=false) {
+  // Concluir registra a decisão mesmo com diligências ou notas vazias.
+  // Avaliações ausentes/desatualizadas continuam exigindo revisão explícita.
+  function conclusionReviewed(p,g,id){
+    return reviewCurrent(p,g,id) && ['ok','obs','no','diligencia'].includes(reviewOf(p,g,id).status);
+  }
+  function blockers(p,celebration=false,concluding=false) {
     const b=[];
     /* Grupos sem lista própria ficam fora da contagem: um grupo vazio não pode
        bloquear a conclusão nem inflar as pendências. */
-    for(const g of ['merito','pad',...(celebration?ABAS_CELEBRACAO.map(a=>a.id):[])]) { const v=groupProgress(p,g); if(!v.total)continue; if(v.accepted!==v.total)b.push(`${PENDENCIA[g] || g}: ${v.accepted}/${v.total} atendidos e atuais; ${v.done}/${v.total} revisados`); }
+    for(const g of ['merito','pad',...(celebration?ABAS_CELEBRACAO.map(a=>a.id):[])]) { const v=groupProgress(p,g); if(!v.total)continue; if((concluding?rows(p,g).filter(([id])=>conclusionReviewed(p,g,id)).length:v.accepted)!==v.total)b.push(`${PENDENCIA[g] || g}: ${v.accepted}/${v.total} atendidos e atuais; ${v.done}/${v.total} revisados`); }
     const f=finance(p);
     if(!f.complete)b.push('Valores da proposta incompletos');
     else if(!f.composition)b.push('Repasse + contrapartida diverge do valor global');
@@ -594,10 +599,10 @@
     if(f.errors.length)b.push(`${f.errors.length} item(ns) com valor unitário incompatível com total ÷ quantidade`);
     if(p.padImport?.status==='partial')b.push('Importação incompleta do PAD; referência anterior preservada');
     if(institutionalConflicts(p).length)b.push('Fato institucional e parecer conflitantes; conferir ambos os registros');
-    if(pending(p).length)b.push('Marcação de diligência sem registro ativo');
+    if(!concluding && pending(p).length)b.push('Marcação de diligência sem registro ativo');
     const sem=semJustificativa(p).filter(r=>celebration || !r.ref.startsWith('celebracao:'));
-    if(sem.length)b.push(`${sem.length} item(ns) marcado(s) como não conforme sem justificativa`);
-    if(p.diligences.some(d=>!['saneada','baixada'].includes(d.status) && (celebration || !d.ref.startsWith('celebracao:'))))b.push('Diligência ainda não saneada');
+    if(!concluding && sem.length)b.push(`${sem.length} item(ns) marcado(s) como não conforme sem justificativa`);
+    if(!concluding && p.diligences.some(d=>!['saneada','baixada'].includes(d.status) && (celebration || !d.ref.startsWith('celebracao:'))))b.push('Diligência ainda não saneada');
     if(celebration && p.ouvidoria.status!=='instituida' && !(p.ouvidoria.status==='pendente' && p.ouvidoria.clause)) b.push('Confirmar instituição da Ouvidoria ou aplicação da cláusula suspensiva');
     if(celebration && sourceState(p.imported).key!=='enviada')b.push('Situação oficial não permite presumir aptidão: '+sourceState(p.imported).label);
     return [...new Set(b)];
@@ -676,12 +681,13 @@
   }
   function situation(p) {
     if(p.conclusion && !conclusionCurrent(p))return 'Requer nova análise';
+    // O painel reflete a conclusão técnica vigente. Pendências posteriores
+    // continuam nos controles de celebração, sem substituir o resultado salvo.
+    if(conclusionCurrent(p) && p.conclusion.result==='favoravel')return 'Aprovada';
     if(p?.imported && sourceState(p.imported).key==='cadastrada')return 'Em elaboração na origem';
     if(pending(p).length || p.diligences.some(d=>!diligenceTerminal(d)))return 'Em diligência';
     if(referenceRows(p).some(r=>r.review.status==='reanalise'))return 'Requer nova análise';
     if(conclusionCurrent(p) && p.conclusion.result==='desfavoravel')return 'Análise técnica desfavorável';
-    if(aptForCelebration(p))return p.ouvidoria.status==='pendente'?'Formalização com cláusula suspensiva':'Apta à celebração';
-    if(p.conclusion)return 'Pendente de celebração';
     return 'Em análise';
   }
   function diligenceEvidence(d){const {at,...material}=d;return material;}
@@ -694,26 +700,32 @@
     if(c.evidence.version!==1 || c.evidence.fingerprint!==technicalEvidence(p) || institutionalConflicts(p).length)return {...base,key:'stale',label:'Desatualizada; reanálise necessária',reason:'A evidência técnica vigente diverge da referência da conclusão anterior.'};
     return {...base,current:true,key:'current',label:'Atual verificável',reason:'A referência da conclusão corresponde à evidência técnica vigente.'};
   }
+  function panelSummary(state){
+    const ps=activeProposals(state),ufs=items=>new Set(items.map(p=>p.imported.uf)).size;
+    return {eligible:Object.keys(UFS).length,registered:ufs(ps),
+      inAnalysis:ufs(ps.filter(p=>!conclusionCurrent(p))),
+      approved:ufs(ps.filter(p=>conclusionCurrent(p) && p.conclusion.result==='favoravel'))};
+  }
   function conclusionCurrent(p){return conclusionValidity(p).current;}
   function conclusionBlocks(p,result='favoravel'){
-    if(result==='favoravel')return blockers(p);
+    if(result==='favoravel')return blockers(p,false,true);
     const b=[];
-    for(const g of ['merito','pad']){const v=groupProgress(p,g);if(v.done!==v.total)b.push(`${PENDENCIA[g]||g}: ${v.done}/${v.total} revisados e atuais`);}
+    for(const g of ['merito','pad']){const v=groupProgress(p,g);if(rows(p,g).filter(([id])=>conclusionReviewed(p,g,id)).length!==v.total)b.push(`${PENDENCIA[g]||g}: ${v.done}/${v.total} revisados e atuais`);}
     if(p.imported.pad===null || p.padImport?.status==='partial')b.push('PAD não carregado ou importação incompleta');
-    if(semJustificativa(p).some(r=>!r.ref.startsWith('celebracao:')))b.push('Resultado negativo sem justificativa');
-    if(pending(p).length)b.push('Marcação de diligência sem registro');
-    if(p.diligences.some(d=>!diligenceTerminal(d) && !d.ref.startsWith('celebracao:')))b.push('Diligência aberta ou resposta ainda em avaliação; decidir seu encerramento separadamente');
+
+
+
     if(institutionalConflicts(p).length)b.push('Fato institucional e parecer conflitantes');return b;
   }
   function confirmConclusion(p,data,actor){
     assert(['favoravel','desfavoravel'].includes(data.result),'Resultado da conclusão inválido.');
-    assert(data.reference?.trim(),'Informe a referência das evidências consideradas.');
-    assert(data.result!=='desfavoravel' || data.note?.trim(),'Justifique a conclusão desfavorável.');
+
+
     assert(typeof actor==='string' && actor.trim(),'Autor da conclusão obrigatório.');
     const blocks=conclusionBlocks(p,data.result);assert(!blocks.length,blocks.join(' · '));
     const evidence=technicalEvidence(p);assert(data.expectedEvidence===evidence,'As evidências mudaram após abrir a conclusão. Reabra e confira a análise.');
     assert(!data.operationId || (!p.history.some(h=>h.after?.operationId===data.operationId && h.event==='Conclusão da análise técnica registrada') && p.conclusion?.operationId!==data.operationId),'Esta conclusão já foi registrada.');
-    const after={result:data.result,note:data.note?.trim()||'',reference:data.reference.trim(),actor,at:now(),evidence:{version:1,fingerprint:evidence},operationId:data.operationId||uid()};
+    const after={result:data.result,note:data.note?.trim()||'',reference:data.reference?.trim()||'',actor,at:now(),evidence:{version:1,fingerprint:evidence},operationId:data.operationId||uid()};
     log(p,'Conclusão da análise técnica registrada',p.conclusion,after,actor);p.conclusion=after;return after;
   }
   function aptForCelebration(p){return conclusionCurrent(p) && p.conclusion.result==='favoravel' && !blockers(p,true).length;}
@@ -942,7 +954,7 @@
       }
       for(const h of p.history)assert(h && typeof h.at==='string' && typeof h.event==='string' && typeof h.actor==='string','Histórico inválido.');
       assert(p.conclusion===null || (typeof p.conclusion?.actor==='string' && typeof p.conclusion?.at==='string'),'Conclusão inválida.');
-      if(p.conclusion?.result!==undefined)assert(['favoravel','desfavoravel'].includes(p.conclusion.result) && typeof p.conclusion.reference==='string' && p.conclusion.reference.trim() && (!p.conclusion.evidence || (p.conclusion.evidence.version===1 && (p.conclusion.evidence.fingerprint===null || typeof p.conclusion.evidence.fingerprint==='string'))) && (p.conclusion.result!=='desfavoravel' || p.conclusion.note?.trim()),'Resultado/evidência da conclusão inválidos.');
+      if(p.conclusion?.result!==undefined)assert(['favoravel','desfavoravel'].includes(p.conclusion.result) && typeof p.conclusion.reference==='string' && (!p.conclusion.evidence || (p.conclusion.evidence.version===1 && (p.conclusion.evidence.fingerprint===null || typeof p.conclusion.evidence.fingerprint==='string'))) && (p.conclusion.note===undefined || typeof p.conclusion.note==='string'),'Resultado/evidência da conclusão inválidos.');
       if(p.conclusion?.reanalysis)assert(typeof p.conclusion.reanalysis.at==='string' && typeof p.conclusion.reanalysis.reason==='string','Metadados de reanálise da conclusão inválidos.');
     }
     return state;
@@ -954,6 +966,6 @@
     for(const p of activeProposals(state)){const v=reviewProgress(p);lines.push([p.imported.uf,fmtProposalNumber(p.imported.numero),p.imported.proponente,...['repasse','contrapartida','global'].map(k=>p.imported[k]===null?'':(p.imported[k]/100).toFixed(2).replace('.',',')),situation(p),pending(p).length,v.pad.done,v.pad.total,finance(p).errors.length,v.done,v.total,p.conclusion?.result||'Não registrada ou legada',aptForCelebration(p)?(p.ouvidoria.clause?'Com cláusula suspensiva':'Apta'):'Não apta',conclusionValidity(p).label]);}
     return '\uFEFF'+lines.map(r=>r.map(csvCell).join(';')).join('\r\n');
   }
-  const api={DILIGENCE_SCOPES,diligenceReviewIssue,reconcileDiligences,reconcileStateDiligences,matchesFilters,canonicalRef,EVIDENCE_DEPENDENCIES,evidenceOf,reviewCurrent,reviewValidity,institutionalConflicts,institutionalAssessment,institutionalFields,setInstitution,reviewProgress,conclusionBlocks,confirmConclusion,technicalEvidence,conclusionValidity,conclusionCurrent,aptForCelebration,diligenceTerminal,padCollector,padReferenceContext,UFS,PROGRAM,REQUIREMENTS,CELEBRACAO,ABAS_CELEBRACAO,TAB_LABELS,celebracaoItem,metaRequisito,reviewOf,tabLabel,rows,STATUSES,DSTATUS,CATEGORIES,CAMPOS_TEXTOS,clone,now,uid,esc,assert,safeLink,setSei,setTextos,moneyBR,quantityBR,multiply,unitFromTotal,unitMatchesTotal,dateISO,addDays,addMonths,deadline,deadlineBase,fmtMoney,fmtDate,fmtProposalNumber,fmtCnpj,localToday,initialState,createProposal,validateImported,syncProposals,log,referenceRows,pending,finance,groupProgress,blockers,situation,sourceState,SOURCE_STATES,ufState,orderBySend,activeProposals,deletedProposals,deleteProposal,restoreProposal,setReview,markReview,addAttachment,removeAttachment,resultadoPrevisto,rotuloDoResultado,semJustificativa,saveDiligence,mayResolveReference,diligenceLabel,validateState,normalizeState,exportCSV,padSituacao};
+  const api={panelSummary,DILIGENCE_SCOPES,diligenceReviewIssue,reconcileDiligences,reconcileStateDiligences,matchesFilters,canonicalRef,EVIDENCE_DEPENDENCIES,evidenceOf,reviewCurrent,reviewValidity,institutionalConflicts,institutionalAssessment,institutionalFields,setInstitution,reviewProgress,conclusionBlocks,confirmConclusion,technicalEvidence,conclusionValidity,conclusionCurrent,aptForCelebration,diligenceTerminal,padCollector,padReferenceContext,UFS,PROGRAM,REQUIREMENTS,CELEBRACAO,ABAS_CELEBRACAO,TAB_LABELS,celebracaoItem,metaRequisito,reviewOf,tabLabel,rows,STATUSES,DSTATUS,CATEGORIES,CAMPOS_TEXTOS,clone,now,uid,esc,assert,safeLink,setSei,setTextos,moneyBR,quantityBR,multiply,unitFromTotal,unitMatchesTotal,dateISO,addDays,addMonths,deadline,deadlineBase,fmtMoney,fmtDate,fmtProposalNumber,fmtCnpj,localToday,initialState,createProposal,validateImported,syncProposals,log,referenceRows,pending,finance,groupProgress,blockers,situation,sourceState,SOURCE_STATES,ufState,orderBySend,activeProposals,deletedProposals,deleteProposal,restoreProposal,setReview,markReview,addAttachment,removeAttachment,resultadoPrevisto,rotuloDoResultado,semJustificativa,saveDiligence,mayResolveReference,diligenceLabel,validateState,normalizeState,exportCSV,padSituacao};
   if(typeof module!=='undefined')module.exports=api; else root.Profor=api;
 })(globalThis);

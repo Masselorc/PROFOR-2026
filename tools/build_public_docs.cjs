@@ -47,5 +47,5 @@ window.PROFOR_PUBLIC_DATA = ${JSON.stringify(publicState,null,2)};
   say('Módulos canônicos espelhados; nenhuma publicação executada.');
   return {outputDir,revision:publicState?.revision??null,updatedAt:updatedAt||null,mirrors:MIRRORS.slice()};
 }
-if(require.main===module){const args=process.argv.slice(2);if(args.some(x=>x!=='--mirror-only'))throw new Error('Única opção CLI: --mirror-only');build({mirrorOnly:args.includes('--mirror-only')});}
+if(require.main===module){const args=process.argv.slice(2);if(args.some(x=>x!=='--mirror-only'))throw new Error('Única opção CLI: --mirror-only');const check=require('node:child_process').spawnSync(process.execPath,['--test',path.join(SYSTEM_DIR,'tests','conclusion-optional-fields.test.cjs'),path.join(SYSTEM_DIR,'tests','panel-summary.test.cjs')],{stdio:'inherit'});if(check.status!==0)throw new Error('Regressão da conclusão técnica: build interrompido.');build({mirrorOnly:args.includes('--mirror-only')});}
 module.exports={projectPublicState,build,MIRRORS};

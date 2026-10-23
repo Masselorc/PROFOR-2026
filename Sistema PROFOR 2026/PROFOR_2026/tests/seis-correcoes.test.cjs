@@ -80,7 +80,7 @@ test('3: observação compatível, cláusula expressa e Fala.BR seguem regras ex
  for(const [fact,clause] of [['instituida',false],['pendente',true]]){
   const p=ready();D.setInstitution(p,{ouvidoria:{...p.ouvidoria,status:fact,clause}},'Teste');D.setReview(p,'merito','ouvidoriaInstituida',{status:'obs',note:'Observação compatível',document:'Ato sintético',url:''},'Teste');assert.equal(D.reviewCurrent(p,'merito','ouvidoriaInstituida'),true);assert.equal(p.ouvidoria.status,fact);assert.equal(p.ouvidoria.clause,clause);assert.equal(D.groupProgress(p,'merito').accepted,D.REQUIREMENTS.merito.length);
   for(const status of ['obs','no']){D.setReview(p,'merito','falaBRAdesao',{status,note:'Nota Fala.BR',document:'',url:''},'Teste');assert.equal(D.reviewCurrent(p,'merito','falaBRAdesao'),true);assert.deepEqual(D.blockers(p),[]);}
-  conclude(p,'favoravel');assert.equal(D.aptForCelebration(p),true);assert.equal(D.situation(p),fact==='pendente'?'Formalização com cláusula suspensiva':'Apta à celebração');
+  conclude(p,'favoravel');assert.equal(D.aptForCelebration(p),true);assert.equal(D.situation(p),'Aprovada');
  }
 });
 

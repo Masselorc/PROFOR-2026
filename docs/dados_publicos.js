@@ -1,9 +1,9 @@
-/** Snapshot integral de consulta PROFOR/ONASP 2026. Gerado em 2026-10-22T23:53:26.653Z.
+/** Snapshot integral de consulta PROFOR/ONASP 2026. Gerado em 2026-10-23T19:25:40.483Z.
  * Não editar manualmente. Use tools/build_public_docs.cjs. */
-window.PROFOR_PUBLIC_UPDATED_AT = "2026-10-22T23:53:26.653Z";
+window.PROFOR_PUBLIC_UPDATED_AT = "2026-10-23T19:25:40.483Z";
 window.PROFOR_PUBLIC_DATA = {
   "schemaVersion": 1,
-  "revision": 526,
+  "revision": 535,
   "proposals": [
     {
       "id": "2243618",
@@ -37600,13 +37600,14 @@ window.PROFOR_PUBLIC_DATA = {
             "note": "",
             "document": "",
             "url": "",
-            "at": "2026-10-01T19:32:23.883Z",
+            "at": "2026-10-23T18:09:36.068Z",
             "attachments": [],
             "evidence": {
               "version": 1,
               "ref": "merito:ouvidoriaInstituida",
-              "fingerprint": "fnv64-v1:fe62dc10b4dfb581"
-            }
+              "fingerprint": "fnv64-v1:1335379bb2cd68e8"
+            },
+            "actor": "Usuário local"
           },
           "ouvidoriaAto": {
             "status": "na",
@@ -37634,13 +37635,14 @@ window.PROFOR_PUBLIC_DATA = {
             "note": "",
             "document": "",
             "url": "",
-            "at": "2026-10-01T19:32:36.755Z",
+            "at": "2026-10-23T18:10:23.496Z",
             "attachments": [],
             "evidence": {
               "version": 1,
               "ref": "merito:falaBRAdesao",
-              "fingerprint": "fnv64-v1:984cb3a58df8f468"
-            }
+              "fingerprint": "fnv64-v1:21d99edf76c0ac39"
+            },
+            "actor": "Usuário local"
           }
         },
         "celebracao": {
@@ -37721,17 +37723,18 @@ window.PROFOR_PUBLIC_DATA = {
             "actor": "Usuário local"
           },
           "7": {
-            "status": "diligencia",
+            "status": "ok",
             "note": "Anexar QDD",
             "document": "",
             "url": "",
-            "at": "2026-10-01T19:35:35.080Z",
+            "at": "2026-10-23T18:58:49.404Z",
             "attachments": [],
             "evidence": {
               "version": 1,
               "ref": "celebracao:7",
               "fingerprint": "fnv64-v1:a9e75ba13ece4840"
-            }
+            },
+            "actor": "Usuário local"
           },
           "8": {
             "status": "ok",
@@ -38152,11 +38155,11 @@ window.PROFOR_PUBLIC_DATA = {
             }
           },
           "17448857": {
-            "status": "diligencia",
+            "status": "ok",
             "note": "Anexar pesquisa mercadológica do item \"impressora ou equipamento multifuncional\".",
             "document": "",
             "url": "",
-            "at": "2026-10-02T19:10:21.102Z",
+            "at": "2026-10-23T18:59:52.271Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
@@ -38278,12 +38281,18 @@ window.PROFOR_PUBLIC_DATA = {
             }
           },
           "17449119": {
-            "status": "na",
+            "status": "ok",
             "note": "",
             "document": "",
             "url": "",
-            "at": null,
-            "attachments": []
+            "at": "2026-10-23T19:00:52.847Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17449119",
+              "fingerprint": "fnv64-v1:4447f4be16c53d1f"
+            }
           }
         }
       },
@@ -38486,14 +38495,24 @@ window.PROFOR_PUBLIC_DATA = {
           "category": "ANEXO / DOCUMENTO",
           "communication": "2026-10-01",
           "response": "",
-          "status": "aberta",
+          "status": "baixada",
           "note": "",
-          "at": "2026-10-01T19:35:35.080Z",
+          "at": "2026-10-23T18:08:29.232Z",
           "base": "2026-10-11",
           "due": "2026-10-12",
           "automaticDeadline": true,
           "confirmed": false,
-          "calendarNote": ""
+          "calendarNote": "",
+          "closedByReview": {
+            "proposalId": "2243912",
+            "group": "celebracao",
+            "item": "7",
+            "ref": "celebracao:7",
+            "at": "2026-10-23T18:08:29.232Z",
+            "reason": "Encerrada por confirmação de conformidade do requisito",
+            "actor": "Usuário local",
+            "confirmedBy": "Usuário local"
+          }
         },
         {
           "id": "e372d697-d238-496f-aed0-593c660a58e5",
@@ -38740,25 +38759,73 @@ window.PROFOR_PUBLIC_DATA = {
           "category": "PLANO DE APLICAÇÃO DETALHADO",
           "communication": "2026-10-02",
           "response": "",
-          "status": "aberta",
+          "status": "baixada",
           "note": "",
-          "at": "2026-10-02T19:10:21.102Z",
+          "at": "2026-10-23T18:59:52.272Z",
           "base": "2026-10-12",
           "due": "2026-10-12",
           "automaticDeadline": true,
           "confirmed": false,
-          "calendarNote": ""
+          "calendarNote": "",
+          "closedByReview": {
+            "proposalId": "2243912",
+            "group": "pad",
+            "item": "17448857",
+            "ref": "pad:17448857",
+            "at": "2026-10-23T18:59:52.272Z",
+            "reason": "Encerrada por confirmação de conformidade do requisito",
+            "actor": "Usuário local",
+            "confirmedBy": "Usuário local"
+          }
+        },
+        {
+          "id": "33fcad56-0c97-4da7-b528-8bf92e5f8f5e",
+          "ref": "celebracao:7",
+          "request": "Anexar QDD",
+          "science": "",
+          "category": "OUTRO",
+          "communication": "2026-10-23",
+          "response": "",
+          "status": "baixada",
+          "note": "",
+          "at": "2026-10-23T18:58:49.404Z",
+          "base": "2026-11-02",
+          "due": "2026-11-02",
+          "automaticDeadline": true,
+          "confirmed": false,
+          "calendarNote": "",
+          "closedByReview": {
+            "proposalId": "2243912",
+            "group": "celebracao",
+            "item": "7",
+            "ref": "celebracao:7",
+            "at": "2026-10-23T18:58:49.404Z",
+            "reason": "Encerrada por confirmação de conformidade do requisito",
+            "actor": "Usuário local",
+            "confirmedBy": "Usuário local"
+          }
         }
       ],
       "ouvidoria": {
-        "status": "na",
+        "status": "instituida",
         "signature": "",
         "url": "",
         "note": "",
         "clause": false
       },
-      "falaBR": "na",
-      "conclusion": null,
+      "falaBR": "previsto",
+      "conclusion": {
+        "result": "favoravel",
+        "note": "",
+        "reference": "",
+        "actor": "Usuário local",
+        "at": "2026-10-23T19:13:34.823Z",
+        "evidence": {
+          "version": 1,
+          "fingerprint": "fnv64-v1:a4749c1657a00dbc"
+        },
+        "operationId": "b99fa0d9-c852-45f2-b78e-51a28a021be7"
+      },
       "history": [
         {
           "at": "2026-09-16T17:01:42.376Z",
@@ -45672,6 +45739,542 @@ window.PROFOR_PUBLIC_DATA = {
           },
           "after": {
             "at": "2026-10-22T14:38:40.048Z"
+          }
+        },
+        {
+          "at": "2026-10-23T18:08:29.231Z",
+          "event": "Avaliação: celebracao / 7",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "Anexar QDD",
+            "document": "",
+            "url": "",
+            "at": "2026-10-01T19:35:35.080Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:7",
+              "fingerprint": "fnv64-v1:a9e75ba13ece4840"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Anexar QDD",
+            "document": "",
+            "url": "",
+            "at": "2026-10-23T18:08:29.231Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:7",
+              "fingerprint": "fnv64-v1:a9e75ba13ece4840"
+            },
+            "actor": "Usuário local"
+          }
+        },
+        {
+          "at": "2026-10-23T18:08:29.232Z",
+          "event": "Diligência encerrada por atendimento do requisito",
+          "actor": "Usuário local",
+          "before": {
+            "id": "0a732336-1b3f-4ad9-9853-944936e0c9ce",
+            "ref": "celebracao:7",
+            "request": "Anexar QDD",
+            "science": "",
+            "category": "ANEXO / DOCUMENTO",
+            "communication": "2026-10-01",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-01T19:35:35.080Z",
+            "base": "2026-10-11",
+            "due": "2026-10-12",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          },
+          "after": {
+            "id": "0a732336-1b3f-4ad9-9853-944936e0c9ce",
+            "ref": "celebracao:7",
+            "request": "Anexar QDD",
+            "science": "",
+            "category": "ANEXO / DOCUMENTO",
+            "communication": "2026-10-01",
+            "response": "",
+            "status": "baixada",
+            "note": "",
+            "at": "2026-10-23T18:08:29.232Z",
+            "base": "2026-10-11",
+            "due": "2026-10-12",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": "",
+            "closedByReview": {
+              "proposalId": "2243912",
+              "group": "celebracao",
+              "item": "7",
+              "ref": "celebracao:7",
+              "at": "2026-10-23T18:08:29.232Z",
+              "reason": "Encerrada por confirmação de conformidade do requisito",
+              "actor": "Usuário local",
+              "confirmedBy": "Usuário local"
+            }
+          }
+        },
+        {
+          "at": "2026-10-23T18:09:36.068Z",
+          "event": "Informações institucionais atualizadas",
+          "actor": "Usuário local",
+          "before": {
+            "ouvidoria": {
+              "status": "na",
+              "signature": "",
+              "url": "",
+              "note": "",
+              "clause": false
+            },
+            "falaBR": "na"
+          },
+          "after": {
+            "ouvidoria": {
+              "status": "instituida",
+              "signature": "",
+              "url": "",
+              "note": "",
+              "clause": false
+            },
+            "falaBR": "na"
+          }
+        },
+        {
+          "at": "2026-10-23T18:09:36.068Z",
+          "event": "Reanálise: merito:ouvidoriaInstituida",
+          "actor": "Usuário local",
+          "before": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-01T19:32:23.883Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "merito:ouvidoriaInstituida",
+              "fingerprint": "fnv64-v1:fe62dc10b4dfb581"
+            }
+          },
+          "after": {
+            "status": "reanalise",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-01T19:32:23.883Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "merito:ouvidoriaInstituida",
+              "fingerprint": "fnv64-v1:fe62dc10b4dfb581"
+            },
+            "reanalysis": {
+              "at": "2026-10-23T18:09:36.068Z",
+              "fields": [
+                "ouvidoria"
+              ],
+              "reason": "Evidência alterada; decisão anterior preservada no histórico."
+            }
+          }
+        },
+        {
+          "at": "2026-10-23T18:09:36.068Z",
+          "event": "Avaliação: merito / ouvidoriaInstituida",
+          "actor": "Usuário local",
+          "before": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-01T19:32:23.883Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "merito:ouvidoriaInstituida",
+              "fingerprint": "fnv64-v1:fe62dc10b4dfb581"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-23T18:09:36.068Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "merito:ouvidoriaInstituida",
+              "fingerprint": "fnv64-v1:1335379bb2cd68e8"
+            },
+            "actor": "Usuário local"
+          }
+        },
+        {
+          "at": "2026-10-23T18:10:23.496Z",
+          "event": "Informações institucionais atualizadas",
+          "actor": "Usuário local",
+          "before": {
+            "ouvidoria": {
+              "status": "instituida",
+              "signature": "",
+              "url": "",
+              "note": "",
+              "clause": false
+            },
+            "falaBR": "na"
+          },
+          "after": {
+            "ouvidoria": {
+              "status": "instituida",
+              "signature": "",
+              "url": "",
+              "note": "",
+              "clause": false
+            },
+            "falaBR": "previsto"
+          }
+        },
+        {
+          "at": "2026-10-23T18:10:23.496Z",
+          "event": "Reanálise: merito:falaBRAdesao",
+          "actor": "Usuário local",
+          "before": {
+            "status": "obs",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-01T19:32:36.755Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "merito:falaBRAdesao",
+              "fingerprint": "fnv64-v1:984cb3a58df8f468"
+            }
+          },
+          "after": {
+            "status": "reanalise",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-01T19:32:36.755Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "merito:falaBRAdesao",
+              "fingerprint": "fnv64-v1:984cb3a58df8f468"
+            },
+            "reanalysis": {
+              "at": "2026-10-23T18:10:23.496Z",
+              "fields": [
+                "falaBR"
+              ],
+              "reason": "Evidência alterada; decisão anterior preservada no histórico."
+            }
+          }
+        },
+        {
+          "at": "2026-10-23T18:10:23.496Z",
+          "event": "Avaliação: merito / falaBRAdesao",
+          "actor": "Usuário local",
+          "before": {
+            "status": "obs",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-01T19:32:36.755Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "merito:falaBRAdesao",
+              "fingerprint": "fnv64-v1:984cb3a58df8f468"
+            }
+          },
+          "after": {
+            "status": "obs",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-23T18:10:23.496Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "merito:falaBRAdesao",
+              "fingerprint": "fnv64-v1:21d99edf76c0ac39"
+            },
+            "actor": "Usuário local"
+          }
+        },
+        {
+          "at": "2026-10-23T18:21:04.264Z",
+          "event": "Avaliação: celebracao / 7",
+          "actor": "Usuário local",
+          "before": {
+            "status": "ok",
+            "note": "Anexar QDD",
+            "document": "",
+            "url": "",
+            "at": "2026-10-23T18:08:29.231Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:7",
+              "fingerprint": "fnv64-v1:a9e75ba13ece4840"
+            },
+            "actor": "Usuário local"
+          },
+          "after": {
+            "status": "diligencia",
+            "note": "Anexar QDD",
+            "document": "",
+            "url": "",
+            "at": "2026-10-23T18:21:04.264Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:7",
+              "fingerprint": "fnv64-v1:a9e75ba13ece4840"
+            },
+            "actor": "Usuário local"
+          }
+        },
+        {
+          "at": "2026-10-23T18:21:04.267Z",
+          "event": "Diligência cadastrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "id": "33fcad56-0c97-4da7-b528-8bf92e5f8f5e",
+            "ref": "celebracao:7",
+            "request": "Anexar QDD",
+            "science": "",
+            "category": "OUTRO",
+            "communication": "2026-10-23",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-23T18:21:04.265Z",
+            "base": "2026-11-02",
+            "due": "2026-11-02",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-23T18:58:49.404Z",
+          "event": "Avaliação: celebracao / 7",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "Anexar QDD",
+            "document": "",
+            "url": "",
+            "at": "2026-10-23T18:21:04.264Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:7",
+              "fingerprint": "fnv64-v1:a9e75ba13ece4840"
+            },
+            "actor": "Usuário local"
+          },
+          "after": {
+            "status": "ok",
+            "note": "Anexar QDD",
+            "document": "",
+            "url": "",
+            "at": "2026-10-23T18:58:49.404Z",
+            "attachments": [],
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:7",
+              "fingerprint": "fnv64-v1:a9e75ba13ece4840"
+            },
+            "actor": "Usuário local"
+          }
+        },
+        {
+          "at": "2026-10-23T18:58:49.404Z",
+          "event": "Diligência encerrada por atendimento do requisito",
+          "actor": "Usuário local",
+          "before": {
+            "id": "33fcad56-0c97-4da7-b528-8bf92e5f8f5e",
+            "ref": "celebracao:7",
+            "request": "Anexar QDD",
+            "science": "",
+            "category": "OUTRO",
+            "communication": "2026-10-23",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-23T18:21:04.265Z",
+            "base": "2026-11-02",
+            "due": "2026-11-02",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          },
+          "after": {
+            "id": "33fcad56-0c97-4da7-b528-8bf92e5f8f5e",
+            "ref": "celebracao:7",
+            "request": "Anexar QDD",
+            "science": "",
+            "category": "OUTRO",
+            "communication": "2026-10-23",
+            "response": "",
+            "status": "baixada",
+            "note": "",
+            "at": "2026-10-23T18:58:49.404Z",
+            "base": "2026-11-02",
+            "due": "2026-11-02",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": "",
+            "closedByReview": {
+              "proposalId": "2243912",
+              "group": "celebracao",
+              "item": "7",
+              "ref": "celebracao:7",
+              "at": "2026-10-23T18:58:49.404Z",
+              "reason": "Encerrada por confirmação de conformidade do requisito",
+              "actor": "Usuário local",
+              "confirmedBy": "Usuário local"
+            }
+          }
+        },
+        {
+          "at": "2026-10-23T18:59:52.271Z",
+          "event": "Avaliação: pad / 17448857",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "Anexar pesquisa mercadológica do item \"impressora ou equipamento multifuncional\".",
+            "document": "",
+            "url": "",
+            "at": "2026-10-02T19:10:21.102Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17448857",
+              "fingerprint": "fnv64-v1:6bb7d3cc14ac978f"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "Anexar pesquisa mercadológica do item \"impressora ou equipamento multifuncional\".",
+            "document": "",
+            "url": "",
+            "at": "2026-10-23T18:59:52.271Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17448857",
+              "fingerprint": "fnv64-v1:6bb7d3cc14ac978f"
+            }
+          }
+        },
+        {
+          "at": "2026-10-23T18:59:52.272Z",
+          "event": "Diligência encerrada por atendimento do requisito",
+          "actor": "Usuário local",
+          "before": {
+            "id": "07cd8727-47b8-46ad-96c4-cb57787e0827",
+            "ref": "pad:17448857",
+            "request": "Anexar pesquisa mercadológica do item \"impressora ou equipamento multifuncional\".",
+            "science": "",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "communication": "2026-10-02",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-02T19:10:21.102Z",
+            "base": "2026-10-12",
+            "due": "2026-10-12",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          },
+          "after": {
+            "id": "07cd8727-47b8-46ad-96c4-cb57787e0827",
+            "ref": "pad:17448857",
+            "request": "Anexar pesquisa mercadológica do item \"impressora ou equipamento multifuncional\".",
+            "science": "",
+            "category": "PLANO DE APLICAÇÃO DETALHADO",
+            "communication": "2026-10-02",
+            "response": "",
+            "status": "baixada",
+            "note": "",
+            "at": "2026-10-23T18:59:52.272Z",
+            "base": "2026-10-12",
+            "due": "2026-10-12",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": "",
+            "closedByReview": {
+              "proposalId": "2243912",
+              "group": "pad",
+              "item": "17448857",
+              "ref": "pad:17448857",
+              "at": "2026-10-23T18:59:52.272Z",
+              "reason": "Encerrada por confirmação de conformidade do requisito",
+              "actor": "Usuário local",
+              "confirmedBy": "Usuário local"
+            }
+          }
+        },
+        {
+          "at": "2026-10-23T19:00:52.847Z",
+          "event": "Avaliação: pad / 17449119",
+          "actor": "Usuário local",
+          "before": {
+            "status": "na",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": null,
+            "attachments": []
+          },
+          "after": {
+            "status": "ok",
+            "note": "",
+            "document": "",
+            "url": "",
+            "at": "2026-10-23T19:00:52.847Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "pad:17449119",
+              "fingerprint": "fnv64-v1:4447f4be16c53d1f"
+            }
+          }
+        },
+        {
+          "at": "2026-10-23T19:13:34.823Z",
+          "event": "Conclusão da análise técnica registrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "result": "favoravel",
+            "note": "",
+            "reference": "",
+            "actor": "Usuário local",
+            "at": "2026-10-23T19:13:34.823Z",
+            "evidence": {
+              "version": 1,
+              "fingerprint": "fnv64-v1:a4749c1657a00dbc"
+            },
+            "operationId": "b99fa0d9-c852-45f2-b78e-51a28a021be7"
           }
         }
       ],
@@ -53365,7 +53968,18 @@ window.PROFOR_PUBLIC_DATA = {
         "clause": false
       },
       "falaBR": "aderido",
-      "conclusion": null,
+      "conclusion": {
+        "result": "favoravel",
+        "note": "",
+        "reference": "",
+        "actor": "Usuário local",
+        "at": "2026-10-23T19:14:33.577Z",
+        "evidence": {
+          "version": 1,
+          "fingerprint": "fnv64-v1:cf6c99650eea973d"
+        },
+        "operationId": "10dbaea6-1630-4605-a888-bf0f423ebec3"
+      },
       "history": [
         {
           "at": "2026-09-16T17:01:42.376Z",
@@ -60394,6 +61008,24 @@ window.PROFOR_PUBLIC_DATA = {
           },
           "after": {
             "at": "2026-10-22T14:38:40.048Z"
+          }
+        },
+        {
+          "at": "2026-10-23T19:14:33.577Z",
+          "event": "Conclusão da análise técnica registrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "result": "favoravel",
+            "note": "",
+            "reference": "",
+            "actor": "Usuário local",
+            "at": "2026-10-23T19:14:33.577Z",
+            "evidence": {
+              "version": 1,
+              "fingerprint": "fnv64-v1:cf6c99650eea973d"
+            },
+            "operationId": "10dbaea6-1630-4605-a888-bf0f423ebec3"
           }
         }
       ],
