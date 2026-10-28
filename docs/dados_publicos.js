@@ -1,9 +1,9 @@
-/** Snapshot integral de consulta PROFOR/ONASP 2026. Gerado em 2026-10-23T19:25:40.483Z.
+/** Snapshot integral de consulta PROFOR/ONASP 2026. Gerado em 2026-10-28T17:23:27.254Z.
  * Não editar manualmente. Use tools/build_public_docs.cjs. */
-window.PROFOR_PUBLIC_UPDATED_AT = "2026-10-23T19:25:40.483Z";
+window.PROFOR_PUBLIC_UPDATED_AT = "2026-10-28T17:23:27.254Z";
 window.PROFOR_PUBLIC_DATA = {
   "schemaVersion": 1,
-  "revision": 535,
+  "revision": 538,
   "proposals": [
     {
       "id": "2243618",
@@ -61436,11 +61436,11 @@ window.PROFOR_PUBLIC_DATA = {
             }
           },
           "11": {
-            "status": "diligencia",
+            "status": "ok",
             "note": "faltando documento",
             "document": "",
             "url": "",
-            "at": "2026-10-22T18:30:32.256Z",
+            "at": "2026-10-28T17:18:54.150Z",
             "attachments": [],
             "actor": "Usuário local",
             "evidence": {
@@ -61712,14 +61712,24 @@ window.PROFOR_PUBLIC_DATA = {
           "category": "OUTRO",
           "communication": "2026-10-22",
           "response": "",
-          "status": "aberta",
+          "status": "baixada",
           "note": "",
-          "at": "2026-10-22T18:30:32.257Z",
+          "at": "2026-10-28T17:18:54.150Z",
           "base": "2026-11-01",
           "due": "2026-11-02",
           "automaticDeadline": true,
           "confirmed": false,
-          "calendarNote": ""
+          "calendarNote": "",
+          "closedByReview": {
+            "proposalId": "2243822",
+            "group": "celebracao",
+            "item": "11",
+            "ref": "celebracao:11",
+            "at": "2026-10-28T17:18:54.150Z",
+            "reason": "Encerrada por confirmação de conformidade do requisito",
+            "actor": "Usuário local",
+            "confirmedBy": "Usuário local"
+          }
         }
       ],
       "ouvidoria": {
@@ -61730,7 +61740,18 @@ window.PROFOR_PUBLIC_DATA = {
         "clause": false
       },
       "falaBR": "aderido",
-      "conclusion": null,
+      "conclusion": {
+        "result": "favoravel",
+        "note": "",
+        "reference": "",
+        "actor": "Usuário local",
+        "at": "2026-10-28T17:21:26.452Z",
+        "evidence": {
+          "version": 1,
+          "fingerprint": "fnv64-v1:b33c73e95f41ce8c"
+        },
+        "operationId": "268cdd28-e6e9-4465-a1d7-d3e24e0e237d"
+      },
       "history": [
         {
           "at": "2026-09-16T17:01:42.376Z",
@@ -64058,6 +64079,106 @@ window.PROFOR_PUBLIC_DATA = {
             "automaticDeadline": true,
             "confirmed": false,
             "calendarNote": ""
+          }
+        },
+        {
+          "at": "2026-10-28T17:18:54.150Z",
+          "event": "Avaliação: celebracao / 11",
+          "actor": "Usuário local",
+          "before": {
+            "status": "diligencia",
+            "note": "faltando documento",
+            "document": "",
+            "url": "",
+            "at": "2026-10-22T18:30:32.256Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:11",
+              "fingerprint": "fnv64-v1:e948683787eebb55"
+            }
+          },
+          "after": {
+            "status": "ok",
+            "note": "faltando documento",
+            "document": "",
+            "url": "",
+            "at": "2026-10-28T17:18:54.150Z",
+            "attachments": [],
+            "actor": "Usuário local",
+            "evidence": {
+              "version": 1,
+              "ref": "celebracao:11",
+              "fingerprint": "fnv64-v1:e948683787eebb55"
+            }
+          }
+        },
+        {
+          "at": "2026-10-28T17:18:54.150Z",
+          "event": "Diligência encerrada por atendimento do requisito",
+          "actor": "Usuário local",
+          "before": {
+            "id": "8472ac1a-d295-4945-94e2-2e499ae2f355",
+            "ref": "celebracao:11",
+            "request": "faltando documento",
+            "science": "",
+            "category": "OUTRO",
+            "communication": "2026-10-22",
+            "response": "",
+            "status": "aberta",
+            "note": "",
+            "at": "2026-10-22T18:30:32.257Z",
+            "base": "2026-11-01",
+            "due": "2026-11-02",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": ""
+          },
+          "after": {
+            "id": "8472ac1a-d295-4945-94e2-2e499ae2f355",
+            "ref": "celebracao:11",
+            "request": "faltando documento",
+            "science": "",
+            "category": "OUTRO",
+            "communication": "2026-10-22",
+            "response": "",
+            "status": "baixada",
+            "note": "",
+            "at": "2026-10-28T17:18:54.150Z",
+            "base": "2026-11-01",
+            "due": "2026-11-02",
+            "automaticDeadline": true,
+            "confirmed": false,
+            "calendarNote": "",
+            "closedByReview": {
+              "proposalId": "2243822",
+              "group": "celebracao",
+              "item": "11",
+              "ref": "celebracao:11",
+              "at": "2026-10-28T17:18:54.150Z",
+              "reason": "Encerrada por confirmação de conformidade do requisito",
+              "actor": "Usuário local",
+              "confirmedBy": "Usuário local"
+            }
+          }
+        },
+        {
+          "at": "2026-10-28T17:21:26.452Z",
+          "event": "Conclusão da análise técnica registrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "result": "favoravel",
+            "note": "",
+            "reference": "",
+            "actor": "Usuário local",
+            "at": "2026-10-28T17:21:26.452Z",
+            "evidence": {
+              "version": 1,
+              "fingerprint": "fnv64-v1:b33c73e95f41ce8c"
+            },
+            "operationId": "268cdd28-e6e9-4465-a1d7-d3e24e0e237d"
           }
         }
       ],
@@ -66421,7 +66542,18 @@ window.PROFOR_PUBLIC_DATA = {
         "clause": false
       },
       "falaBR": "previsto",
-      "conclusion": null,
+      "conclusion": {
+        "result": "favoravel",
+        "note": "",
+        "reference": "",
+        "actor": "Usuário local",
+        "at": "2026-10-28T16:54:29.081Z",
+        "evidence": {
+          "version": 1,
+          "fingerprint": "fnv64-v1:400d807ab867ad14"
+        },
+        "operationId": "96edbce2-557d-47b4-9635-e2f99f5c5de3"
+      },
       "history": [
         {
           "at": "2026-09-26T20:12:17.046Z",
@@ -69079,6 +69211,24 @@ window.PROFOR_PUBLIC_DATA = {
           },
           "after": {
             "at": "2026-10-22T14:38:40.048Z"
+          }
+        },
+        {
+          "at": "2026-10-28T16:54:29.081Z",
+          "event": "Conclusão da análise técnica registrada",
+          "actor": "Usuário local",
+          "before": null,
+          "after": {
+            "result": "favoravel",
+            "note": "",
+            "reference": "",
+            "actor": "Usuário local",
+            "at": "2026-10-28T16:54:29.081Z",
+            "evidence": {
+              "version": 1,
+              "fingerprint": "fnv64-v1:400d807ab867ad14"
+            },
+            "operationId": "96edbce2-557d-47b4-9635-e2f99f5c5de3"
           }
         }
       ],
